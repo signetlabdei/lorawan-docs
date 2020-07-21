@@ -1,0 +1,52 @@
+<map id="ns3::TcpSocketBase::ProcessWait" name="ns3::TcpSocketBase::ProcessWait">
+<area shape="rect" id="node1" title="Received a packet upon CLOSE_WAIT, FIN_WAIT_1, FIN_WAIT_2." alt="" coords="5,551,155,592"/>
+<area shape="rect" id="node2" href="$classns3_1_1_tcp_socket_base.html#a04354f05482d826576740fd2f1691818" title="Peacefully close the socket by notifying the upper layer and deallocate end point." alt="" coords="1288,55,1437,96"/>
+<area shape="rect" id="node5" href="$classns3_1_1_tcp_header.html#aaaa261ca12b0fb50e45c7083cec88cff" title="Converts an integer into a human readable list of Tcp flags." alt="" coords="203,2625,419,2651"/>
+<area shape="rect" id="node6" href="$classns3_1_1_tcp_header.html#adc8bd17b9053c53f67f3be71adbb2e54" title="Get the ACK number." alt="" coords="1249,1867,1477,1894"/>
+<area shape="rect" id="node7" href="$classns3_1_1_tcp_header.html#adae57f746870a94c0fe4181c87368b62" title="Get the flags." alt="" coords="1539,601,1725,627"/>
+<area shape="rect" id="node8" href="$classns3_1_1_tcp_header.html#a378fca684de64584c4fcc7dd9034e5e5" title="Get the sequence number." alt="" coords="777,239,992,280"/>
+<area shape="rect" id="node9" href="$classns3_1_1_packet.html#afff7cb1ff518ee6dc0d424e10a5ad6ec" title="Returns the the size in bytes of the packet (including the zero&#45;filled initial payload)." alt="" coords="1555,1549,1709,1575"/>
+<area shape="rect" id="node10" href="$classns3_1_1_socket.html#a91fa3046bbd0a7644381f1d2481bdfef" title="Notify through the callback (if set) that some data have been received." alt="" coords="781,305,988,331"/>
+<area shape="rect" id="node11" href="$global-router-interface_8cc.html#af2f17e24d29f39f6804d0d10d8cedc71" title=" " alt="" coords="1571,1791,1693,1818"/>
+<area shape="rect" id="node12" href="$classns3_1_1_tcp_socket_base.html#a695c036628adf8a204a653dbf178f8cd" title="Received an ACK packet." alt="" coords="236,2155,385,2196"/>
+<area shape="rect" id="node20" href="$classns3_1_1_tcp_socket_base.html#a479e1a8be1ee1b169f87e57a4dc6f73c" title="Recv of a data, put into buffer, call L7 to get it if necessary." alt="" coords="523,609,673,651"/>
+<area shape="rect" id="node23" href="$classns3_1_1_tcp_socket_base.html#aa858913c9a4480a14d293f1014905b3e" title="Send a empty packet that carries a flag, e.g., ACK." alt="" coords="1040,893,1189,935"/>
+<area shape="rect" id="node49" href="$classns3_1_1_tcp_socket_base.html#a070b9ac86f372fe0b661050686bef68e" title="Send reset and tear down this socket." alt="" coords="810,121,959,163"/>
+<area shape="rect" id="node50" href="$classns3_1_1_tcp_socket_base.html#acd41dedaf25ea16d290aa5737e303099" title="Move from CLOSING or FIN_WAIT_2 to TIME_WAIT state." alt="" coords="1040,96,1189,137"/>
+<area shape="rect" id="node3" href="$classns3_1_1_tcp_socket_base.html#a53791738228495d40197679dbc057392" title="Deallocate m_endPoint and m_endPoint6." alt="" coords="1553,5,1711,47"/>
+<area shape="rect" id="node4" href="$classns3_1_1_socket.html#a6bdec380c7dacff36147b89a05ceae84" title="Notify through the callback (if set) that the connection has been closed." alt="" coords="1536,113,1728,155"/>
+<area shape="rect" id="node13" href="$classns3_1_1_tcp_socket_base.html#a4f2b484c1f51d637f65f961549865156" title="Return total bytes in flight." alt="" coords="810,2180,959,2221"/>
+<area shape="rect" id="node14" href="$classns3_1_1_tcp_rate_ops.html#ada84961d8f7415b299ebb338dc1de2b5" title="Generate a TcpRateSample to feed a congestion avoidance algorithm." alt="" coords="499,2407,697,2448"/>
+<area shape="rect" id="node15" href="$classns3_1_1_traced_value.html#af77ce761fca6254db42c875dd1a4cdc6" title="Get the underlying value." alt="" coords="1281,2305,1445,2331"/>
+<area shape="rect" id="node16" href="$classns3_1_1_tcp_rate_ops.html#a54197c90d2e4230b6307cdfd65e3a299" title=" " alt="" coords="467,2473,729,2499"/>
+<area shape="rect" id="node17" href="$group__makecallbackmemptr.html#ga9376283685aa99d204048d6a4b7610a4" title=" " alt="" coords="526,2523,670,2550"/>
+<area shape="rect" id="node18" href="$classns3_1_1_tcp_socket_base.html#ad510be50dd8e1c5cdcd31fb5b690e63d" title="Process a received ack." alt="" coords="523,2239,673,2280"/>
+<area shape="rect" id="node19" href="$classns3_1_1_tcp_socket_base.html#a9faee69d5a9ec04a2e3b7af6f2c1c55a" title="Read TCP options before Ack processing." alt="" coords="523,2071,673,2112"/>
+<area shape="rect" id="node47" href="$classns3_1_1_tcp_socket_base.html#a129ac0ec5fc399fa7c5552c615ae6562" title="Send as much pending data as possible according to the Tx window." alt="" coords="1040,2356,1189,2397"/>
+<area shape="rect" id="node48" href="$classns3_1_1_tcp_rate_ops.html#afa4e4d68f14ab225b1d10e0bb18a1953" title="Update the Rate information after an item is received." alt="" coords="486,2137,710,2163"/>
+<area shape="rect" id="node21" href="$classns3_1_1_event_id.html#a993ae94e48e014e1afd47edb16db7a11" title="This method is syntactic sugar for the ns3::Simulator::Cancel method." alt="" coords="1285,441,1440,467"/>
+<area shape="rect" id="node22" href="$classns3_1_1_tcp_socket_base.html#a6bea4790f749e771462d8e4ab63ebc67" title="Action upon delay ACK timeout, i.e." alt="" coords="810,827,959,868"/>
+<area shape="rect" id="node39" href="$classns3_1_1_event_id.html#acc25141054209b1a286a5471a51bd0c0" title="This method is syntactic sugar for the ns3::Simulator::IsExpired method." alt="" coords="1277,491,1448,518"/>
+<area shape="rect" id="node41" href="$classns3_1_1_simulator.html#ac3178fa975b419f7875e7105be122800" title="Return the current simulation virtual time." alt="" coords="1286,542,1439,569"/>
+<area shape="rect" id="node42" href="$classns3_1_1_simulator.html#a671882c894a08af4a5e91181bf1eec13" title="Schedule an event to expire after delay." alt="" coords="1271,339,1454,366"/>
+<area shape="rect" id="node45" href="$classns3_1_1_tcp_socket_base.html#a8a56cf4ab3b64d9f781ed1b1f63f51cd" title="FIN is in sequence, notify app and respond with a FIN." alt="" coords="810,761,959,803"/>
+<area shape="rect" id="node46" href="$classns3_1_1_simulator.html#af2c7b4285454aa5062bd2df2bb7a7ab9" title="Get the remaining time until this event will execute." alt="" coords="779,893,990,919"/>
+<area shape="rect" id="node24" href="$classns3_1_1_tcp_socket_base.html#a55087ef950f5c2f4a7cdb8c825666955" title="Add options to TcpHeader." alt="" coords="1288,776,1437,817"/>
+<area shape="rect" id="node25" href="$classns3_1_1_tcp_socket_base.html#a009a4dcad47330a47e5b829918fb9140" title="Add the SACK option to the header." alt="" coords="1288,1584,1437,1625"/>
+<area shape="rect" id="node26" href="$classns3_1_1_tcp_socket_base.html#a470e7b2406d76319c457f2fdf5ff0699" title="Add the SACK PERMITTED option to the header." alt="" coords="1266,593,1459,635"/>
+<area shape="rect" id="node27" href="$classns3_1_1_tcp_socket_base.html#aa749dc3f6287c79a2ad39cb306220663" title="Add the window scale option to the header." alt="" coords="1288,659,1437,700"/>
+<area shape="rect" id="node28" href="$classns3_1_1_tcp_socket_base.html#aff0f88774a2a2aba389da4590655a839" title="Add Tags for the Socket." alt="" coords="1288,1351,1437,1392"/>
+<area shape="rect" id="node29" href="$classns3_1_1_tcp_socket_base.html#aa0bcf7701399b0a95fd68a1ce5ee8756" title="The amount of Rx window announced to the peer." alt="" coords="1273,1649,1452,1691"/>
+<area shape="rect" id="node30" href="$classns3_1_1_ipv6_end_point.html#a1972cd26240d42cd75f93e12d9182976" title="Get the local address." alt="" coords="1289,893,1436,935"/>
+<area shape="rect" id="node31" href="$classns3_1_1_ipv4_end_point.html#ae08283e26ace5880c3172ea5d803b6f8" title="Get the local address." alt="" coords="1289,959,1436,1000"/>
+<area shape="rect" id="node32" href="$classns3_1_1_ipv6_end_point.html#a39a9fd4aa85a8ecbbf2d6c84d589080b" title="Get the local port." alt="" coords="1289,1024,1436,1065"/>
+<area shape="rect" id="node33" href="$classns3_1_1_ipv4_end_point.html#aab137f64770abf94f0b8a81217a0b106" title="Get the local port." alt="" coords="1289,1089,1436,1131"/>
+<area shape="rect" id="node34" href="$classns3_1_1_ipv6_end_point.html#aa48c776ae54d85cf0f6a61a80d7b4cd8" title="Get the peer address." alt="" coords="1289,1155,1436,1196"/>
+<area shape="rect" id="node35" href="$classns3_1_1_ipv4_end_point.html#a3faf5ec4dce2e951a6ade79758e2075d" title="Get the peer address." alt="" coords="1289,1220,1436,1261"/>
+<area shape="rect" id="node36" href="$classns3_1_1_ipv6_end_point.html#ac200f6b424104280ec1e55a415ed96fd" title="Get the peer port." alt="" coords="1289,1285,1436,1327"/>
+<area shape="rect" id="node37" href="$classns3_1_1_ipv4_end_point.html#a0954ccf4be313b3a2992894ae2baf1c6" title="Get the peer port." alt="" coords="1289,1416,1436,1457"/>
+<area shape="rect" id="node38" href="$classns3_1_1_time.html#a27cb7c22324e0447740929b024dbeb66" title="Get an approximation of the time stored in this instance in the indicated unit." alt="" coords="1277,1482,1448,1509"/>
+<area shape="rect" id="node40" href="$group__highprec.html#ga0d35bb9363c0da4cc2557158b95dbca0" title=" " alt="" coords="1322,1715,1403,1742"/>
+<area shape="rect" id="node43" href="$classns3_1_1_tcp_header.html#ad594a427a382dc395261a94749e1878c" title="Set the ACK number." alt="" coords="1249,725,1476,751"/>
+<area shape="rect" id="node44" href="$classns3_1_1_tcp_header.html#a3259c06373ba4261eaaaed0cbf40cad3" title="Set the destination port." alt="" coords="1237,842,1488,869"/>
+</map>

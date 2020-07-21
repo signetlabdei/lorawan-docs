@@ -1,0 +1,52 @@
+<map id="ns3::WifiPhy::ContinueReceiveHeader" name="ns3::WifiPhy::ContinueReceiveHeader">
+<area shape="rect" id="node1" title="Continue receiving the PHY header of a PPDU (i.e." alt="" coords="5,1125,225,1166"/>
+<area shape="rect" id="node2" href="$classns3_1_1_wifi_phy.html#a4729f4a5f331978f9b70880a81feaa3b" title="Due to newly arrived signal, the current reception cannot be continued and has to be aborted." alt="" coords="299,150,493,191"/>
+<area shape="rect" id="node7" href="$classns3_1_1_event_id.html#acc25141054209b1a286a5471a51bd0c0" title="This method is syntactic sugar for the ns3::Simulator::IsExpired method." alt="" coords="865,107,1036,133"/>
+<area shape="rect" id="node13" href="$classns3_1_1_simulator.html#ac3178fa975b419f7875e7105be122800" title="Return the current simulation virtual time." alt="" coords="1414,335,1567,361"/>
+<area shape="rect" id="node15" href="$classns3_1_1_interference_helper.html#a6f2a4d9e59064d733e36d0289d249cde" title="Calculate the SNIR at the start of the non&#45;HT PHY header and accumulate all SNIR changes in the SNIR ..." alt="" coords="273,1386,519,1427"/>
+<area shape="rect" id="node16" href="$classns3_1_1_wifi_phy.html#a1793e6110ca3623131def396f487c11d" title=" " alt="" coords="574,1299,786,1341"/>
+<area shape="rect" id="node17" href="$classns3_1_1_wifi_phy.html#aa3d6056d67327dc5a757e5e49f68ab37" title=" " alt="" coords="849,1097,1053,1138"/>
+<area shape="rect" id="node25" href="$classns3_1_1_wifi_phy.html#a9e4f1e101f3b4fdfdad3f4c470a16a6f" title=" " alt="" coords="841,1031,1060,1073"/>
+<area shape="rect" id="node31" href="$classns3_1_1_uniform_random_variable.html#a03822d8c86ac51e9aa83bbc73041386b" title="Get the next random value, as a double in the specified range ." alt="" coords="573,1635,787,1677"/>
+<area shape="rect" id="node37" href="$classns3_1_1_wifi_phy.html#aa4598d83591258697a98d1c2dad5473a" title="Eventually switch to CCA busy." alt="" coords="845,357,1056,398"/>
+<area shape="rect" id="node40" href="$classns3_1_1_simulator.html#a671882c894a08af4a5e91181bf1eec13" title="Schedule an event to expire after delay." alt="" coords="589,1081,771,1108"/>
+<area shape="rect" id="node41" href="$classns3_1_1_wifi_phy.html#a613c3092a7f6f1dc2d815a4d2de989fa" title="Start receiving the PSDU (i.e." alt="" coords="299,762,493,803"/>
+<area shape="rect" id="node3" href="$classns3_1_1_event_id.html#a993ae94e48e014e1afd47edb16db7a11" title="This method is syntactic sugar for the ns3::Simulator::Cancel method." alt="" coords="603,5,757,32"/>
+<area shape="rect" id="node6" href="$classns3_1_1_event_id.html#a8b41e6f8c54db6bede8a7dcaf917074a" title="This method is syntactic sugar for !IsExpired()." alt="" coords="593,107,767,133"/>
+<area shape="rect" id="node9" href="$classns3_1_1_wifi_phy.html#a3260ec7be02b6716e57af6c682bff96a" title="Public method used to fire a PhyRxDrop trace." alt="" coords="581,157,779,184"/>
+<area shape="rect" id="node11" href="$classns3_1_1_interference_helper.html#a4b45bac60d8b7c412236794cf393945d" title="Notify that RX has ended." alt="" coords="863,239,1038,281"/>
+<area shape="rect" id="node4" href="$classns3_1_1_simulator.html#a1b903a62d6117ef28f7ba3c6500689bf" title="Set the cancel bit on this event: the event&#39;s associated function will not be invoked when it expires..." alt="" coords="1407,44,1575,71"/>
+<area shape="rect" id="node5" href="$group__simulator.html#ga42eb4eddad41528d4d99794a3dae3fd0" title="Get the SimulatorImpl singleton." alt="" coords="1669,107,1775,133"/>
+<area shape="rect" id="node8" href="$classns3_1_1_simulator.html#a83ac8425c319a29b64f6d3b2ffc61e9c" title="Check if an event has already run or been cancelled." alt="" coords="1399,107,1583,133"/>
+<area shape="rect" id="node10" href="$namespacens3.html#af2a7557fe9afdd98d8f6f8f6e412cf5a" title=" " alt="" coords="885,157,1016,184"/>
+<area shape="rect" id="node12" href="$classns3_1_1_interference_helper.html#a57f38402c04110d6048564605cb58e7c" title="Returns an iterator to the first NiChange that is later than moment." alt="" coords="1403,218,1578,259"/>
+<area shape="rect" id="node14" href="$classns3_1_1_simulator_impl.html#aa516c50060846adc6fd316e83ef0797c" title="Return the current simulation virtual time." alt="" coords="1631,335,1813,361"/>
+<area shape="rect" id="node22" href="$classns3_1_1_wifi_tx_vector.html#a7125591f923091b79fe4a607dfad22e4" title=" " alt="" coords="1157,1250,1302,1291"/>
+<area shape="rect" id="node24" href="$classns3_1_1_wifi_phy.html#a89565e4a68b394ce2a3395e8eba5b01e" title=" " alt="" coords="1133,1550,1325,1591"/>
+<area shape="rect" id="node26" href="$classns3_1_1_wifi_phy.html#a68851f6bd60179b42af9f1bc6037c94b" title=" " alt="" coords="1132,1615,1327,1657"/>
+<area shape="rect" id="node27" href="$classns3_1_1_wifi_phy.html#ab920270da0c8596bef71e36b3141eb9c" title=" " alt="" coords="1132,1433,1327,1474"/>
+<area shape="rect" id="node28" href="$classns3_1_1_wifi_phy.html#a6530944dcf7e4f058a54fcf3a5ea3baf" title=" " alt="" coords="1108,1499,1351,1525"/>
+<area shape="rect" id="node29" href="$classns3_1_1_wifi_phy.html#ac07b1847196a6cf1bd1a24adf71e8486" title=" " alt="" coords="846,1315,1055,1357"/>
+<area shape="rect" id="node18" href="$classns3_1_1_wifi_tx_vector.html#ac56a35b49d9d77e09357adc171570d51" title=" " alt="" coords="1157,1031,1302,1073"/>
+<area shape="rect" id="node19" href="$classns3_1_1_wifi_mode.html#ad90f36e733ceaf8c5771cfbda437e14f" title=" " alt="" coords="1126,1097,1333,1124"/>
+<area shape="rect" id="node20" href="$classns3_1_1_wifi_tx_vector.html#aadd3ccf9d68dd8f06d4cfedc352498fb" title=" " alt="" coords="1157,914,1302,955"/>
+<area shape="rect" id="node21" href="$classns3_1_1_wifi_mode.html#a67e1664cac501221b63a2be307184cc9" title=" " alt="" coords="1120,849,1339,890"/>
+<area shape="rect" id="node23" href="$group__timecivil.html#ga17465a639c8d1464e76538afdd78a9f0" title=" " alt="" coords="1419,1411,1562,1437"/>
+<area shape="rect" id="node30" href="$classns3_1_1_wifi_tx_vector.html#ae3180e05aa71a628cab66eae3667d31b" title=" " alt="" coords="1157,1315,1302,1357"/>
+<area shape="rect" id="node32" href="$classns3_1_1_random_variable_stream.html#ae8f50692f36f1403a22d0cbb9c488db2" title="Check if antithetic values will be generated." alt="" coords="847,1753,1055,1794"/>
+<area shape="rect" id="node33" href="$namespacens3.html#a548291fa9e4e7d6a57814dfcbbebce9b" title=" " alt="" coords="909,1819,992,1845"/>
+<area shape="rect" id="node34" href="$namespacens3.html#a66840605409c3caeff0d2a728b68dc6d" title=" " alt="" coords="911,1584,990,1611"/>
+<area shape="rect" id="node35" href="$classns3_1_1_random_variable_stream.html#a72b37a5c0a574a51df77d378d9101936" title="Get the pointer to the underlying RngStream." alt="" coords="847,1635,1055,1677"/>
+<area shape="rect" id="node36" href="$classns3_1_1_rng_stream.html#a46be36426b8bc712e9de468b63558c22" title="Generate the next random number for this stream." alt="" coords="855,1701,1047,1728"/>
+<area shape="rect" id="node38" href="$classns3_1_1_interference_helper.html#a3f2120b4e86ee2c24125cb877bf2c0fb" title=" " alt="" coords="1142,357,1317,398"/>
+<area shape="rect" id="node39" href="$classns3_1_1_time.html#ac4f1f3f3aeff82c1a7d96e0b0ae2220b" title=" " alt="" coords="1162,423,1297,449"/>
+<area shape="rect" id="node42" href="$classns3_1_1_interference_helper.html#adac4d98d9175fefdccce62153422ab2c" title="Calculate the SNIR at the start of the HT PHY header and accumulate all SNIR changes in the SNIR vect..." alt="" coords="571,762,789,803"/>
+<area shape="rect" id="node43" href="$classns3_1_1_wifi_phy.html#a0528e5f0ded822ff3df47b5146cb0484" title="The last symbol of the PPDU has arrived." alt="" coords="587,411,773,437"/>
+<area shape="rect" id="node44" href="$classns3_1_1_wifi_phy.html#af55a96fc67e724abd99aeaeab826187f" title=" " alt="" coords="587,462,773,503"/>
+<area shape="rect" id="node45" href="$classns3_1_1_wifi_phy.html#a58a9d7c9dea69f223eb45ca4a5e0c49f" title=" " alt="" coords="567,527,793,569"/>
+<area shape="rect" id="node46" href="$classns3_1_1_wifi_phy.html#ace15a5e48e92eadceffbfb8ef3eb332c" title="Check if the given WifiMode is supported by the PHY." alt="" coords="573,828,787,855"/>
+<area shape="rect" id="node47" href="$classns3_1_1_wifi_phy.html#afc9b895aaf40c8993ad318fcc880a9a2" title="Check if the given WifiMode is supported by the PHY." alt="" coords="569,593,791,620"/>
+<area shape="rect" id="node48" href="$classns3_1_1_wifi_phy.html#a1546764208dba2aa81e0545f0bc2cc04" title="Public method used to fire a EndOfHePreamble trace once both HE SIG fields have been received,..." alt="" coords="585,645,775,686"/>
+<area shape="rect" id="node49" href="$namespacens3.html#a132cf27eedb5e15a1427faf8724be4d2" title="Convert from ratio to dB." alt="" coords="621,711,739,737"/>
+<area shape="rect" id="node50" href="$classns3_1_1_wifi_phy.html#a50ffb3c7ed515f30eb48b11c8ffca939" title="Reset PHY at the end of the packet under reception after it has failed the PHY header." alt="" coords="581,309,779,336"/>
+</map>

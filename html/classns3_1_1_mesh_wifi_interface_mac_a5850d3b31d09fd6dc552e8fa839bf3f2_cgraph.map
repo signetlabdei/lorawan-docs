@@ -1,0 +1,52 @@
+<map id="ns3::MeshWifiInterfaceMac::Receive" name="ns3::MeshWifiInterfaceMac::Receive">
+<area shape="rect" id="node1" title="Frame receive handler." alt="" coords="5,1051,204,1092"/>
+<area shape="rect" id="node2" href="$classns3_1_1_wifi_remote_station_manager.html#a169339a6312b10580cb6a940228833f0" title="Invoked in a STA upon association to store the set of rates which belong to the BSSBasicRateSet of th..." alt="" coords="252,60,485,101"/>
+<area shape="rect" id="node8" href="$classns3_1_1_wifi_remote_station_manager.html#a90f4d6b042c2692493446d36a3de799f" title="Invoked in a STA or AP to store the set of modes supported by a destination which is also supported l..." alt="" coords="252,125,485,167"/>
+<area shape="rect" id="node10" href="$classns3_1_1_wifi_phy.html#af55a96fc67e724abd99aeaeab826187f" title=" " alt="" coords="863,155,1050,196"/>
+<area shape="rect" id="node11" href="$namespacens3.html#a979caa1d7cbfc08ececb6fd3ad561e26" title="Convert the guard interval to nanoseconds based on the WifiMode." alt="" coords="272,243,465,284"/>
+<area shape="rect" id="node17" href="$classns3_1_1_regular_wifi_mac.html#aee6bc423d8f5227e3bf96e9e6a58ca76" title="Forward the packet up to the device." alt="" coords="291,308,447,349"/>
+<area shape="rect" id="node18" href="$classns3_1_1_wifi_mac_header.html#aa1c4acbda4ace9f7a920c97d71bdd097" title="Return the address in the Address 1 field." alt="" coords="292,373,445,415"/>
+<area shape="rect" id="node19" href="$classns3_1_1_wifi_mac_header.html#a5d32ca3e3a34f1185df86927d4346430" title="Return the address in the Address 2 field." alt="" coords="292,439,445,480"/>
+<area shape="rect" id="node20" href="$classns3_1_1_wifi_mac_header.html#a03391604609ee43e1a4dbc8a2b04fd00" title="Return the address in the Address 3 field." alt="" coords="292,504,445,545"/>
+<area shape="rect" id="node21" href="$classns3_1_1_wifi_mac_header.html#a177946f9925dad45f5135523f4e6e995" title="Return the address in the Address 4 field." alt="" coords="292,569,445,611"/>
+<area shape="rect" id="node22" href="$classns3_1_1_regular_wifi_mac.html#aec7ede7cc93b6ec04d447b1649ab27e8" title=" " alt="" coords="291,635,447,676"/>
+<area shape="rect" id="node23" href="$classns3_1_1_mac48_address.html#a55156e302c6bf950c0b558365adbde84" title=" " alt="" coords="291,817,447,859"/>
+<area shape="rect" id="node25" href="$classns3_1_1_wifi_mode.html#ad90f36e733ceaf8c5771cfbda437e14f" title=" " alt="" coords="265,1117,472,1143"/>
+<area shape="rect" id="node30" href="$classns3_1_1_wifi_phy.html#a6bc056d30b3942be3cb0459096385e56" title=" " alt="" coords="257,701,480,727"/>
+<area shape="rect" id="node31" href="$classns3_1_1_wifi_mac_queue_item.html#aeb59c1e3b526361838d5d3a6f3035039" title="Get the header stored in this item." alt="" coords="279,883,458,924"/>
+<area shape="rect" id="node32" href="$classns3_1_1_wifi_phy.html#aa1b9ecfcc6436b8882af36500cb0a2ea" title="The WifiPhy::GetNModes() and WifiPhy::GetMode() methods are used (e.g., by a WifiRemoteStationManager..." alt="" coords="284,949,453,975"/>
+<area shape="rect" id="node33" href="$classns3_1_1_wifi_phy.html#a978d3a554116b0654c40fc22e469ceaa" title="The WifiPhy::GetNModes() and WifiPhy::GetMode() methods are used (e.g., by a WifiRemoteStationManager..." alt="" coords="275,999,462,1026"/>
+<area shape="rect" id="node34" href="$classns3_1_1_wifi_mac_queue_item.html#a01d29092eafa110090998f339bfabd97" title="Get the packet stored in this item." alt="" coords="279,1051,458,1092"/>
+<area shape="rect" id="node35" href="$classns3_1_1_wifi_mac_header.html#a07391fd5b12f7a90fe55325fcccc8e3a" title="Return the Traffic ID of a QoS header." alt="" coords="292,1219,445,1260"/>
+<area shape="rect" id="node36" href="$classns3_1_1_wifi_mac_header.html#a368b97ef91b953af76794112fd3681c2" title="Return true if the Type is DATA and Subtype is one of the possible values for QoS Data." alt="" coords="586,1219,739,1260"/>
+<area shape="rect" id="node37" href="$classns3_1_1_wifi_phy.html#a8371199e86407919480c847d16462240" title="Return whether short guard interval is supported." alt="" coords="265,752,472,793"/>
+<area shape="rect" id="node38" href="$classns3_1_1_packet.html#afff7cb1ff518ee6dc0d424e10a5ad6ec" title="Returns the the size in bytes of the packet (including the zero&#45;filled initial payload)." alt="" coords="291,1285,446,1311"/>
+<area shape="rect" id="node39" href="$classns3_1_1_mgt_probe_response_header.html#a6d774cabbbc968555e71c4c01dfd2c54" title="Return the Service Set Identifier (SSID)." alt="" coords="256,1336,481,1377"/>
+<area shape="rect" id="node40" href="$classns3_1_1_regular_wifi_mac.html#acffe8d4db892391c9fe5f2365edeb4b5" title=" " alt="" coords="291,1401,447,1443"/>
+<area shape="rect" id="node41" href="$classns3_1_1_mgt_probe_response_header.html#a6fecda6838c75df78350b84ab2690959" title="Return the supported rates." alt="" coords="256,1467,481,1508"/>
+<area shape="rect" id="node42" href="$classns3_1_1_supported_rates.html#ab8a30a2fd52af8ec21147845cf74e6f3" title="Check if the given rate is a basic rate." alt="" coords="291,1532,447,1573"/>
+<area shape="rect" id="node43" href="$classns3_1_1_wifi_mac_header.html#afe7c9a624523907e0c291221e3789d21" title="Return true if the header is a Beacon header." alt="" coords="292,1597,445,1639"/>
+<area shape="rect" id="node44" href="$classns3_1_1_wifi_mac_header.html#ab7141548a921f63a084720b3b022de79" title="Return true if the Type is DATA." alt="" coords="292,1663,445,1704"/>
+<area shape="rect" id="node45" href="$classns3_1_1_ssid.html#a0aa95982edd1fc54747f9841bba1621d" title="Check if the two SSIDs are equal." alt="" coords="301,1729,436,1755"/>
+<area shape="rect" id="node46" href="$classns3_1_1_supported_rates.html#af37717777db2e91a41dd6e7f00a0beaf" title="Check if the given rate is supported." alt="" coords="291,1780,447,1821"/>
+<area shape="rect" id="node47" href="$classns3_1_1_simulator.html#ac3178fa975b419f7875e7105be122800" title="Return the current simulation virtual time." alt="" coords="292,1846,445,1873"/>
+<area shape="rect" id="node48" href="$classns3_1_1_packet.html#acc152757db7d44974640b089335b7003" title="Deserialize but does not remove the header from the internal buffer." alt="" coords="277,1897,460,1923"/>
+<area shape="rect" id="node49" href="$classns3_1_1_packet.html#afb014ae9f4adddbfc51c64b085bfd405" title="Replace the value of a packet tag." alt="" coords="258,1947,479,1974"/>
+<area shape="rect" id="node50" href="$classns3_1_1_socket_priority_tag.html#aca4be6f3e7c133189a76171488be5cf4" title="Set the tag&#39;s priority." alt="" coords="286,1999,451,2040"/>
+<area shape="rect" id="node3" href="$classns3_1_1_wifi_remote_station_manager.html#ab239018079ee424c7dfe9a81b4abc3b0" title="Return a basic mode from the set of basic modes." alt="" coords="546,5,779,47"/>
+<area shape="rect" id="node4" href="$classns3_1_1_wifi_remote_station_manager.html#a433cd6f0f2b9ab512fb4c2578e661ebb" title="Return the number of basic modes we support." alt="" coords="840,35,1073,76"/>
+<area shape="rect" id="node5" href="$classns3_1_1_wifi_mode.html#a67e1664cac501221b63a2be307184cc9" title=" " alt="" coords="553,243,772,284"/>
+<area shape="rect" id="node6" href="$classns3_1_1_wifi_mode_factory.html#a3086868810ff4347e31c63027726f544" title="Return a WifiModeItem at the given UID index." alt="" coords="1121,986,1315,1013"/>
+<area shape="rect" id="node7" href="$classns3_1_1_wifi_mode_factory.html#a9c6f695d733355dee8d74bd1709868fc" title="Return a WifiModeFactory." alt="" coords="875,949,1038,991"/>
+<area shape="rect" id="node9" href="$classns3_1_1_wifi_remote_station_manager.html#a6a5c20f231324799e383594b546ca733" title="Return the state of the station associated with the given address." alt="" coords="546,125,779,167"/>
+<area shape="rect" id="node12" href="$classns3_1_1_he_configuration.html#a84ff8e1105cfb4f2874b47021e45edd0" title=" " alt="" coords="583,308,742,349"/>
+<area shape="rect" id="node13" href="$classns3_1_1_wifi_net_device.html#af4a86ccc320631308e9f1023baecdd6b" title=" " alt="" coords="583,540,742,581"/>
+<area shape="rect" id="node14" href="$classns3_1_1_wifi_net_device.html#a20c98121e79afae35d03d9f5a3fa4ce8" title=" " alt="" coords="585,703,741,744"/>
+<area shape="rect" id="node15" href="$classns3_1_1_time.html#aff67d7a8139243a066d5292595caa966" title="Get an approximation of the time stored in this instance in the indicated unit." alt="" coords="561,374,765,401"/>
+<area shape="rect" id="node16" href="$classns3_1_1_ht_configuration.html#ae4ebac23f5cbf42f1badfc9511a2117f" title=" " alt="" coords="541,425,784,467"/>
+<area shape="rect" id="node24" href="$classns3_1_1_mac48_address.html#a17882c09fc6317d5bcf4efdb62a37d07" title=" " alt="" coords="585,817,741,859"/>
+<area shape="rect" id="node26" href="$classns3_1_1_wifi_mode.html#abbbea987249a16c776803ba6e2ca9973" title=" " alt="" coords="558,1066,767,1093"/>
+<area shape="rect" id="node27" href="$classns3_1_1_wifi_mode.html#a1437871ae722c85d980a8af3ba522d39" title=" " alt="" coords="533,914,792,941"/>
+<area shape="rect" id="node28" href="$classns3_1_1_wifi_mode.html#ae92b3cca34abdd76211fe9fbf19a6c09" title=" " alt="" coords="569,1015,756,1042"/>
+<area shape="rect" id="node29" href="$ipv4-address-generator_8cc.html#aaf5aa23b804d2e5e334106f207e8a6cc" title=" " alt="" coords="595,1167,730,1194"/>
+</map>

@@ -1,0 +1,52 @@
+<map id="ns3::LteRlcTm" name="ns3::LteRlcTm">
+<area shape="rect" id="node1" title="LTE RLC Transparent Mode (TM), see 3GPP TS 36.322." alt="" coords="3332,585,3447,612"/>
+<area shape="rect" id="node2" href="$classns3_1_1_lte_rlc.html" title="This abstract base class defines the API to interact with the Radio Link Control (LTE_RLC) in LTE,..." alt="" coords="3071,863,3165,889"/>
+<area shape="rect" id="node3" href="$classns3_1_1_object.html" title="A base class which provides memory management and object aggregation." alt="" coords="1898,716,1993,743"/>
+<area shape="rect" id="node9" href="$structns3_1_1_object_1_1_aggregates.html" title="The list of Objects aggregated to this one." alt="" coords="2303,689,2480,716"/>
+<area shape="rect" id="node4" href="$classns3_1_1_simple_ref_count.html" title=" " alt="" coords="1366,677,1531,733"/>
+<area shape="rect" id="node5" href="$classns3_1_1_object_base.html" title="Anchor the ns&#45;3 type and attribute system." alt="" coords="934,735,1061,761"/>
+<area shape="rect" id="node6" href="$classns3_1_1_simple_ref_count.html" title="A template&#45;based reference counting class." alt="" coords="904,657,1091,698"/>
+<area shape="rect" id="node36" href="$classns3_1_1_simple_ref_count.html" title=" " alt="" coords="1369,371,1528,413"/>
+<area shape="rect" id="node50" href="$classns3_1_1_simple_ref_count.html" title=" " alt="" coords="1369,611,1528,653"/>
+<area shape="rect" id="node7" href="$classns3_1_1empty.html" title="make Callback use a separate empty type" alt="" coords="673,596,767,623"/>
+<area shape="rect" id="node8" href="$classns3_1_1_type_id.html" title="a unique identifier for an interface." alt="" coords="1401,757,1496,784"/>
+<area shape="rect" id="node10" href="$classns3_1_1_lte_rlc_sap_provider.html" title="Service Access Point (SAP) offered by the UM&#45;RLC and AM&#45;RLC entities to the PDCP entity See 3GPP 36...." alt="" coords="2676,1072,2847,1099"/>
+<area shape="rect" id="node11" href="$classns3_1_1_traced_callback.html" title=" " alt="" coords="2684,941,2839,997"/>
+<area shape="rect" id="node12" title=" " alt="" coords="1821,1049,2069,1119"/>
+<area shape="rect" id="node13" href="$classns3_1_1_callback.html" title=" " alt="" coords="1363,1087,1535,1172"/>
+<area shape="rect" id="node14" href="$classns3_1_1_callback_base.html" title=" " alt="" coords="649,899,791,925"/>
+<area shape="rect" id="node17" href="$classns3_1_1_callback.html" title="Callback template class." alt="" coords="917,996,1078,1052"/>
+<area shape="rect" id="node22" href="$classns3_1_1_callback.html" title=" " alt="" coords="1363,961,1535,1031"/>
+<area shape="rect" id="node27" href="$classns3_1_1_callback.html" title=" " alt="" coords="1357,866,1540,937"/>
+<area shape="rect" id="node15" href="$classns3_1_1_ptr.html" title=" " alt="" coords="345,662,548,703"/>
+<area shape="rect" id="node16" href="$classns3_1_1_ptr.html" title="Smart pointer class similar to boost::intrusive_ptr." alt="" coords="5,327,115,353"/>
+<area shape="rect" id="node34" href="$classns3_1_1_ptr.html" title=" " alt="" coords="2304,192,2479,219"/>
+<area shape="rect" id="node37" href="$classns3_1_1_ptr.html" title=" " alt="" coords="1351,168,1547,195"/>
+<area shape="rect" id="node48" href="$classns3_1_1_ptr.html" title=" " alt="" coords="2292,585,2491,612"/>
+<area shape="rect" id="node18" title="STL class." alt="" coords="1395,815,1503,841"/>
+<area shape="rect" id="node21" title=" " alt="" coords="1846,923,2045,994"/>
+<area shape="rect" id="node26" title=" " alt="" coords="1846,803,2045,874"/>
+<area shape="rect" id="node19" title=" " alt="" coords="701,717,739,744"/>
+<area shape="rect" id="node46" title="STL class." alt="" coords="933,481,1062,508"/>
+<area shape="rect" id="node20" href="$classns3_1_1_traced_callback.html" title="Forward calls to a chain of Callback." alt="" coords="2315,931,2468,987"/>
+<area shape="rect" id="node25" href="$classns3_1_1_traced_callback.html" title=" " alt="" coords="2685,811,2837,867"/>
+<area shape="rect" id="node23" href="$classns3_1_1_lte_rlc_sap_user.html" title="Service Access Point (SAP) offered by the UM&#45;RLC and AM&#45;RLC entities to the PDCP entity See 3GPP 36...." alt="" coords="2688,709,2835,736"/>
+<area shape="rect" id="node24" href="$classns3_1_1_lte_mac_sap_user.html" title="Service Access Point (SAP) offered by the MAC to the RLC See Femto Forum MAC Scheduler Interface Spec..." alt="" coords="2684,891,2839,917"/>
+<area shape="rect" id="node28" href="$classns3_1_1_lte_mac_sap_provider.html" title="Service Access Point (SAP) offered by the MAC to the RLC See Femto Forum MAC Scheduler Interface Spec..." alt="" coords="2672,1021,2851,1048"/>
+<area shape="rect" id="node29" title=" " alt="" coords="3029,481,3207,522"/>
+<area shape="rect" id="node30" href="$structns3_1_1_lte_rlc_tm_1_1_tx_pdu.html" title="Store an incoming (from layer above us) PDU, waiting to transmit it." alt="" coords="2680,192,2843,219"/>
+<area shape="rect" id="node31" href="$classns3_1_1_time.html" title="Simulation virtual time values and global simulation resolution." alt="" coords="2349,39,2434,65"/>
+<area shape="rect" id="node32" title="STL class." alt="" coords="1891,7,2000,33"/>
+<area shape="rect" id="node33" title=" " alt="" coords="1429,7,1468,33"/>
+<area shape="rect" id="node35" href="$classns3_1_1_packet.html" title="network packets" alt="" coords="1897,269,1993,296"/>
+<area shape="rect" id="node38" href="$classns3_1_1_nix_vector.html" title="Neighbor&#45;index data structure for nix&#45;vector routing." alt="" coords="939,169,1056,196"/>
+<area shape="rect" id="node39" href="$classns3_1_1_packet_metadata.html" title="Handle packet metadata about packet headers and trailers." alt="" coords="1369,219,1528,245"/>
+<area shape="rect" id="node40" href="$structns3_1_1_packet_metadata_1_1_data.html" title="Data structure." alt="" coords="918,221,1077,262"/>
+<area shape="rect" id="node41" href="$classns3_1_1_packet_metadata_1_1_data_free_list.html" title="Class to hold all the metadata." alt="" coords="918,286,1077,327"/>
+<area shape="rect" id="node42" href="$classns3_1_1_byte_tag_list.html" title="keep track of the byte tags stored in a packet." alt="" coords="1385,320,1513,347"/>
+<area shape="rect" id="node43" href="$structns3_1_1_byte_tag_list_data.html" title="Internal representation of the byte tags stored in a packet." alt="" coords="918,352,1077,379"/>
+<area shape="rect" id="node44" href="$classns3_1_1_packet_tag_list.html" title="List of the packet tags stored in a packet." alt="" coords="1378,269,1519,296"/>
+<area shape="rect" id="node45" href="$classns3_1_1_buffer.html" title="automatically resized byte buffer" alt="" coords="1402,437,1495,464"/>
+<area shape="rect" id="node47" href="$classns3_1_1_event_id.html" title="An identifier for simulation events." alt="" coords="2889,585,2991,612"/>
+<area shape="rect" id="node49" href="$classns3_1_1_event_impl.html" title="A simulation event." alt="" coords="1886,613,2005,640"/>
+</map>

@@ -1,0 +1,52 @@
+<map id="ns3::ChannelAccessManager::DoGrantPcfAccess" name="ns3::ChannelAccessManager::DoGrantPcfAccess">
+<area shape="rect" id="node1" title="Grant access to PCF." alt="" coords="5,669,213,711"/>
+<area shape="rect" id="node2" href="$classns3_1_1_txop.html#ad00c94d57c2d4df4ff1f0a8064805b65" title="Notify the Txop that access has been granted." alt="" coords="261,677,492,703"/>
+<area shape="rect" id="node3" href="$classns3_1_1_mac_low_transmission_parameters.html#ae09e5316ed859ddca19bfbaec3b07704" title="Do not wait for Ack after data transmission." alt="" coords="540,5,807,47"/>
+<area shape="rect" id="node4" href="$classns3_1_1_mac_low_transmission_parameters.html#a6944fa0c62fd004c94b845ba1b474b87" title="Do not attempt to send data burst after current transmission." alt="" coords="540,71,807,112"/>
+<area shape="rect" id="node5" href="$classns3_1_1_mac_low_transmission_parameters.html#a18b2f706b138952bc351538e59b723f4" title="Do not send RTS and wait for CTS before sending data." alt="" coords="540,136,807,177"/>
+<area shape="rect" id="node6" href="$classns3_1_1_mac_low_transmission_parameters.html#aa2db70f6786b7d0b9d9cc453b2292f2b" title="Wait ACKTimeout for an Ack." alt="" coords="540,201,807,243"/>
+<area shape="rect" id="node7" href="$classns3_1_1_mac_low_transmission_parameters.html#a33fc05383c3f611ca1be7d33a01a1774" title=" " alt="" coords="540,267,807,308"/>
+<area shape="rect" id="node8" href="$classns3_1_1_mac_low_transmission_parameters.html#a119d03769cf51e528d03f686c6bd8ed5" title="Send a RTS, and wait CTSTimeout for a CTS." alt="" coords="540,332,807,373"/>
+<area shape="rect" id="node9" href="$classns3_1_1_wifi_mac_header.html#aa1c4acbda4ace9f7a920c97d71bdd097" title="Return the address in the Address 1 field." alt="" coords="1216,467,1369,508"/>
+<area shape="rect" id="node10" href="$classns3_1_1_wifi_remote_station_manager.html#ad81efbe48611977c8cea482721fd823b" title=" " alt="" coords="557,1279,790,1320"/>
+<area shape="rect" id="node35" href="$classns3_1_1_txop.html#acbee837cde9dcbe14da37677fa5a395c" title="Get the next fragment from the packet with appropriate Wifi header for the fragment." alt="" coords="563,601,784,627"/>
+<area shape="rect" id="node36" href="$classns3_1_1_txop.html#a444d3edd92ae0b70b95f0be836050eea" title="Check if the current fragment is the last fragment." alt="" coords="895,550,1088,577"/>
+<area shape="rect" id="node37" href="$classns3_1_1_wifi_mac_header.html#ad11306bd3a2edf81346a14a9c4fe7388" title="Set the fragment number of the header." alt="" coords="909,601,1074,643"/>
+<area shape="rect" id="node38" href="$classns3_1_1_wifi_mac_header.html#a3898df5358df4247926b74175f2789c3" title="Un&#45;set the More Fragment bit in the Frame Control Field." alt="" coords="906,667,1077,708"/>
+<area shape="rect" id="node39" href="$classns3_1_1_wifi_mac_queue_item.html#aeb59c1e3b526361838d5d3a6f3035039" title="Get the header stored in this item." alt="" coords="584,1344,763,1385"/>
+<area shape="rect" id="node40" href="$classns3_1_1_txop.html#a34a0543a372e357fb7e9b9224a531ce3" title="Return the MacLow associated with this Txop." alt="" coords="602,1410,745,1437"/>
+<area shape="rect" id="node41" href="$classns3_1_1_txop.html#a165fb9a4651fa0380ec9b63e3669d8d0" title="Calculate the size of the next fragment." alt="" coords="555,449,791,475"/>
+<area shape="rect" id="node42" href="$classns3_1_1_wifi_mac_queue_item.html#a01d29092eafa110090998f339bfabd97" title="Get the packet stored in this item." alt="" coords="584,1461,763,1503"/>
+<area shape="rect" id="node43" href="$classns3_1_1_wifi_mac_header.html#ad4af293cb29d73a7661a93099e363b56" title="Return the raw Sequence Control field." alt="" coords="592,1527,755,1568"/>
+<area shape="rect" id="node44" href="$classns3_1_1_packet.html#afff7cb1ff518ee6dc0d424e10a5ad6ec" title="Returns the the size in bytes of the packet (including the zero&#45;filled initial payload)." alt="" coords="914,733,1069,759"/>
+<area shape="rect" id="node45" href="$classns3_1_1_mac48_address.html#a56fbd59ebf507db02609a1e77c7c4656" title=" " alt="" coords="595,1592,751,1633"/>
+<area shape="rect" id="node46" href="$classns3_1_1_txop.html#aad5c49fdd40d8ef207d7845458227396" title="Check if the current packet should be fragmented." alt="" coords="562,499,785,526"/>
+<area shape="rect" id="node47" href="$classns3_1_1_wifi_remote_station_manager.html#a1552c041e2344e355e9a28859054db27" title=" " alt="" coords="557,804,790,845"/>
+<area shape="rect" id="node48" href="$classns3_1_1_wifi_mac_header.html#a2dbe5e569e783f6d975c13daf3015f12" title="Un&#45;set the Retry bit in the Frame Control field." alt="" coords="597,1657,750,1699"/>
+<area shape="rect" id="node49" href="$classns3_1_1_wifi_mac_header.html#a51634924960a25606596916eabdcc12e" title="Set the sequence number of the header." alt="" coords="590,1723,757,1764"/>
+<area shape="rect" id="node50" href="$classns3_1_1_wifi_remote_station_manager.html#a7418b5958ff90c62a88539443dfc90dc" title="Typically called to update the fragmentation threshold at the start of a new transmission." alt="" coords="555,1788,791,1829"/>
+<area shape="rect" id="node11" href="$namespacens3.html#a979caa1d7cbfc08ececb6fd3ad561e26" title="Convert the guard interval to nanoseconds based on the WifiMode." alt="" coords="895,952,1088,993"/>
+<area shape="rect" id="node12" href="$classns3_1_1_wifi_net_device.html#af4a86ccc320631308e9f1023baecdd6b" title=" " alt="" coords="1213,923,1372,964"/>
+<area shape="rect" id="node13" href="$classns3_1_1_wifi_mode.html#a67e1664cac501221b63a2be307184cc9" title=" " alt="" coords="1183,1293,1402,1335"/>
+<area shape="rect" id="node14" href="$classns3_1_1_wifi_remote_station_manager.html#a5a6b2bfcd4959da43c54f0072bd01202" title=" " alt="" coords="875,1708,1108,1749"/>
+<area shape="rect" id="node15" href="$classns3_1_1_uinteger_value.html#a82f7ad2ff90cfebf9f6292bb6ace0a05" title=" " alt="" coords="903,1774,1080,1801"/>
+<area shape="rect" id="node16" href="$classns3_1_1_wifi_remote_station_manager.html#ab239018079ee424c7dfe9a81b4abc3b0" title="Return a basic mode from the set of basic modes." alt="" coords="1176,1876,1409,1917"/>
+<area shape="rect" id="node17" href="$classns3_1_1_wifi_remote_station_manager.html#a433cd6f0f2b9ab512fb4c2578e661ebb" title="Return the number of basic modes we support." alt="" coords="1457,1876,1691,1917"/>
+<area shape="rect" id="node18" href="$classns3_1_1_wifi_phy.html#af55a96fc67e724abd99aeaeab826187f" title=" " alt="" coords="898,2044,1085,2085"/>
+<area shape="rect" id="node19" href="$namespacens3.html#a3b6822ca0fc413acfcfa182b22f6fa86" title="Return the channel width that corresponds to the selected mode (instead of letting the PHY&#39;s default ..." alt="" coords="855,1657,1128,1683"/>
+<area shape="rect" id="node20" href="$classns3_1_1_high_latency_data_tx_vector_tag.html#a814cf9c8ea73cb19d21626361ca7f317" title=" " alt="" coords="880,2109,1103,2151"/>
+<area shape="rect" id="node21" href="$classns3_1_1_wifi_remote_station_manager.html#a0f76976a6d7a8761b1ae1b9b74f18fbf" title="Return the default transmission mode." alt="" coords="1176,1993,1409,2035"/>
+<area shape="rect" id="node22" href="$classns3_1_1_wifi_phy.html#adf2fa40dcba4e52e9bc67c6ffc819170" title="Return the device this PHY is associated with." alt="" coords="902,2175,1081,2202"/>
+<area shape="rect" id="node23" href="$classns3_1_1_wifi_remote_station_manager.html#a67493a6f09cd90a438fceead287a72c0" title="Return a mode for non&#45;unicast packets." alt="" coords="875,1927,1108,1968"/>
+<area shape="rect" id="node24" href="$namespacens3.html#ae180410a6fd89fcc32fd0f720b1c0a40" title="Return the preamble to be used for the transmission." alt="" coords="869,2226,1113,2253"/>
+<area shape="rect" id="node25" href="$classns3_1_1_wifi_remote_station_manager.html#a9864b09190adb8e2b0c2d3658eacc6ce" title="Return whether the device uses short PHY preambles." alt="" coords="875,1017,1108,1059"/>
+<area shape="rect" id="node26" href="$classns3_1_1_wifi_remote_station_manager.html#a3b5ae71dce8e994b493ddfdb1d2f57f6" title=" " alt="" coords="875,1083,1108,1124"/>
+<area shape="rect" id="node27" href="$classns3_1_1_wifi_mac_header.html#a9e27e439b0ef655ac9598f45218364bd" title="Return true if the Type is Management." alt="" coords="915,1148,1068,1189"/>
+<area shape="rect" id="node28" href="$classns3_1_1_wifi_remote_station_manager.html#a144c73228215aec46edcb2db2b545abf" title="Return the station associated with the given address and TID." alt="" coords="875,835,1108,876"/>
+<area shape="rect" id="node29" href="$classns3_1_1_wifi_tx_vector.html#abb9bd0e5390bd7e7b4c1c1295142cdc4" title="Set the BSS color." alt="" coords="919,1213,1064,1255"/>
+<area shape="rect" id="node30" href="$classns3_1_1_wifi_tx_vector.html#a2bd711576c12a747bc3a800ef4cc0a5b" title="Sets the selected channelWidth (in MHz)" alt="" coords="919,1279,1064,1320"/>
+<area shape="rect" id="node31" href="$classns3_1_1_wifi_tx_vector.html#a40280b31baf8d7cef1a7234715969d06" title="Sets the guard interval duration (in nanoseconds)" alt="" coords="919,1344,1064,1385"/>
+<area shape="rect" id="node32" href="$classns3_1_1_wifi_tx_vector.html#af39f17fec348c22f8c963bcb6bb5fc53" title="Sets the selected payload transmission mode." alt="" coords="919,1409,1064,1451"/>
+<area shape="rect" id="node33" href="$classns3_1_1_wifi_tx_vector.html#a0402388fb5dc590075a4560daf294bf3" title="Sets the Ness number refer to IEEE 802.11n Table 20&#45;6 for explanation." alt="" coords="919,1475,1064,1516"/>
+<area shape="rect" id="node34" href="$classns3_1_1_wifi_tx_vector.html#af6b333491a8b20c064d8d1ad35381194" title="Sets the number of Nss refer to IEEE 802.11n Table 20&#45;28 for explanation and range." alt="" coords="919,1540,1064,1581"/>
+</map>

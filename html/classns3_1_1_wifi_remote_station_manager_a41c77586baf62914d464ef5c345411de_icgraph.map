@@ -1,0 +1,52 @@
+<map id="ns3::WifiRemoteStationManager::GetNSupported" name="ns3::WifiRemoteStationManager::GetNSupported">
+<area shape="rect" id="node1" title="Return the number of modes supported by the given station." alt="" coords="763,1695,996,1736"/>
+<area shape="rect" id="node2" href="$classns3_1_1_aparf_wifi_manager.html#a98a3fc4dfff3bcc1bc452dfed963576f" title="Check for initializations." alt="" coords="253,136,424,177"/>
+<area shape="rect" id="node6" href="$classns3_1_1_minstrel_wifi_manager.html#a5768fc5c0a32ee601e476d51b7cd8eec" title="Check for initializations." alt="" coords="503,233,693,275"/>
+<area shape="rect" id="node12" href="$classns3_1_1_parf_wifi_manager.html#a2a7ea7d1accf1ce9056c91929db2e7eb" title="Check for initializations." alt="" coords="257,683,420,724"/>
+<area shape="rect" id="node16" href="$classns3_1_1_rraa_wifi_manager.html#a14709913f823ce57563d4672a877d4c5" title="Check for initializations." alt="" coords="515,435,681,476"/>
+<area shape="rect" id="node19" href="$classns3_1_1_rrpaa_wifi_manager.html#a37fd1f9711566d9def5f31c966a89bb5" title="Check for initializations." alt="" coords="251,1701,426,1743"/>
+<area shape="rect" id="node24" href="$classns3_1_1_amrr_wifi_manager.html#ad18cc0aa1f6f6472e9e5ac2563b85e4c" title=" " alt="" coords="17,1821,185,1863"/>
+<area shape="rect" id="node25" href="$classns3_1_1_ideal_wifi_manager.html#a2e7570eb1f5cbef1067cfb714e94218e" title=" " alt="" coords="255,500,423,541"/>
+<area shape="rect" id="node26" href="$classns3_1_1_onoe_wifi_manager.html#a58c4d341696639d4b0ea618275461da4" title=" " alt="" coords="253,1985,424,2027"/>
+<area shape="rect" id="node27" href="$classns3_1_1_aarf_wifi_manager.html#ae06e7a2a40dc5d5a1156a8c686aa3fea" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="517,1724,679,1765"/>
+<area shape="rect" id="node28" href="$classns3_1_1_aarfcd_wifi_manager.html#a7a2594a6197e0efa8a64c785a4e0cf0e" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="509,1789,687,1831"/>
+<area shape="rect" id="node29" href="$classns3_1_1_cara_wifi_manager.html#afaa82abb4547cf0d25affdddcaa36406" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="515,1855,681,1896"/>
+<area shape="rect" id="node30" href="$classns3_1_1_wifi_remote_station_manager.html#adb9e17ee35ce1e5d390c460c48a6a19d" title="Return whether mode associated with the specified station at the specified index." alt="" coords="481,1173,715,1215"/>
+<area shape="rect" id="node47" href="$classns3_1_1_amrr_wifi_manager.html#ac0a36694c46085127da503d8f907e9fe" title="Increase the transmission rate to the given station." alt="" coords="514,2153,682,2195"/>
+<area shape="rect" id="node48" href="$classns3_1_1_amrr_wifi_manager.html#a2bdf0c3696234b2d530d3becd174afdd" title="Update the mode used to send to the given station." alt="" coords="255,2051,423,2092"/>
+<area shape="rect" id="node49" href="$classns3_1_1_amrr_wifi_manager.html#a342d93dd7b8294cb194ce8cec7dcdaae" title="Check if the current rate for the given station is the maximum rate." alt="" coords="514,2088,682,2129"/>
+<area shape="rect" id="node50" href="$classns3_1_1_onoe_wifi_manager.html#afecc5c3113a6fa42f1d784fec75e3876" title="Update the mode." alt="" coords="513,1920,683,1961"/>
+<area shape="rect" id="node3" href="$classns3_1_1_aparf_wifi_manager.html#a9be0935377c6c6052cc12407d17dafbd" title=" " alt="" coords="15,289,186,331"/>
+<area shape="rect" id="node4" href="$classns3_1_1_aparf_wifi_manager.html#a3a4301f367370f1ac76e586104408fc4" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="15,104,186,145"/>
+<area shape="rect" id="node5" href="$classns3_1_1_aparf_wifi_manager.html#aebf937503ecf5b198c0c42de0d435574" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="15,169,186,211"/>
+<area shape="rect" id="node7" href="$classns3_1_1_minstrel_wifi_manager.html#a9ec473fa6ebd7460bce2d8bf36908ad2" title=" " alt="" coords="244,5,433,47"/>
+<area shape="rect" id="node8" href="$classns3_1_1_minstrel_wifi_manager.html#ad85c20d1c9c6fa2f77a92bef7575de53" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="244,71,433,112"/>
+<area shape="rect" id="node9" href="$classns3_1_1_minstrel_wifi_manager.html#a70e12d7a6093a4867befb354c0f7c287" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="6,464,195,505"/>
+<area shape="rect" id="node10" href="$classns3_1_1_minstrel_wifi_manager.html#a6761121418977e63b958cac8c0ac698a" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="5,573,196,615"/>
+<area shape="rect" id="node11" href="$classns3_1_1_minstrel_wifi_manager.html#afc42d002709fb4334ae5b164bfa07aa8" title="Get data transmit vector." alt="" coords="244,304,433,345"/>
+<area shape="rect" id="node13" href="$classns3_1_1_parf_wifi_manager.html#a5a7cc006d12987077a3afc4edd76da86" title=" " alt="" coords="19,1093,182,1135"/>
+<area shape="rect" id="node14" href="$classns3_1_1_parf_wifi_manager.html#a852f0d8e8da9139971a07432bf4e3c1c" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="19,661,182,703"/>
+<area shape="rect" id="node15" href="$classns3_1_1_parf_wifi_manager.html#a64ccf2bcb3b346b47ce063385f497eb1" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="19,727,182,768"/>
+<area shape="rect" id="node17" href="$classns3_1_1_rraa_wifi_manager.html#acc7f56a51e22431479e1d534ad7ece84" title=" " alt="" coords="255,435,422,476"/>
+<area shape="rect" id="node18" href="$classns3_1_1_rraa_wifi_manager.html#a247d7c5c2e63723a464dde8755d703ea" title=" " alt="" coords="255,369,422,411"/>
+<area shape="rect" id="node20" href="$classns3_1_1_rrpaa_wifi_manager.html#add26dac79b43d5c0114ba30e8cb29a9e" title=" " alt="" coords="13,1541,188,1583"/>
+<area shape="rect" id="node21" href="$classns3_1_1_rrpaa_wifi_manager.html#a948105f3b3d0129bb717091b004dda38" title=" " alt="" coords="13,1625,188,1667"/>
+<area shape="rect" id="node22" href="$classns3_1_1_rrpaa_wifi_manager.html#a1eaf934bbd61fba16475071bd67a6064" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="13,1691,188,1732"/>
+<area shape="rect" id="node23" href="$classns3_1_1_rrpaa_wifi_manager.html#aac417bc472f545a7f4a03ae8d788773f" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="13,1756,188,1797"/>
+<area shape="rect" id="node31" href="$classns3_1_1_aarf_wifi_manager.html#a408d8be07102ba41125c839b01e8a7ee" title=" " alt="" coords="257,1453,420,1495"/>
+<area shape="rect" id="node32" href="$classns3_1_1_aarfcd_wifi_manager.html#ab9bfc915e2a36ee071995eb0247b1599" title=" " alt="" coords="249,1571,428,1612"/>
+<area shape="rect" id="node33" href="$classns3_1_1_arf_wifi_manager.html#a6bd79d80cbb7f743aa1bece1e5c24584" title=" " alt="" coords="259,1636,419,1677"/>
+<area shape="rect" id="node34" href="$classns3_1_1_cara_wifi_manager.html#a948e474fbc8dd16211dc6f6fcb6ef496" title=" " alt="" coords="255,748,422,789"/>
+<area shape="rect" id="node35" href="$classns3_1_1_aarf_wifi_manager.html#a4c2d4fbb34d152c3c4fe4530681da512" title=" " alt="" coords="257,813,420,855"/>
+<area shape="rect" id="node36" href="$classns3_1_1_aarfcd_wifi_manager.html#a4c4e397e54ae8ff36a90a1e044825586" title=" " alt="" coords="249,879,428,920"/>
+<area shape="rect" id="node37" href="$classns3_1_1_amrr_wifi_manager.html#a036c453d18e33475b8ad75922682d214" title=" " alt="" coords="17,1963,185,2004"/>
+<area shape="rect" id="node38" href="$classns3_1_1_aparf_wifi_manager.html#a091b6da1ff7d3d0ae61ca96dc4ee256b" title=" " alt="" coords="253,944,424,985"/>
+<area shape="rect" id="node39" href="$classns3_1_1_arf_wifi_manager.html#a56217b6af0b44febda8b48266562e284" title=" " alt="" coords="261,1009,416,1051"/>
+<area shape="rect" id="node40" href="$classns3_1_1_cara_wifi_manager.html#a2361885b5679a859cb55c0b29da0c1ad" title=" " alt="" coords="255,1075,422,1116"/>
+<area shape="rect" id="node41" href="$classns3_1_1_onoe_wifi_manager.html#a235403aacb2b69d019b23a86263623d7" title=" " alt="" coords="253,1920,424,1961"/>
+<area shape="rect" id="node42" href="$classns3_1_1_parf_wifi_manager.html#a693981d57d5f1bdce6a80acf2b0f36a2" title=" " alt="" coords="257,1140,420,1181"/>
+<area shape="rect" id="node43" href="$classns3_1_1_rraa_wifi_manager.html#a68148d81b6e49676837ec93f43f6f005" title=" " alt="" coords="255,1205,422,1247"/>
+<area shape="rect" id="node44" href="$classns3_1_1_rrpaa_wifi_manager.html#ae174e676f819aa2337f06d21408d007c" title=" " alt="" coords="251,1271,426,1312"/>
+<area shape="rect" id="node45" href="$classns3_1_1_minstrel_wifi_manager.html#aa27f91213c7b90b67ff2d2bfca02e5b0" title="Find a rate to use from Minstrel Table." alt="" coords="244,617,433,659"/>
+<area shape="rect" id="node46" href="$classns3_1_1_minstrel_wifi_manager.html#a8643a7d64b0cebcdba66207e36c2b1c6" title="Get RTS transmit vector." alt="" coords="244,1336,433,1377"/>
+</map>

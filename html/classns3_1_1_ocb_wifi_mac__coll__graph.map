@@ -1,0 +1,52 @@
+<map id="ns3::OcbWifiMac" name="ns3::OcbWifiMac">
+<area shape="rect" id="node1" title="STAs communicate with each directly outside the context of a BSS." alt="" coords="3071,1735,3202,1761"/>
+<area shape="rect" id="node2" href="$classns3_1_1_regular_wifi_mac.html" title="base class for all MAC&#45;level wifi objects." alt="" coords="1824,1659,1980,1685"/>
+<area shape="rect" id="node3" href="$classns3_1_1_wifi_mac.html" title="base class for all MAC&#45;level wifi objects." alt="" coords="1917,575,2023,602"/>
+<area shape="rect" id="node19" href="$classns3_1_1_ptr.html" title=" " alt="" coords="891,819,1076,845"/>
+<area shape="rect" id="node4" href="$classns3_1_1_object.html" title="A base class which provides memory management and object aggregation." alt="" coords="1835,124,1929,151"/>
+<area shape="rect" id="node7" href="$structns3_1_1_object_1_1_aggregates.html" title="The list of Objects aggregated to this one." alt="" coords="1921,243,2099,269"/>
+<area shape="rect" id="node12" href="$classns3_1_1_net_device.html" title="Network layer to device interface." alt="" coords="2123,243,2244,269"/>
+<area shape="rect" id="node17" href="$classns3_1_1_mac_low.html" title="handle RTS/CTS/Data/Ack transactions." alt="" coords="769,1301,875,1328"/>
+<area shape="rect" id="node27" href="$classns3_1_1_wifi_remote_station_manager.html" title="hold a list of per&#45;remote&#45;station state." alt="" coords="924,1055,1157,1081"/>
+<area shape="rect" id="node29" href="$classns3_1_1_wifi_phy.html" title="802.11 PHY layer model" alt="" coords="2565,575,2668,602"/>
+<area shape="rect" id="node36" href="$classns3_1_1_txop.html" title="Handle packet fragmentation and retransmissions for data and management frames." alt="" coords="847,1480,933,1507"/>
+<area shape="rect" id="node38" href="$classns3_1_1_channel_access_manager.html" title="Manage a set of ns3::Txop." alt="" coords="2057,1055,2265,1081"/>
+<area shape="rect" id="node5" href="$classns3_1_1_simple_ref_count.html" title=" " alt="" coords="1722,5,1887,61"/>
+<area shape="rect" id="node6" href="$classns3_1_1_type_id.html" title="a unique identifier for an interface." alt="" coords="1912,20,2007,47"/>
+<area shape="rect" id="node8" href="$classns3_1_1_traced_callback.html" title=" " alt="" coords="2378,391,2541,447"/>
+<area shape="rect" id="node9" title=" " alt="" coords="1675,213,1897,299"/>
+<area shape="rect" id="node10" href="$classns3_1_1_traced_callback.html" title="Forward calls to a chain of Callback." alt="" coords="2848,228,3001,284"/>
+<area shape="rect" id="node43" href="$classns3_1_1_traced_callback.html" title=" " alt="" coords="3212,398,3448,439"/>
+<area shape="rect" id="node11" href="$classns3_1_1_ptr.html" title=" " alt="" coords="2022,405,2222,432"/>
+<area shape="rect" id="node13" href="$classns3_1_1_ptr.html" title="Smart pointer class similar to boost::intrusive_ptr." alt="" coords="675,243,785,269"/>
+<area shape="rect" id="node16" href="$classns3_1_1_ptr.html" title=" " alt="" coords="124,1391,309,1417"/>
+<area shape="rect" id="node24" href="$classns3_1_1_ptr.html" title=" " alt="" coords="258,494,447,521"/>
+<area shape="rect" id="node25" href="$classns3_1_1_ptr.html" title=" " alt="" coords="309,701,549,727"/>
+<area shape="rect" id="node26" href="$classns3_1_1_ptr.html" title=" " alt="" coords="585,1171,779,1212"/>
+<area shape="rect" id="node28" href="$classns3_1_1_ptr.html" title=" " alt="" coords="1408,819,1591,845"/>
+<area shape="rect" id="node34" href="$classns3_1_1_ptr.html" title=" " alt="" coords="1017,405,1176,432"/>
+<area shape="rect" id="node35" href="$classns3_1_1_ptr.html" title=" " alt="" coords="503,1569,667,1596"/>
+<area shape="rect" id="node37" href="$classns3_1_1_ptr.html" title=" " alt="" coords="1391,1236,1605,1277"/>
+<area shape="rect" id="node39" href="$classns3_1_1_ptr.html" title=" " alt="" coords="634,1391,853,1417"/>
+<area shape="rect" id="node45" href="$classns3_1_1_ptr.html" title=" " alt="" coords="1901,819,2121,845"/>
+<area shape="rect" id="node14" href="$classns3_1_1_time.html" title="Simulation virtual time values and global simulation resolution." alt="" coords="1525,405,1610,432"/>
+<area shape="rect" id="node15" title="STL class." alt="" coords="1491,243,1601,269"/>
+<area shape="rect" id="node18" href="$classns3_1_1_mac48_address.html" title="an EUI&#45;48 address" alt="" coords="855,1178,1003,1205"/>
+<area shape="rect" id="node20" href="$classns3_1_1_wifi_tx_vector.html" title="This class mimics the TXVECTOR which is to be passed to the PHY in order to define the parameters whi..." alt="" coords="1027,1178,1164,1205"/>
+<area shape="rect" id="node21" href="$classns3_1_1_callback.html" title=" " alt="" coords="3497,398,3712,439"/>
+<area shape="rect" id="node46" href="$classns3_1_1_mac_rx_middle.html" title=" " alt="" coords="3493,575,3634,602"/>
+<area shape="rect" id="node22" href="$classns3_1_1_callback_base.html" title=" " alt="" coords="3701,124,3842,151"/>
+<area shape="rect" id="node23" href="$classns3_1_1_callback.html" title="Callback template class." alt="" coords="3876,228,4037,284"/>
+<area shape="rect" id="node32" href="$classns3_1_1_callback.html" title=" " alt="" coords="3737,405,3904,432"/>
+<area shape="rect" id="node47" href="$classns3_1_1_callback.html" title=" " alt="" coords="3929,391,4171,447"/>
+<area shape="rect" id="node49" title=" " alt="" coords="4174,568,4414,609"/>
+<area shape="rect" id="node30" title="STL class." alt="" coords="3053,405,3188,432"/>
+<area shape="rect" id="node33" title=" " alt="" coords="1476,929,1627,971"/>
+<area shape="rect" id="node31" href="$classns3_1_1_event_id.html" title="An identifier for simulation events." alt="" coords="2927,405,3029,432"/>
+<area shape="rect" id="node40" href="$classns3_1_1_mac_tx_middle.html" title=" " alt="" coords="900,1301,1040,1328"/>
+<area shape="rect" id="node41" href="$classns3_1_1_ssid.html" title=" " alt="" coords="4095,1569,4175,1596"/>
+<area shape="rect" id="node42" href="$classns3_1_1_wifi_information_element.html" title="Information element, as defined in 802.11&#45;2007 standard." alt="" coords="4063,1480,4272,1507"/>
+<area shape="rect" id="node44" title=" " alt="" coords="3219,213,3441,299"/>
+<area shape="rect" id="node48" href="$classns3_1_1_vendor_specific_content_manager.html" title=" " alt="" coords="4197,1105,4399,1147"/>
+<area shape="rect" id="node50" href="$classns3_1_1_organization_identifier.html" title="the organization identifier is a public organizationally unique identifier assigned by the IEEE." alt="" coords="4195,405,4390,432"/>
+</map>

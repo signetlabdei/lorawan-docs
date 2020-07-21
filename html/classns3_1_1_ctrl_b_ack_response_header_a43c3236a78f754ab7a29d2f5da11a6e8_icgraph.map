@@ -1,0 +1,10 @@
+<map id="ns3::CtrlBAckResponseHeader::IsInBitmap" name="ns3::CtrlBAckResponseHeader::IsInBitmap">
+<area shape="rect" id="node1" title="Checks if sequence number seq can be acknowledged in the bitmap." alt="" coords="535,104,753,145"/>
+<area shape="rect" id="node2" href="$classns3_1_1_ctrl_b_ack_response_header.html#a2b68bfaeba250b08b5ef17deb1a7482a" title="Check if the packet with the given sequence number and fragment number was acknowledged in this Block..." alt="" coords="268,5,487,47"/>
+<area shape="rect" id="node4" href="$classns3_1_1_ctrl_b_ack_response_header.html#aa3d3b8b3fdc932827f79f381bbaf0ee4" title="Check if the packet with the given sequence number was acknowledged in this BlockAck response." alt="" coords="268,71,487,112"/>
+<area shape="rect" id="node6" href="$classns3_1_1_ctrl_b_ack_response_header.html#abe81d476283659885ff98a3f44d184e6" title="Set the bitmap that the packet with the given sequence number and fragment number was received." alt="" coords="268,136,487,177"/>
+<area shape="rect" id="node7" href="$classns3_1_1_ctrl_b_ack_response_header.html#af4aa188d4fe6bb69fe1e9ca24733e5a5" title="Set the bitmap that the packet with the given sequence number was received." alt="" coords="268,201,487,243"/>
+<area shape="rect" id="node3" href="$classns3_1_1_block_ack_manager.html#a9b24f21a11eb094fa683943b7fc3c747" title=" " alt="" coords="27,39,198,80"/>
+<area shape="rect" id="node5" href="$class_ctrl_b_ack_response_header_test.html#a19cf1ac31281254d487041e4c5dcdc50" title="Implementation to actually run this TestCase." alt="" coords="5,120,220,161"/>
+<area shape="rect" id="node8" href="$classns3_1_1_block_ack_cache.html#a53f2f4c162a246e6d3f5de4c32f69c01" title="Fill block ack bitmap function." alt="" coords="35,201,190,243"/>
+</map>

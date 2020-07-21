@@ -1,0 +1,12 @@
+<map id="ns3::GlobalRoutingLSA::GetLSType" name="ns3::GlobalRoutingLSA::GetLSType">
+<area shape="rect" id="node1" title="Return the LSType field of the LSA." alt="" coords="1340,86,1511,127"/>
+<area shape="rect" id="node2" href="$classns3_1_1_s_p_f_vertex.html#a44ad804fd17d8472216be5a3d4962df3" title="Construct an initialized SPFVertex (Shortest Path First Vertex)." alt="" coords="1083,5,1277,32"/>
+<area shape="rect" id="node3" href="$classns3_1_1_global_route_manager_l_s_d_b.html#a832fe8b5361c7b4f680edfd98763346d" title="Insert an IP address / Link State Advertisement pair into the Link State Database." alt="" coords="1068,57,1292,98"/>
+<area shape="rect" id="node6" href="$classns3_1_1_global_route_manager_impl.html#aaa3d86729d6cfb61708d1c7083423da6" title="Examine the links in v&#39;s LSA and update the list of candidates with any vertices not already on the l..." alt="" coords="801,145,1020,186"/>
+<area shape="rect" id="node10" href="$classns3_1_1_global_route_manager_impl.html#ab082a78c423009f77c9cfe9018d40021" title="Calculate nexthop from root through V (parent) to vertex W (destination) with given distance from roo..." alt="" coords="1071,174,1289,215"/>
+<area shape="rect" id="node4" href="$classns3_1_1_global_route_manager_impl.html#a4354ed5c5b4b26f9593991e9254a1370" title="Build the routing database by gathering Link State Advertisements from each node exporting a GlobalRo..." alt="" coords="801,13,1020,54"/>
+<area shape="rect" id="node5" href="$class_global_route_manager_impl_test_case.html#aed56fd8ecbd7ecaa5473b9793d0befc1" title="Implementation to actually run this TestCase." alt="" coords="5,101,220,142"/>
+<area shape="rect" id="node7" href="$classns3_1_1_global_route_manager_impl.html#a03cdea3013a73c90ae8d67946b237c45" title="Calculate the shortest path first (SPF) tree." alt="" coords="535,145,753,186"/>
+<area shape="rect" id="node8" href="$classns3_1_1_global_route_manager_impl.html#aaa692001ef22911e3483583b0de78909" title="Debugging routine; call the core SPF from the unit tests." alt="" coords="268,130,487,171"/>
+<area shape="rect" id="node9" href="$classns3_1_1_global_route_manager_impl.html#a25f57b2c41927c1a3f0bbba596accb6b" title="Compute routes using a Dijkstra SPF computation and populate per&#45;node forwarding tables." alt="" coords="268,195,487,237"/>
+</map>

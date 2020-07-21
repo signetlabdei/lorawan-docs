@@ -1,0 +1,52 @@
+<map id="ns3::Time::GetNanoSeconds" name="ns3::Time::GetNanoSeconds">
+<area shape="rect" id="node1" title="Get an approximation of the time stored in this instance in the indicated unit." alt="" coords="567,1018,771,1045"/>
+<area shape="rect" id="node2" href="$classns3_1_1_wifi_ppdu.html#adf6aa0e6ec585d30f1f851b2013a2397" title="Create a single user PPDU storing a PSDU." alt="" coords="314,26,491,53"/>
+<area shape="rect" id="node3" href="$classns3_1_1_three_gpp_channel_model.html#afe8cd1f47afd42527155a8f8dc33e5e4" title="Check if the channel matrix has to be updated." alt="" coords="296,77,509,119"/>
+<area shape="rect" id="node5" href="$namespacens3.html#a2ab6b94319055b58e34c349ba3d4360c" title="Returns the current time translated in CoDel time representation." alt="" coords="329,143,476,170"/>
+<area shape="rect" id="node9" href="$namespacens3.html#a979caa1d7cbfc08ececb6fd3ad561e26" title="Convert the guard interval to nanoseconds based on the WifiMode." alt="" coords="306,725,499,767"/>
+<area shape="rect" id="node21" href="$classns3_1_1_mac_stats_calculator.html#acfc9255146143dc1fcdfceffdace0f38" title="Notifies the stats calculator that an downlink scheduling has occurred." alt="" coords="313,260,492,301"/>
+<area shape="rect" id="node22" href="$classns3_1_1_lte_rlc_am.html#ade2e2e81bf30e4c0f66655fb281b67ae" title="Receive PDU function." alt="" coords="294,326,511,353"/>
+<area shape="rect" id="node23" href="$classns3_1_1_lte_rlc_um.html#a2781ee6a3a6dc22b6d79b0607cf15cab" title="Receive PDU function." alt="" coords="293,377,512,403"/>
+<area shape="rect" id="node24" href="$classns3_1_1_lte_rlc_sm.html#aad793b0a17a8cd7693fe3268f7ffcd4f" title="Receive PDU function." alt="" coords="295,427,511,454"/>
+<area shape="rect" id="node25" href="$classns3_1_1_lte_pdcp.html#a39ec507fd59bc8e650738717b4a471e5" title="Interface provided to lower RLC entity." alt="" coords="299,478,506,505"/>
+<area shape="rect" id="node26" href="$class_time_simple_test_case.html#a4420daddc0f37503638626397ec83f41" title="Implementation to actually run this TestCase." alt="" coords="324,529,481,571"/>
+<area shape="rect" id="node27" href="$class_time_input_output_test_case.html#aed755cb09172197ef1a3ebe096c864db" title="Implementation to actually run this TestCase." alt="" coords="308,595,497,636"/>
+<area shape="rect" id="node28" href="$class_ocb_wifi_mac_test_case.html#a730877f90008a4a4e7fd547f964f0f08" title="static&#45;node:0 &lt;&#45;— mobile&#45;node:1" alt="" coords="323,660,482,701"/>
+<area shape="rect" id="node29" href="$classns3_1_1_wifi_phy.html#a0528e5f0ded822ff3df47b5146cb0484" title="The last symbol of the PPDU has arrived." alt="" coords="29,1414,215,1441"/>
+<area shape="rect" id="node30" href="$classanonymous__namespace_02sample-show-progress_8cc_03_1_1_hold.html#a1308a258720ae7ead0afcadccdd91d3c" title="The Hold event." alt="" coords="313,791,493,847"/>
+<area shape="rect" id="node31" href="$classns3_1_1_wifi_phy.html#a0854b8251b610b505fec7790bfce07ac" title=" " alt="" coords="310,872,495,913"/>
+<area shape="rect" id="node32" href="$classns3_1_1_wifi_phy.html#aeab17cf7c22fe11dfe82d164404e9e07" title="Get the reception status for the provided MPDU and notify." alt="" coords="303,1716,502,1757"/>
+<area shape="rect" id="node33" href="$classns3_1_1_wifi_ppdu.html#a0a0af942d5c7af3f92666fcdef1d0460" title="Get the total transmission duration of the PPDU." alt="" coords="295,989,510,1015"/>
+<area shape="rect" id="node34" href="$class_ocb_wifi_mac_test_case.html#ac48d9afb4b72f66f11608903a10da2d0" title="MAC associate function." alt="" coords="323,1040,482,1081"/>
+<area shape="rect" id="node35" href="$class_simulator_events_test_case.html#a66578dbe2287c1a0841d3ff38f509d6e" title=" " alt="" coords="309,1105,496,1147"/>
+<area shape="rect" id="node36" href="$class_ocb_wifi_mac_test_case.html#aa0e4495ed57249ab657f1f1ea75f4a37" title="Phy receive ok trace function." alt="" coords="323,1171,482,1212"/>
+<area shape="rect" id="node37" href="$class_ocb_wifi_mac_test_case.html#a3ed42be8055159ceb4cc1023deb44f12" title="Phy transmit trace function." alt="" coords="323,1236,482,1277"/>
+<area shape="rect" id="node38" href="$classns3_1_1_phy_stats_calculator.html#a6ff3e80a9be864b92f7720808311e13d" title="Notifies the stats calculator that an RSRP and SINR report has occurred." alt="" coords="303,1301,503,1343"/>
+<area shape="rect" id="node39" href="$classns3_1_1_phy_stats_calculator.html#aed49d3eb68d3322e3f8fd94f884a4d9f" title="Notifies the stats calculator that an interference report has occurred." alt="" coords="315,1367,491,1408"/>
+<area shape="rect" id="node40" href="$classns3_1_1_phy_stats_calculator.html#a3f4dd2b5d5d005c99d3f30f8b4b2277d" title="Notifies the stats calculator that an UE SINR report has occurred." alt="" coords="315,1432,491,1473"/>
+<area shape="rect" id="node41" href="$class_timestamp_tag.html#a6bb49d708d18c2f55c0831a034f505b5" title=" " alt="" coords="312,1498,493,1525"/>
+<area shape="rect" id="node42" href="$classns3_1_1_pdcp_tag.html#afd434514a76b190e108b4a86c672bb3a" title=" " alt="" coords="317,1549,488,1575"/>
+<area shape="rect" id="node43" href="$classns3_1_1_rlc_tag.html#a565dc6114747cf861711077bd037955d" title=" " alt="" coords="323,1599,482,1626"/>
+<area shape="rect" id="node44" href="$classns3_1_1_cobalt_queue_disc.html#a0e11384553aedc179025188fac73759d" title="Return the unsigned 32&#45;bit integer representation of the input Time object." alt="" coords="320,1651,485,1692"/>
+<area shape="rect" id="node45" href="$classns3_1_1_co_del_queue_disc.html#aba2aa3ab9d1adecc1b60023512656972" title="Return the unsigned 32&#45;bit integer representation of the input Time object." alt="" coords="321,195,484,236"/>
+<area shape="rect" id="node46" href="$classns3_1_1_synchronizer.html#a6450d12c1de452d0d7cab179e50e6ea5" title="Convert a simulator time step (in Time resolution units) to a normalized time step in nanosecond unit..." alt="" coords="314,1781,491,1823"/>
+<area shape="rect" id="node47" href="$classns3_1_1_mac_stats_calculator.html#a38367f55701687bdaea5542dd0e6e4ad" title="Notifies the stats calculator that an uplink scheduling has occurred." alt="" coords="313,1847,492,1888"/>
+<area shape="rect" id="node48" href="$classns3_1_1_pcap_file_wrapper.html#a00c5afa3a653c6bcfaa37fe35c43675e" title="Write the next packet to file." alt="" coords="322,1912,483,1953"/>
+<area shape="rect" id="node49" href="$classns3_1_1_radio_bearer_stats_calculator.html#a9f82c4c84f1160d648f4a21d6e068b4b" title="Writes collected statistics to DL output file and closes DL output file." alt="" coords="287,1977,519,2019"/>
+<area shape="rect" id="node50" href="$classns3_1_1_radio_bearer_stats_calculator.html#abc56a12815660aad7e3144b9402ca82e" title="Writes collected statistics to UL output file and closes UL output file." alt="" coords="287,2043,519,2084"/>
+<area shape="rect" id="node4" href="$classns3_1_1_three_gpp_channel_model.html#ab02e9434ad4509ce856ee2e716c58723" title="Looks for the channel matrix associated to the aMob and bMob pair in m_channelMap." alt="" coords="17,5,227,47"/>
+<area shape="rect" id="node6" href="$classns3_1_1_cobalt_queue_disc.html#a1c62d3ba0ac9ff28b4779337ef0c36f7" title="This function actually extracts a packet from the queue disc." alt="" coords="39,71,205,112"/>
+<area shape="rect" id="node7" href="$classns3_1_1_co_del_queue_disc.html#a6128cb8655b87b67f04424c68058e751" title="Remove a packet from queue based on the current state If we are in dropping state,..." alt="" coords="41,201,203,243"/>
+<area shape="rect" id="node8" href="$classns3_1_1_cobalt_queue_disc.html#a3df648f96b1bcd613b9171a0950dcf25" title="This function actually enqueues a packet into the queue disc." alt="" coords="39,136,205,177"/>
+<area shape="rect" id="node10" href="$classns3_1_1_mesh_wifi_interface_mac.html#a0d8d92606ef1a302fc967a8c058d5f81" title="Check supported rates." alt="" coords="23,725,221,767"/>
+<area shape="rect" id="node11" href="$classns3_1_1_wifi_remote_station_manager.html#aa8b7470c26610407756a92a5fcb4bf4b" title="Since CTS&#45;to&#45;self parameters are not dependent on the station, it is implemented in wifi remote stati..." alt="" coords="5,791,239,832"/>
+<area shape="rect" id="node12" href="$classns3_1_1_constant_rate_wifi_manager.html#a1e14573f51c878a2fa5511a2c43a2024" title=" " alt="" coords="10,856,234,897"/>
+<area shape="rect" id="node13" href="$classns3_1_1_constant_rate_wifi_manager.html#aceb6e32d01d5c3279e96bafde5568719" title=" " alt="" coords="10,921,234,963"/>
+<area shape="rect" id="node14" href="$classns3_1_1_mac_low.html#aae813ebc059b7e6aa1c88607e2969936" title="Return a TXVECTOR for the Ack frame given the destination and the mode of the Data used by the sender..." alt="" coords="13,987,231,1014"/>
+<area shape="rect" id="node15" href="$classns3_1_1_mac_low.html#a227f7cf96af4e059f660cd6668869e69" title="Return a TXVECTOR for the BlockAck frame given the destination and the mode of the Data used by the s..." alt="" coords="23,1039,221,1080"/>
+<area shape="rect" id="node16" href="$classns3_1_1_mac_low.html#abe2810a59020adbcf64abbef2bcf319f" title="Return a TXVECTOR for the CTS frame given the destination and the mode of the RTS used by the sender." alt="" coords="14,413,230,439"/>
+<area shape="rect" id="node17" href="$classns3_1_1_wifi_remote_station_manager.html#ad81efbe48611977c8cea482721fd823b" title=" " alt="" coords="5,464,239,505"/>
+<area shape="rect" id="node18" href="$classns3_1_1_wifi_remote_station_manager.html#a853f412b16d537be85a70277c522dec7" title=" " alt="" coords="5,529,239,571"/>
+<area shape="rect" id="node19" href="$classns3_1_1_mesh_wifi_interface_mac.html#ae564ee657ce84f1023eabfd6d3e474a4" title=" " alt="" coords="23,595,221,636"/>
+<area shape="rect" id="node20" href="$classns3_1_1_mesh_wifi_interface_mac.html#a5850d3b31d09fd6dc552e8fa839bf3f2" title="Frame receive handler." alt="" coords="23,660,221,701"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="ns3::NscTcpSocketImpl::GetTxAvailable" name="ns3::NscTcpSocketImpl::GetTxAvailable">
+<area shape="rect" id="node1" title="Returns the number of bytes which can be sent in a single call to Send." alt="" coords="1099,68,1269,109"/>
+<area shape="rect" id="node2" href="$classns3_1_1_nsc_tcp_socket_impl.html#aa5ec88a8104a8bae88dcb38cf32d5979" title="Called by NscTcpSocketImpl::ForwardUp()" alt="" coords="880,35,1051,76"/>
+<area shape="rect" id="node9" href="$classns3_1_1_nsc_tcp_socket_impl.html#a1623a6154bf55e526dfccdc90edd73bd" title="Send data (or dummy data) to the remote host." alt="" coords="880,100,1051,141"/>
+<area shape="rect" id="node3" href="$classns3_1_1_nsc_tcp_socket_impl.html#a39838d4cdb10b8ff73d7afdbcdc96b8b" title="Called by the L3 protocol when it received a packet to pass on to TCP." alt="" coords="661,35,832,76"/>
+<area shape="rect" id="node4" href="$classns3_1_1_nsc_tcp_socket_impl.html#a97c12e4b7625d21acce2bee3abfd87c4" title="Complete the Fork operations (after a connection has been accepted)" alt="" coords="443,35,613,76"/>
+<area shape="rect" id="node6" href="$classns3_1_1_nsc_tcp_socket_impl.html#af1e9f25dc27096602fff1b0f6924d9f7" title="Finish the binding process." alt="" coords="443,100,613,141"/>
+<area shape="rect" id="node5" href="$classns3_1_1_nsc_tcp_socket_impl.html#a95aacc7321726467d1b0daaf6bbdd986" title="Accept an incoming connection." alt="" coords="224,5,395,47"/>
+<area shape="rect" id="node7" href="$classns3_1_1_nsc_tcp_socket_impl.html#add7339ac92d543a676f9b718bbc80c37" title="Allocate a local IPv4 endpoint for this socket." alt="" coords="224,100,395,141"/>
+<area shape="rect" id="node8" href="$classns3_1_1_nsc_tcp_socket_impl.html#a10d599daaff9c3b7a1e93716e850ed97" title="Initiate a connection to a remote host." alt="" coords="5,100,176,141"/>
+<area shape="rect" id="node10" href="$classns3_1_1_nsc_tcp_socket_impl.html#af57597dcb4e66ed155fe9ebea9c7a7da" title="Send data to a specified peer." alt="" coords="661,100,832,141"/>
+</map>

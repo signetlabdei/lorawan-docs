@@ -1,0 +1,12 @@
+<map id="ns3::LoraFrameHeader::Deserialize" name="ns3::LoraFrameHeader::Deserialize">
+<area shape="rect" id="node1" title="Deserialize the contents of the buffer into a LoraFrameHeader object." alt="" coords="5,129,175,170"/>
+<area shape="rect" id="node2" href="$classns3_1_1_lora_device_address.html#adef75aa9773f72a126ae92136158fe56" title="Print the address bit&#45;by&#45;bit to a human&#45;readable string." alt="" coords="237,49,415,90"/>
+<area shape="rect" id="node5" href="$classns3_1_1_lora_device_address.html#a42f07ee5f36c62d5ef283be3e5d1c0ad" title="Set the address as a 32 bit integer." alt="" coords="223,136,429,163"/>
+<area shape="rect" id="node8" href="$namespacevisualizer_1_1core.html#a2a35e5d8a34af358b508dac8635754e0" title=" " alt="" coords="251,191,401,217"/>
+<area shape="rect" id="node3" href="$classns3_1_1_nwk_i_d.html#aa8adfe338281d48aec823757eb10cb89" title="Get an uint8_t representation of the 7&#45;bit network ID." alt="" coords="490,5,617,32"/>
+<area shape="rect" id="node4" href="$classns3_1_1_nwk_addr.html#a34e8178c042853ddbe267cfa649cbafa" title="Get an uint32_t representation of the 25&#45;bit network address." alt="" coords="482,56,625,83"/>
+<area shape="rect" id="node6" href="$classns3_1_1_nwk_addr.html#a23729a455af9bda2db563dce3ef2f042" title="Set the NwkAddr, starting from a 32&#45;bit representation of a 25&#45;bit integer." alt="" coords="483,107,624,133"/>
+<area shape="rect" id="node7" href="$classns3_1_1_nwk_i_d.html#ac25d804470c87254a2d619740c9c8aa8" title="Set the NwkID, starting from a 8&#45;bit representation of a 7&#45;bit integer." alt="" coords="491,157,616,184"/>
+<area shape="rect" id="node9" href="$namespacevisualizer_1_1base.html#ad171497a5ff1afe0a73bedaebf35448f" title=" " alt="" coords="477,209,629,250"/>
+<area shape="rect" id="node10" href="$namespacevisualizer_1_1base.html#a6b0ffcff1e17ec4027496f50177e5b9e" title=" " alt="" coords="677,209,852,250"/>
+</map>

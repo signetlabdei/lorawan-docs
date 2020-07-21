@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>RED queue disc &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CoDel queue disc" href="codel.html" />
+    <link rel="prev" title="TBF queue disc" href="tbf.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="codel.html" title="CoDel queue disc"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tbf.html" title="TBF queue disc"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" accesskey="U">Traffic Control Layer</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="red-queue-disc">
+<h1>RED queue disc<a class="headerlink" href="#red-queue-disc" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="model-description">
+<h2>Model Description<a class="headerlink" href="#model-description" title="Permalink to this headline">¶</a></h2>
+<p>Random Early Detection (RED) is a queue discipline that aims to provide
+early signals to transport protocol congestion control (e.g. TCP) that
+congestion is imminent, so that they back off their rate gracefully
+rather than with a bunch of tail-drop losses (possibly incurring
+TCP timeout).  The model in ns-3 is a port of Sally Floyd’s ns-2
+RED model.</p>
+<p>Note that, starting from ns-3.25, RED is no longer a queue variant and
+cannot be installed as a NetDevice queue. Instead, RED is a queue disc
+and must be installed in the context of the traffic control (see the
+examples mentioned below).</p>
+<p>The RED queue disc does not require packet filters, does not admit
+child queue discs and uses a single internal queue. If not provided by
+the user, a DropTail queue operating in the same mode (packet or byte)
+as the queue disc and having a size equal to the RED MaxSize attribute
+is created. Otherwise, the capacity of the queue disc is determined by
+the capacity of the internal queue provided by the user.</p>
+<div class="section" id="adaptive-random-early-detection-ared">
+<h3>Adaptive Random Early Detection (ARED)<a class="headerlink" href="#adaptive-random-early-detection-ared" title="Permalink to this headline">¶</a></h3>
+<p>ARED is a variant of RED with two main features: (i) automatically sets Queue
+weight, MinTh and MaxTh and (ii) adapts maximum drop probability. The model
+in ns-3 contains implementation of both the features, and is a port of Sally
+Floyd’s ns-2 ARED model. Note that the user is allowed to choose and explicitly
+configure the simulation by selecting feature (i) or feature (ii), or both.</p>
+</div>
+<div class="section" id="feng-s-adaptive-red">
+<h3>Feng’s Adaptive RED<a class="headerlink" href="#feng-s-adaptive-red" title="Permalink to this headline">¶</a></h3>
+<p>Feng’s Adaptive RED is a variant of RED that adapts the maximum drop
+probability. The model in ns-3 contains implementation of this feature, and is a
+port of ns-2 Feng’s Adaptive RED model.</p>
+</div>
+<div class="section" id="nonlinear-random-early-detection-nlred">
+<h3>Nonlinear Random Early Detection (NLRED)<a class="headerlink" href="#nonlinear-random-early-detection-nlred" title="Permalink to this headline">¶</a></h3>
+<p>NLRED is a variant of RED in which the linear packet dropping function of
+RED is replaced by a nonlinear quadratic function. This approach makes packet
+dropping gentler for light traffic load and aggressive for heavy traffic load.</p>
+</div>
+<div class="section" id="explicit-congestion-notification-ecn">
+<h3>Explicit Congestion Notification (ECN)<a class="headerlink" href="#explicit-congestion-notification-ecn" title="Permalink to this headline">¶</a></h3>
+<p>This RED model supports an ECN mode of operation to notify endpoints of
+congestion that may be developing in a bottleneck queue, without resorting
+to packet drops. Such a mode is enabled by setting the UseEcn attribute to
+true (it is false by default) and only affects incoming packets with the
+ECT bit set in their header. When the average queue length is between the
+minimum and maximum thresholds, an incoming packet is marked instead of being
+dropped. When the average queue length is above the maximum threshold, an
+incoming packet is marked (instead of being dropped) only if the UseHardDrop
+attribute is set to false (it is true by default).</p>
+<p>The implementation of support for ECN marking is done in such a way as
+to not impose an internet module dependency on the traffic control module.
+The RED model does not directly set ECN bits on the header, but delegates
+that job to the QueueDiscItem class.  As a result, it is possible to
+use RED queues for other non-IP QueueDiscItems that may or may not support
+the <code class="docutils literal notranslate"><span class="pre">Mark</span> <span class="pre">()</span></code> method.</p>
+</div>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<p>The RED queue disc aims to be close to the results cited in:
+S.Floyd, K.Fall <a class="reference external" href="http://icir.org/floyd/papers/redsims.ps">http://icir.org/floyd/papers/redsims.ps</a></p>
+<p>ARED queue implementation is based on the algorithm provided in:
+S. Floyd et al, <a class="reference external" href="http://www.icir.org/floyd/papers/adaptiveRed.pdf">http://www.icir.org/floyd/papers/adaptiveRed.pdf</a></p>
+<p>Feng’s Adaptive RED queue implementation is based on the algorithm
+provided in:
+W. C. Feng et al, <a class="reference external" href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=752150">http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=752150</a></p>
+<p>NLRED queue implementation is based on the algorithm provided in:
+Kaiyu Zhou et al, <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S1389128606000879">http://www.sciencedirect.com/science/article/pii/S1389128606000879</a></p>
+<p>The addition of explicit congestion notification (ECN) to IP:
+K. K. Ramakrishnan et al, <a class="reference external" href="https://tools.ietf.org/html/rfc3168">https://tools.ietf.org/html/rfc3168</a></p>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>The RED queue contains a number of attributes that control the RED
+policies:</p>
+<ul class="simple">
+<li><p>MaxSize</p></li>
+<li><p>MeanPktSize</p></li>
+<li><p>IdlePktSize</p></li>
+<li><p>Wait (time)</p></li>
+<li><p>Gentle mode</p></li>
+<li><p>MinTh, MaxTh</p></li>
+<li><p>Queue weight</p></li>
+<li><p>LInterm</p></li>
+<li><p>LinkBandwidth</p></li>
+<li><p>LinkDelay</p></li>
+<li><p>UseEcn</p></li>
+<li><p>UseHardDrop</p></li>
+</ul>
+<p>In addition to RED attributes, ARED queue requires following attributes:</p>
+<ul class="simple">
+<li><p>ARED (Boolean attribute. Default: false)</p></li>
+<li><p>AdaptMaxP (Boolean attribute to adapt m_curMaxP. Default: false)</p></li>
+<li><p>Target Delay (time)</p></li>
+<li><p>Interval (time)</p></li>
+<li><p>LastSet (time)</p></li>
+<li><p>Top (upper limit of m_curMaxP)</p></li>
+<li><p>Bottom (lower limit of m_curMaxP)</p></li>
+<li><p>Alpha (increment parameter for m_curMaxP)</p></li>
+<li><p>Beta (decrement parameter for m_curMaxP)</p></li>
+<li><p>RTT</p></li>
+</ul>
+<p>In addition to RED attributes, Feng’s Adaptive RED queue requires following
+attributes:</p>
+<ul class="simple">
+<li><p>FengAdaptive  (Boolean attribute, Default: false)</p></li>
+<li><p>Status        (status of current queue length, Default: Above)</p></li>
+<li><p>FengAlpha     (increment parameter for m_curMaxP, Default: 3)</p></li>
+<li><p>FengBeta      (decrement parameter for m_curMaxP, Default: 2)</p></li>
+</ul>
+<p>The following attribute should be turned on to simulate NLRED queue disc:</p>
+<ul class="simple">
+<li><p>NLRED (Boolean attribute. Default: false)</p></li>
+</ul>
+<p>Consult the ns-3 documentation for explanation of these attributes.</p>
+</div>
+<div class="section" id="simulating-ared">
+<h3>Simulating ARED<a class="headerlink" href="#simulating-ared" title="Permalink to this headline">¶</a></h3>
+<p>To switch on ARED algorithm, the attribute ARED must be set to true,
+as done in <code class="docutils literal notranslate"><span class="pre">src/traffic-control/examples/adaptive-red-tests.cc</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::RedQueueDisc::ARED&quot;</span><span class="p">,</span> <span class="n">BooleanValue</span> <span class="p">(</span><span class="nb">true</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>Setting ARED to true implicitly configures both: (i) automatic setting
+of Queue weight, MinTh and MaxTh and (ii) adapting m_curMaxP.</p>
+<p>NOTE: To explicitly configure (i) or (ii), set ARED attribute to false
+and follow the procedure described next:</p>
+<p>To configure (i); Queue weight, MinTh and MaxTh, all must be set to 0,
+as done in <code class="docutils literal notranslate"><span class="pre">src/traffic-control/examples/adaptive-red-tests.cc</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::RedQueueDisc::QW&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">));</span>
+<span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::RedQueueDisc::MinTh&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span> <span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::RedQueueDisc::MaxTh&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span> <span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>To configure (ii); AdaptMaxP must be set to true, as done in
+<code class="docutils literal notranslate"><span class="pre">src/traffic-control/examples/adaptive-red-tests.cc</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::RedQueueDisc::AdaptMaxP&quot;</span><span class="p">,</span> <span class="n">BooleanValue</span> <span class="p">(</span><span class="nb">true</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="simulating-feng-s-adaptive-red">
+<h3>Simulating Feng’s Adaptive RED<a class="headerlink" href="#simulating-feng-s-adaptive-red" title="Permalink to this headline">¶</a></h3>
+<p>To switch on Feng’s Adaptive RED algorithm, the attribute FengAdaptive must be
+set to true, as done in <code class="docutils literal notranslate"><span class="pre">examples/traffic-control/red-vs-fengadaptive.cc</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::RedQueueDisc::FengAdaptive&quot;</span><span class="p">,</span> <span class="n">BooleanValue</span> <span class="p">(</span><span class="nb">true</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="simulating-nlred">
+<h3>Simulating NLRED<a class="headerlink" href="#simulating-nlred" title="Permalink to this headline">¶</a></h3>
+<p>To switch on NLRED algorithm, the attribute NLRED must be set to true,
+as shown below:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::RedQueueDisc::NLRED&quot;</span><span class="p">,</span> <span class="n">BooleanValue</span> <span class="p">(</span><span class="nb">true</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>The RED queue example is found at <code class="docutils literal notranslate"><span class="pre">src/traffic-control/examples/red-tests.cc</span></code>.</p>
+<p>ARED queue examples can be found at:
+<code class="docutils literal notranslate"><span class="pre">src/traffic-control/examples/adaptive-red-tests.cc</span></code> and
+<code class="docutils literal notranslate"><span class="pre">src/traffic-control/examples/red-vs-ared.cc</span></code></p>
+<p>Feng’s Adaptive RED example can be found at:
+<code class="docutils literal notranslate"><span class="pre">examples/traffic-control/red-vs-fengadaptive.cc</span></code></p>
+<p>NLRED queue example can be found at:
+<code class="docutils literal notranslate"><span class="pre">examples/traffic-control/red-vs-nlred.cc</span></code></p>
+</div>
+</div>
+<div class="section" id="validation">
+<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<p>The RED model has been validated and the report is currently stored
+at: <a class="reference external" href="https://github.com/downloads/talau/ns-3-tcp-red/report-red-ns3.pdf">https://github.com/downloads/talau/ns-3-tcp-red/report-red-ns3.pdf</a></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">RED queue disc</a><ul>
+<li><a class="reference internal" href="#model-description">Model Description</a><ul>
+<li><a class="reference internal" href="#adaptive-random-early-detection-ared">Adaptive Random Early Detection (ARED)</a></li>
+<li><a class="reference internal" href="#feng-s-adaptive-red">Feng’s Adaptive RED</a></li>
+<li><a class="reference internal" href="#nonlinear-random-early-detection-nlred">Nonlinear Random Early Detection (NLRED)</a></li>
+<li><a class="reference internal" href="#explicit-congestion-notification-ecn">Explicit Congestion Notification (ECN)</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#simulating-ared">Simulating ARED</a></li>
+<li><a class="reference internal" href="#simulating-feng-s-adaptive-red">Simulating Feng’s Adaptive RED</a></li>
+<li><a class="reference internal" href="#simulating-nlred">Simulating NLRED</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#validation">Validation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tbf.html"
+                        title="previous chapter">TBF queue disc</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="codel.html"
+                        title="next chapter">CoDel queue disc</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/red.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="codel.html" title="CoDel queue disc"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tbf.html" title="TBF queue disc"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" >Traffic Control Layer</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+digraph "ns3::ByteTagList::Iterator::Next"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ns3::ByteTagList::Iterator\l::Next",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Returns the next Item from the ByteTagList."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ns3::ByteTagList::Iterator\l::HasNext",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_byte_tag_list_1_1_iterator.html#a44e33e812e3eba4fdc168e36380853af",tooltip="Used to determine if the iterator is at the end of the byteTagList."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ns3::ByteTagList::Iterator\l::PrepareForNext",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_byte_tag_list_1_1_iterator.html#afeebeb2923b6d7d908b0868d9e4750e5",tooltip="Prepare the iterator for the next tag."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ns3::TagBuffer::ReadU32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_tag_buffer.html#a6b1c1414efc7cf8ea6a3f682c3e27663",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ns3::TagBuffer::ReadU8",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_tag_buffer.html#af424ec7219aed6d9d31d414bf89ae5bd",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="ns3::TypeId::SetUid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_type_id.html#a85ebe2aebd1cbf13dea9d731e3081481",tooltip="Set the internal id of this TypeId."];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="ns3::TagBuffer::TrimAtEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_tag_buffer.html#a163314c17e95305cecd202eb0496affa",tooltip="Trim some space from the end."];
+}

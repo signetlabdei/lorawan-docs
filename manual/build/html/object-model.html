@@ -1,0 +1,474 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Object model &#8212; Manual</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Configuration and Attributes" href="attributes.html" />
+    <link rel="prev" title="Callbacks" href="callbacks.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Manual</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="attributes.html" title="Configuration and Attributes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="callbacks.html" title="Callbacks"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="object-model">
+<span id="id1"></span><h1>Object model<a class="headerlink" href="#object-model" title="Permalink to this headline">¶</a></h1>
+<p><em>ns-3</em> is fundamentally a C++ object system. Objects can be declared and
+instantiated as usual, per C++ rules. <em>ns-3</em> also adds some features to
+traditional C++ objects, as described below, to provide greater functionality
+and features. This manual chapter is intended to introduce the reader to the
+<em>ns-3</em> object model.</p>
+<p>This section describes the C++ class design for <em>ns-3</em> objects. In brief,
+several design patterns in use include classic object-oriented design
+(polymorphic interfaces and implementations), separation of interface and
+implementation, the non-virtual public interface design pattern, an object
+aggregation facility, and reference counting for memory management. Those
+familiar with component models such as COM or Bonobo will recognize elements of
+the design in the <em>ns-3</em> object aggregation model, although the <em>ns-3</em> design is
+not strictly in accordance with either.</p>
+<div class="section" id="object-oriented-behavior">
+<h2>Object-oriented behavior<a class="headerlink" href="#object-oriented-behavior" title="Permalink to this headline">¶</a></h2>
+<p>C++ objects, in general, provide common object-oriented capabilities
+(abstraction, encapsulation, inheritance, and polymorphism) that are part
+of classic object-oriented design. <em>ns-3</em> objects make use of these
+properties; for instance:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Address</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">Address</span> <span class="p">();</span>
+  <span class="n">Address</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">type</span><span class="p">,</span> <span class="k">const</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">buffer</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">len</span><span class="p">);</span>
+  <span class="n">Address</span> <span class="p">(</span><span class="k">const</span> <span class="n">Address</span> <span class="o">&amp;</span> <span class="n">address</span><span class="p">);</span>
+  <span class="n">Address</span> <span class="o">&amp;</span><span class="k">operator</span> <span class="o">=</span> <span class="p">(</span><span class="k">const</span> <span class="n">Address</span> <span class="o">&amp;</span><span class="n">address</span><span class="p">);</span>
+  <span class="p">...</span>
+<span class="k">private</span><span class="o">:</span>
+  <span class="kt">uint8_t</span> <span class="n">m_type</span><span class="p">;</span>
+  <span class="kt">uint8_t</span> <span class="n">m_len</span><span class="p">;</span>
+  <span class="p">...</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="object-base-classes">
+<h2>Object base classes<a class="headerlink" href="#object-base-classes" title="Permalink to this headline">¶</a></h2>
+<p>There are three special base classes used in <em>ns-3</em>. Classes that inherit
+from these base classes can instantiate objects with special properties.
+These base classes are:</p>
+<ul class="simple">
+<li><p>class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code></p></li>
+<li><p>class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ObjectBase</span></code></p></li>
+<li><p>class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SimpleRefCount</span></code></p></li>
+</ul>
+<p>It is not required that <em>ns-3</em> objects inherit from these class, but
+those that do get special properties. Classes deriving from
+class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code> get the following properties.</p>
+<ul class="simple">
+<li><p>the <em>ns-3</em> type and attribute system (see <a class="reference internal" href="attributes.html#attributes"><span class="std std-ref">Configuration and Attributes</span></a>)</p></li>
+<li><p>an object aggregation system</p></li>
+<li><p>a smart-pointer reference counting system (class Ptr)</p></li>
+</ul>
+<p>Classes that derive from class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ObjectBase</span></code> get the first two
+properties above, but do not get smart pointers. Classes that derive from class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SimpleRefCount</span></code>: get only the smart-pointer reference counting
+system.</p>
+<p>In practice, class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code> is the variant of the three above that
+the <em>ns-3</em> developer will most commonly encounter.</p>
+</div>
+<div class="section" id="memory-management-and-class-ptr">
+<span id="id2"></span><h2>Memory management and class Ptr<a class="headerlink" href="#memory-management-and-class-ptr" title="Permalink to this headline">¶</a></h2>
+<p>Memory management in a C++ program is a complex process, and is often done
+incorrectly or inconsistently. We have settled on a reference counting design
+described as follows.</p>
+<p>All objects using reference counting maintain an internal reference count to
+determine when an object can safely delete itself. Each time that a pointer is
+obtained to an interface, the object’s reference count is incremented by calling
+<code class="docutils literal notranslate"><span class="pre">Ref()</span></code>. It is the obligation of the user of the pointer to explicitly
+<code class="docutils literal notranslate"><span class="pre">Unref()</span></code> the pointer when done. When the reference count falls to zero, the
+object is deleted.</p>
+<ul class="simple">
+<li><p>When the client code obtains a pointer from the object itself through object
+creation, or via GetObject, it does not have to increment the reference count.</p></li>
+<li><p>When client code obtains a pointer from another source (e.g., copying a
+pointer) it must call <code class="docutils literal notranslate"><span class="pre">Ref()</span></code> to increment the reference count.</p></li>
+<li><p>All users of the object pointer must call <code class="docutils literal notranslate"><span class="pre">Unref()</span></code> to release the
+reference.</p></li>
+</ul>
+<p>The burden for calling <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Unref()</span></code> is somewhat relieved by the use of
+the reference counting smart pointer class described below.</p>
+<p>Users using a low-level API who wish to explicitly allocate
+non-reference-counted objects on the heap, using operator new, are responsible
+for deleting such objects.</p>
+<div class="section" id="reference-counting-smart-pointer-ptr">
+<h3>Reference counting smart pointer (Ptr)<a class="headerlink" href="#reference-counting-smart-pointer-ptr" title="Permalink to this headline">¶</a></h3>
+<p>Calling <code class="docutils literal notranslate"><span class="pre">Ref()</span></code> and <code class="docutils literal notranslate"><span class="pre">Unref()</span></code> all the time would be cumbersome, so <em>ns-3</em>
+provides a smart pointer class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Ptr</span></code> similar to
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Boost::intrusive_ptr</span></code>. This smart-pointer class assumes that the
+underlying type provides a pair of <code class="docutils literal notranslate"><span class="pre">Ref</span></code> and <code class="docutils literal notranslate"><span class="pre">Unref</span></code> methods that are
+expected to increment and decrement the internal refcount of the object
+instance.</p>
+<p>This implementation allows you to manipulate the smart pointer as if it was a
+normal pointer: you can compare it with zero, compare it against other pointers,
+assign zero to it, etc.</p>
+<p>It is possible to extract the raw pointer from this smart pointer with the
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">GetPointer()</span></code> and <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">PeekPointer()</span></code> methods.</p>
+<p>If you want to store a newed object into a smart pointer, we recommend you to
+use the CreateObject template functions to create the object and store it in a
+smart pointer to avoid memory leaks. These functions are really small
+convenience functions and their goal is just to save you a small bit of typing.</p>
+</div>
+</div>
+<div class="section" id="createobject-and-create">
+<h2>CreateObject and Create<a class="headerlink" href="#createobject-and-create" title="Permalink to this headline">¶</a></h2>
+<p>Objects in C++ may be statically, dynamically, or automatically created.  This
+holds true for <em>ns-3</em> also, but some objects in the system have some additional
+frameworks available. Specifically, reference counted objects are usually
+allocated using a templated Create or CreateObject method, as follows.</p>
+<p>For objects deriving from class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">WifiNetDevice</span><span class="o">&gt;</span> <span class="n">device</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">WifiNetDevice</span><span class="o">&gt;</span> <span class="p">();</span>
+</pre></div>
+</div>
+<p>Please do not create such objects using <code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">new</span></code>; create them using
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CreateObject()</span></code> instead.</p>
+<p>For objects deriving from class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SimpleRefCount</span></code>, or other objects
+that support usage of the smart pointer class, a templated helper function is
+available and recommended to be used:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Create</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="p">();</span>
+</pre></div>
+</div>
+<p>This is simply a wrapper around operator new that correctly handles the
+reference counting system.</p>
+<p>In summary, use <code class="docutils literal notranslate"><span class="pre">Create&lt;B&gt;</span></code> if B is not an object but just uses reference
+counting (e.g. <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Packet</span></code>), and use <code class="docutils literal notranslate"><span class="pre">CreateObject&lt;B&gt;</span></code> if B derives
+from <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::Object</span></code>.</p>
+</div>
+<div class="section" id="aggregation">
+<h2>Aggregation<a class="headerlink" href="#aggregation" title="Permalink to this headline">¶</a></h2>
+<p>The <em>ns-3</em> object aggregation system is motivated in strong part by a recognition
+that a common use case for <em>ns-2</em> has been the use of inheritance and
+polymorphism to extend protocol models. For instance, specialized versions of
+TCP such as RenoTcpAgent derive from (and override functions from) class
+TcpAgent.</p>
+<p>However, two problems that have arisen in the <em>ns-2</em> model are downcasts and
+“weak base class.” Downcasting refers to the procedure of using a base class
+pointer to an object and querying it at run time to find out type information,
+used to explicitly cast the pointer to a subclass pointer so that the subclass
+API can be used. Weak base class refers to the problems that arise when a class
+cannot be effectively reused (derived from) because it lacks necessary
+functionality, leading the developer to have to modify the base class and
+causing proliferation of base class API calls, some of which may not be
+semantically correct for all subclasses.</p>
+<p><em>ns-3</em> is using a version of the query interface design pattern to avoid these
+problems. This design is based on elements of the <a class="reference external" href="http://en.wikipedia.org/wiki/Component_Object_Model">Component Object Model</a> and <a class="reference external" href="http://en.wikipedia.org/wiki/Bonobo_(component_model)">GNOME Bonobo</a> although full
+binary-level compatibility of replaceable components is not supported and we
+have tried to simplify the syntax and impact on model developers.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="aggregation-example">
+<h3>Aggregation example<a class="headerlink" href="#aggregation-example" title="Permalink to this headline">¶</a></h3>
+<p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Node</span></code> is a good example of the use of aggregation in <em>ns-3</em>.  Note
+that there are not derived classes of Nodes in <em>ns-3</em> such as class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">InternetNode</span></code>.  Instead, components (protocols) are aggregated to a
+node. Let’s look at how some Ipv4 protocols are added to a node.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span>
+<span class="nf">AddIpv4Stack</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">node</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4L3Protocol</span><span class="o">&gt;</span> <span class="n">ipv4</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Ipv4L3Protocol</span><span class="o">&gt;</span> <span class="p">();</span>
+  <span class="n">ipv4</span><span class="o">-&gt;</span><span class="n">SetNode</span> <span class="p">(</span><span class="n">node</span><span class="p">);</span>
+  <span class="n">node</span><span class="o">-&gt;</span><span class="n">AggregateObject</span> <span class="p">(</span><span class="n">ipv4</span><span class="p">);</span>
+  <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4Impl</span><span class="o">&gt;</span> <span class="n">ipv4Impl</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Ipv4Impl</span><span class="o">&gt;</span> <span class="p">();</span>
+  <span class="n">ipv4Impl</span><span class="o">-&gt;</span><span class="n">SetIpv4</span> <span class="p">(</span><span class="n">ipv4</span><span class="p">);</span>
+  <span class="n">node</span><span class="o">-&gt;</span><span class="n">AggregateObject</span> <span class="p">(</span><span class="n">ipv4Impl</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note that the Ipv4 protocols are created using <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CreateObject()</span></code>.
+Then, they are aggregated to the node. In this manner, the Node base class does
+not need to be edited to allow users with a base class Node pointer to access
+the Ipv4 interface; users may ask the node for a pointer to its Ipv4 interface
+at runtime. How the user asks the node is described in the next subsection.</p>
+<p>Note that it is a programming error to aggregate more than one object of the
+same type to an <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::Object</span></code>. So, for instance, aggregation is not
+an option for storing all of the active sockets of a node.</p>
+</div>
+<div class="section" id="getobject-example">
+<h3>GetObject example<a class="headerlink" href="#getobject-example" title="Permalink to this headline">¶</a></h3>
+<p>GetObject is a type-safe way to achieve a safe downcasting and to allow
+interfaces to be found on an object.</p>
+<p>Consider a node pointer <code class="docutils literal notranslate"><span class="pre">m_node</span></code> that points to a Node object that has an
+implementation of IPv4 previously aggregated to it. The client code wishes to
+configure a default route. To do so, it must access an object within the node
+that has an interface to the IP forwarding configuration. It performs the
+following:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="n">ipv4</span> <span class="o">=</span> <span class="n">m_node</span><span class="o">-&gt;</span><span class="n">GetObject</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="p">();</span>
+</pre></div>
+</div>
+<p>If the node in fact does not have an Ipv4 object aggregated to it, then the
+method will return null. Therefore, it is good practice to check the return
+value from such a function call. If successful, the user can now use the Ptr to
+the Ipv4 object that was previously aggregated to the node.</p>
+<p>Another example of how one might use aggregation is to add optional models to
+objects. For instance, an existing Node object may have an “Energy Model” object
+aggregated to it at run time (without modifying and recompiling the node class).
+An existing model (such as a wireless net device) can then later “GetObject” for
+the energy model and act appropriately if the interface has been either built in
+to the underlying Node object or aggregated to it at run time.  However, other
+nodes need not know anything about energy models.</p>
+<p>We hope that this mode of programming will require much less need for developers
+to modify the base classes.</p>
+</div>
+</div>
+<div class="section" id="object-factories">
+<h2>Object factories<a class="headerlink" href="#object-factories" title="Permalink to this headline">¶</a></h2>
+<p>A common use case is to create lots of similarly configured objects. One can
+repeatedly call <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CreateObject()</span></code> but there is also a factory design
+pattern in use in the <em>ns-3</em> system. It is heavily used in the “helper” API.</p>
+<p>Class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ObjectFactory</span></code> can be used to instantiate objects and to
+configure the attributes on those objects:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">SetTypeId</span> <span class="p">(</span><span class="n">TypeId</span> <span class="n">tid</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">Set</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">AttributeValue</span> <span class="o">&amp;</span><span class="n">value</span><span class="p">);</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">Create</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The first method allows one to use the <em>ns-3</em> TypeId system to specify the type
+of objects created. The second allows one to set attributes on the objects to be
+created, and the third allows one to create the objects themselves.</p>
+<p>For example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ObjectFactory</span> <span class="n">factory</span><span class="p">;</span>
+<span class="c1">// Make this factory create objects of type FriisPropagationLossModel</span>
+<span class="n">factory</span><span class="p">.</span><span class="n">SetTypeId</span> <span class="p">(</span><span class="s">&quot;ns3::FriisPropagationLossModel&quot;</span><span class="p">)</span>
+<span class="c1">// Make this factory object change a default value of an attribute, for</span>
+<span class="c1">// subsequently created objects</span>
+<span class="n">factory</span><span class="p">.</span><span class="n">Set</span> <span class="p">(</span><span class="s">&quot;SystemLoss&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span> <span class="p">(</span><span class="mf">2.0</span><span class="p">));</span>
+<span class="c1">// Create one such object</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">object</span> <span class="o">=</span> <span class="n">factory</span><span class="p">.</span><span class="n">Create</span> <span class="p">();</span>
+<span class="n">factory</span><span class="p">.</span><span class="n">Set</span> <span class="p">(</span><span class="s">&quot;SystemLoss&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span> <span class="p">(</span><span class="mf">3.0</span><span class="p">));</span>
+<span class="c1">// Create another object with a different SystemLoss</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">object</span> <span class="o">=</span> <span class="n">factory</span><span class="p">.</span><span class="n">Create</span> <span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="downcasting">
+<h2>Downcasting<a class="headerlink" href="#downcasting" title="Permalink to this headline">¶</a></h2>
+<p>A question that has arisen several times is, “If I have a base class pointer
+(Ptr) to an object and I want the derived class pointer, should I downcast (via
+C++ dynamic cast) to get the derived pointer, or should I use the object
+aggregation system to <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">GetObject&lt;&gt;</span> <span class="pre">()</span></code> to find a Ptr to the interface
+to the subclass API?”</p>
+<p>The answer to this is that in many situations, both techniques will work.
+<em>ns-3</em> provides a templated function for making the syntax of Object
+dynamic casting much more user friendly:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T2</span><span class="o">&gt;</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;</span>
+<span class="n">DynamicCast</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">T2</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span><span class="n">p</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;</span> <span class="p">(</span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n">T1</span> <span class="o">*&gt;</span> <span class="p">(</span><span class="n">PeekPointer</span> <span class="p">(</span><span class="n">p</span><span class="p">)));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>DynamicCast works when the programmer has a base type pointer and is testing
+against a subclass pointer. GetObject works when looking for different objects
+aggregated, but also works with subclasses, in the same way as DynamicCast. If
+unsure, the programmer should use GetObject, as it works in all cases. If the
+programmer knows the class hierarchy of the object under consideration, it is
+more direct to just use DynamicCast.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Object model</a><ul>
+<li><a class="reference internal" href="#object-oriented-behavior">Object-oriented behavior</a></li>
+<li><a class="reference internal" href="#object-base-classes">Object base classes</a></li>
+<li><a class="reference internal" href="#memory-management-and-class-ptr">Memory management and class Ptr</a><ul>
+<li><a class="reference internal" href="#reference-counting-smart-pointer-ptr">Reference counting smart pointer (Ptr)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#createobject-and-create">CreateObject and Create</a></li>
+<li><a class="reference internal" href="#aggregation">Aggregation</a></li>
+<li><a class="reference internal" href="#examples">Examples</a><ul>
+<li><a class="reference internal" href="#aggregation-example">Aggregation example</a></li>
+<li><a class="reference internal" href="#getobject-example">GetObject example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#object-factories">Object factories</a></li>
+<li><a class="reference internal" href="#downcasting">Downcasting</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="callbacks.html"
+                        title="previous chapter">Callbacks</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="attributes.html"
+                        title="next chapter">Configuration and Attributes</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/object-model.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="attributes.html" title="Configuration and Attributes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="callbacks.html" title="Callbacks"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 18:24.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<map id="ns3::LteSimpleHelper" name="ns3::LteSimpleHelper">
+<area shape="rect" id="node1" title="A simplified version of LteHelper, that is used for creation and configuration of LTE entities for te..." alt="" coords="3165,873,3327,900"/>
+<area shape="rect" id="node2" href="$classns3_1_1_object.html" title="A base class which provides memory management and object aggregation." alt="" coords="976,1424,1071,1451"/>
+<area shape="rect" id="node8" href="$structns3_1_1_object_1_1_aggregates.html" title="The list of Objects aggregated to this one." alt="" coords="1407,1423,1585,1449"/>
+<area shape="rect" id="node10" href="$classns3_1_1_lte_pdcp.html" title="LTE PDCP entity, see 3GPP TS 36.323." alt="" coords="2423,739,2527,765"/>
+<area shape="rect" id="node23" href="$classns3_1_1_lte_test_mac.html" title="This class implements a testing loopback MAC layer." alt="" coords="2412,1224,2539,1251"/>
+<area shape="rect" id="node28" href="$classns3_1_1_net_device.html" title="Network layer to device interface." alt="" coords="1435,1473,1557,1500"/>
+<area shape="rect" id="node40" href="$classns3_1_1_lte_rlc.html" title="This abstract base class defines the API to interact with the Radio Link Control (LTE_RLC) in LTE,..." alt="" coords="2429,456,2522,483"/>
+<area shape="rect" id="node42" href="$classns3_1_1_lte_test_rrc.html" title="This class implements a testing RRC entity." alt="" coords="2415,1440,2535,1467"/>
+<area shape="rect" id="node45" href="$classns3_1_1_channel.html" title="Abstract Channel Base Class." alt="" coords="1719,328,1826,355"/>
+<area shape="rect" id="node3" href="$classns3_1_1_simple_ref_count.html" title=" " alt="" coords="532,1409,697,1465"/>
+<area shape="rect" id="node4" href="$classns3_1_1_object_base.html" title="Anchor the ns&#45;3 type and attribute system." alt="" coords="179,1397,306,1424"/>
+<area shape="rect" id="node5" href="$classns3_1_1_simple_ref_count.html" title="A template&#45;based reference counting class." alt="" coords="149,1449,336,1490"/>
+<area shape="rect" id="node6" href="$classns3_1_1empty.html" title="make Callback use a separate empty type" alt="" coords="5,1456,100,1483"/>
+<area shape="rect" id="node7" href="$classns3_1_1_type_id.html" title="a unique identifier for an interface." alt="" coords="567,1773,662,1800"/>
+<area shape="rect" id="node35" href="$classns3_1_1_object_factory.html" title="Instantiate subclasses of ns3::Object." alt="" coords="2789,1669,2932,1696"/>
+<area shape="rect" id="node9" href="$classns3_1_1_ptr.html" title=" " alt="" coords="2769,739,2952,765"/>
+<area shape="rect" id="node11" href="$classns3_1_1_lte_rlc_sap_provider.html" title="Service Access Point (SAP) offered by the UM&#45;RLC and AM&#45;RLC entities to the PDCP entity See 3GPP 36...." alt="" coords="1962,427,2133,453"/>
+<area shape="rect" id="node12" href="$classns3_1_1_traced_callback.html" title=" " alt="" coords="1970,483,2125,539"/>
+<area shape="rect" id="node13" title=" " alt="" coords="1372,455,1620,526"/>
+<area shape="rect" id="node14" title="STL class." alt="" coords="969,741,1077,768"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1397,682,1595,753"/>
+<area shape="rect" id="node26" title=" " alt="" coords="1957,929,2137,956"/>
+<area shape="rect" id="node37" title=" " alt="" coords="1951,1561,2143,1617"/>
+<area shape="rect" id="node15" href="$classns3_1_1_traced_callback.html" title="Forward calls to a chain of Callback." alt="" coords="1419,601,1573,657"/>
+<area shape="rect" id="node18" href="$classns3_1_1_traced_callback.html" title=" " alt="" coords="1971,644,2123,700"/>
+<area shape="rect" id="node16" href="$classns3_1_1_lte_rlc_sap_user.html" title="Service Access Point (SAP) offered by the UM&#45;RLC and AM&#45;RLC entities to the PDCP entity See 3GPP 36...." alt="" coords="1974,573,2121,600"/>
+<area shape="rect" id="node17" href="$classns3_1_1_lte_pdcp_sap_provider.html" title="Service Access Point (SAP) offered by the PDCP entity to the RRC entity See 3GPP 36...." alt="" coords="1956,1308,2139,1335"/>
+<area shape="rect" id="node20" href="$classns3_1_1_lte_pdcp_sap_user.html" title="Service Access Point (SAP) offered by the PDCP entity to the RRC entity See 3GPP 36...." alt="" coords="1968,1257,2127,1284"/>
+<area shape="rect" id="node21" href="$classns3_1_1_ptr.html" title="Smart pointer class similar to boost::intrusive_ptr." alt="" coords="560,600,669,627"/>
+<area shape="rect" id="node22" href="$classns3_1_1_ptr.html" title=" " alt="" coords="2758,1227,2963,1253"/>
+<area shape="rect" id="node25" href="$classns3_1_1_ptr.html" title=" " alt="" coords="924,925,1123,952"/>
+<area shape="rect" id="node27" href="$classns3_1_1_ptr.html" title=" " alt="" coords="1947,1359,2147,1385"/>
+<area shape="rect" id="node39" href="$classns3_1_1_ptr.html" title=" " alt="" coords="2775,317,2947,344"/>
+<area shape="rect" id="node41" href="$classns3_1_1_ptr.html" title=" " alt="" coords="2761,873,2960,900"/>
+<area shape="rect" id="node43" href="$classns3_1_1_ptr.html" title=" " alt="" coords="2745,267,2976,293"/>
+<area shape="rect" id="node47" href="$classns3_1_1_ptr.html" title=" " alt="" coords="931,137,1116,178"/>
+<area shape="rect" id="node24" href="$classns3_1_1_event_id.html" title="An identifier for simulation events." alt="" coords="1445,987,1547,1013"/>
+<area shape="rect" id="node29" href="$classns3_1_1_time.html" title="Simulation virtual time values and global simulation resolution." alt="" coords="2005,1207,2090,1233"/>
+<area shape="rect" id="node44" href="$classns3_1_1_simple_channel.html" title="A simple channel, for simple things and testing." alt="" coords="2400,224,2551,251"/>
+<area shape="rect" id="node30" title="STL class." alt="" coords="1441,1143,1551,1169"/>
+<area shape="rect" id="node31" title="STL class." alt="" coords="980,1692,1067,1719"/>
+<area shape="rect" id="node38" href="$structns3_1_1_attribute_construction_list_1_1_item.html" title="A single Attribute triple." alt="" coords="1400,1626,1592,1667"/>
+<area shape="rect" id="node32" title="STL class." alt="" coords="545,1685,684,1726"/>
+<area shape="rect" id="node33" href="$classns3_1_1_lte_mac_sap_user.html" title="Service Access Point (SAP) offered by the MAC to the RLC See Femto Forum MAC Scheduler Interface Spec..." alt="" coords="1970,1031,2125,1057"/>
+<area shape="rect" id="node34" href="$classns3_1_1_lte_mac_sap_provider.html" title="Service Access Point (SAP) offered by the MAC to the RLC See Femto Forum MAC Scheduler Interface Spec..." alt="" coords="1958,879,2137,905"/>
+<area shape="rect" id="node36" href="$classns3_1_1_attribute_construction_list.html" title=" " alt="" coords="2368,1669,2583,1696"/>
+<area shape="rect" id="node46" title=" " alt="" coords="1391,186,1601,227"/>
+<area shape="rect" id="node49" title=" " alt="" coords="1925,105,2169,175"/>
+<area shape="rect" id="node48" title="STL class." alt="" coords="959,204,1088,231"/>
+<area shape="rect" id="node50" title="STL class." alt="" coords="1429,123,1563,149"/>
+</map>

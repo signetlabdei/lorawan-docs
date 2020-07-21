@@ -1,0 +1,13 @@
+<map id="ns3::TcpTxBuffer::TailSequence" name="ns3::TcpTxBuffer::TailSequence">
+<area shape="rect" id="node1" title="Get the sequence number of the buffer tail (plus one)" alt="" coords="1275,274,1497,301"/>
+<area shape="rect" id="node2" href="$classns3_1_1_tcp_tx_buffer.html#a42b6afc017d2b94c96354df345c49b87" title="Returns the number of bytes from the buffer in the range [seq, tailSequence)" alt="" coords="1028,267,1227,308"/>
+<area shape="rect" id="node3" href="$classns3_1_1_tcp_tx_buffer.html#a7b376f6a4ccc3b43a2d038e8282fbf01" title="Copy data from the range [seq, seq+numBytes) into a packet." alt="" coords="776,140,980,181"/>
+<area shape="rect" id="node5" href="$class_tcp_tx_buffer_test_case.html#a2b058225bf6a55a7e80bca5d1dc93f7a" title="Test the generation of an unsent block." alt="" coords="281,151,438,192"/>
+<area shape="rect" id="node11" href="$classns3_1_1_tcp_tx_buffer.html#abd21e1f8d6646ab4805145b944fc419f" title="Get the next sequence number to transmit, according to RFC 6675." alt="" coords="781,325,975,351"/>
+<area shape="rect" id="node4" href="$classns3_1_1_tcp_tx_buffer.html#abc21a693005857d1f2185a32fc490d29" title="Discard data up to but not including this sequence number." alt="" coords="509,173,728,199"/>
+<area shape="rect" id="node7" href="$class_tcp_tx_buffer_test_case.html#a87a6f679a0da25966b57cd415b03a268" title="Test the generation of the &quot;next&quot; block." alt="" coords="281,216,438,257"/>
+<area shape="rect" id="node8" href="$class_tcp_rate_linux_with_buffer_test.html#ab14d877f5f6c3c8f1e5715a41104585f" title="Test with arbitary SACK scenario." alt="" coords="257,80,461,121"/>
+<area shape="rect" id="node10" href="$class_tcp_tx_buffer_test_case.html#a6d12bda320f20f02c64eb14ae87b2e6f" title="Test if a segment is really set as lost." alt="" coords="540,5,697,47"/>
+<area shape="rect" id="node6" href="$class_tcp_tx_buffer_test_case.html#a004312af9ed95478a651632f8e5a7181" title="Implementation to actually run this TestCase." alt="" coords="29,151,186,192"/>
+<area shape="rect" id="node9" href="$class_tcp_rate_linux_with_buffer_test.html#a3b5486d4efb798fb5847e46d61131664" title="Implementation to actually run this TestCase." alt="" coords="5,80,209,121"/>
+</map>

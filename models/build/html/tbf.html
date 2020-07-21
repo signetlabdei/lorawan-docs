@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>TBF queue disc &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="RED queue disc" href="red.html" />
+    <link rel="prev" title="Prio queue disc" href="prio.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="red.html" title="RED queue disc"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="prio.html" title="Prio queue disc"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" accesskey="U">Traffic Control Layer</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tbf-queue-disc">
+<h1>TBF queue disc<a class="headerlink" href="#tbf-queue-disc" title="Permalink to this headline">¶</a></h1>
+<p>This chapter describes the TBF (<a class="reference internal" href="#ref1" id="id1"><span>[Ref1]</span></a>) queue disc implementation
+in <em>ns-3</em>. The TBF model in ns-3 is ported based on Linux kernel code implemented by
+A. Kuznetsov and D. Torokhov.</p>
+<p>TBF is a qdisc that allows controlling the bandwidth of the output according
+to a set rate with the possibility of managing burst conditions also. The TBF implementation
+consists of a bucket (buffer) having a limited capacity into which tokens (normally representing a
+unit of bytes or a single packet of predetermined size) are added at a fixed rate ‘r’ called the
+token rate. Whenever a packet arrives into the tx queue (fifo by default), the bucket is checked
+to see if there are appropriate number of tokens that is equivalent to the length of the packet in
+bytes. If yes, then the tokens are removed and the packet is passed for transmission. If no, then
+packets will have to wait until there are sufficient tokens in the bucket. This data conformance
+can be thus put into three possible scenarios <a class="reference internal" href="#ref3" id="id2"><span>[Ref3]</span></a>:</p>
+<ol class="arabic simple">
+<li><p>Data rate = Token rate : Packets pass without delay.</p></li>
+<li><p>Data rate &lt; Token rate : The tokens might accumulate and the bucket might become
+full. Then, the next packets to enter TBF will be transmitted right away without
+having any limit applied to them, until the bucket is empty. This is called a burst
+condition and in TBF the burst parameter defines the size of the bucket. In order
+to overcome this problem and provide better control over the bursts, TBF
+implements a second bucket which is smaller and generally the same size as the
+MTU. This second bucket cannot store large amount of tokens, but its
+replenishing rate will be a lot faster than the one of the big bucket. This second
+rate is called ‘peakRate’ and it will determine the maximum rate of a burst.</p></li>
+<li><p>Data rate &gt; Token rate : This causes the TBF algorithm to throttle itself for a while as
+soon as the bucket gets empty. This is called an ‘overlimit situation’ <a class="reference internal" href="#ref2" id="id3"><span>[Ref2]</span></a>. In this situation,
+some of the packets will be blocked until enough tokens are available at which time a schedule for
+the waking of the queue will be done. If packets keep coming in, at a larger rate, then the
+packets will start to get dropped when the total number of bytes exceeds the QueueLimit.</p></li>
+</ol>
+<div class="section" id="model-description">
+<h2>Model Description<a class="headerlink" href="#model-description" title="Permalink to this headline">¶</a></h2>
+<p>The TBF queue disc does not require packet filters, does not admit internal queues
+and uses a single child queue disc. If the user does not provide a child queue disc,
+a Fifo queue disc operating in the same mode (packet or byte) as the TBF queue disc
+and having a size equal to the TBF QueueLimit attribute is created. Otherwise, the
+capacity of the TBF queue disc is determined by the capacity of the child queue disc.</p>
+<p>There are two token buckets: first bucket and second bucket. The size of the
+first bucket called ‘Burst’ should always be greater than the size of the second
+bucket called the Mtu (which is usually the size of a single packet). But the
+‘PeakRate’ which is the second bucket’s token rate should be always greater than
+the ‘Rate’ which is the first bucket’s token rate.</p>
+<p>If the PeakRate is zero, then the second bucket does not exist. In order to activate
+the second bucket, both the Mtu and PeakRate values have to be greater than zero. If
+the Mtu value is zero at initialization time, then if a NetDevice exits, the Mtu’s
+value will be equal to the Mtu of the NetDevice. But if no NetDevice exists, then
+the QueueDisc will complain thus prompting the user to set the Mtu value.</p>
+<p>The source code for the TBF model is located in the directory <code class="docutils literal notranslate"><span class="pre">src/traffic-control/model</span></code>
+and consists of 2 files <cite>tbf-queue-disc.h</cite> and <cite>tbf-queue-disc.cc</cite> defining a TbfQueueDisc
+class.</p>
+<ul class="simple">
+<li><p>class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">TbfQueueDisc</span></code>: This class implements the main TBF algorithm:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">TbfQueueDisc::DoEnqueue</span> <span class="pre">()</span></code>: This routine enqueue’s the incoming packet if the queue is not full and drops the packet otherwise.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TbfQueueDisc::DoPeek</span> <span class="pre">()</span></code>: This routine peeks for the top item in the queue and if the queue is not empty, it returns the topmost item.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TbfQueueDisc::DoDequeue</span> <span class="pre">()</span></code>: This routine performs the dequeuing of packets according to the following logic:</p>
+<ul>
+<li><p>It calls <code class="docutils literal notranslate"><span class="pre">TbfQueueDisc::Peek</span> <span class="pre">()</span></code> and calculates the size of the packet to be dequeued in bytes.</p></li>
+<li><p>Then it calculates the time difference ‘delta’, which is the time elapsed since the last update of tokens in the buckets.</p></li>
+<li><p>If the second bucket exists, the number of tokens are updated according to the ‘PeakRate’ and ‘delta’.</p></li>
+<li><p>From this second bucket a number of tokens equal to the size of the packet to be dequeued is subtracted.</p></li>
+<li><p>Now the number of tokens in the first bucket are updated according to ‘Rate’ and ‘delta’.</p></li>
+<li><p>From this first bucket a number of tokens equal to the size of the packet to be dequeued is subtracted.</p></li>
+<li><p>If after this, both the first and second buckets have tokens greater than zero, then the packet is dequeued.</p></li>
+<li><p>Else, an event to <code class="docutils literal notranslate"><span class="pre">QueueDisc::Run</span> <span class="pre">()</span></code> is scheduled after a time period when enough tokens will be present for the dequeue operation.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<dl class="citation">
+<dt class="label" id="ref1"><span class="brackets"><a class="fn-backref" href="#id1">Ref1</a></span></dt>
+<dd><ol class="upperalpha simple">
+<li><p>Kuznetsov and D. Torokhov; Linux Cross Reference Source Code; Available online at <a class="reference external" href="http://lxr.free-electrons.com/source/net/sched/sch_tbf.c">http://lxr.free-electrons.com/source/net/sched/sch_tbf.c</a>.</p></li>
+</ol>
+</dd>
+<dt class="label" id="ref2"><span class="brackets"><a class="fn-backref" href="#id3">Ref2</a></span></dt>
+<dd><ol class="upperalpha simple" start="10">
+<li><p>Vehent; Journey to the Center of the Linux Kernel: Traffic Control, Shaping and QoS; Available online at <a class="reference external" href="http://wiki.linuxwall.info/doku.php/en:resources:dossiers:networking:traffic_control#tbf_-_token_bucket_filter">http://wiki.linuxwall.info/doku.php/en:resources:dossiers:networking:traffic_control#tbf_-_token_bucket_filter</a>.</p></li>
+</ol>
+</dd>
+<dt class="label" id="ref3"><span class="brackets"><a class="fn-backref" href="#id2">Ref3</a></span></dt>
+<dd><p>Practical IP Network QoS: TBF queuing discipline; Available online at <a class="reference external" href="http://web.opalsoft.net/qos/default.php?p=ds-24">http://web.opalsoft.net/qos/default.php?p=ds-24</a>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>The key attributes that the TbfQueueDisc class holds include the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MaxSize:</span></code> The maximum number of packets/bytes the queue disc can hold. The default value is 1000 packets.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Burst:</span></code> Size of the first bucket, in bytes. The default value is 125000 bytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Mtu:</span></code> Size of second bucket defaults to the MTU of the attached NetDevice, if any, or 0 otherwise.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Rate:</span></code> Rate at which tokens enter the first bucket. The default value is 125KB/s.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PeakRate:</span></code> Rate at which tokens enter the second bucket. The default value is 0KB/s, which means that there is no second bucket.</p></li>
+</ul>
+</div>
+<div class="section" id="tracesources">
+<h3>TraceSources<a class="headerlink" href="#tracesources" title="Permalink to this headline">¶</a></h3>
+<p>The TbfQueueDisc class provides the following trace sources:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TokensInFirstBucket:</span></code> Number of First Bucket Tokens in bytes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TokensInSecondBucket:</span></code> Number of Second Bucket Tokens in bytes</p></li>
+</ul>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>The example for TBF is <cite>tbf-example.cc</cite> located in <code class="docutils literal notranslate"><span class="pre">examples/traffic-control/</span></code>.  The command to run the file (the invocation below shows the available command-line options) is:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="n">sourcecode</span><span class="o">::</span> <span class="n">bash</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>$ ./waf –run “tbf-example –PrintHelp”
+$ ./waf –run “tbf-example –burst=125000 –rate=1Mbps –peakRate=1.5Mbps”</p>
+</div></blockquote>
+<p>The expected output from the previous commands are traced value changes in the number of tokens in the first and second buckets.</p>
+</div>
+</div>
+<div class="section" id="validation">
+<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<p>The TBF model is tested using <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">TbfQueueDiscTestSuite</span></code> class defined in <cite>src/traffic-control/test/tbf-queue-disc-test-suite.cc</cite>. The suite includes 4 test cases:</p>
+<ul class="simple">
+<li><p>Test 1: Simple Enqueue/Dequeue with verification of attribute setting and subtraction of tokens from the buckets.</p></li>
+<li><p>Test 2: When DataRate == FirstBucketTokenRate; packets should pass smoothly.</p></li>
+<li><p>Test 3: When DataRate &gt;&gt;&gt; FirstBucketTokenRate; some packets should get blocked and waking of queue should get scheduled.</p></li>
+<li><p>Test 4: When DataRate &lt; FirstBucketTokenRate; burst condition, peakRate is set so that bursts are controlled.</p></li>
+</ul>
+<p>The test suite can be run using the following commands:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="n">sourcecode</span><span class="o">::</span> <span class="n">bash</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>$ ./waf configure –enable-examples –enable-tests
+$ ./waf build
+$ ./test.py -s tbf-queue-disc</p>
+</div></blockquote>
+<p>or</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="n">sourcecode</span><span class="o">::</span> <span class="n">bash</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>$ NS_LOG=”TbfQueueDisc” ./waf –run “test-runner –suite=tbf-queue-disc”</p>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">TBF queue disc</a><ul>
+<li><a class="reference internal" href="#model-description">Model Description</a><ul>
+<li><a class="reference internal" href="#references">References</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#tracesources">TraceSources</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#validation">Validation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="prio.html"
+                        title="previous chapter">Prio queue disc</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="red.html"
+                        title="next chapter">RED queue disc</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tbf.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="red.html" title="RED queue disc"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="prio.html" title="Prio queue disc"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" >Traffic Control Layer</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

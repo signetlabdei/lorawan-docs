@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>PIE queue disc &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Mq queue disc" href="mq.html" />
+    <link rel="prev" title="FqCoDel queue disc" href="fq-codel.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mq.html" title="Mq queue disc"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="fq-codel.html" title="FqCoDel queue disc"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" accesskey="U">Traffic Control Layer</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pie-queue-disc">
+<h1>PIE queue disc<a class="headerlink" href="#pie-queue-disc" title="Permalink to this headline">¶</a></h1>
+<p>This chapter describes the PIE (<a class="reference internal" href="#pan13" id="id1"><span>[Pan13]</span></a>, <a class="reference internal" href="#pan16" id="id2"><span>[Pan16]</span></a>) queue disc implementation
+in <em>ns-3</em>.</p>
+<p>Proportional Integral controller Enhanced (PIE) is a queuing discipline that aims to
+solve the bufferbloat <a class="reference internal" href="codel.html#buf14" id="id3"><span>[Buf14]</span></a> problem. The model in ns-3 is a port of Preethi
+Natarajan’s ns-2 PIE model.</p>
+<div class="section" id="model-description">
+<h2>Model Description<a class="headerlink" href="#model-description" title="Permalink to this headline">¶</a></h2>
+<p>The source code for the PIE model is located in the directory <code class="docutils literal notranslate"><span class="pre">src/traffic-control/model</span></code>
+and consists of 2 files <cite>pie-queue-disc.h</cite> and <cite>pie-queue-disc.cc</cite> defining a PieQueueDisc
+class. The code was ported to <em>ns-3</em> by Mohit P. Tahiliani, Shravya K. S. and Smriti Murali
+based on ns-2 code implemented by Preethi Natarajan, Rong Pan, Chiara Piglione, Greg White
+and Takashi Hayakawa.</p>
+<ul class="simple">
+<li><p>class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">PieQueueDisc</span></code>: This class implements the main PIE algorithm:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">PieQueueDisc::DoEnqueue</span> <span class="pre">()</span></code>: This routine checks whether the queue is full, and if so, drops the packets and records the number of drops due to queue overflow. If queue is not full, this routine calls <code class="docutils literal notranslate"><span class="pre">PieQueueDisc::DropEarly()</span></code>, and depending on the value returned, the incoming packet is either enqueued or dropped.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PieQueueDisc::DropEarly</span> <span class="pre">()</span></code>: The decision to enqueue or drop the packet is taken by invoking this routine, which returns a boolean value; false indicates enqueue and true indicates drop.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PieQueueDisc::CalculateP</span> <span class="pre">()</span></code>: This routine is called at a regular interval of <cite>m_tUpdate</cite> and updates the drop probability, which is required by <code class="docutils literal notranslate"><span class="pre">PieQueueDisc::DropEarly()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PieQueueDisc::DoDequeue</span> <span class="pre">()</span></code>: This routine calculates the average departure rate which is required for updating the drop probability in <code class="docutils literal notranslate"><span class="pre">PieQueueDisc::CalculateP</span> <span class="pre">()</span></code></p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<dl class="citation">
+<dt class="label" id="pan13"><span class="brackets"><a class="fn-backref" href="#id1">Pan13</a></span></dt>
+<dd><p>Pan, R., Natarajan, P., Piglione, C., Prabhu, M. S., Subramanian, V., Baker, F., &amp; VerSteeg, B. (2013, July). PIE: A lightweight control scheme to address the bufferbloat problem. In High Performance Switching and Routing (HPSR), 2013 IEEE 14th International Conference on (pp. 148-155). IEEE.  Available online at <a class="reference external" href="https://www.ietf.org/mail-archive/web/iccrg/current/pdfB57AZSheOH.pdf">https://www.ietf.org/mail-archive/web/iccrg/current/pdfB57AZSheOH.pdf</a>.</p>
+</dd>
+<dt class="label" id="pan16"><span class="brackets"><a class="fn-backref" href="#id2">Pan16</a></span></dt>
+<dd><ol class="upperalpha simple" start="18">
+<li><p>Pan, P. Natarajan, F. Baker, G. White, B. VerSteeg, M.S. Prabhu, C. Piglione, V. Subramanian, Internet-Draft: PIE: A lightweight control scheme to address the bufferbloat problem, April 2016.  Available online at <a class="reference external" href="https://tools.ietf.org/html/draft-ietf-aqm-pie-07">https://tools.ietf.org/html/draft-ietf-aqm-pie-07</a>.</p></li>
+</ol>
+</dd>
+</dl>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>The key attributes that the PieQueue class holds include the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MaxSize:</span></code> The maximum number of bytes or packets the queue can hold.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MeanPktSize:</span></code> Mean packet size in bytes. The default value is 1000 bytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Tupdate:</span></code> Time period to calculate drop probability. The default value is 30 ms.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Supdate:</span></code> Start time of the update timer. The default value is 0 ms.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DequeueThreshold:</span></code> Minimum queue size in bytes before dequeue rate is measured. The default value is 10000 bytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">QueueDelayReference:</span></code> Desired queue delay. The default value is 20 ms.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MaxBurstAllowance:</span></code> Current max burst allowance in seconds before random drop. The default value is 0.1 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">A:</span></code> Value of alpha. The default value is 0.125.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">B:</span></code> Value of beta. The default value is 1.25.</p></li>
+</ul>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>The example for PIE is <cite>pie-example.cc</cite> located in <code class="docutils literal notranslate"><span class="pre">src/traffic-control/examples</span></code>.  To run the file (the first invocation below shows the available
+command-line options):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf --run <span class="s2">&quot;pie-example --PrintHelp&quot;</span>
+$ ./waf --run <span class="s2">&quot;pie-example --writePcap=1&quot;</span>
+</pre></div>
+</div>
+<p>The expected output from the previous commands are 10 .pcap files.</p>
+</div>
+</div>
+<div class="section" id="validation">
+<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<p>The PIE model is tested using <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">PieQueueDiscTestSuite</span></code> class defined in <cite>src/traffic-control/test/pie-queue-test-suite.cc</cite>. The suite includes 5 test cases:</p>
+<ul class="simple">
+<li><p>Test 1: simple enqueue/dequeue with defaults, no drops</p></li>
+<li><p>Test 2: more data with defaults, unforced drops but no forced drops</p></li>
+<li><p>Test 3: same as test 2, but with higher QueueDelayReference</p></li>
+<li><p>Test 4: same as test 2, but with reduced dequeue rate</p></li>
+<li><p>Test 5: same dequeue rate as test 4, but with higher Tupdate</p></li>
+</ul>
+<p>The test suite can be run using the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf configure --enable-examples --enable-tests
+$ ./waf build
+$ ./test.py -s pie-queue-disc
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nv">NS_LOG</span><span class="o">=</span><span class="s2">&quot;PieQueueDisc&quot;</span> ./waf --run <span class="s2">&quot;test-runner --suite=pie-queue-disc&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PIE queue disc</a><ul>
+<li><a class="reference internal" href="#model-description">Model Description</a><ul>
+<li><a class="reference internal" href="#references">References</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#validation">Validation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="fq-codel.html"
+                        title="previous chapter">FqCoDel queue disc</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="mq.html"
+                        title="next chapter">Mq queue disc</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/pie.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mq.html" title="Mq queue disc"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="fq-codel.html" title="FqCoDel queue disc"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" >Traffic Control Layer</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

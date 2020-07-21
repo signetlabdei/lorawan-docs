@@ -1,0 +1,15 @@
+<map id="ns3::CalendarScheduler::Hash" name="ns3::CalendarScheduler::Hash">
+<area shape="rect" id="node1" title="Hash the dimensionless time to a bucket." alt="" coords="1119,180,1293,221"/>
+<area shape="rect" id="node2" href="$classns3_1_1_calendar_scheduler.html#a89cf4c06b7763187a0155320013cf1d1" title="Insert a new event in to the correct bucket." alt="" coords="896,56,1071,97"/>
+<area shape="rect" id="node6" href="$classns3_1_1_calendar_scheduler.html#aee9db8a165f257bc94b51ffedc9b98d8" title="Remove a specific event from the event list." alt="" coords="5,228,180,269"/>
+<area shape="rect" id="node11" href="$classns3_1_1_calendar_scheduler.html#a42c114e7a4bb68943b63fa9dfc841610" title="Remove the earliest event." alt="" coords="896,146,1071,188"/>
+<area shape="rect" id="node12" href="$classns3_1_1_calendar_scheduler.html#a3bf6cdaed8ea65882707fe6eba13eedf" title="Initialize the calendar queue." alt="" coords="896,212,1071,253"/>
+<area shape="rect" id="node3" href="$classns3_1_1_calendar_scheduler.html#a259100bf1a7128f6bfd27edfc2acd089" title="Compute the new bucket size, based on up to the first 25 entries." alt="" coords="673,42,848,84"/>
+<area shape="rect" id="node9" href="$classns3_1_1_calendar_scheduler.html#aaf70c05e7468c8c232d4a309ce7c52c3" title="Insert a new Event in the schedule." alt="" coords="5,13,180,54"/>
+<area shape="rect" id="node10" href="$classns3_1_1_calendar_scheduler.html#a9c7a10fd444508c2dd8034cb49e21b7d" title="Resize the number of buckets and width." alt="" coords="673,108,848,149"/>
+<area shape="rect" id="node4" href="$classns3_1_1_calendar_scheduler.html#ab626f95ab5482e5e6e2a9d5f74363d6c" title="Resize to a new number of buckets, with automatically computed width." alt="" coords="451,76,625,117"/>
+<area shape="rect" id="node5" href="$classns3_1_1_calendar_scheduler.html#ad177bb1ae48629ed93d2ffc55aa52312" title="Halve the number of buckets if necessary." alt="" coords="228,108,403,149"/>
+<area shape="rect" id="node8" href="$classns3_1_1_calendar_scheduler.html#a6ad5ca9624349ac1a4a3ce565333385f" title="Double the number of buckets if necessary." alt="" coords="228,42,403,84"/>
+<area shape="rect" id="node7" href="$classns3_1_1_calendar_scheduler.html#ad86df04ee956851c73dfcc38d0fb3ac6" title="Remove the earliest event from the event list." alt="" coords="5,137,180,178"/>
+<area shape="rect" id="node13" href="$classns3_1_1_calendar_scheduler.html#a8fe003db517575b600aeaed7a02a8a18" title="Constructor." alt="" coords="673,225,848,266"/>
+</map>

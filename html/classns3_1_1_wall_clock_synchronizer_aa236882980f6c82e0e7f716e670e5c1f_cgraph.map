@@ -1,0 +1,8 @@
+<map id="ns3::WallClockSynchronizer::SpinWait" name="ns3::WallClockSynchronizer::SpinWait">
+<area shape="rect" id="node1" title="Do a busy&#45;wait until the normalized realtime equals the argument or the condition variable becomes tr..." alt="" coords="5,39,208,80"/>
+<area shape="rect" id="node2" href="$classns3_1_1_system_condition.html#a4b6665089213af3531f8903373947239" title="Get the value of the underlying condition." alt="" coords="275,5,439,47"/>
+<area shape="rect" id="node4" href="$classns3_1_1_wall_clock_synchronizer.html#a1a9757f294c7677e211b19ef10867780" title="Get the current normalized real time, in ns." alt="" coords="256,71,459,112"/>
+<area shape="rect" id="node3" href="$classns3_1_1_system_condition_private.html#a304f88722c58b734ebfc701f702c844c" title="Get the condition value." alt="" coords="507,5,717,47"/>
+<area shape="rect" id="node5" href="$classns3_1_1_wall_clock_synchronizer.html#a9ffb2b0572abca0763b56889a72867dd" title="Get the current absolute real time (in ns since the epoch)." alt="" coords="511,71,713,112"/>
+<area shape="rect" id="node6" href="$classns3_1_1_wall_clock_synchronizer.html#a591dbd1a2beb7b8b9bae50ad230204fa" title="Convert a timeval to absolute time, in ns." alt="" coords="765,71,968,112"/>
+</map>

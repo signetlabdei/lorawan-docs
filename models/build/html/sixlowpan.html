@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>6LoWPAN: Transmission of IPv6 Packets over IEEE 802.15.4 Networks &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tap NetDevice" href="tap.html" />
+    <link rel="prev" title="Spectrum Module" href="spectrum.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tap.html" title="Tap NetDevice"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spectrum.html" title="Spectrum Module"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="lowpan-transmission-of-ipv6-packets-over-ieee-802-15-4-networks">
+<h1>6LoWPAN: Transmission of IPv6 Packets over IEEE 802.15.4 Networks<a class="headerlink" href="#lowpan-transmission-of-ipv6-packets-over-ieee-802-15-4-networks" title="Permalink to this headline">¶</a></h1>
+<p>This chapter describes the implementation of <em>ns-3</em> model for the
+compression of IPv6 packets over IEEE 802.15.4-Based Networks
+as specified by <span class="target" id="index-0"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc4944.html"><strong>RFC 4944</strong></a> (<a class="reference internal" href="#rfc4944" id="id1"><span>[RFC4944]</span></a>) and <span class="target" id="index-1"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc6282.html"><strong>RFC 6282</strong></a> (<a class="reference internal" href="#rfc6282" id="id2"><span>[RFC6282]</span></a>).</p>
+<div class="section" id="model-description">
+<h2>Model Description<a class="headerlink" href="#model-description" title="Permalink to this headline">¶</a></h2>
+<p>The source code for the sixlowpan module lives in the directory <code class="docutils literal notranslate"><span class="pre">src/sixlowpan</span></code>.</p>
+<div class="section" id="design">
+<h3>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h3>
+<p>The model design does not follow strictly the standard from an architectural
+standpoint, as it does extend it beyond the original scope by supporting also
+other kinds of networks.</p>
+<p>Other than that, the module strictly follows <span class="target" id="index-2"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc4944.html"><strong>RFC 4944</strong></a> and <span class="target" id="index-3"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc6282.html"><strong>RFC 6282</strong></a>, with the
+following exceptions:</p>
+<ul class="simple">
+<li><p>HC2 encoding is not supported</p></li>
+<li><p>IPHC’s SAC and DAC are not supported</p></li>
+</ul>
+<p>The HC2 encoding is not supported, as it has been superseded by IPHC and NHC
+compression type (<span class="target" id="index-4"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc6282.html"><strong>RFC 6282</strong></a>).</p>
+<p>IPHC SAC and DAC are not yet supported, as they do require <span class="target" id="index-5"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc6775.html"><strong>RFC 6775</strong></a> (<a class="reference internal" href="#rfc6775" id="id3"><span>[RFC6775]</span></a>) for full
+compliance. It is planned to support them in the future.</p>
+<div class="section" id="netdevice">
+<h4>NetDevice<a class="headerlink" href="#netdevice" title="Permalink to this headline">¶</a></h4>
+<p>The whole module is developed as a transparent NetDevice, which can act as a
+proxy between IPv6 and any NetDevice (the module has been successfully tested
+with PointToPointNedevice, CsmaNetDevice and LrWpanNetDevice).</p>
+<p>For this reason, the module implements a virtual NetDevice, and all the calls are passed
+without modifications to the underlying NetDevice. The only important difference is in
+GetMtu behaviour. It will always return <em>at least</em> 1280 bytes, as is the minimum IPv6 MTU.</p>
+<p>The module does provide some attributes and some tracesources.
+The attributes are:</p>
+<ul class="simple">
+<li><p><span class="target" id="index-6"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc6282.html"><strong>RFC 6282</strong></a> (boolean, default true), used to activate HC1 (<span class="target" id="index-7"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc4944.html"><strong>RFC 4944</strong></a>) or IPHC (<span class="target" id="index-8"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc6282.html"><strong>RFC 6282</strong></a>) compression.</p></li>
+<li><p>OmitUdpChecksum (boolean, default true), used to activate UDP checksum compression in IPHC.</p></li>
+<li><p>FragmentReassemblyListSize (integer, default 0), indicating the number of packets that can be reassembled at the same time. If the limit is reached, the oldest packet is discarded. Zero means infinite.</p></li>
+<li><p>FragmentExpirationTimeout (Time, default 60 seconds), being the timeout to wait for further fragments before discarding a partial packet.</p></li>
+<li><p>CompressionThreshold (unsigned 32 bits integer, default 0), minimum compressed payload size.</p></li>
+<li><p>ForceEtherType (boolean, default false).</p></li>
+<li><p>EtherType (unsigned 16 bits integer, default 0xFFFF), to force a particular L2 EtherType.</p></li>
+<li><p>UseMeshUnder (boolean, default false), it enables mesh-under flood routing.</p></li>
+<li><p>MeshUnderRadius (unsigned 8 bits integer, default 10), the maximum number of hops that a packet will be forwarded.</p></li>
+<li><p>MeshCacheLength (unsigned 16 bits integer, default 10), the length of the cache for each source.</p></li>
+<li><p>MeshUnderJitter (ns3::UniformRandomVariable[Min=0.0|Max=10.0]), the jitter in ms a node uses to forward mesh-under packets - used to prevent collisions.</p></li>
+</ul>
+<p>The CompressionThreshold attribute is similar to Contiki’s SICSLOWPAN_CONF_MIN_MAC_PAYLOAD
+option. If a compressed packet size is less than the threshold, the uncompressed version is
+used (plus one byte for the correct dispatch header).
+This option is useful when a MAC requires a minimum frame size (e.g., ContikiMAC) and the
+compression would violate the requirement.</p>
+<p>The last two attributes are needed to use the module with a NetDevice other than 802.15.4, as
+neither IANA or IEEE did reserve an EtherType for 6LoWPAN. As a consequence there might be a
+conflict with the L2 multiplexer/demultiplexer which is based on EtherType. The default
+value is 0xFFFF, which is reserved by IEEE (see <a class="reference internal" href="#iana802" id="id4"><span>[IANA802]</span></a> and <a class="reference internal" href="#ethertype" id="id5"><span>[Ethertype]</span></a>).
+The default module behaviour is to not change the EtherType, however this would not work with
+any NetDevice actually understanding and using the EtherType.</p>
+<p>Note that the <cite>ForceEtherType</cite> parameter have also a direct effect on the MAC address kind the
+module is expecting to handle:
+* ForceEtherType true: Mac48Address (Ethernet, WiFi, etc.).
+* ForceEtherType false: Mac16Address or Mac64Address (IEEE 802.15.4).</p>
+<p>Note that using 6LoWPAN over any NetDevice other than 802.15.4 will produce valid .pcap files,
+but they will not be correctly dissected by Wireshark.
+The reason lies on the fact that 6LoWPAN was really meant to be used only over 802.15.4, so
+Wireshark dissectors will not even try to decode 6LoWPAN headers on top of protocols other than
+802.15.4.</p>
+<p>The Trace sources are:</p>
+<ul class="simple">
+<li><p>Tx - exposing packet (including 6LoWPAN header), SixLoWPanNetDevice Ptr, interface index.</p></li>
+<li><p>Rx - exposing packet (including 6LoWPAN header), SixLoWPanNetDevice Ptr, interface index.</p></li>
+<li><p>Drop - exposing DropReason, packet (including 6LoWPAN header), SixLoWPanNetDevice Ptr, interface index.</p></li>
+</ul>
+<p>The Tx and Rx traces are called as soon as a packet is received or sent. The Drop trace is
+invoked when a packet (or a fragment) is discarded.</p>
+</div>
+<div class="section" id="mesh-under-routing">
+<h4>Mesh-Under routing<a class="headerlink" href="#mesh-under-routing" title="Permalink to this headline">¶</a></h4>
+<p>The module provides a very simple mesh-under routing <a class="reference internal" href="#shelby" id="id6"><span>[Shelby]</span></a>, implemented as a flooding
+(a mesh-under routing protocol is a routing system implemented below IP).</p>
+<p>This functionality can be activated through the UseMeshUnder attribute and fine-tuned using
+the MeshUnderRadius and MeshUnderJitter attributes.</p>
+<p>Note that flooding in a PAN generates a lot of overhead, which is often not wanted.
+Moreover, when using the mesh-under facility, ALL the packets are sent without acknowledgment
+because, at lower level, they are sent to a broadcast address.</p>
+<p>At node level, each packet is re-broadcasted if its BC0 Sequence Number is not in the cache of the
+recently seen packets. The cache length (by default 10) can be changed through the MeshCacheLength
+attribute.</p>
+</div>
+</div>
+<div class="section" id="scope-and-limitations">
+<h3>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Permalink to this headline">¶</a></h3>
+<p>Future versions of this module will support <span class="target" id="index-9"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc6775.html"><strong>RFC 6775</strong></a>, however no timeframe is guaranteed.</p>
+<p>It would be a good idea to improve the mesh-under flooding by providing the following:</p>
+<ul class="simple">
+<li><p>Adaptive hop-limit calculation,</p></li>
+<li><p>Adaptive forwarding jitter,</p></li>
+<li><p>Use of direct (non mesh) transmission for packets directed to 1-hop neighbors.</p></li>
+</ul>
+<div class="section" id="using-6lowpan-with-ipv4-or-other-l3-protocols">
+<h4>Using 6LoWPAN with IPv4 (or other L3 protocols)<a class="headerlink" href="#using-6lowpan-with-ipv4-or-other-l3-protocols" title="Permalink to this headline">¶</a></h4>
+<p>As the name implies, 6LoWPAN can handle only IPv6 packets. Any other protocol will be discarded.
+Moreover, 6LoWPAN assumes that the network is uniform, as is all the devices connected by the
+same same channel are using 6LoWPAN. Mixed environments are not supported by the standard.
+The reason is simple: 802.15.4 frame doesn’t have a “protocol” field. As a consequence,
+there is no demultiplexing at MAC layer and the protocol carried by L2 frames must be known
+in advance.</p>
+<p>In the <em>ns-3</em> implementation it is possible, but not advisable, to violate this requirement
+if the underlying NetDevice is capable of discriminating different protocols. As an example,
+CsmaNetDevice can carry IPv4 and 6LoWPAN at the same time. However, this configuration has
+not been tested.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<dl class="citation">
+<dt class="label" id="rfc4944"><span class="brackets"><a class="fn-backref" href="#id1">RFC4944</a></span></dt>
+<dd><p><span class="target" id="index-10"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc4944.html"><strong>RFC 4944</strong></a>, “Transmission of IPv6 Packets over IEEE 802.15.4 Networks”</p>
+</dd>
+<dt class="label" id="rfc6282"><span class="brackets"><a class="fn-backref" href="#id2">RFC6282</a></span></dt>
+<dd><p><span class="target" id="index-11"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc6282.html"><strong>RFC 6282</strong></a>, “Compression Format for IPv6 Datagrams over IEEE 802.15.4-Based Networks”</p>
+</dd>
+<dt class="label" id="rfc6775"><span class="brackets"><a class="fn-backref" href="#id3">RFC6775</a></span></dt>
+<dd><p><span class="target" id="index-12"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc6775.html"><strong>RFC 6775</strong></a>, “Neighbor Discovery Optimization for IPv6 over Low-Power Wireless Personal Area Networks (6LoWPANs)”</p>
+</dd>
+<dt class="label" id="iana802"><span class="brackets"><a class="fn-backref" href="#id4">IANA802</a></span></dt>
+<dd><p>IANA, assigned IEEE 802 numbers: <a class="reference external" href="http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xml">http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xml</a></p>
+</dd>
+<dt class="label" id="ethertype"><span class="brackets"><a class="fn-backref" href="#id5">Ethertype</a></span></dt>
+<dd><p>IEEE Ethertype numbers: <a class="reference external" href="http://standards.ieee.org/develop/regauth/ethertype/eth.txt">http://standards.ieee.org/develop/regauth/ethertype/eth.txt</a></p>
+</dd>
+<dt class="label" id="shelby"><span class="brackets"><a class="fn-backref" href="#id6">Shelby</a></span></dt>
+<dd><ol class="upperalpha simple" start="26">
+<li><p>Shelby and C. Bormann, 6LoWPAN: The Wireless Embedded Internet. Wiley, 2011. [Online]. Available: <a class="reference external" href="https://books.google.it/books?id=3Nm7ZCxscMQC">https://books.google.it/books?id=3Nm7ZCxscMQC</a></p></li>
+</ol>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="enabling-sixlowpan">
+<h3>Enabling sixlowpan<a class="headerlink" href="#enabling-sixlowpan" title="Permalink to this headline">¶</a></h3>
+<p>Add <code class="docutils literal notranslate"><span class="pre">sixlowpan</span></code> to the list of modules built with <em>ns-3</em>.</p>
+</div>
+<div class="section" id="helper">
+<h3>Helper<a class="headerlink" href="#helper" title="Permalink to this headline">¶</a></h3>
+<p>The helper is patterned after other device helpers.</p>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>The following example can be found in <code class="docutils literal notranslate"><span class="pre">src/sixlowpan/examples/</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">example-sixlowpan.cc</span></code>:  A simple example showing end-to-end data transfer.</p></li>
+</ul>
+<p>In particular, the example enables a very simplified end-to-end data
+transfer scenario, with a CSMA network forced to carry 6LoWPAN compressed packets.</p>
+</div>
+<div class="section" id="tests">
+<h3>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h3>
+<p>The test provided checks the connection between two UDP clients and the correctness of the received packets.</p>
+</div>
+</div>
+<div class="section" id="validation">
+<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<p>The model has been validated against WireShark, checking whatever the packets are correctly
+interpreted and validated.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">6LoWPAN: Transmission of IPv6 Packets over IEEE 802.15.4 Networks</a><ul>
+<li><a class="reference internal" href="#model-description">Model Description</a><ul>
+<li><a class="reference internal" href="#design">Design</a><ul>
+<li><a class="reference internal" href="#netdevice">NetDevice</a></li>
+<li><a class="reference internal" href="#mesh-under-routing">Mesh-Under routing</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scope-and-limitations">Scope and Limitations</a><ul>
+<li><a class="reference internal" href="#using-6lowpan-with-ipv4-or-other-l3-protocols">Using 6LoWPAN with IPv4 (or other L3 protocols)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#enabling-sixlowpan">Enabling sixlowpan</a></li>
+<li><a class="reference internal" href="#helper">Helper</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#tests">Tests</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#validation">Validation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="spectrum.html"
+                        title="previous chapter">Spectrum Module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tap.html"
+                        title="next chapter">Tap NetDevice</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sixlowpan.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="tap.html" title="Tap NetDevice"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spectrum.html" title="Spectrum Module"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<map id="ns3::Ipv6Address::IsLinkLocal" name="ns3::Ipv6Address::IsLinkLocal">
+<area shape="rect" id="node1" title="If the IPv6 address is a link&#45;local address (fe80::/64)." alt="" coords="1292,536,1471,577"/>
+<area shape="rect" id="node2" href="$classns3_1_1_ipv6_static_routing.html#a9c09d10eb7d7d67c29bdc05bb620c241" title="Add route to host." alt="" coords="1044,31,1212,72"/>
+<area shape="rect" id="node5" href="$classns3_1_1_rip_ng.html#a9d8c7bb0b6622946c347a88dabc06802" title="Add route to network." alt="" coords="1012,122,1244,149"/>
+<area shape="rect" id="node10" href="$classns3_1_1_ipv6_static_routing.html#adc37dbd1518eaadfd0c88161a7bb85ae" title="Add route to network." alt="" coords="1044,275,1212,316"/>
+<area shape="rect" id="node11" href="$classns3_1_1_six_low_pan_net_device.html#a0e1957fbfb793cd011b4b3f89c550b8f" title="Compress the headers according to HC1 compression." alt="" coords="1033,340,1223,381"/>
+<area shape="rect" id="node15" href="$classns3_1_1_six_low_pan_net_device.html#a67bf1501ba018d90c5bdb442371a3722" title="Compress the headers according to IPHC compression." alt="" coords="1033,405,1223,447"/>
+<area shape="rect" id="node17" href="$class_ipv6_l3_protocol_test_case.html#ac052c03e25689da8fed383146b988a7e" title="Implementation to actually run this TestCase." alt="" coords="1040,471,1216,512"/>
+<area shape="rect" id="node18" href="$classns3_1_1_icmpv6_l4_protocol.html#a0a7a989da20971c66f85b210be7559c1" title="Function called when DAD timeout." alt="" coords="1043,536,1213,577"/>
+<area shape="rect" id="node25" href="$classns3_1_1_animation_interface.html#a89512d6e59613518d1b880e81ab6db1b" title="Get IPv6 address." alt="" coords="1039,601,1217,643"/>
+<area shape="rect" id="node29" href="$classns3_1_1_icmpv6_l4_protocol.html#acec910926a1fdbbea699c10d638aa704" title="Receive Neighbor Solicitation method." alt="" coords="1043,667,1213,708"/>
+<area shape="rect" id="node30" href="$classns3_1_1_rip_ng.html#adb06ee7b823c0d7ae5b45b637c1ffd19" title="Handle RIPng requests." alt="" coords="1025,173,1231,199"/>
+<area shape="rect" id="node33" href="$classns3_1_1_rip_ng.html#ade057ef030dc8cd6479949e35315ed7b" title="Handle RIPng responses." alt="" coords="1020,223,1236,250"/>
+<area shape="rect" id="node34" href="$classns3_1_1_ipv6_l3_protocol.html#ac956e0aaed5e961b6c25210c2b696da6" title="Forward a packet." alt="" coords="1053,732,1203,773"/>
+<area shape="rect" id="node40" href="$classns3_1_1_ipv6_interface_address.html#aa60f5cb8d0b03efd98b812ec8fa36a2f" title="Checks if the address is in the same subnet." alt="" coords="1033,797,1223,839"/>
+<area shape="rect" id="node44" href="$classns3_1_1_icmpv6_l4_protocol.html#aa4d97bb59a89c2d5b41c76ebe9a54f14" title="Lookup in the ND cache for the IPv6 address (similar as ARP protocol)." alt="" coords="1043,863,1213,904"/>
+<area shape="rect" id="node45" href="$classns3_1_1_rip_ng.html#ad85da69a6006cd5089e1a69e7a6be13b" title="Route an input packet (to be forwarded or locally delivered)" alt="" coords="1043,929,1213,955"/>
+<area shape="rect" id="node46" href="$classns3_1_1_ipv6_l3_protocol.html#ac281dd6c5aff55330904e7a298c1881b" title="Higher&#45;level layers call this method to send a packet down the stack to the MAC and PHY layers." alt="" coords="1053,980,1203,1021"/>
+<area shape="rect" id="node47" href="$classns3_1_1_ipv6_l3_protocol.html#a77acb50e395f36951381977368ebc5cb" title="Choose the source address to use with destination address." alt="" coords="1035,1045,1221,1087"/>
+<area shape="rect" id="node3" href="$classns3_1_1_ipv6_static_routing.html#a9750930029ffe2eaafda77ba77918472" title="Notify when specified interface goes UP." alt="" coords="767,5,935,47"/>
+<area shape="rect" id="node4" href="$classns3_1_1_ipv6_static_routing.html#a05569b3f3a6042a7e12a50fe88ee11e7" title="Typically, invoked directly or indirectly from ns3::Ipv6::SetRoutingProtocol." alt="" coords="499,5,667,47"/>
+<area shape="rect" id="node6" href="$classns3_1_1_rip_ng.html#aec1f0a59262b185e302f69395a615a87" title="Add a default route to the router through the nextHop located on interface." alt="" coords="739,71,964,98"/>
+<area shape="rect" id="node7" href="$classns3_1_1_rip_ng.html#a9d6ffbffc76b029e5dfc9f394549d670" title="Notify when specified interface add an address." alt="" coords="743,122,960,149"/>
+<area shape="rect" id="node8" href="$classns3_1_1_rip_ng.html#a588e191ae91316e498a8e5c84a9c77fb" title="Notify when specified interface goes UP." alt="" coords="475,173,691,199"/>
+<area shape="rect" id="node9" href="$classns3_1_1_rip_ng.html#acd8e0a2b2453a28ecd4154729e45d324" title="Typically, invoked directly or indirectly from ns3::Ipv6::SetRoutingProtocol." alt="" coords="249,173,398,199"/>
+<area shape="rect" id="node12" href="$classns3_1_1_six_low_pan_net_device.html#a0cd8b4fc52f256bd7743310434ac4680" title=" " alt="" coords="756,340,947,381"/>
+<area shape="rect" id="node13" href="$classns3_1_1_six_low_pan_net_device.html#a6566ae05fbc295d8cd22166b6b2c28ea" title=" " alt="" coords="487,308,678,349"/>
+<area shape="rect" id="node14" href="$classns3_1_1_six_low_pan_net_device.html#aec79675091efa676370a4f9e6f4127e3" title=" " alt="" coords="487,373,678,415"/>
+<area shape="rect" id="node16" href="$classns3_1_1_six_low_pan_net_device.html#a41d34fd1612e7e6911614fadfef6ab67" title="Compress the headers according to NHC compression." alt="" coords="756,405,947,447"/>
+<area shape="rect" id="node19" href="$classns3_1_1_ipv6_interface.html#a8faa5a72b30720eb01f9fc1d1113ad19" title="Add an IPv6 address." alt="" coords="782,536,921,577"/>
+<area shape="rect" id="node20" href="$classns3_1_1_ipv6_l3_protocol.html#a33135677dcaa195be223eaf4f38a6efe" title="Add an address on interface." alt="" coords="508,471,657,512"/>
+<area shape="rect" id="node22" href="$classns3_1_1_ipv6_interface.html#a394066472c703fcf39d17f1bfcc9191e" title="Initialize interface." alt="" coords="513,536,652,577"/>
+<area shape="rect" id="node21" href="$classns3_1_1_ipv6_l3_protocol.html#a1806de87b35929a2181c2985e5df1ec0" title="Add an autoconfigured address with RA information." alt="" coords="220,471,427,512"/>
+<area shape="rect" id="node23" href="$classns3_1_1_ipv6_interface.html#a9db98f98cc682a2395fe582bfb511880" title="Enable this interface." alt="" coords="254,536,393,577"/>
+<area shape="rect" id="node24" href="$classns3_1_1_ipv6_l3_protocol.html#a834eba3100efc8f71e5292bbfdcde6e6" title="Set an interface up." alt="" coords="14,536,163,577"/>
+<area shape="rect" id="node26" href="$classns3_1_1_animation_interface.html#a458296bfceb6bd8b53b4c9bf38b5fdc7" title="Write link properties function." alt="" coords="762,601,941,643"/>
+<area shape="rect" id="node27" href="$classns3_1_1_animation_interface.html#aed28bace6b97494e11179766449bb442" title="Start animation function." alt="" coords="493,601,672,643"/>
+<area shape="rect" id="node28" href="$classns3_1_1_animation_interface.html#a88af7da6eb605ec7e9d8cb3fcc8a6466" title="Constructor." alt="" coords="234,601,413,643"/>
+<area shape="rect" id="node31" href="$classns3_1_1_rip_ng.html#ae8891520b5ae87abed2e2a15d50ba4d8" title="Receive RIPng packets." alt="" coords="775,223,927,250"/>
+<area shape="rect" id="node32" href="$classns3_1_1_rip_ng.html#a81a7056d4a1d1afc266181406f5dbf64" title="Start protocol operation." alt="" coords="495,223,670,250"/>
+<area shape="rect" id="node35" href="$classns3_1_1_ipv6_l3_protocol.html#a8a95d576e8aee9a571db93bf686d850a" title="Receive method when a packet arrive in the stack." alt="" coords="777,732,926,773"/>
+<area shape="rect" id="node36" href="$classns3_1_1_ipv6_l3_protocol.html#a56047c2ee7db15185af07538c609cbb5" title="Add IPv6 interface for a device." alt="" coords="508,669,657,711"/>
+<area shape="rect" id="node37" href="$classns3_1_1_ipv6_l3_protocol.html#a69a1ef7b49dd3aa80c6807f467720005" title="Setup loopback interface." alt="" coords="508,735,657,776"/>
+<area shape="rect" id="node38" href="$classns3_1_1_ipv6_l3_protocol.html#a53796a2747cb5edcd1c762f44043b061" title="Set node associated with this stack." alt="" coords="249,735,398,776"/>
+<area shape="rect" id="node39" href="$classns3_1_1_ipv6_l3_protocol.html#ae07ff89952d068d18fb5650ffd1f5378" title="Notify other components connected to the node that a new stack member is now connected." alt="" coords="5,735,172,776"/>
+<area shape="rect" id="node41" href="$classns3_1_1_ping6.html#a90c69934f60e7260d72f6c9fa1e6b341" title="Send a packet." alt="" coords="787,805,916,831"/>
+<area shape="rect" id="node42" href="$classns3_1_1_ping6.html#af89c8bf41945f6182411ee068708bc3d" title="Schedule sending a packet." alt="" coords="476,805,689,831"/>
+<area shape="rect" id="node43" href="$classns3_1_1_ping6.html#aa7b184cb61e3c3cb32aefa4d0407f521" title="Start the application." alt="" coords="223,805,424,831"/>
+</map>

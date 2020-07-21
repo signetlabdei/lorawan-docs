@@ -1,0 +1,52 @@
+<map id="ns3::QosTxop::MissedAck" name="ns3::QosTxop::MissedAck">
+<area shape="rect" id="node1" title="Event handler when an Ack is missed." alt="" coords="5,1265,193,1291"/>
+<area shape="rect" id="node2" href="$classns3_1_1_txop.html#ae211c699c905b2186281923353ba0a26" title="Generate a new backoff now." alt="" coords="269,101,472,127"/>
+<area shape="rect" id="node3" href="$classns3_1_1_txop.html#a3b733c5a31045a10b5074f4ff8026a81" title=" " alt="" coords="597,13,733,39"/>
+<area shape="rect" id="node9" href="$classns3_1_1_wifi_mac_header.html#aa1c4acbda4ace9f7a920c97d71bdd097" title="Return the address in the Address 1 field." alt="" coords="869,232,1023,273"/>
+<area shape="rect" id="node10" href="$classns3_1_1_qos_txop.html#a86eaae42fd217f64f98b6e27f5d6b56b" title="Return whether A&#45;MPDU is used to transmit data to a peer station." alt="" coords="261,1854,480,1881"/>
+<area shape="rect" id="node11" href="$classns3_1_1_qos_txop.html#a98e743abd09cf221033357e70aa24b5a" title=" " alt="" coords="831,1800,1061,1841"/>
+<area shape="rect" id="node12" href="$classns3_1_1_wifi_action_header.html#a6770270aecf8921377529d1c16cc10f2" title="Return the category value." alt="" coords="581,663,748,704"/>
+<area shape="rect" id="node13" href="$classns3_1_1_wifi_mac_header.html#a07391fd5b12f7a90fe55325fcccc8e3a" title="Return the Traffic ID of a QoS header." alt="" coords="869,831,1023,872"/>
+<area shape="rect" id="node14" href="$classns3_1_1_wifi_mac_header.html#a368b97ef91b953af76794112fd3681c2" title="Return true if the Type is DATA and Subtype is one of the possible values for QoS Data." alt="" coords="1111,656,1264,697"/>
+<area shape="rect" id="node15" href="$group__wifi.html#ga92cc18e2c5aa6bed3728860bbad76ff8" title="Extraction operator for TypeId." alt="" coords="323,1158,418,1185"/>
+<area shape="rect" id="node23" href="$classns3_1_1_wifi_mac_header.html#a940491cedf184f20c615215d7b15746a" title="Return true if the header is an Action header." alt="" coords="588,1573,741,1615"/>
+<area shape="rect" id="node30" href="$classns3_1_1_callback.html#a42eb007ca42c35b96daa497d6d42d5f2" title="Check for null implementation." alt="" coords="293,1905,448,1931"/>
+<area shape="rect" id="node31" href="$classns3_1_1_txop.html#a71069daa23948ecf392c3bcc4a1f1bea" title="Check if Data should be re&#45;transmitted if Ack was missed." alt="" coords="241,487,500,514"/>
+<area shape="rect" id="node36" href="$classns3_1_1_wifi_remote_station_manager.html#a72e9ae49b100642768fb7fcfdb573fc9" title="Should be invoked whenever the AckTimeout associated to a transmission attempt expires." alt="" coords="548,415,781,456"/>
+<area shape="rect" id="node38" href="$classns3_1_1_wifi_remote_station_manager.html#a621a2da15b2214508d25112bac59e746" title="Should be invoked after calling ReportDataFailed if NeedRetransmission returns false." alt="" coords="548,545,781,587"/>
+<area shape="rect" id="node41" href="$classns3_1_1_qos_txop.html#a9f7918200107e3939660ccb7fdef7b93" title="Reset BA agreement after BA negotiation failed." alt="" coords="285,1955,457,1982"/>
+<area shape="rect" id="node42" href="$classns3_1_1_txop.html#ab9b1e87f2012e04279b960eb209a94af" title="Update the value of the CW variable to take into account a transmission success or a transmission abo..." alt="" coords="295,2006,446,2033"/>
+<area shape="rect" id="node43" href="$classns3_1_1_qos_txop.html#a3d5d94d486873862978c1fde6e295422" title="Restart access request if needed." alt="" coords="265,1632,476,1673"/>
+<area shape="rect" id="node48" href="$classns3_1_1_simulator.html#a671882c894a08af4a5e91181bf1eec13" title="Schedule an event to expire after delay." alt="" coords="855,1698,1037,1725"/>
+<area shape="rect" id="node49" href="$classns3_1_1_wifi_mac_header.html#a885db0be16b199a3e40388c0a70f2f99" title="Set the Retry bit in the Frame Control field." alt="" coords="294,2057,447,2099"/>
+<area shape="rect" id="node50" href="$classns3_1_1_txop.html#a2453ae13e675283fcccd6375b19a4afb" title="Update the value of the CW variable to take into account a transmission failure." alt="" coords="271,2123,470,2150"/>
+<area shape="rect" id="node4" href="$classns3_1_1_uniform_random_variable.html#ab7c7dedc88cb97e74418df2edc28a787" title="Get the next random value, as an unsigned integer in the specified range ." alt="" coords="557,64,772,105"/>
+<area shape="rect" id="node8" href="$classns3_1_1_txop.html#ad63eb9d04c01d5a3b7568cbb182fdf1d" title=" " alt="" coords="563,130,766,157"/>
+<area shape="rect" id="node5" href="$classns3_1_1_uniform_random_variable.html#a94ee6d8ac3da40b14ac7cc64e75c55df" title="Get the next random value as a double drawn from the distribution." alt="" coords="839,5,1053,47"/>
+<area shape="rect" id="node6" href="$namespacens3.html#a548291fa9e4e7d6a57814dfcbbebce9b" title=" " alt="" coords="905,71,987,98"/>
+<area shape="rect" id="node7" href="$namespacens3.html#a66840605409c3caeff0d2a728b68dc6d" title=" " alt="" coords="907,122,985,149"/>
+<area shape="rect" id="node16" href="$classns3_1_1_packet.html#afb38be706cfc761bc1c0591f595fc1b7" title="performs a COW copy of the packet." alt="" coords="596,1209,733,1235"/>
+<area shape="rect" id="node17" href="$classns3_1_1_wifi_action_header.html#a9ec1872abca36121927fb83c837a4966" title="Return the action value." alt="" coords="581,1260,748,1301"/>
+<area shape="rect" id="node18" href="$classns3_1_1_mgt_add_ba_request_header.html#ac59327262813ff62ed25ff6cc61b35b0" title="Return the Traffic ID (TID)." alt="" coords="555,1325,775,1367"/>
+<area shape="rect" id="node19" href="$classns3_1_1_mgt_add_ba_response_header.html#ac6a22733d007a7f6d46b7d247d72999a" title="Return the Traffic ID (TID)." alt="" coords="549,728,780,769"/>
+<area shape="rect" id="node20" href="$classns3_1_1_mgt_del_ba_header.html#a1901661e80c91f9c8bfdea89ff56a800" title="Return the Traffic ID (TID)." alt="" coords="583,793,747,835"/>
+<area shape="rect" id="node21" href="$classns3_1_1_ctrl_b_ack_request_header.html#a884fbe9f6ba028fb3dde88fe31ba6bab" title="Return the Traffic ID (TID)." alt="" coords="560,859,769,900"/>
+<area shape="rect" id="node22" href="$classns3_1_1_ctrl_b_ack_response_header.html#aefa3bb6b1b90f1b8db3fd3770b012e07" title="Return the Traffic ID (TID)." alt="" coords="555,976,774,1017"/>
+<area shape="rect" id="node25" href="$classns3_1_1_wifi_mac_header.html#a16f7fffa3791bb30ab760a98ec54afba" title="Return true if the header is a BlockAck header." alt="" coords="588,1508,741,1549"/>
+<area shape="rect" id="node26" href="$classns3_1_1_wifi_mac_header.html#a97830b03ca05944b92bff4defed50716" title="Return true if the header is a BlockAckRequest header." alt="" coords="588,1443,741,1484"/>
+<area shape="rect" id="node27" href="$classns3_1_1_wifi_mac_header.html#a9e27e439b0ef655ac9598f45218364bd" title="Return true if the Type is Management." alt="" coords="588,1041,741,1083"/>
+<area shape="rect" id="node28" href="$classns3_1_1_packet.html#acc152757db7d44974640b089335b7003" title="Deserialize but does not remove the header from the internal buffer." alt="" coords="573,1107,756,1134"/>
+<area shape="rect" id="node29" href="$classns3_1_1_packet.html#a0961eccf975d75f902d40956c93ba63e" title="Deserialize and remove the header from the internal buffer." alt="" coords="562,1158,767,1185"/>
+<area shape="rect" id="node24" href="$classns3_1_1_wifi_mac_header.html#ac602baa163798e5da4945338dd5ef9b5" title="Return the type (enum WifiMacType)" alt="" coords="869,1508,1023,1549"/>
+<area shape="rect" id="node32" href="$classns3_1_1_wifi_remote_station_manager.html#ac24b2a5ed13948487c8e11392e96432d" title=" " alt="" coords="548,480,781,521"/>
+<area shape="rect" id="node33" href="$classns3_1_1_wifi_mac_header.html#a5330ccda676bc7348bc633acc67df8fc" title="Return the size of the WifiMacHeader in octets." alt="" coords="869,480,1023,521"/>
+<area shape="rect" id="node34" href="$classns3_1_1_wifi_remote_station_manager.html#a230ec2422481af84c0e2a8dcc1ccb630" title="Return the station associated with the given address." alt="" coords="829,415,1063,456"/>
+<area shape="rect" id="node35" href="$group__wifi.html#ga4e36efcff6dd83eaee42e1af0de43d48" title=" " alt="" coords="853,597,1039,623"/>
+<area shape="rect" id="node37" href="$classns3_1_1_wifi_remote_station_manager.html#a38a4401b6232cb547f5a85337e02b12c" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="829,297,1063,339"/>
+<area shape="rect" id="node39" href="$classns3_1_1_wifi_remote_station_manager.html#a32e2a7a9f651b5224b5c037c14598cf7" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="829,713,1063,755"/>
+<area shape="rect" id="node40" href="$classns3_1_1_wifi_remote_station_info.html#ade8b3dfb4424924c828c7aad0d56a849" title="Updates average frame error rate when final data or RTS has failed." alt="" coords="845,648,1047,689"/>
+<area shape="rect" id="node44" href="$classns3_1_1_txop.html#a059dde2be359c89c2b9b38cd191f7eee" title=" " alt="" coords="837,1643,1055,1670"/>
+<area shape="rect" id="node45" href="$classns3_1_1_wifi_remote_station_manager.html#acdbe45062ca4d281c3043e3860b20f43" title=" " alt="" coords="548,349,781,391"/>
+<area shape="rect" id="node46" href="$classns3_1_1_qos_txop.html#ab3593f49a4393ec17d161f67343d7377" title="Peek the next frame to transmit to the given receiver and of the given TID from the block ack manager..." alt="" coords="553,1757,776,1783"/>
+<area shape="rect" id="node47" href="$classns3_1_1_channel_access_manager.html#abb772d23a9ee81e9b6ce46b3aefc67a8" title=" " alt="" coords="561,1691,769,1732"/>
+</map>

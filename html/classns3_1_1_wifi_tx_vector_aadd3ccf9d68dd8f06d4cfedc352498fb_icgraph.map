@@ -1,0 +1,52 @@
+<map id="ns3::WifiTxVector::GetMode" name="ns3::WifiTxVector::GetMode">
+<area shape="rect" id="node1" title=" " alt="" coords="1133,1139,1279,1181"/>
+<area shape="rect" id="node2" href="$classns3_1_1_wifi_ppdu.html#adf6aa0e6ec585d30f1f851b2013a2397" title="Create a single user PPDU storing a PSDU." alt="" coords="863,5,1041,32"/>
+<area shape="rect" id="node3" href="$classns3_1_1_ideal_wifi_manager.html#a07b8198f3c1f258c46af76a3ffe746a7" title="Adds a pair of WifiTxVector and the minimum SNR for that given vector to the list." alt="" coords="868,57,1036,98"/>
+<area shape="rect" id="node5" href="$classns3_1_1_interference_helper.html#a0daf5ceadae9e0f9f204e306ac01c67d" title="Calculate the success rate of the payload chunk given the SINR, duration, and Wi&#45;Fi mode." alt="" coords="819,122,1085,163"/>
+<area shape="rect" id="node7" href="$classns3_1_1_error_rate_model.html#ac22816ff3d265aee0675cfe445d0517a" title=" " alt="" coords="875,487,1029,529"/>
+<area shape="rect" id="node8" href="$classns3_1_1_minstrel_ht_wifi_manager.html#abc2436c9c8dabb7c78907f478e1bb8c7" title=" " alt="" coords="850,553,1054,594"/>
+<area shape="rect" id="node9" href="$classns3_1_1_mac_low.html#a9babdfa2bf38577f733c4723e6114c16" title="Forward a PSDU down to WifiPhy for transmission." alt="" coords="851,720,1053,747"/>
+<area shape="rect" id="node11" href="$classns3_1_1_mac_low.html#a2fffa82ad11ebe0e113232813a816eff" title=" " alt="" coords="295,557,479,584"/>
+<area shape="rect" id="node13" href="$classns3_1_1_mac_low.html#af6e2acc771d188c0959871f142912296" title="Invoked after an A&#45;MPDU has been received." alt="" coords="284,837,491,878"/>
+<area shape="rect" id="node14" href="$classns3_1_1_mac_low.html#aebcd4c3e8d64fb53af1f8a862c766e33" title="Send CTS after receiving RTS." alt="" coords="545,532,764,559"/>
+<area shape="rect" id="node16" href="$classns3_1_1_mac_low.html#aa477261c5209c13c66af9e2ae78b07e5" title=" " alt="" coords="5,837,236,864"/>
+<area shape="rect" id="node18" href="$classns3_1_1_mac_low.html#ab177d7c7ba53c56f91612114412914bf" title="Send Data packet, which can be Data&#45;Ack or RTS&#45;CTS&#45;Data&#45;Ack transaction." alt="" coords="545,903,765,929"/>
+<area shape="rect" id="node20" href="$classns3_1_1_mac_low.html#a7bd44324cf1996798e5346572f873bcc" title="Return the time required to transmit the Ack to the specified address given the TXVECTOR of the Data ..." alt="" coords="843,1055,1061,1081"/>
+<area shape="rect" id="node21" href="$classns3_1_1_nist_error_rate_model.html#a0783e188a289fe0623b24a5d4ca32739" title="A pure virtual method that must be implemented in the subclass." alt="" coords="862,1106,1042,1147"/>
+<area shape="rect" id="node23" href="$classns3_1_1_yans_error_rate_model.html#ad4a7308160ef2869c91e779fbdb59c1b" title="A pure virtual method that must be implemented in the subclass." alt="" coords="861,1171,1043,1213"/>
+<area shape="rect" id="node24" href="$classns3_1_1_mac_low.html#a1080472066215e34cd52242ec6cb0e2a" title="Return the time required to transmit the CTS to the specified address given the TXVECTOR of the RTS (..." alt="" coords="845,1237,1059,1264"/>
+<area shape="rect" id="node25" href="$classns3_1_1_wave_mac_low.html#a1bb1f43357a8c9513961eca42e104de4" title="Return a TXVECTOR for the DATA frame given the destination." alt="" coords="849,1289,1055,1330"/>
+<area shape="rect" id="node26" href="$classns3_1_1_mpdu_aggregator.html#abe47e62b7e26e62857688bf2a1bf537b" title="Attempt to aggregate other MPDUs to the given MPDU, while meeting the following constraints:" alt="" coords="871,1354,1033,1395"/>
+<area shape="rect" id="node27" href="$classns3_1_1_msdu_aggregator.html#ad210c7c793b3d86da1b1f63c799c01c6" title="Dequeue MSDUs to be transmitted to a given station and belonging to a given TID from the correspondin..." alt="" coords="872,1419,1032,1461"/>
+<area shape="rect" id="node28" href="$classns3_1_1_wifi_phy.html#a0854b8251b610b505fec7790bfce07ac" title=" " alt="" coords="859,1485,1045,1526"/>
+<area shape="rect" id="node29" href="$classns3_1_1_wifi_phy.html#aa3d6056d67327dc5a757e5e49f68ab37" title=" " alt="" coords="850,305,1054,346"/>
+<area shape="rect" id="node31" href="$classns3_1_1_wifi_phy.html#aa7bcb29f6ad8b8280792fc83a25f8eac" title="Start receiving the PHY header of a PPDU (i.e." alt="" coords="558,339,751,381"/>
+<area shape="rect" id="node32" href="$classns3_1_1_wifi_phy.html#a97b96ccd13b360572886ba03802b3652" title=" " alt="" coords="832,253,1072,280"/>
+<area shape="rect" id="node33" href="$classns3_1_1_wifi_phy.html#a9e4f1e101f3b4fdfdad3f4c470a16a6f" title=" " alt="" coords="843,187,1061,229"/>
+<area shape="rect" id="node34" href="$classns3_1_1_wifi_phy_helper.html#af1baefd0a50daeff72c8075f2eef7eda" title="Get the Radiotap header." alt="" coords="873,1550,1031,1591"/>
+<area shape="rect" id="node35" href="$classns3_1_1_mac_low.html#ae23ccb3c313c640daf5bd4c857eb0d7a" title="Return the time required to transmit the response frames (Ack or BAR+BA following the policy configur..." alt="" coords="852,771,1052,813"/>
+<area shape="rect" id="node36" href="$classns3_1_1_ideal_wifi_manager.html#a54dbe87febb24476928b3ad7806bb00b" title="Return the minimum SNR needed to successfully transmit data with this WifiTxVector at the specified B..." alt="" coords="868,1615,1036,1657"/>
+<area shape="rect" id="node37" href="$classns3_1_1_mac_low.html#a2dc2b39866b901f5baad7f45ec8484a9" title="Check whether an MPDU of the given size, destined to the given receiver and belonging to the given TI..." alt="" coords="855,1681,1049,1722"/>
+<area shape="rect" id="node38" href="$classns3_1_1_wifi_remote_station_manager.html#aa3179e61b1a06ff2d0cb0bdbc518e5a2" title="Return if we need to do CTS&#45;to&#45;self before sending a DATA." alt="" coords="835,1746,1069,1787"/>
+<area shape="rect" id="node39" href="$classns3_1_1_wifi_remote_station_manager.html#acdbe45062ca4d281c3043e3860b20f43" title=" " alt="" coords="835,1811,1069,1853"/>
+<area shape="rect" id="node40" href="$namespacens3.html#a3a8fb206e33137628bb0105dac8bbf33" title="Serialize WifiTxVector to the given ostream." alt="" coords="887,1877,1017,1904"/>
+<area shape="rect" id="node41" href="$classns3_1_1_mac_low.html#ae7e8072b7d1f8b775000f6f07ee5a3c1" title="Start a Data timer by scheduling appropriate Ack timeout." alt="" coords="856,837,1048,878"/>
+<area shape="rect" id="node42" href="$classns3_1_1_wifi_phy.html#a613c3092a7f6f1dc2d815a4d2de989fa" title="Start receiving the PSDU (i.e." alt="" coords="855,422,1049,463"/>
+<area shape="rect" id="node43" href="$classns3_1_1_spectrum_wifi_phy.html#a2506b7651bed80b5db10843389bab297" title=" " alt="" coords="869,1929,1035,1970"/>
+<area shape="rect" id="node44" href="$class_bug2843_test_case.html#a0c30bf88abcc8aa6caec59bb3c5b0200" title="Stores the distinct {starting frequency, channelWidth, Number of subbands in SpectrumModel,..." alt="" coords="837,1994,1067,2035"/>
+<area shape="rect" id="node45" href="$classns3_1_1_wifi_phy_state_helper.html#a9d169bd65489186261e4272616449a4d" title="Switch from RX after the reception was successful." alt="" coords="862,2059,1042,2101"/>
+<area shape="rect" id="node46" href="$classns3_1_1_wifi_phy_state_helper.html#a52483ec883b8a19de148abab5c8ecb62" title="Switch state to TX for the given duration." alt="" coords="862,2125,1042,2166"/>
+<area shape="rect" id="node47" href="$class_power_rate_adaptation_test.html#a3c3954526cb787125fea4c50cfe76174" title="Test aparf function." alt="" coords="857,2190,1047,2231"/>
+<area shape="rect" id="node48" href="$class_power_rate_adaptation_test.html#a06db52c180644f3b961de054c41f2115" title="Test parf function." alt="" coords="857,2255,1047,2297"/>
+<area shape="rect" id="node49" href="$class_power_rate_adaptation_test.html#af0e5f044ed9bdf20dc203926ff8677b4" title="Test rrpaa function." alt="" coords="857,2321,1047,2362"/>
+<area shape="rect" id="node50" href="$class_issue169_test_case.html#a9c462ba06cbd92c14545ba4998970946" title="Callback that indicates a PSDU is being transmitted." alt="" coords="843,2387,1061,2413"/>
+<area shape="rect" id="node4" href="$classns3_1_1_ideal_wifi_manager.html#a678947f49366ca1734b6299b667845da" title="Initialize() implementation." alt="" coords="571,57,739,98"/>
+<area shape="rect" id="node6" href="$classns3_1_1_interference_helper.html#a0e2c7a0ee758d2f808aaa5bcfb71ace3" title="Calculate the error rate of the given PHY payload only in the provided time window (thus enabling per..." alt="" coords="567,185,742,226"/>
+<area shape="rect" id="node10" href="$classns3_1_1_mac_low.html#a8db1635644b89072dfcb5fbc2330031b" title="Send Ack after receiving Data." alt="" coords="539,583,771,609"/>
+<area shape="rect" id="node12" href="$classns3_1_1_mac_low.html#a85c374be43ba3bd52fd1ad6efdfef6c6" title="This method creates BlockAck frame with header equals to blockAck and start its transmission." alt="" coords="551,837,758,878"/>
+<area shape="rect" id="node15" href="$classns3_1_1_mac_low.html#a209c346576d367ef16cfa1cfdefff909" title="Send CTS for a CTS&#45;to&#45;self mechanism." alt="" coords="284,772,491,799"/>
+<area shape="rect" id="node17" href="$classns3_1_1_mac_low.html#a68c30ffb5ff64c0fa1defcfe6d751907" title="Send Data after receiving CTS." alt="" coords="540,735,769,761"/>
+<area shape="rect" id="node19" href="$classns3_1_1_mac_low.html#ac472702b866a51ea2dfb7637381897aa" title="Send RTS to begin RTS&#45;CTS&#45;Data&#45;Ack transaction." alt="" coords="539,684,770,711"/>
+<area shape="rect" id="node22" href="$class_wifi_error_rate_models_test_case_nist.html#ad5b8a5a3be038338f6bcbe0d52331c90" title="Implementation to actually run this TestCase." alt="" coords="547,1106,762,1147"/>
+<area shape="rect" id="node30" href="$classns3_1_1_interference_helper.html#ad038fa1a9bf9b46566e93a1e5e2257ad" title="Calculate the error rate of the non&#45;HT PHY header." alt="" coords="543,250,767,291"/>
+</map>

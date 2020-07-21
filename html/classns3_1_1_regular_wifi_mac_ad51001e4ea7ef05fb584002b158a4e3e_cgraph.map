@@ -1,0 +1,36 @@
+<map id="ns3::RegularWifiMac::GetHtCapabilities" name="ns3::RegularWifiMac::GetHtCapabilities">
+<area shape="rect" id="node1" title="Return the HT capabilities of the device." alt="" coords="5,859,161,901"/>
+<area shape="rect" id="node2" href="$classns3_1_1_wifi_phy.html#af55a96fc67e724abd99aeaeab826187f" title=" " alt="" coords="239,127,425,169"/>
+<area shape="rect" id="node3" href="$classns3_1_1_wifi_mode.html#ad90f36e733ceaf8c5771cfbda437e14f" title=" " alt="" coords="229,193,435,220"/>
+<area shape="rect" id="node11" href="$classns3_1_1_wifi_mac.html#a0206221199cff854a4a1433688c4be8b" title=" " alt="" coords="512,448,752,475"/>
+<area shape="rect" id="node14" href="$classns3_1_1_regular_wifi_mac.html#a9b3ffa51f38fbdb175b811dddb83b90e" title="Return whether the device supports HT." alt="" coords="254,462,410,503"/>
+<area shape="rect" id="node15" href="$classns3_1_1_wifi_phy.html#a70e3518202fa778f2a7c07be8e7c8d5f" title=" " alt="" coords="219,527,445,569"/>
+<area shape="rect" id="node16" href="$classns3_1_1_wifi_phy.html#ac5e4ea4c408896451a8ad77e77a88231" title="The WifiPhy::GetMcs() method is used (e.g., by a WifiRemoteStationManager) to determine the set of tr..." alt="" coords="253,593,411,620"/>
+<area shape="rect" id="node17" href="$classns3_1_1_wifi_mode.html#a4ba00941b5dbc4903ffecc1a0c841c6c" title=" " alt="" coords="527,320,737,347"/>
+<area shape="rect" id="node18" href="$classns3_1_1_wifi_mode.html#a67e1664cac501221b63a2be307184cc9" title=" " alt="" coords="523,371,741,413"/>
+<area shape="rect" id="node19" href="$classns3_1_1_wifi_phy.html#a6564e0e1e90982b5bb78898449f093e7" title="The WifiPhy::GetNMcs() method is used (e.g., by a WifiRemoteStationManager) to determine the set of t..." alt="" coords="247,644,417,671"/>
+<area shape="rect" id="node20" href="$classns3_1_1_ht_capabilities.html#adf0794c6d9e20322d283c3949b00f051" title="Set the Greenfield field." alt="" coords="259,695,405,737"/>
+<area shape="rect" id="node21" href="$classns3_1_1_ht_capabilities.html#a8a2c3c30a7339bbd1f60eb00219ae62b" title="Set the HT supported field." alt="" coords="259,761,405,802"/>
+<area shape="rect" id="node22" href="$classns3_1_1_ht_capabilities.html#a045058b2e13cc526ff123fcda1ad8aef" title="Set the LDPC field." alt="" coords="259,826,405,867"/>
+<area shape="rect" id="node23" href="$classns3_1_1_ht_capabilities.html#a17c1a466815f53b89c1c595ee765c99f" title="Set the LSIG protection support." alt="" coords="235,891,429,933"/>
+<area shape="rect" id="node24" href="$classns3_1_1_ht_capabilities.html#aecbe859f067fede7a68196eb5bdfc049" title="Set the maximum AMPDU length." alt="" coords="247,957,417,998"/>
+<area shape="rect" id="node25" href="$classns3_1_1_ht_capabilities.html#a1b38bfa2272f415f3555f26be3eab92c" title="Set the maximum AMSDU length." alt="" coords="248,1022,416,1063"/>
+<area shape="rect" id="node26" href="$classns3_1_1_ht_capabilities.html#a11697b0c37d671c340b4531f25635f0e" title="Set the receive highest supported data rate." alt="" coords="209,1087,455,1129"/>
+<area shape="rect" id="node27" href="$classns3_1_1_ht_capabilities.html#aa6eca50b3ba924a5eeacd735d588193b" title="Set the receive MCS bitmask." alt="" coords="258,1153,406,1194"/>
+<area shape="rect" id="node28" href="$classns3_1_1_ht_capabilities.html#a667975942fe2a7ca4167aad98c87e9ed" title="Set the short guard interval 20 field." alt="" coords="237,1218,427,1259"/>
+<area shape="rect" id="node29" href="$classns3_1_1_ht_capabilities.html#af0826ec0ab0c62b63bd23fea81d78d5b" title="Set the short guard interval 40 field." alt="" coords="237,1283,427,1325"/>
+<area shape="rect" id="node30" href="$classns3_1_1_ht_capabilities.html#aadb51b3630655a0613b3bdc7172811f1" title="Set the supported channel width field." alt="" coords="228,1349,436,1390"/>
+<area shape="rect" id="node31" href="$classns3_1_1_ht_capabilities.html#a25f9ee5075a05d8968a6b38ad2324d6c" title="Set the transmit maximum N spatial streams." alt="" coords="230,1414,434,1455"/>
+<area shape="rect" id="node32" href="$classns3_1_1_ht_capabilities.html#a7f31b7b1525ad68c84c253ff80926552" title="Set the transmit MCS set defined." alt="" coords="249,1479,415,1521"/>
+<area shape="rect" id="node33" href="$classns3_1_1_ht_capabilities.html#a086b20425b3b14495dc9e9d86b068e2a" title="Set the transmit / receive MCS set unequal." alt="" coords="239,1545,425,1586"/>
+<area shape="rect" id="node34" href="$classns3_1_1_ht_capabilities.html#a7883d8a52e3aeebea94bdaf9217aecd7" title="Set the transmit unequal modulation." alt="" coords="235,1610,429,1651"/>
+<area shape="rect" id="node4" href="$classns3_1_1_wifi_mode_factory.html#a3086868810ff4347e31c63027726f544" title="Return a WifiModeItem at the given UID index." alt="" coords="1040,172,1233,199"/>
+<area shape="rect" id="node5" href="$classns3_1_1_wifi_mode.html#abbbea987249a16c776803ba6e2ca9973" title=" " alt="" coords="527,67,737,93"/>
+<area shape="rect" id="node6" href="$classns3_1_1_wifi_mode_factory.html#a9c6f695d733355dee8d74bd1709868fc" title="Return a WifiModeFactory." alt="" coords="819,223,982,265"/>
+<area shape="rect" id="node8" href="$classns3_1_1_wifi_mode.html#a1437871ae722c85d980a8af3ba522d39" title=" " alt="" coords="503,117,761,144"/>
+<area shape="rect" id="node9" href="$classns3_1_1_wifi_mode.html#ae92b3cca34abdd76211fe9fbf19a6c09" title=" " alt="" coords="539,219,725,245"/>
+<area shape="rect" id="node10" href="$ipv4-address-generator_8cc.html#aaf5aa23b804d2e5e334106f207e8a6cc" title=" " alt="" coords="565,168,699,195"/>
+<area shape="rect" id="node7" href="$classns3_1_1_wifi_mode_factory.html#a89a9c38617bd3f7be4a8919ce9675996" title="Allocate a WifiModeItem from a given uniqueUid." alt="" coords="1055,223,1218,265"/>
+<area shape="rect" id="node12" href="$classns3_1_1_wifi_mac.html#ad2f6868310980347c60bbfa08494dc4a" title="Return the device this PHY is associated with." alt="" coords="809,495,992,521"/>
+<area shape="rect" id="node13" href="$classns3_1_1_wifi_net_device.html#a20c98121e79afae35d03d9f5a3fa4ce8" title=" " alt="" coords="823,429,979,470"/>
+</map>

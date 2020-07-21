@@ -1,0 +1,30 @@
+<map id="ns3::Icmpv6L4Protocol::GetStaticProtocolNumber" name="ns3::Icmpv6L4Protocol::GetStaticProtocolNumber">
+<area shape="rect" id="node1" title="Get ICMPv6 protocol number." alt="" coords="1525,344,1720,385"/>
+<area shape="rect" id="node2" href="$classns3_1_1_ipv6_interface.html#a8faa5a72b30720eb01f9fc1d1113ad19" title="Add an IPv6 address." alt="" coords="1317,80,1456,121"/>
+<area shape="rect" id="node5" href="$classns3_1_1_ipv6_interface.html#a394066472c703fcf39d17f1bfcc9191e" title="Initialize interface." alt="" coords="1088,80,1227,121"/>
+<area shape="rect" id="node8" href="$classns3_1_1_ipv6_raw_socket_impl.html#a9b9d0def6375d0a3fbcaa552ebc3e03d" title="Forward up to receive method." alt="" coords="1296,405,1477,447"/>
+<area shape="rect" id="node14" href="$classns3_1_1_ipv6_l3_protocol.html#a26e09893edeeb8daf71b332bc5207dc0" title="Get ICMPv6 protocol." alt="" coords="1312,267,1461,308"/>
+<area shape="rect" id="node21" href="$classns3_1_1_ipv6_interface.html#aa3be8d7a7f0d8232e2ec9e900a98f727" title="Send a packet through this interface." alt="" coords="1317,500,1456,541"/>
+<area shape="rect" id="node27" href="$classns3_1_1_ipv6_raw_socket_impl.html#aadff84e3c8a3ce3bc4f10a3d7a4dbac8" title="Send data to a specified peer." alt="" coords="1296,660,1477,701"/>
+<area shape="rect" id="node3" href="$classns3_1_1_ipv6_l3_protocol.html#a33135677dcaa195be223eaf4f38a6efe" title="Add an address on interface." alt="" coords="1083,9,1232,51"/>
+<area shape="rect" id="node4" href="$classns3_1_1_ipv6_l3_protocol.html#a1806de87b35929a2181c2985e5df1ec0" title="Add an autoconfigured address with RA information." alt="" coords="812,5,1019,47"/>
+<area shape="rect" id="node6" href="$classns3_1_1_ipv6_interface.html#a9db98f98cc682a2395fe582bfb511880" title="Enable this interface." alt="" coords="846,71,985,112"/>
+<area shape="rect" id="node7" href="$classns3_1_1_ipv6_l3_protocol.html#a834eba3100efc8f71e5292bbfdcde6e6" title="Set an interface up." alt="" coords="615,71,764,112"/>
+<area shape="rect" id="node9" href="$classns3_1_1_ipv6_l3_protocol.html#a8a95d576e8aee9a571db93bf686d850a" title="Receive method when a packet arrive in the stack." alt="" coords="615,267,764,308"/>
+<area shape="rect" id="node10" href="$classns3_1_1_ipv6_l3_protocol.html#a56047c2ee7db15185af07538c609cbb5" title="Add IPv6 interface for a device." alt="" coords="417,233,567,275"/>
+<area shape="rect" id="node11" href="$classns3_1_1_ipv6_l3_protocol.html#a69a1ef7b49dd3aa80c6807f467720005" title="Setup loopback interface." alt="" coords="417,299,567,340"/>
+<area shape="rect" id="node12" href="$classns3_1_1_ipv6_l3_protocol.html#a53796a2747cb5edcd1c762f44043b061" title="Set node associated with this stack." alt="" coords="220,299,369,340"/>
+<area shape="rect" id="node13" href="$classns3_1_1_ipv6_l3_protocol.html#ae07ff89952d068d18fb5650ffd1f5378" title="Notify other components connected to the node that a new stack member is now connected." alt="" coords="5,299,172,340"/>
+<area shape="rect" id="node15" href="$classns3_1_1_ipv6_l3_protocol.html#ac956e0aaed5e961b6c25210c2b696da6" title="Forward a packet." alt="" coords="841,267,990,308"/>
+<area shape="rect" id="node16" href="$classns3_1_1_ipv6_l3_protocol.html#a8e2c7a80851d870812295c19dc908a38" title="Deliver a packet." alt="" coords="841,136,990,177"/>
+<area shape="rect" id="node17" href="$classns3_1_1_ipv6_l3_protocol.html#a0cdd2195de560337df8dbe1a412cbaf6" title="Fallback when no route is found." alt="" coords="841,201,990,243"/>
+<area shape="rect" id="node18" href="$classns3_1_1_ipv6_l3_protocol.html#adad363af4c50cd94505b918b15f228d4" title="Send packet with route." alt="" coords="1083,332,1232,373"/>
+<area shape="rect" id="node19" href="$classns3_1_1_ipv6_l3_protocol.html#aa65d2e4894ea499415227e232e854824" title="Forward a multicast packet." alt="" coords="838,332,993,373"/>
+<area shape="rect" id="node20" href="$classns3_1_1_ipv6_l3_protocol.html#ac281dd6c5aff55330904e7a298c1881b" title="Higher&#45;level layers call this method to send a packet down the stack to the MAC and PHY layers." alt="" coords="841,397,990,439"/>
+<area shape="rect" id="node22" href="$classns3_1_1_icmpv6_l4_protocol.html#a6c3a2ecce98fa29743eb177b613490e5" title="Receive Neighbor Advertisement method." alt="" coords="1073,481,1242,523"/>
+<area shape="rect" id="node23" href="$classns3_1_1_icmpv6_l4_protocol.html#acec910926a1fdbbea699c10d638aa704" title="Receive Neighbor Solicitation method." alt="" coords="1073,547,1242,588"/>
+<area shape="rect" id="node24" href="$classns3_1_1_icmpv6_l4_protocol.html#a31342a8123eab651a5cabd1a197b0145" title="Receive method." alt="" coords="1073,612,1242,653"/>
+<area shape="rect" id="node25" href="$classns3_1_1_icmpv6_l4_protocol.html#ad6670739eba9c44ba37bf9644bfcdde5" title="Link layer address option processing." alt="" coords="1073,677,1242,719"/>
+<area shape="rect" id="node26" href="$classns3_1_1_icmpv6_l4_protocol.html#af1a56b5658c12d34615aa712758359d5" title="Receive Router Advertisement method." alt="" coords="831,677,1000,719"/>
+<area shape="rect" id="node28" href="$classns3_1_1_ipv6_raw_socket_impl.html#a889224d7c084b74b3a1a3511899a04f3" title="Send data (or dummy data) to the remote host." alt="" coords="1067,743,1248,784"/>
+</map>

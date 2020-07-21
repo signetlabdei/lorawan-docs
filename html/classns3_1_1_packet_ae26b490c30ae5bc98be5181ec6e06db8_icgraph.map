@@ -1,0 +1,36 @@
+<map id="ns3::Packet::AddTrailer" name="ns3::Packet::AddTrailer">
+<area shape="rect" id="node1" title="Add trailer to this packet." alt="" coords="1569,225,1740,251"/>
+<area shape="rect" id="node2" href="$classns3_1_1_csma_net_device.html#a736bf6ce5851ace677f8fc693a92855c" title="Adds the necessary headers and trailers to a packet of data in order to respect the packet type." alt="" coords="1321,8,1479,49"/>
+<area shape="rect" id="node5" href="$namespacens3.html#ab329ba01637c33843b592aebe17df72f" title="Add FCS trailer to a packet." alt="" coords="1314,107,1486,134"/>
+<area shape="rect" id="node9" href="$class_lr_wpan_packet_test_case.html#ae85f64d48a71983a4a43f49e5571546a" title="Implementation to actually run this TestCase." alt="" coords="1314,159,1486,200"/>
+<area shape="rect" id="node10" href="$class_packet_test.html#a2f4d69aa1b21616ea14efd54fee55da2" title="Implementation to actually run this TestCase." alt="" coords="1329,225,1471,251"/>
+<area shape="rect" id="node11" href="$classns3_1_1_lr_wpan_mac.html#acb3f2c60655d459aeb85b20536d1f7ce" title="IEEE 802.15.4&#45;2006, section 7.1.1.1 MCPS&#45;DATA.request Request to transfer a MSDU." alt="" coords="1299,276,1501,317"/>
+<area shape="rect" id="node12" href="$classns3_1_1_lr_wpan_mac.html#afdf2ca2fc6e15fbb1767720607a101f8" title="Send an acknowledgment packet for the given sequence number." alt="" coords="1037,341,1230,367"/>
+<area shape="rect" id="node29" href="$classns3_1_1_lr_wpan_mac.html#a1e33a2a8f1614f73cfa1ef2632a69bc3" title="Called to send a single beacon frame." alt="" coords="1279,394,1521,421"/>
+<area shape="rect" id="node3" href="$classns3_1_1_csma_net_device.html#ad7cb5da0e3fb59bd1670c8fa0af4b775" title="Start sending a packet down the channel, with MAC spoofing." alt="" coords="1054,5,1213,47"/>
+<area shape="rect" id="node4" href="$classns3_1_1_csma_net_device.html#a6d3d0c60f8a2d60fbe006248bb6b119d" title="Start sending a packet down the channel." alt="" coords="785,5,943,47"/>
+<area shape="rect" id="node6" href="$classns3_1_1_mpdu_aggregator.html#a8e4e158ca23bbd3141f8c584dcb7a5dc" title="Aggregate an MPDU to an A&#45;MPDU." alt="" coords="1053,71,1214,112"/>
+<area shape="rect" id="node7" href="$classns3_1_1_wifi_psdu.html#aee5f98fb36fec0f9a3d20ecc0214ace0" title="Get the PSDU as a single packet." alt="" coords="772,107,956,134"/>
+<area shape="rect" id="node8" href="$classns3_1_1_wifi_mac_queue_item.html#a9217fe2d00a5893b968d524376ff167c" title="Get the MAC protocol data unit (MPDU) corresponding to this item (i.e." alt="" coords="1044,188,1223,229"/>
+<area shape="rect" id="node13" href="$classns3_1_1_lr_wpan_mac.html#a71139cc1bd26ab1c0a9c2e7791631389" title="IEEE 802.15.4&#45;2006 section 6.2.1.3 PD&#45;DATA.indication Indicates the transfer of an MPDU from PHY to M..." alt="" coords="740,339,988,366"/>
+<area shape="rect" id="node14" href="$classns3_1_1_lr_wpan_net_device.html#a2851594198a88409d0a25401e9c61997" title="Configure PHY, MAC and CSMA/CA." alt="" coords="510,329,681,371"/>
+<area shape="rect" id="node15" href="$classns3_1_1_lr_wpan_net_device.html#a13831cf68e3c1a3e052509e3e2dd2266" title=" " alt="" coords="280,165,451,207"/>
+<area shape="rect" id="node16" href="$classns3_1_1_lr_wpan_net_device.html#a3a16a06be6078dcc9b54d705bf8bc98a" title="Set the channel to which the NetDevice, and therefore the PHY, should be attached to." alt="" coords="280,231,451,272"/>
+<area shape="rect" id="node24" href="$classns3_1_1_lr_wpan_net_device.html#a36bff9613507b175c91c3493b923e41c" title="Set the CSMA/CA implementation to be used by the MAC and this NetDevice." alt="" coords="280,296,451,337"/>
+<area shape="rect" id="node25" href="$classns3_1_1_lr_wpan_net_device.html#aa36a97b6898c9b5b2dd4f6d956eda590" title="Set the MAC to be used by this NetDevice." alt="" coords="280,361,451,403"/>
+<area shape="rect" id="node27" href="$classns3_1_1_lr_wpan_net_device.html#a1eaad99ee6281913a727ba92b2b1cc2d" title=" " alt="" coords="280,427,451,468"/>
+<area shape="rect" id="node28" href="$classns3_1_1_lr_wpan_net_device.html#a521c26ef227a41d835ee5ee6ed783480" title="Set the PHY to be used by the MAC and this NetDevice." alt="" coords="280,492,451,533"/>
+<area shape="rect" id="node17" href="$class_lr_wpan_ack_test_case.html#a44ec9b782ae2c74d8fa2a25d696833e9" title="Implementation to actually run this TestCase." alt="" coords="38,41,199,83"/>
+<area shape="rect" id="node18" href="$class_lr_wpan_cca_test_case.html#a3e2872a3bd57d754a2bdb613437e18a8" title="Implementation to actually run this TestCase." alt="" coords="38,107,199,148"/>
+<area shape="rect" id="node19" href="$class_lr_wpan_collision_test_case.html#adc8f2378868d9eb3aba9b538897d85d2" title="Implementation to actually run this TestCase." alt="" coords="26,172,211,213"/>
+<area shape="rect" id="node20" href="$class_lr_wpan_ed_test_case.html#a432fdebeb0336845350d0b96834ceea4" title="Implementation to actually run this TestCase." alt="" coords="21,238,217,265"/>
+<area shape="rect" id="node21" href="$class_lr_wpan_error_distance_test_case.html#a4f63a2ed4dcf517ae2a593497774b254" title="Implementation to actually run this TestCase." alt="" coords="10,289,227,331"/>
+<area shape="rect" id="node22" href="$class_lr_wpan_data_ifs_test_case.html#ac017286378536f1822d5b5ffbb6faa07" title="Implementation to actually run this TestCase." alt="" coords="31,355,207,396"/>
+<area shape="rect" id="node23" href="$class_lr_wpan_slotted_csmaca_test_case.html#af513cbd5b3e73576d41b4a72a709ee7d" title="Implementation to actually run this TestCase." alt="" coords="5,420,232,461"/>
+<area shape="rect" id="node26" href="$classns3_1_1_lr_wpan_net_device.html#acef1e5cfc71b10c0de1f57657fff2d44" title="Get the type ID." alt="" coords="33,488,204,529"/>
+<area shape="rect" id="node30" href="$classns3_1_1_lr_wpan_mac.html#aeebea15cd94673614f71e5bf3b4f87a4" title="Called to begin the Contention Access Period (CAP) in a beacon&#45;enabled mode." alt="" coords="1036,398,1231,425"/>
+<area shape="rect" id="node31" href="$classns3_1_1_lr_wpan_mac.html#a3b31c2f44927a19d0bc74fd8236decaa" title="IEEE 802.15.4&#45;2006, section 7.1.14.1 MLME&#45;START.request Request to allow a PAN coordinator to initiat..." alt="" coords="761,391,967,432"/>
+<area shape="rect" id="node33" href="$classns3_1_1_lr_wpan_mac.html#a3fd053f59ce783b24414369e1077dff4" title="Start the Inactive Period in a beacon&#45;enabled mode." alt="" coords="754,456,974,497"/>
+<area shape="rect" id="node32" href="$classns3_1_1_lr_wpan_helper.html#a6fcd2919db415f1910521279f7859efa" title="Associate the nodes to the same PAN and initiate beacon enabled mode." alt="" coords="510,395,681,436"/>
+<area shape="rect" id="node34" href="$classns3_1_1_lr_wpan_mac.html#a791ae36b8635b395e91bd6a9e915dcd7" title="Called to begin the Contention Free Period (CFP) in a beacon&#45;enabled mode." alt="" coords="499,490,692,517"/>
+</map>

@@ -1,0 +1,26 @@
+<map id="ns3::TcpNewReno::CongestionAvoidance" name="ns3::TcpNewReno::CongestionAvoidance">
+<area shape="rect" id="node1" title="NewReno congestion avoidance." alt="" coords="1035,344,1252,385"/>
+<area shape="rect" id="node2" href="$classns3_1_1_tcp_ledbat.html#a592b6df30581c978ddabf095eb0300c6" title="Reduce Congestion." alt="" coords="769,132,967,173"/>
+<area shape="rect" id="node10" href="$classns3_1_1_tcp_lp.html#a6483bc52de225abd858ac0e5883bf74b" title="Invokes Congestion Avoidance of TcpNewReno if TcpLp is not within inference." alt="" coords="749,293,987,319"/>
+<area shape="rect" id="node11" href="$classns3_1_1_tcp_new_reno.html#a11db8ae90f4cebacc15524a793b0741a" title="Try to increase the cWnd following the NewReno specification." alt="" coords="769,344,967,385"/>
+<area shape="rect" id="node20" href="$classns3_1_1_tcp_veno.html#a5865787a20ea7c2c8beee2df5cefcdaa" title="Adjust cwnd following Veno additive increase algorithm." alt="" coords="475,534,698,561"/>
+<area shape="rect" id="node22" href="$classns3_1_1_tcp_yeah.html#aa1efa60adbcb1dfad8d188deef7ed2ea" title="Adjust cwnd following YeAH dual&#45;mode algorithm." alt="" coords="759,593,977,619"/>
+<area shape="rect" id="node3" href="$classns3_1_1_tcp_ledbat.html#a9baf3c7c8d5572c3cf7c4249a2833748" title="Adjust cwnd following LEDBAT algorithm." alt="" coords="496,37,677,79"/>
+<area shape="rect" id="node4" href="$class_tcp_ledbat_to_new_reno.html#a6d878d7cb843824f66d4cbcc41d9cf2f" title="Execute the test." alt="" coords="250,161,413,203"/>
+<area shape="rect" id="node6" href="$class_tcp_ledbat_increment_test.html#a84a03d2ecd9136e498c22721122e2b6b" title="Execute the test." alt="" coords="242,5,421,47"/>
+<area shape="rect" id="node8" href="$class_tcp_ledbat_decrement_test.html#a6c33fcfc3f71942ffc0b987f8d685f8d" title="Execute the test." alt="" coords="239,71,424,112"/>
+<area shape="rect" id="node5" href="$class_tcp_ledbat_to_new_reno.html#aaae57fa2864111f47631e21dbb19b8a6" title="Implementation to actually run this TestCase." alt="" coords="17,161,179,203"/>
+<area shape="rect" id="node7" href="$class_tcp_ledbat_increment_test.html#a673d2a03d6203b5750744776b3ab14b9" title="Implementation to actually run this TestCase." alt="" coords="9,5,187,47"/>
+<area shape="rect" id="node9" href="$class_tcp_ledbat_decrement_test.html#a33081c7ce4c6639ba598e79cf2d7e19f" title="Implementation to actually run this TestCase." alt="" coords="5,71,191,112"/>
+<area shape="rect" id="node12" href="$class_tcp_high_speed_increment_test.html#ac39ab0eb61414b4821d81d259ddf9e88" title="Implementation to actually run this TestCase." alt="" coords="484,403,689,444"/>
+<area shape="rect" id="node13" href="$class_tcp_htcp_increment_test.html#a0fa1bb539a4ff1b134949e80608d0ffa" title="Since the calculation depends on the throughput and its associated timing, we schedule a few exact ev..." alt="" coords="504,468,669,509"/>
+<area shape="rect" id="node14" href="$class_tcp_hybla_increment_test.html#a22a9600b99784b480e1b615803cf9b1c" title="Implementation to actually run this TestCase." alt="" coords="500,103,673,144"/>
+<area shape="rect" id="node15" href="$class_tcp_scalable_increment_test.html#adcf9cbca755cffbba599bc635bbfe1d8" title="Implementation to actually run this TestCase." alt="" coords="491,168,682,209"/>
+<area shape="rect" id="node16" href="$class_tcp_dctcp_to_new_reno.html#adcf43ad273e64fd70d6eff98afe5b878" title="Execute the test." alt="" coords="505,285,669,327"/>
+<area shape="rect" id="node18" href="$classns3_1_1_tcp_vegas.html#ae80e9ac677116dada43dacda0f98a8b6" title="Adjust cwnd following Vegas linear increase/decrease algorithm." alt="" coords="472,351,701,378"/>
+<area shape="rect" id="node17" href="$class_tcp_dctcp_to_new_reno.html#a6007b8631af6a444c8dd989b3f53e623" title="Implementation to actually run this TestCase." alt="" coords="249,285,413,327"/>
+<area shape="rect" id="node19" href="$class_tcp_vegas_test.html#a00eaa735d1666ec15d51ad98cf584087" title="Implementation to actually run this TestCase." alt="" coords="251,351,411,378"/>
+<area shape="rect" id="node21" href="$class_tcp_veno_test.html#ac9a8c938515295419b597b999c724100" title="Implementation to actually run this TestCase." alt="" coords="255,534,408,561"/>
+<area shape="rect" id="node23" href="$class_tcp_yeah_increment_test.html#a8100d996b7210a1476e34eed2781800a" title="Implementation to actually run this TestCase." alt="" coords="504,651,669,692"/>
+<area shape="rect" id="node24" href="$class_tcp_yeah_decrement_test.html#a699fd95f30a62b6570bce1a2d60780b3" title="Implementation to actually run this TestCase." alt="" coords="501,585,672,627"/>
+</map>

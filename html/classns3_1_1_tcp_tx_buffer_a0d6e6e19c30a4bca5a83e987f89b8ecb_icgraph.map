@@ -1,0 +1,18 @@
+<map id="ns3::TcpTxBuffer::ConsistencyCheck" name="ns3::TcpTxBuffer::ConsistencyCheck">
+<area shape="rect" id="node1" title="Check if the values of sacked, lost, retrans, are in sync with the sent list." alt="" coords="1051,233,1268,274"/>
+<area shape="rect" id="node2" href="$classns3_1_1_tcp_tx_buffer.html#a8cdafac79938c8dd8abcfa8011b5f6d4" title="Emulate SACKs for SACKless connection: account for a new dupack." alt="" coords="776,5,1003,32"/>
+<area shape="rect" id="node3" href="$classns3_1_1_tcp_tx_buffer.html#abc21a693005857d1f2185a32fc490d29" title="Discard data up to but not including this sequence number." alt="" coords="509,72,728,99"/>
+<area shape="rect" id="node9" href="$classns3_1_1_tcp_tx_buffer.html#a7b376f6a4ccc3b43a2d038e8282fbf01" title="Copy data from the range [seq, seq+numBytes) into a packet." alt="" coords="787,174,991,215"/>
+<area shape="rect" id="node11" href="$classns3_1_1_tcp_tx_buffer.html#acf6696197e54af203933e69a7e3a4f01" title="DeleteRetransmittedFlagFromHead." alt="" coords="784,357,995,398"/>
+<area shape="rect" id="node12" href="$classns3_1_1_tcp_tx_buffer.html#a9c84073be0f146fa841f82ac7a55def5" title="Mark the head of the sent list as lost." alt="" coords="787,57,992,98"/>
+<area shape="rect" id="node13" href="$classns3_1_1_tcp_tx_buffer.html#a61f519ff65cbadfb81099f866f1722f0" title="Take the last segment sent and put it back into the un&#45;sent list (at the beginning)" alt="" coords="788,422,991,463"/>
+<area shape="rect" id="node14" href="$classns3_1_1_tcp_tx_buffer.html#ab41595f999596a33725cf137d643d906" title="Set the entire sent list as lost (typically after an RTO)" alt="" coords="795,487,983,529"/>
+<area shape="rect" id="node15" href="$classns3_1_1_tcp_tx_buffer.html#a831b7bfcb9d88d4c71b36c122c32bfa8" title="Update the scoreboard." alt="" coords="526,275,711,301"/>
+<area shape="rect" id="node16" href="$classns3_1_1_tcp_tx_buffer.html#aa1bc23384777b1aa310a40a33f9c26df" title="Update the lost count." alt="" coords="797,291,982,333"/>
+<area shape="rect" id="node4" href="$class_tcp_tx_buffer_test_case.html#a2b058225bf6a55a7e80bca5d1dc93f7a" title="Test the generation of an unsent block." alt="" coords="281,94,438,135"/>
+<area shape="rect" id="node6" href="$class_tcp_tx_buffer_test_case.html#a87a6f679a0da25966b57cd415b03a268" title="Test the generation of the &quot;next&quot; block." alt="" coords="281,225,438,266"/>
+<area shape="rect" id="node7" href="$class_tcp_rate_linux_with_buffer_test.html#ab14d877f5f6c3c8f1e5715a41104585f" title="Test with arbitary SACK scenario." alt="" coords="257,159,461,201"/>
+<area shape="rect" id="node5" href="$class_tcp_tx_buffer_test_case.html#a004312af9ed95478a651632f8e5a7181" title="Implementation to actually run this TestCase." alt="" coords="29,225,186,266"/>
+<area shape="rect" id="node8" href="$class_tcp_rate_linux_with_buffer_test.html#a3b5486d4efb798fb5847e46d61131664" title="Implementation to actually run this TestCase." alt="" coords="5,159,209,201"/>
+<area shape="rect" id="node10" href="$class_tcp_tx_buffer_test_case.html#a6d12bda320f20f02c64eb14ae87b2e6f" title="Test if a segment is really set as lost." alt="" coords="281,290,438,331"/>
+</map>

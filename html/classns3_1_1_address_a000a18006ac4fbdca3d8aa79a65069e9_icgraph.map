@@ -1,0 +1,27 @@
+<map id="ns3::Address::GetLength" name="ns3::Address::GetLength">
+<area shape="rect" id="node1" title="Get the length of the underlying address." alt="" coords="2381,261,2561,288"/>
+<area shape="rect" id="node2" href="$classns3_1_1_icmpv6_option_link_layer_address.html#abb9aefc30c568584489d2fbfe408972d" title="Constructor." alt="" coords="2093,5,2329,61"/>
+<area shape="rect" id="node3" href="$classns3_1_1_arp_header.html#ab2acfcc713dbae59f7e53f637b439b1d" title=" " alt="" coords="2089,85,2333,112"/>
+<area shape="rect" id="node6" href="$classns3_1_1_arp_queue_disc_item.html#a158cc16c4a751debdf4477e5dc715c9c" title="Computes the hash of the packet&#39;s 5&#45;tuple." alt="" coords="2124,137,2299,178"/>
+<area shape="rect" id="node7" href="$namespacens3.html#a7ea6bb241a411888822aae86b55f029d" title=" " alt="" coords="2152,203,2271,229"/>
+<area shape="rect" id="node8" href="$classns3_1_1_icmpv6_l4_protocol.html#a775f19603b15e25f287f54096a3f26cb" title="Send an ICMPv6 Redirection." alt="" coords="2127,254,2296,295"/>
+<area shape="rect" id="node9" href="$classns3_1_1_arp_header.html#af32a45a0d82e6406729156729a74f814" title=" " alt="" coords="2118,320,2305,347"/>
+<area shape="rect" id="node10" href="$classns3_1_1_icmpv6_option_link_layer_address.html#a5c7ef18d95129b9678294ffdcf5a6adb" title="Serialize the packet." alt="" coords="2108,371,2315,413"/>
+<area shape="rect" id="node11" href="$classns3_1_1_dhcp_header.html#ae79fd5f77f8e8f4a0ac8f5480512a468" title="Set the Address of the device." alt="" coords="2107,437,2315,464"/>
+<area shape="rect" id="node25" href="$namespacens3.html#ab9c4ee718cab1f7e5248027d30b94c4d" title="Write an Address to a Buffer." alt="" coords="2160,488,2263,515"/>
+<area shape="rect" id="node4" href="$classns3_1_1_arp_header.html#ac4ac02b6ff4125d41dfe52593f23718d" title=" " alt="" coords="1839,56,2041,83"/>
+<area shape="rect" id="node5" href="$classns3_1_1_arp_queue_disc_item.html#ab8c3e4fb3346ad36922ce8064b743391" title=" " alt="" coords="1853,107,2027,149"/>
+<area shape="rect" id="node12" href="$classns3_1_1_dhcp_client.html#a722283f15dedcb758b71d9846867e16e" title="Sends DHCP DISCOVER and changes the client state to WAIT_OFFER." alt="" coords="1859,336,2021,363"/>
+<area shape="rect" id="node20" href="$classns3_1_1_dhcp_client.html#a8c1a264b19c02d331f0e51f9be84b09a" title="Sends the DHCP REQUEST message and changes the client state to WAIT_ACK." alt="" coords="1319,412,1505,439"/>
+<area shape="rect" id="node21" href="$classns3_1_1_dhcp_server.html#ace0985d3fafb7048b6a1f10a99c2ef64" title="Sends DHCP ACK (or NACK) after receiving Request." alt="" coords="1844,463,2036,489"/>
+<area shape="rect" id="node24" href="$classns3_1_1_dhcp_server.html#aedb1487d987f9aa542aae3ad326b9c0b" title="Sends DHCP offer after receiving DHCP Discover." alt="" coords="1839,513,2041,540"/>
+<area shape="rect" id="node13" href="$classns3_1_1_dhcp_client.html#ae7a2dde0056ad591a05f84b2a404c213" title="Handles incoming packets from the network." alt="" coords="1037,336,1244,363"/>
+<area shape="rect" id="node15" href="$classns3_1_1_dhcp_client.html#ab03efa3292800ecd9cb99968cafddee3" title="Application specific startup code." alt="" coords="512,336,748,363"/>
+<area shape="rect" id="node18" href="$classns3_1_1_dhcp_client.html#a2278f6347d69ca17aa75cd35ffd5d14e" title="Selects an OFFER from m_offerList." alt="" coords="1599,361,1771,388"/>
+<area shape="rect" id="node14" href="$classns3_1_1_dhcp_client.html#a3cabbf48dc583a62f0390f345cd4952f" title="Handles changes in LinkState." alt="" coords="796,329,989,370"/>
+<area shape="rect" id="node16" href="$classns3_1_1_dhcp_client.html#a333fc2ff1440b01d15b9631490e23289" title="Remove the current DHCP information and restart the process." alt="" coords="253,329,464,370"/>
+<area shape="rect" id="node17" href="$classns3_1_1_dhcp_client.html#aeec11ad69df96e12a053410cce443f95" title="Receives the DHCP ACK and configures IP address of the client." alt="" coords="5,395,205,421"/>
+<area shape="rect" id="node19" href="$classns3_1_1_dhcp_client.html#aa0475bb3e7bd6c56b29a9e1373108b23" title="Stores DHCP offers in m_offerList." alt="" coords="1304,361,1520,388"/>
+<area shape="rect" id="node22" href="$classns3_1_1_dhcp_server.html#acc55231b1b1e6ef243e7fb0295209fe8" title="Handles incoming packets from the network." alt="" coords="1580,488,1791,515"/>
+<area shape="rect" id="node23" href="$classns3_1_1_dhcp_server.html#ab3c7516bfe4275063212414342201940" title="Starts the DHCP Server application." alt="" coords="1292,488,1532,515"/>
+</map>

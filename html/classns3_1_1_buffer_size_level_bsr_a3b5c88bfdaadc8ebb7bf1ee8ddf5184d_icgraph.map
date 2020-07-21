@@ -1,0 +1,8 @@
+<map id="ns3::BufferSizeLevelBsr::BufferSize2BsrId" name="ns3::BufferSizeLevelBsr::BufferSize2BsrId">
+<area shape="rect" id="node1" title="Convert Buffer size to BSR ID." alt="" coords="809,71,985,112"/>
+<area shape="rect" id="node2" href="$classns3_1_1_no_op_component_carrier_manager.html#aace5e57bfe4f27ece0d270137479d54f" title="Forwards uplink BSR to CCM, called by MAC through CCM SAP interface." alt="" coords="533,5,747,47"/>
+<area shape="rect" id="node3" href="$classns3_1_1_rr_component_carrier_manager.html#a1b7ed25671044776fb53d6ddceb4f07c" title="Forwards uplink BSR to CCM, called by MAC through CCM SAP interface." alt="" coords="519,71,761,112"/>
+<area shape="rect" id="node4" href="$classns3_1_1_lte_ue_mac.html#ad3688008bb09f75879e9e6348e687ac5" title="Send report buffer status." alt="" coords="539,136,741,177"/>
+<area shape="rect" id="node5" href="$classns3_1_1_lte_ue_mac.html#a1dee6aa86c7d323a4db1b76bdb94c0b6" title="Forwarded from LteUePhySapUser: trigger the start from a new frame." alt="" coords="264,136,471,177"/>
+<area shape="rect" id="node6" href="$classns3_1_1_ue_member_lte_ue_phy_sap_user.html#a56aa45c70f78a51cf33d825414d37fa5" title="Trigger the start from a new frame (input from Phy layer)" alt="" coords="5,136,216,177"/>
+</map>

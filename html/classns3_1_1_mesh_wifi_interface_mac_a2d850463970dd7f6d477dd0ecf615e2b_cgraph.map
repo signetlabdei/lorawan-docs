@@ -1,0 +1,52 @@
+<map id="ns3::MeshWifiInterfaceMac::SwitchFrequencyChannel" name="ns3::MeshWifiInterfaceMac::SwitchFrequencyChannel">
+<area shape="rect" id="node1" title="Switch frequency channel." alt="" coords="5,851,204,892"/>
+<area shape="rect" id="node2" href="$classns3_1_1_object.html#a817117ab236e4ff7f80f0239d4e28731" title="Get a pointer to the requested aggregated Object." alt="" coords="272,407,440,434"/>
+<area shape="rect" id="node15" href="$classns3_1_1_channel_access_manager.html#ad718d29686e51027419769b3735e5dd4" title=" " alt="" coords="252,851,460,892"/>
+<area shape="rect" id="node48" href="$group__timecivil.html#ga33c34b816f8ff6628e33d5c8e9713b9e" title=" " alt="" coords="303,959,409,986"/>
+<area shape="rect" id="node3" href="$classns3_1_1_object.html#a34f8410d0f3aae5612b56eb65d044857" title="Find an Object of TypeId tid in the aggregates of this Object." alt="" coords="541,159,727,186"/>
+<area shape="rect" id="node14" href="$namespacens3.html#af2a7557fe9afdd98d8f6f8f6e412cf5a" title=" " alt="" coords="569,407,699,434"/>
+<area shape="rect" id="node4" href="$classns3_1_1_object.html#a4000e647d44103477c0c31825fc288b6" title="Check if any aggregated Objects have non&#45;zero reference counts." alt="" coords="824,13,1005,39"/>
+<area shape="rect" id="node6" href="$classns3_1_1_object.html#a12101af51922401affe289e1081c43c5" title="Get the most derived TypeId for this Object." alt="" coords="824,181,1005,223"/>
+<area shape="rect" id="node7" href="$classns3_1_1_type_id.html#ab84f81aee52154af39a8668b59c89d63" title="Get the parent of this TypeId." alt="" coords="831,130,999,157"/>
+<area shape="rect" id="node11" href="$classns3_1_1_object.html#a4615cee24c40b0377501f44ef85f9e53" title="Register this type." alt="" coords="831,247,999,274"/>
+<area shape="rect" id="node13" href="$classns3_1_1_object.html#a502c04993a228307d9eded5ba028af7c" title="Keep the list of aggregates in most&#45;recently&#45;used order." alt="" coords="819,64,1011,105"/>
+<area shape="rect" id="node5" href="$classns3_1_1_simple_ref_count.html#a9cb85ae452ce0e1c74f11b3e4d357171" title="Get the reference count of the object." alt="" coords="1101,5,1259,47"/>
+<area shape="rect" id="node8" href="$classns3_1_1_type_id.html#ab76e26690f1af4f1cffa6a72245e8928" title="Default constructor." alt="" coords="1107,185,1253,211"/>
+<area shape="rect" id="node9" href="$classns3_1_1_singleton.html#a80a2cd3c25a27ea72add7a9f7a141ffa" title="Get a pointer to the singleton instance." alt="" coords="1341,160,1544,201"/>
+<area shape="rect" id="node10" href="$classns3_1_1_iid_manager.html#a26a0cf5d08e0e9d8ad1128b77599b1f5" title="Get the parent of a type id." alt="" coords="1081,134,1279,161"/>
+<area shape="rect" id="node12" href="$classns3_1_1_type_id.html#abaaca67ab7d2471067e7c275df0f7309" title="Set the parent TypeId." alt="" coords="1097,243,1263,270"/>
+<area shape="rect" id="node16" href="$classns3_1_1_channel_access_manager.html#a4197521f9ff8b1a70f837ed87e8737e3" title=" " alt="" coords="508,625,760,667"/>
+<area shape="rect" id="node24" href="$classns3_1_1_simulator.html#ac3178fa975b419f7875e7105be122800" title="Return the current simulation virtual time." alt="" coords="2122,742,2275,769"/>
+<area shape="rect" id="node37" href="$classns3_1_1_channel_access_manager.html#a16abdc22e5c20496f49ee0d080145b2c" title="Update backoff slots for all Txops." alt="" coords="1339,851,1547,892"/>
+<area shape="rect" id="node17" href="$classns3_1_1_channel_access_manager.html#a0b155956cb94bba762d15d54cc1fe7ca" title="Called when access timeout should occur (e.g." alt="" coords="811,788,1019,829"/>
+<area shape="rect" id="node19" href="$classns3_1_1_channel_access_manager.html#a1e38ecb70f2cbab09955d359fe642695" title="Return the time when the backoff procedure ended (or will ended) for the given Txop." alt="" coords="1339,785,1547,827"/>
+<area shape="rect" id="node38" href="$classns3_1_1_event_id.html#a993ae94e48e014e1afd47edb16db7a11" title="This method is syntactic sugar for the ns3::Simulator::Cancel method." alt="" coords="1621,298,1776,325"/>
+<area shape="rect" id="node40" href="$classns3_1_1_simulator.html#af2c7b4285454aa5062bd2df2bb7a7ab9" title="Get the remaining time until this event will execute." alt="" coords="809,582,1020,609"/>
+<area shape="rect" id="node42" href="$classns3_1_1_simulator.html#aa8dbab888dca7bf3528421d2c5e67f99" title="Get the maximum representable simulation time." alt="" coords="808,451,1021,492"/>
+<area shape="rect" id="node44" href="$classns3_1_1_event_id.html#acc25141054209b1a286a5471a51bd0c0" title="This method is syntactic sugar for the ns3::Simulator::IsExpired method." alt="" coords="1095,349,1265,375"/>
+<area shape="rect" id="node46" href="$classns3_1_1_event_id.html#a8b41e6f8c54db6bede8a7dcaf917074a" title="This method is syntactic sugar for !IsExpired()." alt="" coords="827,349,1002,375"/>
+<area shape="rect" id="node47" href="$classns3_1_1_simulator.html#a671882c894a08af4a5e91181bf1eec13" title="Schedule an event to expire after delay." alt="" coords="823,737,1006,763"/>
+<area shape="rect" id="node18" href="$classns3_1_1_channel_access_manager.html#ab456b95950fd1381ed14c4f7289b997e" title="Grant access to Txop using DCF/EDCF contention rules." alt="" coords="1076,684,1284,725"/>
+<area shape="rect" id="node21" href="$classns3_1_1_txop.html#adbf1c8e98b66df88c983bdfb61d77bab" title="Return the current number of backoff slots." alt="" coords="1600,734,1797,761"/>
+<area shape="rect" id="node20" href="$classns3_1_1_time.html#a48c9bb8d93fea6a8d8cac216967219f4" title="Attach a unit to a Time, to facilitate output in a specific unit." alt="" coords="2817,851,2927,878"/>
+<area shape="rect" id="node22" href="$classns3_1_1_channel_access_manager.html#ae0a0f234530510cafd165d338fe21a53" title="Return the time when the backoff procedure started for the given Txop." alt="" coords="1595,836,1803,877"/>
+<area shape="rect" id="node23" href="$classns3_1_1_channel_access_manager.html#ad740b71c85f10fe714dcd94b621f9ae8" title="Access will never be granted to the medium before the time returned by this method." alt="" coords="1851,735,2059,776"/>
+<area shape="rect" id="node25" href="$group__simulator.html#ga42eb4eddad41528d4d99794a3dae3fd0" title="Get the SimulatorImpl singleton." alt="" coords="2377,531,2483,558"/>
+<area shape="rect" id="node36" href="$classns3_1_1_simulator_impl.html#aa516c50060846adc6fd316e83ef0797c" title="Return the current simulation virtual time." alt="" coords="2339,793,2521,819"/>
+<area shape="rect" id="node26" href="$classns3_1_1_object_factory.html#a52eda277f4aaab54266134ba48102ad7" title="Create an Object instance of the configured TypeId." alt="" coords="2598,465,2741,507"/>
+<area shape="rect" id="node27" href="$group__logging.html#gac4c06cbbed12229d85991ced145f6be2" title="Default Node printer." alt="" coords="2580,531,2759,558"/>
+<area shape="rect" id="node28" href="$namespacens3.html#ae01c3c7786b644dfb8a0bb8f1201b269" title="Default Time printer." alt="" coords="2581,785,2757,811"/>
+<area shape="rect" id="node29" href="$classns3_1_1_string_value.html#a6f208c2778fe1c7882e5cb429b8326ae" title=" " alt="" coords="2590,582,2749,609"/>
+<area shape="rect" id="node30" href="$namespacens3.html#ab4e173cdfd43d17c1a40d5348510a670" title=" " alt="" coords="2608,633,2731,659"/>
+<area shape="rect" id="node31" href="$classns3_1_1_global_value.html#a48a99242193fb69609a17332733e8600" title="Get the value." alt="" coords="2569,683,2769,710"/>
+<area shape="rect" id="node32" href="$namespacens3.html#aebac73305345f2e2803fdeb102a7705e" title="Set the LogNodePrinter function to be used to prepend log messages with the node id." alt="" coords="2582,734,2757,761"/>
+<area shape="rect" id="node33" href="$namespacens3.html#a46cd76678f7da29799d1b41994e12ec1" title="Set the TimePrinter function to be used to prepend log messages with the simulation time." alt="" coords="2583,349,2755,375"/>
+<area shape="rect" id="node34" href="$group__simulator.html#ga233c5c38de117e4e4a5a9cd168694792" title="Get the static SimulatorImpl instance." alt="" coords="2612,298,2727,325"/>
+<area shape="rect" id="node35" href="$classns3_1_1_object_factory.html#a77dcd099064038a1eb7a6b8251229ec3" title="Set the TypeId of the Objects to be created by this factory." alt="" coords="2598,400,2741,441"/>
+<area shape="rect" id="node39" href="$classns3_1_1_simulator.html#a1b903a62d6117ef28f7ba3c6500689bf" title="Set the cancel bit on this event: the event&#39;s associated function will not be invoked when it expires..." alt="" coords="2115,298,2283,325"/>
+<area shape="rect" id="node41" href="$classns3_1_1_simulator_impl.html#a0a8e0885c0f98fa3e07ede4bcc79dccb" title="Get the remaining time until this event will execute." alt="" coords="1107,516,1253,557"/>
+<area shape="rect" id="node43" href="$classns3_1_1_simulator_impl.html#a07b16567e2ec50ab91d5e00b98f31a22" title="Get the maximum representable simulation time." alt="" coords="1069,451,1291,492"/>
+<area shape="rect" id="node45" href="$classns3_1_1_simulator.html#a83ac8425c319a29b64f6d3b2ffc61e9c" title="Check if an event has already run or been cancelled." alt="" coords="2107,349,2291,375"/>
+<area shape="rect" id="node49" href="$classns3_1_1_time.html#a60e845f4a74e62495b86356afe604cb4" title="Create a Time equal to value in unit unit." alt="" coords="548,1003,720,1030"/>
+<area shape="rect" id="node50" href="$classns3_1_1_time.html#a34e4acc13d0e08cc8cb9cd3b838b9baf" title="Create a Time in the current unit." alt="" coords="851,1003,978,1030"/>
+</map>

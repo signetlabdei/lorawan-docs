@@ -1,0 +1,14 @@
+digraph "MRG32k3a::MatTwoPowModM"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="MRG32k3a::MatTwoPowModM",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Compute the matrix B = (A^(2^e) Mod m); works also if A = B."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="MRG32k3a::PowerOfTwoConstants",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_m_r_g32k3a.html#a08c7c4997ad0d84f46afa634e8a847c5",tooltip="Compute the transition matrices of the two MRG components raised to all powers of 2 from 1 to 191."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="MRG32k3a::PowerOfTwoMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_m_r_g32k3a.html#a56e7b63e0311d8b196b0c87cfde2492b",tooltip="Get the transition matrices raised to a power of 2."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ns3::RngStream::AdvanceNthBy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_rng_stream.html#a6ec2451aa49df691a30bc4ca527b2355",tooltip="Advance state of the RNG by leaps and bounds."];
+}

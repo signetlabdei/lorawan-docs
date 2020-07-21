@@ -1,0 +1,16 @@
+<map id="ns3::NwkAddr::Get" name="ns3::NwkAddr::Get">
+<area shape="rect" id="node1" title="Get an uint32_t representation of the 25&#45;bit network address." alt="" coords="813,237,956,263"/>
+<area shape="rect" id="node2" href="$classns3_1_1_lora_device_address.html#aa13459b2b10bc2a5789cdf20f0384c0c" title="Build a new address from a network id and network address." alt="" coords="555,80,733,121"/>
+<area shape="rect" id="node3" href="$classns3_1_1_lora_device_address.html#a9ab81b5741ce3c580a32aaddfb6f7552" title="Get the address in 32&#45;bit integer form." alt="" coords="539,146,749,173"/>
+<area shape="rect" id="node9" href="$classns3_1_1_lora_device_address_generator.html#a830f48bf5b6ea6cb25abb22500f8a8ee" title="Get the LoraDeviceAddress that will be allocated upon a call to NextAddress." alt="" coords="232,267,475,308"/>
+<area shape="rect" id="node10" href="$classns3_1_1_lora_device_address.html#a46e465a07cfd3fb7ddd8785645965ba2" title="Get the NwkAddr of this device." alt="" coords="555,383,733,424"/>
+<area shape="rect" id="node11" href="$classns3_1_1_lora_device_address_generator.html#ade10907d8258b52cc33f6f43dc3d45c5" title="Allocate the next LoraDeviceAddress." alt="" coords="523,317,765,359"/>
+<area shape="rect" id="node12" href="$classns3_1_1_lora_device_address.html#adef75aa9773f72a126ae92136158fe56" title="Print the address bit&#45;by&#45;bit to a human&#45;readable string." alt="" coords="555,200,733,241"/>
+<area shape="rect" id="node4" href="$classns3_1_1_lora_frame_header.html#a624119e248472126666bb37070661e5a" title="Serialize the header." alt="" coords="269,5,438,47"/>
+<area shape="rect" id="node6" href="$classns3_1_1_lora_device_address.html#a4c87d2888b57e2f9645636f48fe8f961" title="Convert this address to a buffer." alt="" coords="264,136,443,177"/>
+<area shape="rect" id="node5" href="$class_header_test.html#a5ae645830cd78a3717609bed5e0ef1ac" title="Implementation to actually run this TestCase." alt="" coords="21,46,168,73"/>
+<area shape="rect" id="node7" href="$classns3_1_1_lora_device_address.html#a1ca18e51f9b397a5eb70d939369045fd" title="Convert this instance of LoraDeviceAddress to an Address." alt="" coords="5,136,184,177"/>
+<area shape="rect" id="node8" href="$class_address_test.html#af7525c7ae3bfea71ad75ef69584ca673" title="Implementation to actually run this TestCase." alt="" coords="19,274,170,301"/>
+<area shape="rect" id="node13" href="$classns3_1_1_lora_frame_header.html#a1725567d231eda5fb2cd1110c7717d1c" title="Deserialize the contents of the buffer into a LoraFrameHeader object." alt="" coords="269,71,438,112"/>
+<area shape="rect" id="node14" href="$classns3_1_1_lora_frame_header.html#a71d4f354733dbbd80aa9fa59de562176" title="Print the header in a human&#45;readable format." alt="" coords="269,201,438,243"/>
+</map>

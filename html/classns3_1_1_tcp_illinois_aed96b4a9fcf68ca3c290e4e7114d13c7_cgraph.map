@@ -1,0 +1,16 @@
+<map id="ns3::TcpIllinois::IncreaseWindow" name="ns3::TcpIllinois::IncreaseWindow">
+<area shape="rect" id="node1" title="Adjust cwnd following Illinois congestion avoidance algorithm." alt="" coords="5,159,185,200"/>
+<area shape="rect" id="node2" href="$classns3_1_1_tcp_socket_state.html#a5895798915098201300d31f71fc48fcb" title="Get cwnd in segments rather than bytes." alt="" coords="253,64,420,105"/>
+<area shape="rect" id="node3" href="$classns3_1_1_tcp_illinois.html#a15c2ea39f742b9cb8ae4fe4723059837" title="Recalculate alpha and beta every RTT." alt="" coords="253,129,421,171"/>
+<area shape="rect" id="node13" href="$classns3_1_1_tcp_illinois.html#adf4b3324f0d026515758691b036483ed" title="Reset Illinois parameters." alt="" coords="255,195,418,222"/>
+<area shape="rect" id="node14" href="$classns3_1_1_tcp_new_reno.html#a1cf5fd9585eb3b745727f4f5beae0706" title="Tcp NewReno slow start algorithm." alt="" coords="233,246,440,273"/>
+<area shape="rect" id="node4" href="$classns3_1_1_tcp_illinois.html#a473c7333be614f3183c81048c93049b2" title="Calculate additive increase factor alpha." alt="" coords="503,5,689,47"/>
+<area shape="rect" id="node5" href="$classns3_1_1_tcp_illinois.html#af2771da4507847a0f88795fa5035dde7" title="Calculate average queueing delay." alt="" coords="503,71,689,112"/>
+<area shape="rect" id="node6" href="$classns3_1_1_tcp_illinois.html#a7306f1cde806901aed1f93d6c43ce9d4" title="Calculate multiplicative decrease factor beta." alt="" coords="488,137,704,163"/>
+<area shape="rect" id="node7" href="$classns3_1_1_tcp_illinois.html#a19ff56b005c08de2386c75de773bdf29" title="Calculate maximum queueing delay." alt="" coords="503,188,689,229"/>
+<area shape="rect" id="node8" href="$classns3_1_1_time.html#ad012aa15ec441ad811a09954f95e4a8d" title="Get an approximation of the time stored in this instance in the indicated unit." alt="" coords="497,254,695,281"/>
+<area shape="rect" id="node9" href="$classns3_1_1_time.html#a4bd2d3c8a919e4b57e60692b53db4a61" title="Get the Time value expressed in a particular unit." alt="" coords="752,254,905,281"/>
+<area shape="rect" id="node10" href="$classns3_1_1_time.html#a0b023c55c20582aa7c1781aacf128034" title="Get the Information record for timeUnit for the current Resolution." alt="" coords="953,254,1155,281"/>
+<area shape="rect" id="node11" href="$classns3_1_1_time.html#a963e53522278fcbdf1ab9f7adbd0f5d6" title="Get the current Resolution." alt="" coords="1203,254,1397,281"/>
+<area shape="rect" id="node12" href="$classns3_1_1_time.html#a6a872e62f71dfa817fef2c549473d980" title="Set the default resolution." alt="" coords="1445,254,1693,281"/>
+</map>

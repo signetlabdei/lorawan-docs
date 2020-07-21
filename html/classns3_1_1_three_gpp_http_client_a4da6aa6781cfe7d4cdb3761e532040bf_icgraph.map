@@ -1,0 +1,8 @@
+<map id="ns3::ThreeGppHttpClient::EnterParsingTime" name="ns3::ThreeGppHttpClient::EnterParsingTime">
+<area shape="rect" id="node1" title="Becomes idle for a randomly determined amount of time, and then triggers ParseMainObject()." alt="" coords="1205,35,1388,76"/>
+<area shape="rect" id="node2" href="$classns3_1_1_three_gpp_http_client.html#a14947d4a5930fdaaaaa06def462de64f" title="Receive a packet of main object from the destination web server." alt="" coords="975,35,1157,76"/>
+<area shape="rect" id="node3" href="$classns3_1_1_three_gpp_http_client.html#ae67fed74a7aff8ad27098bdaea37ae6c" title="Invoked when m_socket receives some packet data." alt="" coords="744,35,927,76"/>
+<area shape="rect" id="node4" href="$classns3_1_1_three_gpp_http_client.html#a7516067e98bc29325cbfade8249d7778" title="Invoked when a connection is established successfully on m_socket." alt="" coords="467,5,696,47"/>
+<area shape="rect" id="node5" href="$classns3_1_1_three_gpp_http_client.html#af7baacf9ee03e8e47a1694bff146031f" title="Initialize m_socket to connect to the destination web server at m_remoteServerAddress and m_remoteSer..." alt="" coords="236,35,419,76"/>
+<area shape="rect" id="node6" href="$classns3_1_1_three_gpp_http_client.html#a0fcfc1bf98f9570603572288324f2f89" title="Application specific startup code." alt="" coords="5,35,188,76"/>
+</map>

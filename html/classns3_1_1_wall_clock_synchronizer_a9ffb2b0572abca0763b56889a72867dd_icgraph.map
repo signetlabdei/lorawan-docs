@@ -1,0 +1,12 @@
+<map id="ns3::WallClockSynchronizer::GetRealtime" name="ns3::WallClockSynchronizer::GetRealtime">
+<area shape="rect" id="node1" title="Get the current absolute real time (in ns since the epoch)." alt="" coords="1008,104,1211,145"/>
+<area shape="rect" id="node2" href="$classns3_1_1_wall_clock_synchronizer.html#a02506cfe3b04fc38adf900dde5785d49" title="Establish a correspondence between a simulation time and a wall&#45;clock (real) time." alt="" coords="757,71,960,112"/>
+<area shape="rect" id="node3" href="$classns3_1_1_wall_clock_synchronizer.html#a1a9757f294c7677e211b19ef10867780" title="Get the current normalized real time, in ns." alt="" coords="757,136,960,177"/>
+<area shape="rect" id="node4" href="$classns3_1_1_wall_clock_synchronizer.html#adcd280b6ae11a7a1e3f9c4ee6a99aff3" title="Return the amount of real time elapsed since the last call to EventStart." alt="" coords="507,5,709,47"/>
+<area shape="rect" id="node5" href="$classns3_1_1_wall_clock_synchronizer.html#ac38fdef4f4c95aff0db1a5873415eadf" title="Record the normalized real time at which the current event is starting execution." alt="" coords="507,71,709,112"/>
+<area shape="rect" id="node6" href="$classns3_1_1_wall_clock_synchronizer.html#a8cf87080dc50fa9713ae182bfdd3155e" title="Retrieve the value of the origin of the underlying normalized wall clock time in Time resolution unit..." alt="" coords="507,136,709,177"/>
+<area shape="rect" id="node7" href="$classns3_1_1_wall_clock_synchronizer.html#a8f7eb1d2c3fd95183d566f8aa67a4282" title="Get the drift between the real time clock used to synchronize the simulation and the current simulati..." alt="" coords="507,201,709,243"/>
+<area shape="rect" id="node10" href="$classns3_1_1_wall_clock_synchronizer.html#aa236882980f6c82e0e7f716e670e5c1f" title="Do a busy&#45;wait until the normalized realtime equals the argument or the condition variable becomes tr..." alt="" coords="256,267,459,308"/>
+<area shape="rect" id="node8" href="$classns3_1_1_wall_clock_synchronizer.html#a2239c8d81f229d97bf4a3585031fb5ea" title="Wait until the real time is in sync with the specified simulation time." alt="" coords="5,201,208,243"/>
+<area shape="rect" id="node9" href="$classns3_1_1_wall_clock_synchronizer.html#af9eaa5c3014c416b69176fa2234aee90" title="Compute a correction to the nominal delay to account for realtime drift since the last DoSynchronize." alt="" coords="256,201,459,243"/>
+</map>

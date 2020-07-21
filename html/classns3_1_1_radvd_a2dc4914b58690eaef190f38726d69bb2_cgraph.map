@@ -1,0 +1,52 @@
+<map id="ns3::Radvd::Send" name="ns3::Radvd::Send">
+<area shape="rect" id="node1" title="Send a packet." alt="" coords="5,1365,140,1392"/>
+<area shape="rect" id="node2" href="$classns3_1_1_packet.html#a465108c595a0bc592095cbcab1832ed8" title="Add header to this packet." alt="" coords="241,136,417,163"/>
+<area shape="rect" id="node9" href="$classns3_1_1_packet.html#ac4a6bcd77e58bdc14c42a7d572d66cc9" title="Add a packet tag." alt="" coords="523,325,718,352"/>
+<area shape="rect" id="node10" href="$classns3_1_1_icmpv6_header.html#aa0598a05dad2904576ed853885f4ed40" title="Calculate pseudo header checksum for IPv6." alt="" coords="206,49,451,90"/>
+<area shape="rect" id="node11" href="$classns3_1_1_inet6_socket_address.html#a2177c66e1bcf17c85dcffb9d2a971f5a" title="Convert the address to a InetSocketAddress." alt="" coords="238,238,419,279"/>
+<area shape="rect" id="node12" href="$classns3_1_1_ipv6_address.html#a11e6e4228d3d6e814b2c5ffc18c8ed20" title="Get the &quot;all nodes multicast&quot; address." alt="" coords="238,303,419,345"/>
+<area shape="rect" id="node13" href="$classns3_1_1_radvd_interface.html#ad604a733d9527299ed7afbbda1b9f854" title="Get current hop limit." alt="" coords="253,369,405,410"/>
+<area shape="rect" id="node14" href="$classns3_1_1_radvd_interface.html#a57d3a6430d668d4be4ff92f958c4522f" title="Get default lifetime." alt="" coords="250,434,407,475"/>
+<area shape="rect" id="node15" href="$classns3_1_1_radvd_interface.html#a78f1919853a80762898118992718c4f2" title="Get interface index for this configuration." alt="" coords="253,499,405,541"/>
+<area shape="rect" id="node16" href="$classns3_1_1_inet6_socket_address.html#a5f0d6425ae43b8c72fc6eaa1645a0d68" title="Get the IPv6 address." alt="" coords="238,565,419,606"/>
+<area shape="rect" id="node17" href="$classns3_1_1_radvd_interface.html#ad97748cd94c2a118bd18c10aec0b2a8b" title="Get link MTU." alt="" coords="253,630,405,671"/>
+<area shape="rect" id="node18" href="$classns3_1_1_radvd_interface.html#a73e048daf01dd4ed496ee3e67d372cf8" title="Get maximum RA interval." alt="" coords="241,695,416,737"/>
+<area shape="rect" id="node19" href="$classns3_1_1_radvd_interface.html#a7ad4d8cf49bf732ebeed3b13d21bd20c" title="Get minimum RA interval." alt="" coords="243,761,414,802"/>
+<area shape="rect" id="node20" href="$classns3_1_1_application.html#ae87f816b1c745a1ce9d9a966c5bdb72f" title=" " alt="" coords="233,827,424,853"/>
+<area shape="rect" id="node21" href="$classns3_1_1_object.html#a817117ab236e4ff7f80f0239d4e28731" title="Get a pointer to the requested aggregated Object." alt="" coords="245,877,413,904"/>
+<area shape="rect" id="node22" href="$classns3_1_1_radvd_interface.html#a815b0ab328f1f1e2ec07306ab7f3dc23" title="Get list of prefixes advertised for this interface." alt="" coords="253,929,405,970"/>
+<area shape="rect" id="node23" href="$classns3_1_1_radvd_interface.html#a92c7736d2c78cdc4b598ff35ed13bc54" title="Get reachable time." alt="" coords="252,994,405,1035"/>
+<area shape="rect" id="node24" href="$classns3_1_1_radvd_interface.html#a89131e89b387aa1d44c14d46d4e882f4" title="Get retransmission timer." alt="" coords="253,1059,405,1101"/>
+<area shape="rect" id="node25" href="$classns3_1_1_icmpv6_r_a.html#ab33249e47b735d4fb4a92833f4db1ce4" title="Get the serialized size." alt="" coords="208,1125,449,1152"/>
+<area shape="rect" id="node26" href="$classns3_1_1_packet.html#afff7cb1ff518ee6dc0d424e10a5ad6ec" title="Returns the the size in bytes of the packet (including the zero&#45;filled initial payload)." alt="" coords="251,1176,406,1203"/>
+<area shape="rect" id="node27" href="$classns3_1_1_uniform_random_variable.html#a03822d8c86ac51e9aa83bbc73041386b" title="Get the next random value, as a double in the specified range ." alt="" coords="221,1227,436,1269"/>
+<area shape="rect" id="node28" href="$classns3_1_1_radvd_interface.html#a91798bfbca2266053ed3e23079a097ad" title="Is &quot;home agent&quot; flag enabled ?" alt="" coords="253,1293,405,1334"/>
+<area shape="rect" id="node29" href="$classns3_1_1_radvd_interface.html#a37f4bc41cbfe6c4ada689b2f7e5d197f" title="Checks if the interface is subject to the initial Rtr Advertisements rule." alt="" coords="253,1358,405,1399"/>
+<area shape="rect" id="node30" href="$classns3_1_1_radvd_interface.html#af867433049efe8b5859f0481a1e747b8" title="Is managed flag enabled ?" alt="" coords="253,1423,405,1465"/>
+<area shape="rect" id="node31" href="$classns3_1_1_radvd_interface.html#aca9191506dadf37d6252c27bfcf6e09d" title="Is &quot;other config&quot; flag enabled ?" alt="" coords="253,1489,405,1530"/>
+<area shape="rect" id="node32" href="$classns3_1_1_radvd_interface.html#af37b1cfe8e73fc43a6c2dfe6b9195e92" title="Is source LLA option should be included in RA ?" alt="" coords="253,1554,405,1595"/>
+<area shape="rect" id="node33" href="$group__timecivil.html#gaf26127cf4571146b83a92ee18679c7a9" title=" " alt="" coords="261,1620,396,1647"/>
+<area shape="rect" id="node34" href="$classns3_1_1_simulator.html#ac3178fa975b419f7875e7105be122800" title="Return the current simulation virtual time." alt="" coords="252,1671,405,1697"/>
+<area shape="rect" id="node35" href="$global-router-interface_8cc.html#af2f17e24d29f39f6804d0d10d8cedc71" title=" " alt="" coords="268,1721,389,1748"/>
+<area shape="rect" id="node36" href="$classns3_1_1_simulator.html#a671882c894a08af4a5e91181bf1eec13" title="Schedule an event to expire after delay." alt="" coords="237,1772,420,1799"/>
+<area shape="rect" id="node37" href="$classns3_1_1_icmpv6_r_a.html#a5a507ccaa90dde3818a86e7744d7ef46" title="Set the IPv6 maximum number of jumps." alt="" coords="231,1823,427,1865"/>
+<area shape="rect" id="node38" href="$classns3_1_1_icmpv6_r_a.html#a4c3df0d2356b15dcbb5e003e1774a289" title="Set the H flag." alt="" coords="235,1889,422,1916"/>
+<area shape="rect" id="node39" href="$classns3_1_1_icmpv6_r_a.html#a60e350a958ac8ddf084ef82120dbdf82" title="Set the M flag." alt="" coords="235,1940,423,1967"/>
+<area shape="rect" id="node40" href="$classns3_1_1_icmpv6_r_a.html#a5af84e63d720d64e1a43727ecba29f77" title="Set the O flag." alt="" coords="235,1991,422,2017"/>
+<area shape="rect" id="node41" href="$classns3_1_1_icmpv6_option_prefix_information.html#a76d4d16a225d0a273d1920d37fd24337" title="Set the flags." alt="" coords="199,2042,458,2083"/>
+<area shape="rect" id="node42" href="$classns3_1_1_radvd_interface.html#a67bfe7283e422f471ea31b3ad2bd17fa" title="Set the last RA send time." alt="" coords="253,2107,405,2149"/>
+<area shape="rect" id="node43" href="$classns3_1_1_icmpv6_r_a.html#a103f5d0fefed7ba9adcf96ed92d2c47f" title="Set the node Life time (Neighbor Discovery)." alt="" coords="227,2173,431,2200"/>
+<area shape="rect" id="node44" href="$classns3_1_1_icmpv6_option_prefix_information.html#ab329e95c80f0d20344ab78d1208e14b8" title="Set the preferred time of the information." alt="" coords="199,2225,458,2266"/>
+<area shape="rect" id="node45" href="$classns3_1_1_icmpv6_option_prefix_information.html#a3b8d5080ea33c4a9711f1c6caab2b990" title="Set the IPv6 prefix." alt="" coords="199,2290,458,2331"/>
+<area shape="rect" id="node46" href="$classns3_1_1_icmpv6_option_prefix_information.html#a8ff2a9422e79f88f79dc430a0740fa4f" title="Set the prefix length." alt="" coords="199,2355,458,2397"/>
+<area shape="rect" id="node47" href="$classns3_1_1_icmpv6_r_a.html#a66568d3ab181bd0c187d634d78d91c24" title="Set the node Reachable time (Neighbor Discovery)." alt="" coords="205,2421,453,2448"/>
+<area shape="rect" id="node48" href="$classns3_1_1_icmpv6_r_a.html#a4d725d41eded89e8f40f781412adac8a" title="Set the node Retransmission time (Neighbor Discovery)." alt="" coords="188,2472,469,2499"/>
+<area shape="rect" id="node49" href="$classns3_1_1_socket_ip_ttl_tag.html#a48f236b4dde3533b9ab16372cf6c5237" title="Set the tag&#39;s TTL." alt="" coords="255,2523,402,2565"/>
+<area shape="rect" id="node50" href="$classns3_1_1_icmpv6_option_prefix_information.html#a347652a0be0124b4fbd167116d0a84f1" title="Set the valid time of the information." alt="" coords="199,2589,458,2630"/>
+<area shape="rect" id="node3" href="$classns3_1_1_byte_tag_list.html#acb4563fbe4299c55af41ba7a166b71d5" title="Make sure that all offsets are bigger than prependOffset which represents the location where new byte..." alt="" coords="517,157,724,184"/>
+<area shape="rect" id="node4" href="$classns3_1_1_buffer.html#a8abd8164c3671d3dadc98fc66fade7b1" title=" " alt="" coords="535,5,706,32"/>
+<area shape="rect" id="node5" href="$classns3_1_1_packet_metadata.html#abdce736c4c5f647242f0808c0d2f9249" title="Add an header." alt="" coords="541,209,700,250"/>
+<area shape="rect" id="node6" href="$classns3_1_1_object_base.html#abe5b43a6f5b99a92a4c3122db31f06fb" title="Get the most derived TypeId for this Object." alt="" coords="772,267,985,309"/>
+<area shape="rect" id="node7" href="$classns3_1_1_byte_tag_list.html#a1fec06d7e6daaf8039cf2a148e4090f2" title="Adjust the offsets stored internally by the adjustment delta." alt="" coords="532,107,709,133"/>
+<area shape="rect" id="node8" href="$classns3_1_1_buffer.html#acb977a0179de9abe4e295ce22023b4ca" title=" " alt="" coords="551,56,690,83"/>
+</map>

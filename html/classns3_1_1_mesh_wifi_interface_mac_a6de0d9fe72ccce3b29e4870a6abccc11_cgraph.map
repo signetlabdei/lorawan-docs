@@ -1,0 +1,52 @@
+<map id="ns3::MeshWifiInterfaceMac::ScheduleNextBeacon" name="ns3::MeshWifiInterfaceMac::ScheduleNextBeacon">
+<area shape="rect" id="node1" title="Schedule next beacon." alt="" coords="5,872,204,913"/>
+<area shape="rect" id="node2" href="$classns3_1_1_mesh_wifi_interface_mac.html#aaa37f89e835ac4ab27c8f356f162ef34" title=" " alt="" coords="252,784,451,825"/>
+<area shape="rect" id="node3" href="$classns3_1_1_simulator.html#a671882c894a08af4a5e91181bf1eec13" title="Schedule an event to expire after delay." alt="" coords="260,850,443,877"/>
+<area shape="rect" id="node4" href="$classns3_1_1_mesh_wifi_interface_mac.html#ad83362b1af946376ee349a8ea0c4d7ba" title="Send beacon." alt="" coords="252,901,451,943"/>
+<area shape="rect" id="node5" href="$classns3_1_1_mesh_wifi_beacon.html#a10959c88ec9587162cfebd1332e65a1b" title="Create Wifi header for beacon frame." alt="" coords="521,235,683,276"/>
+<area shape="rect" id="node14" href="$classns3_1_1_mesh_wifi_beacon.html#a826279378f1756d0f201bae17bbdae90" title="Create frame = { beacon header + all information elements sorted by ElementId () }." alt="" coords="521,523,683,564"/>
+<area shape="rect" id="node25" href="$classns3_1_1_regular_wifi_mac.html#aec7ede7cc93b6ec04d447b1649ab27e8" title=" " alt="" coords="524,836,680,877"/>
+<area shape="rect" id="node26" href="$classns3_1_1_mesh_wifi_interface_mac.html#a989481870bdae5c83dd463aacc07e52a" title=" " alt="" coords="503,901,701,943"/>
+<area shape="rect" id="node27" href="$classns3_1_1_time.html#a0b012c8e774fc7b96cad91a05c8e0122" title="Get an approximation of the time stored in this instance in the indicated unit." alt="" coords="499,967,705,994"/>
+<area shape="rect" id="node29" href="$classns3_1_1_regular_wifi_mac.html#acffe8d4db892391c9fe5f2365edeb4b5" title=" " alt="" coords="524,1019,680,1060"/>
+<area shape="rect" id="node30" href="$classns3_1_1_mesh_wifi_interface_mac.html#ae564ee657ce84f1023eabfd6d3e474a4" title=" " alt="" coords="503,1287,701,1328"/>
+<area shape="rect" id="node42" href="$classns3_1_1_event_id.html#a8b41e6f8c54db6bede8a7dcaf917074a" title="This method is syntactic sugar for !IsExpired()." alt="" coords="515,1519,689,1546"/>
+<area shape="rect" id="node44" href="$classns3_1_1_txop.html#ae0a0bbafaed367559bce8c10c184666f" title=" " alt="" coords="535,781,669,807"/>
+<area shape="rect" id="node6" href="$classns3_1_1_mac48_address.html#a55156e302c6bf950c0b558365adbde84" title=" " alt="" coords="792,5,948,47"/>
+<area shape="rect" id="node8" href="$classns3_1_1_wifi_mac_header.html#a6478a02b80d5c01657714c5c7a0ae1cb" title="Fill the Address 1 field with the given address." alt="" coords="793,71,947,112"/>
+<area shape="rect" id="node9" href="$classns3_1_1_wifi_mac_header.html#ab6a0efdc43d39b5da5d17eae9665271d" title="Fill the Address 2 field with the given address." alt="" coords="793,136,947,177"/>
+<area shape="rect" id="node10" href="$classns3_1_1_wifi_mac_header.html#ace2fd1624db247bd42cbe9182996bb0e" title="Fill the Address 3 field with the given address." alt="" coords="793,201,947,243"/>
+<area shape="rect" id="node11" href="$classns3_1_1_wifi_mac_header.html#a02edeb349da4aacc6b376fcf76ff99cc" title="Un&#45;set the From DS bit in the Frame Control field." alt="" coords="793,267,947,308"/>
+<area shape="rect" id="node12" href="$classns3_1_1_wifi_mac_header.html#a977cd5a09062bfc3660a23acdebd75ec" title="Un&#45;set the To DS bit in the Frame Control field." alt="" coords="793,332,947,373"/>
+<area shape="rect" id="node13" href="$classns3_1_1_wifi_mac_header.html#a71172371f11f1cfcb3912bb03134c285" title="Set Type/Subtype values with the correct values depending on the given type." alt="" coords="793,397,947,439"/>
+<area shape="rect" id="node7" href="$classns3_1_1_mac48_address.html#a17882c09fc6317d5bcf4efdb62a37d07" title=" " alt="" coords="1073,5,1229,47"/>
+<area shape="rect" id="node15" href="$classns3_1_1_packet.html#a465108c595a0bc592095cbcab1832ed8" title="Add header to this packet." alt="" coords="782,463,958,490"/>
+<area shape="rect" id="node24" href="$classns3_1_1_mesh_wifi_beacon.html#a884124ca09af666565d56f664121c523" title="Read standard Wifi beacon header." alt="" coords="789,523,951,564"/>
+<area shape="rect" id="node16" href="$classns3_1_1_byte_tag_list.html#acb4563fbe4299c55af41ba7a166b71d5" title="Make sure that all offsets are bigger than prependOffset which represents the location where new byte..." alt="" coords="1048,241,1255,267"/>
+<area shape="rect" id="node17" href="$classns3_1_1_buffer.html#a8abd8164c3671d3dadc98fc66fade7b1" title=" " alt="" coords="1066,291,1237,318"/>
+<area shape="rect" id="node18" href="$classns3_1_1_packet_metadata.html#abdce736c4c5f647242f0808c0d2f9249" title="Add an header." alt="" coords="1072,393,1231,435"/>
+<area shape="rect" id="node19" href="$classns3_1_1_object_base.html#abe5b43a6f5b99a92a4c3122db31f06fb" title="Get the most derived TypeId for this Object." alt="" coords="1316,393,1529,435"/>
+<area shape="rect" id="node20" href="$classns3_1_1_byte_tag_list.html#a1fec06d7e6daaf8039cf2a148e4090f2" title="Adjust the offsets stored internally by the adjustment delta." alt="" coords="1063,459,1240,486"/>
+<area shape="rect" id="node21" href="$classns3_1_1_buffer.html#acb977a0179de9abe4e295ce22023b4ca" title=" " alt="" coords="1082,510,1221,537"/>
+<area shape="rect" id="node22" href="$classns3_1_1_type_id.html#abc4965475a579c2afdc668d7a7d58374" title="Get the name." alt="" coords="1069,611,1234,638"/>
+<area shape="rect" id="node23" href="$classns3_1_1_header.html#a6ef0497eabc1b1fb0ad42738eb73f934" title=" " alt="" coords="1040,561,1263,587"/>
+<area shape="rect" id="node28" href="$classns3_1_1_time.html#a4bd2d3c8a919e4b57e60692b53db4a61" title="Get the Time value expressed in a particular unit." alt="" coords="793,970,947,997"/>
+<area shape="rect" id="node31" href="$classns3_1_1_supported_rates.html#aeaee0cacfafe73f0c661cceaf53da0f3" title="Add the given rate to the supported rates." alt="" coords="1073,1043,1229,1084"/>
+<area shape="rect" id="node32" href="$namespacens3.html#a979caa1d7cbfc08ececb6fd3ad561e26" title="Convert the guard interval to nanoseconds based on the WifiMode." alt="" coords="773,1137,967,1179"/>
+<area shape="rect" id="node33" href="$classns3_1_1_wifi_remote_station_manager.html#ab239018079ee424c7dfe9a81b4abc3b0" title="Return a basic mode from the set of basic modes." alt="" coords="753,1255,987,1296"/>
+<area shape="rect" id="node34" href="$classns3_1_1_wifi_remote_station_manager.html#a433cd6f0f2b9ab512fb4c2578e661ebb" title="Return the number of basic modes we support." alt="" coords="1035,1225,1268,1267"/>
+<area shape="rect" id="node35" href="$classns3_1_1_wifi_phy.html#af55a96fc67e724abd99aeaeab826187f" title=" " alt="" coords="777,1320,963,1361"/>
+<area shape="rect" id="node36" href="$classns3_1_1_wifi_mode.html#ad90f36e733ceaf8c5771cfbda437e14f" title=" " alt="" coords="767,1386,973,1413"/>
+<area shape="rect" id="node37" href="$classns3_1_1_wifi_phy.html#a6bc056d30b3942be3cb0459096385e56" title=" " alt="" coords="759,1437,981,1463"/>
+<area shape="rect" id="node38" href="$classns3_1_1_wifi_phy.html#aa1b9ecfcc6436b8882af36500cb0a2ea" title="The WifiPhy::GetNModes() and WifiPhy::GetMode() methods are used (e.g., by a WifiRemoteStationManager..." alt="" coords="785,1487,955,1514"/>
+<area shape="rect" id="node39" href="$classns3_1_1_wifi_phy.html#a978d3a554116b0654c40fc22e469ceaa" title="The WifiPhy::GetNModes() and WifiPhy::GetMode() methods are used (e.g., by a WifiRemoteStationManager..." alt="" coords="777,1538,963,1565"/>
+<area shape="rect" id="node40" href="$classns3_1_1_wifi_phy.html#a8371199e86407919480c847d16462240" title="Return whether short guard interval is supported." alt="" coords="767,1589,973,1631"/>
+<area shape="rect" id="node41" href="$classns3_1_1_supported_rates.html#a117effc01647a6906db8da917695bcad" title="Set the given rate to basic rates." alt="" coords="792,1072,948,1113"/>
+<area shape="rect" id="node43" href="$classns3_1_1_event_id.html#acc25141054209b1a286a5471a51bd0c0" title="This method is syntactic sugar for the ns3::Simulator::IsExpired method." alt="" coords="785,1655,955,1682"/>
+<area shape="rect" id="node45" href="$classns3_1_1_txop.html#ae211c699c905b2186281923353ba0a26" title="Generate a new backoff now." alt="" coords="769,657,971,683"/>
+<area shape="rect" id="node46" href="$classns3_1_1_wifi_mac_header.html#aa1c4acbda4ace9f7a920c97d71bdd097" title="Return the address in the Address 1 field." alt="" coords="793,708,947,749"/>
+<area shape="rect" id="node47" href="$classns3_1_1_channel_access_manager.html#ad7a1a64ddd5206865b5989d9401b70ee" title="Determine if a new backoff needs to be generated when a packet is queued for transmission." alt="" coords="766,773,974,815"/>
+<area shape="rect" id="node48" href="$classns3_1_1_wifi_remote_station_manager.html#a38a2549c86091c3ca7eba3841f0060d3" title=" " alt="" coords="753,839,987,880"/>
+<area shape="rect" id="node49" href="$classns3_1_1_packet.html#a078fe922d976a417ab25ba2f3c2fd667" title="Remove a packet tag." alt="" coords="759,606,981,633"/>
+<area shape="rect" id="node50" href="$classns3_1_1_txop.html#afd99f40351a5b67181f14008d0751075" title="Request access from Txop if needed." alt="" coords="781,904,959,945"/>
+</map>

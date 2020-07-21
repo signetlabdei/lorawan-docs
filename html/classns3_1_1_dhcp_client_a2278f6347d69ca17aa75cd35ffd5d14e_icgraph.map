@@ -1,0 +1,10 @@
+<map id="ns3::DhcpClient::Select" name="ns3::DhcpClient::Select">
+<area shape="rect" id="node1" title="Selects an OFFER from m_offerList." alt="" coords="1556,173,1728,199"/>
+<area shape="rect" id="node2" href="$classns3_1_1_dhcp_client.html#aa0475bb3e7bd6c56b29a9e1373108b23" title="Stores DHCP offers in m_offerList." alt="" coords="1292,122,1508,149"/>
+<area shape="rect" id="node8" href="$classns3_1_1_dhcp_client.html#a8c1a264b19c02d331f0e51f9be84b09a" title="Sends the DHCP REQUEST message and changes the client state to WAIT_ACK." alt="" coords="1307,173,1493,199"/>
+<area shape="rect" id="node3" href="$classns3_1_1_dhcp_client.html#ae7a2dde0056ad591a05f84b2a404c213" title="Handles incoming packets from the network." alt="" coords="1037,97,1244,123"/>
+<area shape="rect" id="node4" href="$classns3_1_1_dhcp_client.html#a3cabbf48dc583a62f0390f345cd4952f" title="Handles changes in LinkState." alt="" coords="796,5,989,47"/>
+<area shape="rect" id="node5" href="$classns3_1_1_dhcp_client.html#ab03efa3292800ecd9cb99968cafddee3" title="Application specific startup code." alt="" coords="512,26,748,53"/>
+<area shape="rect" id="node6" href="$classns3_1_1_dhcp_client.html#a333fc2ff1440b01d15b9631490e23289" title="Remove the current DHCP information and restart the process." alt="" coords="253,31,464,72"/>
+<area shape="rect" id="node7" href="$classns3_1_1_dhcp_client.html#aeec11ad69df96e12a053410cce443f95" title="Receives the DHCP ACK and configures IP address of the client." alt="" coords="5,122,205,149"/>
+</map>

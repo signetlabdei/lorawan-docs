@@ -1,0 +1,5 @@
+<map id="ns3::EventGarbageCollector::Cleanup" name="ns3::EventGarbageCollector::Cleanup">
+<area shape="rect" id="node1" title="Called when a new event was added and the cleanup limit was exceeded in consequence." alt="" coords="5,5,208,47"/>
+<area shape="rect" id="node2" href="$classns3_1_1_event_garbage_collector.html#ac640851cdfce5f4d8eb3a2c81da04f4f" title="Grow the cleanup limit." alt="" coords="507,5,709,47"/>
+<area shape="rect" id="node3" href="$classns3_1_1_event_garbage_collector.html#ae99cf72d153cc5dfbab1ba9326baab05" title="Shrink the cleanup limit Reduce the cleanup size by factors of two until less than the current event ..." alt="" coords="256,35,459,76"/>
+</map>

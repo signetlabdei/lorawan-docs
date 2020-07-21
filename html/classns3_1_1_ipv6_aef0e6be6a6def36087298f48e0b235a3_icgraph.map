@@ -1,0 +1,24 @@
+<map id="ns3::Ipv6::GetProtocol" name="ns3::Ipv6::GetProtocol">
+<area shape="rect" id="node1" title="Get L4 protocol by protocol number." alt="" coords="1471,107,1636,134"/>
+<area shape="rect" id="node2" href="$classns3_1_1_ipv6_interface.html#a8faa5a72b30720eb01f9fc1d1113ad19" title="Add an IPv6 address." alt="" coords="1284,41,1423,83"/>
+<area shape="rect" id="node5" href="$classns3_1_1_ipv6_interface.html#a394066472c703fcf39d17f1bfcc9191e" title="Initialize interface." alt="" coords="1082,71,1221,112"/>
+<area shape="rect" id="node8" href="$classns3_1_1_ipv6_interface.html#aa3be8d7a7f0d8232e2ec9e900a98f727" title="Send a packet through this interface." alt="" coords="1284,233,1423,275"/>
+<area shape="rect" id="node3" href="$classns3_1_1_ipv6_l3_protocol.html#a33135677dcaa195be223eaf4f38a6efe" title="Add an address on interface." alt="" coords="1077,5,1226,47"/>
+<area shape="rect" id="node4" href="$classns3_1_1_ipv6_l3_protocol.html#a1806de87b35929a2181c2985e5df1ec0" title="Add an autoconfigured address with RA information." alt="" coords="812,5,1019,47"/>
+<area shape="rect" id="node6" href="$classns3_1_1_ipv6_interface.html#a9db98f98cc682a2395fe582bfb511880" title="Enable this interface." alt="" coords="846,71,985,112"/>
+<area shape="rect" id="node7" href="$classns3_1_1_ipv6_l3_protocol.html#a834eba3100efc8f71e5292bbfdcde6e6" title="Set an interface up." alt="" coords="615,71,764,112"/>
+<area shape="rect" id="node9" href="$classns3_1_1_icmpv6_l4_protocol.html#a6c3a2ecce98fa29743eb177b613490e5" title="Receive Neighbor Advertisement method." alt="" coords="1067,136,1236,177"/>
+<area shape="rect" id="node10" href="$classns3_1_1_icmpv6_l4_protocol.html#acec910926a1fdbbea699c10d638aa704" title="Receive Neighbor Solicitation method." alt="" coords="1067,201,1236,243"/>
+<area shape="rect" id="node11" href="$classns3_1_1_icmpv6_l4_protocol.html#a31342a8123eab651a5cabd1a197b0145" title="Receive method." alt="" coords="1067,267,1236,308"/>
+<area shape="rect" id="node12" href="$classns3_1_1_icmpv6_l4_protocol.html#ad6670739eba9c44ba37bf9644bfcdde5" title="Link layer address option processing." alt="" coords="1067,332,1236,373"/>
+<area shape="rect" id="node14" href="$classns3_1_1_ipv6_l3_protocol.html#adad363af4c50cd94505b918b15f228d4" title="Send packet with route." alt="" coords="1077,413,1226,455"/>
+<area shape="rect" id="node13" href="$classns3_1_1_icmpv6_l4_protocol.html#af1a56b5658c12d34615aa712758359d5" title="Receive Router Advertisement method." alt="" coords="831,315,1000,356"/>
+<area shape="rect" id="node15" href="$classns3_1_1_ipv6_l3_protocol.html#ac956e0aaed5e961b6c25210c2b696da6" title="Forward a packet." alt="" coords="841,380,990,421"/>
+<area shape="rect" id="node21" href="$classns3_1_1_ipv6_l3_protocol.html#aa65d2e4894ea499415227e232e854824" title="Forward a multicast packet." alt="" coords="838,445,993,487"/>
+<area shape="rect" id="node22" href="$classns3_1_1_ipv6_l3_protocol.html#ac281dd6c5aff55330904e7a298c1881b" title="Higher&#45;level layers call this method to send a packet down the stack to the MAC and PHY layers." alt="" coords="841,511,990,552"/>
+<area shape="rect" id="node16" href="$classns3_1_1_ipv6_l3_protocol.html#a8a95d576e8aee9a571db93bf686d850a" title="Receive method when a packet arrive in the stack." alt="" coords="615,412,764,453"/>
+<area shape="rect" id="node17" href="$classns3_1_1_ipv6_l3_protocol.html#a56047c2ee7db15185af07538c609cbb5" title="Add IPv6 interface for a device." alt="" coords="417,379,567,420"/>
+<area shape="rect" id="node18" href="$classns3_1_1_ipv6_l3_protocol.html#a69a1ef7b49dd3aa80c6807f467720005" title="Setup loopback interface." alt="" coords="417,444,567,485"/>
+<area shape="rect" id="node19" href="$classns3_1_1_ipv6_l3_protocol.html#a53796a2747cb5edcd1c762f44043b061" title="Set node associated with this stack." alt="" coords="220,444,369,485"/>
+<area shape="rect" id="node20" href="$classns3_1_1_ipv6_l3_protocol.html#ae07ff89952d068d18fb5650ffd1f5378" title="Notify other components connected to the node that a new stack member is now connected." alt="" coords="5,444,172,485"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="ns3::CandidateQueue::Push" name="ns3::CandidateQueue::Push">
+<area shape="rect" id="node1" title="Push a Shortest Path First Vertex pointer onto the queue according to the priority scheme." alt="" coords="1068,5,1229,47"/>
+<area shape="rect" id="node2" href="$class_global_route_manager_impl_test_case.html#aed56fd8ecbd7ecaa5473b9793d0befc1" title="Implementation to actually run this TestCase." alt="" coords="5,5,220,47"/>
+<area shape="rect" id="node3" href="$classns3_1_1_global_route_manager_impl.html#aaa3d86729d6cfb61708d1c7083423da6" title="Examine the links in v&#39;s LSA and update the list of candidates with any vertices not already on the l..." alt="" coords="801,35,1020,76"/>
+<area shape="rect" id="node4" href="$classns3_1_1_global_route_manager_impl.html#a03cdea3013a73c90ae8d67946b237c45" title="Calculate the shortest path first (SPF) tree." alt="" coords="535,35,753,76"/>
+<area shape="rect" id="node5" href="$classns3_1_1_global_route_manager_impl.html#aaa692001ef22911e3483583b0de78909" title="Debugging routine; call the core SPF from the unit tests." alt="" coords="268,35,487,76"/>
+<area shape="rect" id="node6" href="$classns3_1_1_global_route_manager_impl.html#a25f57b2c41927c1a3f0bbba596accb6b" title="Compute routes using a Dijkstra SPF computation and populate per&#45;node forwarding tables." alt="" coords="268,100,487,141"/>
+</map>

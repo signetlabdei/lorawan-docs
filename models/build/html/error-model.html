@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Error Model &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Node and NetDevices Overview" href="network-overview.html" />
+    <link rel="prev" title="Packets" href="packets.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="network-overview.html" title="Node and NetDevices Overview"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="packets.html" title="Packets"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="network.html" accesskey="U">Network Module</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="error-model">
+<h1>Error Model<a class="headerlink" href="#error-model" title="Permalink to this headline">¶</a></h1>
+<p>This section documents a few error model objects, typically associated with
+NetDevice models, that are maintained as part of the <code class="docutils literal notranslate"><span class="pre">network</span></code> module:</p>
+<ul class="simple">
+<li><p>RateErrorModel</p></li>
+<li><p>ListErrorModel</p></li>
+<li><p>ReceiveListErrorModel</p></li>
+<li><p>BurstErrorModel</p></li>
+</ul>
+<p>Error models are used to indicate that a packet should be considered to
+be errored, according to the underlying (possibly stochastic or
+empirical) error model.</p>
+<div class="section" id="model-description">
+<h2>Model Description<a class="headerlink" href="#model-description" title="Permalink to this headline">¶</a></h2>
+<p>The source code for error models live in the directory <code class="docutils literal notranslate"><span class="pre">src/packet/utils</span></code>.</p>
+<p>Two types of error models are generally provided.  The first are stochastic
+models.  In this case, packets are errored according to underlying
+random variable distributions.  An example of this is the <code class="docutils literal notranslate"><span class="pre">RateErrorModel</span></code>.
+The other type of model is a deterministic or empirical model, in which
+packets are errored according to a particular prescribed pattern.
+An example is the <code class="docutils literal notranslate"><span class="pre">ListErrorModel</span></code> that allows users to specify
+the list of packets to be errored, by listing the specific packet UIDs.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ns3::RateErrorModel</span></code> errors packets according to an underlying
+random variable distribution, which is by default a UniformRandomVariable
+distributed between 0.0 and 1.0.  The error rate and error units (bit,
+byte, or packet) are set by the user.  For instance, by setting ErrorRate
+to 0.1 and ErrorUnit to “Packet”, in the long run, around 10% of the
+packets will be lost.</p>
+<div class="section" id="design">
+<h3>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h3>
+<p>Error models are <em>ns-3</em> objects and can be created using the typical
+pattern of <code class="docutils literal notranslate"><span class="pre">CreateObject&lt;&gt;()</span></code>.  They have configuration attributes.</p>
+<p>An ErrorModel can be applied anywhere, but are commonly deployed on
+NetDevice models so that artificial losses (mimicking channel losses)
+can be induced.</p>
+</div>
+<div class="section" id="scope-and-limitations">
+<h3>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Permalink to this headline">¶</a></h3>
+<p>No known limitations.  There are no existing models that try to modify
+the packet contents (e.g. apply bit or byte errors to the byte buffers).
+This type of operation will likely be performance-expensive, and existing
+Packet APIs may not easily support it.</p>
+<p>The <em>ns-3</em> spectrum model and devices that derive from it (e.g. LTE) have
+their own error model base class, found in</p>
+</div>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<p>The initial <em>ns-3</em> error models were ported from ns-2 (queue/errmodel.{cc,h})</p>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>The base class API is as follows:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">ErrorModel::IsCorrupt</span> <span class="pre">(Ptr&lt;Packet&gt;</span> <span class="pre">pkt)</span></code>:  Evaluate the packet and
+return true or false whether the packet should be considered errored or not.
+Some models could potentially alter the contents of the packet bit buffer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">ErrorModel::Reset</span> <span class="pre">(void)</span></code>:  Reset any state.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">ErrorModel::Enable</span> <span class="pre">(void)</span></code>:  Enable the model</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">ErrorModel::Disble</span> <span class="pre">(void)</span></code>:  Disable the model; IsCorrupt() will
+always return false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">ErrorModel::IsEnabled</span> <span class="pre">(void)</span> <span class="pre">const</span></code>:  Return the enabled state</p></li>
+</ul>
+<p>Many <em>ns-3</em> NetDevices contain attributes holding pointers to error
+models.  The error model is applied in the notional physical layer
+processing chain of the device, and drops should show up on the <code class="docutils literal notranslate"><span class="pre">PhyRxDrop</span></code>
+trace source of the device.  The following are known to include an attribute
+with a pointer available to hold this type of error model:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SimpleNetDevice</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PointToPointNetDevice</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CsmaNetDevice</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VirtualNetDevice</span></code></p></li>
+</ul>
+<p>However, the ErrorModel could be used anywhere where packets are used</p>
+<div class="section" id="helpers">
+<h3>Helpers<a class="headerlink" href="#helpers" title="Permalink to this headline">¶</a></h3>
+<p>This model is typically not used with helpers.</p>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">RateErrorModel</span></code> contains the following attributes:</p>
+</div>
+<div class="section" id="output">
+<h3>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h3>
+<p>What kind of data does the model generate?  What are the key trace
+sources?   What kind of logging output can be enabled?</p>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>Error models are used in the tutorial <code class="docutils literal notranslate"><span class="pre">fifth</span></code> and <code class="docutils literal notranslate"><span class="pre">sixth</span></code> programs.</p>
+<p>The directory <code class="docutils literal notranslate"><span class="pre">examples/error-model/</span></code> contains an example
+<code class="docutils literal notranslate"><span class="pre">simple-error-model.cc</span></code> that exercises the Rate and List error models.</p>
+<p>The TCP example <code class="docutils literal notranslate"><span class="pre">examples/tcp/tcp-nsc-lfn.cc</span></code> uses the Rate error model.</p>
+</div>
+<div class="section" id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h3>
+<p>No known issues.</p>
+</div>
+</div>
+<div class="section" id="validation">
+<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">error-model</span></code> unit test suite provides a single test case of
+of a particular combination of ErrorRate and ErrorUnit for the
+<code class="docutils literal notranslate"><span class="pre">RateErrorModel</span></code> applied to a <code class="docutils literal notranslate"><span class="pre">SimpleNetDevice</span></code>.</p>
+</div>
+<div class="section" id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p>The basic ErrorModel, RateErrorModel, and ListErrorModel classes were ported
+from <em>ns-2</em> to <em>ns-3</em> in 2007.  The ReceiveListErrorModel was added at that
+time.</p>
+<p>The burst error model is due to Truc Anh N. Nguyen at the University of
+Kansas (James P.G. Sterbenz &lt;<a class="reference external" href="mailto:jpgs&#37;&#52;&#48;ittc&#46;ku&#46;edu">jpgs<span>&#64;</span>ittc<span>&#46;</span>ku<span>&#46;</span>edu</a>&gt;, director, ResiliNets
+Research Group (<a class="reference external" href="http://wiki.ittc.ku.edu/resilinets">http://wiki.ittc.ku.edu/resilinets</a>), Information and
+Telecommunication Technology Center (ITTC) and Department of Electrical
+Engineering and Computer Science, The University of Kansas Lawrence, KS USA).
+Work supported in part by NSF FIND (Future Internet Design) Program
+under grant CNS-0626918 (Postmodern Internet Architecture),
+NSF grant CNS-1050226 (Multilayer Network Resilience Analysis and
+Experimentation on GENI), US Department of Defense (DoD), and ITTC at
+The University of Kansas.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Error Model</a><ul>
+<li><a class="reference internal" href="#model-description">Model Description</a><ul>
+<li><a class="reference internal" href="#design">Design</a></li>
+<li><a class="reference internal" href="#scope-and-limitations">Scope and Limitations</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#helpers">Helpers</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#output">Output</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#validation">Validation</a></li>
+<li><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="packets.html"
+                        title="previous chapter">Packets</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="network-overview.html"
+                        title="next chapter">Node and NetDevices Overview</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/error-model.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="network-overview.html" title="Node and NetDevices Overview"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="packets.html" title="Packets"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="network.html" >Network Module</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

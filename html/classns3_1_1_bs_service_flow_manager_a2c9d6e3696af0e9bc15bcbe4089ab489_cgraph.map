@@ -1,0 +1,52 @@
+<map id="ns3::BsServiceFlowManager::AllocateServiceFlows" name="ns3::BsServiceFlowManager::AllocateServiceFlows">
+<area shape="rect" id="node1" title="allocate service flows" alt="" coords="5,1101,211,1143"/>
+<area shape="rect" id="node2" href="$classns3_1_1_bs_service_flow_manager.html#afba823b624d516de570c0c7a6312de2b" title="process a DSA&#45;Req message" alt="" coords="259,373,464,415"/>
+<area shape="rect" id="node41" href="$classns3_1_1_bs_service_flow_manager.html#a70acd126e153faa38588075406ec1d5b" title="Create DSA response function." alt="" coords="259,1797,464,1839"/>
+<area shape="rect" id="node3" href="$classns3_1_1_bs_service_flow_manager.html#a9760cac0b022df419803d63dc9e84014" title="Add a new service flow." alt="" coords="550,471,755,512"/>
+<area shape="rect" id="node5" href="$classns3_1_1_service_flow.html#aae60e9fc7ea6b727946980e1ad376da7" title="Copy parameters from another service flow." alt="" coords="512,1006,793,1033"/>
+<area shape="rect" id="node10" href="$classns3_1_1_service_flow.html#abe1a64947ee1a3284902579b0051dd6d" title="Get convergence sublayer." alt="" coords="849,328,1097,369"/>
+<area shape="rect" id="node12" href="$classns3_1_1_service_flow.html#a61db0b7deb382b8d30e8634a59c0fe73" title="Get direction." alt="" coords="861,394,1084,421"/>
+<area shape="rect" id="node31" href="$classns3_1_1_service_flow.html#aad1c966730151db47557cba031d92f3d" title="Get CID." alt="" coords="561,1057,745,1083"/>
+<area shape="rect" id="node32" href="$classns3_1_1_bs_service_flow_manager.html#a0ee9dde79144c0d938fae7d2c53801b9" title=" " alt="" coords="550,5,755,47"/>
+<area shape="rect" id="node34" href="$classns3_1_1_dsa_req.html#a7f831f8455cd2e4dd444f69e9d38d4b9" title=" " alt="" coords="546,71,759,98"/>
+<area shape="rect" id="node35" href="$classns3_1_1_service_flow.html#af1df9f9808c16f8926693accf8e2c24c" title="Get SFID." alt="" coords="559,122,747,149"/>
+<area shape="rect" id="node36" href="$classns3_1_1_dsa_req.html#a627c273273073ccbbba2f0577677468b" title=" " alt="" coords="542,173,763,199"/>
+<area shape="rect" id="node37" href="$ipv4-address-generator_8cc.html#aaf5aa23b804d2e5e334106f207e8a6cc" title=" " alt="" coords="585,223,720,250"/>
+<area shape="rect" id="node38" href="$classns3_1_1_service_flow.html#a81a801e05aac9e7d1cfad3304e1b9d97" title="Set convergence sublayer parameters." alt="" coords="529,275,776,316"/>
+<area shape="rect" id="node39" href="$classns3_1_1_service_flow.html#ac24ac69794285436be39a2e4aef7b805" title="Set unsolicied grant interval." alt="" coords="535,340,770,381"/>
+<area shape="rect" id="node40" href="$classns3_1_1_service_flow.html#ad365ab6833fa3fd889946b4022cc4427" title="Set unsolicited polling interval." alt="" coords="535,405,770,447"/>
+<area shape="rect" id="node4" href="$classns3_1_1_service_flow_manager.html#a0a891935b94be6fcd17690801271c38d" title="Add service flow function." alt="" coords="878,263,1067,304"/>
+<area shape="rect" id="node6" href="$classns3_1_1_service_flow.html#a33a0295331c531a9dab60aea7c81d4ba" title="Get ARQ enable." alt="" coords="880,1501,1065,1543"/>
+<area shape="rect" id="node7" href="$classns3_1_1_service_flow.html#a405698d51eecfff8f3f529516291a7c4" title="Get ARQ retry timeout receive." alt="" coords="880,1567,1065,1608"/>
+<area shape="rect" id="node8" href="$classns3_1_1_service_flow.html#a263b0c707b739a0ec1ca07ffee90cd37" title="Get ARQ retry timeout transmit." alt="" coords="880,1632,1065,1673"/>
+<area shape="rect" id="node9" href="$classns3_1_1_service_flow.html#ac71b4443374d42965cfe5428e8022d49" title="Get ARQ retry timeout transmit." alt="" coords="880,1697,1065,1739"/>
+<area shape="rect" id="node11" href="$classns3_1_1_service_flow.html#ad14e20edb6a04f1a09f84e227b3ba788" title="Get CS specification." alt="" coords="841,1763,1104,1790"/>
+<area shape="rect" id="node13" href="$classns3_1_1_service_flow.html#a4dab81394c8ae9251f517ba711539389" title="Get fixed versus varaiable SDU indicator." alt="" coords="853,1815,1093,1856"/>
+<area shape="rect" id="node14" href="$classns3_1_1_service_flow.html#acb6c21533e89b2a28e9684ef9b26dae0" title="Get is multicast." alt="" coords="855,445,1090,471"/>
+<area shape="rect" id="node15" href="$classns3_1_1_service_flow.html#abf37542995a8da2bbd2ea8bc56e06a59" title="Get maximum latency." alt="" coords="858,496,1087,537"/>
+<area shape="rect" id="node16" href="$classns3_1_1_service_flow.html#af0ac91a4bf8ba8a70471a880e16d8a58" title="Get max sustained traffic rate." alt="" coords="877,561,1068,603"/>
+<area shape="rect" id="node17" href="$classns3_1_1_service_flow.html#a709a1682e3dc3e4f8205cc181763ec21" title="Get max traffic burst." alt="" coords="877,627,1068,668"/>
+<area shape="rect" id="node18" href="$classns3_1_1_service_flow.html#a2f342357b7e0a1460473f28d0f8b9e87" title="Get minimum reserved traffic rate." alt="" coords="879,692,1066,733"/>
+<area shape="rect" id="node19" href="$classns3_1_1_service_flow.html#a8eeecc07ecd2fc8ef4bdf90ca3f30def" title="Get minimum tolerable traffic rate." alt="" coords="879,757,1066,799"/>
+<area shape="rect" id="node20" href="$classns3_1_1_service_flow.html#a028f07611782af393cb064ec5f9fe696" title="Get modulation." alt="" coords="855,823,1091,850"/>
+<area shape="rect" id="node21" href="$classns3_1_1_service_flow.html#a8460221d07fb2fa6671960e478722863" title="Get QOS parameter set type." alt="" coords="879,875,1067,916"/>
+<area shape="rect" id="node22" href="$classns3_1_1_service_flow.html#ae97b41679dfa3650f22d0da4452bf78b" title="Get request transmission policy." alt="" coords="865,940,1081,981"/>
+<area shape="rect" id="node23" href="$classns3_1_1_service_flow.html#a37616e45d70eebd2704d3fb28d37f3b5" title="Get SDU size." alt="" coords="865,1006,1080,1033"/>
+<area shape="rect" id="node24" href="$classns3_1_1_service_flow.html#a4d7249bf40ab6a6994597bfa475dcb0b" title="Get service class name." alt="" coords="867,1057,1078,1099"/>
+<area shape="rect" id="node25" href="$classns3_1_1_service_flow.html#a3034ff3c1364f7558bc2e84fa8dba13a" title="Get service scheduling type." alt="" coords="867,1123,1078,1164"/>
+<area shape="rect" id="node26" href="$classns3_1_1_service_flow.html#a6fb4fa939bb19f73a11ba91ebc6b9718" title="Get target SAID." alt="" coords="855,1189,1090,1215"/>
+<area shape="rect" id="node27" href="$classns3_1_1_service_flow.html#ae227d4d83328547c6d4bed6afa39a4ba" title="Get tolerated jitter." alt="" coords="861,1240,1084,1281"/>
+<area shape="rect" id="node28" href="$classns3_1_1_service_flow.html#a98c02d59b5237f9ade7ff0bfae4bf424" title="Get traffic priority." alt="" coords="871,1305,1075,1347"/>
+<area shape="rect" id="node29" href="$classns3_1_1_service_flow.html#a44a61f25daee76e00d67ffdba1d6e040" title="Get unsolicited grant interval." alt="" coords="855,1371,1091,1412"/>
+<area shape="rect" id="node30" href="$classns3_1_1_service_flow.html#a3e69c22020ed0f3b25ae4761ec7b42d4" title="Get unsolicited polling interval." alt="" coords="855,1436,1091,1477"/>
+<area shape="rect" id="node33" href="$classns3_1_1_service_flow_manager.html#a0cccf5aa24bb0fafed7dc6846cb84527" title="Get service flow by flow id." alt="" coords="878,5,1067,47"/>
+<area shape="rect" id="node42" href="$classns3_1_1_packet.html#a465108c595a0bc592095cbcab1832ed8" title="Add header to this packet." alt="" coords="565,1881,741,1907"/>
+<area shape="rect" id="node45" href="$classns3_1_1_simulator.html#a1b903a62d6117ef28f7ba3c6500689bf" title="Set the cancel bit on this event: the event&#39;s associated function will not be invoked when it expires..." alt="" coords="569,1931,737,1958"/>
+<area shape="rect" id="node46" href="$classns3_1_1_bs_service_flow_manager.html#ac67cef767e9e9c07403b9b0ed795619b" title="Create DSA response function." alt="" coords="550,1983,755,2024"/>
+<area shape="rect" id="node47" href="$classns3_1_1_event_id.html#a8b41e6f8c54db6bede8a7dcaf917074a" title="This method is syntactic sugar for !IsExpired()." alt="" coords="565,1678,740,1705"/>
+<area shape="rect" id="node48" href="$classns3_1_1_simulator.html#a671882c894a08af4a5e91181bf1eec13" title="Schedule an event to expire after delay." alt="" coords="561,1729,744,1755"/>
+<area shape="rect" id="node49" href="$classns3_1_1_service_flow.html#afaced536adaf84709f1a18993b425cad" title="Set is enabled flag." alt="" coords="541,1779,765,1806"/>
+<area shape="rect" id="node50" href="$classns3_1_1_service_flow.html#a48cafef2370995d59c2963339eeff61e" title="Set type of service flow." alt="" coords="557,1830,748,1857"/>
+<area shape="rect" id="node43" href="$classns3_1_1_byte_tag_list.html#acb4563fbe4299c55af41ba7a166b71d5" title="Make sure that all offsets are bigger than prependOffset which represents the location where new byte..." alt="" coords="869,1931,1076,1958"/>
+<area shape="rect" id="node44" href="$classns3_1_1_buffer.html#a8abd8164c3671d3dadc98fc66fade7b1" title=" " alt="" coords="887,1881,1058,1907"/>
+</map>

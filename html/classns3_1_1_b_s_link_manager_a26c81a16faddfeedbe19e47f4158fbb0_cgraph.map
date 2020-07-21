@@ -1,0 +1,52 @@
+<map id="ns3::BSLinkManager::ProcessRangingRequest" name="ns3::BSLinkManager::ProcessRangingRequest">
+<area shape="rect" id="node1" title="process a ranging request message" alt="" coords="5,1015,192,1057"/>
+<area shape="rect" id="node2" href="$classns3_1_1_simulator.html#ac3178fa975b419f7875e7105be122800" title="Return the current simulation virtual time." alt="" coords="241,275,394,301"/>
+<area shape="rect" id="node15" href="$ipv4-address-generator_8cc.html#aaf5aa23b804d2e5e334106f207e8a6cc" title=" " alt="" coords="250,993,385,1020"/>
+<area shape="rect" id="node16" href="$classns3_1_1_b_s_link_manager.html#ae23a1b4507b6fc812727c1ab064c95ae" title="Perform ranging function." alt="" coords="240,1045,395,1086"/>
+<area shape="rect" id="node49" href="$group__timecivil.html#ga33c34b816f8ff6628e33d5c8e9713b9e" title=" " alt="" coords="264,1481,371,1508"/>
+<area shape="rect" id="node3" href="$group__simulator.html#ga42eb4eddad41528d4d99794a3dae3fd0" title="Get the SimulatorImpl singleton." alt="" coords="502,249,607,276"/>
+<area shape="rect" id="node14" href="$classns3_1_1_simulator_impl.html#aa516c50060846adc6fd316e83ef0797c" title="Return the current simulation virtual time." alt="" coords="463,300,646,327"/>
+<area shape="rect" id="node4" href="$classns3_1_1_object_factory.html#a52eda277f4aaab54266134ba48102ad7" title="Create an Object instance of the configured TypeId." alt="" coords="767,274,909,315"/>
+<area shape="rect" id="node5" href="$group__logging.html#gac4c06cbbed12229d85991ced145f6be2" title="Default Node printer." alt="" coords="749,340,927,367"/>
+<area shape="rect" id="node6" href="$namespacens3.html#ae01c3c7786b644dfb8a0bb8f1201b269" title="Default Time printer." alt="" coords="750,5,926,32"/>
+<area shape="rect" id="node7" href="$classns3_1_1_string_value.html#a6f208c2778fe1c7882e5cb429b8326ae" title=" " alt="" coords="759,391,917,417"/>
+<area shape="rect" id="node8" href="$namespacens3.html#ab4e173cdfd43d17c1a40d5348510a670" title=" " alt="" coords="777,441,899,468"/>
+<area shape="rect" id="node9" href="$classns3_1_1_global_value.html#a48a99242193fb69609a17332733e8600" title="Get the value." alt="" coords="738,492,938,519"/>
+<area shape="rect" id="node10" href="$namespacens3.html#aebac73305345f2e2803fdeb102a7705e" title="Set the LogNodePrinter function to be used to prepend log messages with the node id." alt="" coords="751,56,925,83"/>
+<area shape="rect" id="node11" href="$namespacens3.html#a46cd76678f7da29799d1b41994e12ec1" title="Set the TimePrinter function to be used to prepend log messages with the simulation time." alt="" coords="752,107,924,133"/>
+<area shape="rect" id="node12" href="$group__simulator.html#ga233c5c38de117e4e4a5a9cd168694792" title="Get the static SimulatorImpl instance." alt="" coords="781,157,895,184"/>
+<area shape="rect" id="node13" href="$classns3_1_1_object_factory.html#a77dcd099064038a1eb7a6b8251229ec3" title="Set the TypeId of the Objects to be created by this factory." alt="" coords="767,209,909,250"/>
+<area shape="rect" id="node17" href="$classns3_1_1_cid.html#a6050597df3262e856e095e5b599c47b1" title=" " alt="" coords="463,1052,646,1079"/>
+<area shape="rect" id="node19" href="$classns3_1_1_b_s_link_manager.html#a8c97286c0b9d58f6b175e7f4e82ccd36" title="Perform initial ranging function." alt="" coords="469,1103,641,1145"/>
+<area shape="rect" id="node21" href="$classns3_1_1_b_s_link_manager.html#a80ee98e2b166372c03c840b8904e062a" title="Schedule range response message function." alt="" coords="1014,1554,1210,1595"/>
+<area shape="rect" id="node24" href="$classns3_1_1_b_s_link_manager.html#aaf3edf52fbc826d504c521f5303f309f" title="Set parameters to adjust function." alt="" coords="1275,1729,1457,1770"/>
+<area shape="rect" id="node27" href="$classns3_1_1_rng_rsp.html#ad4f2d7daa515310d4439786688eacd36" title="set the range status." alt="" coords="1009,1399,1215,1425"/>
+<area shape="rect" id="node43" href="$classns3_1_1_b_s_link_manager.html#a094fa709f5eaa532b959808967b65464" title="Perform inivted ranging function." alt="" coords="465,1457,645,1498"/>
+<area shape="rect" id="node46" href="$classns3_1_1_rng_req.html#a6b98c3e0e3be77b88a592e58909ab9b5" title="Print debug function." alt="" coords="463,884,646,911"/>
+<area shape="rect" id="node47" href="$classns3_1_1_rng_rsp.html#a906eebd3e77d60be4d2e0795b0635b2f" title="set frame number." alt="" coords="443,935,667,961"/>
+<area shape="rect" id="node48" href="$classns3_1_1_rng_rsp.html#a8a645d660d712df617deddb46efc5528" title="set initial range opp number." alt="" coords="462,986,647,1027"/>
+<area shape="rect" id="node18" href="$classns3_1_1_cid.html#a5c204ab0df783c7594c764bae1611436" title=" " alt="" coords="752,593,924,620"/>
+<area shape="rect" id="node20" href="$classns3_1_1_b_s_link_manager.html#a4ff9f6b3fd2578e415c83f604ab88b4e" title="Abort ranging function." alt="" coords="761,1293,915,1334"/>
+<area shape="rect" id="node28" href="$classns3_1_1_b_s_link_manager.html#abeb3786d298e966245b505f706c6c98a" title="Accept ranging function." alt="" coords="761,1489,915,1530"/>
+<area shape="rect" id="node29" href="$classns3_1_1_b_s_link_manager.html#af433428804a92b8e82256ccaf99c34fc" title="Change DL channel function." alt="" coords="761,1162,915,1203"/>
+<area shape="rect" id="node30" href="$classns3_1_1_b_s_link_manager.html#abb7f2a1602887788e0a8d9346a76fd9c" title="Continue ranging function." alt="" coords="761,1554,915,1595"/>
+<area shape="rect" id="node31" href="$classns3_1_1_s_s_record.html#a2bdef6783ecfc64b6be34fa1103bc3b0" title="Enable poll for ranging function." alt="" coords="743,1227,933,1269"/>
+<area shape="rect" id="node32" href="$classns3_1_1_s_s_record.html#abb9f1536114cfa774613b9ca9fb7a2b4" title="Get basic CID." alt="" coords="737,644,939,671"/>
+<area shape="rect" id="node33" href="$classns3_1_1_rng_req.html#a14dd9cde9aeecaf2a054bde8b4092e55" title="Get MAC address field." alt="" coords="731,695,945,721"/>
+<area shape="rect" id="node34" href="$classns3_1_1_b_s_link_manager.html#a7f2cb235a8f2849921f3460b4ab0ac7b" title="Get new DL channel function." alt="" coords="761,746,915,787"/>
+<area shape="rect" id="node35" href="$classns3_1_1_rng_req.html#a49c516812beec383d4ca41e4b56d3bdd" title="Get request DL burst profile field." alt="" coords="735,811,941,853"/>
+<area shape="rect" id="node36" href="$classns3_1_1_b_s_link_manager.html#af62c80bd793222cb430a34ef9ec022d8" title="Is ranging acceptable function." alt="" coords="755,1358,921,1399"/>
+<area shape="rect" id="node37" href="$classns3_1_1_s_s_record.html#aec33d8100f52d668ac5e73949f1c7160" title="Reset invited ranging retries." alt="" coords="736,1423,940,1465"/>
+<area shape="rect" id="node38" href="$classns3_1_1_s_s_record.html#acfd85a368b4a862fc96cf492f8934e99" title="Reset ranging correction retries." alt="" coords="732,877,944,918"/>
+<area shape="rect" id="node39" href="$classns3_1_1_rng_rsp.html#aa4f07b198beaefd83b4c4e695b940e0a" title="set the Center frequency, in kHz, of new downlink channel where the SS should redo initial ranging." alt="" coords="723,943,953,969"/>
+<area shape="rect" id="node40" href="$classns3_1_1_rng_rsp.html#a6a8b5496c61d6b5f216a08c21b9acc32" title="set the DL oper burst profile" alt="" coords="733,994,943,1035"/>
+<area shape="rect" id="node41" href="$classns3_1_1_rng_rsp.html#a080e954717c6d7ef5cae0f8dcf069d99" title="set the MAC address" alt="" coords="733,1060,943,1087"/>
+<area shape="rect" id="node42" href="$classns3_1_1_s_s_record.html#a015c0f21018ef11a4efb3b63c0c32fb5" title="Set modulation type." alt="" coords="715,1111,961,1137"/>
+<area shape="rect" id="node22" href="$classns3_1_1_packet.html#a465108c595a0bc592095cbcab1832ed8" title="Add header to this packet." alt="" coords="1278,1587,1454,1613"/>
+<area shape="rect" id="node23" href="$classns3_1_1_rng_rsp.html#a14aaa51251247a19c19b9486e38d98b2" title=" " alt="" coords="1263,1536,1469,1563"/>
+<area shape="rect" id="node25" href="$classns3_1_1_rng_rsp.html#aaf2c03f85edf379b19ef863b03f59395" title="set the relative change in transmission frequency that the SS should take in order to better match th..." alt="" coords="1521,1695,1720,1737"/>
+<area shape="rect" id="node26" href="$classns3_1_1_rng_rsp.html#a86a77741b095cb28d7c0794562d3c3b5" title="set the relative change in transmission power level that the SS should make in order that transmissio..." alt="" coords="1517,1761,1724,1802"/>
+<area shape="rect" id="node44" href="$classns3_1_1_s_s_record.html#a75d058b9a8335605d6982095b92d21c0" title="Get ranging correction retries." alt="" coords="739,1685,937,1726"/>
+<area shape="rect" id="node45" href="$classns3_1_1_s_s_record.html#acb8188736cb593974760cdd0f2a19e8d" title="Increment ranging correction retries." alt="" coords="744,1619,932,1661"/>
+<area shape="rect" id="node50" href="$classns3_1_1_time.html#a60e845f4a74e62495b86356afe604cb4" title="Create a Time equal to value in unit unit." alt="" coords="469,1852,641,1879"/>
+</map>

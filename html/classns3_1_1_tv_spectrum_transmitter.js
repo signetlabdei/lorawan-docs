@@ -1,0 +1,37 @@
+var classns3_1_1_tv_spectrum_transmitter =
+[
+    [ "TvType", "classns3_1_1_tv_spectrum_transmitter.html#a9ec4fd6860d2d287b1304397b425f0d8", [
+      [ "TVTYPE_ANALOG", "classns3_1_1_tv_spectrum_transmitter.html#a9ec4fd6860d2d287b1304397b425f0d8aca916f93508d6edae3c6bd5af2afcdc4", null ],
+      [ "TVTYPE_8VSB", "classns3_1_1_tv_spectrum_transmitter.html#a9ec4fd6860d2d287b1304397b425f0d8aeca316e65358d933299c96fbab39a325", null ],
+      [ "TVTYPE_COFDM", "classns3_1_1_tv_spectrum_transmitter.html#a9ec4fd6860d2d287b1304397b425f0d8a6afcc538d373d5f28efbf4c9458393b2", null ]
+    ] ],
+    [ "TvSpectrumTransmitter", "classns3_1_1_tv_spectrum_transmitter.html#afcc26ad106aff1fb09e1c2d4ac214117", null ],
+    [ "~TvSpectrumTransmitter", "classns3_1_1_tv_spectrum_transmitter.html#a053e897e16a86d44c7892c533e9295cb", null ],
+    [ "CreateTvPsd", "classns3_1_1_tv_spectrum_transmitter.html#a263590a58711ab359413eb0aeafbb261", null ],
+    [ "GetChannel", "classns3_1_1_tv_spectrum_transmitter.html#aa82bd278bfa0388c90e24173f1a118b3", null ],
+    [ "GetDevice", "classns3_1_1_tv_spectrum_transmitter.html#adb8d6e27b6133b9ddbef72b5f3412290", null ],
+    [ "GetMobility", "classns3_1_1_tv_spectrum_transmitter.html#a82b56b6da36d2d82e366f9b304d7d307", null ],
+    [ "GetRxAntenna", "classns3_1_1_tv_spectrum_transmitter.html#a50ace28d52f74a867343446689e20d0b", null ],
+    [ "GetRxSpectrumModel", "classns3_1_1_tv_spectrum_transmitter.html#a68675959578670d88f2f9af7be189758", null ],
+    [ "GetTxPsd", "classns3_1_1_tv_spectrum_transmitter.html#a88d052b151f5fad473aa25491bf0f305", null ],
+    [ "GetTypeId", "classns3_1_1_tv_spectrum_transmitter.html#a82207fc213ebdc94ba514178ebfdd9f7", null ],
+    [ "SetChannel", "classns3_1_1_tv_spectrum_transmitter.html#a3db73492384cd7d823494b1bbc4b1b71", null ],
+    [ "SetDevice", "classns3_1_1_tv_spectrum_transmitter.html#a8d5496690882b86cb9e905100f692b39", null ],
+    [ "SetMobility", "classns3_1_1_tv_spectrum_transmitter.html#a1ee9da5da9b2f6fa1d5f4674d0b5f53e", null ],
+    [ "SetupTx", "classns3_1_1_tv_spectrum_transmitter.html#a7d7f5cd8ad48714106082f9e7bbd11f9", null ],
+    [ "Start", "classns3_1_1_tv_spectrum_transmitter.html#a4e04495d66e499a4e91abda6e17cdd2b", null ],
+    [ "StartRx", "classns3_1_1_tv_spectrum_transmitter.html#ae913f36cda537d9f0834c7ed0d974745", null ],
+    [ "Stop", "classns3_1_1_tv_spectrum_transmitter.html#a7b04e90119e2669341b1f37c804817ba", null ],
+    [ "m_active", "classns3_1_1_tv_spectrum_transmitter.html#a474fa631e8aaa85445b0ba463b20b61b", null ],
+    [ "m_antenna", "classns3_1_1_tv_spectrum_transmitter.html#a1503f457fc9047fa63f0990cdb3fe8b6", null ],
+    [ "m_basePsd", "classns3_1_1_tv_spectrum_transmitter.html#a2d1d8e8127f61ed696bee9acf2ea2de2", null ],
+    [ "m_channel", "classns3_1_1_tv_spectrum_transmitter.html#ac432cb6c1d80ec4ce00b5ce3589ef1d5", null ],
+    [ "m_channelBandwidth", "classns3_1_1_tv_spectrum_transmitter.html#a6e9866a446454a46b3a64be122931c95", null ],
+    [ "m_mobility", "classns3_1_1_tv_spectrum_transmitter.html#af43f03a30cf9a63b2af888334a4856b6", null ],
+    [ "m_netDevice", "classns3_1_1_tv_spectrum_transmitter.html#a48c928bdb3e53299d6e1cd35c2d2f7f5", null ],
+    [ "m_startFrequency", "classns3_1_1_tv_spectrum_transmitter.html#a776e1f1e5c91d1d4a457e26b0fc29375", null ],
+    [ "m_startingTime", "classns3_1_1_tv_spectrum_transmitter.html#a792038cd396efdc81c8f6ee2d54a0fd2", null ],
+    [ "m_transmitDuration", "classns3_1_1_tv_spectrum_transmitter.html#a3194786c04a42f635dde6f56b317f75b", null ],
+    [ "m_tvType", "classns3_1_1_tv_spectrum_transmitter.html#a78373632fd774cf3c26675dc0379ca13", null ],
+    [ "m_txPsd", "classns3_1_1_tv_spectrum_transmitter.html#add26555fe4d51eb5d9a757a54dc36dd0", null ]
+];

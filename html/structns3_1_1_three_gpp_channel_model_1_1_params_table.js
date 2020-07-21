@@ -1,0 +1,27 @@
+var structns3_1_1_three_gpp_channel_model_1_1_params_table =
+[
+    [ "m_cASA", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a494ba2e2b37d6830e7ef46cc3555d79e", null ],
+    [ "m_cASD", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a1ce8ab7e6303740b2ff666c5dd7cc3ca", null ],
+    [ "m_cDS", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#ab1520d35465ea804902f3c4f57063fd1", null ],
+    [ "m_cZSA", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#aaf74f560ce44d6ad05f9697cd672078e", null ],
+    [ "m_numOfCluster", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#ab42b225c13f41995ffcd3de27e14ad2f", null ],
+    [ "m_offsetZOD", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a7bc4cfade671c55c259b2a60348a7aed", null ],
+    [ "m_perClusterShadowingStd", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a68894ea90be404a9aff3e010830503cc", null ],
+    [ "m_raysPerCluster", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a593464ecd10da87588dfd4509045debb", null ],
+    [ "m_rTau", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a56bedb77bc11075a3ad220fb837fafa3", null ],
+    [ "m_sigK", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a639590fb89b38d7c28fa987490ee67a1", null ],
+    [ "m_sigLgASA", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a997e35b46920178711f78d7315425bfe", null ],
+    [ "m_sigLgASD", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a79af9861ec4a042359c533f926e0f69f", null ],
+    [ "m_sigLgDS", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#ae7c4787d86a984e4e032ca62f76edcee", null ],
+    [ "m_sigLgZSA", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#ad18775877d503ae8780ee82cd7a7c03c", null ],
+    [ "m_sigLgZSD", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a1b232288c744b55b438d1dc8686097d3", null ],
+    [ "m_sigXpr", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a3a8039a5403a6cd3e1cc8db4a132245c", null ],
+    [ "m_sqrtC", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a0efa0087fd9f74f96a992de838625e35", null ],
+    [ "m_uK", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a4150c63be2ae575ed3fdfe688ff82e9d", null ],
+    [ "m_uLgASA", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a223177af5618a3f08e142f69ca09ba56", null ],
+    [ "m_uLgASD", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a4172677edd5c4d3ac1331c0f2a62698e", null ],
+    [ "m_uLgDS", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a7fdf9b839af774618f1267a00dc0fe0d", null ],
+    [ "m_uLgZSA", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#aaf70ed1a21702f82db50f7c533a62117", null ],
+    [ "m_uLgZSD", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#a1da6dcc53d8d85a885eac2e1ad1ad72f", null ],
+    [ "m_uXpr", "structns3_1_1_three_gpp_channel_model_1_1_params_table.html#adac20a0adc245e3f6f91e5786df70823", null ]
+];

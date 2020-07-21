@@ -1,0 +1,26 @@
+var classns3_1_1_ipv6_prefix =
+[
+    [ "Ipv6Prefix", "classns3_1_1_ipv6_prefix.html#af8a81e427665ce2f63d807edbd34e6fe", null ],
+    [ "Ipv6Prefix", "classns3_1_1_ipv6_prefix.html#a7af7719eef4823f57c046033584643ba", null ],
+    [ "Ipv6Prefix", "classns3_1_1_ipv6_prefix.html#a50423ee6d5a9baf0d968aae3b9d57a8a", null ],
+    [ "Ipv6Prefix", "classns3_1_1_ipv6_prefix.html#a2c9483b52c49736a359f88cfbf93146d", null ],
+    [ "Ipv6Prefix", "classns3_1_1_ipv6_prefix.html#a9e2a46109349db082923b647bcf8e456", null ],
+    [ "Ipv6Prefix", "classns3_1_1_ipv6_prefix.html#a0df62b59a6c0fbbce73e6a2530093ce2", null ],
+    [ "Ipv6Prefix", "classns3_1_1_ipv6_prefix.html#a40d70c3afa900853198a10efe2136f59", null ],
+    [ "Ipv6Prefix", "classns3_1_1_ipv6_prefix.html#af8ad04e1f06a966ba8a117c675ea12cd", null ],
+    [ "~Ipv6Prefix", "classns3_1_1_ipv6_prefix.html#a493bbbaa4d1213868c6d575e460d62b5", null ],
+    [ "GetBytes", "classns3_1_1_ipv6_prefix.html#af989d2978fbc0d2f00f742421448d306", null ],
+    [ "GetLoopback", "classns3_1_1_ipv6_prefix.html#a3c133e93cba14afb00338a00835fef84", null ],
+    [ "GetMinimumPrefixLength", "classns3_1_1_ipv6_prefix.html#af8e5ac623c3ce444408bac8e928c063d", null ],
+    [ "GetOnes", "classns3_1_1_ipv6_prefix.html#aca3fd63a4e0973c7aabeee518d2777f2", null ],
+    [ "GetPrefixLength", "classns3_1_1_ipv6_prefix.html#a8f92dfe3c7ff5c75cb3ff9442fc68644", null ],
+    [ "GetZero", "classns3_1_1_ipv6_prefix.html#ab32d2dbadcd8fa048ff296cb0a0e34ff", null ],
+    [ "IsEqual", "classns3_1_1_ipv6_prefix.html#a4719bd524d3b13edb482cab4e2f5dca0", null ],
+    [ "IsMatch", "classns3_1_1_ipv6_prefix.html#abd799c16a73b03020fd54da220af326e", null ],
+    [ "Print", "classns3_1_1_ipv6_prefix.html#a8aeaa823feea6b979204062b18bc59c9", null ],
+    [ "SetPrefixLength", "classns3_1_1_ipv6_prefix.html#ae0a59e7c461436b1cc4d6f2d539436c9", null ],
+    [ "operator!=", "classns3_1_1_ipv6_prefix.html#abfe0de0372d48ba627cf07f7cfeb01b2", null ],
+    [ "operator==", "classns3_1_1_ipv6_prefix.html#aa84474f34151d6fcc4c35305339b3dc9", null ],
+    [ "m_prefix", "classns3_1_1_ipv6_prefix.html#a57fe096b66e6bc4330a195e0a2aa2407", null ],
+    [ "m_prefixLength", "classns3_1_1_ipv6_prefix.html#a2ec6c4d546ada761a97c0dee8a2454ed", null ]
+];

@@ -1,0 +1,27 @@
+var group__core_tests =
+[
+    [ "CommandLine test suite", "group__commandline-tests.html", "group__commandline-tests" ],
+    [ "Config test suite", "group__config-tests.html", "group__config-tests" ],
+    [ "EventGarbageCollector test suite", "group__event-garbage-tests.html", "group__event-garbage-tests" ],
+    [ "Example use of TestSuite", "group__testing-example.html", "group__testing-example" ],
+    [ "GlobalValue test suite", "group__global-value-tests.html", "group__global-value-tests" ],
+    [ "Hash test suite", "group__hash-tests.html", "group__hash-tests" ],
+    [ "NS_BUILD_PROFILE macros test suite", "group__build-profile-tests.html", "group__build-profile-tests" ],
+    [ "Object Names test suite", "group__names-tests.html", "group__names-tests" ],
+    [ "Object test suite", "group__object-tests.html", "group__object-tests" ],
+    [ "Smart pointer test suite", "group__ptr-tests.html", "group__ptr-tests" ],
+    [ "build-profile-test-suite.cc", "build-profile-test-suite_8cc.html", null ],
+    [ "command-line-test-suite.cc", "command-line-test-suite_8cc.html", null ],
+    [ "config-test-suite.cc", "config-test-suite_8cc.html", null ],
+    [ "event-garbage-collector-test-suite.cc", "event-garbage-collector-test-suite_8cc.html", null ],
+    [ "global-value-test-suite.cc", "global-value-test-suite_8cc.html", null ],
+    [ "hash-test-suite.cc", "hash-test-suite_8cc.html", null ],
+    [ "many-uniform-random-variables-one-get-value-call-test-suite.cc", "many-uniform-random-variables-one-get-value-call-test-suite_8cc.html", null ],
+    [ "names-test-suite.cc", "names-test-suite_8cc.html", null ],
+    [ "object-test-suite.cc", "object-test-suite_8cc.html", null ],
+    [ "one-uniform-random-variable-many-get-value-calls-test-suite.cc", "one-uniform-random-variable-many-get-value-calls-test-suite_8cc.html", null ],
+    [ "ptr-test-suite.cc", "ptr-test-suite_8cc.html", null ],
+    [ "sample-test-suite.cc", "sample-test-suite_8cc.html", null ],
+    [ "type-traits-test-suite.cc", "type-traits-test-suite_8cc.html", null ],
+    [ "watchdog-test-suite.cc", "watchdog-test-suite_8cc.html", null ]
+];

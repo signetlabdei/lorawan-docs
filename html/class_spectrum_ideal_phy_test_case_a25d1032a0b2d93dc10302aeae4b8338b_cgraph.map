@@ -1,0 +1,52 @@
+<map id="SpectrumIdealPhyTestCase::DoRun" name="SpectrumIdealPhyTestCase::DoRun">
+<area shape="rect" id="node1" title="Implementation to actually run this TestCase." alt="" coords="5,1246,204,1287"/>
+<area shape="rect" id="node2" href="$classns3_1_1_list_position_allocator.html#a460e82f015ac012a73ba0ea0cccb3486" title="Add a position to the list of positions." alt="" coords="281,13,500,40"/>
+<area shape="rect" id="node3" href="$classns3_1_1_node.html#ab98b4fdc4aadc86366b80e8a79a53f47" title="Associate an Application to this Node." alt="" coords="582,115,775,141"/>
+<area shape="rect" id="node7" href="$group__timecivil.html#ga33c34b816f8ff6628e33d5c8e9713b9e" title=" " alt="" coords="869,56,976,83"/>
+<area shape="rect" id="node9" href="$classns3_1_1_spectrum_channel_helper.html#ab23845170770bda5be7ee8a2b42c452b" title=" " alt="" coords="285,794,496,835"/>
+<area shape="rect" id="node13" href="$group__config.html#ga4014f151241cd0939b6cb64409605736" title=" " alt="" coords="313,1056,469,1083"/>
+<area shape="rect" id="node16" href="$classns3_1_1_node_container.html#a787f059e2813e8b951cc6914d11dfe69" title="Create n nodes and append pointers to them to the end of this NodeContainer." alt="" coords="315,1107,466,1149"/>
+<area shape="rect" id="node17" href="$classns3_1_1_spectrum_channel_helper.html#ad4e0f257cc814ed9fc21fc742d9b6476" title=" " alt="" coords="285,729,496,770"/>
+<area shape="rect" id="node18" href="$classns3_1_1_wifi_spectrum_value5_mhz_factory.html#a32a04dc83a836da0fcfcc387cabc097f" title="Creates a SpectrumValue instance with a constant value for all frequencies." alt="" coords="284,1173,497,1214"/>
+<area shape="rect" id="node19" href="$classns3_1_1_wifi_spectrum_value5_mhz_factory.html#aa3045151889d535e6e7bf40e0855a92f" title="Creates a SpectrumValue instance that represents the TX Power Spectral Density of a wifi device corre..." alt="" coords="276,1239,505,1295"/>
+<area shape="rect" id="node20" href="$classns3_1_1_node_container.html#aff885e5a6b02ca4a27f5725de647d96e" title="Get the Ptr&lt;Node&gt; stored in this container at a given index." alt="" coords="300,1319,481,1345"/>
+<area shape="rect" id="node21" href="$classns3_1_1_object.html#a817117ab236e4ff7f80f0239d4e28731" title="Get a pointer to the requested aggregated Object." alt="" coords="595,815,763,841"/>
+<area shape="rect" id="node24" href="$classns3_1_1_adhoc_aloha_noack_ideal_phy_helper.html#af934d66802b42e6594fe4fad8920fbc1" title=" " alt="" coords="289,566,492,607"/>
+<area shape="rect" id="node26" href="$group__makecallbackmemptr.html#ga9376283685aa99d204048d6a4b7610a4" title=" " alt="" coords="851,275,995,301"/>
+<area shape="rect" id="node35" href="$classns3_1_1_packet_socket_helper.html#acefb3e034a102efc148fac496c5e9f33" title="Aggregate an instance of a ns3::PacketSocketFactory onto the provided node." alt="" coords="299,1370,482,1411"/>
+<area shape="rect" id="node36" href="$spectrum-ideal-phy-test_8cc.html#abe11a97645f01a1213944fb2cbabeb1a" title=" " alt="" coords="321,1436,461,1463"/>
+<area shape="rect" id="node37" href="$classns3_1_1_object_base.html#ac60245d3ea4123bbc9b1d391f1f6592f" title="Set a single attribute, raising fatal errors if unsuccessful." alt="" coords="284,1487,497,1513"/>
+<area shape="rect" id="node38" href="$classns3_1_1_adhoc_aloha_noack_ideal_phy_helper.html#a9d2c05e23d722e63dafa2d083313ecdb" title="set the SpectrumChannel that will be used by SpectrumPhy instances created by this helper" alt="" coords="289,1538,492,1579"/>
+<area shape="rect" id="node39" href="$classns3_1_1_spectrum_channel_helper.html#a11ffe86edea8cdd30f181e41c0e3e29f" title=" " alt="" coords="285,925,496,966"/>
+<area shape="rect" id="node40" href="$classns3_1_1_matrix_propagation_loss_model.html#a16fd1f9be7b7246423818632d710947d" title="Set loss (in dB, positive) between pair of ns&#45;3 objects (typically, nodes)." alt="" coords="289,1603,492,1645"/>
+<area shape="rect" id="node41" href="$classns3_1_1_adhoc_aloha_noack_ideal_phy_helper.html#a6a5f5df28a9bddbe04e8e4815bdce244" title=" " alt="" coords="267,1669,515,1725"/>
+<area shape="rect" id="node42" href="$classns3_1_1_adhoc_aloha_noack_ideal_phy_helper.html#a073f6728abd6e3880475b29cbc415792" title=" " alt="" coords="289,859,492,901"/>
+<area shape="rect" id="node43" href="$classns3_1_1_packet_socket_address.html#a9452f9410a97e57344e464e25c2ab0f3" title="Set the destination address." alt="" coords="295,1750,486,1791"/>
+<area shape="rect" id="node44" href="$classns3_1_1_spectrum_channel_helper.html#a61788598e0bcb0ac0d0530970a0fca2c" title=" " alt="" coords="285,990,496,1031"/>
+<area shape="rect" id="node45" href="$classns3_1_1_packet_socket_address.html#a9020962e39c238277f3b2f0de605647a" title="Set the protocol." alt="" coords="295,1815,486,1857"/>
+<area shape="rect" id="node46" href="$classns3_1_1_packet_socket_client.html#ae400727c451d429358b5c85838b901df" title="set the remote address and protocol to be used" alt="" coords="302,1881,479,1922"/>
+<area shape="rect" id="node47" href="$classns3_1_1_packet_socket_address.html#ad1caa016f4d27c9d5f2c06dbfc53f8a3" title="Set the address to match only a specified NetDevice." alt="" coords="295,1946,486,1987"/>
+<area shape="rect" id="node48" href="$classns3_1_1_application.html#a8360a49748e30c52ffdcc7a305c3cd48" title="Specify application start time." alt="" coords="281,2012,500,2039"/>
+<area shape="rect" id="node49" href="$classns3_1_1_application.html#a732c1fdadf0be176c753a2ce6e27dff9" title="Specify application stop time." alt="" coords="283,2063,499,2089"/>
+<area shape="rect" id="node50" href="$classns3_1_1_adhoc_aloha_noack_ideal_phy_helper.html#a3acada700018db8e04a7a209e4cdf94e" title=" " alt="" coords="252,2114,529,2155"/>
+<area shape="rect" id="node4" href="$classns3_1_1_node.html#a2ed8663077afcb8db519296b0ada6355" title=" " alt="" coords="857,173,988,200"/>
+<area shape="rect" id="node5" href="$classns3_1_1_object.html#a900bb91b733c232cb18e44782cebcdc6" title="Invoke DoInitialize on all Objects aggregated to this one." alt="" coords="843,224,1002,251"/>
+<area shape="rect" id="node6" href="$classns3_1_1_simulator.html#a86dbaef45a15a42365d7d2ae550449f6" title="Schedule an event with the given context." alt="" coords="831,107,1014,149"/>
+<area shape="rect" id="node8" href="$classns3_1_1_application.html#a2cab718227b06a7ea643282c807aed93" title=" " alt="" coords="828,5,1017,32"/>
+<area shape="rect" id="node10" href="$classns3_1_1_object_factory.html#a52eda277f4aaab54266134ba48102ad7" title="Create an Object instance of the configured TypeId." alt="" coords="607,866,750,907"/>
+<area shape="rect" id="node11" href="$classns3_1_1_object_factory.html#aef5c0d5019c96bdf01cefd1ff83f4a68" title="Set an attribute to be set during construction." alt="" coords="593,932,764,959"/>
+<area shape="rect" id="node12" href="$classns3_1_1_object_factory.html#a77dcd099064038a1eb7a6b8251229ec3" title="Set the TypeId of the Objects to be created by this factory." alt="" coords="607,983,750,1025"/>
+<area shape="rect" id="node14" href="$classns3_1_1_config_1_1_config_impl.html#a5db61ce4675ab9e3548b6da5703848fe" title=" " alt="" coords="591,1114,766,1155"/>
+<area shape="rect" id="node15" href="$classns3_1_1_singleton.html#a80a2cd3c25a27ea72add7a9f7a141ffa" title="Get a pointer to the singleton instance." alt="" coords="577,1049,780,1090"/>
+<area shape="rect" id="node22" href="$classns3_1_1_object.html#a34f8410d0f3aae5612b56eb65d044857" title="Find an Object of TypeId tid in the aggregates of this Object." alt="" coords="829,789,1016,816"/>
+<area shape="rect" id="node23" href="$namespacens3.html#af2a7557fe9afdd98d8f6f8f6e412cf5a" title=" " alt="" coords="857,840,988,867"/>
+<area shape="rect" id="node25" href="$classns3_1_1_node.html#a42ff83ee1d5d1649c770d3f5b62375de" title="Associate a NetDevice to this node." alt="" coords="596,165,761,192"/>
+<area shape="rect" id="node27" href="$classns3_1_1_mac48_address.html#a203b53c035649c0d4881fa1115aa2cdb" title="Allocate a new Mac48Address." alt="" coords="601,501,757,542"/>
+<area shape="rect" id="node28" href="$classns3_1_1_node_container.html#a2bfe1f50688c96e0888b1907e1e2f324" title="Get an iterator which refers to the first Node in the container." alt="" coords="603,631,754,673"/>
+<area shape="rect" id="node29" href="$classns3_1_1_node_container.html#a4904853b5d3e86f622a2ef8b4e959e08" title="Get an iterator which indicates past&#45;the&#45;last Node in the container." alt="" coords="587,697,770,724"/>
+<area shape="rect" id="node30" href="$classns3_1_1_aloha_noack_net_device.html#ad2a4bfeb92d6ad91a5d5c07918902f58" title="Notify the MAC that the PHY finished a reception successfully." alt="" coords="579,749,778,790"/>
+<area shape="rect" id="node31" href="$classns3_1_1_aloha_noack_net_device.html#a356254832ab880114c98f939f26843a9" title="Notify the MAC that the PHY has started a reception." alt="" coords="579,267,778,309"/>
+<area shape="rect" id="node32" href="$classns3_1_1_aloha_noack_net_device.html#a7fcff6bdf5cf11f81d22c2ee9e1b1745" title="Notify the MAC that the PHY has finished a previously started transmission." alt="" coords="579,566,778,607"/>
+<area shape="rect" id="node33" href="$ipv4-address-generator_8cc.html#aaf5aa23b804d2e5e334106f207e8a6cc" title=" " alt="" coords="855,479,990,505"/>
+<area shape="rect" id="node34" href="$classns3_1_1_half_duplex_ideal_phy.html#ae5cc5d9c4faab8c4119c7f9a5a631cca" title="Start a transmission." alt="" coords="587,435,770,477"/>
+</map>

@@ -1,0 +1,31 @@
+<map id="ns3::AnimationInterface::CheckMaxPktsPerTraceFile" name="ns3::AnimationInterface::CheckMaxPktsPerTraceFile">
+<area shape="rect" id="node1" title="Check maximum packets per trace file function." alt="" coords="1653,251,1857,293"/>
+<area shape="rect" id="node2" href="$classns3_1_1_animation_interface.html#aefbe6c9288eaf784e7ba0cc875b5c319" title="Device transmit trace function." alt="" coords="1409,117,1587,158"/>
+<area shape="rect" id="node6" href="$classns3_1_1_animation_interface.html#a17b147520da418eaf7b892624589f160" title="Output CSMA packet function." alt="" coords="919,166,1097,207"/>
+<area shape="rect" id="node9" href="$classns3_1_1_animation_interface.html#ae7dbb6c566787d3444e3fcba367e5338" title="Output wireless packet receive info." alt="" coords="1391,397,1605,438"/>
+<area shape="rect" id="node21" href="$classns3_1_1_animation_interface.html#a473fae6007101c1b553231084eff90b3" title="Output wireless packet transmit info." alt="" coords="1391,727,1605,769"/>
+<area shape="rect" id="node3" href="$classns3_1_1_animation_interface.html#a3475aa338984f2024403caa04c146027" title="Connect callbacks function." alt="" coords="459,498,637,539"/>
+<area shape="rect" id="node4" href="$classns3_1_1_animation_interface.html#aed28bace6b97494e11179766449bb442" title="Start animation function." alt="" coords="232,498,411,539"/>
+<area shape="rect" id="node5" href="$classns3_1_1_animation_interface.html#a88af7da6eb605ec7e9d8cb3fcc8a6466" title="Constructor." alt="" coords="5,498,184,539"/>
+<area shape="rect" id="node7" href="$classns3_1_1_animation_interface.html#a8ca49462ea639259c8b967d8a020d93f" title="CSMA MAC receive trace function." alt="" coords="685,101,864,142"/>
+<area shape="rect" id="node8" href="$classns3_1_1_animation_interface.html#a031728e043bab0338deb86aa5f0a1c26" title="CSMA Phy receive end trace function." alt="" coords="685,166,864,207"/>
+<area shape="rect" id="node10" href="$classns3_1_1_animation_interface.html#adf54784892a11509eee9c15d7ded8bef" title="Generic wireless receive trace function." alt="" coords="914,358,1102,399"/>
+<area shape="rect" id="node14" href="$classns3_1_1_animation_interface.html#a1457c08242d10ec3506242cc9699c836" title="LR&#45;WPAN Phy receive begin trace function." alt="" coords="912,433,1104,474"/>
+<area shape="rect" id="node15" href="$classns3_1_1_animation_interface.html#a476014043547ee8c36cdbd92324c938f" title="LTE Spectrum Phy receive start function." alt="" coords="1155,582,1339,623"/>
+<area shape="rect" id="node19" href="$classns3_1_1_animation_interface.html#af08889e9f06ddd922b5a179c374d0f21" title="WAVE Phy receive begin trace function." alt="" coords="1157,495,1337,537"/>
+<area shape="rect" id="node20" href="$classns3_1_1_animation_interface.html#ac0ad433cc67cc70e279b5ed8c006d762" title="wifi Phy receive begin trace function" alt="" coords="1158,266,1337,307"/>
+<area shape="rect" id="node11" href="$classns3_1_1_animation_interface.html#a1b44e17f04eb8cdb33de77c7ec544cd6" title="LTE receive trace function." alt="" coords="685,283,864,325"/>
+<area shape="rect" id="node12" href="$classns3_1_1_animation_interface.html#a8ced521c1d66785fd2920ec0fe52fee4" title="UAN Phy gen receive trace function." alt="" coords="685,349,864,390"/>
+<area shape="rect" id="node13" href="$classns3_1_1_animation_interface.html#aa8d5fb8e55267b669a99599e0a27afe9" title="WIMax receive trace function." alt="" coords="685,414,864,455"/>
+<area shape="rect" id="node16" href="$classns3_1_1_animation_interface.html#adf464333f57bcf13efca2af8b47f0ac7" title="Connect LTE ENB function." alt="" coords="919,582,1097,623"/>
+<area shape="rect" id="node18" href="$classns3_1_1_animation_interface.html#a30a06abf385e5a74951ee74147e897dc" title="Connect LTE ue function." alt="" coords="919,647,1097,689"/>
+<area shape="rect" id="node17" href="$classns3_1_1_animation_interface.html#a921e35bb00b2d0032dde4147bd2a200e" title="Connect LTE function." alt="" coords="685,582,864,623"/>
+<area shape="rect" id="node22" href="$classns3_1_1_animation_interface.html#a1a0a1b2f00918cdccb9893f044b73da3" title="Generic wireless transmit trace function." alt="" coords="915,727,1101,769"/>
+<area shape="rect" id="node27" href="$classns3_1_1_animation_interface.html#a0e7f7deb7c291468723657f263317ee9" title="LR&#45;WPAN Phy receive begin trace function." alt="" coords="1152,815,1343,857"/>
+<area shape="rect" id="node28" href="$classns3_1_1_animation_interface.html#a3f0131dc28ccba541c2ef52bbc920e62" title="LTE Spectrum Phy transmit start function." alt="" coords="1156,647,1339,689"/>
+<area shape="rect" id="node29" href="$classns3_1_1_animation_interface.html#a84b6a29e8fedc06141ee104346990dab" title="wifi Phy transmit PSDU begin trace function" alt="" coords="1158,938,1337,979"/>
+<area shape="rect" id="node23" href="$classns3_1_1_animation_interface.html#a4bcc6c6e4eaa0243190e94c74cd4d59e" title="LTE transmit trace function." alt="" coords="685,647,864,689"/>
+<area shape="rect" id="node24" href="$classns3_1_1_animation_interface.html#a7cf0290a1181de6f4614696e5f3ea906" title="UAN Phy gen transmit trace function." alt="" coords="685,713,864,754"/>
+<area shape="rect" id="node25" href="$classns3_1_1_animation_interface.html#a55d12ba95e0e93941d5912a50ef5c1e4" title="WAVE Phy transmit begin trace function." alt="" coords="685,778,864,819"/>
+<area shape="rect" id="node26" href="$classns3_1_1_animation_interface.html#a11b4be6f8814a0bbeade46fb459c1cb9" title="WIMax transmit trace function." alt="" coords="685,843,864,885"/>
+</map>

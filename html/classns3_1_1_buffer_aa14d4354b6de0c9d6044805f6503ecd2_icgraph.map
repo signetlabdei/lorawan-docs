@@ -1,0 +1,52 @@
+<map id="ns3::Buffer::Recycle" name="ns3::Buffer::Recycle">
+<area shape="rect" id="node1" title="Recycle the buffer memory." alt="" coords="801,1337,953,1363"/>
+<area shape="rect" id="node2" href="$classns3_1_1_buffer.html#a3672e1d34b98e7745a5eff5b89cdb920" title=" " alt="" coords="592,765,744,791"/>
+<area shape="rect" id="node3" href="$classns3_1_1_buffer.html#a92dd87809af24fb10696fee9a9cb56cf" title=" " alt="" coords="586,1865,750,1891"/>
+<area shape="rect" id="node28" href="$classns3_1_1_buffer.html#a8abd8164c3671d3dadc98fc66fade7b1" title=" " alt="" coords="583,815,753,842"/>
+<area shape="rect" id="node50" href="$classns3_1_1_buffer.html#a7c7cba562cba1633649786fdf78c5e6f" title="Assignment operator." alt="" coords="585,1915,751,1942"/>
+<area shape="rect" id="node4" href="$classns3_1_1_buffer.html#a60211196881cfccb64f67d71449eda83" title=" " alt="" coords="40,1930,204,1957"/>
+<area shape="rect" id="node5" href="$classns3_1_1_packet.html#a14ec3d4250b425468764de58f5837b6b" title="Concatenate the input packet at the end of the current packet." alt="" coords="327,2406,494,2433"/>
+<area shape="rect" id="node8" href="$classns3_1_1dsr_1_1_dsr_option_field.html#acd03d07018e22f5e2b23975fae84fb3c" title="Serialize the option, prepending pad1 or padn option as necessary." alt="" coords="323,1525,499,1567"/>
+<area shape="rect" id="node10" href="$classns3_1_1_option_field.html#a18f71368fbded356322e1eaebb01cd27" title="Serialize the option, prepending pad1 or padn option as necessary." alt="" coords="309,1591,512,1618"/>
+<area shape="rect" id="node14" href="$classns3_1_1_packet.html#ae964f1fcfd496c6c0db1b73f27e78530" title="Add a zero&#45;filled padding to the packet." alt="" coords="301,2254,520,2281"/>
+<area shape="rect" id="node15" href="$classns3_1_1_packet.html#ae26b490c30ae5bc98be5181ec6e06db8" title="Add trailer to this packet." alt="" coords="325,2355,496,2382"/>
+<area shape="rect" id="node16" href="$classns3_1_1_buffer.html#a7abfb0fd24f39d23519b3280e1a7f404" title="Create a full copy of the buffer, including all the internal structures." alt="" coords="311,1642,511,1669"/>
+<area shape="rect" id="node17" href="$classns3_1_1dsr_1_1_dsr_fs_header.html#acb5736dd005d323eefae5cc9db9eb5b9" title="Deserialize the packet." alt="" coords="328,1693,493,1735"/>
+<area shape="rect" id="node18" href="$classns3_1_1dsr_1_1_dsr_option_header.html#ab44c93c37011591950bb95730c1c5b06" title="Deserialize the packet." alt="" coords="314,1759,507,1800"/>
+<area shape="rect" id="node19" href="$classns3_1_1dsr_1_1_dsr_option_rerr_header.html#ab8bc84d5e10a371524ed37035db5dbec" title="Deserialize the packet." alt="" coords="301,1824,521,1865"/>
+<area shape="rect" id="node20" href="$classns3_1_1_ipv6_extension_header.html#a20381aa4706f87bd373604ea53f3488f" title="Deserialize the packet." alt="" coords="315,1889,507,1931"/>
+<area shape="rect" id="node21" href="$classns3_1_1_ipv6_option_header.html#a8645f1d17686431f177f7d5f3c38380e" title="Deserialize the packet." alt="" coords="325,1955,496,1996"/>
+<area shape="rect" id="node22" href="$classns3_1_1dsr_1_1_dsr_option_field.html#a18a58a88b2ba6ffc94669771647e586c" title="Deserialize the packet." alt="" coords="323,2020,499,2061"/>
+<area shape="rect" id="node23" href="$classns3_1_1_option_field.html#a6a74e16b63ee19bcfa20c9b6a8833dad" title="Deserialize the packet." alt="" coords="307,2086,514,2113"/>
+<area shape="rect" id="node24" href="$classns3_1_1_buffer.html#add89f12664174aa29c08264af66437ad" title=" " alt="" coords="323,1423,498,1450"/>
+<area shape="rect" id="node25" href="$class_buffer_test.html#a4ffd025f50c962366167daef7df0ac58" title="Implementation to actually run this TestCase." alt="" coords="341,1474,480,1501"/>
+<area shape="rect" id="node26" href="$classns3_1_1_wifi_information_element.html#a75fdda2e8009a87c8f2b255454ac0110" title="Compare two IEs for equality by ID &amp; Length, and then through memcmp of serialised version." alt="" coords="306,2137,515,2179"/>
+<area shape="rect" id="node27" href="$classns3_1_1_asn1_header.html#a2e699078b1a3af75a7008ef94bedb1c6" title="Function to write in m_serializationResult, after resizing its size." alt="" coords="305,2203,516,2230"/>
+<area shape="rect" id="node6" href="$classns3_1_1_originator_rx_status.html#a59c38c4a21335b5e82da00fdb0561af0" title="We have received a last fragment of the fragmented packets (indicated by the no more fragment field)." alt="" coords="24,2405,220,2447"/>
+<area shape="rect" id="node7" href="$classns3_1_1_csma_net_device.html#a736bf6ce5851ace677f8fc693a92855c" title="Adds the necessary headers and trailers to a packet of data in order to respect the packet type." alt="" coords="43,2340,201,2381"/>
+<area shape="rect" id="node9" href="$class_dsr_fs_header_test.html#ac2495c11d1b567cebc81c0b0668f88b6" title="Implementation to actually run this TestCase." alt="" coords="31,1095,213,1122"/>
+<area shape="rect" id="node11" href="$class_test_option_without_alignment.html#a23bf45b7de739a1c5b2521dee904e95b" title="Implementation to actually run this TestCase." alt="" coords="17,1223,227,1264"/>
+<area shape="rect" id="node12" href="$class_test_option_with_alignment.html#ae7937fcdd2ae8bc2790c5d7841ca22cb" title="Implementation to actually run this TestCase." alt="" coords="28,1441,216,1483"/>
+<area shape="rect" id="node13" href="$class_test_fulfilled_alignment.html#a5dbd0147961608bca7a80c0cd08d8f81" title="Implementation to actually run this TestCase." alt="" coords="39,1545,205,1587"/>
+<area shape="rect" id="node29" href="$classns3_1_1_packet.html#a7f6a0314efee85ac6cf4a64e05450538" title="Create a packet with payload filled with the content of this buffer." alt="" coords="337,390,484,417"/>
+<area shape="rect" id="node30" href="$class_pbb_test_case.html#aad11415643c1af39d71248174298dd6b" title="Constructor." alt="" coords="313,441,508,467"/>
+<area shape="rect" id="node31" href="$classns3_1_1_packet.html#a465108c595a0bc592095cbcab1832ed8" title="Add header to this packet." alt="" coords="323,491,499,518"/>
+<area shape="rect" id="node32" href="$classns3_1_1_six_low_pan_net_device.html#a41d34fd1612e7e6911614fadfef6ab67" title="Compress the headers according to NHC compression." alt="" coords="27,239,217,280"/>
+<area shape="rect" id="node33" href="$classns3_1_1_six_low_pan_net_device.html#af69701425fa2e02ab4a7fdcd1db99cc8" title="Decompress the headers according to NHC compression." alt="" coords="27,319,217,360"/>
+<area shape="rect" id="node34" href="$class_header_test.html#a5ae645830cd78a3717609bed5e0ef1ac" title="Implementation to actually run this TestCase." alt="" coords="49,415,195,442"/>
+<area shape="rect" id="node35" href="$classns3_1_1_ipv6_extension_loose_routing.html#ab73c109952d780d1eb52c2f7c144e546" title="Process method Called from Ipv6L3Protocol::Receive." alt="" coords="5,527,239,568"/>
+<area shape="rect" id="node36" href="$classns3_1_1_tcp_header.html#aa57fcc161d91b80483c757468303a50d" title="Calculate the header checksum." alt="" coords="315,593,506,635"/>
+<area shape="rect" id="node37" href="$classns3_1_1_udp_header.html#a2826d7fc12f1fc610053662b10661491" title="Calculate the header checksum." alt="" coords="313,659,508,700"/>
+<area shape="rect" id="node38" href="$classns3_1_1_icmpv6_header.html#aa0598a05dad2904576ed853885f4ed40" title="Calculate pseudo header checksum for IPv6." alt="" coords="288,724,533,765"/>
+<area shape="rect" id="node39" href="$class_tcp_header_with_r_f_c793_option_test_case.html#ad8478f3d6d33caa92f933389f8d8419b" title="Check the correct header deserialization." alt="" coords="287,943,535,984"/>
+<area shape="rect" id="node40" href="$class_tcp_header_with_r_f_c793_option_test_case.html#ac054655b0adbd8c76eab91590eb246c4" title="Check an header for the correct padding." alt="" coords="304,1008,517,1049"/>
+<area shape="rect" id="node41" href="$classns3_1_1_pbb_tlv.html#af1d0a54c2c334935bac7570889b275e4" title="Deserializes a TLV from the specified buffer." alt="" coords="321,1074,500,1101"/>
+<area shape="rect" id="node42" href="$class_test_empty_option_field.html#a5fdbca025c0d3629d42cd00050de73fb" title="Implementation to actually run this TestCase." alt="" coords="329,1125,492,1167"/>
+<area shape="rect" id="node43" href="$class_tcp_header_get_set_test_case.html#ae5c6a3e802b8648d197d5a22509acf49" title="Implementation to actually run this TestCase." alt="" coords="315,1191,507,1232"/>
+<area shape="rect" id="node44" href="$class_tcp_header_with_r_f_c793_option_test_case.html#a4f736353f198886b49418a84756e48de" title="Check an header with only one kind of option." alt="" coords="304,1256,517,1297"/>
+<area shape="rect" id="node45" href="$classns3_1_1_pbb_tlv.html#aaf48b2b695845f0a747dff11370c393e" title="Sets the value of this message to a buffer with the specified data." alt="" coords="329,1322,492,1349"/>
+<area shape="rect" id="node46" href="$class_tcp_option_w_s_test_case.html#a01e4f68295082d8a146f561a6c727d45" title="Serialization test." alt="" coords="328,5,493,47"/>
+<area shape="rect" id="node47" href="$class_tcp_option_t_s_test_case.html#a14597883403704320352bf1caad38777" title="Serialization test." alt="" coords="331,71,491,112"/>
+<area shape="rect" id="node48" href="$class_pbb_test_case.html#af46a68e3ac1ac6a3acba3db64974cba8" title="Serialization." alt="" coords="313,137,508,163"/>
+<area shape="rect" id="node49" href="$classns3_1_1_pcap_file.html#a057ede1e4feda72362d20d7f14c4e836" title="Write next packet to file." alt="" coords="336,187,485,214"/>
+</map>

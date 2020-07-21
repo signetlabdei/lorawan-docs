@@ -1,0 +1,22 @@
+<map id="ns3::UanHeaderCommon::GetDest" name="ns3::UanHeaderCommon::GetDest">
+<area shape="rect" id="node1" title="Get the destination address." alt="" coords="1615,360,1800,401"/>
+<area shape="rect" id="node2" href="$classns3_1_1_uan_mac_rc.html#ac0f5a6a4339db6f52fd1d850f8e49ded" title="Check that PHY is ok: not CTS or ACK not to my address." alt="" coords="1345,207,1536,234"/>
+<area shape="rect" id="node9" href="$classns3_1_1_uan_mac_rc.html#a04c4b6db8819b20151c8009553dbcd16" title="PHY receive ok Callback." alt="" coords="258,225,458,267"/>
+<area shape="rect" id="node11" href="$classns3_1_1_uan_mac_cw.html#ab64da4cbab0645939aa9d02091e10755" title="Receive packet from lower layer (passed to PHY as callback)." alt="" coords="1315,367,1567,394"/>
+<area shape="rect" id="node13" href="$classns3_1_1_uan_mac_rc_gw.html#aa47b708b4a5a7bda0dbd4dded98723f3" title="PHY receive ok callback." alt="" coords="523,448,726,489"/>
+<area shape="rect" id="node15" href="$classns3_1_1_uan_mac_aloha.html#ad0525b3ca9dc5d6db32b1ed95aee5f1b" title="Receive packet from lower layer (passed to PHY as callback)." alt="" coords="1318,545,1563,571"/>
+<area shape="rect" id="node17" href="$classns3_1_1_uan_mac_rc_gw.html#a0e3aefc24d4dffd594008152ba63269c" title="Send packet on PHY." alt="" coords="1327,469,1554,495"/>
+<area shape="rect" id="node20" href="$classns3_1_1_uan_mac_rc.html#a02a98cafc7e0c37962929792b96f1c31" title="Send on packet on the PHY." alt="" coords="1338,73,1543,99"/>
+<area shape="rect" id="node3" href="$classns3_1_1_uan_mac_rc.html#ad0c89fbba2f362b7915cd33809cbad14" title="Associate with a gateway by sending the first GWPING." alt="" coords="795,206,989,233"/>
+<area shape="rect" id="node5" href="$classns3_1_1_uan_mac_rc.html#af23682ff6db736c6a2c9eceae8252cd2" title="Periodically retry association." alt="" coords="1061,200,1255,241"/>
+<area shape="rect" id="node6" href="$classns3_1_1_uan_mac_rc.html#af4520e133c4a7e82f718fc42eac63459" title="Retry RTS." alt="" coords="1056,98,1260,125"/>
+<area shape="rect" id="node7" href="$classns3_1_1_uan_mac_rc.html#a5bef59fd83813d602f41fad1b4345ff1" title="Send RTS packet." alt="" coords="801,123,983,150"/>
+<area shape="rect" id="node4" href="$classns3_1_1_uan_mac_rc.html#a6200c9a80f5a849006488c6374a79fe9" title="Enqueue packet to be transmitted." alt="" coords="531,202,718,229"/>
+<area shape="rect" id="node8" href="$classns3_1_1_uan_mac_rc.html#a050570db8ee60717b778e06a9b8b9e77" title="Schedule Packet sends." alt="" coords="515,123,735,150"/>
+<area shape="rect" id="node10" href="$classns3_1_1_uan_mac_rc.html#a389dcb7e687df088a34ac894e8637482" title="Attach PHY layer to this MAC." alt="" coords="5,233,201,259"/>
+<area shape="rect" id="node12" href="$classns3_1_1_uan_mac_cw.html#abd7e18f187563f291d2bf89bfc00fe8d" title="Attach PHY layer to this MAC." alt="" coords="1058,367,1258,394"/>
+<area shape="rect" id="node14" href="$classns3_1_1_uan_mac_rc_gw.html#ae1467bc739ab7ac0dc9f1d1cef3bb55a" title="Attach PHY layer to this MAC." alt="" coords="249,455,467,482"/>
+<area shape="rect" id="node16" href="$classns3_1_1_uan_mac_aloha.html#a7c0a0376782fb8537f93aa0505f86c28" title="Attach PHY layer to this MAC." alt="" coords="1049,570,1267,597"/>
+<area shape="rect" id="node18" href="$classns3_1_1_uan_mac_rc_gw.html#afd7577179828a6dd31e59427f3c98672" title="End cycle by scheduling pending ACKs." alt="" coords="1053,519,1263,546"/>
+<area shape="rect" id="node19" href="$classns3_1_1_uan_mac_rc_gw.html#ac578bc895186506f0954fa86eefa8d6a" title="Cycle through pending requests." alt="" coords="783,494,1001,521"/>
+</map>

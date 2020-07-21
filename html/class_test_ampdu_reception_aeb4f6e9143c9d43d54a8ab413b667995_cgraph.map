@@ -1,0 +1,52 @@
+<map id="TestAmpduReception::DoRun" name="TestAmpduReception::DoRun">
+<area shape="rect" id="node1" title="Implementation to actually run this TestCase." alt="" coords="5,424,164,465"/>
+<area shape="rect" id="node2" href="$classns3_1_1_wifi_phy.html#afb67fffd3cfed4a799b1c92544dc0b55" title="Assign a fixed random variable stream number to the random variables used by this model." alt="" coords="230,78,437,105"/>
+<area shape="rect" id="node9" href="$class_test_ampdu_reception.html#a2aab9c48b16833fe4a3e206f84dd0d7d" title="Check the RX dropped bitmap for A&#45;MPDU 1." alt="" coords="212,129,455,171"/>
+<area shape="rect" id="node10" href="$class_test_ampdu_reception.html#af421a4b19dc405136bea6dd976fe9564" title="Check the RX dropped bitmap for A&#45;MPDU 2." alt="" coords="212,195,455,236"/>
+<area shape="rect" id="node11" href="$class_test_ampdu_reception.html#ae751f6f03b6fe02a3df6bebe17d6ef6e" title="Check the RX failure bitmap for A&#45;MPDU 1." alt="" coords="217,260,449,301"/>
+<area shape="rect" id="node12" href="$class_test_ampdu_reception.html#a83b47f1e9d2652f7fd76f5b5e4bbb971" title="Check the RX failure bitmap for A&#45;MPDU 2." alt="" coords="217,325,449,367"/>
+<area shape="rect" id="node13" href="$class_test_ampdu_reception.html#ae5ce6f5b4e4d85f46b42ef1886e9b48c" title="Check the RX success bitmap for A&#45;MPDU 1." alt="" coords="213,391,453,432"/>
+<area shape="rect" id="node14" href="$class_test_ampdu_reception.html#a18b705e20f7e5a055a0c00a77d606594" title="Check the RX success bitmap for A&#45;MPDU 2." alt="" coords="213,456,453,497"/>
+<area shape="rect" id="node15" href="$group__timecivil.html#ga17465a639c8d1464e76538afdd78a9f0" title=" " alt="" coords="1280,421,1423,447"/>
+<area shape="rect" id="node21" href="$group__timecivil.html#ga281d64bcb4dad96267d83c7688ec433f" title=" " alt="" coords="1281,1463,1422,1490"/>
+<area shape="rect" id="node22" href="$class_test_ampdu_reception.html#abf09357985fd49e13d70e61031f2fe51" title="Reset bitmaps function." alt="" coords="254,1565,413,1607"/>
+<area shape="rect" id="node23" href="$group__timecivil.html#ga33c34b816f8ff6628e33d5c8e9713b9e" title=" " alt="" coords="280,1514,387,1541"/>
+<area shape="rect" id="node26" href="$class_test_ampdu_reception.html#a78da8669fb854461af9b5b26362d65f2" title="Send A&#45;MPDU with 3 MPDUs of different size (i&#45;th MSDU will have 100 bytes more than (i&#45;1)&#45;th)." alt="" coords="224,1027,443,1068"/>
+<area shape="rect" id="node3" href="$classns3_1_1_random_variable_stream.html#add11aaf975607746b7e271d300659a94" title="Specifies the stream number for the RngStream." alt="" coords="503,71,711,112"/>
+<area shape="rect" id="node4" href="$classns3_1_1_rng_seed_manager.html#ac109366285260eb4c1e124862d2fd4ad" title="Get the next automatically assigned stream index." alt="" coords="786,5,953,47"/>
+<area shape="rect" id="node5" href="$classns3_1_1_rng_seed_manager.html#afaf1b845d2523df05ca341a930de24b3" title="Get the current run number." alt="" coords="786,136,953,177"/>
+<area shape="rect" id="node8" href="$classns3_1_1_rng_seed_manager.html#a09f2d185f02aac599cd5a244c4b73ba5" title="Get the current seed value which will be used by all subsequently instantiated RandomVariableStream o..." alt="" coords="786,71,953,112"/>
+<area shape="rect" id="node6" href="$classns3_1_1_uinteger_value.html#a82f7ad2ff90cfebf9f6292bb6ace0a05" title=" " alt="" coords="1041,139,1219,166"/>
+<area shape="rect" id="node7" href="$classns3_1_1_global_value.html#a48a99242193fb69609a17332733e8600" title="Get the value." alt="" coords="1030,82,1230,109"/>
+<area shape="rect" id="node16" href="$classns3_1_1_time.html#a3e742c67b2764e75ff95f9b754d43fe9" title="Create a Time equal to value in unit unit." alt="" coords="1471,1463,1643,1490"/>
+<area shape="rect" id="node17" href="$classns3_1_1_time.html#a8a39dc1b8cbbd7fe6d940e492d1b925e" title="Default constructor, with value 0." alt="" coords="1729,1514,1854,1541"/>
+<area shape="rect" id="node19" href="$classns3_1_1_time.html#a0b023c55c20582aa7c1781aacf128034" title="Get the Information record for timeUnit for the current Resolution." alt="" coords="1691,1463,1892,1490"/>
+<area shape="rect" id="node18" href="$classns3_1_1_time.html#aa7eef2a1119c1c4855d99f1e83d44c54" title="Record a Time instance with the MarkedTimes." alt="" coords="1974,1514,2101,1541"/>
+<area shape="rect" id="node20" href="$classns3_1_1_time.html#a963e53522278fcbdf1ab9f7adbd0f5d6" title="Get the current Resolution." alt="" coords="1940,1463,2135,1490"/>
+<area shape="rect" id="node24" href="$classns3_1_1_time.html#a60e845f4a74e62495b86356afe604cb4" title="Create a Time equal to value in unit unit." alt="" coords="521,1514,693,1541"/>
+<area shape="rect" id="node25" href="$classns3_1_1_time.html#a34e4acc13d0e08cc8cb9cd3b838b9baf" title="Create a Time in the current unit." alt="" coords="1493,1514,1620,1541"/>
+<area shape="rect" id="node27" href="$classns3_1_1_wifi_phy.html#aee98c7241bb4f0bb8e6d90f5771dacc7" title=" " alt="" coords="513,479,700,520"/>
+<area shape="rect" id="node31" href="$namespacens3_1_1lorawan.html#a6d14252aaccaf79e2535bfa2284ba529" title="Convert from dBm to Watts." alt="" coords="521,1122,692,1149"/>
+<area shape="rect" id="node32" href="$classns3_1_1_wifi_phy.html#afca470e272ec5c3126da63c0a6102f4c" title=" " alt="" coords="769,1362,969,1389"/>
+<area shape="rect" id="node33" href="$classns3_1_1_wifi_psdu.html#a0fbb2977085daf82b50f106ae41088b2" title="Return the size of the PSDU in bytes." alt="" coords="523,1005,691,1031"/>
+<area shape="rect" id="node34" href="$classns3_1_1_wifi_mac_header.html#a84a98932f5b66cca86bdfaa9cb1bcf7b" title="Set the TID for the QoS header." alt="" coords="530,1056,683,1097"/>
+<area shape="rect" id="node35" href="$classns3_1_1_wifi_mac_header.html#a71172371f11f1cfcb3912bb03134c285" title="Set Type/Subtype values with the correct values depending on the given type." alt="" coords="1053,1347,1207,1388"/>
+<area shape="rect" id="node36" href="$classns3_1_1_spectrum_wifi_phy.html#aead1ebdbaf59361928cd6ffa7abc3161" title="Input method for delivering a signal from the spectrum channel and low&#45;level PHY interface to this Sp..." alt="" coords="524,939,689,980"/>
+<area shape="rect" id="node28" href="$classns3_1_1_wifi_phy.html#a1793e6110ca3623131def396f487c11d" title=" " alt="" coords="763,413,975,455"/>
+<area shape="rect" id="node30" href="$classns3_1_1_wifi_phy.html#aa7b7e725d0e30ccf348e4302629d68b8" title=" " alt="" coords="777,479,962,520"/>
+<area shape="rect" id="node29" href="$classns3_1_1_wifi_phy.html#aa3d6056d67327dc5a757e5e49f68ab37" title=" " alt="" coords="1028,413,1232,455"/>
+<area shape="rect" id="node37" href="$classns3_1_1_interference_helper.html#ae40497433692e4917a86a56e4054efce" title="Add a non&#45;Wifi signal to interference helper." alt="" coords="782,1296,957,1337"/>
+<area shape="rect" id="node38" href="$classns3_1_1_time.html#a48c9bb8d93fea6a8d8cac216967219f4" title="Attach a unit to a Time, to facilitate output in a specific unit." alt="" coords="1075,1093,1185,1119"/>
+<area shape="rect" id="node39" href="$namespacens3.html#a952d99f6d759fee74dda19f308451bc1" title="Return a deep copy of a Ptr." alt="" coords="826,545,913,571"/>
+<area shape="rect" id="node40" href="$classns3_1_1_wifi_spectrum_value_helper.html#a867d82150f3c23c01524dde067101aa5" title="Create a spectral density corresponding to the RF filter." alt="" coords="759,647,980,688"/>
+<area shape="rect" id="node41" href="$namespacens3.html#ad82c32f157b4f17d3165d6565697b64d" title="Convert from dB to ratio." alt="" coords="810,713,929,739"/>
+<area shape="rect" id="node42" href="$classns3_1_1_spectrum_wifi_phy.html#a41a29304f5453abfbc59872f6725aa56" title=" " alt="" coords="787,764,952,805"/>
+<area shape="rect" id="node43" href="$classns3_1_1_wifi_phy.html#af55a96fc67e724abd99aeaeab826187f" title=" " alt="" coords="776,829,963,871"/>
+<area shape="rect" id="node44" href="$classns3_1_1_spectrum_wifi_phy.html#a47d771005e6886bc1ec0d4bbe4f433ba" title=" " alt="" coords="787,997,952,1039"/>
+<area shape="rect" id="node45" href="$classns3_1_1_wifi_phy.html#ab7e2d1d8eacfce01a5504d3d4c97476f" title="Return the reception gain (dB)." alt="" coords="779,1063,959,1090"/>
+<area shape="rect" id="node46" href="$classns3_1_1_wifi_phy.html#acc8eba804fc3b0118fc483954f665e22" title="Return the receive sensitivity threshold (dBm)." alt="" coords="760,595,979,622"/>
+<area shape="rect" id="node47" href="$namespacens3.html#a256abf4ba6bab6e20f8419fff00e73e2" title="Convert from Watts to dBm." alt="" coords="1075,746,1185,773"/>
+<area shape="rect" id="node48" href="$namespacens3.html#a3dd3817567502f8bc77b04e47134c070" title=" " alt="" coords="818,1114,921,1141"/>
+<area shape="rect" id="node49" href="$classns3_1_1_wifi_phy.html#abf2f88a74d34bd4a92ab8e19e8ef4b1e" title="Start receiving the PHY preamble of a PPDU (i.e." alt="" coords="773,1165,966,1207"/>
+<area shape="rect" id="node50" href="$classns3_1_1_wifi_phy.html#a75f5905e356d1cdff251043fa10c158e" title="Check if PHY state should move to CCA busy state based on current state of interference tracker." alt="" coords="771,1231,968,1272"/>
+</map>

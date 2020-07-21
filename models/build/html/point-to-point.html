@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>PointToPoint NetDevice &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Propagation" href="propagation.html" />
+    <link rel="prev" title="OpenFlow switch support" href="openflow-switch.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="propagation.html" title="Propagation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="openflow-switch.html" title="OpenFlow switch support"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pointtopoint-netdevice">
+<h1>PointToPoint NetDevice<a class="headerlink" href="#pointtopoint-netdevice" title="Permalink to this headline">¶</a></h1>
+<p>This is the introduction to PointToPoint NetDevice chapter, to complement the
+PointToPoint model doxygen.</p>
+<div class="section" id="overview-of-the-pointtopoint-model">
+<h2>Overview of the PointToPoint model<a class="headerlink" href="#overview-of-the-pointtopoint-model" title="Permalink to this headline">¶</a></h2>
+<p>The <em>ns-3</em> point-to-point model is of a very simple point to point data link
+connecting exactly two PointToPointNetDevice devices over an
+PointToPointChannel. This can be viewed as equivalent to a full duplex RS-232 or
+RS-422 link with null modem and no handshaking.</p>
+<p>Data is encapsulated in the Point-to-Point Protocol (PPP – RFC 1661), however
+the Link Control Protocol (LCP) and associated state machine is not implemented.
+The PPP link is assumed to be established and authenticated at all times.</p>
+<p>Data is not framed, therefore Address and Control fields will not be found.
+Since the data is not framed, there is no need to provide Flag Sequence and
+Control Escape octets, nor is a Frame Check Sequence appended. All that is
+required to implement non-framed PPP is to prepend the PPP protocol number for
+IP Version 4 which is the sixteen-bit number 0x21 (see
+<a class="reference external" href="http://www.iana.org/assignments/ppp-numbers">http://www.iana.org/assignments/ppp-numbers</a>).</p>
+<p>The PointToPointNetDevice provides following Attributes:</p>
+<ul class="simple">
+<li><p>Address:  The ns3::Mac48Address of the device (if desired);</p></li>
+<li><p>DataRate:  The data rate (ns3::DataRate) of the device;</p></li>
+<li><p>TxQueue:  The transmit queue (ns3::Queue) used by the device;</p></li>
+<li><p>InterframeGap:  The optional ns3::Time to wait between “frames”;</p></li>
+<li><p>Rx:  A trace source for received packets;</p></li>
+<li><p>Drop:  A trace source for dropped packets.</p></li>
+</ul>
+<p>The PointToPointNetDevice models a transmitter section that puts bits on a
+corresponding channel “wire.” The DataRate attribute specifies the number of
+bits per second that the device will simulate sending over the channel. In
+reality no bits are sent, but an event is scheduled for an elapsed time
+consistent with the number of bits in each packet and the specified DataRate.
+The implication here is that the receiving device models a receiver section that
+can receive any any data rate. Therefore there is no need, nor way to set a
+receive data rate in this model. By setting the DataRate on the transmitter of
+both devices connected to a given PointToPointChannel one can model a symmetric
+channel; or by setting different DataRates one can model an asymmetric channel
+(e.g., ADSL).</p>
+<p>The PointToPointNetDevice supports the assignment of a “receive error model.”
+This is an ErrorModel object that is used to simulate data corruption on the
+link.</p>
+</div>
+<div class="section" id="point-to-point-channel-model">
+<h2>Point-to-Point Channel Model<a class="headerlink" href="#point-to-point-channel-model" title="Permalink to this headline">¶</a></h2>
+<p>The point to point net devices are connected via an PointToPointChannel. This
+channel models two wires transmitting bits at the data rate specified by the
+source net device. There is no overhead beyond the eight bits per byte of the
+packet sent. That is, we do not model Flag Sequences, Frame Check Sequences nor
+do we “escape” any data.</p>
+<p>The PointToPointChannel provides following Attributes:</p>
+<ul class="simple">
+<li><p>Delay:  An ns3::Time specifying the propagation delay for the channel.</p></li>
+</ul>
+</div>
+<div class="section" id="using-the-pointtopointnetdevice">
+<h2>Using the PointToPointNetDevice<a class="headerlink" href="#using-the-pointtopointnetdevice" title="Permalink to this headline">¶</a></h2>
+<p>The PointToPoint net devices and channels are typically created and configured
+using the associated <code class="docutils literal notranslate"><span class="pre">PointToPointHelper</span></code> object. The various ns3 device
+helpers generally work in a similar way, and their use is seen in many of our
+example programs and is also covered in the <em>ns-3</em> tutorial.</p>
+<p>The conceptual model of interest is that of a bare computer “husk” into which
+you plug net devices. The bare computers are created using a <code class="docutils literal notranslate"><span class="pre">NodeContainer</span></code>
+helper. You just ask this helper to create as many computers (we call them
+<code class="docutils literal notranslate"><span class="pre">Nodes</span></code>) as you need on your network:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span> <span class="n">nodes</span><span class="p">;</span>
+<span class="n">nodes</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Once you have your nodes, you need to instantiate a <code class="docutils literal notranslate"><span class="pre">PointToPointHelper</span></code> and
+set any attributes you may want to change. Note that since this is a
+point-to-point (as compared to a point-to-multipoint) there may only be two
+nodes with associated net devices connected by a PointToPointChannel.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PointToPointHelper</span> <span class="n">pointToPoint</span><span class="p">;</span>
+<span class="n">pointToPoint</span><span class="p">.</span><span class="n">SetDeviceAttribute</span> <span class="p">(</span><span class="s">&quot;DataRate&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;5Mbps&quot;</span><span class="p">));</span>
+<span class="n">pointToPoint</span><span class="p">.</span><span class="n">SetChannelAttribute</span> <span class="p">(</span><span class="s">&quot;Delay&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;2ms&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>Once the attributes are set, all that remains is to create the devices and
+install them on the required nodes, and to connect the devices together using a
+PointToPoint channel. When we create the net devices, we add them to a container
+to allow you to use them in the future. This all takes just one line of code.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NetDeviceContainer</span> <span class="n">devices</span> <span class="o">=</span> <span class="n">pointToPoint</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">nodes</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pointtopoint-tracing">
+<h2>PointToPoint Tracing<a class="headerlink" href="#pointtopoint-tracing" title="Permalink to this headline">¶</a></h2>
+<p>Like all <em>ns-3</em> devices, the Point-to-Point Model provides a number of trace
+sources. These trace sources can be hooked using your own custom trace code, or
+you can use our helper functions to arrange for tracing to be enabled on devices
+you specify.</p>
+<div class="section" id="upper-level-mac-hooks">
+<h3>Upper-Level (MAC) Hooks<a class="headerlink" href="#upper-level-mac-hooks" title="Permalink to this headline">¶</a></h3>
+<p>From the point of view of tracing in the net device, there are several
+interesting points to insert trace hooks. A convention inherited from other
+simulators is that packets destined for transmission onto attached networks pass
+through a single “transmit queue” in the net device. We provide trace hooks at
+this point in packet flow, which corresponds (abstractly) only to a transition
+from the network to data link layer, and call them collectively
+the device MAC hooks.</p>
+<p>When a packet is sent to the Point-to-Point net device for transmission it
+always passes through the transmit queue. The transmit queue in the
+PointToPointNetDevice inherits from Queue, and therefore inherits three trace
+sources:</p>
+<ul class="simple">
+<li><p>An Enqueue operation source (see ns3::Queue::m_traceEnqueue);</p></li>
+<li><p>A Dequeue operation source (see ns3::Queue::m_traceDequeue);</p></li>
+<li><p>A Drop operation source (see ns3::Queue::m_traceDrop).</p></li>
+</ul>
+<p>The upper-level (MAC) trace hooks for the PointToPointNetDevice are, in fact,
+exactly these three trace sources on the single transmit queue of the device.</p>
+<p>The m_traceEnqueue event is triggered when a packet is placed on the transmit
+queue. This happens at the time that ns3::PointtoPointNetDevice::Send or
+ns3::PointToPointNetDevice::SendFrom is called by a higher layer to queue a
+packet for transmission. An Enqueue trace event firing should be interpreted
+as only indicating that a higher level protocol has sent a packet to the device.</p>
+<p>The m_traceDequeue event is triggered when a packet is removed from the transmit
+queue. Dequeues from the transmit queue can happen in two situations:  1) If the
+underlying channel is idle when PointToPointNetDevice::Send is called, a packet
+is dequeued from the transmit queue and immediately transmitted;  2) a packet
+may be dequeued and immediately transmitted in an internal TransmitCompleteEvent
+that functions much  like a transmit complete interrupt service routine. An
+Dequeue trace event firing may be viewed as indicating that the
+PointToPointNetDevice has begun transmitting a packet.</p>
+</div>
+<div class="section" id="lower-level-phy-hooks">
+<h3>Lower-Level (PHY) Hooks<a class="headerlink" href="#lower-level-phy-hooks" title="Permalink to this headline">¶</a></h3>
+<p>Similar to the upper level trace hooks, there are trace hooks available at the
+lower levels of the net device. We call these the PHY hooks. These events fire
+from the device methods that talk directly to the
+PointToPointChannel.</p>
+<p>The trace source m_dropTrace is called to indicate a packet that is dropped by
+the device. This happens when a packet is discarded as corrupt due to a receive
+error model indication (see ns3::ErrorModel and the associated attribute
+“ReceiveErrorModel”).</p>
+<p>The other low-level trace source fires on reception of a packet (see
+ns3::PointToPointNetDevice::m_rxTrace) from the PointToPointChannel.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PointToPoint NetDevice</a><ul>
+<li><a class="reference internal" href="#overview-of-the-pointtopoint-model">Overview of the PointToPoint model</a></li>
+<li><a class="reference internal" href="#point-to-point-channel-model">Point-to-Point Channel Model</a></li>
+<li><a class="reference internal" href="#using-the-pointtopointnetdevice">Using the PointToPointNetDevice</a></li>
+<li><a class="reference internal" href="#pointtopoint-tracing">PointToPoint Tracing</a><ul>
+<li><a class="reference internal" href="#upper-level-mac-hooks">Upper-Level (MAC) Hooks</a></li>
+<li><a class="reference internal" href="#lower-level-phy-hooks">Lower-Level (PHY) Hooks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="openflow-switch.html"
+                        title="previous chapter">OpenFlow switch support</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="propagation.html"
+                        title="next chapter">Propagation</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/point-to-point.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="propagation.html" title="Propagation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="openflow-switch.html" title="OpenFlow switch support"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

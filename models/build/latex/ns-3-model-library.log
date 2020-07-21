@@ -1,0 +1,3362 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.4.8)  29 APR 2020 18:25
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**ns-3-model-library.tex
+(./ns-3-model-library.tex
+LaTeX2e <2019-10-01> patch level 1
+(./sphinxmanual.cls
+Document Class: sphinxmanual 2019/12/01 v2.3.0 Document class (Sphinx manual)
+(/usr/share/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2019/08/27 v1.4j Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+LaTeX Info: Redefining \and on input line 35.
+)
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+)
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+2500 (decimal 9472)
+   defining Unicode char U+2502 (decimal 9474)
+   defining Unicode char U+2514 (decimal 9492)
+   defining Unicode char U+251C (decimal 9500)
+   defining Unicode char U+2572 (decimal 9586)
+
+(/usr/share/texmf-dist/tex/latex/cmap/cmap.sty
+Package: cmap 2008/03/06 v1.0h CMap support: searchable PDF
+)
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+
+(/usr/share/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)<<t1.cmap>>)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2019/04/01 v2.17c AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen103
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks17
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks18
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2855.
+LaTeX Info: Redefining \] on input line 2856.
+)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2019/10/15 3.35 The Babel package
+
+(/usr/share/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2019/10/15 3.35 Babel switching mechanism
+)
+(/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2019/10/15 3.35 Babel common definitions
+\babel@savecnt=\count101
+\U@D=\dimen112
+
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count102
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/share/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/share/texmf-dist/tex/latex/fncychap/fncychap.sty
+Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
+\RW=\skip46
+\mylen=\skip47
+\myhi=\skip48
+\px=\skip49
+\py=\skip50
+\pyy=\skip51
+\pxx=\skip52
+\c@AlphaCnt=\count103
+\c@AlphaDecCnt=\count104
+) (./sphinx.sty
+Package: sphinx 2019/09/02 v2.3.0 LaTeX package (Sphinx markup)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/10/08 v1.3c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
+)
+(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip53
+\f@nch@O@elh=\skip54
+\f@nch@O@erh=\skip55
+\f@nch@O@olh=\skip56
+\f@nch@O@orh=\skip57
+\f@nch@O@elf=\skip58
+\f@nch@O@erf=\skip59
+\f@nch@O@olf=\skip60
+\f@nch@O@orf=\skip61
+)
+(/usr/share/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/share/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/usr/share/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2019/07/11 v1.2j UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+27E8 (decimal 10216)
+   defining Unicode char U+27E9 (decimal 10217)
+   defining Unicode char U+FEFF (decimal 65279)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+(/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box29
+\beforetitleunit=\skip62
+\aftertitleunit=\skip63
+\ttl@plus=\dimen115
+\ttl@minus=\dimen116
+\ttl@toksa=\toks22
+\titlewidth=\dimen117
+\titlewidthlast=\dimen118
+\titlewidthfirst=\dimen119
+)
+(/usr/share/texmf-dist/tex/latex/tabulary/tabulary.sty
+Package: tabulary 2014/06/11 v0.10 tabulary package (DPC)
+
+(/usr/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen120
+\ar@mcellbox=\box30
+\extrarowheight=\dimen121
+\NC@list=\toks23
+\extratabsurround=\skip64
+\backup@length=\skip65
+\ar@cellbox=\box31
+)
+\TY@count=\count105
+\TY@linewidth=\dimen122
+\tymin=\dimen123
+\tymax=\dimen124
+\TY@tablewidth=\dimen125
+)
+(/usr/share/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2019/02/06 v4.12 Multi-page Table package (DPC)
+\LTleft=\skip66
+\LTright=\skip67
+\LTpre=\skip68
+\LTpost=\skip69
+\LTchunksize=\count106
+\LTcapwidth=\dimen126
+\LT@head=\box32
+\LT@firsthead=\box33
+\LT@foot=\box34
+\LT@lastfoot=\box35
+\LT@cols=\count107
+\LT@rows=\count108
+\c@LT@tables=\count109
+\c@LT@chunks=\count110
+\LT@p@ftn=\toks24
+)
+(/usr/share/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box36
+\sift@deathcycles=\count111
+\@vwid@loff=\dimen127
+\@vwid@roff=\dimen128
+) (./sphinxmulticell.sty
+Package: sphinxmulticell 2017/02/23 v1.6 better span rows and columns of a tabl
+e (Sphinx team)
+\sphinx@TY@tablewidth=\dimen129
+) (/usr/share/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip70
+\fb@frw=\dimen130
+\fb@frh=\dimen131
+\FrameRule=\dimen132
+\FrameSep=\dimen133
+)
+(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2019/10/22
+
+Style option: `fancyvrb' v3.3 <2019/10/22> (tvz)
+\FV@CodeLineNo=\count112
+\FV@InFile=\read1
+\FV@TabBox=\box37
+\c@FancyVerbLine=\count113
+\FV@StepNumber=\count114
+\FV@OutFile=\write3
+) (./footnotehyper-sphinx.sty
+Package: footnotehyper-sphinx 2017/10/27 v1.7 hyperref aware footnote.sty for s
+phinx (JFB)
+\FNH@notes=\box38
+\FNH@width=\dimen134
+)
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count115
+\float@exts=\toks25
+\float@box=\box39
+\@float@everytoks=\toks26
+\@floatcapt=\box40
+)
+(/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen135
+\WF@size=\dimen136
+\c@WF@wrappedlines=\count116
+\WF@box=\box41
+\WF@everypar=\toks27
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/share/texmf-dist/tex/latex/parskip/parskip.sty
+Rollback for package 'parskip' requested -> version 'v1'.
+         This corresponds to the release introduced on 2001-04-09.
+
+(/usr/share/texmf-dist/tex/latex/parskip/parskip-2001-04-09.sty
+Package: parskip 2001/04/09 non-zero parskip adjustments
+))
+(/usr/share/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/share/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(/usr/share/texmf-dist/tex/latex/capt-of/capt-of.sty
+Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
+)
+(/usr/share/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+(./sphinxhighlight.sty
+Package: sphinxhighlight 2016/05/29 stylesheet for highlighting with pygments
+) (/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+\sphinxverbatimsep=\dimen137
+\sphinxverbatimborder=\dimen138
+\sphinxshadowsep=\dimen139
+\sphinxshadowsize=\dimen140
+\sphinxshadowrule=\dimen141
+\spx@notice@border=\dimen142
+\spx@image@maxheight=\dimen143
+\spx@image@box=\dimen144
+\c@literalblock=\count117
+\sphinxcontinuationbox=\box42
+\sphinxvisiblespacebox=\box43
+\sphinxVerbatim@TitleBox=\box44
+\sphinxVerbatim@ContentsBox=\box45
+\py@argswidth=\skip71
+\lineblockindentation=\skip72
+\DUlineblockindent=\skip73
+)
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count118
+\Gm@cntv=\count119
+\c@Gm@tempcnt=\count120
+\Gm@bindingoffset=\dimen145
+\Gm@wd@mp=\dimen146
+\Gm@odd@mp=\dimen147
+\Gm@even@mp=\dimen148
+\Gm@layoutwidth=\dimen149
+\Gm@layoutheight=\dimen150
+\Gm@layouthoffset=\dimen151
+\Gm@layoutvoffset=\dimen152
+\Gm@dimlist=\toks28
+)
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2019/09/28 v7.00a Hypertext links for LaTeX
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen153
+\Hy@linkcounter=\count121
+\Hy@pagecounter=\count122
+
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2019/09/28 v7.00a Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count123
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4414.
+
+(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2019/09/28 v7.00a Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4414.
+Package hyperref Info: Option `breaklinks' set `true' on input line 4414.
+Package hyperref Info: Hyper figures OFF on input line 4540.
+Package hyperref Info: Link nesting OFF on input line 4545.
+Package hyperref Info: Hyper index ON on input line 4548.
+Package hyperref Info: Plain pages OFF on input line 4555.
+Package hyperref Info: Backreferencing OFF on input line 4560.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4793.
+\c@Hy@tempcnt=\count124
+
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5152.
+\XeTeXLinkMargin=\dimen154
+\Fld@menulength=\count125
+\Field@Width=\dimen155
+\Fld@charsize=\dimen156
+Package hyperref Info: Hyper figures OFF on input line 6423.
+Package hyperref Info: Link nesting OFF on input line 6428.
+Package hyperref Info: Hyper index ON on input line 6431.
+Package hyperref Info: backreferencing OFF on input line 6438.
+Package hyperref Info: Link coloring ON on input line 6441.
+Package hyperref Info: Link coloring with OCG OFF on input line 6448.
+Package hyperref Info: PDF/A mode OFF on input line 6453.
+LaTeX Info: Redefining \ref on input line 6493.
+LaTeX Info: Redefining \pageref on input line 6497.
+\Hy@abspage=\count126
+\c@Item=\count127
+\c@Hfootnote=\count128
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2019/09/28 v7.00a Hyperref driver for pdfTeX
+\Fld@listcount=\count129
+\c@bookmark@seq@number=\count130
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip74
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/hypcap.sty
+Package: hypcap 2016/05/16 v1.12 Adjusting the anchors of captions (HO)
+) (./sphinxmessages.sty
+Package: sphinxmessages 2019/01/04 v2.0 Localized LaTeX macros (Sphinx team)
+)
+\@indexfile=\write4
+\openout4 = `ns-3-model-library.idx'.
+
+
+Writing index file ns-3-model-library.idx
+(./ns-3-model-library.aux)
+\openout1 = `ns-3-model-library.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 8
+4.
+ (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 84
+.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count131
+\scratchdimen=\dimen157
+\scratchbox=\box46
+\nofMPsegments=\count132
+\nofMParguments=\count133
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count134
+\MPscratchDim=\dimen158
+\MPnumerator=\count135
+\makeMPintoPDFobject=\count136
+\everyMPtoPDFconversion=\toks30
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=36.135pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box47
+Package hyperref Info: Link coloring ON on input line 84.
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count137
+)
+LaTeX Info: Redefining \ref on input line 84.
+LaTeX Info: Redefining \pageref on input line 84.
+LaTeX Info: Redefining \nameref on input line 84.
+
+(./ns-3-model-library.out) (./ns-3-model-library.out)
+\@outlinefile=\write5
+\openout5 = `ns-3-model-library.out'.
+
+Package hyperref Info: Option `pageanchor' set `false' on input line 87.
+<ns-3.png, id=157, 565.11125pt x 323.2075pt>
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 87
+.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+File: ns-3.png Graphic file (type png)
+<use ns-3.png>
+Package pdftex.def Info: ns-3.png  used on input line 87.
+(pdftex.def)             Requested size: 469.76654pt x 268.68135pt.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 87
+.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 87.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 87.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 87.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 87.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 87.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 87.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 87.
+<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
+
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
+
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 87.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./ns-3.png>] [2
+
+
+]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 89.
+ (./ns-3-model-library.toc
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
+ [1
+
+])
+\tf@toc=\write6
+\openout6 = `ns-3-model-library.toc'.
+
+
+[2]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 9
+7.
+ (/usr/share/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [1
+
+] [2
+
+]
+Chapter 1.
+[3] [4
+
+]
+Chapter 2.
+<NetAnim_3_105.pdf, id=254, 1400.23125pt x 769.87625pt>
+File: NetAnim_3_105.pdf Graphic file (type pdf)
+<use NetAnim_3_105.pdf>
+Package pdftex.def Info: NetAnim_3_105.pdf  used on input line 189.
+(pdftex.def)             Requested size: 376.40096pt x 301.13158pt.
+<PacketStatistics.pdf, id=255, 740.36598pt x 555.67598pt>
+File: PacketStatistics.pdf Graphic file (type pdf)
+<use PacketStatistics.pdf>
+Package pdftex.def Info: PacketStatistics.pdf  used on input line 198.
+(pdftex.def)             Requested size: 376.40381pt x 282.50919pt.
+<Trajectory.pdf, id=256, 721.89702pt x 703.428pt>
+File: Trajectory.pdf Graphic file (type pdf)
+<use Trajectory.pdf>
+Package pdftex.def Info: Trajectory.pdf  used on input line 207.
+(pdftex.def)             Requested size: 376.40381pt x 366.78288pt.
+[5 <./NetAnim_3_105.pdf>]
+<RoutingTables.pdf, id=267, 1033.8625pt x 410.53375pt>
+File: RoutingTables.pdf Graphic file (type pdf)
+<use RoutingTables.pdf>
+Package pdftex.def Info: RoutingTables.pdf  used on input line 215.
+(pdftex.def)             Requested size: 376.40381pt x 149.46458pt.
+<NodeCountersChart.pdf, id=268, 1171.37625pt x 647.41875pt>
+File: NodeCountersChart.pdf Graphic file (type pdf)
+<use NodeCountersChart.pdf>
+Package pdftex.def Info: NodeCountersChart.pdf  used on input line 223.
+(pdftex.def)             Requested size: 376.40381pt x 208.03767pt.
+<NodeCountersTable.pdf, id=269, 788.9475pt x 540.0175pt>
+File: NodeCountersTable.pdf Graphic file (type pdf)
+<use NodeCountersTable.pdf>
+Package pdftex.def Info: NodeCountersTable.pdf  used on input line 229.
+(pdftex.def)             Requested size: 376.40381pt x 257.63985pt.
+<PacketTimeline.pdf, id=270, 519.9425pt x 301.125pt>
+File: PacketTimeline.pdf Graphic file (type pdf)
+<use PacketTimeline.pdf>
+Package pdftex.def Info: PacketTimeline.pdf  used on input line 237.
+(pdftex.def)             Requested size: 376.40381pt x 217.99529pt.
+ [6 <./PacketStatistics.pdf>] [7 <./Trajectory.pdf> <./RoutingTables.pdf>] [8 <
+./NodeCountersChart.pdf> <./NodeCountersTable.pdf>]
+[9 <./PacketTimeline.pdf>]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 349.
+ [10]
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <9> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 370.
+ [11] [12]
+Chapter 3.
+<antenna-coordinate-system.pdf, id=353, 199.1691pt x 199.1721pt>
+File: antenna-coordinate-system.pdf Graphic file (type pdf)
+<use antenna-coordinate-system.pdf>
+Package pdftex.def Info: antenna-coordinate-system.pdf  used on input line 502.
+
+(pdftex.def)             Requested size: 199.1686pt x 199.1716pt.
+[13
+
+] [14 <./antenna-coordinate-system.pdf>] [15] [16]
+Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 695--702
+[]\T1/ptm/m/n/10 AODV dis-cov-ers routes on de-mand. There-fore, the AODV model
+ buffers all pack-ets while
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 695--702
+\T1/ptm/m/n/10 a route re-quest packet (RREQ) is dis-sem-i-nated. A packet queu
+e is im-ple-mented in aodv-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 695--702
+\T1/ptm/m/n/10 rqueue.cc. A smart pointer to the packet, \T1/pcr/m/n/9 ns3::Ipv
+4RoutingProtocol::ErrorCallback\T1/ptm/m/n/10 ,
+ []
+
+[17
+
+] [18]
+Chapter 5.
+<http-main-object-size.png, id=433, 481.8pt x 361.35pt>
+File: http-main-object-size.png Graphic file (type png)
+<use http-main-object-size.png>
+Package pdftex.def Info: http-main-object-size.png  used on input line 803.
+(pdftex.def)             Requested size: 469.77148pt x 352.3176pt.
+<http-embedded-object-size.png, id=434, 481.8pt x 361.35pt>
+File: http-embedded-object-size.png Graphic file (type png)
+<use http-embedded-object-size.png>
+Package pdftex.def Info: http-embedded-object-size.png  used on input line 810.
+
+(pdftex.def)             Requested size: 469.77148pt x 352.3176pt.
+<http-reading-time.png, id=436, 481.8pt x 361.35pt>
+File: http-reading-time.png Graphic file (type png)
+<use http-reading-time.png>
+Package pdftex.def Info: http-reading-time.png  used on input line 825.
+(pdftex.def)             Requested size: 469.77148pt x 352.3176pt.
+[19
+
+] [20 <./http-main-object-size.png>] [21 <./http-embedded-object-size.png>]
+[22 <./http-reading-time.png>]
+Underfull \hbox (badness 5787) in paragraph at lines 886--890
+[]\T1/ptm/m/n/10 the first em-bed-ded ob-ject
+ []
+
+<http-parsing-time.png, id=468, 481.8pt x 361.35pt>
+File: http-parsing-time.png Graphic file (type png)
+<use http-parsing-time.png>
+Package pdftex.def Info: http-parsing-time.png  used on input line 915.
+(pdftex.def)             Requested size: 469.77148pt x 352.3176pt.
+<http-num-of-embedded-objects.png, id=469, 481.8pt x 361.35pt>
+File: http-num-of-embedded-objects.png Graphic file (type png)
+<use http-num-of-embedded-objects.png>
+Package pdftex.def Info: http-num-of-embedded-objects.png  used on input line 9
+22.
+(pdftex.def)             Requested size: 469.77148pt x 352.3176pt.
+[23] [24 <./http-parsing-time.png>] [25 <./http-num-of-embedded-objects.png>]
+LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 9
+96.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+) [26]
+Chapter 6.
+[27
+
+] [28
+
+]
+Chapter 7.
+[29] [30] [31] [32
+
+]
+Chapter 8.
+[33] [34] [35] [36]
+Underfull \hbox (badness 10000) in paragraph at lines 1421--1422
+[]\T1/ptm/m/n/10 OkumuraHataPropagationLossModel (OH) (at fre-quen-cies > 2.3 G
+Hz sub-sti-tuted by
+ []
+
+[37] [38] [39] [40] [41] [42] [43] [44] [45] [46
+
+]
+Chapter 9.
+[47]
+Underfull \hbox (badness 7221) in paragraph at lines 1964--1965
+[]\T1/ptm/m/n/10 To over-come this, we im-ple-ment Ipv4L3ClickProtocol, a strip
+ped down ver-sion of Ipv4L3Protocol.
+ []
+
+[48] [49] [50] [51] [52
+
+]
+Chapter 10.
+[53] [54] [55] [56] [57] [58]
+Chapter 11.
+[59
+
+] [60]
+Chapter 12.
+[61
+
+] [62]
+Overfull \hbox (69.12953pt too wide) in paragraph at lines 2746--2746
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2746--2746
+
+ []
+
+[63] [64]
+Chapter 13.
+<testbed.pdf, id=787, 361.35pt x 245.88062pt>
+File: testbed.pdf Graphic file (type pdf)
+<use testbed.pdf>
+Package pdftex.def Info: testbed.pdf  used on input line 2913.
+(pdftex.def)             Requested size: 361.34912pt x 245.88pt.
+<emulated-channel.pdf, id=788, 433.62pt x 166.1648pt>
+File: emulated-channel.pdf Graphic file (type pdf)
+<use emulated-channel.pdf>
+Package pdftex.def Info: emulated-channel.pdf  used on input line 2935.
+(pdftex.def)             Requested size: 433.61894pt x 166.16437pt.
+[65
+
+] [66 <./testbed.pdf> <./emulated-channel.pdf>] [67] [68
+
+]
+Chapter 14.
+[69] [70] [71] [72] [73] [74
+
+]
+Chapter 15.
+[75] [76] [77] [78] [79] [80]
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 3789.
+ [81] [82]
+Chapter 16.
+[83
+
+] [84] [85] [86] [87] [88
+
+]
+Chapter 17.
+[89] [90] [91] [92] [93]
+<internet-node-send.pdf, id=983, 361.35pt x 187.04279pt>
+File: internet-node-send.pdf Graphic file (type pdf)
+<use internet-node-send.pdf>
+Package pdftex.def Info: internet-node-send.pdf  used on input line 4527.
+(pdftex.def)             Requested size: 361.34912pt x 187.04231pt.
+<internet-node-recv.pdf, id=984, 361.35pt x 257.23201pt>
+File: internet-node-recv.pdf Graphic file (type pdf)
+<use internet-node-recv.pdf>
+Package pdftex.def Info: internet-node-recv.pdf  used on input line 4534.
+(pdftex.def)             Requested size: 361.34912pt x 257.23138pt.
+ [94 <./internet-node-send.pdf>] [95 <./internet-node-recv.pdf>] [96] [97] [98]
+ [99] [100] [101]
+Underfull \hbox (badness 10000) in paragraph at lines 5098--5102
+[]\T1/ptm/m/n/10 Note that the node-wide con-fig-u-ra-tion only serves as a con
+-ve-nient method to en-able/disable the
+ []
+
+[102] [103] [104] [105]
+<routing.pdf, id=1081, 433.62pt x 248.83063pt>
+File: routing.pdf Graphic file (type pdf)
+<use routing.pdf>
+Package pdftex.def Info: routing.pdf  used on input line 5391.
+(pdftex.def)             Requested size: 433.61894pt x 248.83002pt.
+ [106 <./routing.pdf>]
+<routing-specialization.pdf, id=1099, 361.35pt x 100.27261pt>
+File: routing-specialization.pdf Graphic file (type pdf)
+<use routing-specialization.pdf>
+Package pdftex.def Info: routing-specialization.pdf  used on input line 5439.
+(pdftex.def)             Requested size: 361.34912pt x 100.27235pt.
+ [107 <./routing-specialization.pdf>] [108] [109] [110]
+Underfull \hbox (badness 10000) in paragraph at lines 5753--5756
+[]\T1/ptm/m/n/10 The ex-am-ples \T1/pcr/m/n/9 examples/routing/ripng-simple-net
+work.cc \T1/ptm/m/n/10 and \T1/pcr/m/n/9 examples/routing/
+ []
+
+[111] [112] [113] [114] [115]
+<tcp-state-machine.png, id=1185, 528.97626pt x 492.84125pt>
+File: tcp-state-machine.png Graphic file (type png)
+<use tcp-state-machine.png>
+Package pdftex.def Info: tcp-state-machine.png  used on input line 6165.
+(pdftex.def)             Requested size: 469.75423pt x 437.6873pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 6177.
+ [116] [117 <./tcp-state-machine.png (PNG copy)>]
+[118] [119] [120] [121] [122] [123]
+Overfull \hbox (588.2871pt too wide) detected at line 6720
+[]
+ []
+
+[124]
+Overfull \hbox (802.5198pt too wide) detected at line 6803
+[]
+ []
+
+
+! Package inputenc Error: Unicode character α (U+03B1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6825 ...verage of fraction of packets marked (α
+                                                  ) by using the exponential...
+
+? 
+[125]
+
+! Package inputenc Error: Unicode character α (U+03B1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6830 α = (1 \PYGZhy{} g) x α + g x F
+                                        
+? 
+
+! Package inputenc Error: Unicode character α (U+03B1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6830 α = (1 \PYGZhy{} g) x α + g x F
+                                        
+? 
+
+! Package inputenc Error: Unicode character α (U+03B1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6848 cwnd = cwnd * (1 \PYGZhy{} α / 2)
+                                         
+? 
+
+! Package inputenc Error: Unicode character α (U+03B1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6856 initial alpha (α) = 1
+                             
+? 
+[126] [127] [128] [129] [130] [131] [132]
+Underfull \hbox (badness 10000) in paragraph at lines 7478--7480
+[]\T1/ptm/m/n/10 The im-ple-men-ta-tion fol-lows the In-ter-net draft (De-liv-e
+ry Rate Es-ti-ma-tion): [][]$https : / / tools . ietf . org / html /
+ []
+
+[133]
+LaTeX Font Info:    Font shape `TS1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `TS1/ptm/b/n' tried instead on input line 7495.
+ [134] [135]
+Overfull \vbox (1.7258pt too high) detected at line 7745
+ []
+
+[136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146]
+Underfull \hbox (badness 10000) in paragraph at lines 8531--8533
+[]\T1/pcr/m/n/9 NotifyNormalClose\T1/ptm/m/n/10 , \T1/pcr/m/n/9 NotifyErrorClos
+e\T1/ptm/m/n/10 , \T1/pcr/m/n/9 NotifyConnectionRequest \T1/ptm/m/n/10 and
+ []
+
+[147] [148] [149] [150
+
+]
+Chapter 18.
+
+LaTeX Warning: Citation `lorawan:semtech2015modulation' on page 151 undefined o
+n input line 8766.
+
+
+LaTeX Warning: Citation `lorawan:knight2016reversing' on page 151 undefined on 
+input line 8767.
+
+[151]
+
+LaTeX Warning: Citation `lorawan:lorawanstandard' on page 152 undefined on inpu
+t line 8772.
+
+
+LaTeX Warning: Hyper reference `lorawan:lorawan-topology' on page 152 undefined
+ on input line 8778.
+
+<LoRaWANTopology.pdf, id=1505, 163.5908pt x 285.02937pt>
+File: LoRaWANTopology.pdf Graphic file (type pdf)
+<use LoRaWANTopology.pdf>
+Package pdftex.def Info: LoRaWANTopology.pdf  used on input line 8806.
+(pdftex.def)             Requested size: 163.5904pt x 285.02866pt.
+[152 <./LoRaWANTopology.pdf>] [153]
+
+LaTeX Warning: Citation `lorawan:goursaud2015dedicated' on page 154 undefined o
+n input line 8905.
+
+
+LaTeX Warning: Citation `lorawan:magrin2017performance' on page 154 undefined o
+n input line 8928.
+
+
+LaTeX Warning: Citation `lorawan:magrin2017thesis' on page 154 undefined on inp
+ut line 8928.
+
+
+LaTeX Warning: Citation `lorawan:sx1301' on page 154 undefined on input line 89
+35.
+
+[154] [155] [156] [157] [158] [159] [160
+
+]
+Chapter 19.
+<lr-wpan-arch.pdf, id=1583, 144.54pt x 281.88411pt>
+File: lr-wpan-arch.pdf Graphic file (type pdf)
+<use lr-wpan-arch.pdf>
+Package pdftex.def Info: lr-wpan-arch.pdf  used on input line 9353.
+(pdftex.def)             Requested size: 144.53963pt x 281.8834pt.
+[161 <./lr-wpan-arch.pdf>]
+<lr-wpan-primitives.pdf, id=1594, 216.81pt x 132.51709pt>
+File: lr-wpan-primitives.pdf Graphic file (type pdf)
+<use lr-wpan-primitives.pdf>
+Package pdftex.def Info: lr-wpan-primitives.pdf  used on input line 9376.
+(pdftex.def)             Requested size: 216.80946pt x 132.51675pt.
+ [162 <./lr-wpan-primitives.pdf>]
+<802-15-4-per-sens.pdf, id=1604, 361.35pt x 252.945pt>
+File: 802-15-4-per-sens.pdf Graphic file (type pdf)
+<use 802-15-4-per-sens.pdf>
+Package pdftex.def Info: 802-15-4-per-sens.pdf  used on input line 9482.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+ [163] [164 <./802-15-4-per-sens.pdf>]
+<lr-wpan-data-example.pdf, id=1626, 1151.30125pt x 611.28375pt>
+File: lr-wpan-data-example.pdf Graphic file (type pdf)
+<use lr-wpan-data-example.pdf>
+Package pdftex.def Info: lr-wpan-data-example.pdf  used on input line 9578.
+(pdftex.def)             Requested size: 469.7528pt x 249.41539pt.
+<802-15-4-psr-distance.pdf, id=1627, 361.35pt x 252.945pt>
+File: 802-15-4-psr-distance.pdf Graphic file (type pdf)
+<use 802-15-4-psr-distance.pdf>
+Package pdftex.def Info: 802-15-4-psr-distance.pdf  used on input line 9594.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+ [165 <./lr-wpan-data-example.pdf>] [166 <./802-15-4-psr-distance.pdf>]
+<802-15-4-ber.pdf, id=1647, 361.35pt x 252.945pt>
+File: 802-15-4-ber.pdf Graphic file (type pdf)
+<use 802-15-4-ber.pdf>
+Package pdftex.def Info: 802-15-4-ber.pdf  used on input line 9636.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+ [167 <./802-15-4-ber.pdf>] [168
+
+]
+Chapter 20.
+<epc-topology-with-split.pdf, id=1664, 1075.01625pt x 427.5975pt>
+File: epc-topology-with-split.pdf Graphic file (type pdf)
+<use epc-topology-with-split.pdf>
+Package pdftex.def Info: epc-topology-with-split.pdf  used on input line 9668.
+(pdftex.def)             Requested size: 469.76074pt x 186.84508pt.
+[169 <./epc-topology-with-split.pdf>] [170]
+<lte-arch-ue-data.pdf, id=1696, 170.7168pt x 264.1619pt>
+File: lte-arch-ue-data.pdf Graphic file (type pdf)
+<use lte-arch-ue-data.pdf>
+Package pdftex.def Info: lte-arch-ue-data.pdf  used on input line 9856.
+(pdftex.def)             Requested size: 170.71637pt x 264.16124pt.
+<lte-arch-ue-ctrl.pdf, id=1697, 284.52798pt x 275.74016pt>
+File: lte-arch-ue-ctrl.pdf Graphic file (type pdf)
+<use lte-arch-ue-ctrl.pdf>
+Package pdftex.def Info: lte-arch-ue-ctrl.pdf  used on input line 9863.
+(pdftex.def)             Requested size: 284.52728pt x 275.73947pt.
+<lte-ue-phy.pdf, id=1699, 1025.8325pt x 330.23375pt>
+File: lte-ue-phy.pdf Graphic file (type pdf)
+<use lte-ue-phy.pdf>
+Package pdftex.def Info: lte-ue-phy.pdf  used on input line 9872.
+(pdftex.def)             Requested size: 469.75989pt x 151.22406pt.
+ [171] [172 <./lte-arch-ue-data.pdf> <./lte-arch-ue-ctrl.pdf>]
+<lte-arch-enb-data.pdf, id=1735, 170.7168pt x 180.31265pt>
+File: lte-arch-enb-data.pdf Graphic file (type pdf)
+<use lte-arch-enb-data.pdf>
+Package pdftex.def Info: lte-arch-enb-data.pdf  used on input line 9887.
+(pdftex.def)             Requested size: 170.71637pt x 180.3122pt.
+<lte-arch-enb-ctrl.pdf, id=1736, 284.52798pt x 233.29158pt>
+File: lte-arch-enb-ctrl.pdf Graphic file (type pdf)
+<use lte-arch-enb-ctrl.pdf>
+Package pdftex.def Info: lte-arch-enb-ctrl.pdf  used on input line 9894.
+(pdftex.def)             Requested size: 284.52728pt x 233.291pt.
+<lte-enb-phy.pdf, id=1738, 1083.04625pt x 330.23375pt>
+File: lte-enb-phy.pdf Graphic file (type pdf)
+<use lte-enb-phy.pdf>
+Package pdftex.def Info: lte-enb-phy.pdf  used on input line 9903.
+(pdftex.def)             Requested size: 469.74966pt x 143.23732pt.
+ [173 <./lte-ue-phy.pdf> <./lte-arch-enb-data.pdf>]
+[174 <./lte-arch-enb-ctrl.pdf> <./lte-enb-phy.pdf>]
+<lte-epc-e2e-data-protocol-stack-with-split.pdf, id=1765, 1210.5225pt x 524.961
+24pt>
+File: lte-epc-e2e-data-protocol-stack-with-split.pdf Graphic file (type pdf)
+<use lte-epc-e2e-data-protocol-stack-with-split.pdf>
+Package pdftex.def Info: lte-epc-e2e-data-protocol-stack-with-split.pdf  used o
+n input line 9923.
+(pdftex.def)             Requested size: 469.75606pt x 203.71675pt.
+<lte-epc-e2e-control-protocol-stack-with-split.pdf, id=1768, 1313.90875pt x 522
+.95375pt>
+File: lte-epc-e2e-control-protocol-stack-with-split.pdf Graphic file (type pdf)
+
+<use lte-epc-e2e-control-protocol-stack-with-split.pdf>
+Package pdftex.def Info: lte-epc-e2e-control-protocol-stack-with-split.pdf  use
+d on input line 9944.
+(pdftex.def)             Requested size: 469.75893pt x 186.9705pt.
+ [175 <./lte-epc-e2e-data-protocol-stack-with-split.pdf>] [176 <./lte-epc-e2e-c
+ontrol-protocol-stack-with-split.pdf>] [177
+
+] [178] [179]
+<lte-subframe-structure.pdf, id=1816, 144.54pt x 216.33423pt>
+File: lte-subframe-structure.pdf Graphic file (type pdf)
+<use lte-subframe-structure.pdf>
+Package pdftex.def Info: lte-subframe-structure.pdf  used on input line 10160.
+(pdftex.def)             Requested size: 225.84229pt x 338.03789pt.
+ [180
+
+ <./lte-subframe-structure.pdf>] [181]
+<lte-phy-interference.pdf, id=1845, 341.4326pt x 569.71849pt>
+File: lte-phy-interference.pdf Graphic file (type pdf)
+<use lte-phy-interference.pdf>
+Package pdftex.def Info: lte-phy-interference.pdf  used on input line 10232.
+(pdftex.def)             Requested size: 341.43176pt x 569.71709pt.
+<miesm_scheme.pdf, id=1854, 774.895pt x 307.1475pt>
+File: miesm_scheme.pdf Graphic file (type pdf)
+<use miesm_scheme.pdf>
+Package pdftex.def Info: miesm_scheme.pdf  used on input line 10271.
+(pdftex.def)             Requested size: 469.76476pt x 186.19739pt.
+
+[182] [183 <./lte-phy-interference.pdf>] [184 <./miesm_scheme.pdf>]
+<MCS_1_4.pdf, id=1909, 614.295pt x 794.97pt>
+File: MCS_1_4.pdf Graphic file (type pdf)
+<use MCS_1_4.pdf>
+Package pdftex.def Info: MCS_1_4.pdf  used on input line 10298.
+(pdftex.def)             Requested size: 469.75604pt x 607.93173pt.
+<MCS_5_8.pdf, id=1910, 614.295pt x 794.97pt>
+File: MCS_5_8.pdf Graphic file (type pdf)
+<use MCS_5_8.pdf>
+Package pdftex.def Info: MCS_5_8.pdf  used on input line 10305.
+(pdftex.def)             Requested size: 469.75604pt x 607.93173pt.
+<MCS_9_12.pdf, id=1911, 614.295pt x 794.97pt>
+File: MCS_9_12.pdf Graphic file (type pdf)
+<use MCS_9_12.pdf>
+Package pdftex.def Info: MCS_9_12.pdf  used on input line 10312.
+(pdftex.def)             Requested size: 469.75604pt x 607.93173pt.
+<MCS_13_16.pdf, id=1912, 614.295pt x 794.97pt>
+File: MCS_13_16.pdf Graphic file (type pdf)
+<use MCS_13_16.pdf>
+Package pdftex.def Info: MCS_13_16.pdf  used on input line 10319.
+(pdftex.def)             Requested size: 469.75604pt x 607.93173pt.
+<MCS_17_20.pdf, id=1913, 614.295pt x 794.97pt>
+File: MCS_17_20.pdf Graphic file (type pdf)
+<use MCS_17_20.pdf>
+Package pdftex.def Info: MCS_17_20.pdf  used on input line 10326.
+(pdftex.def)             Requested size: 469.75604pt x 607.93173pt.
+<MCS_21_24.pdf, id=1914, 614.295pt x 794.97pt>
+File: MCS_21_24.pdf Graphic file (type pdf)
+<use MCS_21_24.pdf>
+Package pdftex.def Info: MCS_21_24.pdf  used on input line 10333.
+(pdftex.def)             Requested size: 469.75604pt x 607.93173pt.
+<MCS_25_28.pdf, id=1915, 614.295pt x 794.97pt>
+File: MCS_25_28.pdf Graphic file (type pdf)
+<use MCS_25_28.pdf>
+Package pdftex.def Info: MCS_25_28.pdf  used on input line 10340.
+(pdftex.def)             Requested size: 469.75604pt x 607.93173pt.
+<MCS_29_29.pdf, id=1916, 614.295pt x 794.97pt>
+File: MCS_29_29.pdf Graphic file (type pdf)
+<use MCS_29_29.pdf>
+Package pdftex.def Info: MCS_29_29.pdf  used on input line 10347.
+(pdftex.def)             Requested size: 469.75604pt x 607.93173pt.
+ [185]
+[186 <./MCS_1_4.pdf>] [187 <./MCS_5_8.pdf>] [188 <./MCS_9_12.pdf>] [189 <./MCS_
+13_16.pdf>] [190 <./MCS_17_20.pdf>] [191 <./MCS_21_24.pdf>] [192 <./MCS_25_28.p
+df>] [193 <./MCS_29_29.pdf>] [194] [195]
+<lte-harq-processes-scheme.pdf, id=2036, 2036.60875pt x 848.16875pt>
+File: lte-harq-processes-scheme.pdf Graphic file (type pdf)
+<use lte-harq-processes-scheme.pdf>
+Package pdftex.def Info: lte-harq-processes-scheme.pdf  used on input line 1045
+9.
+(pdftex.def)             Requested size: 469.74643pt x 195.63121pt.
+ [196]
+<lte-harq-architecture.pdf, id=2042, 1353.055pt x 1019.81pt>
+File: lte-harq-architecture.pdf Graphic file (type pdf)
+<use lte-harq-architecture.pdf>
+Package pdftex.def Info: lte-harq-architecture.pdf  used on input line 10470.
+(pdftex.def)             Requested size: 469.75685pt x 354.06006pt.
+ [197 <./lte-harq-processes-scheme.pdf>] [198 <./lte-harq-architecture.pdf>] [1
+99]
+<ff-mac-saps.pdf, id=2084, 361.35pt x 140.16565pt>
+File: ff-mac-saps.pdf Graphic file (type pdf)
+<use ff-mac-saps.pdf>
+Package pdftex.def Info: ff-mac-saps.pdf  used on input line 10603.
+(pdftex.def)             Requested size: 361.34912pt x 140.1653pt.
+<ff-example.pdf, id=2088, 361.35pt x 141.8921pt>
+File: ff-example.pdf Graphic file (type pdf)
+<use ff-example.pdf>
+Package pdftex.def Info: ff-example.pdf  used on input line 10642.
+(pdftex.def)             Requested size: 361.34912pt x 141.89175pt.
+ [200 <./ff-mac-saps.pdf>]
+[201 <./ff-example.pdf>] [202] [203] [204] [205]
+<mac-random-access-contention.pdf, id=2151, 284.52798pt x 602.59933pt>
+File: mac-random-access-contention.pdf Graphic file (type pdf)
+<use mac-random-access-contention.pdf>
+Package pdftex.def Info: mac-random-access-contention.pdf  used on input line 1
+1064.
+(pdftex.def)             Requested size: 284.52728pt x 602.59787pt.
+<mac-random-access-noncontention.pdf, id=2152, 426.79147pt x 612.6027pt>
+File: mac-random-access-noncontention.pdf Graphic file (type pdf)
+<use mac-random-access-noncontention.pdf>
+Package pdftex.def Info: mac-random-access-noncontention.pdf  used on input lin
+e 11071.
+(pdftex.def)             Requested size: 426.79044pt x 612.60121pt.
+ [206] [207 <./mac-random-access-contention.pdf>] [208 <./mac-random-access-non
+contention.pdf>]
+<lte-rlc-implementation-model.pdf, id=2191, 1445.4pt x 855.17392pt>
+File: lte-rlc-implementation-model.pdf Graphic file (type pdf)
+<use lte-rlc-implementation-model.pdf>
+Package pdftex.def Info: lte-rlc-implementation-model.pdf  used on input line 1
+1099.
+(pdftex.def)             Requested size: 469.74944pt x 277.92822pt.
+ [209
+
+ <./lte-rlc-implementation-model.pdf>] [210]
+<lte-rlc-data-txon-dl.pdf, id=2218, 284.52798pt x 229.83064pt>
+File: lte-rlc-data-txon-dl.pdf Graphic file (type pdf)
+<use lte-rlc-data-txon-dl.pdf>
+Package pdftex.def Info: lte-rlc-data-txon-dl.pdf  used on input line 11247.
+(pdftex.def)             Requested size: 414.04419pt x 334.48033pt.
+ [211 <./lte-rlc-data-txon-dl.pdf>]
+<lte-rlc-data-retx-dl.pdf, id=2232, 284.52798pt x 221.73842pt>
+File: lte-rlc-data-retx-dl.pdf Graphic file (type pdf)
+<use lte-rlc-data-retx-dl.pdf>
+Package pdftex.def Info: lte-rlc-data-retx-dl.pdf  used on input line 11310.
+(pdftex.def)             Requested size: 376.40381pt x 293.36552pt.
+ [212 <./lte-rlc-data-retx-dl.pdf>]
+<lte-rlc-data-txon-ul.pdf, id=2246, 284.52798pt x 244.7273pt>
+File: lte-rlc-data-txon-ul.pdf Graphic file (type pdf)
+<use lte-rlc-data-txon-ul.pdf>
+Package pdftex.def Info: lte-rlc-data-txon-ul.pdf  used on input line 11332.
+(pdftex.def)             Requested size: 414.04419pt x 356.15991pt.
+<lte-rlc-data-retx-ul.pdf, id=2248, 284.52798pt x 285.4705pt>
+File: lte-rlc-data-retx-ul.pdf Graphic file (type pdf)
+<use lte-rlc-data-retx-ul.pdf>
+Package pdftex.def Info: lte-rlc-data-retx-ul.pdf  used on input line 11352.
+(pdftex.def)             Requested size: 376.40381pt x 377.68468pt.
+ [213 <./lte-rlc-data-txon-ul.pdf>] [214 <./lte-rlc-data-retx-ul.pdf>] [215] [2
+16] [217] [218]
+<lte-ue-rrc-states.pdf, id=2320, 747.79375pt x 1037.8775pt>
+File: lte-ue-rrc-states.pdf Graphic file (type pdf)
+<use lte-ue-rrc-states.pdf>
+Package pdftex.def Info: lte-ue-rrc-states.pdf  used on input line 11728.
+(pdftex.def)             Requested size: 448.6797pt x 622.73132pt.
+<lte-enb-rrc-states.pdf, id=2324, 873.2625pt x 807.015pt>
+File: lte-enb-rrc-states.pdf Graphic file (type pdf)
+<use lte-enb-rrc-states.pdf>
+Package pdftex.def Info: lte-enb-rrc-states.pdf  used on input line 11749.
+(pdftex.def)             Requested size: 469.75586pt x 434.11922pt.
+ [219
+
+] [220 <./lte-ue-rrc-states.pdf>]
+[221 <./lte-enb-rrc-states.pdf>]
+<lte-cell-selection-timeline.pdf, id=2377, 1223.57124pt x 1146.2825pt>
+File: lte-cell-selection-timeline.pdf Graphic file (type pdf)
+<use lte-cell-selection-timeline.pdf>
+Package pdftex.def Info: lte-cell-selection-timeline.pdf  used on input line 11
+770.
+(pdftex.def)             Requested size: 469.74147pt x 440.08702pt.
+ [222 <./lte-cell-selection-timeline.pdf>]
+[223] [224]
+Underfull \hbox (badness 6842) in paragraph at lines 12020--12058
+[]\T1/ptm/m/n/10 The RLF de-tec-tion starts once the RRC con-nec-tion is es-tab
+-lished be-tween UE and eN-odeB, i.e.,
+ []
+
+
+Underfull \hbox (badness 5388) in paragraph at lines 12020--12058
+\T1/ptm/m/n/10 UE is in ^^PCON-NECTED_NORMALLY^^Q state; upon which the RLF pa-
+ram-e-ters are con-fig-ured (see
+ []
+
+[225]
+<lte-ue-procedures-after-rlf.pdf, id=2441, 1220.56pt x 1691.31876pt>
+File: lte-ue-procedures-after-rlf.pdf Graphic file (type pdf)
+<use lte-ue-procedures-after-rlf.pdf>
+Package pdftex.def Info: lte-ue-procedures-after-rlf.pdf  used on input line 12
+115.
+(pdftex.def)             Requested size: 469.38626pt x 650.42422pt.
+
+
+LaTeX Warning: Float too large for page by 24.16492pt on input line 12116.
+
+<lte-ue-context-removal-from-epc.pdf, id=2444, 1413.28pt x 849.1725pt>
+File: lte-ue-context-removal-from-epc.pdf Graphic file (type pdf)
+<use lte-ue-context-removal-from-epc.pdf>
+Package pdftex.def Info: lte-ue-context-removal-from-epc.pdf  used on input lin
+e 12130.
+(pdftex.def)             Requested size: 469.74797pt x 282.24913pt.
+<lte-ue-context-removal-from-enb-stack.pdf, id=2445, 1798.72pt x 679.53876pt>
+File: lte-ue-context-removal-from-enb-stack.pdf Graphic file (type pdf)
+<use lte-ue-context-removal-from-enb-stack.pdf>
+Package pdftex.def Info: lte-ue-context-removal-from-enb-stack.pdf  used on inp
+ut line 12137.
+(pdftex.def)             Requested size: 469.74208pt x 177.46394pt.
+[226] [227 <./lte-ue-procedures-after-rlf.pdf>] [228 <./lte-ue-context-removal-
+from-epc.pdf> <./lte-ue-context-removal-from-enb-stack.pdf>]
+<ue-meas-consumer.pdf, id=2488, 913.4125pt x 893.3375pt>
+File: ue-meas-consumer.pdf Graphic file (type pdf)
+<use ue-meas-consumer.pdf>
+Package pdftex.def Info: ue-meas-consumer.pdf  used on input line 12195.
+(pdftex.def)             Requested size: 469.75067pt x 459.4401pt.
+ [229] [230 <./ue-meas-consumer.pdf>] [231] [232]
+<lte-legacy-handover-algorithm.pdf, id=2544, 775.89874pt x 690.58pt>
+File: lte-legacy-handover-algorithm.pdf Graphic file (type pdf)
+<use lte-legacy-handover-algorithm.pdf>
+Package pdftex.def Info: lte-legacy-handover-algorithm.pdf  used on input line 
+12538.
+(pdftex.def)             Requested size: 469.75761pt x 418.10251pt.
+ [233] [234 <./lte-legacy-handover-algorithm.pdf>]
+<lte-strongest-cell-handover-algorithm.pdf, id=2577, 481.8pt x 363.3575pt>
+File: lte-strongest-cell-handover-algorithm.pdf Graphic file (type pdf)
+<use lte-strongest-cell-handover-algorithm.pdf>
+Package pdftex.def Info: lte-strongest-cell-handover-algorithm.pdf  used on inp
+ut line 12602.
+(pdftex.def)             Requested size: 469.77148pt x 354.28598pt.
+ [235] [236 <./lte-strongest-cell-handover-algorithm.pdf>]
+Underfull \hbox (badness 6016) in paragraph at lines 12733--12738
+[]\T1/ptm/m/n/10 (eNodeB RRC -> ANR) Based on the UE mea-sure-ments con-fig-ure
+d ear-lier in
+ []
+
+[237]
+<rrc-connection-establishment.pdf, id=2608, 1027.84pt x 856.19875pt>
+File: rrc-connection-establishment.pdf Graphic file (type pdf)
+<use rrc-connection-establishment.pdf>
+Package pdftex.def Info: rrc-connection-establishment.pdf  used on input line 1
+2775.
+(pdftex.def)             Requested size: 469.75385pt x 391.30862pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/phv/m/n/10 Lo-ca-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/phv/m/n/10 De-fault
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/phv/m/n/10 When
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+\T1/phv/m/n/10 timer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 Con-nec-tion re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 eN-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+\T1/ptm/m/n/10 odeB
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 New UE con-text
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 Re-ceive RRC CON-NEC-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 15 ms
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 Re-move
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 UE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 Send RRC CON-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+\T1/ptm/m/n/10 NEC-TION RE-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 Re-ceive RRC CON-NEC-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 Re-set UE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 eN-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+\T1/ptm/m/n/10 odeB
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 Send RRC CON-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 Re-ceive RRC CON-NEC-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 Re-move
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 Con-nec-tion re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 eN-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+\T1/ptm/m/n/10 odeB
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 Send RRC CON-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12898--12898
+[]\T1/ptm/m/n/10 Re-move
+ []
+
+[238 <./rrc-connection-establishment.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 12959--12959
+[]\T1/phv/m/n/10 Lo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12959--12959
+\T1/phv/m/n/10 ca-
+ []
+
+
+Overfull \hbox (1.74605pt too wide) in paragraph at lines 12959--12959
+[]\T1/phv/m/n/10 Mon-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12959--12959
+\T1/phv/m/n/10 i-
+ []
+
+
+Overfull \hbox (1.75592pt too wide) in paragraph at lines 12959--12959
+\T1/phv/m/n/10 tored
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12959--12959
+[]\T1/phv/m/n/10 De-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12959--12959
+\T1/phv/m/n/10 fault
+ []
+
+
+Overfull \hbox (2.53938pt too wide) in paragraph at lines 12959--12959
+\T1/phv/m/n/10 value| 
+ []
+
+
+Overfull \hbox (10.49783pt too wide) in paragraph at lines 12959--12959
+[]\T1/ptm/m/n/10 ConnEst-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12959--12959
+\T1/ptm/m/n/10 Fail-
+ []
+
+
+Overfull \hbox (2.55081pt too wide) in paragraph at lines 12959--12959
+[]\T1/ptm/m/n/10 eNB
+ []
+
+
+Overfull \hbox (6.60085pt too wide) in paragraph at lines 12959--12959
+\T1/ptm/m/n/10 MAC| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12959--12959
+[]\T1/ptm/m/n/10 Rach-Con-fig-Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12959--12959
+[]\T1/ptm/m/n/10 UE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12959--12959
+[]\T1/ptm/m/n/10 Re-set the lo-
+ []
+
+
+Underfull \hbox (badness 6592) in paragraph at lines 12959--12959
+\T1/ptm/m/n/10 cal counter and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12959--12959
+\T1/ptm/m/n/10 per-form cell
+ []
+
+<rrc-connection-reconfiguration.pdf, id=2629, 1027.84pt x 729.72626pt>
+File: rrc-connection-reconfiguration.pdf Graphic file (type pdf)
+<use rrc-connection-reconfiguration.pdf>
+Package pdftex.def Info: rrc-connection-reconfiguration.pdf  used on input line
+ 12975.
+(pdftex.def)             Requested size: 469.75385pt x 333.50688pt.
+<rrc-connection-reconfiguration-handover.pdf, id=2632, 1606.0pt x 2265.46375pt>
+
+File: rrc-connection-reconfiguration-handover.pdf Graphic file (type pdf)
+<use rrc-connection-reconfiguration-handover.pdf>
+Package pdftex.def Info: rrc-connection-reconfiguration-handover.pdf  used on i
+nput line 13002.
+(pdftex.def)             Requested size: 461.09653pt x 650.4343pt.
+
+LaTeX Warning: Float too large for page by 24.16492pt on input line 13004.
+
+[239] [240 <./rrc-connection-reconfiguration.pdf>] [241 <./rrc-connection-recon
+figuration-handover.pdf>] [242] [243] [244]
+<nas-attach.pdf, id=2693, 1220.56pt x 1459.4525pt>
+File: nas-attach.pdf Graphic file (type pdf)
+<use nas-attach.pdf>
+Package pdftex.def Info: nas-attach.pdf  used on input line 13260.
+(pdftex.def)             Requested size: 469.75874pt x 561.6794pt.
+ [245
+
+] [246 <./nas-attach.pdf>]
+<epc-data-flow-dl-with-split.pdf, id=2712, 1813.77625pt x 530.98375pt>
+File: epc-data-flow-dl-with-split.pdf Graphic file (type pdf)
+<use epc-data-flow-dl-with-split.pdf>
+Package pdftex.def Info: epc-data-flow-dl-with-split.pdf  used on input line 13
+307.
+(pdftex.def)             Requested size: 469.7441pt x 137.51776pt.
+
+[247
+
+ <./epc-data-flow-dl-with-split.pdf>]
+<epc-data-flow-ul-with-split.pdf, id=2726, 1834.855pt x 534.99875pt>
+File: epc-data-flow-ul-with-split.pdf Graphic file (type pdf)
+<use epc-data-flow-ul-with-split.pdf>
+Package pdftex.def Info: epc-data-flow-ul-with-split.pdf  used on input line 13
+421.
+(pdftex.def)             Requested size: 469.74368pt x 136.96573pt.
+ [248 <./epc-data-flow-ul-with-split.pdf>] [249] [250]
+<lte-epc-x2-handover-seq-diagram.pdf, id=2782, 1198.4775pt x 1341.01pt>
+File: lte-epc-x2-handover-seq-diagram.pdf Graphic file (type pdf)
+<use lte-epc-x2-handover-seq-diagram.pdf>
+Package pdftex.def Info: lte-epc-x2-handover-seq-diagram.pdf  used on input lin
+e 13647.
+(pdftex.def)             Requested size: 469.74512pt x 525.61095pt.
+<lte-epc-x2-entity-saps.pdf, id=2785, 341.4326pt x 252.93297pt>
+File: lte-epc-x2-entity-saps.pdf Graphic file (type pdf)
+<use lte-epc-x2-entity-saps.pdf>
+Package pdftex.def Info: lte-epc-x2-entity-saps.pdf  used on input line 13707.
+(pdftex.def)             Requested size: 414.04419pt x 306.74452pt.
+ [251
+
+] [252 <./lte-epc-x2-handover-seq-diagram.pdf>] [253 <./lte-epc-x2-entity-saps.
+pdf>]
+<lte-epc-x2-interface.pdf, id=2811, 758.835pt x 348.30125pt>
+File: lte-epc-x2-interface.pdf Graphic file (type pdf)
+<use lte-epc-x2-interface.pdf>
+Package pdftex.def Info: lte-epc-x2-interface.pdf  used on input line 13732.
+(pdftex.def)             Requested size: 469.76654pt x 215.61504pt.
+ [254 <./lte-epc-x2-interface.pdf>] [255] [256]
+[257
+
+]
+<lte-dl-power-control.pdf, id=2841, 227.62239pt x 119.25754pt>
+File: lte-dl-power-control.pdf Graphic file (type pdf)
+<use lte-dl-power-control.pdf>
+Package pdftex.def Info: lte-dl-power-control.pdf  used on input line 13946.
+(pdftex.def)             Requested size: 227.62183pt x 119.25723pt.
+ [258
+
+ <./lte-dl-power-control.pdf>]
+Overfull \hbox (7.50064pt too wide) detected at line 14037
+[]
+ []
+
+
+Overfull \hbox (25.00003pt too wide) detected at line 14037
+[]
+ []
+
+
+Overfull \hbox (7.50064pt too wide) detected at line 14048
+[]
+ []
+
+
+Overfull \hbox (25.00003pt too wide) detected at line 14048
+[]
+ []
+
+[259]
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 14097.
+
+[260]
+Overfull \hbox (54.94722pt too wide) detected at line 14157
+[]
+ []
+
+
+Overfull \hbox (50.00006pt too wide) detected at line 14157
+[]
+ []
+
+<lte-ffr-scheduling.pdf, id=2868, 227.62239pt x 197.31416pt>
+File: lte-ffr-scheduling.pdf Graphic file (type pdf)
+<use lte-ffr-scheduling.pdf>
+Package pdftex.def Info: lte-ffr-scheduling.pdf  used on input line 14236.
+(pdftex.def)             Requested size: 227.62183pt x 197.31367pt.
+[261]
+<fr-full-frequency-reuse-scheme.pdf, id=2883, 227.62239pt x 120.01839pt>
+File: fr-full-frequency-reuse-scheme.pdf Graphic file (type pdf)
+<use fr-full-frequency-reuse-scheme.pdf>
+Package pdftex.def Info: fr-full-frequency-reuse-scheme.pdf  used on input line
+ 14271.
+(pdftex.def)             Requested size: 136.57448pt x 72.01158pt.
+ [262 <./lte-ffr-scheduling.pdf> <./fr-full-frequency-reuse-scheme.pdf>]
+<fr-hard-frequency-reuse-scheme.pdf, id=2900, 227.62239pt x 120.54335pt>
+File: fr-hard-frequency-reuse-scheme.pdf Graphic file (type pdf)
+<use fr-hard-frequency-reuse-scheme.pdf>
+Package pdftex.def Info: fr-hard-frequency-reuse-scheme.pdf  used on input line
+ 14298.
+(pdftex.def)             Requested size: 136.57448pt x 72.32655pt.
+<fr-strict-frequency-reuse-scheme.pdf, id=2902, 227.62239pt x 118.44551pt>
+File: fr-strict-frequency-reuse-scheme.pdf Graphic file (type pdf)
+<use fr-strict-frequency-reuse-scheme.pdf>
+Package pdftex.def Info: fr-strict-frequency-reuse-scheme.pdf  used on input li
+ne 14327.
+(pdftex.def)             Requested size: 136.57448pt x 71.06784pt.
+
+[263 <./fr-hard-frequency-reuse-scheme.pdf> <./fr-strict-frequency-reuse-scheme
+.pdf>]
+<fr-soft-frequency-reuse-scheme-v1.pdf, id=2920, 227.62239pt x 119.14612pt>
+File: fr-soft-frequency-reuse-scheme-v1.pdf Graphic file (type pdf)
+<use fr-soft-frequency-reuse-scheme-v1.pdf>
+Package pdftex.def Info: fr-soft-frequency-reuse-scheme-v1.pdf  used on input l
+ine 14361.
+(pdftex.def)             Requested size: 136.57448pt x 71.4882pt.
+<fr-soft-frequency-reuse-scheme-v2.pdf, id=2922, 227.62239pt x 118.79582pt>
+File: fr-soft-frequency-reuse-scheme-v2.pdf Graphic file (type pdf)
+<use fr-soft-frequency-reuse-scheme-v2.pdf>
+Package pdftex.def Info: fr-soft-frequency-reuse-scheme-v2.pdf  used on input l
+ine 14376.
+(pdftex.def)             Requested size: 136.57448pt x 71.27803pt.
+<fr-soft-fractional-frequency-reuse-scheme.pdf, id=2924, 227.62239pt x 119.1461
+2pt>
+File: fr-soft-fractional-frequency-reuse-scheme.pdf Graphic file (type pdf)
+<use fr-soft-fractional-frequency-reuse-scheme.pdf>
+Package pdftex.def Info: fr-soft-fractional-frequency-reuse-scheme.pdf  used on
+ input line 14407.
+(pdftex.def)             Requested size: 136.57448pt x 71.4882pt.
+ [264 <./fr-soft-frequency-reuse-scheme-v1.pdf> <./fr-soft-frequency-reuse-sche
+me-v2.pdf>]
+<fr-enhanced-fractional-frequency-reuse-scheme.pdf, id=2946, 227.62239pt x 117.
+7439pt>
+File: fr-enhanced-fractional-frequency-reuse-scheme.pdf Graphic file (type pdf)
+
+<use fr-enhanced-fractional-frequency-reuse-scheme.pdf>
+Package pdftex.def Info: fr-enhanced-fractional-frequency-reuse-scheme.pdf  use
+d on input line 14458.
+(pdftex.def)             Requested size: 136.57448pt x 70.64687pt.
+ [265 <./fr-soft-fractional-frequency-reuse-scheme.pdf> <./fr-enhanced-fraction
+al-frequency-reuse-scheme.pdf>]
+<ffr-distributed-scheme.pdf, id=2964, 227.62239pt x 249.8424pt>
+File: ffr-distributed-scheme.pdf Graphic file (type pdf)
+<use ffr-distributed-scheme.pdf>
+Package pdftex.def Info: ffr-distributed-scheme.pdf  used on input line 14502.
+(pdftex.def)             Requested size: 182.09814pt x 199.87418pt.
+ [266 <./ffr-distributed-scheme.pdf>]
+<carrier-aggregation-impact.png, id=2980, 569.12625pt x 433.62pt>
+File: carrier-aggregation-impact.png Graphic file (type png)
+<use carrier-aggregation-impact.png>
+Package pdftex.def Info: carrier-aggregation-impact.png  used on input line 145
+60.
+(pdftex.def)             Requested size: 455.30162pt x 346.89647pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 14570--14606
+\T1/ptm/m/n/10 and \T1/pcr/m/n/9 PhysicalConfigDedicatedSCell \T1/ptm/m/n/10 an
+d \T1/pcr/m/n/9 NonCriticalExtensionConfiguration\T1/ptm/m/n/10 .
+ []
+
+[267
+
+] [268 <./carrier-aggregation-impact.png>]
+<ca-rrc-reconf.pdf, id=2998, 524.96124pt x 473.77pt>
+File: ca-rrc-reconf.pdf Graphic file (type pdf)
+<use ca-rrc-reconf.pdf>
+Package pdftex.def Info: ca-rrc-reconf.pdf  used on input line 14611.
+(pdftex.def)             Requested size: 262.47998pt x 236.88441pt.
+ [269 <./ca-rrc-reconf.pdf>]
+<carrier-aggregation-mac-impact.png, id=3006, 569.12625pt x 417.56pt>
+File: carrier-aggregation-mac-impact.png Graphic file (type png)
+<use carrier-aggregation-mac-impact.png>
+Package pdftex.def Info: carrier-aggregation-mac-impact.png  used on input line
+ 14646.
+(pdftex.def)             Requested size: 469.7781pt x 344.66963pt.
+
+[270 <./carrier-aggregation-mac-impact.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 14689--14693
+[]\T1/ptm/m/n/10 Both \T1/pcr/m/n/9 LteEnbNetDevice \T1/ptm/m/n/10 and \T1/pcr/
+m/n/9 LteUeNetDevice \T1/ptm/m/n/10 are cre-ated by the \T1/pcr/m/n/9 LteHelper
+ \T1/ptm/m/n/10 us-ing the method
+ []
+
+<ca-lte-enb-net-device-changes.pdf, id=3020, 1584.92125pt x 962.59625pt>
+File: ca-lte-enb-net-device-changes.pdf Graphic file (type pdf)
+<use ca-lte-enb-net-device-changes.pdf>
+Package pdftex.def Info: ca-lte-enb-net-device-changes.pdf  used on input line 
+14713.
+(pdftex.def)             Requested size: 469.74846pt x 285.30003pt.
+<ca-lte-ue-net-device-changes.pdf, id=3022, 1280.785pt x 543.02875pt>
+File: ca-lte-ue-net-device-changes.pdf Graphic file (type pdf)
+<use ca-lte-ue-net-device-changes.pdf>
+Package pdftex.def Info: ca-lte-ue-net-device-changes.pdf  used on input line 1
+4726.
+(pdftex.def)             Requested size: 469.73988pt x 199.16914pt.
+[271] [272 <./ca-lte-enb-net-device-changes.pdf> <./ca-lte-ue-net-device-change
+s.pdf>]
+<ca-enb-data-plane.pdf, id=3042, 1597.97pt x 1530.71875pt>
+File: ca-enb-data-plane.pdf Graphic file (type pdf)
+<use ca-enb-data-plane.pdf>
+Package pdftex.def Info: ca-enb-data-plane.pdf  used on input line 14758.
+(pdftex.def)             Requested size: 469.76341pt x 449.99321pt.
+<ca-downlink-bsr.pdf, id=3044, 1027.84pt x 927.465pt>
+File: ca-downlink-bsr.pdf Graphic file (type pdf)
+<use ca-downlink-bsr.pdf>
+Package pdftex.def Info: ca-downlink-bsr.pdf  used on input line 14773.
+(pdftex.def)             Requested size: 469.75385pt x 423.87944pt.
+<ca-enb-ctrl-plane.pdf, id=3046, 2004.48875pt x 839.135pt>
+File: ca-enb-ctrl-plane.pdf Graphic file (type pdf)
+<use ca-enb-ctrl-plane.pdf>
+Package pdftex.def Info: ca-enb-ctrl-plane.pdf  used on input line 14793.
+(pdftex.def)             Requested size: 469.73973pt x 196.64616pt.
+<ca-setup-radio-bearer.pdf, id=3048, 1027.84pt x 919.435pt>
+File: ca-setup-radio-bearer.pdf Graphic file (type pdf)
+<use ca-setup-radio-bearer.pdf>
+Package pdftex.def Info: ca-setup-radio-bearer.pdf  used on input line 14802.
+(pdftex.def)             Requested size: 469.75385pt x 420.20949pt.
+<ca-ue-data-plane.pdf, id=3051, 705.63625pt x 1040.88875pt>
+File: ca-ue-data-plane.pdf Graphic file (type pdf)
+<use ca-ue-data-plane.pdf>
+Package pdftex.def Info: ca-ue-data-plane.pdf  used on input line 14830.
+(pdftex.def)             Requested size: 423.38501pt x 624.53807pt.
+<ca-uplink-bsr.png, id=3052, 1413.28pt x 1235.61626pt>
+File: ca-uplink-bsr.png Graphic file (type png)
+<use ca-uplink-bsr.png>
+Package pdftex.def Info: ca-uplink-bsr.png  used on input line 14837.
+(pdftex.def)             Requested size: 469.74797pt x 410.69585pt.
+ [273] [274 <./ca-enb-data-plane.pdf>] [275 <./ca-downlink-bsr.pdf>]
+<ca-ue-ctrl-plane.pdf, id=3086, 1377.145pt x 660.4675pt>
+File: ca-ue-ctrl-plane.pdf Graphic file (type pdf)
+<use ca-ue-ctrl-plane.pdf>
+Package pdftex.def Info: ca-ue-ctrl-plane.pdf  used on input line 14854.
+(pdftex.def)             Requested size: 469.7571pt x 225.29166pt.
+
+[276 <./ca-enb-ctrl-plane.pdf>] [277 <./ca-setup-radio-bearer.pdf>] [278 <./ca-
+ue-data-plane.pdf>] [279 <./ca-uplink-bsr.png (PNG copy)>] [280 <./ca-ue-ctrl-p
+lane.pdf>]
+<helpers.pdf, id=3128, 227.62239pt x 527.7878pt>
+File: helpers.pdf Graphic file (type pdf)
+<use helpers.pdf>
+Package pdftex.def Info: helpers.pdf  used on input line 14959.
+(pdftex.def)             Requested size: 227.62183pt x 527.7865pt.
+ [281] [282 <./helpers.pdf>] [283] [284] [285] [286] [287]
+Underfull \hbox (badness 10000) in paragraph at lines 15490--15493
+[]\T1/ptm/m/n/10 The names of the files used for MAC KPI out-put can be cus-tom
+ized via the ns-3 at-tributes
+ []
+
+[288] [289] [290]
+<fading_pedestrian.pdf, id=3312, 421.575pt x 317.185pt>
+File: fading_pedestrian.pdf Graphic file (type pdf)
+<use fading_pedestrian.pdf>
+Package pdftex.def Info: fading_pedestrian.pdf  used on input line 15725.
+(pdftex.def)             Requested size: 421.57396pt x 317.1842pt.
+<fading_vehicular.pdf, id=3313, 421.575pt x 317.185pt>
+File: fading_vehicular.pdf Graphic file (type pdf)
+<use fading_vehicular.pdf>
+Package pdftex.def Info: fading_vehicular.pdf  used on input line 15732.
+(pdftex.def)             Requested size: 421.57396pt x 317.1842pt.
+<fading_urban_3kmph.pdf, id=3314, 421.575pt x 317.185pt>
+File: fading_urban_3kmph.pdf Graphic file (type pdf)
+<use fading_urban_3kmph.pdf>
+Package pdftex.def Info: fading_urban_3kmph.pdf  used on input line 15739.
+(pdftex.def)             Requested size: 421.57396pt x 317.1842pt.
+ [291 <./fading_pedestrian.pdf>] [292 <./fading_vehicular.pdf>] [293 <./fading_
+urban_3kmph.pdf>] [294] [295] [296]
+<lena-dual-stripe.pdf, id=3373, 361.35pt x 252.945pt>
+File: lena-dual-stripe.pdf Graphic file (type pdf)
+<use lena-dual-stripe.pdf>
+Package pdftex.def Info: lena-dual-stripe.pdf  used on input line 16024.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+ [297] [298 <./lena-dual-stripe.pdf>] [299] [300] [301] [302] [303] [304] [305]
+
+Underfull \hbox (badness 10000) in paragraph at lines 16581--16590
+[]\T1/ptm/m/n/10 Direct con-fig-u-ra-tion in eN-odeB RRC works as fol-lows. Use
+r be-gins by cre-at-ing a new
+ []
+
+
+Overfull \vbox (1.18257pt too high) detected at line 16638
+ []
+
+[306] [307] [308]
+Underfull \hbox (badness 10000) in paragraph at lines 16806--16808
+[]\T1/ptm/m/n/10 Example with full source code of us-ing au-to-matic han-dover 
+trig-ger can be found in the
+ []
+
+[309]
+Overfull \vbox (2.18259pt too high) detected at line 16933
+ []
+
+[310] [311] [312] [313] [314] [315] [316] [317] [318] [319]
+Overfull \hbox (29.98268pt too wide) in paragraph at lines 17856--17856
+[]\T1/ptm/m/n/10 ns3::LteHelper::HandoverAlgorithm| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17856--17856
+[]\T1/ptm/m/it/10 ns3::NoOpHandoverAlgorithm\T1/ptm/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17856--17856
+\T1/ptm/m/it/10 ns3::A3RsrpHandoverAlgorithm\T1/ptm/m/n/10 , or
+ []
+
+
+Overfull \hbox (109.18082pt too wide) in paragraph at lines 17856--17856
+[]\T1/ptm/m/n/10 ns3::RadioBearerStatsCalculator::DlRlcOutputFilename| 
+ []
+
+
+Overfull \hbox (109.18082pt too wide) in paragraph at lines 17856--17856
+[]\T1/ptm/m/n/10 ns3::RadioBearerStatsCalculator::UlRlcOutputFilename| 
+ []
+
+
+Overfull \hbox (68.04144pt too wide) in paragraph at lines 17856--17856
+[]\T1/ptm/m/n/10 ns3::PhyStatsCalculator::DlRsrpSinrFilename| 
+ []
+
+
+Overfull \hbox (49.15167pt too wide) in paragraph at lines 17856--17856
+[]\T1/ptm/m/n/10 ns3::PhyStatsCalculator::UlSinrFilename| 
+ []
+
+[320]
+<lte-handover-campaign-rem.pdf, id=3550, 611.28375pt x 364.36125pt>
+File: lte-handover-campaign-rem.pdf Graphic file (type pdf)
+<use lte-handover-campaign-rem.pdf>
+Package pdftex.def Info: lte-handover-campaign-rem.pdf  used on input line 1793
+4.
+(pdftex.def)             Requested size: 469.74788pt x 280.01418pt.
+
+Overfull \vbox (1.68167pt too high) detected at line 17966
+ []
+
+[321] [322 <./lte-handover-campaign-rem.pdf>]
+<lte-fr-soft-1-rem.pdf, id=3573, 628.3475pt x 382.42876pt>
+File: lte-fr-soft-1-rem.pdf Graphic file (type pdf)
+<use lte-fr-soft-1-rem.pdf>
+Package pdftex.def Info: lte-fr-soft-1-rem.pdf  used on input line 18096.
+(pdftex.def)             Requested size: 469.75418pt x 285.91637pt.
+<lte-ffr-soft-2-spectrum-trace.pdf, id=3575, 620.3175pt x 306.14375pt>
+File: lte-ffr-soft-2-spectrum-trace.pdf Graphic file (type pdf)
+<use lte-ffr-soft-2-spectrum-trace.pdf>
+Package pdftex.def Info: lte-ffr-soft-2-spectrum-trace.pdf  used on input line 
+18120.
+(pdftex.def)             Requested size: 469.75192pt x 231.83548pt.
+ [323] [324 <./lte-fr-soft-1-rem.pdf> <./lte-ffr-soft-2-spectrum-trace.pdf
+
+pdfTeX warning: pdflatex (file ./lte-ffr-soft-2-spectrum-trace.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+>]
+<lte-fr-hard-1-rem.pdf, id=3605, 638.385pt x 389.455pt>
+File: lte-fr-hard-1-rem.pdf Graphic file (type pdf)
+<use lte-fr-hard-1-rem.pdf>
+Package pdftex.def Info: lte-fr-hard-1-rem.pdf  used on input line 18166.
+(pdftex.def)             Requested size: 469.75769pt x 286.58768pt.
+<lte-fr-hard-2-rem.pdf, id=3606, 639.38875pt x 385.44pt>
+File: lte-fr-hard-2-rem.pdf Graphic file (type pdf)
+<use lte-fr-hard-2-rem.pdf>
+Package pdftex.def Info: lte-fr-hard-2-rem.pdf  used on input line 18173.
+(pdftex.def)             Requested size: 469.75484pt x 283.18031pt.
+<lte-fr-hard-3-rem.pdf, id=3607, 639.38875pt x 387.4475pt>
+File: lte-fr-hard-3-rem.pdf Graphic file (type pdf)
+<use lte-fr-hard-3-rem.pdf>
+Package pdftex.def Info: lte-fr-hard-3-rem.pdf  used on input line 18180.
+(pdftex.def)             Requested size: 469.75484pt x 284.66112pt.
+ [325] [326 <./lte-fr-hard-1-rem.pdf> <./lte-fr-hard-2-rem.pdf
+
+pdfTeX warning: pdflatex (file ./lte-fr-hard-2-rem.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+>]
+Overfull \hbox (6.58998pt too wide) in paragraph at lines 18220--18222
+[]\T1/ptm/m/n/10 downlink_results=^^Qcarrier_aggregation_results_dl.txt^^Q up-l
+ink_results=^^Qcarrier_aggregation_results_ul.txt^^Q 
+ []
+
+<ca-test-example-ul.png, id=3632, 481.8pt x 361.35pt>
+File: ca-test-example-ul.png Graphic file (type png)
+<use ca-test-example-ul.png>
+Package pdftex.def Info: ca-test-example-ul.png  used on input line 18248.
+(pdftex.def)             Requested size: 289.08221pt x 216.81168pt.
+<ca-test-example-dl.png, id=3633, 481.8pt x 361.35pt>
+File: ca-test-example-dl.png Graphic file (type png)
+<use ca-test-example-dl.png>
+Package pdftex.def Info: ca-test-example-dl.png  used on input line 18255.
+(pdftex.def)             Requested size: 289.08221pt x 216.81168pt.
+[327 <./lte-fr-hard-3-rem.pdf>] [328 <./ca-test-example-ul.png> <./ca-test-exam
+ple-dl.png>]
+<lena-radio-link-failure-one-enb.pdf, id=3657, 284.52798pt x 111.36305pt>
+File: lena-radio-link-failure-one-enb.pdf Graphic file (type pdf)
+<use lena-radio-link-failure-one-enb.pdf>
+Package pdftex.def Info: lena-radio-link-failure-one-enb.pdf  used on input lin
+e 18271.
+(pdftex.def)             Requested size: 284.52728pt x 111.36278pt.
+ [329 <./lena-radio-link-failure-one-enb.pdf>]
+<lena-radio-link-failure-one-enb-thrput.png, id=3673, 481.8pt x 361.35pt>
+File: lena-radio-link-failure-one-enb-thrput.png Graphic file (type png)
+<use lena-radio-link-failure-one-enb-thrput.png>
+Package pdftex.def Info: lena-radio-link-failure-one-enb-thrput.png  used on in
+put line 18325.
+(pdftex.def)             Requested size: 469.77148pt x 352.3176pt.
+<lena-radio-link-failure-two-enb.pdf, id=3675, 947.54pt x 179.67125pt>
+File: lena-radio-link-failure-two-enb.pdf Graphic file (type pdf)
+<use lena-radio-link-failure-two-enb.pdf>
+Package pdftex.def Info: lena-radio-link-failure-two-enb.pdf  used on input lin
+e 18346.
+(pdftex.def)             Requested size: 469.74944pt x 89.07597pt.
+
+Overfull \vbox (1.96284pt too high) detected at line 18366
+ []
+
+[330 <./lena-radio-link-failure-one-enb-thrput.png>]
+<lena-radio-link-failure-two-enb-thrput.png, id=3683, 481.8pt x 361.35pt>
+File: lena-radio-link-failure-two-enb-thrput.png Graphic file (type png)
+<use lena-radio-link-failure-two-enb-thrput.png>
+Package pdftex.def Info: lena-radio-link-failure-two-enb-thrput.png  used on in
+put line 18385.
+(pdftex.def)             Requested size: 469.77148pt x 352.3176pt.
+ [331 <./lena-radio-link-failure-two-enb.pdf>] [332 <./lena-radio-link-failure-
+two-enb-thrput.png>]
+[333] [334]
+<lte-mcs-index.pdf, id=3726, 361.35pt x 252.945pt>
+File: lte-mcs-index.pdf Graphic file (type pdf)
+<use lte-mcs-index.pdf>
+Package pdftex.def Info: lte-mcs-index.pdf  used on input line 18602.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+<lte-interference-test-scenario.pdf, id=3728, 216.81pt x 194.01082pt>
+File: lte-interference-test-scenario.pdf Graphic file (type pdf)
+<use lte-interference-test-scenario.pdf>
+Package pdftex.def Info: lte-interference-test-scenario.pdf  used on input line
+ 18626.
+(pdftex.def)             Requested size: 216.80946pt x 194.01033pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 18629--18637
+[]\T1/ptm/m/n/10 The test vec-tors are ob-tained by use of a ded-i-cated oc-tav
+e script (avail-able in
+ []
+
+[335 <./lte-mcs-index.pdf>] [336 <./lte-interference-test-scenario.pdf>]
+<ue-meas-piecewise-motion.pdf, id=3758, 1497.595pt x 533.995pt>
+File: ue-meas-piecewise-motion.pdf Graphic file (type pdf)
+<use ue-meas-piecewise-motion.pdf>
+Package pdftex.def Info: ue-meas-piecewise-motion.pdf  used on input line 18691
+.
+(pdftex.def)             Requested size: 469.75685pt x 167.50043pt.
+<ue-meas-piecewise-a1.pdf, id=3760, 1482.53876pt x 591.20876pt>
+File: ue-meas-piecewise-a1.pdf Graphic file (type pdf)
+<use ue-meas-piecewise-a1.pdf>
+Package pdftex.def Info: ue-meas-piecewise-a1.pdf  used on input line 18713.
+(pdftex.def)             Requested size: 469.73941pt x 187.32329pt.
+<ue-meas-piecewise-a1-hys.pdf, id=3762, 1539.7525pt x 591.20876pt>
+File: ue-meas-piecewise-a1-hys.pdf Graphic file (type pdf)
+<use ue-meas-piecewise-a1-hys.pdf>
+Package pdftex.def Info: ue-meas-piecewise-a1-hys.pdf  used on input line 18727
+.
+(pdftex.def)             Requested size: 469.75305pt x 180.36801pt.
+
+[337 <./ue-meas-piecewise-motion.pdf>] [338 <./ue-meas-piecewise-a1.pdf> <./ue-
+meas-piecewise-a1-hys.pdf>] [339] [340]
+<lenaThrTestCase1.pdf, id=3804, 361.35pt x 252.945pt>
+File: lenaThrTestCase1.pdf Graphic file (type pdf)
+<use lenaThrTestCase1.pdf>
+Package pdftex.def Info: lenaThrTestCase1.pdf  used on input line 19616.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+ [341] [342 <./lenaThrTestCase1.pdf>]
+<lenaThrTestCase2.pdf, id=3828, 361.35pt x 252.945pt>
+File: lenaThrTestCase2.pdf Graphic file (type pdf)
+<use lenaThrTestCase2.pdf>
+Package pdftex.def Info: lenaThrTestCase2.pdf  used on input line 19703.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+[343] [344 <./lenaThrTestCase2.pdf>] [345] [346]
+<MCS_2_test.pdf, id=3874, 550.055pt x 360.34625pt>
+File: MCS_2_test.pdf Graphic file (type pdf)
+<use MCS_2_test.pdf>
+Package pdftex.def Info: MCS_2_test.pdf  used on input line 19983.
+(pdftex.def)             Requested size: 469.77313pt x 307.74184pt.
+<MCS_12_test.pdf, id=3875, 1099.10625pt x 720.6925pt>
+File: MCS_12_test.pdf Graphic file (type pdf)
+<use MCS_12_test.pdf>
+Package pdftex.def Info: MCS_12_test.pdf  used on input line 19990.
+(pdftex.def)             Requested size: 469.7554pt x 308.02226pt.
+<MCS_16_test.pdf, id=3876, 1099.10625pt x 720.6925pt>
+File: MCS_16_test.pdf Graphic file (type pdf)
+<use MCS_16_test.pdf>
+Package pdftex.def Info: MCS_16_test.pdf  used on input line 19997.
+(pdftex.def)             Requested size: 469.7554pt x 308.02226pt.
+ [347] [348 <./MCS_2_test.pdf>] [349 <./MCS_12_test.pdf>] [350 <./MCS_16_test.p
+df>] [351] [352] [353]
+<lte-cell-selection-scenario.pdf, id=3969, 1134.2375pt x 615.29875pt>
+File: lte-cell-selection-scenario.pdf Graphic file (type pdf)
+<use lte-cell-selection-scenario.pdf>
+Package pdftex.def Info: lte-cell-selection-scenario.pdf  used on input line 20
+301.
+(pdftex.def)             Requested size: 469.74791pt x 254.82784pt.
+ [354]
+[355 <./lte-cell-selection-scenario.pdf>] [356] [357] [358]
+<lte-handover-target-scenario.pdf, id=4011, 1549.79pt x 569.12625pt>
+File: lte-handover-target-scenario.pdf Graphic file (type pdf)
+<use lte-handover-target-scenario.pdf>
+Package pdftex.def Info: lte-handover-target-scenario.pdf  used on input line 2
+0760.
+(pdftex.def)             Requested size: 469.7411pt x 172.51076pt.
+ [359 <./lte-handover-target-scenario.pdf>]
+Overfull \hbox (76.11214pt too wide) in paragraph at lines 20773--20779
+[]\T1/ptm/m/n/10 LteDownlinkPowerControlSpectrumValue test case check if \T1/pc
+r/m/n/9 LteSpectrumValueHelper::CreateTxPowerSpectralDensity
+ []
+
+[360] [361] [362]
+<lte-test-rlf-one-enb.pdf, id=4047, 767.86874pt x 203.76125pt>
+File: lte-test-rlf-one-enb.pdf Graphic file (type pdf)
+<use lte-test-rlf-one-enb.pdf>
+Package pdftex.def Info: lte-test-rlf-one-enb.pdf  used on input line 20984.
+(pdftex.def)             Requested size: 469.75839pt x 124.65483pt.
+<lte-test-rlf-two-enb.pdf, id=4048, 941.5175pt x 203.76125pt>
+File: lte-test-rlf-two-enb.pdf Graphic file (type pdf)
+<use lte-test-rlf-two-enb.pdf>
+Package pdftex.def Info: lte-test-rlf-two-enb.pdf  used on input line 21020.
+(pdftex.def)             Requested size: 469.75195pt x 101.66272pt.
+ [363 <./lte-test-rlf-one-enb.pdf> <./lte-test-rlf-two-enb.pdf>]
+<eutran-profiling-scenario.pdf, id=4061, 1217.54875pt x 725.71124pt>
+File: eutran-profiling-scenario.pdf Graphic file (type pdf)
+<use eutran-profiling-scenario.pdf>
+Package pdftex.def Info: eutran-profiling-scenario.pdf  used on input line 2105
+4.
+(pdftex.def)             Requested size: 375.80544pt x 223.9937pt.
+ [364 <./eutran-profiling-scenario.pdf>]
+<epc-profiling-scenario.pdf, id=4072, 1703.36375pt x 623.32875pt>
+File: epc-profiling-scenario.pdf Graphic file (type pdf)
+<use epc-profiling-scenario.pdf>
+Package pdftex.def Info: epc-profiling-scenario.pdf  used on input line 21063.
+(pdftex.def)             Requested size: 375.80544pt x 137.5227pt.
+ [365 <./epc-profiling-scenario.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 21140--21141
+[]\T1/pcr/m/n/9 CXXFLAGS="-O3 -w" ./waf -d optimized configure --enable-static 
+--enable-examples
+ []
+
+[366]
+<runningTime10s.pdf, id=4091, 361.35pt x 252.945pt>
+File: runningTime10s.pdf Graphic file (type pdf)
+<use runningTime10s.pdf>
+Package pdftex.def Info: runningTime10s.pdf  used on input line 21159.
+(pdftex.def)             Requested size: 375.80544pt x 263.06432pt.
+<propagationModel.pdf, id=4092, 361.35pt x 252.945pt>
+File: propagationModel.pdf Graphic file (type pdf)
+<use propagationModel.pdf>
+Package pdftex.def Info: propagationModel.pdf  used on input line 21173.
+(pdftex.def)             Requested size: 375.80544pt x 263.06432pt.
+ [367 <./runningTime10s.pdf>]
+<simulationTime.pdf, id=4104, 361.35pt x 252.945pt>
+File: simulationTime.pdf Graphic file (type pdf)
+<use simulationTime.pdf>
+Package pdftex.def Info: simulationTime.pdf  used on input line 21187.
+(pdftex.def)             Requested size: 375.80544pt x 263.06432pt.
+<profiling-memory.pdf, id=4105, 361.35pt x 252.945pt>
+File: profiling-memory.pdf Graphic file (type pdf)
+<use profiling-memory.pdf>
+Package pdftex.def Info: profiling-memory.pdf  used on input line 21199.
+(pdftex.def)             Requested size: 375.80544pt x 263.06432pt.
+ [368 <./propagationModel.pdf>] [369 <./simulationTime.pdf> <./profiling-memory
+.pdf>]
+<epcRunningTime.pdf, id=4132, 361.35pt x 252.945pt>
+File: epcRunningTime.pdf Graphic file (type pdf)
+<use epcRunningTime.pdf>
+Package pdftex.def Info: epcRunningTime.pdf  used on input line 21216.
+(pdftex.def)             Requested size: 375.80544pt x 263.06432pt.
+<epcEutranRunningTime.pdf, id=4133, 361.35pt x 252.945pt>
+File: epcEutranRunningTime.pdf Graphic file (type pdf)
+<use epcEutranRunningTime.pdf>
+Package pdftex.def Info: epcEutranRunningTime.pdf  used on input line 21225.
+(pdftex.def)             Requested size: 375.80544pt x 263.06432pt.
+ [370 <./epcRunningTime.pdf>]
+<epcSimulationTime.pdf, id=4145, 361.35pt x 252.945pt>
+File: epcSimulationTime.pdf Graphic file (type pdf)
+<use epcSimulationTime.pdf>
+Package pdftex.def Info: epcSimulationTime.pdf  used on input line 21239.
+(pdftex.def)             Requested size: 375.80544pt x 263.06432pt.
+ [371 <./epcEutranRunningTime.pdf>] [372 <./epcSimulationTime.pdf>]
+Chapter 21.
+[373
+
+] [374] [375] [376]
+Chapter 22.
+[377
+
+] [378] [379] [380] [381] [382
+
+]
+Chapter 23.
+[383] [384] [385] [386] [387] [388] [389] [390]
+Chapter 24.
+[391
+
+]
+<packet.pdf, id=4326, 289.08pt x 289.08101pt>
+File: packet.pdf Graphic file (type pdf)
+<use packet.pdf>
+Package pdftex.def Info: packet.pdf  used on input line 22467.
+(pdftex.def)             Requested size: 289.07928pt x 289.08029pt.
+ [392 <./packet.pdf>] [393] [394] [395]
+LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <9> not available
+(Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 22805
+.
+ [396]
+Overfull \vbox (2.68167pt too high) detected at line 22875
+ []
+
+[397] [398] [399]
+<buffer.pdf, id=4379, 426.79147pt x 376.90111pt>
+File: buffer.pdf Graphic file (type pdf)
+<use buffer.pdf>
+Package pdftex.def Info: buffer.pdf  used on input line 23050.
+(pdftex.def)             Requested size: 426.79044pt x 376.90018pt.
+ [400] [401 <./buffer.pdf>] [402] [403] [404] [405]
+<node.pdf, id=4429, 361.35pt x 329.36049pt>
+File: node.pdf Graphic file (type pdf)
+<use node.pdf>
+Package pdftex.def Info: node.pdf  used on input line 23369.
+(pdftex.def)             Requested size: 361.34912pt x 329.35968pt.
+ [406 <./node.pdf>]
+<sockets-overview.pdf, id=4445, 284.52798pt x 205.26788pt>
+File: sockets-overview.pdf Graphic file (type pdf)
+<use sockets-overview.pdf>
+Package pdftex.def Info: sockets-overview.pdf  used on input line 23480.
+(pdftex.def)             Requested size: 284.52728pt x 205.26738pt.
+ [407] [408 <./sockets-overview.pdf>] [409] [410] [411] [412] [413]
+[414] [415] [416
+
+]
+Chapter 25.
+[417] [418]
+Chapter 26.
+
+Underfull \hbox (badness 10000) in paragraph at lines 24174--24175
+[]\T1/ptm/m/n/10 OLSR does not re-spond to the rout-ing event no-ti-fi-ca-tions
+ cor-re-spond-ing to dy-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24174--24175
+\T1/ptm/m/n/10 namic in-ter-face up and down (\T1/pcr/m/n/9 ns3::RoutingProtoco
+l::NotifyInterfaceUp
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24174--24175
+\T1/ptm/m/n/10 and \T1/pcr/m/n/9 ns3::RoutingProtocol::NotifyInterfaceDown\T1/p
+tm/m/n/10 ) or ad-dress in-ser-tion/removal
+ []
+
+
+Overfull \hbox (5.91447pt too wide) in paragraph at lines 24174--24175
+\T1/pcr/m/n/9 ns3::RoutingProtocol::NotifyAddAddress \T1/ptm/m/n/10 and \T1/pcr
+/m/n/9 ns3::RoutingProtocol::NotifyRemoveAddress\T1/ptm/m/n/10 ). 
+ []
+
+[419
+
+]
+Underfull \hbox (badness 5331) in paragraph at lines 24253--24258
+\T1/ptm/m/n/10 In ad-di-tion, the be-hav-ior of OLSR can be mod-i-fied by chang
+-ing cer-tain at-tributes. The method
+ []
+
+[420] [421] [422
+
+]
+Chapter 27.
+[423] [424]
+Overfull \hbox (26.52037pt too wide) in paragraph at lines 24515--24522
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24515--24522
+\T1/ptm/m/n/10 OFPC_SEND_FLOW_EXP (Switch no-ti-fies con-troller when a flow ha
+s ex-pired),
+ []
+
+
+Overfull \hbox (40.9506pt too wide) in paragraph at lines 24526--24528
+[]
+ []
+
+[425] [426]
+Chapter 28.
+[427
+
+] [428] [429] [430
+
+]
+Chapter 29.
+
+Underfull \hbox (badness 10000) in paragraph at lines 24756--24758
+\T1/ptm/m/n/10 The \T1/ptm/m/it/10 ns-3 \T1/ptm/m/n/10 prop-a-ga-tion mod-ule d
+e-fines two generic in-ter-faces, namely \T1/pcr/m/n/9 PropagationLossModel \T1
+/ptm/m/n/10 and
+ []
+
+[431] [432] [433] [434] [435] [436] [437] [438]
+Underfull \hbox (badness 5374) in paragraph at lines 25348--25359
+\T1/ptm/m/n/10 to the same sce-nario is set (e.g., by de-fault, \T1/pcr/m/n/9 T
+hreeGppRmaPropagationLossModel \T1/ptm/m/n/10 is paired with
+ []
+
+[439] [440]
+Underfull \hbox (badness 10000) in paragraph at lines 25448--25455
+\T1/pcr/m/n/9 ThreeGppUmaPropagationLossModelTestCase\T1/ptm/m/n/10 , \T1/pcr/m
+/n/9 ThreeGppUmiPropagationLossModelTestCase \T1/ptm/m/n/10 and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25448--25455
+\T1/pcr/m/n/9 ThreeGppIndoorOfficePropagationLossModelTestCas\TS1/pcr/m/n/9 `\T
+1/pcr/m/n/9 e compute the path loss between two
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25448--25455
+\T1/pcr/m/n/9 nodes and compares it with the value obtained using the formulas 
+in 3GPP TR 38.901
+ []
+
+[441] [442] [443] [444
+
+]
+Chapter 30.
+<spectrum-analyzer-example.pdf, id=4747, 426.79147pt x 298.75815pt>
+File: spectrum-analyzer-example.pdf Graphic file (type pdf)
+<use spectrum-analyzer-example.pdf>
+Package pdftex.def Info: spectrum-analyzer-example.pdf  used on input line 2557
+7.
+(pdftex.def)             Requested size: 426.79044pt x 298.75742pt.
+[445 <./spectrum-analyzer-example.pdf>]
+<spectrum-channel-phy-interface.pdf, id=4762, 284.52798pt x 539.88701pt>
+File: spectrum-channel-phy-interface.pdf Graphic file (type pdf)
+<use spectrum-channel-phy-interface.pdf>
+Package pdftex.def Info: spectrum-channel-phy-interface.pdf  used on input line
+ 25666.
+(pdftex.def)             Requested size: 284.52728pt x 539.88568pt.
+ [446] [447 <./spectrum-channel-phy-interface.pdf>]
+Underfull \hbox (badness 7944) in paragraph at lines 25672--25675
+\T1/ptm/m/n/10 The mod-ule pro-vides two \T1/pcr/m/n/9 SpectrumChannel \T1/ptm/
+m/n/10 im-ple-men-ta-tions: \T1/pcr/m/n/9 SingleModelSpectrumChannel \T1/ptm/m/
+n/10 and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25719--25721
+[]\T1/pcr/m/n/9 SpectrumModel300Khz300GhzLog \T1/ptm/m/n/10 and \T1/pcr/m/n/9 S
+pectrumModelIsm2400MhzRes1Mhz \T1/ptm/m/n/10 are two ex-am-ple
+ []
+
+[448]
+Underfull \hbox (badness 10000) in paragraph at lines 25791--25797
+[]\T1/ptm/m/n/10 The avail-able \T1/pcr/m/n/9 SpectrumChannel \T1/ptm/m/n/10 im
+-ple-men-ta-tions (\T1/pcr/m/n/9 SingleModelSpectrumChannel \T1/ptm/m/n/10 and
+ []
+
+[449] [450] [451]
+<spectrum-tv-cofdm.png, id=4828, 770.88pt x 261.97874pt>
+File: spectrum-tv-cofdm.png Graphic file (type png)
+<use spectrum-tv-cofdm.png>
+Package pdftex.def Info: spectrum-tv-cofdm.png  used on input line 26018.
+(pdftex.def)             Requested size: 469.75385pt x 159.6469pt.
+<spectrum-tv-8vsb.png, id=4834, 770.88pt x 235.63031pt>
+File: spectrum-tv-8vsb.png Graphic file (type png)
+<use spectrum-tv-8vsb.png>
+Package pdftex.def Info: spectrum-tv-8vsb.png  used on input line 26062.
+(pdftex.def)             Requested size: 469.75385pt x 143.58685pt.
+<spectrum-tv-rand-geo-points.pdf, id=4837, 227.62239pt x 171.12633pt>
+File: spectrum-tv-rand-geo-points.pdf Graphic file (type pdf)
+<use spectrum-tv-rand-geo-points.pdf>
+Package pdftex.def Info: spectrum-tv-rand-geo-points.pdf  used on input line 26
+079.
+(pdftex.def)             Requested size: 227.62183pt x 171.1259pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 26083--26083
+[]\T1/ptm/m/n/10 Fig. 5: Plot from MAT-LAB im-ple-men-ta-tion of Cre-ateRe-gion
+-alTv-Trans-mit-ters method in
+ []
+
+[452 <./spectrum-tv-cofdm.png>] [453 <./spectrum-tv-8vsb.png> <./spectrum-tv-ra
+nd-geo-points.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 26101--26107
+\T1/ptm/m/n/10 Two ex-am-ple sim-u-la-tions are pro-vided that demon-strate the
+ func-tion-al-ity of the TV trans-mit-ter
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26111--26115
+\T1/ptm/m/n/10 The \T1/pcr/m/n/9 tv-spectrum-transmitter \T1/ptm/m/n/10 test su
+ite ver-i-fies the ac-cu-racy of the spec-trum/PSD model in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26116--26121
+[]\T1/ptm/m/n/10 The \T1/pcr/m/n/9 tv-helper-distribution \T1/ptm/m/n/10 test s
+uite ver-i-fies the func-tion-al-ity of the method in
+ []
+
+
+! Package inputenc Error: Unicode character τ (U+03C4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26143 ...nel is represented by the matrix H(t,τ
+                                                  ), in which each
+? 
+
+! Package inputenc Error: Unicode character τ (U+03C4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26144 entry H $_{\text{u,s}}$ (t,τ
+                                     ) corresponds to the impulse response o...
+
+? 
+
+! Package inputenc Error: Unicode character τ (U+03C4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26146 antenna. H $_{\text{u,s}}$ (t,τ
+                                        ) is generated by the superposition ...
+
+? 
+[454] [455] [456] [457] [458
+
+]
+Chapter 31.
+[459] [460] [461] [462]
+Chapter 32.
+[463
+
+] [464] [465] [466] [467] [468]
+Chapter 33.
+[469
+
+] [470
+
+]
+Chapter 34.
+[471]
+Underfull \hbox (badness 10000) in paragraph at lines 27128--27134
+[]\T1/ptm/m/n/10 InternetStackHelper::Install (internet/helper/internet-stack-h
+elper.cc:423) cre-ates and ag-gre-gates pro-to-
+ []
+
+[472] [473] [474] [475]
+Underfull \hbox (badness 10000) in paragraph at lines 27417--27420
+[]\T1/ptm/m/n/10 For this helper's con-fig-u-ra-tion to take ef-fect, it should
+ be added to the ns-3 pro-gram af-ter
+ []
+
+<classful-queue-disc.pdf, id=5044, 1041.8925pt x 738.76pt>
+File: classful-queue-disc.pdf Graphic file (type pdf)
+<use classful-queue-disc.pdf>
+Package pdftex.def Info: classful-queue-disc.pdf  used on input line 27470.
+(pdftex.def)             Requested size: 469.75348pt x 333.08145pt.
+[476] [477 <./classful-queue-disc.pdf>]
+<multi-queue-aware-queue-disc.pdf, id=5060, 1041.8925pt x 738.76pt>
+File: multi-queue-aware-queue-disc.pdf Graphic file (type pdf)
+<use multi-queue-aware-queue-disc.pdf>
+Package pdftex.def Info: multi-queue-aware-queue-disc.pdf  used on input line 2
+7480.
+(pdftex.def)             Requested size: 469.75348pt x 333.08145pt.
+ [478 <./multi-queue-aware-queue-disc.pdf>] [479] [480] [481] [482] [483] [484]
+ [485] [486] [487] [488]
+Underfull \hbox (badness 10000) in paragraph at lines 28331--28332
+[]\T1/ptm/m/n/10 The queue is empty, upon which the queue leaves the drop-ping 
+state and ex-its
+ []
+
+[489] [490]
+Underfull \hbox (badness 10000) in paragraph at lines 28523--28524
+[]\T1/pcr/m/n/9 FqCoDelQueueDisc::FqCoDelDrop ()\T1/ptm/m/n/10 : This rou-tine 
+is in-voked by
+ []
+
+[491] [492] [493] [494] [495] [496]
+Chapter 35.
+[497
+
+] [498] [499]
+<auvmobility-classes.pdf, id=5291, 284.52798pt x 159.22888pt>
+File: auvmobility-classes.pdf Graphic file (type pdf)
+<use auvmobility-classes.pdf>
+Package pdftex.def Info: auvmobility-classes.pdf  used on input line 29128.
+(pdftex.def)             Requested size: 284.52728pt x 159.22847pt.
+ [500] [501 <./auvmobility-classes.pdf>]
+
+! Package inputenc Error: Unicode character μ (U+03BC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29191 ...del are set to fit those of the WHOI μ
+                                                  modem. The class follows p...
+
+? 
+[502] [503] [504] [505] [506] [507]
+Underfull \hbox (badness 5359) in paragraph at lines 29593--29595
+\T1/ptm/m/n/10 Includes test case for Li-Ion en-ergy source. The unit test can 
+be found in \T1/pcr/m/n/9 src/energy/test/
+ []
+
+[508]
+Chapter 36.
+[509
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 29666--29668
+\T1/ptm/m/n/10 The classes used to model the MAC layer are \T1/pcr/m/n/9 ns3::O
+rganizationIdentifier\T1/ptm/m/n/10 ,
+ []
+
+[510] [511] [512]
+Underfull \hbox (badness 10000) in paragraph at lines 30027--30040
+\T1/ptm/m/n/10 No mod-i-fi-ca-tion or ex-ten-sion is made to the \T1/ptm/m/it/1
+0 ns-3 \T1/ptm/m/n/10 PHY layer cor-re-spond-ing to this model.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30027--30040
+\T1/ptm/m/n/10 In the 802.11p stan-dard, the PHY layer wire-less tech-nol-ogy i
+s still 80211a OFDM with a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30027--30040
+\T1/ptm/m/n/10 10MHz chan-nel width, so Wifi80211pHelper will only al-low the u
+ser to set the stan-dard to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30027--30040
+\T1/ptm/m/n/10 WIFI_PHY_STANDARD_80211_10MHZ or WIFI_PHY_STANDARD_80211_20MHZ, 
+while Wave-Helper
+ []
+
+[513]
+Underfull \hbox (badness 10000) in paragraph at lines 30132--30134
+[]\T1/ptm/m/n/10 The lower-level helpers in-clude \T1/pcr/m/n/9 ns3::YansWavePh
+yHelper\T1/ptm/m/n/10 , \T1/pcr/m/n/9 ns3::NqosWaveMacHelper\T1/ptm/m/n/10 ,
+ []
+
+[514] [515]
+Underfull \hbox (badness 10000) in paragraph at lines 30245--30254
+[]\T1/ptm/m/n/10 m_adhocTxDevices, m_adhocTxInterfaces, Sec-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30268--30270
+[]\T1/ptm/m/n/10 // to-tal WAVE BSM bytes sent uint32_t cu-mu-la-tive-WaveB-sm-
+Bytes =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30274--30276
+[]\T1/ptm/m/n/10 // get num-ber of WAVE BSM pack-ets re-ceived int waveP-k-t-sR
+e-ceived =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30283--30285
+[]\T1/ptm/m/n/10 // in-di-cate that a node (nodeId) is mov-ing. (set to 0 to ^^
+Pstop^^Q node) WaveB-
+ []
+
+[516] [517] [518] [519] [520] [521] [522
+
+]
+Chapter 37.
+[523]
+<WifiArchitecture.pdf, id=5518, 1226.5825pt x 879.285pt>
+File: WifiArchitecture.pdf Graphic file (type pdf)
+<use WifiArchitecture.pdf>
+Package pdftex.def Info: WifiArchitecture.pdf  used on input line 30851.
+(pdftex.def)             Requested size: 469.75584pt x 336.74805pt.
+ [524 <./WifiArchitecture.pdf>] [525]
+Underfull \hbox (badness 7540) in paragraph at lines 31046--31059
+[]\T1/ptm/m/n/10 The Yan-sWifiChan-nel is the only con-crete chan-nel model cla
+ss in the \T1/ptm/m/it/10 ns-3 \T1/ptm/m/n/10 wifi mod-ule. The
+ []
+
+[526]
+Underfull \hbox (badness 10000) in paragraph at lines 31081--31084
+[]\T1/ptm/m/n/10 There are cur-rently two im-ple-men-ta-tions of the \T1/pcr/m/
+n/9 WifiPhy\T1/ptm/m/n/10 : the \T1/pcr/m/n/9 ns3::YansWifiPhy \T1/ptm/m/n/10 a
+nd the
+ []
+
+[527] [528]
+<snir.pdf, id=5567, 216.81pt x 208.99883pt>
+File: snir.pdf Graphic file (type pdf)
+<use snir.pdf>
+Package pdftex.def Info: snir.pdf  used on input line 31264.
+(pdftex.def)             Requested size: 216.80946pt x 208.9983pt.
+ [529 <./snir.pdf>] [530] [531] [532] [533] [534] [535] [536]
+[537] [538] [539] [540]
+Underfull \hbox (badness 7256) in paragraph at lines 32163--32171
+[]\T1/ptm/m/n/10 Users should keep in mind that the two at-tributes that mat-te
+r most within the model code are
+ []
+
+[541]
+Overfull \hbox (1.8112pt too wide) in paragraph at lines 32276--32276
+[]\T1/pcr/m/n/9 ChannelWidth| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32276--32276
+[]\T1/ptm/m/n/10 10 MHz
+ []
+
+[542] [543] [544] [545] [546]
+Underfull \hbox (badness 7504) in paragraph at lines 32866--32870
+[]\T1/ptm/m/n/10 What does this do? It sets the de-fault wifi stan-dard to \T1/
+ptm/b/n/10 802.11a \T1/ptm/m/n/10 and sets the Re-moteS-ta-tion-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32866--32870
+\T1/ptm/m/n/10 Man-ager to \T1/pcr/m/n/9 ns3::ArfWifiManager\T1/ptm/m/n/10 . Yo
+u can change the Re-moteS-ta-tion-Man-ager by call-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32866--32870
+\T1/ptm/m/n/10 the \T1/pcr/m/n/9 WifiHelper::SetRemoteStationManager \T1/ptm/m/
+n/10 method. To change the wifi stan-dard, call the
+ []
+
+[547]
+Underfull \hbox (badness 10000) in paragraph at lines 32916--32921
+[]\T1/ptm/m/n/10 The Wifi-Helper can be used to set the at-tributes of the de-f
+ault ack pol-icy se-lec-tor
+ []
+
+
+Overfull \hbox (11.31981pt too wide) in paragraph at lines 32965--32966
+[]\T1/ptm/m/n/10 Config::Set (^^P/NodeList/\T1/ptm/m/it/10 /DeviceList/\T1/ptm/
+m/n/10 /$ns3::WifiNetDevice/HtConfiguration/ShortGuardIntervalSupported^^Q,
+ []
+
+[548]
+Underfull \hbox (badness 10000) in paragraph at lines 32977--32980
+\T1/ptm/m/n/10 IEEE 802.11ac de-vices are also known as sup-port-ing Very High 
+Through-put (VHT). Once the
+ []
+
+[549]
+Underfull \hbox (badness 10000) in paragraph at lines 33027--33032
+[]\T1/ptm/m/n/10 In this ex-am-ple, we cre-ate two ad-hoc nodes equipped with 8
+02.11a Wi-Fi de-vices. We
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33027--33032
+\T1/ptm/m/n/10 use the \T1/pcr/m/n/9 ns3::ConstantSpeedPropagationDelayModel \T
+1/ptm/m/n/10 as the prop-a-ga-tion de-lay model and
+ []
+
+[550]
+Underfull \vbox (badness 2495) detected at line 33136
+ []
+
+[551]
+<clear-channel.pdf, id=5766, 341.4326pt x 239.00291pt>
+File: clear-channel.pdf Graphic file (type pdf)
+<use clear-channel.pdf>
+Package pdftex.def Info: clear-channel.pdf  used on input line 33172.
+(pdftex.def)             Requested size: 341.43176pt x 239.00232pt.
+<nist-frame-success-rate.pdf, id=5769, 341.4326pt x 239.00291pt>
+File: nist-frame-success-rate.pdf Graphic file (type pdf)
+<use nist-frame-success-rate.pdf>
+Package pdftex.def Info: nist-frame-success-rate.pdf  used on input line 33185.
+
+(pdftex.def)             Requested size: 341.43176pt x 239.00232pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 33188--33194
+[]\T1/ptm/m/n/10 Similar curves for 802.11n/ac/ax can be ob-tained by run-ning 
+the \T1/pcr/m/n/9 wifi-ofdm-ht-validation.cc\T1/ptm/m/n/10 ,
+ []
+
+[552 <./clear-channel.pdf>]
+<nist-frame-success-rate-n.pdf, id=5788, 341.4326pt x 239.00291pt>
+File: nist-frame-success-rate-n.pdf Graphic file (type pdf)
+<use nist-frame-success-rate-n.pdf>
+Package pdftex.def Info: nist-frame-success-rate-n.pdf  used on input line 3319
+9.
+(pdftex.def)             Requested size: 341.43176pt x 239.00232pt.
+<nist-frame-success-rate-ac.pdf, id=5789, 341.4326pt x 239.00291pt>
+File: nist-frame-success-rate-ac.pdf Graphic file (type pdf)
+<use nist-frame-success-rate-ac.pdf>
+Package pdftex.def Info: nist-frame-success-rate-ac.pdf  used on input line 332
+06.
+(pdftex.def)             Requested size: 341.43176pt x 239.00232pt.
+<nist-frame-success-rate-ax.pdf, id=5790, 341.4326pt x 239.00291pt>
+File: nist-frame-success-rate-ax.pdf Graphic file (type pdf)
+<use nist-frame-success-rate-ax.pdf>
+Package pdftex.def Info: nist-frame-success-rate-ax.pdf  used on input line 332
+13.
+(pdftex.def)             Requested size: 341.43176pt x 239.00232pt.
+ [553 <./nist-frame-success-rate.pdf>] [554 <./nist-frame-success-rate-n.pdf> <
+./nist-frame-success-rate-ac.pdf>] [555 <./nist-frame-success-rate-ax.pdf>] [55
+6] [557] [558
+
+]
+Chapter 38.
+[559] [560] [561]
+<WimaxArchitecture.pdf, id=5876, 1626.075pt x 1230.5975pt>
+File: WimaxArchitecture.pdf Graphic file (type pdf)
+<use WimaxArchitecture.pdf>
+Package pdftex.def Info: WimaxArchitecture.pdf  used on input line 33675.
+(pdftex.def)             Requested size: 469.73842pt x 355.4934pt.
+ [562] [563 <./WimaxArchitecture.pdf>] [564] [565] [566]
+[567] [568
+
+] [569
+
+] [570] [571] [572]
+Underfull \hbox (badness 10000) in paragraph at lines 34275--34276
+[]\T1/ptm/m/n/10 IANA, as-signed IEEE 802 num-bers: [][]$http : / / www . iana 
+. org / assignments / ieee-[]802-[]numbers /
+ []
+
+[573] [574] (./ns-3-model-library.ind [575] [576
+
+] [577
+
+
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34396.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 34396.
+
+(./ns-3-model-library.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 34396.
+
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 34396
+.
+
+
+Package rerunfilecheck Warning: File `ns-3-model-library.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ns-3-model-library.out':
+(rerunfilecheck)             Before: B08B62D48D02084CE0C4A5EA85DF5AD3;5980
+(rerunfilecheck)             After:  F0A8E799026F7C7511E8AD80F43522D5;6170.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 34396.
+ ) 
+Here is how much of TeX's memory you used:
+ 19189 strings out of 492167
+ 305517 string characters out of 6131559
+ 654269 words of memory out of 5000000
+ 20594 multiletter control sequences out of 15000+600000
+ 70939 words of font info for 100 fonts, out of 8000000 for 9000
+ 1142 hyphenation exceptions out of 8191
+ 42i,24n,49p,1975b,584s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{figure.36.7} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.36.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.36.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.36.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.36.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.36.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.36.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.23.4.4} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.33.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.33.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.29.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.29.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.23.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.23.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.23.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.98} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.19.10} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.97} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.96} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.95} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.94} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.93} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.92} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.19.9} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{table.19.8} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{table.19.7} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.91} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.90} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.89} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.88} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.87} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.86} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.84} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.85} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.83} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.77} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.76} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.19.6} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.19.2.12} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.75} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.19.5} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{table.19.4} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.19.2.6} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{paragraph*.245} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.19.2.14} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.70} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.69} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.68} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.67} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.66} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.65} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.64} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.63} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.62} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.61} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.60} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.59} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.58} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.57} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.56} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.55} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.54} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.53} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.52} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.51} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.50} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.49} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.48} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.47} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.46} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.45} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.19.1.11} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.44} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.43} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.42} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.41} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.40} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{paragraph*.235} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.19.2} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.39} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.38} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.37} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.19.2.19} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.19.2.18} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.36} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.35} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.34} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.33} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{paragraph*.257} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{paragraph*.233} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection*.186} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.19.2.17} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection*.259} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.32} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.31} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection*.238} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.30} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.29} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.28} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.27} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.26} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.25} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.24} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.23} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.12} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.11} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection*.188} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.10} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.19.1.13} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.9} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.8} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.19.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.577} has been referenced but does not exis
+t, replaced by a fixed one
+
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cmextra/cmex7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
+usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw
+/courier/ucrb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><
+/usr/share/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texmf-dis
+t/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/he
+lvetic/uhvbo8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><
+/usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/f
+onts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/u
+tmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ns-3-model-library.pdf (581 pages, 12455643 bytes).
+PDF statistics:
+ 6683 PDF objects out of 7423 (max. 8388607)
+ 5695 compressed objects within 57 object streams
+ 2464 named destinations out of 2487 (max. 500000)
+ 1120 words of extra memory for PDF output out of 10000 (max. 10000000)
+

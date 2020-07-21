@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Utilities &#8212; Manual</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Making Plots using the Gnuplot Class" href="gnuplot.html" />
+    <link rel="prev" title="Helpers" href="helpers.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Manual</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="gnuplot.html" title="Making Plots using the Gnuplot Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="helpers.html" title="Helpers"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="utilities">
+<span id="id1"></span><h1>Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="print-introspected-doxygen">
+<h2>Print-introspected-doxygen<a class="headerlink" href="#print-introspected-doxygen" title="Permalink to this headline">¶</a></h2>
+<p><cite>print-introspected-doxygen</cite> is used to generate doxygen documentation
+using various TypeIds defined throughout the <em>ns-3</em> source code.
+The tool returns the various config paths, attributes, trace sources,
+etc. for the various files in <em>ns-3</em>.</p>
+<div class="section" id="invocation">
+<h3>Invocation<a class="headerlink" href="#invocation" title="Permalink to this headline">¶</a></h3>
+<p>This tool is run automatically by the build system when generating
+the Doxygen API docs, so you don’t normally have to run it by hand.</p>
+<p>However, since it does give a fair bit of information about TypeIds
+it can be useful to run from the command line and
+search for specific information.</p>
+<p>To run it, simply open terminal and type</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf --run print-introspected-doxygen
+</pre></div>
+</div>
+<p>This will give all the output, formatted for Doxygen, which can be viewed
+in a text editor.</p>
+<p>One way to use this is to capture it to a file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf --run print-introspected-doxygen &gt; doc.html
+</pre></div>
+</div>
+<p>Some users might prefer to use tools like grep
+to locate the required piece of information from the documentation
+instead of using an editor. For such uses-cases and more,
+<cite>print-introspected-doxygen</cite> can return plain text:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf --run <span class="s2">&quot;print-introspected-doxygen --output-text&quot;</span>
+</pre></div>
+</div>
+<p>(Note the quotes around the inner command and options.)</p>
+<blockquote>
+<div><p>$ ./waf –run “print-introspected-doxygen –output-text” | grep “hello”</p>
+</div></blockquote>
+<p>This will output the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>* HelloInterval: HELLO messages emission interval.
+* DeletePeriod: DeletePeriod is intended to provide an upper bound on the <span class="nb">time</span> <span class="k">for</span> which an upstream node A can have a neighbor B as an active next hop <span class="k">for</span> destination D, <span class="k">while</span> B has invalidated the route to D. <span class="o">=</span> <span class="m">5</span> * max <span class="o">(</span>HelloInterval, ActiveRouteTimeout<span class="o">)</span>
+* AllowedHelloLoss: Number of hello messages which may be loss <span class="k">for</span> valid link.
+* EnableHello: Indicates whether a hello messages enable.
+* HelloInterval: HELLO messages emission interval.
+* HelloInterval: HELLO messages emission interval.
+* DeletePeriod: DeletePeriod is intended to provide an upper bound on the <span class="nb">time</span> <span class="k">for</span> which an upstream node A can have a neighbor B as an active next hop <span class="k">for</span> destination D, <span class="k">while</span> B has invalidated the route to D. <span class="o">=</span> <span class="m">5</span> * max <span class="o">(</span>HelloInterval, ActiveRouteTimeout<span class="o">)</span>
+* AllowedHelloLoss: Number of hello messages which may be loss <span class="k">for</span> valid link.
+* EnableHello: Indicates whether a hello messages enable.
+* HelloInterval: HELLO messages emission interval.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="bench-simulator">
+<h2>Bench-simulator<a class="headerlink" href="#bench-simulator" title="Permalink to this headline">¶</a></h2>
+<p>This tool is used to benchmark the scheduler algorithms used in <em>ns-3</em>.</p>
+<div class="section" id="command-line-arguments">
+<h3>Command-line Arguments<a class="headerlink" href="#command-line-arguments" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf --run <span class="s2">&quot;bench-simulator --help&quot;</span>
+
+Program Options:
+    --cal:    use CalendarSheduler <span class="o">[</span>false<span class="o">]</span>
+    --heap:   use HeapScheduler <span class="o">[</span>false<span class="o">]</span>
+    --list:   use ListSheduler <span class="o">[</span>false<span class="o">]</span>
+    --map:    use MapScheduler <span class="o">(</span>default<span class="o">)</span> <span class="o">[</span>true<span class="o">]</span>
+    --debug:  <span class="nb">enable</span> debugging output <span class="o">[</span>false<span class="o">]</span>
+    --pop:    event population size <span class="o">(</span>default 1E5<span class="o">)</span> <span class="o">[</span><span class="m">100000</span><span class="o">]</span>
+    --total:  total number of events to run <span class="o">(</span>default 1E6<span class="o">)</span> <span class="o">[</span><span class="m">1000000</span><span class="o">]</span>
+    --runs:   number of runs <span class="o">(</span>default <span class="m">1</span><span class="o">)</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>
+    --file:   file of relative event <span class="nb">times</span> <span class="o">[]</span>
+    --prec:   printed output precision <span class="o">[</span><span class="m">6</span><span class="o">]</span>
+</pre></div>
+</div>
+<p>You can change the Scheduler being benchmarked by passing
+the appropriate flags, for example if you want to
+benchmark the CalendarScheduler pass <cite>–cal</cite> to the program.</p>
+<p>The default total number of events, runs or population size
+can be overridden by passing <cite>–total=value</cite>, <cite>–runs=value</cite>
+and <cite>–pop=value</cite> respectively.</p>
+<p>If you want to use event distribution which is stored in a file,
+you can pass the file option by <cite>–file=FILE_NAME</cite>.</p>
+<p><cite>–prec</cite> can be used to change the output precision value and
+<cite>–debug</cite> as the name suggests enables debugging.</p>
+</div>
+<div class="section" id="id2">
+<h3>Invocation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>To run it, simply open the terminal and type</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf --run bench-simulator
+</pre></div>
+</div>
+<p>It will show something like this depending upon the scheduler being benchmarked:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ns3-dev-bench-simulator-debug:
+ns3-dev-bench-simulator-debug: scheduler: ns3::MapScheduler
+ns3-dev-bench-simulator-debug: population: <span class="m">100000</span>
+ns3-dev-bench-simulator-debug: total events: <span class="m">1000000</span>
+ns3-dev-bench-simulator-debug: runs: <span class="m">1</span>
+ns3-dev-bench-simulator-debug: using default exponential distribution
+
+Run        Inititialization:                   Simulation:
+            Time <span class="o">(</span>s<span class="o">)</span>    Rate <span class="o">(</span>ev/s<span class="o">)</span> Per <span class="o">(</span>s/ev<span class="o">)</span>  Time <span class="o">(</span>s<span class="o">)</span>    Rate <span class="o">(</span>ev/s<span class="o">)</span> Per <span class="o">(</span>s/ev<span class="o">)</span>
+----------- ----------- ----------- ----------- ----------- ----------- -----------
+<span class="o">(</span>prime<span class="o">)</span>     <span class="m">0</span>.4         <span class="m">250000</span>      4e-06       <span class="m">1</span>.84        <span class="m">543478</span>      <span class="m">1</span>.84e-06
+<span class="m">0</span>           <span class="m">0</span>.15        <span class="m">666667</span>      <span class="m">1</span>.5e-06     <span class="m">1</span>.86        <span class="m">537634</span>      <span class="m">1</span>.86e-06
+</pre></div>
+</div>
+<p>Suppose we had to benchmark <cite>CalendarScheduler</cite> instead, we would have written</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf --run <span class="s2">&quot;bench-simulator --cal&quot;</span>
+</pre></div>
+</div>
+<p>And the output would look something like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ns3-dev-bench-simulator-debug:
+ns3-dev-bench-simulator-debug: scheduler: ns3::CalendarScheduler
+ns3-dev-bench-simulator-debug: population: <span class="m">100000</span>
+ns3-dev-bench-simulator-debug: total events: <span class="m">1000000</span>
+ns3-dev-bench-simulator-debug: runs: <span class="m">1</span>
+ns3-dev-bench-simulator-debug: using default exponential distribution
+
+Run        Inititialization:                   Simulation:
+            Time <span class="o">(</span>s<span class="o">)</span>    Rate <span class="o">(</span>ev/s<span class="o">)</span> Per <span class="o">(</span>s/ev<span class="o">)</span>  Time <span class="o">(</span>s<span class="o">)</span>    Rate <span class="o">(</span>ev/s<span class="o">)</span> Per <span class="o">(</span>s/ev<span class="o">)</span>
+----------- ----------- ----------- ----------- ----------- ----------- -----------
+<span class="o">(</span>prime<span class="o">)</span>     <span class="m">1</span>.19        <span class="m">84033</span>.6     <span class="m">1</span>.19e-05    <span class="m">32</span>.03       <span class="m">31220</span>.7     <span class="m">3</span>.203e-05
+<span class="m">0</span>           <span class="m">0</span>.99        <span class="m">101010</span>      <span class="m">9</span>.9e-06     <span class="m">31</span>.22       <span class="m">32030</span>.7     <span class="m">3</span>.122e-05
+<span class="sb">```</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Utilities</a><ul>
+<li><a class="reference internal" href="#print-introspected-doxygen">Print-introspected-doxygen</a><ul>
+<li><a class="reference internal" href="#invocation">Invocation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bench-simulator">Bench-simulator</a><ul>
+<li><a class="reference internal" href="#command-line-arguments">Command-line Arguments</a></li>
+<li><a class="reference internal" href="#id2">Invocation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="helpers.html"
+                        title="previous chapter">Helpers</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gnuplot.html"
+                        title="next chapter">Making Plots using the Gnuplot Class</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/utilities.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="gnuplot.html" title="Making Plots using the Gnuplot Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="helpers.html" title="Helpers"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 18:24.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

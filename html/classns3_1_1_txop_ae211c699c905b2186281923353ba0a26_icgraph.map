@@ -1,0 +1,52 @@
+<map id="ns3::Txop::GenerateBackoff" name="ns3::Txop::GenerateBackoff">
+<area shape="rect" id="node1" title="Generate a new backoff now." alt="" coords="1127,350,1329,377"/>
+<area shape="rect" id="node2" href="$classns3_1_1_qos_txop.html#a30f5c2af1b50e6ee48771de46cd8033f" title="Callback when ADDBA response is not received after timeout." alt="" coords="855,5,1077,47"/>
+<area shape="rect" id="node4" href="$classns3_1_1_qos_txop.html#a72a824799fec1fa4ac982f4b485055cc" title="Initialize() implementation." alt="" coords="870,71,1062,98"/>
+<area shape="rect" id="node5" href="$classns3_1_1_txop.html#a246fb00661455939c8c8de13a45ef997" title="Initialize() implementation." alt="" coords="883,122,1049,149"/>
+<area shape="rect" id="node6" href="$classns3_1_1_txop.html#a21fbf608df4c1b90a2004e916c0665e5" title="Event handler when a transmission that does not require an Ack has completed." alt="" coords="879,173,1053,199"/>
+<area shape="rect" id="node9" href="$classns3_1_1_txop.html#acd1bb8b45e7a39cfc7e1e710dc514b3e" title="Event handler when an Ack is received." alt="" coords="896,274,1036,301"/>
+<area shape="rect" id="node13" href="$classns3_1_1_qos_txop.html#aefd7967703c6f16501599e943f94298b" title="Event handler when an Ack is missed." alt="" coords="872,426,1060,453"/>
+<area shape="rect" id="node15" href="$classns3_1_1_txop.html#a76ed6b61366d7c6797a6910d8ad4eaa5" title="Event handler when an Ack is missed." alt="" coords="885,223,1047,250"/>
+<area shape="rect" id="node19" href="$classns3_1_1_qos_txop.html#a53f04ba906e1b7c99f35eafbb11d4479" title="Event handler when a BlockAck timeout has occurred." alt="" coords="854,477,1078,503"/>
+<area shape="rect" id="node20" href="$classns3_1_1_txop.html#ae969e1203237fc063ed27d2a23a1e773" title="Event handler when a CTS timeout has occurred." alt="" coords="886,325,1046,351"/>
+<area shape="rect" id="node23" href="$classns3_1_1_qos_txop.html#a89bd16f2271d51bb1ddafb339b07f54a" title="Notify the Txop that internal collision has occurred." alt="" coords="862,528,1070,569"/>
+<area shape="rect" id="node24" href="$classns3_1_1_txop.html#a5f57aacdbc9384e3afc186af80fb4e4b" title="Notify the Txop that internal collision has occurred." alt="" coords="875,593,1057,635"/>
+<area shape="rect" id="node25" href="$classns3_1_1_qos_txop.html#a0b82aec30711d3b4fb94d164388ecf9c" title="Event handler when a CTS timeout has occurred." alt="" coords="853,375,1079,402"/>
+<area shape="rect" id="node26" href="$classns3_1_1_txop.html#ae0a0bbafaed367559bce8c10c184666f" title=" " alt="" coords="899,686,1033,713"/>
+<area shape="rect" id="node48" href="$classns3_1_1_qos_txop.html#a376a2de891a03e243c56c6af5544c6ae" title="Update backoff and restart access if needed." alt="" coords="859,1047,1073,1074"/>
+<area shape="rect" id="node3" href="$classns3_1_1_qos_txop.html#ac8fc9fff319b72efa72d3c984c8ed37f" title="Event handler when an Ack is received." alt="" coords="601,13,767,39"/>
+<area shape="rect" id="node7" href="$classns3_1_1_mac_low.html#ab27ec174aebeec55b0fd44e872c0e777" title="A transmission that does not require an Ack has completed." alt="" coords="586,118,782,145"/>
+<area shape="rect" id="node8" href="$classns3_1_1_mac_low.html#ae7e8072b7d1f8b775000f6f07ee5a3c1" title="Start a Data timer by scheduling appropriate Ack timeout." alt="" coords="301,107,493,148"/>
+<area shape="rect" id="node10" href="$classns3_1_1_mac_low.html#a2fffa82ad11ebe0e113232813a816eff" title=" " alt="" coords="592,274,776,301"/>
+<area shape="rect" id="node11" href="$classns3_1_1_mac_low.html#abac7baed9f0aaeb684e84f44819bce30" title=" " alt="" coords="297,275,496,316"/>
+<area shape="rect" id="node12" href="$classns3_1_1_mac_low.html#abbd1aac31c7ed79f717b9c92cb664608" title="Set up WifiPhy associated with this MacLow." alt="" coords="39,223,197,250"/>
+<area shape="rect" id="node14" href="$class_ampdu_aggregation_test.html#a7414dc8d4dd982ab4c1eaadb5b2c693d" title="Implementation to actually run this TestCase." alt="" coords="597,376,771,417"/>
+<area shape="rect" id="node16" href="$classns3_1_1_mac_low.html#a4d730ac2acea66982b4d257e06e22387" title="Event handler when normal Ack timeout occurs." alt="" coords="565,223,803,250"/>
+<area shape="rect" id="node18" href="$classns3_1_1_mac_low.html#a9e44540e30598260fce5d85d5a6dda18" title=" " alt="" coords="298,173,495,199"/>
+<area shape="rect" id="node17" href="$classns3_1_1_mac_low.html#af096a2fe9597c4ca80ae1af4870a45a8" title=" " alt="" coords="283,223,510,250"/>
+<area shape="rect" id="node21" href="$classns3_1_1_mac_low.html#a35adb9b4c7f1035da2cb080289ba9cf7" title="Event handler when CTS timeout occurs." alt="" coords="590,325,778,351"/>
+<area shape="rect" id="node22" href="$classns3_1_1_mac_low.html#ac472702b866a51ea2dfb7637381897aa" title="Send RTS to begin RTS&#45;CTS&#45;Data&#45;Ack transaction." alt="" coords="281,341,512,367"/>
+<area shape="rect" id="node27" href="$classns3_1_1_ocb_wifi_mac.html#a8bff620142abd07f3a1f7410f26502b7" title=" " alt="" coords="587,711,781,738"/>
+<area shape="rect" id="node28" href="$classns3_1_1_adhoc_wifi_mac.html#a476b75b5ca672a00be5234c507787968" title=" " alt="" coords="607,763,761,804"/>
+<area shape="rect" id="node29" href="$classns3_1_1_sta_wifi_mac.html#a27afdb3ba3ef301e240362f379d570f2" title=" " alt="" coords="589,829,779,855"/>
+<area shape="rect" id="node30" href="$classns3_1_1_ap_wifi_mac.html#aa311e26f32fea82c50ac2d92ea627774" title="Forward the packet down to DCF/EDCAF (enqueue the packet)." alt="" coords="574,879,794,906"/>
+<area shape="rect" id="node31" href="$classns3_1_1_sta_wifi_mac.html#af2ab6272caa11513770336a92cd714bc" title="Forward an association or reassociation request packet to the DCF." alt="" coords="563,931,805,972"/>
+<area shape="rect" id="node36" href="$classns3_1_1_ap_wifi_mac.html#ad7fef463a6076916fa1f5a989e56f13d" title="Forward an association or a reassociation response packet to the DCF." alt="" coords="567,442,801,469"/>
+<area shape="rect" id="node38" href="$classns3_1_1_mesh_wifi_interface_mac.html#ad83362b1af946376ee349a8ea0c4d7ba" title="Send beacon." alt="" coords="585,544,783,585"/>
+<area shape="rect" id="node42" href="$classns3_1_1_ap_wifi_mac.html#a6c8cbc0fc95f3eaf4840d4ffcf78fac5" title="Forward a beacon packet to the beacon special DCF." alt="" coords="565,610,803,637"/>
+<area shape="rect" id="node45" href="$classns3_1_1_sta_wifi_mac.html#a2280584632094368d217112ceb2c4e44" title="Forward a probe request packet to the DCF." alt="" coords="295,1061,499,1103"/>
+<area shape="rect" id="node46" href="$classns3_1_1_ap_wifi_mac.html#a0a9fcbd87326c5c56644deb3504038df" title="Forward a probe response packet to the DCF." alt="" coords="568,493,800,519"/>
+<area shape="rect" id="node47" href="$classns3_1_1_ocb_wifi_mac.html#a89a354cd6596253ce69e246f437d02f5" title=" " alt="" coords="587,661,781,687"/>
+<area shape="rect" id="node32" href="$classns3_1_1_sta_wifi_mac.html#a76c7409a492791cc1c3f35d779072371" title="This method is called after the association timeout occurred." alt="" coords="283,865,510,907"/>
+<area shape="rect" id="node33" href="$classns3_1_1_sta_wifi_mac.html#ab1221b9151a49b25c011f854215f35fb" title="Indicate that PHY capabilities have changed." alt="" coords="279,931,515,972"/>
+<area shape="rect" id="node34" href="$classns3_1_1_sta_wifi_mac.html#a0813f90cc1f856b0907845686caa592f" title="This method is called after wait beacon timeout or wait probe request timeout has occurred." alt="" coords="299,996,494,1037"/>
+<area shape="rect" id="node35" href="$classns3_1_1_sta_wifi_mac.html#a9c007448763eb89846914c4c836cacc1" title="Start the scanning process which trigger active or passive scanning based on the active probing flag." alt="" coords="5,1003,231,1030"/>
+<area shape="rect" id="node37" href="$classns3_1_1_ap_wifi_mac.html#af264125e11c4d132d18966a6aa02ace5" title="This method acts as the MacRxMiddle receive callback and is invoked to notify us that a frame has bee..." alt="" coords="305,427,488,454"/>
+<area shape="rect" id="node39" href="$classns3_1_1_mesh_wifi_interface_mac.html#afce4d5c3fc9f6abeb87066e62367aacf" title="PluginList typedef." alt="" coords="297,479,496,520"/>
+<area shape="rect" id="node40" href="$classns3_1_1_mesh_wifi_interface_mac.html#a6de0d9fe72ccce3b29e4870a6abccc11" title="Schedule next beacon." alt="" coords="297,544,496,585"/>
+<area shape="rect" id="node41" href="$classns3_1_1_mesh_wifi_interface_mac.html#a3390bb70ec47d738f6ffb37c476bbcfc" title="Shift TBTT." alt="" coords="297,609,496,651"/>
+<area shape="rect" id="node43" href="$classns3_1_1_ap_wifi_mac.html#a398b0e04d5c31b7459358a459beff098" title="Initialize() implementation." alt="" coords="294,741,499,767"/>
+<area shape="rect" id="node44" href="$classns3_1_1_ap_wifi_mac.html#a09ad3b96835cb8fac18783423d3e57a7" title="Enable or disable beacon generation of the AP." alt="" coords="297,675,497,716"/>
+<area shape="rect" id="node49" href="$classns3_1_1_qos_txop.html#a05d86df8343fe65adf7a953701062ec1" title="Event handler when a transmission that does not require an Ack has completed." alt="" coords="584,1047,784,1074"/>
+<area shape="rect" id="node50" href="$classns3_1_1_qos_txop.html#ab1e6895b44d7a58e5a563db3ba39fa58" title="Start transmission for the next packet if allowed by the TxopLimit." alt="" coords="573,1098,795,1125"/>
+</map>

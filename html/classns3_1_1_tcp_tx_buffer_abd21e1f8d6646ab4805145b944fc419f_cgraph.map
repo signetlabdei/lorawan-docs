@@ -1,0 +1,7 @@
+<map id="ns3::TcpTxBuffer::NextSeg" name="ns3::TcpTxBuffer::NextSeg">
+<area shape="rect" id="node1" title="Get the next sequence number to transmit, according to RFC 6675." alt="" coords="5,64,199,91"/>
+<area shape="rect" id="node2" href="$classns3_1_1_packet.html#afff7cb1ff518ee6dc0d424e10a5ad6ec" title="Returns the the size in bytes of the packet (including the zero&#45;filled initial payload)." alt="" coords="269,5,423,32"/>
+<area shape="rect" id="node3" href="$classns3_1_1_sequence_number.html#ac16a0b2c43ad7e157edb610e858b309f" title="Extracts the numeric value of the sequence number." alt="" coords="262,57,430,98"/>
+<area shape="rect" id="node4" href="$classns3_1_1_tcp_tx_buffer.html#a42b6afc017d2b94c96354df345c49b87" title="Returns the number of bytes from the buffer in the range [seq, tailSequence)" alt="" coords="247,122,445,163"/>
+<area shape="rect" id="node5" href="$classns3_1_1_tcp_tx_buffer.html#aa61abccc56655c6f0a119a8a2f6ef74f" title="Get the sequence number of the buffer tail (plus one)" alt="" coords="493,129,716,156"/>
+</map>

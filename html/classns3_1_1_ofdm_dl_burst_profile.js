@@ -1,0 +1,36 @@
+var classns3_1_1_ofdm_dl_burst_profile =
+[
+    [ "Diuc", "classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00", [
+      [ "DIUC_STC_ZONE", "classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00a59131bd8a95742344deee98da5eb3a8d", null ],
+      [ "DIUC_BURST_PROFILE_1", "classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00a7551a9c00acee92830f4d780803de0c0", null ],
+      [ "DIUC_BURST_PROFILE_2", "classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00a2756c6c80ebc06092e70b31df97cf17c", null ],
+      [ "DIUC_BURST_PROFILE_3", "classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00aad87c5fff58b218ae86c994a54281a6b", null ],
+      [ "DIUC_BURST_PROFILE_4", "classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00a58513ff59a139809481bc1c69096a269", null ],
+      [ "DIUC_BURST_PROFILE_5", "classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00a383256e577057891279bf2c41eab6751", null ],
+      [ "DIUC_BURST_PROFILE_6", "classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00a3e37110005eb6471e44cc41d97560779", null ],
+      [ "DIUC_BURST_PROFILE_7", "classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00af6e115c60f3ea776e07c3e892109b8bb", null ],
+      [ "DIUC_BURST_PROFILE_8", "classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00a2708e38e251b1d9e7da98f85745d438a", null ],
+      [ "DIUC_BURST_PROFILE_9", "classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00aa46869625bfda3fbe78b6e86503c9d16", null ],
+      [ "DIUC_BURST_PROFILE_10", "classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00a0d616be22de49a85a1851a0e37b30183", null ],
+      [ "DIUC_BURST_PROFILE_11", "classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00ad80740f911d643d51a5c8b538d37a2c1", null ],
+      [ "DIUC_GAP", "classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00a143c4273240f4f9479aaa4ae9226688d", null ],
+      [ "DIUC_END_OF_MAP", "classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00ac230357d582ca5c2f0344f41b8c081c9", null ]
+    ] ],
+    [ "OfdmDlBurstProfile", "classns3_1_1_ofdm_dl_burst_profile.html#a548d7d2dd01fbd8d759768026067f05a", null ],
+    [ "~OfdmDlBurstProfile", "classns3_1_1_ofdm_dl_burst_profile.html#a8f3b151522a91c989f62a467e9d64e37", null ],
+    [ "GetDiuc", "classns3_1_1_ofdm_dl_burst_profile.html#ac483ff4b8f8d990137d2a05b2f13e7a4", null ],
+    [ "GetFecCodeType", "classns3_1_1_ofdm_dl_burst_profile.html#a6a14a2fa8fd719d8e6efa58bf229800f", null ],
+    [ "GetLength", "classns3_1_1_ofdm_dl_burst_profile.html#ae387615db708587f95f119be928c7db3", null ],
+    [ "GetSize", "classns3_1_1_ofdm_dl_burst_profile.html#aeb6583e2e128056cc60a656a529fa3bb", null ],
+    [ "GetType", "classns3_1_1_ofdm_dl_burst_profile.html#a32a9177951980f234c0ec102091e047d", null ],
+    [ "Read", "classns3_1_1_ofdm_dl_burst_profile.html#ac748d62c5f8e5af60f4ae1fd5367e4bc", null ],
+    [ "SetDiuc", "classns3_1_1_ofdm_dl_burst_profile.html#ae3d4ef4e16c600092b10354749fb6d2f", null ],
+    [ "SetFecCodeType", "classns3_1_1_ofdm_dl_burst_profile.html#a820825183214aaa1c788ea3a1f3b240d", null ],
+    [ "SetLength", "classns3_1_1_ofdm_dl_burst_profile.html#a960e4ad5656843483b5909c921d1c121", null ],
+    [ "SetType", "classns3_1_1_ofdm_dl_burst_profile.html#ab68301ea6a976bafdd78006670573e1e", null ],
+    [ "Write", "classns3_1_1_ofdm_dl_burst_profile.html#a4d879bfd15aab24767284c4e62128968", null ],
+    [ "m_diuc", "classns3_1_1_ofdm_dl_burst_profile.html#aeea265c163914bbfc45936dcee9fa757", null ],
+    [ "m_fecCodeType", "classns3_1_1_ofdm_dl_burst_profile.html#ad578a18b0de8307a99ad64eec0537be4", null ],
+    [ "m_length", "classns3_1_1_ofdm_dl_burst_profile.html#ad642fbb6fdbf3225b68f565e26775624", null ],
+    [ "m_type", "classns3_1_1_ofdm_dl_burst_profile.html#afade9f6d4968257e2d707fefb724db1a", null ]
+];

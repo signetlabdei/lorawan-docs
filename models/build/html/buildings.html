@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Buildings Module &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Design documentation" href="buildings-design.html" />
+    <link rel="prev" title="BRITE Integration" href="brite.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="buildings-design.html" title="Design documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="brite.html" title="BRITE Integration"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="buildings-module">
+<h1>Buildings Module<a class="headerlink" href="#buildings-module" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="buildings-design.html">Design documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="buildings-design.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildings-design.html#the-building-class">The Building class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildings-design.html#the-mobilitybuildinginfo-class">The MobilityBuildingInfo class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildings-design.html#itur1238propagationlossmodel">ItuR1238PropagationLossModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildings-design.html#buildingspropagationlossmodel">BuildingsPropagationLossModel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="buildings-design.html#external-wall-loss-ewl">External Wall Loss (EWL)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings-design.html#internal-walls-loss-iwl">Internal Walls Loss (IWL)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings-design.html#height-gain-model-hg">Height Gain Model (HG)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings-design.html#shadowing-model">Shadowing Model</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="buildings-design.html#pathloss-logics">Pathloss logics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="buildings-design.html#hybridbuildingspropagationlossmodel">HybridBuildingsPropagationLossModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings-design.html#ohbuildingspropagationlossmodel">OhBuildingsPropagationLossModel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="buildings-user.html">User Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="buildings-user.html#how-to-use-buildings-in-a-simulation">How to use buildings in a simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="buildings-user.html#include-the-headers">Include the headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings-user.html#create-a-building">Create a building</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings-user.html#setup-nodes-and-mobility-models">Setup nodes and mobility models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings-user.html#place-some-nodes">Place some nodes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="buildings-user.html#legacy-positioning-methods">Legacy positioning methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="buildings-user.html#building-specific-positioning-methods">Building-specific positioning methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="buildings-user.html#making-the-mobility-model-consistent-for-a-node">Making the Mobility Model Consistent for a node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings-user.html#building-aware-pathloss-model">Building-aware pathloss model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings-user.html#building-aware-channel-condition-model">Building-aware channel condition model</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="buildings-user.html#main-configurable-attributes">Main configurable attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="buildings-testing.html">Testing Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="buildings-testing.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildings-testing.html#description-of-the-test-suites">Description of the test suites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="buildings-testing.html#buildingshelper-test">BuildingsHelper test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings-testing.html#buildingpositionallocator-test">BuildingPositionAllocator test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings-testing.html#buildings-pathloss-tests">Buildings Pathloss tests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="buildings-testing.html#test-1-okumura-hata">Test #1 Okumura Hata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="buildings-testing.html#test-2-cost231-model">Test #2 COST231 Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="buildings-testing.html#test-3-2-6-ghz-model">Test #3 2.6 GHz model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="buildings-testing.html#test-4-itu1411-los-model">Test #4 ITU1411 LoS model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="buildings-testing.html#test-5-itu1411-nlos-model">Test #5 ITU1411 NLoS model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="buildings-testing.html#test-6-itup1238-model">Test #6 ITUP1238 model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="buildings-testing.html#test-7-outdoor-indoor-with-okumura-hata-model">Test #7 Outdoor -&gt; Indoor with Okumura Hata model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="buildings-testing.html#test-8-outdoor-indoor-with-itu1411-model">Test #8 Outdoor -&gt; Indoor with ITU1411 model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="buildings-testing.html#test-9-indoor-outdoor-with-itu1411-model">Test #9 Indoor -&gt; Outdoor with ITU1411 model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="buildings-testing.html#test-10-indoor-outdoor-with-itu1411-model">Test #10 Indoor -&gt; Outdoor with ITU1411 model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="buildings-testing.html#buildings-shadowing-test">Buildings Shadowing Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings-testing.html#buildings-channel-condition-model-test">Buildings Channel Condition Model Test</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="buildings-references.html">References</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="brite.html"
+                        title="previous chapter">BRITE Integration</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="buildings-design.html"
+                        title="next chapter">Design documentation</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/buildings.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="buildings-design.html" title="Design documentation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="brite.html" title="BRITE Integration"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

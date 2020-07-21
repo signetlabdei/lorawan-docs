@@ -1,0 +1,9 @@
+<map id="ns3::dsr::DsrPassiveBuffEntry::GetDestination" name="ns3::dsr::DsrPassiveBuffEntry::GetDestination">
+<area shape="rect" id="node1" title="Get destination address function." alt="" coords="729,121,909,163"/>
+<area shape="rect" id="node2" href="$classns3_1_1dsr_1_1_dsr_passive_buffer.html#af87acdf99b1ff181b4ffc4376e32c1f6" title="Check if all the entries in passive buffer entry is all equal or not." alt="" coords="488,56,681,97"/>
+<area shape="rect" id="node3" href="$classns3_1_1dsr_1_1_dsr_passive_buffer.html#ad6ef40ffc4ab1bfc535d65f840e9161b" title="Notify that packet is dropped from queue by timeout." alt="" coords="488,121,681,163"/>
+<area shape="rect" id="node4" href="$classns3_1_1dsr_1_1_dsr_passive_buffer.html#a18813680df0977c44e6901f79849d45d" title="Push entry in queue, if there is no entry with the same packet and destination address in queue." alt="" coords="5,136,199,177"/>
+<area shape="rect" id="node5" href="$classns3_1_1dsr_1_1_dsr_passive_buffer.html#a8426eccf47ee009ccedd2f7c224ec203" title="Remove all expired entries." alt="" coords="247,71,440,112"/>
+<area shape="rect" id="node6" href="$classns3_1_1dsr_1_1_dsr_passive_buffer.html#a4d52aae9c0ed66c17a8397d9fc855a5a" title="Return first found (the earliest) entry for given destination." alt="" coords="5,71,199,112"/>
+<area shape="rect" id="node7" href="$classns3_1_1dsr_1_1_dsr_passive_buffer.html#a1c636b64110e7323c4fad1d755112317" title="Number of entries." alt="" coords="5,5,199,47"/>
+</map>

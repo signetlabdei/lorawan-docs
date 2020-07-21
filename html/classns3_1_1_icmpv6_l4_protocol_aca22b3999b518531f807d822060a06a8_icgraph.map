@@ -1,0 +1,22 @@
+<map id="ns3::Icmpv6L4Protocol::SendMessage" name="ns3::Icmpv6L4Protocol::SendMessage">
+<area shape="rect" id="node1" title="Send a packet via ICMPv6, note that packet already contains ICMPv6 header." alt="" coords="1575,279,1744,320"/>
+<area shape="rect" id="node2" href="$classns3_1_1_icmpv6_l4_protocol.html#a3c4b85301ce19b8b2791402972553127" title="Helper function used during delayed solicitation." alt="" coords="1314,63,1489,104"/>
+<area shape="rect" id="node3" href="$classns3_1_1_icmpv6_l4_protocol.html#aacd8a4ff185f48e74f4c4b8dc0da4398" title="Send a Neighbor Solicitation." alt="" coords="1059,16,1228,57"/>
+<area shape="rect" id="node5" href="$classns3_1_1_icmpv6_l4_protocol.html#aaf09883d79f1a055df31d23089a0ea3b" title="Send a Router Solicitation." alt="" coords="1059,92,1228,133"/>
+<area shape="rect" id="node13" href="$classns3_1_1_icmpv6_l4_protocol.html#ad7408b6e4b818a857783a4ec373f2a66" title="Send a Echo Reply." alt="" coords="1317,180,1486,221"/>
+<area shape="rect" id="node15" href="$classns3_1_1_icmpv6_l4_protocol.html#aa54ff6a5f2486f62dc15aa657dd947a0" title="Send an error Destination Unreachable." alt="" coords="1276,245,1527,287"/>
+<area shape="rect" id="node16" href="$classns3_1_1_icmpv6_l4_protocol.html#a5ab4894cdec7b35c4c43f0ee82d61aa6" title="Send an error Parameter Error." alt="" coords="1305,311,1497,352"/>
+<area shape="rect" id="node17" href="$classns3_1_1_icmpv6_l4_protocol.html#a0912f3bc9bfb032dafe0c295e2dcb047" title="Send an error Time Exceeded." alt="" coords="1307,376,1495,417"/>
+<area shape="rect" id="node18" href="$classns3_1_1_icmpv6_l4_protocol.html#a103bf3fdf3212b7fdd351d89adac59d7" title="Send an error Too Big." alt="" coords="1317,441,1486,483"/>
+<area shape="rect" id="node19" href="$classns3_1_1_icmpv6_l4_protocol.html#ae4324a775e75486fad5de41ec3030a0c" title="Send a Neighbor Adverstisement." alt="" coords="1317,507,1486,548"/>
+<area shape="rect" id="node20" href="$classns3_1_1_icmpv6_l4_protocol.html#a775f19603b15e25f287f54096a3f26cb" title="Send an ICMPv6 Redirection." alt="" coords="1317,572,1486,613"/>
+<area shape="rect" id="node4" href="$classns3_1_1_icmpv6_l4_protocol.html#aa4d97bb59a89c2d5b41c76ebe9a54f14" title="Lookup in the ND cache for the IPv6 address (similar as ARP protocol)." alt="" coords="841,16,1011,57"/>
+<area shape="rect" id="node6" href="$classns3_1_1_icmpv6_l4_protocol.html#a0a7a989da20971c66f85b210be7559c1" title="Function called when DAD timeout." alt="" coords="841,92,1011,133"/>
+<area shape="rect" id="node7" href="$classns3_1_1_ipv6_interface.html#a8faa5a72b30720eb01f9fc1d1113ad19" title="Add an IPv6 address." alt="" coords="655,92,793,133"/>
+<area shape="rect" id="node8" href="$classns3_1_1_ipv6_l3_protocol.html#a33135677dcaa195be223eaf4f38a6efe" title="Add an address on interface." alt="" coords="457,59,607,100"/>
+<area shape="rect" id="node10" href="$classns3_1_1_ipv6_interface.html#a394066472c703fcf39d17f1bfcc9191e" title="Initialize interface." alt="" coords="463,124,601,165"/>
+<area shape="rect" id="node9" href="$classns3_1_1_ipv6_l3_protocol.html#a1806de87b35929a2181c2985e5df1ec0" title="Add an autoconfigured address with RA information." alt="" coords="203,59,409,100"/>
+<area shape="rect" id="node11" href="$classns3_1_1_ipv6_interface.html#a9db98f98cc682a2395fe582bfb511880" title="Enable this interface." alt="" coords="237,124,375,165"/>
+<area shape="rect" id="node12" href="$classns3_1_1_ipv6_l3_protocol.html#a834eba3100efc8f71e5292bbfdcde6e6" title="Set an interface up." alt="" coords="5,124,155,165"/>
+<area shape="rect" id="node14" href="$classns3_1_1_icmpv6_l4_protocol.html#ac3f01017288992311264ef54c57e539b" title="Receive Echo Request method." alt="" coords="1059,180,1228,221"/>
+</map>

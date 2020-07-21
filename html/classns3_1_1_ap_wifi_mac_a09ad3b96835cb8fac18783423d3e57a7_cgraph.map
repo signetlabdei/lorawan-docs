@@ -1,0 +1,52 @@
+<map id="ns3::ApWifiMac::SetBeaconGeneration" name="ns3::ApWifiMac::SetBeaconGeneration">
+<area shape="rect" id="node1" title="Enable or disable beacon generation of the AP." alt="" coords="5,627,205,669"/>
+<area shape="rect" id="node2" href="$classns3_1_1_event_id.html#a993ae94e48e014e1afd47edb16db7a11" title="This method is syntactic sugar for the ns3::Simulator::Cancel method." alt="" coords="295,295,449,321"/>
+<area shape="rect" id="node4" href="$classns3_1_1_simulator.html#a2219ee02c0647adc83d1c918c3256266" title="Schedule an event to expire Now." alt="" coords="266,635,478,661"/>
+<area shape="rect" id="node5" href="$classns3_1_1_ap_wifi_mac.html#a6c8cbc0fc95f3eaf4840d4ffcf78fac5" title="Forward a beacon packet to the beacon special DCF." alt="" coords="253,1264,491,1291"/>
+<area shape="rect" id="node3" href="$classns3_1_1_simulator.html#a1b903a62d6117ef28f7ba3c6500689bf" title="Set the cancel bit on this event: the event&#39;s associated function will not be invoked when it expires..." alt="" coords="592,5,760,32"/>
+<area shape="rect" id="node6" href="$classns3_1_1_packet.html#a465108c595a0bc592095cbcab1832ed8" title="Add header to this packet." alt="" coords="588,188,764,215"/>
+<area shape="rect" id="node7" href="$classns3_1_1_regular_wifi_mac.html#aec7ede7cc93b6ec04d447b1649ab27e8" title=" " alt="" coords="598,239,754,281"/>
+<area shape="rect" id="node8" href="$classns3_1_1_ap_wifi_mac.html#af63680554ffb0731ce0ace3538326343" title=" " alt="" coords="575,305,777,346"/>
+<area shape="rect" id="node9" href="$classns3_1_1_mac48_address.html#a55156e302c6bf950c0b558365adbde84" title=" " alt="" coords="598,370,754,411"/>
+<area shape="rect" id="node10" href="$classns3_1_1_ap_wifi_mac.html#a64a900257eccb78f21c3166e94a0c83b" title="Return the Capability information of the current AP." alt="" coords="561,537,791,564"/>
+<area shape="rect" id="node11" href="$classns3_1_1_infrastructure_wifi_mac.html#a47ccbba3931e183c3b7cfe7777abb366" title="Return whether the device supports PCF." alt="" coords="861,479,1056,521"/>
+<area shape="rect" id="node12" href="$classns3_1_1_ap_wifi_mac.html#aca9e80b07b0ef708aa9e06c3272b6efa" title="Determine whether short preamble should be enabled or not in the BSS." alt="" coords="865,690,1053,731"/>
+<area shape="rect" id="node13" href="$classns3_1_1_regular_wifi_mac.html#a6ae4d610b553f1a4715e429efc334375" title="Return whether the device supports ERP." alt="" coords="1104,661,1260,702"/>
+<area shape="rect" id="node14" href="$classns3_1_1_ap_wifi_mac.html#a74c72957ce64d4c1e34bd82e0cf51977" title="Determine whether short slot time should be enabled or not in the BSS." alt="" coords="865,573,1053,614"/>
+<area shape="rect" id="node15" href="$classns3_1_1_ap_wifi_mac.html#a74642e3c2eac1d38c4fab0536a1d48ca" title="Return the CF parameter set of the current AP." alt="" coords="547,487,805,513"/>
+<area shape="rect" id="node16" href="$classns3_1_1_ap_wifi_mac.html#a61b766fbfeadb0a93633a3e36389e0e2" title="Return the DSSS Parameter Set that we support." alt="" coords="539,841,813,868"/>
+<area shape="rect" id="node17" href="$classns3_1_1_regular_wifi_mac.html#ab5d9ee663c3e87a5cef2ef9d5c469a02" title="Return whether the device supports DSSS." alt="" coords="881,821,1037,862"/>
+<area shape="rect" id="node18" href="$classns3_1_1_ap_wifi_mac.html#a8fdab70d8075899ae259189089cca8a7" title="Return the EDCA Parameter Set of the current AP." alt="" coords="539,943,813,969"/>
+<area shape="rect" id="node19" href="$classns3_1_1_regular_wifi_mac.html#a23b58c52d462e580bd814db6d8af3fd0" title="Return whether the device supports QoS." alt="" coords="881,911,1037,953"/>
+<area shape="rect" id="node20" href="$classns3_1_1_ap_wifi_mac.html#a47a20776593ad424dcaa1949cefc687c" title="Return the ERP information of the current AP." alt="" coords="551,740,801,767"/>
+<area shape="rect" id="node21" href="$classns3_1_1_regular_wifi_mac.html#a243c2648b9d9b54cf6b056f1d4124171" title="Return the extended capabilities of the device." alt="" coords="581,1227,771,1269"/>
+<area shape="rect" id="node22" href="$classns3_1_1_regular_wifi_mac.html#a9b3ffa51f38fbdb175b811dddb83b90e" title="Return whether the device supports HT." alt="" coords="881,1103,1037,1145"/>
+<area shape="rect" id="node23" href="$classns3_1_1_regular_wifi_mac.html#aec05eb1ee6425e02651bab0cffc4b60a" title="Return whether the device supports VHT." alt="" coords="881,1311,1037,1353"/>
+<area shape="rect" id="node24" href="$classns3_1_1_regular_wifi_mac.html#adf97076ae2932e9d28c40e842a338d7d" title="Return the HE capabilities of the device." alt="" coords="598,1563,754,1605"/>
+<area shape="rect" id="node25" href="$classns3_1_1_regular_wifi_mac.html#a732aef31f554ded767ffec1beb12efe5" title="Return whether the device supports HE." alt="" coords="881,1505,1037,1546"/>
+<area shape="rect" id="node26" href="$classns3_1_1_ap_wifi_mac.html#a2233fc475fba1af0bce238d3a89554f0" title="Return the HE operation of the current AP." alt="" coords="558,1461,794,1488"/>
+<area shape="rect" id="node27" href="$classns3_1_1_regular_wifi_mac.html#ad51001e4ea7ef05fb584002b158a4e3e" title="Return the HT capabilities of the device." alt="" coords="598,1162,754,1203"/>
+<area shape="rect" id="node28" href="$classns3_1_1_ap_wifi_mac.html#a4fefa01556b990b9995ff1a5577060d3" title="Return the HT operation of the current AP." alt="" coords="559,993,793,1020"/>
+<area shape="rect" id="node29" href="$classns3_1_1_regular_wifi_mac.html#acffe8d4db892391c9fe5f2365edeb4b5" title=" " alt="" coords="598,1629,754,1670"/>
+<area shape="rect" id="node30" href="$classns3_1_1_ap_wifi_mac.html#a0b627f2e2ca56a38915e18a7a55ace79" title="Return an instance of SupportedRates that contains all rates that we support including HT rates." alt="" coords="566,1045,786,1086"/>
+<area shape="rect" id="node31" href="$classns3_1_1_regular_wifi_mac.html#a016a83d8f0d89790ac9c177fa2d6751e" title="Return the VHT capabilities of the device." alt="" coords="598,1395,754,1437"/>
+<area shape="rect" id="node32" href="$classns3_1_1_ap_wifi_mac.html#ac036148765aa8e198f973fdf6280c5d4" title="Return the VHT operation of the current AP." alt="" coords="556,1293,796,1320"/>
+<area shape="rect" id="node33" href="$group__timecivil.html#ga17465a639c8d1464e76538afdd78a9f0" title=" " alt="" coords="605,1695,747,1721"/>
+<area shape="rect" id="node34" href="$classns3_1_1_txop.html#ae0a0bbafaed367559bce8c10c184666f" title=" " alt="" coords="609,1745,743,1772"/>
+<area shape="rect" id="node35" href="$classns3_1_1_simulator.html#a671882c894a08af4a5e91181bf1eec13" title="Schedule an event to expire after delay." alt="" coords="585,1796,767,1823"/>
+<area shape="rect" id="node36" href="$classns3_1_1_wifi_mac_header.html#a6478a02b80d5c01657714c5c7a0ae1cb" title="Fill the Address 1 field with the given address." alt="" coords="599,1847,753,1889"/>
+<area shape="rect" id="node37" href="$classns3_1_1_wifi_mac_header.html#ab6a0efdc43d39b5da5d17eae9665271d" title="Fill the Address 2 field with the given address." alt="" coords="599,1913,753,1954"/>
+<area shape="rect" id="node38" href="$classns3_1_1_wifi_mac_header.html#ace2fd1624db247bd42cbe9182996bb0e" title="Fill the Address 3 field with the given address." alt="" coords="599,1978,753,2019"/>
+<area shape="rect" id="node39" href="$classns3_1_1_mgt_probe_response_header.html#ab31645e17aa55f4caa3ebe7effdeeffd" title="Set the beacon interval in microseconds unit." alt="" coords="563,2043,789,2085"/>
+<area shape="rect" id="node40" href="$classns3_1_1_mgt_probe_response_header.html#a1bf36b9ba47bd7f874dbf216e6534ea7" title="Set the Capability information." alt="" coords="563,2109,789,2150"/>
+<area shape="rect" id="node41" href="$classns3_1_1_mgt_probe_response_header.html#a2af72a61dbc5e6f290841b8b3f75a142" title="Set the CF parameter set." alt="" coords="563,2174,789,2215"/>
+<area shape="rect" id="node42" href="$classns3_1_1_wifi_mac_header.html#a02edeb349da4aacc6b376fcf76ff99cc" title="Un&#45;set the From DS bit in the Frame Control field." alt="" coords="599,2239,753,2281"/>
+<area shape="rect" id="node43" href="$classns3_1_1_wifi_mac_header.html#a977cd5a09062bfc3660a23acdebd75ec" title="Un&#45;set the To DS bit in the Frame Control field." alt="" coords="599,2305,753,2346"/>
+<area shape="rect" id="node44" href="$classns3_1_1_mgt_probe_response_header.html#ab05d1ec0fe1eb3c92d1b094331ccd4f9" title="Set the DSSS Parameter Set." alt="" coords="563,2370,789,2411"/>
+<area shape="rect" id="node45" href="$classns3_1_1_mgt_probe_response_header.html#ab369952f14a08b3e8ee2a38572df0db5" title="Set the EDCA Parameter Set." alt="" coords="563,2435,789,2477"/>
+<area shape="rect" id="node46" href="$classns3_1_1_mgt_probe_response_header.html#a0af2ec3c651f5e2485da29e0ae5cc249" title="Set the ERP information." alt="" coords="563,2501,789,2542"/>
+<area shape="rect" id="node47" href="$classns3_1_1_mgt_probe_response_header.html#a4811e4a5a09db733c163f93d57882052" title="Set the extended capabilities." alt="" coords="563,2566,789,2607"/>
+<area shape="rect" id="node48" href="$classns3_1_1_mgt_probe_response_header.html#a1f974ee6874a4bbd2ae65cc68befd81d" title="Set the HE capabilities." alt="" coords="563,2631,789,2673"/>
+<area shape="rect" id="node49" href="$classns3_1_1_mgt_probe_response_header.html#ad04e3d92ec55053b5ef332f87cc87f07" title="Set the HE operation." alt="" coords="563,57,789,98"/>
+<area shape="rect" id="node50" href="$classns3_1_1_mgt_probe_response_header.html#a6e8f22c9e9acf30ba2ada161238d718f" title="Set the HT capabilities." alt="" coords="563,122,789,163"/>
+</map>

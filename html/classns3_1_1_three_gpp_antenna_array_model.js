@@ -1,0 +1,25 @@
+var classns3_1_1_three_gpp_antenna_array_model =
+[
+    [ "ComplexVector", "classns3_1_1_three_gpp_antenna_array_model.html#aa6af3644cec86d8248d8ab5454d6b2c1", null ],
+    [ "ThreeGppAntennaArrayModel", "classns3_1_1_three_gpp_antenna_array_model.html#ad54e5f453e9030efddc76ad40a2042d8", null ],
+    [ "~ThreeGppAntennaArrayModel", "classns3_1_1_three_gpp_antenna_array_model.html#a320e3436bd2fe386e4ab9029070677e6", null ],
+    [ "ChangeToOmniTx", "classns3_1_1_three_gpp_antenna_array_model.html#a188ff1cab94928688d7e8aad20c83fe6", null ],
+    [ "GetBeamformingVector", "classns3_1_1_three_gpp_antenna_array_model.html#a0588771e29512413188fabb028aa9262", null ],
+    [ "GetElementFieldPattern", "classns3_1_1_three_gpp_antenna_array_model.html#a2f658ead10fe49c9d9890d904cd411da", null ],
+    [ "GetElementLocation", "classns3_1_1_three_gpp_antenna_array_model.html#a5ff8bbbe1673c1a940d46e18af868264", null ],
+    [ "GetNumberOfElements", "classns3_1_1_three_gpp_antenna_array_model.html#ad69111b092cfd159e2edeeed5e05b256", null ],
+    [ "GetRadiationPattern", "classns3_1_1_three_gpp_antenna_array_model.html#aaec6333032dbbea85d64581c27ec5d73", null ],
+    [ "GetTypeId", "classns3_1_1_three_gpp_antenna_array_model.html#afc3adb39820c268503d59e02d34d91cc", null ],
+    [ "IsOmniTx", "classns3_1_1_three_gpp_antenna_array_model.html#a6d4e814198d981416b99f385ccf2cc99", null ],
+    [ "SetBeamformingVector", "classns3_1_1_three_gpp_antenna_array_model.html#afff43f2e208a025e855379919a1568e2", null ],
+    [ "m_alpha", "classns3_1_1_three_gpp_antenna_array_model.html#aaa25d991345331250347e422543d4f44", null ],
+    [ "m_beamformingVector", "classns3_1_1_three_gpp_antenna_array_model.html#a8df9e6a19b0519b62724145dcc79f8fc", null ],
+    [ "m_beta", "classns3_1_1_three_gpp_antenna_array_model.html#a1a080b641e7093bb09d0ea28c1ba4734", null ],
+    [ "m_disH", "classns3_1_1_three_gpp_antenna_array_model.html#ac02d5a9b89230389e32f3be6e76ca621", null ],
+    [ "m_disV", "classns3_1_1_three_gpp_antenna_array_model.html#a54da032a5220f5afa34ecb8f5d1debe0", null ],
+    [ "m_gE", "classns3_1_1_three_gpp_antenna_array_model.html#a2987b779205e0197cc2356d9193715cf", null ],
+    [ "m_isIsotropic", "classns3_1_1_three_gpp_antenna_array_model.html#acca50cb7d6652d2331987c362d21aa22", null ],
+    [ "m_isOmniTx", "classns3_1_1_three_gpp_antenna_array_model.html#a6e926e241eb7d95d75089a9c7d6e0b16", null ],
+    [ "m_numColumns", "classns3_1_1_three_gpp_antenna_array_model.html#a1921f6f8788aa683525de488e7152685", null ],
+    [ "m_numRows", "classns3_1_1_three_gpp_antenna_array_model.html#ab01ebc71650aed4aebfaaae8fbde986a", null ]
+];

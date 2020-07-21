@@ -1,0 +1,52 @@
+<map id="ns3::UniformRandomVariable::GetValue" name="ns3::UniformRandomVariable::GetValue">
+<area shape="rect" id="node1" title="Get the next random value as a double drawn from the distribution." alt="" coords="1211,1261,1425,1303"/>
+<area shape="rect" id="node2" href="$classns3_1_1_uniform_random_variable.html#ab7c7dedc88cb97e74418df2edc28a787" title="Get the next random value, as an unsigned integer in the specified range ." alt="" coords="948,1261,1163,1303"/>
+<area shape="rect" id="node3" href="$classns3_1_1_lr_wpan_helper.html#a6fcd2919db415f1910521279f7859efa" title="Associate the nodes to the same PAN and initiate beacon enabled mode." alt="" coords="683,169,854,211"/>
+<area shape="rect" id="node4" href="$classns3_1_1dsr_1_1_dsr_routing.html#a215e6fcab10ee0d744a657f0af2695c6" title="Cancel the packet retransmission timer for a all maintenance entries with nextHop address." alt="" coords="663,235,874,276"/>
+<area shape="rect" id="node7" href="$classns3_1_1aodv_1_1_routing_protocol.html#ae42c9385e8ede77f42fdb575e26ef880" title="Initialize() implementation." alt="" coords="671,475,867,516"/>
+<area shape="rect" id="node8" href="$classns3_1_1_txop.html#ae211c699c905b2186281923353ba0a26" title="Generate a new backoff now." alt="" coords="667,541,870,567"/>
+<area shape="rect" id="node23" href="$classns3_1_1_brite_topology_helper.html#a16c360e3a41d15cba5c517f87574be7d" title=" " alt="" coords="676,603,861,644"/>
+<area shape="rect" id="node25" href="$classns3_1_1_tv_spectrum_transmitter_helper.html#a006ecf3ca051c904ef507fbe1594b441" title="Generates random indices of given region frequency array (ignoring indices referring to invalid chann..." alt="" coords="324,1025,589,1081"/>
+<area shape="rect" id="node27" href="$classns3_1_1_bsm_application.html#a22a009e7512e5df69dd9b81f96d15f51" title="Creates and transmits a WAVE BSM packet." alt="" coords="685,668,853,709"/>
+<area shape="rect" id="node28" href="$classns3_1_1_bsm_application.html#a2caf2e381d781dfde58e39f19a220523" title="Called at time specified by Start." alt="" coords="379,959,534,1000"/>
+<area shape="rect" id="node29" href="$classns3_1_1_three_gpp_uma_propagation_loss_model.html#a4b11f2ac9ae61c5c704a319e030d0cd0" title="Computes the breakpoint distance." alt="" coords="656,836,881,877"/>
+<area shape="rect" id="node30" href="$classns3_1_1_random_building_position_allocator.html#acc13be0f1574919de88528c1189aea0e" title=" " alt="" coords="663,901,875,943"/>
+<area shape="rect" id="node31" href="$classns3_1_1_random_room_position_allocator.html#afb06193f6fb4d4e1c9febd1f8c884294" title=" " alt="" coords="641,967,896,1008"/>
+<area shape="rect" id="node32" href="$classns3_1_1_tv_spectrum_transmitter_helper.html#a81900fd7fbf95c1a3514b6ae03fedab4" title="Randomly generates the number of TV transmitters to be created based on given density and number of p..." alt="" coords="637,1032,900,1073"/>
+<area shape="rect" id="node33" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a073d213169fe62c797ceb92ad999dcb0" title="Initialize Sample Table." alt="" coords="667,1097,871,1139"/>
+<area shape="rect" id="node34" href="$classns3_1_1_minstrel_wifi_manager.html#ab873a0ab43bec476e589db6b260e2ee5" title="Initialize Sample Table." alt="" coords="674,1163,863,1204"/>
+<area shape="rect" id="node35" href="$classns3_1_1_ipv4_global_routing.html#a647d7654f270ce66e46f26fc729f1d07" title="Lookup in the forwarding table for destination." alt="" coords="682,1228,855,1269"/>
+<area shape="rect" id="node36" href="$classns3_1_1dsr_1_1_dsr_routing.html#aefc4dde8bd52b5b631a7ebf1d5924210" title="This function is called to schedule sending packets from the network queue by priority." alt="" coords="692,1293,845,1335"/>
+<area shape="rect" id="node37" href="$classns3_1_1_lte_ue_mac.html#adde9572bc280b188a467be8868a87f14" title="Randomly select and send RA preamble function." alt="" coords="653,1359,885,1400"/>
+<area shape="rect" id="node38" href="$classns3_1_1dsdv_1_1_routing_protocol.html#ad27475d64bfd478b57d73f3cc08d4c99" title="Receive and process dsdv control packet." alt="" coords="671,1424,866,1465"/>
+<area shape="rect" id="node39" href="$classns3_1_1aodv_1_1_routing_protocol.html#adc8555f0e1e8ba05ea80a412b412d064" title="Receive RREQ." alt="" coords="671,1489,867,1531"/>
+<area shape="rect" id="node40" href="$classns3_1_1dsdv_1_1_routing_protocol.html#af025a37dfb12829be3a1f484c5c926c0" title="Query routing cache for an existing route, for an outbound packet." alt="" coords="671,1555,866,1596"/>
+<area shape="rect" id="node41" href="$classns3_1_1dsr_1_1_dsr_routing.html#a03175efa8103d392d90298f2d8985a29" title="Schedule the intermediate route request." alt="" coords="683,1620,855,1661"/>
+<area shape="rect" id="node42" href="$class_experiment.html#a42f7bd2707539699356bcd94558bed82" title="Sources and destinations are randomly selected such that a node may be the source for multiple destin..." alt="" coords="671,1686,866,1713"/>
+<area shape="rect" id="node43" href="$classns3_1_1dsr_1_1_dsr_routing.html#af67eeb07193d10db8308cb4ecbe08b02" title="This function is called by higher layer protocol when sending packets." alt="" coords="380,1792,533,1833"/>
+<area shape="rect" id="node44" href="$classns3_1_1aodv_1_1_routing_protocol.html#a1b772ee4eda1d3dae376dac6926c0dcf" title="Send hello." alt="" coords="671,1788,867,1829"/>
+<area shape="rect" id="node45" href="$classns3_1_1dsr_1_1_dsr_routing.html#a1a862a16f3a5527f9425763864ac3e80" title="This function is responsible for sending out data packets when have route, if no route found,..." alt="" coords="679,1853,858,1895"/>
+<area shape="rect" id="node46" href="$classns3_1_1dsdv_1_1_routing_protocol.html#a9359912928dc5b8dc851366a78c0cc8c" title="Send packet from queue." alt="" coords="671,1919,866,1960"/>
+<area shape="rect" id="node47" href="$classns3_1_1dsdv_1_1_routing_protocol.html#a370e3ca262a505ec0fd30456f82b2aed" title="Broadcasts the entire routing table for every PeriodicUpdateInterval." alt="" coords="671,1984,866,2025"/>
+<area shape="rect" id="node48" href="$classns3_1_1dsdv_1_1_routing_protocol.html#a1e6145b4ecb927243c4758012036c45a" title="Start protocol operation." alt="" coords="359,2013,554,2055"/>
+<area shape="rect" id="node49" href="$classns3_1_1aodv_1_1_routing_protocol.html#a483f8df4d7855b2a71e506f665ca0828" title="Send RREQ." alt="" coords="671,2101,867,2143"/>
+<area shape="rect" id="node50" href="$classns3_1_1aodv_1_1_routing_protocol.html#abc216040fe7b7ac100ea7bf2ce9a0bdb" title="Forward RERR." alt="" coords="671,2167,867,2208"/>
+<area shape="rect" id="node5" href="$classns3_1_1dsr_1_1_dsr_routing.html#ab0ce215bf5359f4d6d4541b8a479007c" title="This function deals with packet retransmission timer expire using link acknowledgment." alt="" coords="359,71,554,112"/>
+<area shape="rect" id="node6" href="$classns3_1_1dsr_1_1_dsr_routing.html#aabcdf59bcb4907718986626a7a402dad" title="This function deals with packet retransmission timer expire using network acknowledgment." alt="" coords="345,5,568,47"/>
+<area shape="rect" id="node9" href="$classns3_1_1_qos_txop.html#a30f5c2af1b50e6ee48771de46cd8033f" title="Callback when ADDBA response is not received after timeout." alt="" coords="345,523,568,564"/>
+<area shape="rect" id="node10" href="$classns3_1_1_qos_txop.html#a72a824799fec1fa4ac982f4b485055cc" title="Initialize() implementation." alt="" coords="361,589,553,615"/>
+<area shape="rect" id="node11" href="$classns3_1_1_txop.html#a246fb00661455939c8c8de13a45ef997" title="Initialize() implementation." alt="" coords="373,639,540,666"/>
+<area shape="rect" id="node12" href="$classns3_1_1_txop.html#a21fbf608df4c1b90a2004e916c0665e5" title="Event handler when a transmission that does not require an Ack has completed." alt="" coords="369,690,544,717"/>
+<area shape="rect" id="node13" href="$classns3_1_1_txop.html#acd1bb8b45e7a39cfc7e1e710dc514b3e" title="Event handler when an Ack is received." alt="" coords="387,741,527,767"/>
+<area shape="rect" id="node14" href="$classns3_1_1_qos_txop.html#aefd7967703c6f16501599e943f94298b" title="Event handler when an Ack is missed." alt="" coords="363,791,551,818"/>
+<area shape="rect" id="node15" href="$classns3_1_1_txop.html#a76ed6b61366d7c6797a6910d8ad4eaa5" title="Event handler when an Ack is missed." alt="" coords="375,842,538,869"/>
+<area shape="rect" id="node16" href="$classns3_1_1_qos_txop.html#a53f04ba906e1b7c99f35eafbb11d4479" title="Event handler when a BlockAck timeout has occurred." alt="" coords="345,137,569,163"/>
+<area shape="rect" id="node17" href="$classns3_1_1_txop.html#ae969e1203237fc063ed27d2a23a1e773" title="Event handler when a CTS timeout has occurred." alt="" coords="377,187,537,214"/>
+<area shape="rect" id="node18" href="$classns3_1_1_qos_txop.html#a89bd16f2271d51bb1ddafb339b07f54a" title="Notify the Txop that internal collision has occurred." alt="" coords="353,239,561,280"/>
+<area shape="rect" id="node19" href="$classns3_1_1_txop.html#a5f57aacdbc9384e3afc186af80fb4e4b" title="Notify the Txop that internal collision has occurred." alt="" coords="365,304,548,345"/>
+<area shape="rect" id="node20" href="$classns3_1_1_qos_txop.html#a0b82aec30711d3b4fb94d164388ecf9c" title="Event handler when a CTS timeout has occurred." alt="" coords="344,370,569,397"/>
+<area shape="rect" id="node21" href="$classns3_1_1_txop.html#ae0a0bbafaed367559bce8c10c184666f" title=" " alt="" coords="389,421,524,447"/>
+<area shape="rect" id="node22" href="$classns3_1_1_qos_txop.html#a376a2de891a03e243c56c6af5544c6ae" title="Update backoff and restart access if needed." alt="" coords="349,471,564,498"/>
+<area shape="rect" id="node24" href="$classns3_1_1_brite_topology_helper.html#a44c7d4b65e9200851ef20283f51f0e84" title="Create NS3 topology using information generated from BRITE." alt="" coords="364,893,549,935"/>
+<area shape="rect" id="node26" href="$classns3_1_1_tv_spectrum_transmitter_helper.html#aebb24cb396c43e4f0355c04b2506bb35" title="Generates and installs (starts transmission on the spectrum channel) a random number of TV transmitte..." alt="" coords="5,1032,276,1073"/>
+</map>

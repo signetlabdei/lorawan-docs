@@ -1,0 +1,891 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Propagation &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Spectrum Module" href="spectrum.html" />
+    <link rel="prev" title="PointToPoint NetDevice" href="point-to-point.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="spectrum.html" title="Spectrum Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="point-to-point.html" title="PointToPoint NetDevice"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="propagation">
+<span id="id1"></span><h1>Propagation<a class="headerlink" href="#propagation" title="Permalink to this headline">¶</a></h1>
+<p>The <em>ns-3</em> propagation module defines two generic interfaces, namely <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">PropagationLossModel</span></code>
+and <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">PropagationDelayModel</span></code>, for the modeling of respectively propagation loss and propagation delay.</p>
+<div class="section" id="propagationlossmodel">
+<h2>PropagationLossModel<a class="headerlink" href="#propagationlossmodel" title="Permalink to this headline">¶</a></h2>
+<p>Propagation loss models calculate the Rx signal power considering the Tx signal power and the
+mutual Rx and Tx antennas positions.</p>
+<p>A propagation loss model can be “chained” to another one, making a list. The final Rx power
+takes into account all the chained models. In this way one can use a slow fading and a fast
+fading model (for example), or model separately different fading effects.</p>
+<p>The following propagation loss models are implemented:</p>
+<ul class="simple">
+<li><p>Cost231PropagationLossModel</p></li>
+<li><p>FixedRssLossModel</p></li>
+<li><p>FriisPropagationLossModel</p></li>
+<li><p>ItuR1411LosPropagationLossModel</p></li>
+<li><p>ItuR1411NlosOverRooftopPropagationLossModel</p></li>
+<li><p>JakesPropagationLossModel</p></li>
+<li><p>Kun2600MhzPropagationLossModel</p></li>
+<li><p>LogDistancePropagationLossModel</p></li>
+<li><p>MatrixPropagationLossModel</p></li>
+<li><p>NakagamiPropagationLossModel</p></li>
+<li><p>OkumuraHataPropagationLossModel</p></li>
+<li><p>RandomPropagationLossModel</p></li>
+<li><p>RangePropagationLossModel</p></li>
+<li><p>ThreeLogDistancePropagationLossModel</p></li>
+<li><p>TwoRayGroundPropagationLossModel</p></li>
+<li><p>ThreeGppPropagationLossModel</p>
+<ul>
+<li><p>ThreeGppRMaPropagationLossModel</p></li>
+<li><p>ThreeGppUMaPropagationLossModel</p></li>
+<li><p>ThreeGppUmiStreetCanyonPropagationLossModel</p></li>
+<li><p>ThreeGppIndoorOfficePropagationLossModel</p></li>
+</ul>
+</li>
+</ul>
+<p>Other models could be available thanks to other modules, e.g., the <code class="docutils literal notranslate"><span class="pre">building</span></code> module.</p>
+<p>Each of the available propagation loss models of ns-3 is explained in
+one of the following subsections.</p>
+<div class="section" id="friispropagationlossmodel">
+<h3>FriisPropagationLossModel<a class="headerlink" href="#friispropagationlossmodel" title="Permalink to this headline">¶</a></h3>
+<p>This model implements the Friis propagation loss model. This model was first described in <a class="reference internal" href="#friis" id="id2"><span>[friis]</span></a>.
+The original equation was described as:</p>
+<div class="math">
+<p><img src="_images/math/fbc4226bc425e836f850f3b25e38dbace3826763.png" alt="\frac{P_r}{P_t} = \frac{A_r A_t}{d^2\lambda^2}"/></p>
+</div><p>with the following equation for the case of an isotropic antenna with no heat loss:</p>
+<div class="math">
+<p><img src="_images/math/2a612b44a6814d21cc6f5bf83fe6ed7732674df1.png" alt="A_{isotr.} = \frac{\lambda^2}{4\pi}"/></p>
+</div><p>The final equation becomes:</p>
+<div class="math">
+<p><img src="_images/math/adbc24c08a6bc5e3db45c09355a2c3a4f18c944b.png" alt="\frac{P_r}{P_t} = \frac{\lambda^2}{(4 \pi d)^2}"/></p>
+</div><p>Modern extensions to this original equation are:</p>
+<div class="math">
+<p><img src="_images/math/022350514daba1c5377447182c64b65348be88a5.png" alt="P_r = \frac{P_t G_t G_r \lambda^2}{(4 \pi d)^2 L}"/></p>
+</div><p>With:</p>
+<blockquote>
+<div><p><img class="math" src="_images/math/68da83d6a46cf8fc80bfabec7cba2583311f75c4.png" alt="P_t"/> : transmission power (W)</p>
+<p><img class="math" src="_images/math/fd94d5e83c2be0dff440249ed5d4a57e2bdf68f2.png" alt="P_r"/> : reception power (W)</p>
+<p><img class="math" src="_images/math/8a082d410f630f6fecdcb5dfe4112e4b6f5ee977.png" alt="G_t"/> : transmission gain (unit-less)</p>
+<p><img class="math" src="_images/math/7b98722260306da607db691cec74a88dbb49fa53.png" alt="G_r"/> : reception gain (unit-less)</p>
+<p><img class="math" src="_images/math/cefc603e5658facb747581f9567192993f21c7ab.png" alt="\lambda"/> : wavelength (m)</p>
+<p><img class="math" src="_images/math/badad346f6fbe2e237af99bfbd9a93a4da53a3da.png" alt="d"/> : distance (m)</p>
+<p><img class="math" src="_images/math/19eef1966f7c545af3ac8c0fa486974d873e3c65.png" alt="L"/> : system loss (unit-less)</p>
+</div></blockquote>
+<p>In the implementation, <img class="math" src="_images/math/cefc603e5658facb747581f9567192993f21c7ab.png" alt="\lambda"/> is calculated as
+<img class="math" src="_images/math/647a41234f2f8291578a6dd0b9e5d824bd6bf516.png" alt="\frac{C}{f}"/>, where <img class="math" src="_images/math/7286f156d58e4d7a28f47fa9b32654bd1bfc9be5.png" alt="C = 299792458"/> m/s is the speed of light in
+vacuum, and <img class="math" src="_images/math/5b7752c757e0b691a80ab8227eadb8a8389dc58a.png" alt="f"/> is the frequency in Hz which can be configured by
+the user via the Frequency attribute.</p>
+<p>The Friis model is valid only for propagation in free space within
+the so-called far field region, which can be considered
+approximately as the region for <img class="math" src="_images/math/1450904df1ca67bafde0ccee516f9b566d957456.png" alt="d &gt; 3 \lambda"/>.
+The model will still return a value for <img class="math" src="_images/math/2d7c9161fd8806f90bbf0bad96002efaf2368621.png" alt="d &lt; 3 \lambda"/>, as
+doing so (rather than triggering a fatal error) is practical for
+many simulation scenarios. However, we stress that the values
+obtained in such conditions shall not be considered realistic.</p>
+<p>Related with this issue, we note that the Friis formula is
+undefined for <img class="math" src="_images/math/f04c6fee0832e3776baabbbe8cfa6af3211b01e8.png" alt="d = 0"/>, and results in
+<img class="math" src="_images/math/b5234ea95e6b349ba2d0fe693c84ee5aebfa1c84.png" alt="P_r &gt; P_t"/> for <img class="math" src="_images/math/a3b895292a3ee2a88abf8d98b99057feb3051630.png" alt="d &lt; \lambda / 2 \sqrt{\pi}"/>.</p>
+<p>Both these conditions occur outside of the far field region, so in
+principle the Friis model shall not be used in these conditions.
+In practice, however, Friis is often used in scenarios where accurate
+propagation modeling is not deemed important, and values of
+<img class="math" src="_images/math/f04c6fee0832e3776baabbbe8cfa6af3211b01e8.png" alt="d = 0"/> can occur.</p>
+<p>To allow practical use of the model in such
+scenarios, we have to 1) return some value for <img class="math" src="_images/math/f04c6fee0832e3776baabbbe8cfa6af3211b01e8.png" alt="d = 0"/>, and
+2) avoid large discontinuities in propagation loss values (which
+could lead to artifacts such as bogus capture effects which are
+much worse than inaccurate propagation loss values). The two issues
+are conflicting, as, according to the Friis formula,
+<img class="math" src="_images/math/e4c64e892e998c003931f94322311417fdfa4a8f.png" alt="\lim_{d \to 0}  P_r = +\infty"/>;
+so if, for <img class="math" src="_images/math/f04c6fee0832e3776baabbbe8cfa6af3211b01e8.png" alt="d = 0"/>, we use a fixed loss value, we end up with an infinitely large
+discontinuity, which as we discussed can cause undesirable
+simulation artifacts.</p>
+<p>To avoid these artifact, this implementation of the Friis model
+provides an attribute called MinLoss which allows to specify the
+minimum total loss (in dB) returned by the model. This is used in
+such a way that
+<img class="math" src="_images/math/fd94d5e83c2be0dff440249ed5d4a57e2bdf68f2.png" alt="P_r"/> continuously increases for <img class="math" src="_images/math/68096e58ee16b2bb71c56760b2c3c89e5240b661.png" alt="d \to 0"/>, until
+MinLoss is reached, and then stay constant; this allow to
+return a value for <img class="math" src="_images/math/f04c6fee0832e3776baabbbe8cfa6af3211b01e8.png" alt="d = 0"/> and at the same time avoid
+discontinuities. The model won’t be much realistic, but at least
+the simulation artifacts discussed before are avoided. The default value of
+MinLoss is 0 dB, which means that by default the model will return
+<img class="math" src="_images/math/9cc0dd55d8e0ce01ea9bad7feaf7689d5a733fbb.png" alt="P_r = P_t"/> for <img class="math" src="_images/math/b22fd0266ec7a22f9b0384bc47fe742377cf2b99.png" alt="d &lt;= \lambda / 2 \sqrt{\pi}"/>.
+We note that this value of <img class="math" src="_images/math/badad346f6fbe2e237af99bfbd9a93a4da53a3da.png" alt="d"/> is outside of the far field
+region, hence the validity of the model in the far field region is
+not affected.</p>
+</div>
+<div class="section" id="tworaygroundpropagationlossmodel">
+<h3>TwoRayGroundPropagationLossModel<a class="headerlink" href="#tworaygroundpropagationlossmodel" title="Permalink to this headline">¶</a></h3>
+<p>This model implements a Two-Ray Ground propagation loss model ported from NS2</p>
+<p>The Two-ray ground reflection model uses the formula</p>
+<div class="math">
+<p><img src="_images/math/daa27a7b6e63f0f13fd31ddb936d598dab41f217.png" alt="P_r = \frac{P_t * G_t * G_r * (H_t^2 * H_r^2)}{d^4 * L}"/></p>
+</div><p>The original equation in Rappaport’s book assumes <img class="math" src="_images/math/9d1c166ff6b863b8c8c2aa3f80549c0198bf66df.png" alt="L = 1"/>.
+To be consistent with the free space equation, <img class="math" src="_images/math/19eef1966f7c545af3ac8c0fa486974d873e3c65.png" alt="L"/> is added here.</p>
+<p><img class="math" src="_images/math/59e4e87af6be295ae6e78aab6c56040234c23a4f.png" alt="H_t"/> and <img class="math" src="_images/math/567480266a1375fbc0ab5bc53e431d65985013cb.png" alt="H_r"/> are set at the respective nodes <img class="math" src="_images/math/8d051150f8669295ecdbe92367941012175a824d.png" alt="z"/> coordinate plus a model parameter
+set via SetHeightAboveZ.</p>
+<p>The two-ray model does not give a good result for short distances, due to the
+oscillation caused by constructive and destructive combination of the two
+rays. Instead the Friis free-space model is used for small distances.</p>
+<p>The crossover distance, below which Friis is used, is calculated as follows:</p>
+<div class="math">
+<p><img src="_images/math/9c92884c0a55196c6b0d1efa546770c93fb91c06.png" alt="dCross = \frac{(4 * \pi * H_t * H_r)}{\lambda}"/></p>
+</div><p>In the implementation,  <img class="math" src="_images/math/cefc603e5658facb747581f9567192993f21c7ab.png" alt="\lambda"/> is calculated as
+<img class="math" src="_images/math/647a41234f2f8291578a6dd0b9e5d824bd6bf516.png" alt="\frac{C}{f}"/>, where <img class="math" src="_images/math/7286f156d58e4d7a28f47fa9b32654bd1bfc9be5.png" alt="C = 299792458"/> m/s is the speed of light in
+vacuum, and <img class="math" src="_images/math/5b7752c757e0b691a80ab8227eadb8a8389dc58a.png" alt="f"/> is the frequency in Hz which can be configured by
+the user via the Frequency attribute.</p>
+</div>
+<div class="section" id="logdistancepropagationlossmodel">
+<h3>LogDistancePropagationLossModel<a class="headerlink" href="#logdistancepropagationlossmodel" title="Permalink to this headline">¶</a></h3>
+<p>This model implements a log distance propagation model.</p>
+<p>The reception power is calculated with a so-called
+log-distance propagation model:</p>
+<div class="math">
+<p><img src="_images/math/fbb7f7d378659135a5bd138663d87d6b127376fb.png" alt="L = L_0 + 10 n \log(\frac{d}{d_0})"/></p>
+</div><p>where:</p>
+<blockquote>
+<div><p><img class="math" src="_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.png" alt="n"/> : the path loss distance exponent</p>
+<p><img class="math" src="_images/math/6d0e88412087bdab68765388e1135d5a211cca20.png" alt="d_0"/> : reference distance (m)</p>
+<p><img class="math" src="_images/math/16b08cdd6d17b4bda841987181703838bccd5233.png" alt="L_0"/> : path loss at reference distance (dB)</p>
+<p><img class="math" src="_images/math/badad346f6fbe2e237af99bfbd9a93a4da53a3da.png" alt="d"/> :  - distance (m)</p>
+<p><img class="math" src="_images/math/19eef1966f7c545af3ac8c0fa486974d873e3c65.png" alt="L"/> : path loss (dB)</p>
+</div></blockquote>
+<p>When the path loss is requested at a distance smaller than
+the reference distance, the tx power is returned.</p>
+</div>
+<div class="section" id="threelogdistancepropagationlossmodel">
+<h3>ThreeLogDistancePropagationLossModel<a class="headerlink" href="#threelogdistancepropagationlossmodel" title="Permalink to this headline">¶</a></h3>
+<p>This model implements a log distance path loss propagation model with three distance
+fields. This model is the same as ns3::LogDistancePropagationLossModel
+except that it has three distance fields: near, middle and far with
+different exponents.</p>
+<p>Within each field the reception power is calculated using the log-distance
+propagation equation:</p>
+<div class="math">
+<p><img src="_images/math/c75e8039e45e1081449995453d0c1af9b93badf0.png" alt="L = L_0 + 10 \cdot n_0 \log_{10}(\frac{d}{d_0})"/></p>
+</div><p>Each field begins where the previous ends and all together form a continuous function.</p>
+<p>There are three valid distance fields: near, middle, far. Actually four: the
+first from 0 to the reference distance is invalid and returns txPowerDbm.</p>
+<div class="math">
+<p><img src="_images/math/a3104c5a49b3d756e35365f47c0fe8c37b4bd047.png" alt="\underbrace{0 \cdots\cdots}_{=0} \underbrace{d_0 \cdots\cdots}_{n_0} \underbrace{d_1 \cdots\cdots}_{n_1} \underbrace{d_2 \cdots\cdots}_{n_2} \infty"/></p>
+</div><p>Complete formula for the path loss in dB:</p>
+<div class="math">
+<p><img src="_images/math/0dbc73d5ec5c59e0b87c65225f8002814cff7484.png" alt="\displaystyle L =
+\begin{cases}
+0 &amp; d &lt; d_0 \\
+L_0 + 10 \cdot n_0 \log_{10}(\frac{d}{d_0}) &amp; d_0 \leq d &lt; d_1 \\
+L_0 + 10 \cdot n_0 \log_{10}(\frac{d_1}{d_0}) + 10 \cdot n_1 \log_{10}(\frac{d}{d_1}) &amp; d_1 \leq d &lt; d_2 \\
+L_0 + 10 \cdot n_0 \log_{10}(\frac{d_1}{d_0}) + 10 \cdot n_1 \log_{10}(\frac{d_2}{d_1}) + 10 \cdot n_2 \log_{10}(\frac{d}{d_2})&amp; d_2 \leq d
+\end{cases}"/></p>
+</div><p>where:</p>
+<blockquote>
+<div><p><img class="math" src="_images/math/aeb35985f5dc18dd7311bcf132e4ee1730ec4a0e.png" alt="d_0, d_1, d_2"/> : three distance fields (m)</p>
+<p><img class="math" src="_images/math/a200dd598fb5546a3995f7089d91b87058ee4091.png" alt="n_0, n_1, n_2"/> : path loss distance exponent for each field (unitless)</p>
+<p><img class="math" src="_images/math/16b08cdd6d17b4bda841987181703838bccd5233.png" alt="L_0"/> : path loss at reference distance (dB)</p>
+<p><img class="math" src="_images/math/badad346f6fbe2e237af99bfbd9a93a4da53a3da.png" alt="d"/> :  - distance (m)</p>
+<p><img class="math" src="_images/math/19eef1966f7c545af3ac8c0fa486974d873e3c65.png" alt="L"/> : path loss (dB)</p>
+</div></blockquote>
+<p>When the path loss is requested at a distance smaller than the reference
+distance <img class="math" src="_images/math/6d0e88412087bdab68765388e1135d5a211cca20.png" alt="d_0"/>, the tx power (with no path loss) is returned. The
+reference distance defaults to 1m and reference loss defaults to
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">FriisPropagationLossModel</span></code> with 5.15 GHz and is thus <img class="math" src="_images/math/16b08cdd6d17b4bda841987181703838bccd5233.png" alt="L_0"/> = 46.67 dB.</p>
+</div>
+<div class="section" id="jakespropagationlossmodel">
+<h3>JakesPropagationLossModel<a class="headerlink" href="#jakespropagationlossmodel" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="todo">
+<h4>ToDo<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="randompropagationlossmodel">
+<h3>RandomPropagationLossModel<a class="headerlink" href="#randompropagationlossmodel" title="Permalink to this headline">¶</a></h3>
+<p>The propagation loss is totally random, and it changes each time the model is called.
+As a consequence, all the packets (even those between two fixed nodes) experience a random
+propagation loss.</p>
+</div>
+<div class="section" id="nakagamipropagationlossmodel">
+<h3>NakagamiPropagationLossModel<a class="headerlink" href="#nakagamipropagationlossmodel" title="Permalink to this headline">¶</a></h3>
+<p>This propagation loss model implements the Nakagami-m fast fading
+model, which accounts for the variations in signal strength due to multipath
+fading. The model does not account for the path loss due to the
+distance traveled by the signal, hence for typical simulation usage it
+is recommended to consider using it in combination with other models
+that take into account this aspect.</p>
+<p>The Nakagami-m distribution is applied to the power level. The probability density function is defined as</p>
+<div class="math">
+<p><img src="_images/math/0df3e689a9e4b2049baa3aa17993cb8af82831ea.png" alt="p(x; m, \omega) = \frac{2 m^m}{\Gamma(m) \omega^m} x^{2m - 1} e^{-\frac{m}{\omega} x^2} )"/></p>
+</div><p>with <img class="math" src="_images/math/e9bc7da808d33a16a8347f27a519bd067186aa66.png" alt="m"/> the fading depth parameter and <img class="math" src="_images/math/16cb1e006199f0853a2dc67ea814446a38beb54e.png" alt="\omega"/> the average received power.</p>
+<p>It is implemented by either a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">GammaRandomVariable</span></code> or a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ErlangRandomVariable</span></code>
+random variable.</p>
+<p>The implementation of the model allows to specify different values of
+the <img class="math" src="_images/math/e9bc7da808d33a16a8347f27a519bd067186aa66.png" alt="m"/> parameter (and hence different fast fading profiles)
+for three different distance ranges:</p>
+<div class="math">
+<p><img src="_images/math/3b2d1eb89bee184bfacdae26c3c795da9a859e55.png" alt="\underbrace{0 \cdots\cdots}_{m_0} \underbrace{d_1 \cdots\cdots}_{m_1} \underbrace{d_2 \cdots\cdots}_{m_2} \infty"/></p>
+</div><p>For <img class="math" src="_images/math/5b86129132ab70546e40931c75182dfb9883645a.png" alt="m = 1"/> the Nakagami-m distribution equals the Rayleigh distribution. Thus
+this model also implements Rayleigh distribution based fast fading.</p>
+</div>
+<div class="section" id="fixedrsslossmodel">
+<h3>FixedRssLossModel<a class="headerlink" href="#fixedrsslossmodel" title="Permalink to this headline">¶</a></h3>
+<p>This model sets a constant received power level independent of the transmit power.</p>
+<p>The received power is constant independent of the transmit power; the user
+must set received power level.  Note that if this loss model is chained to other loss
+models, it should be the first loss model in the chain.
+Else it will disregard the losses computed by loss models that precede it in the chain.</p>
+</div>
+<div class="section" id="matrixpropagationlossmodel">
+<h3>MatrixPropagationLossModel<a class="headerlink" href="#matrixpropagationlossmodel" title="Permalink to this headline">¶</a></h3>
+<p>The propagation loss is fixed for each pair of nodes and doesn’t depend on their actual positions.
+This model should be useful for synthetic tests. Note that by default the propagation loss is
+assumed to be symmetric.</p>
+</div>
+<div class="section" id="rangepropagationlossmodel">
+<h3>RangePropagationLossModel<a class="headerlink" href="#rangepropagationlossmodel" title="Permalink to this headline">¶</a></h3>
+<p>This propagation loss depends only on the distance (range) between transmitter and receiver.</p>
+<p>The single MaxRange attribute (units of meters) determines path loss.
+Receivers at or within MaxRange meters receive the transmission at the
+transmit power level. Receivers beyond MaxRange receive at power
+-1000 dBm (effectively zero).</p>
+</div>
+<div class="section" id="okumurahatapropagationlossmodel">
+<h3>OkumuraHataPropagationLossModel<a class="headerlink" href="#okumurahatapropagationlossmodel" title="Permalink to this headline">¶</a></h3>
+<p>This model is used to model open area pathloss for long distance (i.e., &gt; 1 Km).
+In order to include all the possible frequencies usable by LTE we need to consider
+several variants of the well known Okumura Hata model. In fact, the original Okumura
+Hata model <a class="reference internal" href="#hata" id="id3"><span>[hata]</span></a> is designed for frequencies ranging from 150 MHz to 1500 MHz,
+the COST231 <a class="reference internal" href="#cost231" id="id4"><span>[cost231]</span></a> extends it for the frequency range from 1500 MHz to 2000 MHz.
+Another important aspect is the scenarios considered by the models, in fact the all
+models are originally designed for urban scenario and then only the standard one and
+the COST231 are extended to suburban, while only the standard one has been extended
+to open areas. Therefore, the model cannot cover all scenarios at all frequencies.
+In the following we detail the models adopted.</p>
+<p>The pathloss expression of the COST231 OH is:</p>
+<div class="math">
+<p><img src="_images/math/81fcfc4406dff970c2c27cabeb4533fa34e26b7e.png" alt="L = 46.3 + 33.9\log{f} - 13.82 \log{h_\mathrm{b}} + (44.9 - 6.55\log{h_\mathrm{b}})\log{d} - F(h_\mathrm{M}) + C"/></p>
+</div><p>where</p>
+<div class="math">
+<p><img src="_images/math/3dfa6dc8db3099dfda30077adcbb3543ee82821b.png" alt="F(h_\mathrm{M}) = \left\{\begin{array}{ll} (1.1\log(f))-0.7 \times h_\mathrm{M} - (1.56\times \log(f)-0.8) &amp; \mbox{for medium and small size cities} \\ 3.2\times (\log{(11.75\times h_\mathrm{M}}))^2 &amp; \mbox{for large cities}\end{array} \right."/></p>
+</div><div class="math">
+<p><img src="_images/math/d80e36d3a1d44d022af2adab233dfb1708654ca6.png" alt="C = \left\{\begin{array}{ll} 0dB &amp; \mbox{for medium-size cities and suburban areas} \\ 3dB &amp; \mbox{for large cities}\end{array} \right."/></p>
+</div><p>and</p>
+<blockquote>
+<div><p><img class="math" src="_images/math/5b7752c757e0b691a80ab8227eadb8a8389dc58a.png" alt="f"/> : frequency [MHz]</p>
+<p><img class="math" src="_images/math/452512870427a1bcb41aeadf1d3c1bc50f4ff87b.png" alt="h_\mathrm{b}"/> : eNB height above the ground [m]</p>
+<p><img class="math" src="_images/math/0b7d21e3b474e6f8e0a67b0d4ddbc522606544a7.png" alt="h_\mathrm{M}"/> : UE height above the ground [m]</p>
+<p><img class="math" src="_images/math/badad346f6fbe2e237af99bfbd9a93a4da53a3da.png" alt="d"/> : distance [km]</p>
+<p><img class="math" src="_images/math/24ddd164064af9e0bb342cfc31b5261a287f5e8d.png" alt="log"/> : is a logarithm in base 10 (this for the whole document)</p>
+</div></blockquote>
+<p>This model is only for urban scenarios.</p>
+<p>The pathloss expression of the standard OH in urban area is:</p>
+<div class="math">
+<p><img src="_images/math/02d132c6d999dc49c02989a88ba2ccdedcb5544f.png" alt="L = 69.55 + 26.16\log{f} - 13.82 \log{h_\mathrm{b}} + (44.9 - 6.55\log{h_\mathrm{b}})\log{d} - C_\mathrm{H}"/></p>
+</div><p>where for small or medium sized city</p>
+<div class="math">
+<p><img src="_images/math/8899dbdaed43985e2eaef7a469860eba7fdc37dd.png" alt="C_\mathrm{H} = 0.8 + (1.1\log{f} - 0.7)h_\mathrm{M} -1.56\log{f}"/></p>
+</div><p>and for large cities</p>
+<div class="math">
+<p><img src="_images/math/9cff5ef56a7b6057b023757c1c1df26aea3f9dc3.png" alt="C_\mathrm{H} = \left\{\begin{array}{ll} 8.29 (\log{(1.54h_M)})^2 -1.1 &amp; \mbox{if } 150\leq f\leq 200 \\ 3.2(\log{(11.75h_M)})^2 -4.97 &amp; \mbox{if } 200&lt;f\leq 1500\end{array} \right."/></p>
+</div><p>There extension for the standard OH in suburban is</p>
+<div class="math">
+<p><img src="_images/math/ea79b920e386bddc0d193cc0512e56afa6a4f716.png" alt="L_\mathrm{SU} = L_\mathrm{U} - 2 \left(\log{\frac{f}{28}}\right)^2 - 5.4"/></p>
+</div><p>where</p>
+<blockquote>
+<div><p><img class="math" src="_images/math/8d1faeed262e70774c09ea1ce2c8368010e6ab6c.png" alt="L_\mathrm{U}"/> : pathloss in urban areas</p>
+</div></blockquote>
+<p>The extension for the standard OH in open area is</p>
+<div class="math">
+<p><img src="_images/math/3c69cf393d8ad132a0ca1c6ac6ffe131bad1bf70.png" alt="L_\mathrm{O} = L_\mathrm{U} - 4.70 (\log{f})^2 + 18.33\log{f} - 40.94"/></p>
+</div><p>The literature lacks of extensions of the COST231 to open area (for suburban it seems that
+we can just impose C = 0); therefore we consider it a special case fo the suburban one.</p>
+</div>
+<div class="section" id="cost231propagationlossmodel">
+<h3>Cost231PropagationLossModel<a class="headerlink" href="#cost231propagationlossmodel" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h4>ToDo<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="itur1411lospropagationlossmodel">
+<h3>ItuR1411LosPropagationLossModel<a class="headerlink" href="#itur1411lospropagationlossmodel" title="Permalink to this headline">¶</a></h3>
+<p>This model is designed for Line-of-Sight (LoS) short range outdoor communication in the
+frequency range 300 MHz to 100 GHz.  This model provides an upper and lower bound
+respectively according to the following formulas</p>
+<div class="math">
+<p><img src="_images/math/450fc08f0aa5344d5cc6f955d4af79feb9aa2d28.png" alt="L_\mathrm{LoS,l} = L_\mathrm{bp} + \left\{\begin{array}{ll} 20\log{\frac{d}{R_\mathrm{bp}}} &amp; \mbox{for $d \le R_\mathrm{bp}$} \\ 40\log{\frac{d}{R_\mathrm{bp}}} &amp; \mbox{for $d &gt; R_\mathrm{bp}$}\end{array} \right."/></p>
+</div><div class="math">
+<p><img src="_images/math/541c4bffa2c471101b4f565930bd4b4f0749e04f.png" alt="L_\mathrm{LoS,u} = L_\mathrm{bp} + 20 + \left\{\begin{array}{ll} 25\log{\frac{d}{R_\mathrm{bp}}} &amp; \mbox{for $d \le R_\mathrm{bp}$} \\ 40\log{\frac{d}{R_\mathrm{bp}}} &amp; \mbox{for $d &gt; R_\mathrm{bp}$}\end{array} \right."/></p>
+</div><p>where the breakpoint distance is given by</p>
+<div class="math">
+<p><img src="_images/math/4f0d80065a99cd6529991d11137626bfdf466758.png" alt="R_\mathrm{bp} \approx \frac{4h_\mathrm{b}h_\mathrm{m}}{\lambda}"/></p>
+</div><p>and the above parameters are</p>
+<blockquote>
+<div><p><img class="math" src="_images/math/cefc603e5658facb747581f9567192993f21c7ab.png" alt="\lambda"/> : wavelength [m]</p>
+<p><img class="math" src="_images/math/452512870427a1bcb41aeadf1d3c1bc50f4ff87b.png" alt="h_\mathrm{b}"/> : eNB height above the ground [m]</p>
+<p><img class="math" src="_images/math/757b579fe46fa4cbcd2fe057df24350b0ba55e20.png" alt="h_\mathrm{m}"/> : UE height above the ground [m]</p>
+<p><img class="math" src="_images/math/badad346f6fbe2e237af99bfbd9a93a4da53a3da.png" alt="d"/> : distance [m]</p>
+</div></blockquote>
+<p>and <img class="math" src="_images/math/d9396f4420efc504919885151b1a84abc2b49c71.png" alt="L_{bp}"/> is the value for the basic transmission loss at the break point, defined as:</p>
+<div class="math">
+<p><img src="_images/math/43d5ca95bbf1f8c981f57ed0de7f63ed939d85b7.png" alt="L_{bp} = \left|20\log \left(\frac{\lambda^2}{8\pi h_\mathrm{b}h\mathrm{m}}\right)\right|"/></p>
+</div><p>The value used by the simulator is the average one for modeling the median pathloss.</p>
+</div>
+<div class="section" id="itur1411nlosoverrooftoppropagationlossmodel">
+<h3>ItuR1411NlosOverRooftopPropagationLossModel<a class="headerlink" href="#itur1411nlosoverrooftoppropagationlossmodel" title="Permalink to this headline">¶</a></h3>
+<p>This model is designed for Non-Line-of-Sight (LoS) short range outdoor communication over
+rooftops in the frequency range 300 MHz to 100 GHz. This model includes several scenario-dependent
+parameters, such as average street width, orientation, etc. It is advised to set the values of
+these parameters manually (using the ns-3 attribute system) according to the desired scenario.</p>
+<p>In detail, the model is based on <a class="reference internal" href="#walfisch" id="id6"><span>[walfisch]</span></a> and <a class="reference internal" href="#ikegami" id="id7"><span>[ikegami]</span></a>, where the loss is expressed
+as the sum of free-space loss (<img class="math" src="_images/math/b1140e37b1362a10469ad7cd6c3b8e51fd5d7eb2.png" alt="L_{bf}"/>), the diffraction loss from rooftop to
+street (<img class="math" src="_images/math/8ba505a026beb64c7889e929be2ed2581b60b695.png" alt="L_{rts}"/>) and the reduction due to multiple screen diffraction past
+rows of building (<img class="math" src="_images/math/48983b8800101d98f0e5242c4ad4064fa87d1037.png" alt="L_{msd}"/>). The formula is:</p>
+<div class="math">
+<p><img src="_images/math/f36ad9fb6f44a511391eff1e87ab2fa3bb48a50c.png" alt="L_{NLOS1} = \left\{ \begin{array}{ll} L_{bf} + L_{rts} + L_{msd} &amp; \mbox{for } L_{rts} + L_{msd} &gt; 0 \\ L_{bf} &amp; \mbox{for } L_{rts} + L_{msd} \le 0\end{array}\right."/></p>
+</div><p>The free-space loss is given by:</p>
+<div class="math">
+<p><img src="_images/math/5efaef2cf62ad82085a7e232b059a10350c569c2.png" alt="L_{bf} = 32.4 + 20 \log {(d/1000)} + 20\log{(f)}"/></p>
+</div><p>where:</p>
+<blockquote>
+<div><p><img class="math" src="_images/math/5b7752c757e0b691a80ab8227eadb8a8389dc58a.png" alt="f"/> : frequency [MHz]</p>
+<p><img class="math" src="_images/math/badad346f6fbe2e237af99bfbd9a93a4da53a3da.png" alt="d"/> : distance (where <img class="math" src="_images/math/db10afad5935d7bfdaef771f520a88131811e1bb.png" alt="d &gt; 1"/>) [m]</p>
+</div></blockquote>
+<p>The term <img class="math" src="_images/math/8ba505a026beb64c7889e929be2ed2581b60b695.png" alt="L_{rts}"/> takes into account the width of the street and its orientation, according to the formulas</p>
+<div class="math">
+<p><img src="_images/math/63af411f54a0ec44e9d7453ec828ed53e1b480ed.png" alt="L_{rts} = -8.2 - 10\log {(w)} + 10\log{(f)} + 20\log{(\Delta h_m)} + L_{ori}
+
+L_{ori} = \left\{ \begin{array}{lll} -10 + 0.354\varphi &amp; \mbox{for } 0^{\circ} \le \varphi &lt; 35^{\circ} \\ 2.5 + 0.075(\varphi-35) &amp; \mbox{for } 35^{\circ} \le \varphi &lt; 55^{\circ} \\ 4.0 -0.114(\varphi-55) &amp; \mbox{for } 55^{\circ} \varphi \le 90^{\circ}\end{array}\right.
+
+\Delta h_m = h_r - h_m"/></p>
+</div><p>where:</p>
+<blockquote>
+<div><p><img class="math" src="_images/math/351739a91d32535c9d224623b329c047bbdf75e0.png" alt="h_r"/> : is the height of the rooftop [m]</p>
+<p><img class="math" src="_images/math/129bbac4b57be09af5e7121eb1a35050e2099e60.png" alt="h_m"/> : is the height of the mobile [m]</p>
+<p><img class="math" src="_images/math/ed710ddac707fcbc540bfe7b354ca2d900f0faa0.png" alt="\varphi"/> : is the street orientation with respect to the direct path (degrees)</p>
+</div></blockquote>
+<p>The multiple screen diffraction loss depends on the BS antenna height relative to the building
+height and on the incidence angle. The former is selected as the higher antenna in the communication
+link. Regarding the latter, the “settled field distance” is used for select the proper model;
+its value is given by</p>
+<div class="math">
+<p><img src="_images/math/cda129fc0243f3cce479093b6faa30f9054ba51b.png" alt="d_{s} = \frac{\lambda d^2}{\Delta h_{b}^2}"/></p>
+</div><p>with</p>
+<blockquote>
+<div><p><img class="math" src="_images/math/a86a2637e43972119c8de24b57f66060c7e55447.png" alt="\Delta h_b = h_b - h_m"/></p>
+</div></blockquote>
+<p>Therefore, in case of <img class="math" src="_images/math/7408c7e5edf20dec3df40940829cc730a866f060.png" alt="l &gt; d_s"/> (where <cite>l</cite> is the distance over which the building extend),
+it can be evaluated according to</p>
+<div class="math">
+<p><img src="_images/math/07bf8b989fed91036910696855866025548035f4.png" alt="L_{msd} = L_{bsh} + k_{a} + k_{d}\log{(d/1000)} + k_{f}\log{(f)} - 9\log{(b)}
+
+L_{bsh} = \left\{ \begin{array}{ll} -18\log{(1+\Delta h_{b})} &amp; \mbox{for } h_{b} &gt; h_{r} \\ 0 &amp; \mbox{for } h_{b} \le h_{hr} \end{array}\right.
+
+k_a = \left\{ \begin{array}{lll}
+    71.4 &amp; \mbox{for } h_{b} &gt; h_{r} \mbox{ and } f&gt;2000 \mbox{ MHz} \\
+    54 &amp; \mbox{for } h_{b} &gt; h_{r} \mbox{ and } f\le2000 \mbox{ MHz} \\
+    54-0.8\Delta h_b &amp; \mbox{for } h_{b} \le h_{r} \mbox{ and } d \ge 500 \mbox{ m} \\
+    54-1.6\Delta h_b &amp; \mbox{for } h_{b} \le h_{r} \mbox{ and } d &lt; 500 \mbox{ m} \\
+    \end{array} \right.
+
+k_d = \left\{ \begin{array}{ll}
+      18 &amp; \mbox{for } h_{b} &gt; h_{r} \\
+      18 -15\frac{\Delta h_b}{h_r} &amp; \mbox{for } h_{b} \le h_{r}
+      \end{array} \right.
+
+k_f = \left\{ \begin{array}{ll}
+      -8 &amp; \mbox{for } f&gt;2000 \mbox{ MHz} \\
+      -4 + 0.7(f/925 -1) &amp; \mbox{for medium city and suburban centres and} f\le2000 \mbox{ MHz} \\
+      -4 + 1.5(f/925 -1) &amp; \mbox{for metropolitan centres and } f\le2000 \mbox{ MHz}
+      \end{array}\right."/></p>
+</div><p>Alternatively, in case of <img class="math" src="_images/math/e1647efecacdc645f19e9836d9e477eae77e7f4f.png" alt="l &lt; d_s"/>, the formula is:</p>
+<div class="math">
+<p><img src="_images/math/3ef9821390c9aa8cbf4dc7ec2d8ee59b11d4ddb7.png" alt="L_{msd} = -10\log{\left(Q_M^2\right)}"/></p>
+</div><p>where</p>
+<div class="math">
+<p><img src="_images/math/e9d6386cf5451f8e0e27ed341ae43f4947c2855e.png" alt="Q_M = \left\{ \begin{array}{lll}
+      2.35\left(\frac{\Delta h_b}{d}\sqrt{\frac{b}{\lambda}}\right)^{0.9} &amp; \mbox{for } h_{b} &gt; h_{r} \\
+      \frac{b}{d} &amp;  \mbox{for } h_{b} \approx h_{r} \\
+      \frac{b}{2\pi d}\sqrt{\frac{\lambda}{\rho}}\left(\frac{1}{\theta}-\frac{1}{2\pi + \theta}\right) &amp; \mbox{for }  h_{b} &lt; h_{r}
+      \end{array}\right."/></p>
+</div><p>where:</p>
+<div class="math">
+<p><img src="_images/math/b10e3a7ad49d1df26ba211bbc32c990b5c298d7e.png" alt="\theta = arc tan \left(\frac{\Delta h_b}{b}\right)
+
+\rho = \sqrt{\Delta h_b^2 + b^2}"/></p>
+</div></div>
+<div class="section" id="kun2600mhzpropagationlossmodel">
+<h3>Kun2600MhzPropagationLossModel<a class="headerlink" href="#kun2600mhzpropagationlossmodel" title="Permalink to this headline">¶</a></h3>
+<p>This is the empirical model for the pathloss at 2600 MHz for urban areas which is described in <a class="reference internal" href="#kun2600mhz" id="id8"><span>[kun2600mhz]</span></a>.
+The model is as follows. Let <img class="math" src="_images/math/badad346f6fbe2e237af99bfbd9a93a4da53a3da.png" alt="d"/> be the distance between the transmitter and the receiver
+in meters; the pathloss <img class="math" src="_images/math/19eef1966f7c545af3ac8c0fa486974d873e3c65.png" alt="L"/> in dB is calculated as:</p>
+<div class="math">
+<p><img src="_images/math/343403ec8ac169b49f7544d9ce5f314d8776c213.png" alt="L = 36 + 26\log{d}"/></p>
+</div></div>
+<div class="section" id="threegpppropagationlossmodel">
+<h3>ThreeGppPropagationLossModel<a class="headerlink" href="#threegpppropagationlossmodel" title="Permalink to this headline">¶</a></h3>
+<p>The base class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ThreeGppPropagationLossModel</span></code> and its derived classes implement
+the path loss and shadow fading models described in 3GPP TR 38.901 <a class="footnote-reference brackets" href="#id23" id="id9">38901</a>.
+3GPP TR 38.901 includes multiple scenarios modeling different propagation
+environments, i.e., indoor, outdoor urban and rural, for frequencies between
+0.5 and 100 GHz.</p>
+<p><em>Implemented features:</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Path loss and shadowing models (3GPP TR 38.901, Sec. 7.4.1)</p></li>
+<li><p>Autocorrelation of shadow fading (3GPP TR 38.901, Sec. 7.4.4)</p></li>
+<li><p><a class="reference external" href="propagation.html#threegppchannelconditionmodel">Channel condition models</a> (3GPP TR 38.901, Sec. 7.4.2)</p></li>
+</ul>
+</div></blockquote>
+<p><em>To be implemented:</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>O2I penetration loss (3GPP TR 38.901, Sec. 7.4.3)</p></li>
+<li><p>Spatial consistent update of the channel states (3GPP TR 38.901 Sec. 7.6.3.3)</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Configuration</strong></p>
+<p>The <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ThreeGppPropagationLossModel</span></code> instance is paired with a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ChannelConditionModel</span></code>
+instance used to retrieve the LOS/NLOS channel condition. By default, a 3GPP
+channel condition model related to the same scenario is set (e.g., by default,
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ThreeGppRmaPropagationLossModel</span></code> is paired with
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ThreeGppRmaChannelConditionModel</span></code>), but it can be configured using
+the method SetChannelConditionModel. The channel condition models are stored inside the
+propagation module, for a limitation of the current spectrum API and to avoid
+a circular dependency between the spectrum and the propagation modules. Please
+note that it is necessary to install at least one <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ChannelConditionModel</span></code> when
+using any <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ThreeGppPropagationLossModel</span></code> subclass. Please look below for more
+information about the Channel Condition models.</p>
+<p>The operating frequency has to be set using the attribute “Frequency”,
+otherwise an assert is raised. The addition of the shadow fading component can
+be enabled/disabled through the attribute “ShadowingEnabled”.
+Other scenario-related parameters can be configured through attributes of the
+derived classes.</p>
+<p><strong>Implementation details</strong></p>
+<p>The method DoCalcRxPower computes the propagation loss considering the path loss
+and the shadow fading (if enabled). The path loss is computed by the method
+GetLossLos or GetLossNlos depending on the LOS/NLOS channel condition, and their
+implementation is left to the derived classes. The shadow fading is computed by
+the method GetShadowing, which generates an additional random loss component
+characterized by Gaussian distribution with zero mean and scenario-specific
+standard deviation. Subsequent shadowing components of each BS-UT link are
+correlated as described in 3GPP TR 38.901, Sec. 7.4.4 <a class="footnote-reference brackets" href="#id23" id="id10">38901</a>.</p>
+<p><em>Note 1</em>: The TR defines height ranges for UTs and BSs, depending on the chosen
+propagation model (for the exact values, please see below in the specific model
+documentation). If the user does not set correct values, the model will emit
+a warning but perform the calculation anyway.</p>
+<p><em>Note 2</em>: The 3GPP model is originally intended to be used to represent BS-UT
+links. However, in ns-3, we may need to compute the pathloss between two BSs
+or UTs to evaluate the interference. We have decided to support this case by
+considering the tallest node as a BS and the smallest as a UT. As a consequence,
+the height values may be outside the validity range of the chosen class:
+therefore, an inaccuracy warning may be printed, but it can be ignored.</p>
+<p>There are four derived class, each one implementing the propagation model for a different scenario:</p>
+<div class="section" id="threegpprmapropagationlossmodel">
+<h4>ThreeGppRMaPropagationLossModel<a class="headerlink" href="#threegpprmapropagationlossmodel" title="Permalink to this headline">¶</a></h4>
+<p>This class implements the LOS/NLOS path loss and shadow fading models described in 3GPP TR 38.901 <a class="footnote-reference brackets" href="#id23" id="id11">38901</a>, Table 7.4.1-1 for the RMa scenario.
+It supports frequencies between 0.5 and 30 GHz.
+It is possible to configure some scenario-related parameters through the attributes AvgBuildingHeight and AvgStreetWidth.</p>
+<p>As specified in the TR, the 2D distance between the transmitter and the receiver
+should be between 10 m and 10 km for the LOS case, or between 10 m and 5 km for
+the NLOS case, otherwise the model may not be accurate (a warning message is
+printed if the user has enabled logging on the model). Also, the height of the
+base station (hBS) should be between 10 m and 150 m, while the height of the
+user terminal (hUT) should be between 1 m and 10 m.</p>
+</div>
+<div class="section" id="threegppumapropagationlossmodel">
+<h4>ThreeGppUMaPropagationLossModel<a class="headerlink" href="#threegppumapropagationlossmodel" title="Permalink to this headline">¶</a></h4>
+<p>This implements the LOS/NLOS path loss and shadow fading models described in 3GPP
+TR 38.901 <a class="footnote-reference brackets" href="#id23" id="id12">38901</a>, Table 7.4.1-1 for the UMa scenario. It supports frequencies
+between 0.5 and 100 GHz.</p>
+<p>As specified in the TR, the 2D distance between the transmitter and the receiver
+should be between 10 m and 5 km both for the LOS and NLOS cases, otherwise the model may not be
+accurate (a warning message is printed if the user has enabled logging on the model).
+Also, the height of the base station (hBS) should be 25 m and the height of the
+user terminal (hUT) should be between 1.5 m and 22.5 m.</p>
+</div>
+<div class="section" id="threegppumistreetcanyonpropagationlossmodel">
+<h4>ThreeGppUmiStreetCanyonPropagationLossModel<a class="headerlink" href="#threegppumistreetcanyonpropagationlossmodel" title="Permalink to this headline">¶</a></h4>
+<p>This implements the LOS/NLOS path loss and shadow fading models described in 3GPP
+TR 38.901 <a class="footnote-reference brackets" href="#id23" id="id13">38901</a>, Table 7.4.1-1 for the UMi-Street Canyon scenario. It
+supports frequencies between 0.5 and 100 GHz.</p>
+<p>As specified in the TR, the 2D distance between the transmitter and the receiver
+should be between 10 m and 5 km both for the LOS and NLOS cases, otherwise the model may not be
+accurate (a warning message is printed if the user has enabled logging on
+the model). Also, the height of the base station (hBS) should be 10 m and the
+height of the user terminal (hUT) should be between 1.5 m and 10 m (the validity
+range is reduced because we assume that the height of the UT nodes is always
+lower that the height of the BS nodes).</p>
+</div>
+<div class="section" id="threegppindoorofficepropagationlossmodel">
+<h4>ThreeGppIndoorOfficePropagationLossModel<a class="headerlink" href="#threegppindoorofficepropagationlossmodel" title="Permalink to this headline">¶</a></h4>
+<p>This implements the LOS/NLOS path loss and shadow fading models described in 3GPP
+TR 38.901 <a class="footnote-reference brackets" href="#id23" id="id14">38901</a>, Table 7.4.1-1 for the Indoor-Office scenario. It supports
+frequencies between 0.5 and 100 GHz.</p>
+<p>As specified in the TR, the 3D distance between the transmitter and the receiver
+should be between 1 m and 150 m both for the LOS and NLOS cases, otherwise the
+model may not be accurate (a warning log message is printed if the user has
+enabled logging on the model).</p>
+</div>
+<div class="section" id="testing">
+<h4>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h4>
+<p>The test suite <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ThreeGppPropagationLossModelsTestSuite</span></code> provides test cases for the classes
+implementing the 3GPP propagation loss models.
+The test cases <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ThreeGppRmaPropagationLossModelTestCase</span></code>,
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ThreeGppUmaPropagationLossModelTestCase</span></code>,
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ThreeGppUmiPropagationLossModelTestCase</span></code> and
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ThreeGppIndoorOfficePropagationLossModelTestCas`e</span> <span class="pre">compute</span> <span class="pre">the</span> <span class="pre">path</span> <span class="pre">loss</span> <span class="pre">between</span> <span class="pre">two</span> <span class="pre">nodes</span> <span class="pre">and</span> <span class="pre">compares</span> <span class="pre">it</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">value</span> <span class="pre">obtained</span> <span class="pre">using</span> <span class="pre">the</span> <span class="pre">formulas</span> <span class="pre">in</span> <span class="pre">3GPP</span> <span class="pre">TR</span> <span class="pre">38.901</span> <span class="pre">[38901]_,</span> <span class="pre">Table</span> <span class="pre">7.4.1-1.</span>
+<span class="pre">The</span> <span class="pre">test</span> <span class="pre">case</span> <span class="pre">:cpp:class:`ThreeGppShadowingTestCase</span></code> checks if the shadowing is correctly computed by testing the deviation of the overall propagation loss from the path loss. The test is carried out for all the scenarios, both in LOS and NLOS condition.</p>
+</div>
+</div>
+</div>
+<div class="section" id="channelconditionmodel">
+<h2>ChannelConditionModel<a class="headerlink" href="#channelconditionmodel" title="Permalink to this headline">¶</a></h2>
+<p>The loss models require to know if two nodes are in Line-of-Sight (LoS) or if
+they are not. The interface for that is represented by this class. The main
+method is GetChannelCondition (a, b), which returns a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ChannelCondition</span></code> object
+containing the information about the channel state.</p>
+<p>We modeled the LoS condition in two ways: (i) by using a probabilistic model
+specified by the 3GPP (), and (ii) by using an ns-3 specific
+building-aware model, which checks the space position of the BSs and the UTs.
+For what regards the first option, the probability is independent of the node
+location: in other words, following the 3GPP model, two UT spatially separated
+by an epsilon may have different LoS conditions. To take into account mobility,
+we have inserted a parameter called “UpdatePeriod,” which indicates how often a
+3GPP-based channel condition has to be updated. By default, this attribute is
+set to 0, meaning that after the channel condition is generated, it is never
+updated. With this default value, we encourage the users to run multiple
+simulations with different seeds to get statistical significance from the data.
+For the users interested in using mobile nodes, we suggest changing this
+parameter to a value that takes into account the node speed and the desired
+accuracy. For example, lower-speed node conditions may be updated in terms of
+seconds, while high-speed UT or BS may be updated more often.</p>
+<p>The two approach are coded, respectively, in the classes:</p>
+<ul class="simple">
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ThreeGppChannelConditionModel</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">BuildingsChannelConditionModel</span></code> (see the <code class="docutils literal notranslate"><span class="pre">building</span></code> module documentation for further details)</p></li>
+</ul>
+<div class="section" id="threegppchannelconditionmodel">
+<h3>ThreeGppChannelConditionModel<a class="headerlink" href="#threegppchannelconditionmodel" title="Permalink to this headline">¶</a></h3>
+<p>This is the base class for the 3GPP channel condition models.
+It provides the possibility to updated the condition of each channel periodically,
+after a given time period which can be configured through the attribute “UpdatePeriod”.
+If “UpdatePeriod” is set to 0, the channel condition is never updated.
+It has five derived classes implementing the channel condition models described in 3GPP TR 38.901 <a class="footnote-reference brackets" href="#id23" id="id15">38901</a> for different propagation scenarios.</p>
+<div class="section" id="threegpprmachannelconditionmodel">
+<h4>ThreeGppRmaChannelConditionModel<a class="headerlink" href="#threegpprmachannelconditionmodel" title="Permalink to this headline">¶</a></h4>
+<p>This implements the statistical channel condition model described in 3GPP TR 38.901 <a class="footnote-reference brackets" href="#id23" id="id16">38901</a>, Table 7.4.2-1, for the RMa scenario.</p>
+</div>
+<div class="section" id="threegppumachannelconditionmodel">
+<h4>ThreeGppUmaChannelConditionModel<a class="headerlink" href="#threegppumachannelconditionmodel" title="Permalink to this headline">¶</a></h4>
+<p>This implements the statistical channel condition model described in 3GPP TR 38.901 <a class="footnote-reference brackets" href="#id23" id="id17">38901</a>, Table 7.4.2-1, for the UMa scenario.</p>
+</div>
+<div class="section" id="threegppumistreetcanyonchannelconditionmodel">
+<h4>ThreeGppUmiStreetCanyonChannelConditionModel<a class="headerlink" href="#threegppumistreetcanyonchannelconditionmodel" title="Permalink to this headline">¶</a></h4>
+<p>This implements the statistical channel condition model described in 3GPP TR 38.901 <a class="footnote-reference brackets" href="#id23" id="id18">38901</a>, Table 7.4.2-1, for the UMi-Street Canyon scenario.</p>
+</div>
+<div class="section" id="threegppindoormixedofficechannelconditionmodel">
+<h4>ThreeGppIndoorMixedOfficeChannelConditionModel<a class="headerlink" href="#threegppindoormixedofficechannelconditionmodel" title="Permalink to this headline">¶</a></h4>
+<p>This implements the statistical channel condition model described in 3GPP TR 38.901 <a class="footnote-reference brackets" href="#id23" id="id19">38901</a>, Table 7.4.2-1, for the Indoor-Mixed office scenario.</p>
+</div>
+<div class="section" id="threegppindooropenofficechannelconditionmodel">
+<h4>ThreeGppIndoorOpenOfficeChannelConditionModel<a class="headerlink" href="#threegppindooropenofficechannelconditionmodel" title="Permalink to this headline">¶</a></h4>
+<p>This implements the statistical channel condition model described in 3GPP TR 38.901 <a class="footnote-reference brackets" href="#id23" id="id20">38901</a>, Table 7.4.2-1, for the Indoor-Open office scenario.</p>
+</div>
+</div>
+<div class="section" id="id21">
+<h3>Testing<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<p>The test suite <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ChannelConditionModelsTestSuite</span></code> contains a single test case:</p>
+<ul class="simple">
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ThreeGppChannelConditionModelTestCase</span></code>, which tests all the 3GPP channel condition models. It determines the channel condition between two nodes multiple times, estimates the LOS probability, and compares it with the value given by the formulas in 3GPP TR 38.901 <a class="footnote-reference brackets" href="#id23" id="id22">38901</a>, Table 7.4.2-1</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="propagationdelaymodel">
+<h2>PropagationDelayModel<a class="headerlink" href="#propagationdelaymodel" title="Permalink to this headline">¶</a></h2>
+<p>The following propagation delay models are implemented:</p>
+<ul class="simple">
+<li><p>ConstantSpeedPropagationDelayModel</p></li>
+<li><p>RandomPropagationDelayModel</p></li>
+</ul>
+<div class="section" id="constantspeedpropagationdelaymodel">
+<h3>ConstantSpeedPropagationDelayModel<a class="headerlink" href="#constantspeedpropagationdelaymodel" title="Permalink to this headline">¶</a></h3>
+<p>In this model, the signal travels with constant speed.
+The delay is calculated according with the transmitter and receiver positions.
+The Euclidean distance between the Tx and Rx antennas is used.
+Beware that, according to this model, the Earth is flat.</p>
+</div>
+<div class="section" id="randompropagationdelaymodel">
+<h3>RandomPropagationDelayModel<a class="headerlink" href="#randompropagationdelaymodel" title="Permalink to this headline">¶</a></h3>
+<p>The propagation delay is totally random, and it changes each time the model is called.
+All the packets (even those between two fixed nodes) experience a random delay.
+As a consequence, the packets order is not preserved.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<dl class="citation">
+<dt class="label" id="friis"><span class="brackets"><a class="fn-backref" href="#id2">friis</a></span></dt>
+<dd><p>Friis, H.T., “A Note on a Simple Transmission Formula,” Proceedings of the IRE , vol.34, no.5, pp.254,256, May 1946</p>
+</dd>
+<dt class="label" id="hata"><span class="brackets"><a class="fn-backref" href="#id3">hata</a></span></dt>
+<dd><p>M.Hata, “Empirical formula for propagation loss in land mobile radio
+services”, IEEE Trans. on Vehicular Technology, vol. 29, pp. 317-325, 1980</p>
+</dd>
+<dt class="label" id="cost231"><span class="brackets"><a class="fn-backref" href="#id4">cost231</a></span></dt>
+<dd><p>“Digital Mobile Radio: COST 231 View on the Evolution Towards 3rd Generation Systems”, Commission of the European Communities, L-2920, Luxembourg, 1989</p>
+</dd>
+<dt class="label" id="walfisch"><span class="brackets"><a class="fn-backref" href="#id6">walfisch</a></span></dt>
+<dd><p>J.Walfisch and H.L. Bertoni, “A Theoretical model of UHF propagation in urban environments,” in IEEE Trans. Antennas Propagat., vol.36, 1988, pp.1788- 1796</p>
+</dd>
+<dt class="label" id="ikegami"><span class="brackets"><a class="fn-backref" href="#id7">ikegami</a></span></dt>
+<dd><p>F.Ikegami, T.Takeuchi, and S.Yoshida, “Theoretical prediction of mean field strength for Urban Mobile Radio”, in IEEE Trans. Antennas Propagat., Vol.39, No.3, 1991</p>
+</dd>
+<dt class="label" id="kun2600mhz"><span class="brackets"><a class="fn-backref" href="#id8">kun2600mhz</a></span></dt>
+<dd><p>Sun Kun, Wang Ping, Li Yingze, “Path loss models for suburban scenario at 2.3GHz, 2.6GHz and 3.5GHz”,
+in Proc. of the 8th International Symposium on Antennas, Propagation and EM Theory (ISAPE),  Kunming,  China, Nov 2008.</p>
+</dd>
+</dl>
+<dl class="footnote brackets">
+<dt class="label" id="id23"><span class="brackets">38901</span><span class="fn-backref">(<a href="#id9">1</a>,<a href="#id10">2</a>,<a href="#id11">3</a>,<a href="#id12">4</a>,<a href="#id13">5</a>,<a href="#id14">6</a>,<a href="#id15">7</a>,<a href="#id16">8</a>,<a href="#id17">9</a>,<a href="#id18">10</a>,<a href="#id19">11</a>,<a href="#id20">12</a>,<a href="#id22">13</a>)</span></dt>
+<dd><p>3GPP. 2018. TR 38.901, Study on channel model for frequencies from 0.5 to 100 GHz, V15.0.0. (2018-06).</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Propagation</a><ul>
+<li><a class="reference internal" href="#propagationlossmodel">PropagationLossModel</a><ul>
+<li><a class="reference internal" href="#friispropagationlossmodel">FriisPropagationLossModel</a></li>
+<li><a class="reference internal" href="#tworaygroundpropagationlossmodel">TwoRayGroundPropagationLossModel</a></li>
+<li><a class="reference internal" href="#logdistancepropagationlossmodel">LogDistancePropagationLossModel</a></li>
+<li><a class="reference internal" href="#threelogdistancepropagationlossmodel">ThreeLogDistancePropagationLossModel</a></li>
+<li><a class="reference internal" href="#jakespropagationlossmodel">JakesPropagationLossModel</a><ul>
+<li><a class="reference internal" href="#todo">ToDo</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#randompropagationlossmodel">RandomPropagationLossModel</a></li>
+<li><a class="reference internal" href="#nakagamipropagationlossmodel">NakagamiPropagationLossModel</a></li>
+<li><a class="reference internal" href="#fixedrsslossmodel">FixedRssLossModel</a></li>
+<li><a class="reference internal" href="#matrixpropagationlossmodel">MatrixPropagationLossModel</a></li>
+<li><a class="reference internal" href="#rangepropagationlossmodel">RangePropagationLossModel</a></li>
+<li><a class="reference internal" href="#okumurahatapropagationlossmodel">OkumuraHataPropagationLossModel</a></li>
+<li><a class="reference internal" href="#cost231propagationlossmodel">Cost231PropagationLossModel</a><ul>
+<li><a class="reference internal" href="#id5">ToDo</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#itur1411lospropagationlossmodel">ItuR1411LosPropagationLossModel</a></li>
+<li><a class="reference internal" href="#itur1411nlosoverrooftoppropagationlossmodel">ItuR1411NlosOverRooftopPropagationLossModel</a></li>
+<li><a class="reference internal" href="#kun2600mhzpropagationlossmodel">Kun2600MhzPropagationLossModel</a></li>
+<li><a class="reference internal" href="#threegpppropagationlossmodel">ThreeGppPropagationLossModel</a><ul>
+<li><a class="reference internal" href="#threegpprmapropagationlossmodel">ThreeGppRMaPropagationLossModel</a></li>
+<li><a class="reference internal" href="#threegppumapropagationlossmodel">ThreeGppUMaPropagationLossModel</a></li>
+<li><a class="reference internal" href="#threegppumistreetcanyonpropagationlossmodel">ThreeGppUmiStreetCanyonPropagationLossModel</a></li>
+<li><a class="reference internal" href="#threegppindoorofficepropagationlossmodel">ThreeGppIndoorOfficePropagationLossModel</a></li>
+<li><a class="reference internal" href="#testing">Testing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#channelconditionmodel">ChannelConditionModel</a><ul>
+<li><a class="reference internal" href="#threegppchannelconditionmodel">ThreeGppChannelConditionModel</a><ul>
+<li><a class="reference internal" href="#threegpprmachannelconditionmodel">ThreeGppRmaChannelConditionModel</a></li>
+<li><a class="reference internal" href="#threegppumachannelconditionmodel">ThreeGppUmaChannelConditionModel</a></li>
+<li><a class="reference internal" href="#threegppumistreetcanyonchannelconditionmodel">ThreeGppUmiStreetCanyonChannelConditionModel</a></li>
+<li><a class="reference internal" href="#threegppindoormixedofficechannelconditionmodel">ThreeGppIndoorMixedOfficeChannelConditionModel</a></li>
+<li><a class="reference internal" href="#threegppindooropenofficechannelconditionmodel">ThreeGppIndoorOpenOfficeChannelConditionModel</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id21">Testing</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#propagationdelaymodel">PropagationDelayModel</a><ul>
+<li><a class="reference internal" href="#constantspeedpropagationdelaymodel">ConstantSpeedPropagationDelayModel</a></li>
+<li><a class="reference internal" href="#randompropagationdelaymodel">RandomPropagationDelayModel</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="point-to-point.html"
+                        title="previous chapter">PointToPoint NetDevice</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="spectrum.html"
+                        title="next chapter">Spectrum Module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/propagation.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="spectrum.html" title="Spectrum Module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="point-to-point.html" title="PointToPoint NetDevice"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>RealTime &#8212; Manual</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Helpers" href="helpers.html" />
+    <link rel="prev" title="Statistical Framework" href="statistics.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Manual</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="helpers.html" title="Helpers"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="statistics.html" title="Statistical Framework"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="realtime">
+<h1>RealTime<a class="headerlink" href="#realtime" title="Permalink to this headline">¶</a></h1>
+<p><em>ns-3</em> has been designed for integration into testbed and virtual machine
+environments. To integrate with real network stacks and emit/consume packets, a
+real-time scheduler is needed to try to lock the simulation clock with the
+hardware clock. We describe here a component of this: the RealTime scheduler.</p>
+<p>The purpose of the realtime scheduler is to cause the progression of the
+simulation clock to occur synchronously with respect to some external time base.
+Without the presence of an external time base (wall clock), simulation time
+jumps instantly from one simulated time to the next.</p>
+<div class="section" id="behavior">
+<h2>Behavior<a class="headerlink" href="#behavior" title="Permalink to this headline">¶</a></h2>
+<p>When using a non-realtime scheduler (the default in <em>ns-3</em>), the simulator
+advances the simulation time to the next scheduled event. During event
+execution, simulation time is frozen. With the realtime scheduler, the behavior
+is similar from the perspective of simulation models (i.e., simulation time is
+frozen during event execution), but between events, the simulator will attempt
+to keep the simulation clock aligned with the machine clock.</p>
+<p>When an event is finished executing, and the scheduler moves to the next event,
+the scheduler compares the next event execution time with the machine clock.  If
+the next event is scheduled for a future time, the simulator sleeps until that
+realtime is reached and then executes the next event.</p>
+<p>It may happen that, due to the processing inherent in the execution of
+simulation events, that the simulator cannot keep up with realtime.  In such a
+case, it is up to the user configuration what to do. There are two <em>ns-3</em>
+attributes that govern the behavior. The first is
+<code class="docutils literal notranslate"><span class="pre">ns3::RealTimeSimulatorImpl::SynchronizationMode</span></code>. The two entries possible
+for this attribute are <code class="docutils literal notranslate"><span class="pre">BestEffort</span></code> (the default) or <code class="docutils literal notranslate"><span class="pre">HardLimit</span></code>. In
+“BestEffort” mode, the simulator will just try to catch up to realtime by
+executing events until it reaches a point where the next event is in the
+(realtime) future, or else the simulation ends. In BestEffort mode, then, it is
+possible for the simulation to consume more time than the wall clock time. The
+other option “HardLimit” will cause the simulation to abort if the tolerance
+threshold is exceeded.  This attribute is
+<code class="docutils literal notranslate"><span class="pre">ns3::RealTimeSimulatorImpl::HardLimit</span></code> and the default is 0.1 seconds.</p>
+<p>A different mode of operation is one in which simulated time is <strong>not</strong> frozen
+during an event execution. This mode of realtime simulation was implemented but
+removed from the <em>ns-3</em> tree because of questions of whether it would be useful.
+If users are interested in a realtime simulator for which simulation time does
+not freeze during event execution (i.e., every call to <code class="docutils literal notranslate"><span class="pre">Simulator::Now()</span></code>
+returns the current wall clock time, not the time at which the event started
+executing), please contact the ns-developers mailing list.</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>The usage of the realtime simulator is straightforward, from a scripting
+perspective.  Users just need to set the attribute
+<code class="docutils literal notranslate"><span class="pre">SimulatorImplementationType</span></code> to the Realtime simulator, such as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">GlobalValue</span><span class="o">::</span><span class="n">Bind</span> <span class="p">(</span><span class="s">&quot;SimulatorImplementationType&quot;</span><span class="p">,</span>
+  <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;ns3::RealtimeSimulatorImpl&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>There is a script in <code class="docutils literal notranslate"><span class="pre">examples/realtime/realtime-udp-echo.cc</span></code> that
+has an example of how to configure the realtime behavior.  Try:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf --run realtime-udp-echo
+</pre></div>
+</div>
+<p>Whether the simulator will work in a best effort or hard limit policy fashion is
+governed by the attributes explained in the previous section.</p>
+</div>
+<div class="section" id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
+<p>The implementation is contained in the following files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">src/core/model/realtime-simulator-impl.{cc,h}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">src/core/model/wall-clock-synchronizer.{cc,h}</span></code></p></li>
+</ul>
+<p>In order to create a realtime scheduler, to a first approximation you just want
+to cause simulation time jumps to consume real time. We propose doing this using
+a combination of sleep- and busy- waits. Sleep-waits cause the calling process
+(thread) to yield the processor for some amount of time. Even though this
+specified amount of time can be passed to nanosecond resolution, it is actually
+converted to an OS-specific granularity. In Linux, the granularity is called a
+Jiffy. Typically this resolution is insufficient for our needs (on the order of
+a ten milliseconds), so we round down and sleep for some smaller number of
+Jiffies. The process is then awakened after the specified number of Jiffies has
+passed. At this time, we have some residual time to wait. This time is generally
+smaller than the minimum sleep time, so we busy-wait for the remainder of the
+time. This means that the thread just sits in a for loop consuming cycles until
+the desired time arrives. After the combination of sleep- and busy-waits, the
+elapsed realtime (wall) clock should agree with the simulation time of the next
+event and the simulation proceeds.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">RealTime</a><ul>
+<li><a class="reference internal" href="#behavior">Behavior</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#implementation">Implementation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="statistics.html"
+                        title="previous chapter">Statistical Framework</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="helpers.html"
+                        title="next chapter">Helpers</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/realtime.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="helpers.html" title="Helpers"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="statistics.html" title="Statistical Framework"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 18:24.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

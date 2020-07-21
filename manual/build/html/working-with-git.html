@@ -1,0 +1,674 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Working with git as a user &#8212; Manual</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Random Variables" href="random-variables.html" />
+    <link rel="prev" title="Organization" href="organization.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Manual</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="random-variables.html" title="Random Variables"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="organization.html" title="Organization"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="working-with-git-as-a-user">
+<span id="working-with-git"></span><h1>Working with git as a user<a class="headerlink" href="#working-with-git-as-a-user" title="Permalink to this headline">¶</a></h1>
+<p>The ns-3 project used Mercurial in the past as its source code control system, but it has moved to Git in December 2018. Git is a VCS like Mercurial, Subversion or CVS, and it is used to maintain many open-source (and closed-source) projects. While git and mercurial have a lot of common properties, if you are new to git you should read first an introduction to it. The most up-to-date guide is the Git Book, at <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Git-Basics">https://git-scm.com/book/en/v2/Getting-Started-Git-Basics</a>.</p>
+<p>The ns-3 project is officially hosted on GitLab.com at <a class="reference external" href="https://gitlab.com/nsnam/">https://gitlab.com/nsnam/</a>.  For convenience and historical reasons, ns-3-dev mirrors are currently posted on Bitbucket.com and GitHub.com, and kept in sync with the official repository periodically via cron jobs.  We recommend that users who have been working from one of these mirrors repoint their remotes so that they pull origin or upstream from GitLab.com (see below explanation about how to configure remotes).</p>
+<p>This section of the manual provides common tips for both users and maintainers. Since the first part is shared, in this manual section we will start with a personal repository and then explain what to do in some typical cases. ns-3 users often combine ns-3-dev with other repositories (pybindgen, netanim, apps from the app store).  This manual chapter does not cover this use case; it only focuses on the single ns-3-dev repository.  See other project documentation such as the ns-3 tutorial for descriptions on bundled releases distributed as source archives, or on the bake build tool for managing multiple repositories.  The guidelines listed below also largely pertain to the user who is using (and cloning) bake from the GitLab.com repository.</p>
+<div class="section" id="ns-3-s-git-workflow-in-a-nutshell">
+<h2>ns-3’s Git workflow in a nutshell<a class="headerlink" href="#ns-3-s-git-workflow-in-a-nutshell" title="Permalink to this headline">¶</a></h2>
+<p>Experienced git users will not necessarily need instruction on how to set up personal repositories (below).  However, they should be aware of the project’s workflow:</p>
+<ul class="simple">
+<li><p>The main repository’s <code class="docutils literal notranslate"><span class="pre">master</span></code> branch is the main development branch.  The project maintains only this one branch and strives to maintain a mostly linear history on it.</p></li>
+<li><p>Releases are made by creating a branch from the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch and tagging the branch with the release number when ready, and then merging the release branch back to the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.  Releases can be identified by a git tag, and a modified <code class="docutils literal notranslate"><span class="pre">VERSION</span></code> file in the branch.  However, the modified <code class="docutils literal notranslate"><span class="pre">VERSION</span></code> file is not merged back to <code class="docutils literal notranslate"><span class="pre">master</span></code>.</p>
+<ul>
+<li><p>If a hotfix release must be made to update a past release, a new hotfix support branch will be created by branching from the tip of the last relevant release.  Changesets from <code class="docutils literal notranslate"><span class="pre">master</span></code> branch (such as bug fixes) may be cherry-picked to the hotfix branch.  The hotfix release is tagged with the hotfix version number, and merged back to the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.</p></li>
+</ul>
+</li>
+<li><p>Merges to the ns-3 <code class="docutils literal notranslate"><span class="pre">master</span></code> branch are fast forwarded when possible, and commits can be squashed as appropriate, to maintain a clean linear history.  Merge commits can be avoided in simple cases.</p>
+<ul>
+<li><p>More complicated merges might not be able to be fast forwarded, with the result that there will be a merge commit upon the merge.</p></li>
+</ul>
+</li>
+<li><p>Maintainers can commit obvious non-critical fixes (documentation improvements, typos etc.) directly into the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.  Users who are not maintainers can create GitLab.com Merge Requests for small items such as these, for maintainers to review.</p></li>
+<li><p>Maintainers can directly commit bug fixes to their maintained modules without review/approval by other maintainers, although a review phase is recommended for non-trivial fixes.  Larger commits that touch multiple modules should be reviewed and approved by the set of affected maintainers.</p></li>
+<li><p>When proposing code (new features, bug fixes, etc.) for a module maintained by someone else, the typical workflow will be to fork the <code class="docutils literal notranslate"><span class="pre">nsnam/ns-3-dev.git</span></code> repository, create a local feature branch on your fork, and use GitLab.com to generate a Merge Request towards <code class="docutils literal notranslate"><span class="pre">nsnam/ns-3-dev.git</span></code> when ready.  The Merge Request will then be reviewed, and in response to changes requested or comments from maintainers, authors are are asked to modify their feature branch and rebase to the tip of <code class="docutils literal notranslate"><span class="pre">ns-3-dev.git</span></code> as needed.</p></li>
+</ul>
+</div>
+<div class="section" id="setup-of-a-personal-repository">
+<h2>Setup of a personal repository<a class="headerlink" href="#setup-of-a-personal-repository" title="Permalink to this headline">¶</a></h2>
+<p>We will provide two ways, one anonymous (but will impede the creation of merge requests) and the other, preferred, that include forking the repository through the GitLab.com web interface.</p>
+<div class="section" id="directly-cloning-ns-3-dev">
+<h3>Directly cloning ns-3-dev<a class="headerlink" href="#directly-cloning-ns-3-dev" title="Permalink to this headline">¶</a></h3>
+<p>If you go to the official ns-3-dev page, hosted at <a class="reference external" href="https://gitlab.com/nsnam/ns-3-dev">https://gitlab.com/nsnam/ns-3-dev</a>, you can find a button that says <code class="docutils literal notranslate"><span class="pre">Clone</span></code>. If you are not logged in, then you will see only the option of cloning the repository through HTTPS, with this command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://gitlab.com/nsnam/ns-3-dev.git
+</pre></div>
+</div>
+<p>If this command exits successfully, you will have a newly created <cite>ns-3-dev</cite> directory with all the source code.</p>
+</div>
+<div class="section" id="forking-ns-3-dev-on-gitlab-com">
+<h3>Forking ns-3-dev on GitLab.com<a class="headerlink" href="#forking-ns-3-dev-on-gitlab-com" title="Permalink to this headline">¶</a></h3>
+<p>Assume that you are the user <em>john</em> on GitLab.com and that you want to create a new repository that is synced with nsnam/ns-3-dev.</p>
+<ol class="arabic simple">
+<li><p>Log into GitLab.com</p></li>
+<li><p>Navigate to <a class="reference external" href="https://gitlab.com/nsnam/ns-3-dev">https://gitlab.com/nsnam/ns-3-dev</a></p></li>
+<li><p>In the top-right corner of the page, click <code class="docutils literal notranslate"><span class="pre">Fork</span></code>.</p></li>
+</ol>
+<p>Note that you may only do this once; if you try to fork again, Gitlab will take you to the page of the original fork. So, if you are planning to maintain two or more separate forks (for example, one for your private work, another for maintenance, etc.), you are doing a mistake. Instead, you should add these forks as a remote of your existing directory (see below for adding remotes). Usually, it is a good thing to add the maintainer’s repository as remotes, because it can happen that “bleeding edge” features will appear there before landing in ns-3-dev.</p>
+<p>For more information on forking with Gilab, there is plenty of visual documentation (<a class="reference external" href="https://docs.gitlab.com/ee/gitlab-basics/fork-project.html">https://docs.gitlab.com/ee/gitlab-basics/fork-project.html</a>). To work with your forked repository, you have two ways: one is a clean clone while the other is meant to re-use an existing ns-3 git repository.</p>
+<div class="section" id="clone-your-forked-repository-on-your-machine">
+<h4>Clone your forked repository on your machine<a class="headerlink" href="#clone-your-forked-repository-on-your-machine" title="Permalink to this headline">¶</a></h4>
+<p>Git is a distributed versioning system. This means that <em>nobody</em> will touch your personal repository, until you do something. Please note that every gitlab user has, at least, two repositories: the first is represented by the repository hosted on gitlab servers, which will be called in the following <code class="docutils literal notranslate"><span class="pre">origin</span></code>. Then, you have your clone on your machine. This means that you could have many clones, on different machines, which points to <code class="docutils literal notranslate"><span class="pre">origin</span></code>.</p>
+<p>To clone the newly created fork to your system, go to the homepage of your fork (that should be in the form <cite>https://gitlab.com/your-user-name/ns-3-dev</cite>) and click the <cite>Clone</cite> button. Then, go to your computer’s terminal, and issue the command (please refer to <a class="reference external" href="https://docs.gitlab.com/ee/gitlab-basics/command-line-commands.html#clone-your-project">https://docs.gitlab.com/ee/gitlab-basics/command-line-commands.html#clone-your-project</a> for more documentation):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://gitlab.com/your-user-name/ns-3-dev
+$ <span class="nb">cd</span> ns-3-dev
+</pre></div>
+</div>
+<p>In this example we used the HTTPS address because in some place the git + ssh address is blocked by firewalls. If you are not under this constraint, it is recommended to use the git + ssh address to avoid the username/password typing at each request.</p>
+</div>
+<div class="section" id="naming-conventions">
+<h4>Naming conventions<a class="headerlink" href="#naming-conventions" title="Permalink to this headline">¶</a></h4>
+<p>Git is able to fetch and push changes to several repositories, each of them is called <code class="docutils literal notranslate"><span class="pre">remote</span></code>. With time, you probably will have many remotes, each one with many branches. To avoid confusion, it is recommended to give meaningful names to the remotes; in the following, we will use <code class="docutils literal notranslate"><span class="pre">origin</span></code> to indicate the ns-3-dev repository in your personal namespace (your forked version, server-side) and <code class="docutils literal notranslate"><span class="pre">nsnam</span></code> to indicate the ns-3-dev repository in the nsnam namespace, server-side.</p>
+</div>
+</div>
+</div>
+<div class="section" id="add-the-official-ns-3-repository-as-remote-upstream">
+<h2>Add the official ns-3 repository as remote upstream<a class="headerlink" href="#add-the-official-ns-3-repository-as-remote-upstream" title="Permalink to this headline">¶</a></h2>
+<p>You could have already used git in the past, and therefore already having a ns-3 git repository somewhere. Or, instead, you could have it cloned for the first time in the step above. In both cases, when you fork/clone a repository, your history is no more bound to the repository itself. At this point, it is your duty to sync your fork with the original repository. The first remote repository we have encountered is <code class="docutils literal notranslate"><span class="pre">origin</span></code>; we must add the official ns-3 repo as another remote repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git remote add nsnam https://gitlab.com/nsnam/ns-3-dev
+</pre></div>
+</div>
+<p>With the command above, we added a remote repository, named nsnam, which links to the official ns-3 repo. To show your remote repositories:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git remote show
+</pre></div>
+</div>
+<p>To see to what <code class="docutils literal notranslate"><span class="pre">origin</span></code> is linking to:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git remote show origin
+</pre></div>
+</div>
+<p>Many options are available; please refer to the git manual for more.</p>
+</div>
+<div class="section" id="add-your-forked-repository-as-remote">
+<h2>Add your forked repository as remote<a class="headerlink" href="#add-your-forked-repository-as-remote" title="Permalink to this headline">¶</a></h2>
+<p>If you were a user of the old github mirror, you probably have an existing git repository installed somewhere. In your case, it is not necessary to clone your fork and to port all your work in the new directory; you can add the fork as new remote:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git remote rename origin old-origin
+$ git remote add origin https://gitlab.com/your-user-name/ns-3-dev
+</pre></div>
+</div>
+<p>After these two commands, you will have a remote, named origin, that points
+to your forked repository on gitlab.</p>
+</div>
+<div class="section" id="keep-in-sync-your-repository-with-latest-ns-3-dev-updates">
+<h2>Keep in sync your repository with latest ns-3-dev updates<a class="headerlink" href="#keep-in-sync-your-repository-with-latest-ns-3-dev-updates" title="Permalink to this headline">¶</a></h2>
+<p>We assume, from now to the end of this document, that you will not make commits on top of the master branch. It should be kept clean from <em>any</em> personal modifications: all the works must be done in branches. Therefore, to move the current HEAD of the master branch to the latest commit in ns-3-dev, you should do:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout master
+$ git fetch nsnam
+$ git pull nsnam master
+</pre></div>
+</div>
+<p>If you tried a pull which resulted in a conflict and you would like to start over, you can recover with git reset (but this never happens if you do not commit over master).</p>
+</div>
+<div class="section" id="start-a-new-branch-to-do-some-work">
+<h2>Start a new branch to do some work<a class="headerlink" href="#start-a-new-branch-to-do-some-work" title="Permalink to this headline">¶</a></h2>
+<p>Look at the available branches:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git branch -a
+</pre></div>
+</div>
+<p>you should see something like:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>* master
+  remotes/origin/master
+  remotes/nsnam/master
+</pre></div>
+</div>
+<p>The branch master is your local master branch; remotes/origin/master point at the master branch on your repository located in the Gitlab server, while remotes/nsnam/master points to the official master branch.</p>
+<p>Before entering in details on how to create a new branch, we have to explain why it is recommended to do it. First of all, if you put all your work in a separate branch, you can easily see the diff between ns-3 mainline and your feature branch (with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">master</span></code>). Also, you can integrate more easily the upstream advancements in your work, and when you wish, you can create a <em>conflict-free</em> merge request, that will ease the maintainer’s job in reviewing your work.</p>
+<p>To create a new branch, starting from master, the command is:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout master
+$ git checkout -b <span class="o">[</span>name_of_your_new_branch<span class="o">]</span>
+</pre></div>
+</div>
+<p>To switch between branches, remove the -b option. You should now see:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git branch -a
+ * master
+  <span class="o">[</span>name_of_your_new_branch<span class="o">]</span>
+  remotes/origin/master
+  remotes/nsnam/master
+</pre></div>
+</div>
+</div>
+<div class="section" id="edit-and-commit-the-modifications">
+<h2>Edit and commit the modifications<a class="headerlink" href="#edit-and-commit-the-modifications" title="Permalink to this headline">¶</a></h2>
+<p>After you edit some file, you should commit the difference. As a policy, git users love small and incremental patches. So, commit early, and commit often: you could rewrite your history later.</p>
+<p>Suppose we edited <code class="docutils literal notranslate"><span class="pre">src/internet/model/tcp-socket-base.cc</span></code>. With git status, we can see the repository status:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git status
+   On branch tcp-next
+   Your branch is up-to-date with <span class="s1">&#39;mirror/tcp-next&#39;</span>.
+   Changes not staged <span class="k">for</span> commit:
+     modified:   src/internet/model/tcp-socket-base.cc
+</pre></div>
+</div>
+<p>and we can see the edits with git diff:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ git diff
+
+nat@miyamoto ~/Work/ns-3-dev-git (tcp-next)$ git diff
+diff --git i/src/internet/model/tcp-socket-base.cc w/src/internet/model/tcp-socket-base.cc
+index 1bf0f69..e2298b0 100644
+--- i/src/internet/model/tcp-socket-base.cc
++++ w/src/internet/model/tcp-socket-base.cc
+@@ -1439,6 +1439,10 @@ TcpSocketBase::ReceivedAck (Ptr&lt;Packet&gt; packet, const TcpHeader&amp; tcpHeader)
+       // There is a DupAck
+       ++m_dupAckCount;
+
++      // I&#39;m introducing a subtle bug!
++
++      m_tcb-&gt;m_cWnd = m_tcb-&gt;m_ssThresh;
++
+       if (m_tcb-&gt;m_congState == TcpSocketState::CA_OPEN)
+         {
+           // From Open we go Disorder
+</pre></div>
+</div>
+<p>To create a commit, select the file you want to add to the commit with git add:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git add src/internet/model/tcp-socket-base.cc
+</pre></div>
+</div>
+<p>and then commit the result:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git commit -m <span class="s2">&quot;My new TCP broken&quot;</span>
+</pre></div>
+</div>
+<p>Of course, it would be better to have some rules for the commit message: they will be reported in the next subsection.</p>
+<div class="section" id="commit-message-guidelines">
+<h3>Commit message guidelines<a class="headerlink" href="#commit-message-guidelines" title="Permalink to this headline">¶</a></h3>
+<p>The commit title should not go over the 80 char limit. It should be prefixed by the name of the module you are working on, and if it fixes a bug, it should reference it in the commit title. For instance, a good commit title would be:</p>
+<blockquote>
+<div><p>tcp: My new TCP broken</p>
+</div></blockquote>
+<p>Another example is:</p>
+<blockquote>
+<div><p>tcp: (fixes #2322) Corrected the uint32_t wraparound during recovery</p>
+</div></blockquote>
+<p>In the body message, try to explain what the problem was, and how you resolved that. If it is a new feature, try to describe it at a very high level, and highlight any modifications that changed the behaviour or the interface towards the users or other modules.</p>
+</div>
+<div class="section" id="commit-log">
+<h3>Commit log<a class="headerlink" href="#commit-log" title="Permalink to this headline">¶</a></h3>
+<p>You can see the history of the commits with git log. To show a particular commit, copy the sha-id and use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">show</span> <span class="pre">&lt;sha-id&gt;</span></code>. The ID is unique, so it can be referenced in emails or in issues. The next step is useful if you plan to contribute back your changes, but also to keep your feature branch updated with the latest changes from ns-3-dev.</p>
+</div>
+</div>
+<div class="section" id="rebase-your-branch-on-top-of-master">
+<h2>Rebase your branch on top of master<a class="headerlink" href="#rebase-your-branch-on-top-of-master" title="Permalink to this headline">¶</a></h2>
+<p>Meanwhile you were busy with your branch, the upstream master could have changed. To rebase your work with the now new master, first of all sync your master branch (pulling the nsnam/master branch into your local master branch) as explained before; then</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout <span class="o">[</span>name_of_your_new_branch<span class="o">]</span>
+$ git rebase master
+</pre></div>
+</div>
+<p>The last command will rewind your work, update the HEAD of your branch to the actual master, and then re-apply all your work. If some of your work conflicts with the actual master, you will be asked to fix these conflicts if automatic merge fails.</p>
+</div>
+<div class="section" id="pushing-your-changes-to-origin">
+<h2>Pushing your changes to origin<a class="headerlink" href="#pushing-your-changes-to-origin" title="Permalink to this headline">¶</a></h2>
+<p>After you have done some work on a branch, if you would like to share it with others, there is nothing better than pushing your work to your origin repository, on Gitlab servers.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout <span class="o">[</span>name_of_your_new_branch<span class="o">]</span>
+$ git push origin <span class="o">[</span>name_of_your_new_branch<span class="o">]</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> command can be used every time you need to push something from your computer to a remote repository, except when you propose changes to the main ns-3-dev repository: your changes must pass a review stage.</p>
+<p>Please note that for older git version, the push command looks like:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git push -u origin <span class="o">[</span>name_of_your_new_branch<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="submit-work-for-review">
+<h2>Submit work for review<a class="headerlink" href="#submit-work-for-review" title="Permalink to this headline">¶</a></h2>
+<p>After you push your branch to origin, you can follow the instructions here <a class="reference external" href="https://docs.gitlab.com/ee/gitlab-basics/add-merge-request.html">https://docs.gitlab.com/ee/gitlab-basics/add-merge-request.html</a> to create a merge request. Please remember to add, as reviewer, at least one maintainer. To get the information on who is maintaining what, please refer to the <a class="reference external" href="https://www.nsnam.org/develop/maintainers/">nsnam website</a>.</p>
+</div>
+<div class="section" id="porting-patches-from-mercurial-repositories-to-git">
+<h2>Porting patches from mercurial repositories to git<a class="headerlink" href="#porting-patches-from-mercurial-repositories-to-git" title="Permalink to this headline">¶</a></h2>
+<p><em>Placeholder section; please improve it.</em></p>
+</div>
+</div>
+<div class="section" id="working-with-git-as-a-maintainer">
+<h1>Working with git as a maintainer<a class="headerlink" href="#working-with-git-as-a-maintainer" title="Permalink to this headline">¶</a></h1>
+<p>As a maintainer, you are a person who has write access to the main nsnam repository. You could push your own work (without passing from code review) or push someone else’s work. Let’s investigate the two cases.</p>
+<div class="section" id="pushing-your-own-work">
+<h2>Pushing your own work<a class="headerlink" href="#pushing-your-own-work" title="Permalink to this headline">¶</a></h2>
+<p>Since you have been added to the Developer list on Gitlab (if not, please open an issue) you can use the git + ssh address when adding nsnam as remote. Once you have done that, you can do your modifications to a local branch, then update the master to point to the latest changes of the nsnam repo, and then:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout master
+$ git pull nsnam master
+$ git merge <span class="o">[</span>your_branch_name<span class="o">]</span>
+$ git push nsnam master
+</pre></div>
+</div>
+<p>Please note that if you want to keep track of your branch, you can use as command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">--no-ff</span> <span class="pre">[your_branch_name]</span></code>. It is always recommended to rebase your branch before merging, to have a clean history. That is not a requirement, though: git perfectly handles a master with parallel merged branches.</p>
+</div>
+<div class="section" id="review-and-merge-someone-else-s-work">
+<h2>Review and merge someone else’s work<a class="headerlink" href="#review-and-merge-someone-else-s-work" title="Permalink to this headline">¶</a></h2>
+<p>Gitlab.com has a plenty of documentation on how to handle merge requests. Please take a look here: <a class="reference external" href="https://docs.gitlab.com/ee/user/project/merge_requests/index.html">https://docs.gitlab.com/ee/user/project/merge_requests/index.html</a>.</p>
+<p>If you are committing a patch from someone else, and it is not coming through a Merge Request process, you can use the –author=’’ argument to ‘git commit’ to assign authorship to another email address (such as we have done in the past with the Mercurial -u option).</p>
+</div>
+<div class="section" id="making-a-release">
+<h2>Making a release<a class="headerlink" href="#making-a-release" title="Permalink to this headline">¶</a></h2>
+<p>As stated above, the project has adopted a workflow to aim for a mostly
+linear history on a single <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.  Releases are branches from
+this <code class="docutils literal notranslate"><span class="pre">master</span></code> branch but the branches themselves are not long-lived;
+the release branches are merged back to <code class="docutils literal notranslate"><span class="pre">master</span></code> in a special way.  However,
+the release branches can be checked out by using the git tag facility;
+a named release such as ‘ns-3.30’ can be checked out on a branch by specifying
+the release name ‘ns-3.30’ (or ‘ns-3.30.1’ etc.).</p>
+<p>To facilitate this, let’s look at a toy repository and the git commands
+involved.  This repository is initialized with a few files (<code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>,
+<code class="docutils literal notranslate"><span class="pre">c</span></code>, and <code class="docutils literal notranslate"><span class="pre">README.md</span></code>) and a <code class="docutils literal notranslate"><span class="pre">VERSION</span></code> file.  <code class="docutils literal notranslate"><span class="pre">VERSION</span></code> is always
+kept on the string <code class="docutils literal notranslate"><span class="pre">3-dev</span></code> in the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch, but is changed to
+the release number in the release branches.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ls
+a  b  c  README.md  VERSION
+</pre></div>
+</div>
+<p>The git log command can be appended with some arguments to display the
+branch history:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git log --graph --decorate --oneline --all
+* d3e953b <span class="o">(</span>HEAD -&gt; master<span class="o">)</span> Add VERSION file
+* 62b05c5 Add three files a, b, and c
+* 3e124c8 <span class="o">(</span>origin/master, origin/HEAD<span class="o">)</span> Initial commit
+
+$ cat VERSION
+<span class="m">3</span>-dev
+
+$ git branch -a
+* master
+  remotes/origin/HEAD -&gt; origin/master
+  remotes/origin/master
+</pre></div>
+</div>
+<p>Now, let’s create a notional ns-3.1 release.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout -b <span class="s1">&#39;ns-3.1-release&#39;</span>
+Switched to a new branch <span class="s1">&#39;ns-3.1-release&#39;</span>
+</pre></div>
+</div>
+<p>We change the VERSION field from ‘3-dev’ to ‘3.1’:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sed -i <span class="s1">&#39;s/3-dev/3.1/g&#39;</span> VERSION
+$ cat VERSION
+<span class="m">3</span>.1
+$ git commit -m<span class="s2">&quot;Update VERSION to 3.1&quot;</span> VERSION
+</pre></div>
+</div>
+<p>Let’s release this.  Add a git annotated tag as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git tag -a <span class="s1">&#39;ns-3.1&#39;</span> -m<span class="s2">&quot;ns-3.1 release&quot;</span>
+</pre></div>
+</div>
+<p>Now, let’s merge back to <code class="docutils literal notranslate"><span class="pre">master</span></code>.  However, we want to avoid touching
+the <code class="docutils literal notranslate"><span class="pre">VERSION</span></code> file on <code class="docutils literal notranslate"><span class="pre">master</span></code>; we want all other changes and tags
+but this one.  We can accomplish this with a special merge as follows.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout master
+$ git merge --no-commit --no-ff ns-3.1-release
+Automatic merge went well<span class="p">;</span> stopped before committing as requested
+</pre></div>
+</div>
+<p>Now, we want to reset VERSION to the previous string, which existed before
+we branched.  We can use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span></code> on this file and then finish the merge.
+Recall its commit hash of <code class="docutils literal notranslate"><span class="pre">d3e953b</span></code> from above</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git reset d3e953b VERSION
+Unstaged changes after reset:
+M     VERSION
+$ sed -i <span class="s1">&#39;s/3.1/3-dev/g&#39;</span> VERSION
+$ cat VERSION
+<span class="m">3</span>-dev
+</pre></div>
+</div>
+<p>Finally, commit the branch and delete our local release branch.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git commit -m<span class="s2">&quot;Merge ns-3.1-release branch&quot;</span>
+$ git branch -d ns-3.1-release
+</pre></div>
+</div>
+<p>The git history now looks like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git log --graph --decorate --oneline --all
+*   80de6c5 <span class="o">(</span>HEAD -&gt; master<span class="o">)</span> Merge ns-3.1-release branch
+<span class="p">|</span><span class="se">\</span>
+<span class="p">|</span> * 5718d61 <span class="o">(</span>tag: ns-3.1, ns-3.1-release<span class="o">)</span> Update VERSION to <span class="m">3</span>.1
+<span class="p">|</span>/
+* d3e953b Add VERSION file
+* 62b05c5 Add three files a, b, and c
+* 3e124c8 <span class="o">(</span>origin/master, origin/HEAD<span class="o">)</span> Initial commit
+$ git tag
+ns-3.1
+</pre></div>
+</div>
+<p>This may now be pushed to <code class="docutils literal notranslate"><span class="pre">nsnam/ns-3-dev.git</span></code> and development can continue.</p>
+<p><strong>Note:</strong>  When pushing to the remote, don’t forget to push the tags:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git push --follow-tags
+</pre></div>
+</div>
+<p>Future users who want to check out the ns-3.1 release will do something like:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout -b my-local-ns-3.1 ns-3.1
+Switched to a new branch <span class="s1">&#39;my-local-ns-3.1&#39;</span>
+</pre></div>
+</div>
+<p><strong>Note:</strong>  It is a good idea to avoid naming the new branch the same as the tag
+name; in this case, ‘ns-3.1’.</p>
+<p>Let’s assume now that master evolves with new features and bugfixes.  They
+are committed to <code class="docutils literal notranslate"><span class="pre">master</span></code> on <code class="docutils literal notranslate"><span class="pre">nsnam/ns-3-dev.git</span></code> as usual:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout master
+... <span class="o">(</span>some changes<span class="o">)</span>
+$ git commit -m<span class="s2">&quot;make some changes&quot;</span> -a
+$ <span class="nb">echo</span> <span class="s1">&#39;d&#39;</span> &gt;&gt; d
+$ git add d
+$ git commit -m<span class="s2">&quot;Add new feature&quot;</span> d
+... <span class="o">(</span>some more changes<span class="o">)</span>
+$ git commit -m<span class="s2">&quot;some more changes&quot;</span> -a
+... <span class="o">(</span>now fix a really important bug<span class="o">)</span>
+$ <span class="nb">echo</span> <span class="s1">&#39;abc&#39;</span> &gt;&gt; a
+$ git commit -m<span class="s2">&quot;Fix missing abc bug on file a&quot;</span> a
+</pre></div>
+</div>
+<p>Now the tree looks like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git log --graph --decorate --oneline --all
+* ee37d41 <span class="o">(</span>HEAD -&gt; master<span class="o">)</span> Fix missing abc bug on file a
+* 9a3432a some more changes
+* ba28d6d Add new feature
+* e50015a make some changes
+*   80de6c5 Merge ns-3.1-release branch
+<span class="p">|</span><span class="se">\</span>
+<span class="p">|</span> * 5718d61 <span class="o">(</span>tag: ns-3.1<span class="o">)</span> Update VERSION to <span class="m">3</span>.1
+<span class="p">|</span>/
+* d3e953b Add VERSION file
+* 62b05c5 Add three files a, b, and c
+* 3e124c8 <span class="o">(</span>origin/master, origin/HEAD<span class="o">)</span> Initial commit
+</pre></div>
+</div>
+<p>Let’s assume that the changeset <code class="docutils literal notranslate"><span class="pre">ee37d41</span></code> is considered important to fix in
+the ns-3.1 release, but we don’t want the other changes introduced since then.
+The solution will be to create a new branch for a hotfix release, and follow
+similar steps.  The branch for the hotfix should come from commit <code class="docutils literal notranslate"><span class="pre">5718d61</span></code>,
+and should cherry-pick commit <code class="docutils literal notranslate"><span class="pre">ee37d41</span></code> (which may require merge if it
+doesn’t apply cleanly), and then the hotfix branch can be tagged and merged
+as was done before.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout -b ns-3.1.1-release ns-3.1
+$ git cherry-pick ee37d41
+... <span class="o">(</span>resolve any conflicts<span class="o">)</span>
+$ git add a
+$ git commit
+$ sed -i <span class="s1">&#39;s/3.1/3.1.1/g&#39;</span> VERSION
+$ cat VERSION
+<span class="m">3</span>.1.1
+$ git commit -m<span class="s2">&quot;Update VERSION to 3.1.1&quot;</span> VERSION
+$ git tag -a <span class="s1">&#39;ns-3.1.1&#39;</span> -m<span class="s2">&quot;ns-3.1.1 release&quot;</span>
+</pre></div>
+</div>
+<p>Now the merge:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout master
+$ git merge --no-commit --no-ff ns-3.1.1-release
+</pre></div>
+</div>
+<p>This time we see:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Auto-merging a
+CONFLICT <span class="o">(</span>content<span class="o">)</span>: Merge conflict in a
+Auto-merging VERSION
+CONFLICT <span class="o">(</span>content<span class="o">)</span>: Merge conflict in VERSION
+Automatic merge failed<span class="p">;</span> fix conflicts and <span class="k">then</span> commit the result.
+</pre></div>
+</div>
+<p>And we can then do:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git reset ee37d41 a
+$ git reset ee37d41 VERSION
+</pre></div>
+</div>
+<p>Which leaves us with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Unstaged changes after reset:
+M     VERSION
+M     a
+</pre></div>
+</div>
+<p>We can next hand-edit these files to restore them to original state, so that:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git status
+On branch master
+Your branch is ahead of <span class="s1">&#39;origin/master&#39;</span> by <span class="m">8</span> commits.
+  <span class="o">(</span>use <span class="s2">&quot;git push&quot;</span> to publish your <span class="nb">local</span> commits<span class="o">)</span>
+
+All conflicts fixed but you are still merging.
+  <span class="o">(</span>use <span class="s2">&quot;git commit&quot;</span> to conclude merge<span class="o">)</span>
+
+$ git commit
+$ git branch -d ns-3.1.1-release
+</pre></div>
+</div>
+<p>The new log should show:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git log --graph --decorate --oneline --all
+*   815ce6e <span class="o">(</span>HEAD -&gt; master<span class="o">)</span> Merge branch <span class="s1">&#39;ns-3.1.1-release&#39;</span>
+<span class="p">|</span><span class="se">\</span>
+<span class="p">|</span> * 12a29ca <span class="o">(</span>tag: ns-3.1.1, ns-3.1.1-release<span class="o">)</span> Update VERSION to <span class="m">3</span>.1.1
+<span class="p">|</span> * 21ebdbf Fix missing abc bug on file a
+* <span class="p">|</span> ee37d41 Fix missing abc bug on file a
+* <span class="p">|</span> 9a3432a some more changes
+* <span class="p">|</span> ba28d6d Add new feature
+* <span class="p">|</span> e50015a make some changes
+* <span class="p">|</span>   80de6c5 Merge ns-3.1-release branch
+<span class="p">|</span><span class="se">\ \</span>
+<span class="p">|</span> <span class="p">|</span>/
+<span class="p">|</span> * 5718d61 <span class="o">(</span>tag: ns-3.1<span class="o">)</span> Update VERSION to <span class="m">3</span>.1
+<span class="p">|</span>/
+* d3e953b Add VERSION file
+* 62b05c5 Add three files a, b, and c
+* 3e124c8 <span class="o">(</span>origin/master, origin/HEAD<span class="o">)</span> Initial commit
+</pre></div>
+</div>
+<p>And we can continue to commit on top of master going forward.  The two
+tags are:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git tag
+ns-3.1
+ns-3.1.1
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Working with git as a user</a><ul>
+<li><a class="reference internal" href="#ns-3-s-git-workflow-in-a-nutshell">ns-3’s Git workflow in a nutshell</a></li>
+<li><a class="reference internal" href="#setup-of-a-personal-repository">Setup of a personal repository</a><ul>
+<li><a class="reference internal" href="#directly-cloning-ns-3-dev">Directly cloning ns-3-dev</a></li>
+<li><a class="reference internal" href="#forking-ns-3-dev-on-gitlab-com">Forking ns-3-dev on GitLab.com</a><ul>
+<li><a class="reference internal" href="#clone-your-forked-repository-on-your-machine">Clone your forked repository on your machine</a></li>
+<li><a class="reference internal" href="#naming-conventions">Naming conventions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#add-the-official-ns-3-repository-as-remote-upstream">Add the official ns-3 repository as remote upstream</a></li>
+<li><a class="reference internal" href="#add-your-forked-repository-as-remote">Add your forked repository as remote</a></li>
+<li><a class="reference internal" href="#keep-in-sync-your-repository-with-latest-ns-3-dev-updates">Keep in sync your repository with latest ns-3-dev updates</a></li>
+<li><a class="reference internal" href="#start-a-new-branch-to-do-some-work">Start a new branch to do some work</a></li>
+<li><a class="reference internal" href="#edit-and-commit-the-modifications">Edit and commit the modifications</a><ul>
+<li><a class="reference internal" href="#commit-message-guidelines">Commit message guidelines</a></li>
+<li><a class="reference internal" href="#commit-log">Commit log</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rebase-your-branch-on-top-of-master">Rebase your branch on top of master</a></li>
+<li><a class="reference internal" href="#pushing-your-changes-to-origin">Pushing your changes to origin</a></li>
+<li><a class="reference internal" href="#submit-work-for-review">Submit work for review</a></li>
+<li><a class="reference internal" href="#porting-patches-from-mercurial-repositories-to-git">Porting patches from mercurial repositories to git</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#working-with-git-as-a-maintainer">Working with git as a maintainer</a><ul>
+<li><a class="reference internal" href="#pushing-your-own-work">Pushing your own work</a></li>
+<li><a class="reference internal" href="#review-and-merge-someone-else-s-work">Review and merge someone else’s work</a></li>
+<li><a class="reference internal" href="#making-a-release">Making a release</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="organization.html"
+                        title="previous chapter">Organization</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="random-variables.html"
+                        title="next chapter">Random Variables</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/working-with-git.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="random-variables.html" title="Random Variables"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="organization.html" title="Organization"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 18:24.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

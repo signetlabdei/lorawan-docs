@@ -1,0 +1,52 @@
+<map id="ns3::Icmpv6L4Protocol::Lookup" name="ns3::Icmpv6L4Protocol::Lookup">
+<area shape="rect" id="node1" title="Lookup in the ND cache for the IPv6 address (similar as ARP protocol)." alt="" coords="5,671,175,712"/>
+<area shape="rect" id="node2" href="$classns3_1_1_ndisc_cache.html#a2be7f4e42e90b272d5335dcb368e51cd" title="Add an entry." alt="" coords="261,13,424,39"/>
+<area shape="rect" id="node4" href="$classns3_1_1_ndisc_cache_1_1_entry.html#ae3ceb95222a17abf23102a2463282bd5" title="Add a packet (or replace old value) in the queue." alt="" coords="257,64,428,105"/>
+<area shape="rect" id="node5" href="$classns3_1_1_icmpv6_l4_protocol.html#a90167126423f3957718e22a8bcd325c8" title="Get the cache corresponding to the device." alt="" coords="258,129,427,171"/>
+<area shape="rect" id="node7" href="$classns3_1_1_ipv6_interface_address.html#a2cefaa3c66694e103da53cc784ba46bf" title="Get the IPv6 address." alt="" coords="536,188,727,229"/>
+<area shape="rect" id="node8" href="$classns3_1_1_ipv6_interface.html#a476d272f8663e4d22c6ceb59300eb834" title="Get an address which is in the same network prefix as destination." alt="" coords="223,247,463,288"/>
+<area shape="rect" id="node12" href="$classns3_1_1_ndisc_cache.html#a8d41239b5c9974b3baf1bc979e7f4f56" title="Get the NetDevice associated with this cache." alt="" coords="240,313,445,339"/>
+<area shape="rect" id="node13" href="$classns3_1_1_ndisc_cache.html#ae3e9d5ba63d932dd05549d5a88a60ede" title="Get the Ipv6Interface associated with this cache." alt="" coords="233,363,452,390"/>
+<area shape="rect" id="node14" href="$classns3_1_1_ipv6_interface.html#a1d83345cf2aaf7a00fa0424d89931ec1" title="Get link&#45;local address from IPv6 interface." alt="" coords="259,415,426,456"/>
+<area shape="rect" id="node15" href="$classns3_1_1_ndisc_cache_1_1_entry.html#a703bbe924beea788efe1d8a2ba560069" title="Get the MAC address of this entry." alt="" coords="546,475,717,516"/>
+<area shape="rect" id="node16" href="$classns3_1_1_ipv6_interface.html#ac09a4fb423fa2f13819bb0ef7c833a47" title="Get number of addresses on this IPv6 interface." alt="" coords="273,831,412,872"/>
+<area shape="rect" id="node17" href="$classns3_1_1_ndisc_cache_1_1_entry.html#a9996bfe28f281f9f8eedcc9dc81f5ed0" title="Is the entry DELAY." alt="" coords="257,896,428,937"/>
+<area shape="rect" id="node18" href="$classns3_1_1_ipv6_address.html#a0b549807a9ad8389c7cc82b762b7c1f1" title="If the IPv6 address is a link&#45;local address (fe80::/64)." alt="" coords="253,700,432,741"/>
+<area shape="rect" id="node23" href="$classns3_1_1_ndisc_cache_1_1_entry.html#a07cfb0c76b36adcda253fbfb57bfbb19" title="Is the entry PERMANENT." alt="" coords="257,961,428,1003"/>
+<area shape="rect" id="node24" href="$classns3_1_1_ndisc_cache_1_1_entry.html#ae5e3cfc15e030309062e4bc246976d16" title="Is the entry REACHABLE." alt="" coords="257,1027,428,1068"/>
+<area shape="rect" id="node25" href="$classns3_1_1_ndisc_cache_1_1_entry.html#ab129ac2cd6e1ef3f3849a23683d4a731" title="Is the entry STALE." alt="" coords="257,1092,428,1133"/>
+<area shape="rect" id="node26" href="$classns3_1_1_ndisc_cache.html#a8a5fa7656fcbc9058fb8e1405a2728db" title="Lookup in the cache." alt="" coords="251,649,435,675"/>
+<area shape="rect" id="node28" href="$classns3_1_1_ipv6_address.html#a1f6831d89cb902b8af5c73baaab97832" title="Make the solicited IPv6 address." alt="" coords="807,561,1039,603"/>
+<area shape="rect" id="node30" href="$classns3_1_1_ndisc_cache_1_1_entry.html#ac44c21887c70ed21a8b1c2df4548f9b1" title="Change the state to this entry to DELAY." alt="" coords="257,1157,428,1199"/>
+<area shape="rect" id="node31" href="$classns3_1_1_ndisc_cache_1_1_entry.html#aa7a9f3b2c4513bf61f286c8cbfea64bb" title="Changes the state to this entry to INCOMPLETE." alt="" coords="257,1223,428,1264"/>
+<area shape="rect" id="node32" href="$classns3_1_1_ndisc_cache.html#a4581af837a386eb8dc5559b7094dbb17" title="Delete an entry." alt="" coords="247,1289,438,1315"/>
+<area shape="rect" id="node34" href="$classns3_1_1_icmpv6_l4_protocol.html#aacd8a4ff185f48e74f4c4b8dc0da4398" title="Send a Neighbor Solicitation." alt="" coords="258,765,427,807"/>
+<area shape="rect" id="node46" href="$classns3_1_1_ndisc_cache_1_1_entry.html#ad45ee53e7bfc3dc68586273590a896cd" title="Set the node type." alt="" coords="257,1340,428,1381"/>
+<area shape="rect" id="node47" href="$classns3_1_1_ndisc_cache_1_1_entry.html#a8716305d5c4e0c94127cd630a692bc4c" title="Start delay timer." alt="" coords="257,1416,428,1457"/>
+<area shape="rect" id="node49" href="$classns3_1_1_ndisc_cache_1_1_entry.html#a9a9856ca19d04414ed7cc9bf961214d3" title="Start retransmit timer." alt="" coords="257,583,428,624"/>
+<area shape="rect" id="node3" href="$classns3_1_1_ndisc_cache_1_1_entry.html#aa730e61cb48f2436667dc89b822337dc" title="Set the IPv6 address." alt="" coords="546,5,717,47"/>
+<area shape="rect" id="node6" href="$ipv4-address-generator_8cc.html#aaf5aa23b804d2e5e334106f207e8a6cc" title=" " alt="" coords="564,137,699,163"/>
+<area shape="rect" id="node9" href="$classns3_1_1_ipv6_interface_address.html#a54abd854c70042473193466aebfa0b78" title="Get the IPv6 prefix." alt="" coords="536,253,727,295"/>
+<area shape="rect" id="node10" href="$classns3_1_1_ipv6_prefix.html#abd799c16a73b03020fd54da220af326e" title="If the Address match the type." alt="" coords="542,319,721,346"/>
+<area shape="rect" id="node11" href="$classns3_1_1_ipv6_address.html#a7090d589a1640660510753153692a5e1" title="Get the bytes corresponding to the address." alt="" coords="822,319,1023,346"/>
+<area shape="rect" id="node19" href="$classns3_1_1_ipv6_address.html#a3279a6dcdad36e8791f172daaa7be533" title="Combine this address with a prefix." alt="" coords="823,639,1022,680"/>
+<area shape="rect" id="node22" href="$classns3_1_1_ipv6_address.html#a68f522d40b6db6d383848ea90bc47dd0" title="If the IPv6 address is multicast (ff00::/8)." alt="" coords="525,707,737,734"/>
+<area shape="rect" id="node20" href="$classns3_1_1_ipv6_address.html#aa5566a72cd0db41ef149a444977b6d7f" title="Sets an Ipv6Address by parsing the input C&#45;string." alt="" coords="1111,607,1273,634"/>
+<area shape="rect" id="node21" href="$namespacens3.html#aba8266b47e04689cbaa4d1c34e68fedf" title="Convert an IPv6 C&#45;string into a 128&#45;bit representation." alt="" coords="1339,607,1495,634"/>
+<area shape="rect" id="node27" href="$global-router-interface_8cc.html#af2f17e24d29f39f6804d0d10d8cedc71" title=" " alt="" coords="571,606,692,633"/>
+<area shape="rect" id="node29" href="$classns3_1_1_ipv6_address.html#a9f32100844ccb06148ce661a833716bc" title="Serialize this address to a 16&#45;byte buffer." alt="" coords="1093,729,1291,755"/>
+<area shape="rect" id="node33" href="$classns3_1_1_ndisc_cache_1_1_entry.html#a193dd372018c17f093f87b4663454d92" title="Clear the waiting packet list." alt="" coords="546,1363,717,1404"/>
+<area shape="rect" id="node35" href="$classns3_1_1_packet.html#a465108c595a0bc592095cbcab1832ed8" title="Add header to this packet." alt="" coords="543,1027,719,1054"/>
+<area shape="rect" id="node36" href="$classns3_1_1_icmpv6_header.html#aa0598a05dad2904576ed853885f4ed40" title="Calculate pseudo header checksum for IPv6." alt="" coords="800,831,1045,872"/>
+<area shape="rect" id="node37" href="$classns3_1_1_icmpv6_l4_protocol.html#a3c4b85301ce19b8b2791402972553127" title="Helper function used during delayed solicitation." alt="" coords="544,1129,719,1171"/>
+<area shape="rect" id="node38" href="$classns3_1_1_icmpv6_l4_protocol.html#aca22b3999b518531f807d822060a06a8" title="Send a packet via ICMPv6, note that packet already contains ICMPv6 header." alt="" coords="838,1100,1007,1141"/>
+<area shape="rect" id="node39" href="$classns3_1_1_ipv6_address.html#a11e6e4228d3d6e814b2c5ffc18c8ed20" title="Get the &quot;all nodes multicast&quot; address." alt="" coords="541,1195,722,1236"/>
+<area shape="rect" id="node40" href="$classns3_1_1_ipv6_address.html#a2783e8badfc98c8b0a8508bba6e1b91e" title="Get the &quot;any&quot; (::) Ipv6Address." alt="" coords="537,1261,726,1287"/>
+<area shape="rect" id="node41" href="$classns3_1_1_icmpv6_n_s.html#a6cabefb0a72f471458dc98f4653cd687" title="Get the serialized size." alt="" coords="511,1311,752,1338"/>
+<area shape="rect" id="node42" href="$classns3_1_1_packet.html#afff7cb1ff518ee6dc0d424e10a5ad6ec" title="Returns the the size in bytes of the packet (including the zero&#45;filled initial payload)." alt="" coords="554,758,709,785"/>
+<area shape="rect" id="node43" href="$classns3_1_1_random_variable_stream.html#a4fa5944dc4cb11544e661ed23072b36c" title="Get the next random value as a double drawn from the distribution." alt="" coords="527,809,735,851"/>
+<area shape="rect" id="node44" href="$group__timecivil.html#gaf26127cf4571146b83a92ee18679c7a9" title=" " alt="" coords="564,875,699,902"/>
+<area shape="rect" id="node45" href="$classns3_1_1_simulator.html#a671882c894a08af4a5e91181bf1eec13" title="Schedule an event to expire after delay." alt="" coords="540,926,723,953"/>
+<area shape="rect" id="node48" href="$classns3_1_1_ndisc_cache_1_1_entry.html#a9658ba137954c9e7f3dae7befed65eb9" title="Function called when delay timer timeout." alt="" coords="543,1428,719,1469"/>
+<area shape="rect" id="node50" href="$classns3_1_1_ndisc_cache_1_1_entry.html#ac0d7e00b3243994c379fc0d1e0a34755" title="Function called when retransmit timer timeout." alt="" coords="526,540,737,581"/>
+</map>

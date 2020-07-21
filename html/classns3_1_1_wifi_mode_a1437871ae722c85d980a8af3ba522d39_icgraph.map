@@ -1,0 +1,52 @@
+<map id="ns3::WifiMode::GetConstellationSize" name="ns3::WifiMode::GetConstellationSize">
+<area shape="rect" id="node1" title=" " alt="" coords="913,1360,1172,1386"/>
+<area shape="rect" id="node2" href="$classns3_1_1_nist_error_rate_model.html#a0783e188a289fe0623b24a5d4ca32739" title="A pure virtual method that must be implemented in the subclass." alt="" coords="311,20,491,62"/>
+<area shape="rect" id="node4" href="$classns3_1_1_yans_error_rate_model.html#ad4a7308160ef2869c91e779fbdb59c1b" title="A pure virtual method that must be implemented in the subclass." alt="" coords="21,130,204,171"/>
+<area shape="rect" id="node5" href="$classns3_1_1_wifi_mode.html#ad90f36e733ceaf8c5771cfbda437e14f" title=" " alt="" coords="621,1360,827,1386"/>
+<area shape="rect" id="node49" href="$classns3_1_1_wifi_mode.html#a1cc99acf2f87b227ee2f9ec6204bd295" title=" " alt="" coords="583,1410,865,1437"/>
+<area shape="rect" id="node50" href="$classns3_1_1_wifi_mode.html#a5d373f9f80a35339205259fac667593b" title=" " alt="" coords="605,1461,843,1488"/>
+<area shape="rect" id="node3" href="$class_wifi_error_rate_models_test_case_nist.html#ad5b8a5a3be038338f6bcbe0d52331c90" title="Implementation to actually run this TestCase." alt="" coords="5,20,220,62"/>
+<area shape="rect" id="node6" href="$classns3_1_1_wifi_ppdu.html#adf6aa0e6ec585d30f1f851b2013a2397" title="Create a single user PPDU storing a PSDU." alt="" coords="313,785,490,812"/>
+<area shape="rect" id="node7" href="$classns3_1_1_interference_helper.html#a430cf5d51fa5ea6e1a74585edd6ed311" title="Calculate the success rate of the chunk given the SINR, duration, and Wi&#45;Fi mode." alt="" coords="294,836,509,878"/>
+<area shape="rect" id="node8" href="$classns3_1_1_interference_helper.html#a0daf5ceadae9e0f9f204e306ac01c67d" title="Calculate the success rate of the payload chunk given the SINR, duration, and Wi&#45;Fi mode." alt="" coords="268,902,535,943"/>
+<area shape="rect" id="node9" href="$classns3_1_1_aparf_wifi_manager.html#a98a3fc4dfff3bcc1bc452dfed963576f" title="Check for initializations." alt="" coords="316,1019,487,1060"/>
+<area shape="rect" id="node10" href="$classns3_1_1_aparf_wifi_manager.html#a9be0935377c6c6052cc12407d17dafbd" title=" " alt="" coords="27,990,198,1031"/>
+<area shape="rect" id="node11" href="$classns3_1_1_parf_wifi_manager.html#a2a7ea7d1accf1ce9056c91929db2e7eb" title="Check for initializations." alt="" coords="320,1136,483,1178"/>
+<area shape="rect" id="node12" href="$classns3_1_1_parf_wifi_manager.html#a5a7cc006d12987077a3afc4edd76da86" title=" " alt="" coords="31,1120,194,1162"/>
+<area shape="rect" id="node13" href="$classns3_1_1_rrpaa_wifi_manager.html#a37fd1f9711566d9def5f31c966a89bb5" title="Check for initializations." alt="" coords="314,1254,489,1295"/>
+<area shape="rect" id="node14" href="$classns3_1_1_rrpaa_wifi_manager.html#add26dac79b43d5c0114ba30e8cb29a9e" title=" " alt="" coords="25,1211,200,1252"/>
+<area shape="rect" id="node15" href="$class_tx_duration_test.html#a8666c54033e392b15feb1d2aa78bd1c7" title="Check if the payload tx duration returned by InterferenceHelper corresponds to a known value of the p..." alt="" coords="291,1319,511,1360"/>
+<area shape="rect" id="node16" href="$classns3_1_1_mesh_wifi_interface_mac.html#a0d8d92606ef1a302fc967a8c058d5f81" title="Check supported rates." alt="" coords="302,1384,501,1426"/>
+<area shape="rect" id="node17" href="$class_tx_duration_test.html#a86485ba9721aa086d5a487588b856b8a" title="Check if the overall tx duration returned by InterferenceHelper corresponds to a known value of the p..." alt="" coords="281,1450,521,1477"/>
+<area shape="rect" id="node18" href="$classns3_1_1_aarf_wifi_manager.html#a408d8be07102ba41125c839b01e8a7ee" title=" " alt="" coords="320,1502,483,1543"/>
+<area shape="rect" id="node19" href="$classns3_1_1_aarfcd_wifi_manager.html#ab9bfc915e2a36ee071995eb0247b1599" title=" " alt="" coords="312,1567,491,1608"/>
+<area shape="rect" id="node20" href="$classns3_1_1_amrr_wifi_manager.html#ad18cc0aa1f6f6472e9e5ac2563b85e4c" title=" " alt="" coords="317,1632,485,1674"/>
+<area shape="rect" id="node21" href="$classns3_1_1_arf_wifi_manager.html#a6bd79d80cbb7f743aa1bece1e5c24584" title=" " alt="" coords="321,1698,481,1739"/>
+<area shape="rect" id="node22" href="$classns3_1_1_cara_wifi_manager.html#a948e474fbc8dd16211dc6f6fcb6ef496" title=" " alt="" coords="318,1763,485,1804"/>
+<area shape="rect" id="node23" href="$classns3_1_1_ideal_wifi_manager.html#a2e7570eb1f5cbef1067cfb714e94218e" title=" " alt="" coords="317,1828,485,1870"/>
+<area shape="rect" id="node24" href="$classns3_1_1_minstrel_ht_wifi_manager.html#abc2436c9c8dabb7c78907f478e1bb8c7" title=" " alt="" coords="299,1894,503,1935"/>
+<area shape="rect" id="node25" href="$classns3_1_1_onoe_wifi_manager.html#a58c4d341696639d4b0ea618275461da4" title=" " alt="" coords="316,1959,487,2000"/>
+<area shape="rect" id="node26" href="$classns3_1_1_rraa_wifi_manager.html#acc7f56a51e22431479e1d534ad7ece84" title=" " alt="" coords="318,2024,485,2066"/>
+<area shape="rect" id="node27" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a8628d42b27a3bf5cbbd4ea0ec2a79307" title=" " alt="" coords="299,2782,503,2823"/>
+<area shape="rect" id="node28" href="$classns3_1_1_wifi_mode.html#af63086343e98b5d54651d871c9c006fd" title=" " alt="" coords="298,2090,505,2117"/>
+<area shape="rect" id="node29" href="$classns3_1_1_minstrel_wifi_manager.html#afc42d002709fb4334ae5b164bfa07aa8" title="Get data transmit vector." alt="" coords="307,2142,496,2183"/>
+<area shape="rect" id="node30" href="$classns3_1_1_wave_mac_low.html#a1bb1f43357a8c9513961eca42e104de4" title="Return a TXVECTOR for the DATA frame given the destination." alt="" coords="299,2207,504,2248"/>
+<area shape="rect" id="node31" href="$classns3_1_1_regular_wifi_mac.html#ad51001e4ea7ef05fb584002b158a4e3e" title="Return the HT capabilities of the device." alt="" coords="323,2272,479,2314"/>
+<area shape="rect" id="node32" href="$classns3_1_1_ap_wifi_mac.html#a4fefa01556b990b9995ff1a5577060d3" title="Return the HT operation of the current AP." alt="" coords="285,2338,518,2365"/>
+<area shape="rect" id="node33" href="$classns3_1_1_wifi_phy.html#a0854b8251b610b505fec7790bfce07ac" title=" " alt="" coords="309,2390,494,2431"/>
+<area shape="rect" id="node34" href="$classns3_1_1_wifi_phy.html#aa3d6056d67327dc5a757e5e49f68ab37" title=" " alt="" coords="299,2455,503,2496"/>
+<area shape="rect" id="node35" href="$classns3_1_1_wifi_phy.html#a9e4f1e101f3b4fdfdad3f4c470a16a6f" title=" " alt="" coords="292,2520,511,2562"/>
+<area shape="rect" id="node36" href="$classns3_1_1_wifi_mode.html#a686ba1d46740b0e71b852245f766bd36" title=" " alt="" coords="301,137,501,164"/>
+<area shape="rect" id="node37" href="$classns3_1_1_wifi_phy_helper.html#af1baefd0a50daeff72c8075f2eef7eda" title="Get the Radiotap header." alt="" coords="322,2586,481,2627"/>
+<area shape="rect" id="node38" href="$classns3_1_1_mesh_wifi_interface_mac.html#ae564ee657ce84f1023eabfd6d3e474a4" title=" " alt="" coords="302,2651,501,2692"/>
+<area shape="rect" id="node39" href="$classns3_1_1_ap_wifi_mac.html#a0b627f2e2ca56a38915e18a7a55ace79" title="Return an instance of SupportedRates that contains all rates that we support including HT rates." alt="" coords="291,2716,511,2758"/>
+<area shape="rect" id="node40" href="$classns3_1_1_sta_wifi_mac.html#a484da19ff4bb12683c7c77c68f45c458" title="Return an instance of SupportedRates that contains all rates that we support including HT rates." alt="" coords="289,188,513,230"/>
+<area shape="rect" id="node41" href="$classns3_1_1_regular_wifi_mac.html#a016a83d8f0d89790ac9c177fa2d6751e" title="Return the VHT capabilities of the device." alt="" coords="323,254,479,295"/>
+<area shape="rect" id="node42" href="$classns3_1_1_mesh_wifi_interface_mac.html#a5850d3b31d09fd6dc552e8fa839bf3f2" title="Frame receive handler." alt="" coords="302,319,501,360"/>
+<area shape="rect" id="node43" href="$classns3_1_1_ap_wifi_mac.html#af264125e11c4d132d18966a6aa02ace5" title="This method acts as the MacRxMiddle receive callback and is invoked to notify us that a frame has bee..." alt="" coords="310,385,493,412"/>
+<area shape="rect" id="node44" href="$classns3_1_1_mac_low.html#ab177d7c7ba53c56f91612114412914bf" title="Send Data packet, which can be Data&#45;Ack or RTS&#45;CTS&#45;Data&#45;Ack transaction." alt="" coords="291,436,511,462"/>
+<area shape="rect" id="node45" href="$class_node_statistics.html#a891b5ec279da73f698268df5fb520652" title=" " alt="" coords="309,486,494,513"/>
+<area shape="rect" id="node46" href="$class_power_rate_adaptation_test.html#a3c3954526cb787125fea4c50cfe76174" title="Test aparf function." alt="" coords="307,538,496,579"/>
+<area shape="rect" id="node47" href="$class_power_rate_adaptation_test.html#a06db52c180644f3b961de054c41f2115" title="Test parf function." alt="" coords="307,603,496,644"/>
+<area shape="rect" id="node48" href="$class_power_rate_adaptation_test.html#af0e5f044ed9bdf20dc203926ff8677b4" title="Test rrpaa function." alt="" coords="307,668,496,710"/>
+</map>

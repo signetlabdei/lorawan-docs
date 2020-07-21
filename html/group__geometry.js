@@ -1,0 +1,47 @@
+var group__geometry =
+[
+    [ "vector.h", "vector_8h.html", null ],
+    [ "Vector2D", "classns3_1_1_vector2_d.html", [
+      [ "Vector2D", "classns3_1_1_vector2_d.html#a10b1426d2d9476637240e4b3eb4038bb", null ],
+      [ "Vector2D", "classns3_1_1_vector2_d.html#a6998ac88167c75311c6489025de96d42", null ],
+      [ "GetLength", "classns3_1_1_vector2_d.html#acbd8e703cfff38b96d0646bc7f1cf941", null ],
+      [ "CalculateDistance", "classns3_1_1_vector2_d.html#ae17f0bb09a310c1e62e1cf2f0f667486", null ],
+      [ "operator!=", "classns3_1_1_vector2_d.html#a1378511a8d43c76b58df1f9d374ab9f7", null ],
+      [ "operator+", "classns3_1_1_vector2_d.html#aa025c19d4e3859ac5cdcdf7301fb31b0", null ],
+      [ "operator-", "classns3_1_1_vector2_d.html#ac638052636e6afad1ec34e1bc40610bd", null ],
+      [ "operator<", "classns3_1_1_vector2_d.html#a6a34eeff8daedb4141f46609905271cf", null ],
+      [ "operator<<", "classns3_1_1_vector2_d.html#a1b4a096260d50f4901e78b2d0744c521", null ],
+      [ "operator<=", "classns3_1_1_vector2_d.html#a5b4a44e62331e0ee88e9f895cb8359b7", null ],
+      [ "operator==", "classns3_1_1_vector2_d.html#a505a6f1dd9d916b03d1a94eb9c6685dd", null ],
+      [ "operator>", "classns3_1_1_vector2_d.html#aa5e9524786f3571696f1ae882ba6fa94", null ],
+      [ "operator>=", "classns3_1_1_vector2_d.html#ab1fbf36facd94b9ca2854298246eb6f2", null ],
+      [ "operator>>", "classns3_1_1_vector2_d.html#a0988ee7b872298c88d80e00e7062de20", null ],
+      [ "x", "classns3_1_1_vector2_d.html#a82ba41e508970719c0907b031eefa572", null ],
+      [ "y", "classns3_1_1_vector2_d.html#a4ba4640626850d67ed91d76da816ee09", null ]
+    ] ],
+    [ "Vector3D", "classns3_1_1_vector3_d.html", [
+      [ "Vector3D", "classns3_1_1_vector3_d.html#a0a0b720fe39a728d684f55eddc9949e4", null ],
+      [ "Vector3D", "classns3_1_1_vector3_d.html#a99e0529991415af1083d745b43ddb61f", null ],
+      [ "GetLength", "classns3_1_1_vector3_d.html#a03f9ec6c69485b037dae708116f74015", null ],
+      [ "CalculateDistance", "classns3_1_1_vector3_d.html#a0d454b609d1dd69a7d1104056b88f1f3", null ],
+      [ "MakeVectorAccessor", "classns3_1_1_vector3_d.html#af90a32eca76819bbc04aa57a4a9c4378", null ],
+      [ "MakeVectorAccessor", "classns3_1_1_vector3_d.html#aeb17f629fdfba037401d6c01a635764c", null ],
+      [ "MakeVectorChecker", "classns3_1_1_vector3_d.html#aab6f0f423180ba61adc568f3443f8137", null ],
+      [ "operator!=", "classns3_1_1_vector3_d.html#a2b3314f2543fa703afcc78bb4fa756f4", null ],
+      [ "operator+", "classns3_1_1_vector3_d.html#a39bfe21a2d1ab6984ded35b5355b202e", null ],
+      [ "operator-", "classns3_1_1_vector3_d.html#a7ee82807781e470db564c4db6e9de245", null ],
+      [ "operator<", "classns3_1_1_vector3_d.html#af2899258858cfcb9f9044dd71e46c5f4", null ],
+      [ "operator<<", "classns3_1_1_vector3_d.html#a40a724f1e5055492d9671a3c7837559f", null ],
+      [ "operator<=", "classns3_1_1_vector3_d.html#ae42fab8d56d96f7d705bdbedaf247cfd", null ],
+      [ "operator==", "classns3_1_1_vector3_d.html#a710ecbbaa26d921c713ecf7d1e21fdec", null ],
+      [ "operator>", "classns3_1_1_vector3_d.html#a8c6eef497206a3daf0f3fcbaaf22de2f", null ],
+      [ "operator>=", "classns3_1_1_vector3_d.html#a26a3aa0c73b5668a2508cf4e80314d91", null ],
+      [ "operator>>", "classns3_1_1_vector3_d.html#a6603a58c4077919a177fa90b2d3ee2a3", null ],
+      [ "Vector", "classns3_1_1_vector3_d.html#a7e59b47bc94c9cb1dadff68c1d0112d8", null ],
+      [ "VectorChecker", "classns3_1_1_vector3_d.html#a9167c893cfcc425a13242c4a31771deb", null ],
+      [ "VectorValue", "classns3_1_1_vector3_d.html#a39ac5b15bff5df42f75ebb0b686cff28", null ],
+      [ "x", "classns3_1_1_vector3_d.html#a59dbc5dc984a4fea2819e042d2d6109c", null ],
+      [ "y", "classns3_1_1_vector3_d.html#ae679257823406b2e008be04316e4245f", null ],
+      [ "z", "classns3_1_1_vector3_d.html#ac31aba8cd85d66f8cf52e4b4c313f415", null ]
+    ] ]
+];

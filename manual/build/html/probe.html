@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Probes &#8212; Manual</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Collectors" href="collector.html" />
+    <link rel="prev" title="Data Collection Helpers" href="data-collection-helpers.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Manual</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="collector.html" title="Collectors"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="data-collection-helpers.html" title="Data Collection Helpers"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="data-collection.html" accesskey="U">Data Collection</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="probes">
+<h1>Probes<a class="headerlink" href="#probes" title="Permalink to this headline">¶</a></h1>
+<p>This section details the functionalities provided by the Probe class
+to an <em>ns-3</em> simulation, and gives examples on how to code them in a
+program. This section is meant for users interested in developing
+simulations with the <em>ns-3</em> tools and using the Data Collection
+Framework, of which the Probe class is a part, to generate data output
+with their simulation’s results.</p>
+<div class="section" id="probe-overview">
+<h2>Probe Overview<a class="headerlink" href="#probe-overview" title="Permalink to this headline">¶</a></h2>
+<p>A Probe object is supposed to be connected to a variable from the
+simulation whose values throughout the experiment are relevant to the user.
+The Probe will record what were values assumed by the variable throughout
+the simulation and pass such data to another member of the Data Collection
+Framework.  While it is out of this section’s scope to discuss what happens
+after the Probe produces its output, it is sufficient to say that, by the
+end of the simulation, the user will have detailed information about what
+values were stored inside the variable being probed during the simulation.</p>
+<p>Typically, a Probe is connected to an <em>ns-3</em> trace source.  In this manner,
+whenever the trace source exports a new value, the Probe consumes the
+value (and exports it downstream to another object via its own trace source).</p>
+<p>The Probe can be thought of as kind of a filter on trace sources.  The
+main reasons for possibly hooking to a Probe rather than directly to a
+trace source are as follows:</p>
+<ul>
+<li><p>Probes may be dynamically turned on and off during the simulation
+with calls to <code class="docutils literal notranslate"><span class="pre">Enable()</span></code> and <code class="docutils literal notranslate"><span class="pre">Disable()</span></code>.  For example, the
+outputting of data may be turned off during the simulation warmup
+phase.</p></li>
+<li><p>Probes may perform operations on the data to extract values from more
+complicated structures; for instance, outputting the packet size value
+from a received ns3::Packet.</p></li>
+<li><p>Probes register a name in the ns3::Config namespace (using
+<code class="docutils literal notranslate"><span class="pre">Names::Add</span> <span class="pre">()</span></code>) so that other objects may refer to them.</p></li>
+<li><p>Probes provide a static method that allows one to manipulate a Probe
+by name, such as what is done in ns2measure <a class="reference internal" href="#cic06" id="id1"><span>[Cic06]</span></a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Stat</span><span class="o">::</span><span class="n">put</span> <span class="p">(</span><span class="s">&quot;my_metric&quot;</span><span class="p">,</span> <span class="n">ID</span><span class="p">,</span> <span class="n">sample</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The ns-3 equivalent of the above ns2measure code is, e.g.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DoubleProbe</span><span class="o">::</span><span class="n">SetValueByPath</span> <span class="p">(</span><span class="s">&quot;/path/to/probe&quot;</span><span class="p">,</span> <span class="n">sample</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="section" id="creation">
+<h3>Creation<a class="headerlink" href="#creation" title="Permalink to this headline">¶</a></h3>
+<p>Note that a Probe base class object can not be created because it
+is an abstract base class, i.e. it has pure virtual functions that
+have not been implemented.  An object of type DoubleProbe,
+which is a subclass of the Probe class, will be created here to
+show what needs to be done.</p>
+<p>One declares a DoubleProbe in dynamic memory by using the smart pointer class
+(Ptr&lt;T&gt;). To create a DoubleProbe in dynamic memory with smart pointers, one
+just needs to call the <em>ns-3</em> method <code class="docutils literal notranslate"><span class="pre">CreateObject()</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="n">myprobe</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="p">();</span>
+</pre></div>
+</div>
+<p>The declaration above creates DoubleProbes using the default values for its
+attributes.  There are four attributes in the DoubleProbe class; two in the
+base class object DataCollectionObject, and two in the Probe base class:</p>
+<ul class="simple">
+<li><p>“Name” (DataCollectionObject), a StringValue</p></li>
+<li><p>“Enabled” (DataCollectionObject), a BooleanValue</p></li>
+<li><p>“Start” (Probe), a TimeValue</p></li>
+<li><p>“Stop” (Probe), a TimeValue</p></li>
+</ul>
+<p>One can set such attributes at object creation by using the following
+method:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="n">myprobe</span> <span class="o">=</span> <span class="n">CreateObjectWithAttributes</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="p">(</span>
+    <span class="s">&quot;Name&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;myprobe&quot;</span><span class="p">),</span>
+    <span class="s">&quot;Enabled&quot;</span><span class="p">,</span> <span class="n">BooleanValue</span> <span class="p">(</span><span class="nb">false</span><span class="p">),</span>
+    <span class="s">&quot;Start&quot;</span><span class="p">,</span> <span class="n">TimeValue</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">100.0</span><span class="p">)),</span>
+    <span class="s">&quot;Stop&quot;</span><span class="p">,</span> <span class="n">TimeValue</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">1000.0</span><span class="p">)));</span>
+</pre></div>
+</div>
+<p>Start and Stop are Time variables which determine the interval of action
+of the Probe. The Probe will only output data if the current time of the
+Simulation is inside of that interval.  The special time value of 0 seconds
+for Stop will disable this attribute (i.e. keep the Probe on for the whole
+simulation).  Enabled is a flag that turns the
+Probe on or off, and must be set to true for the Probe to export data.
+The Name is the object’s name in the DCF framework.</p>
+</div>
+<div class="section" id="importing-and-exporting-data">
+<h3>Importing and exporting data<a class="headerlink" href="#importing-and-exporting-data" title="Permalink to this headline">¶</a></h3>
+<p><em>ns-3</em> trace sources are strongly typed, so the mechanisms for hooking
+Probes to a trace source and for exporting data belong to its
+subclasses.  For instance, the default distribution of <em>ns-3</em> provides
+a class DoubleProbe that is designed to hook to a trace source
+exporting a double value.  We’ll next detail the operation of the
+DoubleProbe, and then discuss how other Probe classes may be defined
+by the user.</p>
+</div>
+</div>
+<div class="section" id="doubleprobe-overview">
+<h2>DoubleProbe Overview<a class="headerlink" href="#doubleprobe-overview" title="Permalink to this headline">¶</a></h2>
+<p>The DoubleProbe connects to a double-valued <em>ns-3</em> trace source, and itself
+exports a different double-valued <em>ns-3</em> trace source.</p>
+<p>The following code, drawn from
+<code class="docutils literal notranslate"><span class="pre">src/stats/examples/double-probe-example.cc</span></code>, shows the basic
+operations of plumbing the DoubleProbe into a simulation, where it is
+probing a Counter exported by an emitter object (class Emitter).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Emitter</span><span class="o">&gt;</span> <span class="n">emitter</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Emitter</span><span class="o">&gt;</span> <span class="p">();</span>
+<span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;/Names/Emitter&quot;</span><span class="p">,</span> <span class="n">emitter</span><span class="p">);</span>
+<span class="p">...</span>
+
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="n">probe1</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="p">();</span>
+
+<span class="c1">// Connect the probe to the emitter&#39;s Counter</span>
+<span class="kt">bool</span> <span class="n">connected</span> <span class="o">=</span> <span class="n">probe1</span><span class="o">-&gt;</span><span class="n">ConnectByObject</span> <span class="p">(</span><span class="s">&quot;Counter&quot;</span><span class="p">,</span> <span class="n">emitter</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The following code is probing the same Counter exported by the same
+emitter object.  This DoubleProbe, however, is using a path in the
+configuration namespace to make the connection.  Note that the emitter
+registered itself in the configuration namespace after it was created;
+otherwise, the ConnectByPath would not work.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="n">probe2</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="p">();</span>
+
+<span class="c1">// Note, no return value is checked here</span>
+<span class="n">probe2</span><span class="o">-&gt;</span><span class="n">ConnectByPath</span> <span class="p">(</span><span class="s">&quot;/Names/Emitter/Counter&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The next DoubleProbe shown that is shown below will have its value set using
+its path in the configuration namespace.  Note that this time the
+DoubleProbe registered itself in the configuration namespace after it was
+created.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="n">probe3</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="p">();</span>
+<span class="n">probe3</span><span class="o">-&gt;</span><span class="n">SetName</span> <span class="p">(</span><span class="s">&quot;StaticallyAccessedProbe&quot;</span><span class="p">);</span>
+
+<span class="c1">// We must add it to the config database</span>
+<span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;/Names/Probes&quot;</span><span class="p">,</span> <span class="n">probe3</span><span class="o">-&gt;</span><span class="n">GetName</span> <span class="p">(),</span> <span class="n">probe3</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The emitter’s Count() function is now able to set the value for this DoubleProbe as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="n">Emitter</span><span class="o">::</span><span class="n">Count</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="p">...</span>
+  <span class="n">m_counter</span> <span class="o">+=</span> <span class="mf">1.0</span><span class="p">;</span>
+  <span class="n">DoubleProbe</span><span class="o">::</span><span class="n">SetValueByPath</span> <span class="p">(</span><span class="s">&quot;/Names/StaticallyAccessedProbe&quot;</span><span class="p">,</span> <span class="n">m_counter</span><span class="p">);</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The above example shows how the code calling the Probe does not have to
+have an explicit reference to the Probe, but can direct the value
+setting through the Config namespace.  This is similar in functionality
+to the <cite>Stat::Put</cite> method introduced by ns2measure paper <a class="reference internal" href="#cic06" id="id2"><span>[Cic06]</span></a>, and allows
+users to temporarily insert Probe statements like <cite>printf</cite> statements within
+existing <em>ns-3</em> models.  Note that in order to be able to use the DoubleProbe in this example like this, 2 things were necessary:</p>
+<ol class="arabic simple">
+<li><p>the stats module header file was included in the example .cc file</p></li>
+<li><p>the example was made dependent on the stats module in its wscript file.</p></li>
+</ol>
+<p>Analogous things need to be done in order to add other Probes in other places in the <em>ns-3</em> code base.</p>
+<p>The values for the DoubleProbe can also be set using the function
+DoubleProbe::SetValue(), while the values for the DoubleProbe can be gotten
+using the function DoubleProbe::GetValue().</p>
+<p>The DoubleProbe exports double values in its “Output” trace source;
+a downstream object can hook a trace sink (NotifyViaProbe) to this as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">connected</span> <span class="o">=</span> <span class="n">probe1</span><span class="o">-&gt;</span><span class="n">TraceConnect</span> <span class="p">(</span><span class="s">&quot;Output&quot;</span><span class="p">,</span> <span class="n">probe1</span><span class="o">-&gt;</span><span class="n">GetName</span> <span class="p">(),</span> <span class="n">MakeCallback</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">NotifyViaProbe</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="other-probes">
+<h2>Other probes<a class="headerlink" href="#other-probes" title="Permalink to this headline">¶</a></h2>
+<p>Besides the DoubleProbe, the following Probes are also available:</p>
+<ul class="simple">
+<li><p>Uinteger8Probe connects to an <em>ns-3</em> trace source exporting an uint8_t.</p></li>
+<li><p>Uinteger16Probe connects to an <em>ns-3</em> trace source exporting an uint16_t.</p></li>
+<li><p>Uinteger32Probe connects to an <em>ns-3</em> trace source exporting an uint32_t.</p></li>
+<li><p>PacketProbe connects to an <em>ns-3</em> trace source exporting a packet.</p></li>
+<li><p>ApplicationPacketProbe connects to an <em>ns-3</em> trace source exporting a packet and a socket address.</p></li>
+<li><p>Ipv4PacketProbe connects to an <em>ns-3</em> trace source exporting a packet, an IPv4 object, and an interface.</p></li>
+</ul>
+</div>
+<div class="section" id="creating-new-probe-types">
+<h2>Creating new Probe types<a class="headerlink" href="#creating-new-probe-types" title="Permalink to this headline">¶</a></h2>
+<p>To create a new Probe type, you need to perform the following steps:</p>
+<ul class="simple">
+<li><p>Be sure that your new Probe class is derived from the Probe base class.</p></li>
+<li><p>Be sure that the pure virtual functions that your new Probe class
+inherits from the Probe base class are implemented.</p></li>
+<li><p>Find an existing Probe class that uses a trace source that is
+closest in type to the type of trace source your Probe will be
+using.</p></li>
+<li><p>Copy that existing Probe class’s header file (.h) and implementation
+file (.cc) to two new files with names matching your new Probe.</p></li>
+<li><p>Replace the types, arguments, and variables in the copied files with
+the appropriate type for your Probe.</p></li>
+<li><p>Make necessary modifications to make the code compile and to make it
+behave as you would like.</p></li>
+</ul>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>Two examples will be discussed in detail here:</p>
+<ul class="simple">
+<li><p>Double Probe Example</p></li>
+<li><p>IPv4 Packet Plot Example</p></li>
+</ul>
+<div class="section" id="double-probe-example">
+<h3>Double Probe Example<a class="headerlink" href="#double-probe-example" title="Permalink to this headline">¶</a></h3>
+<p>The double probe example has been discussed previously.  The example
+program can be found in
+<code class="docutils literal notranslate"><span class="pre">src/stats/examples/double-probe-example.cc</span></code>.  To
+summarize what occurs in this program, there is an emitter that
+exports a counter that increments according to a Poisson process.  In
+particular, two ways of emitting data are shown:</p>
+<ol class="arabic">
+<li><p>through a traced variable hooked to one Probe:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TracedValue</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">m_counter</span><span class="p">;</span>  <span class="c1">// normally this would be integer type</span>
+</pre></div>
+</div>
+</li>
+<li><p>through a counter whose value is posted to a second Probe, referenced by its name in the Config system:</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="n">Emitter</span><span class="o">::</span><span class="n">Count</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">NS_LOG_FUNCTION</span> <span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="n">NS_LOG_DEBUG</span> <span class="p">(</span><span class="s">&quot;Counting at &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">Simulator</span><span class="o">::</span><span class="n">Now</span> <span class="p">().</span><span class="n">GetSeconds</span> <span class="p">());</span>
+  <span class="n">m_counter</span> <span class="o">+=</span> <span class="mf">1.0</span><span class="p">;</span>
+  <span class="n">DoubleProbe</span><span class="o">::</span><span class="n">SetValueByPath</span> <span class="p">(</span><span class="s">&quot;/Names/StaticallyAccessedProbe&quot;</span><span class="p">,</span> <span class="n">m_counter</span><span class="p">);</span>
+  <span class="n">Simulator</span><span class="o">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="n">m_var</span><span class="o">-&gt;</span><span class="n">GetValue</span> <span class="p">()),</span> <span class="o">&amp;</span><span class="n">Emitter</span><span class="o">::</span><span class="n">Count</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Let’s look at the Probe more carefully.  Probes can receive their values
+in a multiple ways:</p>
+<ol class="arabic simple">
+<li><p>by the Probe accessing the trace source directly and connecting
+a trace sink to it</p></li>
+<li><p>by the Probe accessing the trace source through the config namespace
+and connecting a trace sink to it</p></li>
+<li><p>by the calling code explicitly calling the Probe’s <cite>SetValue()</cite> method</p></li>
+<li><p>by the calling code explicitly calling <cite>SetValueByPath (“/path/through/Config/namespace”, …)</cite></p></li>
+</ol>
+<p>The first two techniques are expected to be the most common.  Also in the
+example, the hooking of a normal callback function is shown,
+as is typically done in <em>ns-3</em>.  This callback function is not associated
+with a Probe object.  We’ll call this case 0) below.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// This is a function to test hooking a raw function to the trace source</span>
+<span class="kt">void</span>
+<span class="nf">NotifyViaTraceSource</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">context</span><span class="p">,</span> <span class="kt">double</span> <span class="n">oldVal</span><span class="p">,</span> <span class="kt">double</span> <span class="n">newVal</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">NS_LOG_DEBUG</span> <span class="p">(</span><span class="s">&quot;context: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">context</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; old &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">oldVal</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; new &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">newVal</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>First, the emitter needs to be setup:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Emitter</span><span class="o">&gt;</span> <span class="n">emitter</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Emitter</span><span class="o">&gt;</span> <span class="p">();</span>
+<span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;/Names/Emitter&quot;</span><span class="p">,</span> <span class="n">emitter</span><span class="p">);</span>
+
+<span class="c1">// The Emitter object is not associated with an ns-3 node, so</span>
+<span class="c1">// it won&#39;t get started automatically, so we need to do this ourselves</span>
+<span class="n">Simulator</span><span class="o">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">Emitter</span><span class="o">::</span><span class="n">Start</span><span class="p">,</span> <span class="n">emitter</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The various DoubleProbes interact with the emitter in the example as
+shown below.</p>
+<p>Case 0):</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// The below shows typical functionality without a probe</span>
+<span class="c1">// (connect a sink function to a trace source)</span>
+<span class="c1">//</span>
+<span class="n">connected</span> <span class="o">=</span> <span class="n">emitter</span><span class="o">-&gt;</span><span class="n">TraceConnect</span> <span class="p">(</span><span class="s">&quot;Counter&quot;</span><span class="p">,</span> <span class="s">&quot;sample context&quot;</span><span class="p">,</span> <span class="n">MakeCallback</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">NotifyViaTraceSource</span><span class="p">));</span>
+<span class="n">NS_ASSERT_MSG</span> <span class="p">(</span><span class="n">connected</span><span class="p">,</span> <span class="s">&quot;Trace source not connected&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>case 1):</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//</span>
+<span class="c1">// Probe1 will be hooked directly to the Emitter trace source object</span>
+<span class="c1">//</span>
+
+<span class="c1">// probe1 will be hooked to the Emitter trace source</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="n">probe1</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="p">();</span>
+<span class="c1">// the probe&#39;s name can serve as its context in the tracing</span>
+<span class="n">probe1</span><span class="o">-&gt;</span><span class="n">SetName</span> <span class="p">(</span><span class="s">&quot;ObjectProbe&quot;</span><span class="p">);</span>
+
+<span class="c1">// Connect the probe to the emitter&#39;s Counter</span>
+<span class="n">connected</span> <span class="o">=</span> <span class="n">probe1</span><span class="o">-&gt;</span><span class="n">ConnectByObject</span> <span class="p">(</span><span class="s">&quot;Counter&quot;</span><span class="p">,</span> <span class="n">emitter</span><span class="p">);</span>
+<span class="n">NS_ASSERT_MSG</span> <span class="p">(</span><span class="n">connected</span><span class="p">,</span> <span class="s">&quot;Trace source not connected to probe1&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>case 2):</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//</span>
+<span class="c1">// Probe2 will be hooked to the Emitter trace source object by</span>
+<span class="c1">// accessing it by path name in the Config database</span>
+<span class="c1">//</span>
+
+<span class="c1">// Create another similar probe; this will hook up via a Config path</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="n">probe2</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="p">();</span>
+<span class="n">probe2</span><span class="o">-&gt;</span><span class="n">SetName</span> <span class="p">(</span><span class="s">&quot;PathProbe&quot;</span><span class="p">);</span>
+
+<span class="c1">// Note, no return value is checked here</span>
+<span class="n">probe2</span><span class="o">-&gt;</span><span class="n">ConnectByPath</span> <span class="p">(</span><span class="s">&quot;/Names/Emitter/Counter&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>case 4) (case 3 is not shown in this example):</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//</span>
+<span class="c1">// Probe3 will be called by the emitter directly through the</span>
+<span class="c1">// static method SetValueByPath().</span>
+<span class="c1">//</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="n">probe3</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">DoubleProbe</span><span class="o">&gt;</span> <span class="p">();</span>
+<span class="n">probe3</span><span class="o">-&gt;</span><span class="n">SetName</span> <span class="p">(</span><span class="s">&quot;StaticallyAccessedProbe&quot;</span><span class="p">);</span>
+<span class="c1">// We must add it to the config database</span>
+<span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;/Names/Probes&quot;</span><span class="p">,</span> <span class="n">probe3</span><span class="o">-&gt;</span><span class="n">GetName</span> <span class="p">(),</span> <span class="n">probe3</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>And finally, the example shows how the probes can be hooked to
+generate output:</p>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// The probe itself should generate output.  The context that we provide</span>
+<span class="c1">// to this probe (in this case, the probe name) will help to disambiguate</span>
+<span class="c1">// the source of the trace</span>
+<span class="n">connected</span> <span class="o">=</span> <span class="n">probe3</span><span class="o">-&gt;</span><span class="n">TraceConnect</span> <span class="p">(</span><span class="s">&quot;Output&quot;</span><span class="p">,</span>
+                                  <span class="s">&quot;/Names/Probes/StaticallyAccessedProbe/Output&quot;</span><span class="p">,</span>
+                                  <span class="n">MakeCallback</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">NotifyViaProbe</span><span class="p">));</span>
+<span class="n">NS_ASSERT_MSG</span> <span class="p">(</span><span class="n">connected</span><span class="p">,</span> <span class="s">&quot;Trace source not .. connected to probe3 Output&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The following callback is hooked to the Probe in this example for
+illustrative purposes; normally, the Probe would be hooked to a
+Collector object.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// This is a function to test hooking it to the probe output</span>
+<span class="kt">void</span>
+<span class="nf">NotifyViaProbe</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">context</span><span class="p">,</span> <span class="kt">double</span> <span class="n">oldVal</span><span class="p">,</span> <span class="kt">double</span> <span class="n">newVal</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">NS_LOG_DEBUG</span> <span class="p">(</span><span class="s">&quot;context: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">context</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; old &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">oldVal</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; new &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">newVal</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ipv4-packet-plot-example">
+<h3>IPv4 Packet Plot Example<a class="headerlink" href="#ipv4-packet-plot-example" title="Permalink to this headline">¶</a></h3>
+<p>The IPv4 packet plot example is based on the fifth.cc example from the <em>ns-3</em>
+Tutorial.  It can be found in
+<code class="docutils literal notranslate"><span class="pre">src/stats/examples/ipv4-packet-plot-example.cc</span></code>.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>      node 0                 node 1
++----------------+    +----------------+
+|    ns-3 TCP    |    |    ns-3 TCP    |
++----------------+    +----------------+
+|    10.1.1.1    |    |    10.1.1.2    |
++----------------+    +----------------+
+| point-to-point |    | point-to-point |
++----------------+    +----------------+
+        |                     |
+        +---------------------+
+</pre></div>
+</div>
+<p>We’ll just look at the Probe, as it illustrates that Probes may also
+unpack values from structures (in this case, packets) and report
+those values as trace source outputs, rather than just passing through
+the same type of data.</p>
+<p>There are other aspects of this example that will be explained later in
+the documentation.  The two types of data that are exported are the packet
+itself (<cite>Output</cite>) and a count of the number of bytes in the packet
+(<cite>OutputBytes</cite>).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TypeId</span>
+<span class="n">Ipv4PacketProbe</span><span class="o">::</span><span class="n">GetTypeId</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">static</span> <span class="n">TypeId</span> <span class="n">tid</span> <span class="o">=</span> <span class="n">TypeId</span> <span class="p">(</span><span class="s">&quot;ns3::Ipv4PacketProbe&quot;</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">SetParent</span><span class="o">&lt;</span><span class="n">Probe</span><span class="o">&gt;</span> <span class="p">()</span>
+    <span class="p">.</span><span class="n">AddConstructor</span><span class="o">&lt;</span><span class="n">Ipv4PacketProbe</span><span class="o">&gt;</span> <span class="p">()</span>
+    <span class="p">.</span><span class="n">AddTraceSource</span> <span class="p">(</span> <span class="s">&quot;Output&quot;</span><span class="p">,</span>
+                      <span class="s">&quot;The packet plus its IPv4 object and interface that serve as the output for this probe&quot;</span><span class="p">,</span>
+                      <span class="n">MakeTraceSourceAccessor</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">Ipv4PacketProbe</span><span class="o">::</span><span class="n">m_output</span><span class="p">))</span>
+    <span class="p">.</span><span class="n">AddTraceSource</span> <span class="p">(</span> <span class="s">&quot;OutputBytes&quot;</span><span class="p">,</span>
+                      <span class="s">&quot;The number of bytes in the packet&quot;</span><span class="p">,</span>
+                      <span class="n">MakeTraceSourceAccessor</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">Ipv4PacketProbe</span><span class="o">::</span><span class="n">m_outputBytes</span><span class="p">))</span>
+  <span class="p">;</span>
+  <span class="k">return</span> <span class="n">tid</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>When the Probe’s trace sink gets a packet, if the Probe is enabled, then
+it will output the packet on its <cite>Output</cite> trace source, but it will also
+output the number of bytes on the <cite>OutputBytes</cite> trace source.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="n">Ipv4PacketProbe</span><span class="o">::</span><span class="n">TraceSink</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">Packet</span><span class="o">&gt;</span> <span class="n">packet</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="n">ipv4</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">interface</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">NS_LOG_FUNCTION</span> <span class="p">(</span><span class="k">this</span> <span class="o">&lt;&lt;</span> <span class="n">packet</span> <span class="o">&lt;&lt;</span> <span class="n">ipv4</span> <span class="o">&lt;&lt;</span> <span class="n">interface</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">IsEnabled</span> <span class="p">())</span>
+    <span class="p">{</span>
+      <span class="n">m_packet</span>    <span class="o">=</span> <span class="n">packet</span><span class="p">;</span>
+      <span class="n">m_ipv4</span>      <span class="o">=</span> <span class="n">ipv4</span><span class="p">;</span>
+      <span class="n">m_interface</span> <span class="o">=</span> <span class="n">interface</span><span class="p">;</span>
+      <span class="n">m_output</span> <span class="p">(</span><span class="n">packet</span><span class="p">,</span> <span class="n">ipv4</span><span class="p">,</span> <span class="n">interface</span><span class="p">);</span>
+
+      <span class="kt">uint32_t</span> <span class="n">packetSizeNew</span> <span class="o">=</span> <span class="n">packet</span><span class="o">-&gt;</span><span class="n">GetSize</span> <span class="p">();</span>
+      <span class="n">m_outputBytes</span> <span class="p">(</span><span class="n">m_packetSizeOld</span><span class="p">,</span> <span class="n">packetSizeNew</span><span class="p">);</span>
+      <span class="n">m_packetSizeOld</span> <span class="o">=</span> <span class="n">packetSizeNew</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<dl class="citation">
+<dt class="label" id="cic06"><span class="brackets">Cic06</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>)</span></dt>
+<dd><p>Claudio Cicconetti, Enzo Mingozzi, Giovanni Stea, “An Integrated
+Framework for Enabling Effective Data Collection and Statistical
+Analysis with ns2, Workshop on ns-2 (WNS2), Pisa, Italy, October 2006.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Probes</a><ul>
+<li><a class="reference internal" href="#probe-overview">Probe Overview</a><ul>
+<li><a class="reference internal" href="#creation">Creation</a></li>
+<li><a class="reference internal" href="#importing-and-exporting-data">Importing and exporting data</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#doubleprobe-overview">DoubleProbe Overview</a></li>
+<li><a class="reference internal" href="#other-probes">Other probes</a></li>
+<li><a class="reference internal" href="#creating-new-probe-types">Creating new Probe types</a></li>
+<li><a class="reference internal" href="#examples">Examples</a><ul>
+<li><a class="reference internal" href="#double-probe-example">Double Probe Example</a></li>
+<li><a class="reference internal" href="#ipv4-packet-plot-example">IPv4 Packet Plot Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="data-collection-helpers.html"
+                        title="previous chapter">Data Collection Helpers</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="collector.html"
+                        title="next chapter">Collectors</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/probe.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="collector.html" title="Collectors"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="data-collection-helpers.html" title="Data Collection Helpers"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="data-collection.html" >Data Collection</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 18:24.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

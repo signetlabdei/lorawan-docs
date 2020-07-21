@@ -1,0 +1,39 @@
+<map id="ns3::WifiMode::GetUniqueName" name="ns3::WifiMode::GetUniqueName">
+<area shape="rect" id="node1" title=" " alt="" coords="1568,417,1799,443"/>
+<area shape="rect" id="node2" href="$classns3_1_1_ideal_wifi_manager.html#a07b8198f3c1f258c46af76a3ffe746a7" title="Adds a pair of WifiTxVector and the minimum SNR for that given vector to the list." alt="" coords="1326,128,1494,169"/>
+<area shape="rect" id="node3" href="$classns3_1_1_ideal_wifi_manager.html#a678947f49366ca1734b6299b667845da" title="Initialize() implementation." alt="" coords="1049,93,1217,135"/>
+<area shape="rect" id="node4" href="$classns3_1_1_ideal_wifi_manager.html#a2e7570eb1f5cbef1067cfb714e94218e" title=" " alt="" coords="1049,249,1217,291"/>
+<area shape="rect" id="node5" href="$classns3_1_1_ideal_wifi_manager.html#a80a9c2d8cda6728bc2ae4a12096a33c1" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="1326,376,1494,417"/>
+<area shape="rect" id="node6" href="$classns3_1_1_ideal_wifi_manager.html#a3baa107493052456308092dd737f94a0" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="1326,441,1494,483"/>
+<area shape="rect" id="node7" href="$classns3_1_1_ideal_wifi_manager.html#a54dbe87febb24476928b3ad7806bb00b" title="Return the minimum SNR needed to successfully transmit data with this WifiTxVector at the specified B..." alt="" coords="1326,193,1494,235"/>
+<area shape="rect" id="node9" href="$classns3_1_1_ap_wifi_mac.html#a0b627f2e2ca56a38915e18a7a55ace79" title="Return an instance of SupportedRates that contains all rates that we support including HT rates." alt="" coords="1300,507,1520,548"/>
+<area shape="rect" id="node17" href="$classns3_1_1_qos_txop.html#a9d95f239e265ca92f0a46acfe02bbc17" title="Event handler when a BlockAck is received." alt="" coords="1309,573,1511,599"/>
+<area shape="rect" id="node18" href="$classns3_1_1_wifi_tx_vector.html#a93cb4439b90c64b1baf4ff3c5246e3b2" title="The standard disallows certain combinations of WifiMode, number of spatial streams,..." alt="" coords="1337,311,1483,352"/>
+<area shape="rect" id="node34" href="$classns3_1_1_block_ack_manager.html#a9b24f21a11eb094fa683943b7fc3c747" title=" " alt="" coords="1325,624,1495,665"/>
+<area shape="rect" id="node35" href="$namespacens3.html#a57863964b1cdf873dff3b24df1f0c04b" title="Serialize WifiMode to ostream (human&#45;readable)." alt="" coords="1345,690,1475,717"/>
+<area shape="rect" id="node36" href="$classns3_1_1_wave_net_device.html#a9c79e073964d5d94bd6bf6facc7aad9b" title=" " alt="" coords="1331,741,1489,783"/>
+<area shape="rect" id="node8" href="$classns3_1_1_ideal_wifi_manager.html#ab263f9a1c04747b2c2b55774bf97854a" title=" " alt="" coords="1049,184,1217,225"/>
+<area shape="rect" id="node10" href="$classns3_1_1_ap_wifi_mac.html#ad7fef463a6076916fa1f5a989e56f13d" title="Forward an association or a reassociation response packet to the DCF." alt="" coords="1017,463,1250,490"/>
+<area shape="rect" id="node12" href="$classns3_1_1_ap_wifi_mac.html#a6c8cbc0fc95f3eaf4840d4ffcf78fac5" title="Forward a beacon packet to the beacon special DCF." alt="" coords="1015,565,1252,591"/>
+<area shape="rect" id="node16" href="$classns3_1_1_ap_wifi_mac.html#a0a9fcbd87326c5c56644deb3504038df" title="Forward a probe response packet to the DCF." alt="" coords="1017,514,1249,541"/>
+<area shape="rect" id="node11" href="$classns3_1_1_ap_wifi_mac.html#af264125e11c4d132d18966a6aa02ace5" title="This method acts as the MacRxMiddle receive callback and is invoked to notify us that a frame has bee..." alt="" coords="773,474,955,501"/>
+<area shape="rect" id="node13" href="$classns3_1_1_ap_wifi_mac.html#a398b0e04d5c31b7459358a459beff098" title="Initialize() implementation." alt="" coords="761,613,967,639"/>
+<area shape="rect" id="node14" href="$classns3_1_1_ap_wifi_mac.html#a09ad3b96835cb8fac18783423d3e57a7" title="Enable or disable beacon generation of the AP." alt="" coords="764,547,964,588"/>
+<area shape="rect" id="node15" href="$classns3_1_1_ap_wifi_mac.html#aa7cd3c1ec15889267ab5b5e183b91d2b" title="Get the type ID." alt="" coords="513,554,709,581"/>
+<area shape="rect" id="node19" href="$classns3_1_1_wifi_ppdu.html#adf6aa0e6ec585d30f1f851b2013a2397" title="Create a single user PPDU storing a PSDU." alt="" coords="1045,381,1222,407"/>
+<area shape="rect" id="node20" href="$classns3_1_1_minstrel_ht_wifi_manager.html#ae830b47b0301066a9e16fed61fc1882d" title="Check the validity of a combination of number of streams, chWidth and mode." alt="" coords="1031,315,1235,356"/>
+<area shape="rect" id="node21" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a3c5c32d2a58fb45a922e435192b0cf43" title="Initialize() implementation." alt="" coords="762,348,966,389"/>
+<area shape="rect" id="node22" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a3b59b889db624539c6d5af89fa5e9f74" title="Initialize Minstrel Table." alt="" coords="762,283,966,324"/>
+<area shape="rect" id="node23" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a7f94804a34efa6121bdfd5d01ac34694" title="Check for initializations." alt="" coords="509,283,713,324"/>
+<area shape="rect" id="node24" href="$classns3_1_1_minstrel_ht_wifi_manager.html#abc2436c9c8dabb7c78907f478e1bb8c7" title=" " alt="" coords="257,5,461,47"/>
+<area shape="rect" id="node25" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a8628d42b27a3bf5cbbd4ea0ec2a79307" title=" " alt="" coords="257,71,461,112"/>
+<area shape="rect" id="node26" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a82e4438440288e8418b501893a11bacb" title=" " alt="" coords="257,136,461,177"/>
+<area shape="rect" id="node27" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a2a1c915cc3def7e9bff5da0123a16040" title="Typically called per A&#45;MPDU, either when a Block ACK was successfully received or when a BlockAckTime..." alt="" coords="5,208,209,249"/>
+<area shape="rect" id="node28" href="$classns3_1_1_minstrel_ht_wifi_manager.html#aa586c8a920a75e94428f44b560aefc7e" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="5,287,209,328"/>
+<area shape="rect" id="node29" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a62ad32df22d4a75101d001e6e6635559" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="257,371,461,412"/>
+<area shape="rect" id="node30" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a7f0e93d9dccdb7bbbe35ff9b6d117d53" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="257,436,461,477"/>
+<area shape="rect" id="node31" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a9891afb45c6fd574a040dfef9d85014f" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="257,501,461,543"/>
+<area shape="rect" id="node32" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a755d4934c2a8ea5392c23aed6ae85851" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="257,567,461,608"/>
+<area shape="rect" id="node33" href="$classns3_1_1_minstrel_ht_wifi_manager.html#abb282b56803faf26139d0db929b09b22" title="Update rate." alt="" coords="257,253,461,295"/>
+<area shape="rect" id="node37" href="$class_wave_net_device_example.html#a97da76e52cd76f5054e8c92cfae01a9e" title="Send IP example function." alt="" coords="1041,741,1225,783"/>
+</map>

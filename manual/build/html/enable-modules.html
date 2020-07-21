@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Enabling Subsets of ns-3 Modules &#8212; Manual</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Enabling/disabling ns-3 Tests and Examples" href="enable-tests.html" />
+    <link rel="prev" title="Creating Documentation" href="documentation.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Manual</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="enable-tests.html" title="Enabling/disabling ns-3 Tests and Examples"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="documentation.html" title="Creating Documentation"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="support.html" accesskey="U">Support</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="enabling-subsets-of-ns3-modules">
+<h1>Enabling Subsets of <em>ns-3</em> Modules<a class="headerlink" href="#enabling-subsets-of-ns3-modules" title="Permalink to this headline">¶</a></h1>
+<p>As with most software projects, <em>ns-3</em> is ever growing larger in terms of number of modules, lines of code, and memory footprint.  Users, however, may only use a few of those modules at a time.  For this reason, users may want to explicitly enable only the subset of the possible <em>ns-3</em> modules that they actually need for their research.</p>
+<p>This chapter discusses how to enable only the <em>ns-3</em> modules that you are interested in using.</p>
+<div class="section" id="how-to-enable-a-subset-of-ns3-s-modules">
+<h2>How to enable a subset of <em>ns-3</em>’s modules<a class="headerlink" href="#how-to-enable-a-subset-of-ns3-s-modules" title="Permalink to this headline">¶</a></h2>
+<p>If shared libraries are being built, then enabling a module will cause at least one library to be built:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>libns3-modulename.so
+</pre></div>
+</div>
+<p>If the module has a test library and test libraries are being built, then</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>libns3-modulename-test.so
+</pre></div>
+</div>
+<p>will be built, too.  Other modules that the module depends on and their test libraries will also be built.</p>
+<p>By default, all modules are built in <em>ns-3</em>.  There are two ways to enable a subset of these modules:</p>
+<ol class="arabic simple">
+<li><p>Using waf’s –enable-modules option</p></li>
+<li><p>Using the <em>ns-3</em> configuration file</p></li>
+</ol>
+<div class="section" id="enable-modules-using-waf-s-enable-modules-option">
+<h3>Enable modules using waf’s –enable-modules option<a class="headerlink" href="#enable-modules-using-waf-s-enable-modules-option" title="Permalink to this headline">¶</a></h3>
+<p>To enable only the core module with example and tests, for example,
+try these commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf clean
+$ ./waf configure --enable-examples --enable-tests --enable-modules<span class="o">=</span>core
+$ ./waf build
+$ <span class="nb">cd</span> build/debug/
+$ ls
+</pre></div>
+</div>
+<p>and the following libraries should be present:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>bindings  libns3-core.so       ns3      scratch  utils
+examples  libns3-core-test.so  samples  src
+</pre></div>
+</div>
+<p>Note the <code class="docutils literal notranslate"><span class="pre">./waf</span> <span class="pre">clean</span></code> step is done here only to make it more obvious which module libraries were built.  You don’t have to do <code class="docutils literal notranslate"><span class="pre">./waf</span> <span class="pre">clean</span></code> in order to enable subsets of modules.</p>
+<p>Running test.py will cause only those tests that depend on module core to be run:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>24 of 24 tests passed (24 passed, 0 skipped, 0 failed, 0 crashed, 0 valgrind errors)
+</pre></div>
+</div>
+<p>Repeat the above steps for the “network” module instead of the “core” module, and the following will be built, since network depends on core:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>bindings  libns3-core.so       libns3-network.so       ns3      scratch  utils
+examples  libns3-core-test.so  libns3-network-test.so  samples  src
+</pre></div>
+</div>
+<p>Running test.py will cause those tests that depend on only the core and network modules to be run:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>31 of 31 tests passed (31 passed, 0 skipped, 0 failed, 0 crashed, 0 valgrind errors)
+</pre></div>
+</div>
+</div>
+<div class="section" id="enable-modules-using-the-ns3-configuration-file">
+<h3>Enable modules using the <em>ns-3</em> configuration file<a class="headerlink" href="#enable-modules-using-the-ns3-configuration-file" title="Permalink to this headline">¶</a></h3>
+<p>A configuration file, .ns3rc, has been added to <em>ns-3</em> that allows users to specify which modules are to be included in the build.</p>
+<p>When enabling a subset of <em>ns-3</em> modules, the precedence rules are as follows:</p>
+<ol class="arabic simple">
+<li><p>the –enable-modules configure string overrides any .ns3rc file</p></li>
+<li><p>the .ns3rc file in the top level <em>ns-3</em> directory is next consulted, if present</p></li>
+<li><p>the system searches for ~/.ns3rc if the above two are unspecified</p></li>
+</ol>
+<p>If none of the above limits the modules to be built, all modules that waf knows about will be built.</p>
+<p>The maintained version of the .ns3rc file in the <em>ns-3</em> source code repository resides in the <code class="docutils literal notranslate"><span class="pre">utils</span></code> directory.  The reason for this is if it were in the top-level directory of the repository, it would be prone to accidental checkins from maintainers that enable the modules they want to use.  Therefore, users need to manually copy the .ns3rc from the <code class="docutils literal notranslate"><span class="pre">utils</span></code> directory to their preferred place (top level directory or their home directory) to enable persistent modular build configuration.</p>
+<p>Assuming that you are in the top level <em>ns-3</em> directory, you can get a copy of the .ns3rc file that is in the <code class="docutils literal notranslate"><span class="pre">utils</span></code> directory as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cp utils/.ns3rc .
+</pre></div>
+</div>
+<p>The .ns3rc file should now be in your top level <em>ns-3</em> directory, and it contains the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#! /usr/bin/env python</span>
+
+<span class="c1"># A list of the modules that will be enabled when ns-3 is run.</span>
+<span class="c1"># Modules that depend on the listed modules will be enabled also.</span>
+<span class="c1">#</span>
+<span class="c1"># All modules can be enabled by choosing &#39;all_modules&#39;.</span>
+<span class="n">modules_enabled</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;all_modules&#39;</span><span class="p">]</span>
+
+<span class="c1"># Set this equal to true if you want examples to be run.</span>
+<span class="n">examples_enabled</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1"># Set this equal to true if you want tests to be run.</span>
+<span class="n">tests_enabled</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>Use your favorite editor to modify the .ns3rc file to only enable the core module with examples and tests like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#! /usr/bin/env python</span>
+
+<span class="c1"># A list of the modules that will be enabled when ns-3 is run.</span>
+<span class="c1"># Modules that depend on the listed modules will be enabled also.</span>
+<span class="c1">#</span>
+<span class="c1"># All modules can be enabled by choosing &#39;all_modules&#39;.</span>
+<span class="n">modules_enabled</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;core&#39;</span><span class="p">]</span>
+
+<span class="c1"># Set this equal to true if you want examples to be run.</span>
+<span class="n">examples_enabled</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Set this equal to true if you want tests to be run.</span>
+<span class="n">tests_enabled</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>Only the core module will be enabled now if you try these commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf clean
+$ ./waf configure
+$ ./waf build
+$ <span class="nb">cd</span> build/debug/
+$ ls
+</pre></div>
+</div>
+<p>and the following libraries should be present:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>bindings  libns3-core.so       ns3      scratch  utils
+examples  libns3-core-test.so  samples  src
+</pre></div>
+</div>
+<p>Note the <code class="docutils literal notranslate"><span class="pre">./waf</span> <span class="pre">clean</span></code> step is done here only to make it more obvious which module libraries were built.  You don’t have to do <code class="docutils literal notranslate"><span class="pre">./waf</span> <span class="pre">clean</span></code> in order to enable subsets of modules.</p>
+<p>Running test.py will cause only those tests that depend on module core to be run:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>24 of 24 tests passed (24 passed, 0 skipped, 0 failed, 0 crashed, 0 valgrind errors)
+</pre></div>
+</div>
+<p>Repeat the above steps for the “network” module instead of the “core” module, and the following will be built, since network depends on core:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>bindings  libns3-core.so       libns3-network.so       ns3      scratch  utils
+examples  libns3-core-test.so  libns3-network-test.so  samples  src
+</pre></div>
+</div>
+<p>Running test.py will cause those tests that depend on only the core and network modules to be run:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>31 of 31 tests passed (31 passed, 0 skipped, 0 failed, 0 crashed, 0 valgrind errors)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Enabling Subsets of <em>ns-3</em> Modules</a><ul>
+<li><a class="reference internal" href="#how-to-enable-a-subset-of-ns3-s-modules">How to enable a subset of <em>ns-3</em>’s modules</a><ul>
+<li><a class="reference internal" href="#enable-modules-using-waf-s-enable-modules-option">Enable modules using waf’s –enable-modules option</a></li>
+<li><a class="reference internal" href="#enable-modules-using-the-ns3-configuration-file">Enable modules using the <em>ns-3</em> configuration file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="documentation.html"
+                        title="previous chapter">Creating Documentation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="enable-tests.html"
+                        title="next chapter">Enabling/disabling <em>ns-3</em> Tests and Examples</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/enable-modules.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="enable-tests.html" title="Enabling/disabling ns-3 Tests and Examples"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="documentation.html" title="Creating Documentation"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="support.html" >Support</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 18:24.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

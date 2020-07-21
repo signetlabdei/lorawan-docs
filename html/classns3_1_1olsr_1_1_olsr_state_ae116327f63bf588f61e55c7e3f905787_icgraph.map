@@ -1,0 +1,13 @@
+<map id="ns3::olsr::OlsrState::FindNeighborTuple" name="ns3::olsr::OlsrState::FindNeighborTuple">
+<area shape="rect" id="node1" title="Finds a neighbor tuple." alt="" coords="1893,94,2043,135"/>
+<area shape="rect" id="node2" href="$classns3_1_1olsr_1_1_routing_protocol.html#af4806875b065d6fe5704ce65824dc1a7" title="This auxiliary function (defined in RFC 3626) is used for calculating the MPR Set." alt="" coords="1657,33,1845,74"/>
+<area shape="rect" id="node10" href="$classns3_1_1olsr_1_1_routing_protocol.html#a00df90e72ca9f8de10b6f7859fb730eb" title="This function is invoked when a link tuple is updated." alt="" coords="1421,94,1609,135"/>
+<area shape="rect" id="node11" href="$classns3_1_1olsr_1_1_routing_protocol.html#a9a9cccf9682782a0b95539862b4e6b53" title="Updates the Neighbor Set according to the information contained in a new received HELLO message (foll..." alt="" coords="1185,153,1373,194"/>
+<area shape="rect" id="node3" href="$classns3_1_1olsr_1_1_routing_protocol.html#a947ab35f39d191ed51d3fbb7c1cc282c" title="Computates MPR set of a node following RFC 3626 hints." alt="" coords="1421,29,1609,70"/>
+<area shape="rect" id="node4" href="$classns3_1_1olsr_1_1_routing_protocol.html#afe342f9ee1d563e0691e12143f47233d" title="Performs all actions needed when a neighbor loss occurs." alt="" coords="1185,35,1373,77"/>
+<area shape="rect" id="node7" href="$classns3_1_1olsr_1_1_routing_protocol.html#a9518c29e8994234ead40d408498237ce" title="Processes a HELLO message following RFC 3626 specification." alt="" coords="477,65,665,106"/>
+<area shape="rect" id="node5" href="$classns3_1_1olsr_1_1_routing_protocol.html#a468cf0d2f46d44f105dff8dffdabcb67" title="Removes tuple_ if expired." alt="" coords="949,35,1137,77"/>
+<area shape="rect" id="node6" href="$classns3_1_1olsr_1_1_routing_protocol.html#a2a23a0fd6fa714fef6613afd3f5bc1d2" title="Updates Link Set according to a new received HELLO message (following RFC 3626 specification)." alt="" coords="713,65,901,106"/>
+<area shape="rect" id="node8" href="$classns3_1_1olsr_1_1_routing_protocol.html#afa449e39488b5c03609960e66553490e" title="Receive an OLSR message." alt="" coords="241,65,429,106"/>
+<area shape="rect" id="node9" href="$classns3_1_1olsr_1_1_routing_protocol.html#afe5419799e8d38ee32d82615de55ef22" title="Initialize() implementation." alt="" coords="5,65,193,106"/>
+</map>

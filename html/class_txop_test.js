@@ -1,0 +1,26 @@
+var class_txop_test =
+[
+    [ "ExpectedBackoff", "struct_txop_test_1_1_expected_backoff.html", "struct_txop_test_1_1_expected_backoff" ],
+    [ "ExpectedBackoffs", "class_txop_test.html#af3a8c179aec6921b25b9e82e7690f17a", null ],
+    [ "ExpectedGrant", "class_txop_test.html#acab57f54734e275d7960b4385eb77dc3", null ],
+    [ "ExpectedGrants", "class_txop_test.html#a64afab7ed3b5d229e0235cceb609e67e", null ],
+    [ "TxopTest", "class_txop_test.html#ae9056ba8c11c303ce706fd3183e90577", null ],
+    [ "DoDispose", "class_txop_test.html#a76af607cde2612849d71e01aebc5dff8", null ],
+    [ "GenerateBackoff", "class_txop_test.html#abef6a537ae75bb4c8acd7ac17273d155", null ],
+    [ "HasFramesToTransmit", "class_txop_test.html#af451ad72207c68068cd96a359c86d720", null ],
+    [ "IsAccessRequested", "class_txop_test.html#a9e61caede6e29d4d04f91f95edffaba9", null ],
+    [ "NotifyAccessGranted", "class_txop_test.html#a5fc2dfbaab91eb161b9b10be8b25a49c", null ],
+    [ "NotifyAccessRequested", "class_txop_test.html#ab95237024a0b2a50fc9119ffda8058c8", null ],
+    [ "NotifyChannelSwitching", "class_txop_test.html#afa913a01177993e2050f0bf7c32867a6", null ],
+    [ "NotifyInternalCollision", "class_txop_test.html#a45c9f1085d4564a089146d725b3ffb51", null ],
+    [ "NotifySleep", "class_txop_test.html#a777936837045b46bc30f47b516b4cc1d", null ],
+    [ "NotifyWakeUp", "class_txop_test.html#a25e73925bf2d9477bada59ff9d0c2f17", null ],
+    [ "QueueTx", "class_txop_test.html#a44558f344082618aaa0bd21858f3b2f9", null ],
+    [ "ChannelAccessManagerTest< TxopType >", "class_txop_test.html#aa3692d4110b29cebddfe5c0cb1321ba3", null ],
+    [ "m_accessRequested", "class_txop_test.html#aee55b35f5ee33a741ea5f57b1b0f9eb6", null ],
+    [ "m_expectedBackoff", "class_txop_test.html#a527b2b41e104f9c5a17f0fc1b5d4ee1a", null ],
+    [ "m_expectedGrants", "class_txop_test.html#a9a767f6c0a8f49a6816070ca2b648ccf", null ],
+    [ "m_expectedInternalCollision", "class_txop_test.html#a00876da3911d6c4e58a9dae04596a408", null ],
+    [ "m_i", "class_txop_test.html#a24563bf7c6eef5ec04bb0ccb07b56f93", null ],
+    [ "m_test", "class_txop_test.html#a8c8e8b5f10a83557cb1559b6dbebba97", null ]
+];

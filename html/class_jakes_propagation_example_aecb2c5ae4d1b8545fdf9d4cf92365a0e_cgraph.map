@@ -1,0 +1,52 @@
+<map id="JakesPropagationExample::JakesPropagationExample" name="JakesPropagationExample::JakesPropagationExample">
+<area shape="rect" id="node1" title=" " alt="" coords="5,149,204,190"/>
+<area shape="rect" id="node2" href="$class_jakes_propagation_example.html#a36fd2bb995aace95f298c53ca25a7c32" title=" " alt="" coords="252,115,443,157"/>
+<area shape="rect" id="node49" href="$classns3_1_1_mobility_model.html#ac584b3d5a309709d2f13ed6ada1e7640" title=" " alt="" coords="274,181,421,222"/>
+<area shape="rect" id="node3" href="$classns3_1_1_propagation_loss_model.html#a962c62e339e9890f70ea5bb87a12b075" title="Returns the Rx Power taking into account all the PropagationLossModel(s) chained to the current one." alt="" coords="491,157,691,198"/>
+<area shape="rect" id="node5" href="$classns3_1_1_time.html#ad012aa15ec441ad811a09954f95e4a8d" title="Get an approximation of the time stored in this instance in the indicated unit." alt="" coords="739,25,938,52"/>
+<area shape="rect" id="node10" href="$group__simulator.html#gac3635e2e87f7ce316c89290ee1b01d0d" title="create an ns3::Time instance which contains the current simulation time." alt="" coords="549,81,632,108"/>
+<area shape="rect" id="node4" href="$classns3_1_1_propagation_loss_model.html#aa6bb73e4132dc5d8e1b49750955838bb" title="Returns the Rx Power taking into account only the particular PropagationLossModel." alt="" coords="739,157,939,198"/>
+<area shape="rect" id="node6" href="$classns3_1_1_time.html#a4bd2d3c8a919e4b57e60692b53db4a61" title="Get the Time value expressed in a particular unit." alt="" coords="1790,5,1943,32"/>
+<area shape="rect" id="node7" href="$classns3_1_1_time.html#a0b023c55c20582aa7c1781aacf128034" title="Get the Information record for timeUnit for the current Resolution." alt="" coords="2031,5,2232,32"/>
+<area shape="rect" id="node8" href="$classns3_1_1_time.html#a963e53522278fcbdf1ab9f7adbd0f5d6" title="Get the current Resolution." alt="" coords="2280,5,2475,32"/>
+<area shape="rect" id="node9" href="$classns3_1_1_time.html#a6a872e62f71dfa817fef2c549473d980" title="Set the default resolution." alt="" coords="2523,5,2771,32"/>
+<area shape="rect" id="node11" href="$classns3_1_1_simulator.html#ac3178fa975b419f7875e7105be122800" title="Return the current simulation virtual time." alt="" coords="762,88,915,115"/>
+<area shape="rect" id="node12" href="$group__simulator.html#ga42eb4eddad41528d4d99794a3dae3fd0" title="Get the SimulatorImpl singleton." alt="" coords="1025,444,1131,471"/>
+<area shape="rect" id="node48" href="$classns3_1_1_simulator_impl.html#aa516c50060846adc6fd316e83ef0797c" title="Return the current simulation virtual time." alt="" coords="987,56,1169,83"/>
+<area shape="rect" id="node13" href="$classns3_1_1_object_factory.html#a52eda277f4aaab54266134ba48102ad7" title="Create an Object instance of the configured TypeId." alt="" coords="1246,302,1389,343"/>
+<area shape="rect" id="node27" href="$group__logging.html#gac4c06cbbed12229d85991ced145f6be2" title="Default Node printer." alt="" coords="1228,469,1407,496"/>
+<area shape="rect" id="node30" href="$namespacens3.html#ae01c3c7786b644dfb8a0bb8f1201b269" title="Default Time printer." alt="" coords="1229,107,1405,133"/>
+<area shape="rect" id="node36" href="$classns3_1_1_string_value.html#a6f208c2778fe1c7882e5cb429b8326ae" title=" " alt="" coords="1238,571,1397,597"/>
+<area shape="rect" id="node37" href="$namespacens3.html#ab4e173cdfd43d17c1a40d5348510a670" title=" " alt="" coords="1256,621,1379,648"/>
+<area shape="rect" id="node39" href="$classns3_1_1_global_value.html#a48a99242193fb69609a17332733e8600" title="Get the value." alt="" coords="1217,723,1417,749"/>
+<area shape="rect" id="node41" href="$namespacens3.html#aebac73305345f2e2803fdeb102a7705e" title="Set the LogNodePrinter function to be used to prepend log messages with the node id." alt="" coords="1230,672,1405,699"/>
+<area shape="rect" id="node42" href="$namespacens3.html#a46cd76678f7da29799d1b41994e12ec1" title="Set the TimePrinter function to be used to prepend log messages with the simulation time." alt="" coords="1231,251,1403,277"/>
+<area shape="rect" id="node46" href="$group__simulator.html#ga233c5c38de117e4e4a5a9cd168694792" title="Get the static SimulatorImpl instance." alt="" coords="1260,368,1375,395"/>
+<area shape="rect" id="node47" href="$classns3_1_1_object_factory.html#a77dcd099064038a1eb7a6b8251229ec3" title="Set the TypeId of the Objects to be created by this factory." alt="" coords="2060,454,2203,495"/>
+<area shape="rect" id="node14" href="$classns3_1_1_object.html#a3183f228d0d4cd56f1b17cff0b841d83" title="Initialize all member variables registered as Attributes of this TypeId." alt="" coords="1501,309,1667,336"/>
+<area shape="rect" id="node23" href="$classns3_1_1_type_id.html#a66b2628edf921fc88945ec8a8f3a1683" title="Get the constructor callback." alt="" coords="1483,469,1685,496"/>
+<area shape="rect" id="node25" href="$classns3_1_1_object.html#aa6ed5d48f17e3d0fd28714777239e6c4" title="Set the TypeId of this Object." alt="" coords="1501,360,1667,387"/>
+<area shape="rect" id="node15" href="$classns3_1_1_object_base.html#a5cda18dec6d0744cb652a3ed60056958" title="Complete construction of ObjectBase; invoked by derived classes." alt="" coords="1755,309,1978,336"/>
+<area shape="rect" id="node16" href="$classns3_1_1_object_base.html#afe5f2f7b2fabc99aa33f9bb434e3b695" title="Attempt to set the value referenced by the accessor spec to a valid value according to the checker,..." alt="" coords="2044,403,2219,429"/>
+<area shape="rect" id="node17" href="$classns3_1_1_attribute_construction_list.html#a02d64d7a11d4605d2aa19be66a2ed629" title="Find an Attribute in the list from its AttributeChecker." alt="" coords="2035,221,2227,262"/>
+<area shape="rect" id="node18" href="$classns3_1_1_type_id.html#a796434fa73c5e54a9a86f24144d13738" title="Get Attribute information by index." alt="" coords="2286,232,2469,259"/>
+<area shape="rect" id="node19" href="$classns3_1_1_type_id.html#a750c20decd8786e40ae504f566345177" title="Get the Attribute name by index." alt="" coords="2040,286,2223,327"/>
+<area shape="rect" id="node20" href="$classns3_1_1_type_id.html#abc4965475a579c2afdc668d7a7d58374" title="Get the name." alt="" coords="2295,379,2460,405"/>
+<area shape="rect" id="node21" href="$classns3_1_1_singleton.html#a80a2cd3c25a27ea72add7a9f7a141ffa" title="Get a pointer to the singleton instance." alt="" coords="2545,485,2748,526"/>
+<area shape="rect" id="node22" href="$classns3_1_1_iid_manager.html#a6658aaa8120efd885e98addb76a6f1d4" title="Get the name of a type id." alt="" coords="2549,379,2745,405"/>
+<area shape="rect" id="node24" href="$classns3_1_1_iid_manager.html#a5222ca2d43248c46812b39b993eb2e08" title="Get the constructor Callback of a type id." alt="" coords="1751,469,1983,496"/>
+<area shape="rect" id="node26" href="$classns3_1_1_object.html#a7dc4a16a2f85427034a0102c0f6adaf9" title="Verify that this Object is still live, by checking it&#39;s reference count." alt="" coords="1795,360,1938,387"/>
+<area shape="rect" id="node28" href="$classns3_1_1_simulator.html#a8514b74ee2c42916b351b33c4a963bb0" title="Get the current simulation context." alt="" coords="1485,520,1683,547"/>
+<area shape="rect" id="node29" href="$classns3_1_1_simulator_impl.html#a8b66270c97766c0adb997e2535648557" title="Get the current simulation context." alt="" coords="1794,571,1939,613"/>
+<area shape="rect" id="node31" href="$classns3_1_1_time.html#a48c9bb8d93fea6a8d8cac216967219f4" title="Attach a unit to a Time, to facilitate output in a specific unit." alt="" coords="1529,56,1639,83"/>
+<area shape="rect" id="node32" href="$classns3_1_1_time.html#a1444f0f08b5e19f031157609e32fcf98" title=" " alt="" coords="1491,107,1677,133"/>
+<area shape="rect" id="node33" href="$classns3_1_1_time.html#addd8e672203391b3ae98ee475ce05272" title=" " alt="" coords="1761,157,1972,184"/>
+<area shape="rect" id="node34" href="$ipv4-address-generator_8cc.html#aaf5aa23b804d2e5e334106f207e8a6cc" title=" " alt="" coords="1799,56,1934,83"/>
+<area shape="rect" id="node35" href="$global-router-interface_8cc.html#af2f17e24d29f39f6804d0d10d8cedc71" title=" " alt="" coords="1806,107,1927,133"/>
+<area shape="rect" id="node38" href="$classns3_1_1_ptr.html#adb507425388a3cdc4312362dc2ed2151" title="Mark this as a a reference by incrementing the reference count." alt="" coords="1520,621,1648,648"/>
+<area shape="rect" id="node40" href="$classns3_1_1_string_value.html#a17693012c6f2c52875e0d631fbf40155" title=" " alt="" coords="1505,723,1663,749"/>
+<area shape="rect" id="node43" href="$group__logging.html#gacdc0bdeb2d8a90089d4fb09c4b8569ff" title=" " alt="" coords="1465,251,1703,277"/>
+<area shape="rect" id="node44" href="$group__logging.html#gaadcc698770aae684c54dbd1ef4e4b37a" title=" " alt="" coords="1783,259,1950,285"/>
+<area shape="rect" id="node45" href="$namespacens3.html#a5252703c3f8260fd6dc609f1b276e57c" title="Print the list of logging messages available." alt="" coords="1765,208,1969,235"/>
+<area shape="rect" id="node50" href="$classns3_1_1_mobility_model.html#aa2f52cd86754da71ac649413c049785e" title=" " alt="" coords="517,222,664,263"/>
+</map>

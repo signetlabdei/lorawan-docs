@@ -1,0 +1,16 @@
+<map id="ns3::SPFVertex::GetLSA" name="ns3::SPFVertex::GetLSA">
+<area shape="rect" id="node1" title="Get the Global Router Link State Advertisement returned by the Global Router represented by this SPFV..." alt="" coords="1601,257,1777,284"/>
+<area shape="rect" id="node2" href="$classns3_1_1_global_route_manager_impl.html#a1b3aa701b33156b04d351f33e3ebdcb4" title="Process Autonomous Systems (AS) External LSA." alt="" coords="1068,48,1287,90"/>
+<area shape="rect" id="node3" href="$classns3_1_1_global_route_manager_impl.html#a03cdea3013a73c90ae8d67946b237c45" title="Calculate the shortest path first (SPF) tree." alt="" coords="535,294,753,335"/>
+<area shape="rect" id="node7" href="$classns3_1_1_global_route_manager_impl.html#a0ccd93a5b90948571d2b762d4219c65d" title="Add an external route to the routing tables." alt="" coords="1335,48,1553,90"/>
+<area shape="rect" id="node8" href="$classns3_1_1_global_route_manager_impl.html#a4c868c90e06e063ac2eb60cfe93c2c84" title="Search for a link between two vertices." alt="" coords="1335,166,1553,207"/>
+<area shape="rect" id="node9" href="$classns3_1_1_global_route_manager_impl.html#ab082a78c423009f77c9cfe9018d40021" title="Calculate nexthop from root through V (parent) to vertex W (destination) with given distance from roo..." alt="" coords="1068,216,1287,258"/>
+<area shape="rect" id="node10" href="$classns3_1_1_global_route_manager_impl.html#aaa3d86729d6cfb61708d1c7083423da6" title="Examine the links in v&#39;s LSA and update the list of candidates with any vertices not already on the l..." alt="" coords="801,260,1020,302"/>
+<area shape="rect" id="node11" href="$classns3_1_1_global_route_manager_impl.html#adc0725b441a01d02bc4db842771a36d5" title="Add a host route to the routing tables." alt="" coords="801,326,1020,367"/>
+<area shape="rect" id="node12" href="$classns3_1_1_global_route_manager_impl.html#ac939f5c304a02470c566b99699db402c" title="Add a stub to the routing tables." alt="" coords="1335,384,1553,426"/>
+<area shape="rect" id="node13" href="$classns3_1_1_global_route_manager_impl.html#a3d43e1ea8faefbbb7139b2ede6315cbb" title="Process Stub nodes." alt="" coords="1068,384,1287,426"/>
+<area shape="rect" id="node14" href="$classns3_1_1_global_route_manager_impl.html#aaafd698f94e453e3fe41f08bd62867be" title="Add a transit to the routing tables." alt="" coords="801,468,1020,510"/>
+<area shape="rect" id="node4" href="$classns3_1_1_global_route_manager_impl.html#aaa692001ef22911e3483583b0de78909" title="Debugging routine; call the core SPF from the unit tests." alt="" coords="268,260,487,302"/>
+<area shape="rect" id="node6" href="$classns3_1_1_global_route_manager_impl.html#a25f57b2c41927c1a3f0bbba596accb6b" title="Compute routes using a Dijkstra SPF computation and populate per&#45;node forwarding tables." alt="" coords="268,326,487,367"/>
+<area shape="rect" id="node5" href="$class_global_route_manager_impl_test_case.html#aed56fd8ecbd7ecaa5473b9793d0befc1" title="Implementation to actually run this TestCase." alt="" coords="5,260,220,302"/>
+</map>

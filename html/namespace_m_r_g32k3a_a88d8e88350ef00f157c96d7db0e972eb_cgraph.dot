@@ -1,0 +1,14 @@
+digraph "MRG32k3a::MatPowModM"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="MRG32k3a::MatPowModM",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Compute the matrix B = (A^n Mod m); works even if A = B."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="MRG32k3a::MatMatModM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_m_r_g32k3a.html#a2d23edfc3f573f50a93af3e7bbd3aebb",tooltip="Compute the matrix C = A*B MOD m."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="MRG32k3a::MatVecModM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_m_r_g32k3a.html#af13ae870b17f99238843c3d4de4952ba",tooltip="Compute the vector v = A*s MOD m."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="MRG32k3a::MultModM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_m_r_g32k3a.html#ae730d321feb44f8edbceb8d593c0c6d9",tooltip="Return (a*s + c) MOD m; a, s, c and m must be < 2^35."];
+}

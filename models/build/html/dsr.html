@@ -1,0 +1,406 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>DSR Routing &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Emulation Overview" href="emulation-overview.html" />
+    <link rel="prev" title="DSDV Routing" href="dsdv.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="emulation-overview.html" title="Emulation Overview"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="dsdv.html" title="DSDV Routing"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="dsr-routing">
+<h1>DSR Routing<a class="headerlink" href="#dsr-routing" title="Permalink to this headline">¶</a></h1>
+<p>Dynamic Source Routing (DSR) protocol is a reactive routing protocol designed specifically
+for use in multi-hop wireless ad hoc networks of mobile nodes.</p>
+<p>This model was developed by
+<a class="reference external" href="http://www.ittc.ku.edu/resilinets">the ResiliNets research group</a>
+at the University of Kansas.</p>
+<div class="section" id="dsr-routing-overview">
+<h2>DSR Routing Overview<a class="headerlink" href="#dsr-routing-overview" title="Permalink to this headline">¶</a></h2>
+<p>This model implements the base specification of the Dynamic Source Routing
+(DSR) protocol. Implementation is based on <span class="target" id="index-0"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc4728.html"><strong>RFC 4728</strong></a>, with some extensions
+and modifications to the RFC specifications.</p>
+<p>DSR operates on a on-demand behavior. Therefore, our DSR model buffers all
+packets while a route request packet (RREQ) is disseminated. We implement
+a packet buffer in dsr-rsendbuff.cc. The packet queue implements
+garbage collection of old packets and a queue size limit. When the packet
+is sent out from the send buffer, it will be queued in maintenance buffer
+for next hop acknowledgment.</p>
+<p>The maintenance buffer then buffers the already sent out packets and waits
+for the notification of packet delivery.  Protocol operation strongly
+depends on broken link detection mechanism. We implement the three heuristics
+recommended based the RFC as follows:</p>
+<p>First, we use link layer feedback when possible, which is also the fastest
+mechanism of these three to detect link errors. A link is considered to be
+broken if frame transmission results in a transmission failure for all
+retries. This mechanism is meant for active links and works much faster
+than in its absence.  DSR is able to
+detect the link layer transmission failure and notify that as broken.
+Recalculation of routes will be triggered
+when needed.  If user does not want to use link layer acknowledgment,
+it can be tuned by setting “LinkAcknowledgment” attribute to false in
+“dsr-routing.cc”.</p>
+<p>Second, passive acknowledgment should be used whenever possible. The node
+turns on “promiscuous” receive mode, in which it can receive packets not
+destined for itself, and when the node assures the delivery of that data
+packet to its destination, it cancels the passive acknowledgment timer.</p>
+<p>Last, we use a network layer acknowledge scheme to notify the receipt of
+a packet. Route request packet will not be acknowledged or retransmitted.</p>
+<p>The Route Cache implementation support garbage collection of old entries
+and state machine, as defined in the
+standard.  It implements as a STL map container. The key is the
+destination IP address.</p>
+<p>DSR operates with direct access to IP header, and operates between network
+and transport layer.  When packet is sent out from transport layer, it
+passes itself to DSR and DSR header is appended.</p>
+<p>We have two caching mechanisms: path cache and link cache.  The path cache
+saves the whole path in the cache.  The paths are sorted based on the
+hop count, and whenever one path is not able to be used, we change to the
+next path.  The link cache is a slightly better design in the sense that it
+uses different subpaths and uses Implemented Link Cache using
+Dijkstra algorithm, and this part is implemented by
+Song Luan &lt;<a class="reference external" href="mailto:lsuper&#37;&#52;&#48;mail&#46;ustc&#46;edu&#46;cn">lsuper<span>&#64;</span>mail<span>&#46;</span>ustc<span>&#46;</span>edu<span>&#46;</span>cn</a>&gt;.</p>
+<p>The following optional protocol optimizations aren’t implemented:</p>
+<ul class="simple">
+<li><p>Flow state</p></li>
+<li><p>First Hop External (F), Last Hop External (L) flags</p></li>
+<li><p>Handling unknown DSR options</p></li>
+<li><dl class="simple">
+<dt>Two types of error headers:</dt><dd><ol class="arabic simple">
+<li><p>flow state not supported option</p></li>
+<li><p>unsupported option (not going to happen in simulation)</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="dsr-update-in-ns-3-17">
+<h3>DSR update in ns-3.17<a class="headerlink" href="#dsr-update-in-ns-3-17" title="Permalink to this headline">¶</a></h3>
+<p>We originally used “TxErrHeader” in Ptr&lt;WifiMac&gt; to indicate the transmission
+error of a specific packet in link layer, however, it was not working
+quite correctly since even when the packet was dropped, this header was
+not recorded in the trace file.  We used to a different path on implementing
+the link layer notification mechanism.  We look into the trace file by
+finding packet receive event.  If we find one receive event for the
+data packet, we count that as the indicator for successful data delivery.</p>
+</div>
+<div class="section" id="useful-parameters">
+<h3>Useful parameters<a class="headerlink" href="#useful-parameters" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-------------------------</span> <span class="o">+------------------------------------+-------------+</span>
+<span class="o">|</span> <span class="n">Parameter</span>                <span class="o">|</span> <span class="n">Description</span>                        <span class="o">|</span> <span class="n">Default</span>     <span class="o">|</span>
+<span class="o">+==========================+====================================+=============+</span>
+<span class="o">|</span> <span class="n">MaxSendBuffLen</span>           <span class="o">|</span> <span class="n">Maximum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">packets</span> <span class="n">that</span> <span class="n">can</span> <span class="o">|</span> <span class="mi">64</span>          <span class="o">|</span>
+<span class="o">|</span>                          <span class="o">|</span> <span class="n">be</span> <span class="n">stored</span> <span class="ow">in</span> <span class="n">send</span> <span class="n">buffer</span>           <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-------------------------</span> <span class="o">+------------------------------------+-------------+</span>
+<span class="o">|</span> <span class="n">MaxSendBuffTime</span>          <span class="o">|</span> <span class="n">Maximum</span> <span class="n">time</span> <span class="n">packets</span> <span class="n">can</span> <span class="n">be</span> <span class="n">queued</span> <span class="o">|</span> <span class="n">Seconds</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="o">|</span>
+<span class="o">|</span>                          <span class="o">|</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">send</span> <span class="n">buffer</span>                 <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-------------------------</span> <span class="o">+------------------------------------+-------------+</span>
+<span class="o">|</span> <span class="n">MaxMaintLen</span>              <span class="o">|</span> <span class="n">Maximum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">packets</span> <span class="n">that</span> <span class="n">can</span> <span class="o">|</span> <span class="mi">50</span>          <span class="o">|</span>
+<span class="o">|</span>                          <span class="o">|</span> <span class="n">be</span> <span class="n">stored</span> <span class="ow">in</span> <span class="n">maintenance</span> <span class="n">buffer</span>    <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-------------------------</span> <span class="o">+------------------------------------+-------------+</span>
+<span class="o">|</span> <span class="n">MaxMaintTime</span>             <span class="o">|</span> <span class="n">Maximum</span> <span class="n">time</span> <span class="n">packets</span> <span class="n">can</span> <span class="n">be</span> <span class="n">queued</span> <span class="o">|</span> <span class="n">Seconds</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="o">|</span>
+<span class="o">|</span>                          <span class="o">|</span> <span class="ow">in</span> <span class="n">maintenance</span> <span class="n">buffer</span>              <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-------------------------</span> <span class="o">+------------------------------------+-------------+</span>
+<span class="o">|</span> <span class="n">MaxCacheLen</span>              <span class="o">|</span> <span class="n">Maximum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">route</span> <span class="n">entries</span>    <span class="o">|</span> <span class="mi">64</span>          <span class="o">|</span>
+<span class="o">|</span>                          <span class="o">|</span> <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">stored</span> <span class="ow">in</span> <span class="n">route</span> <span class="n">cache</span>  <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-------------------------</span> <span class="o">+------------------------------------+-------------+</span>
+<span class="o">|</span> <span class="n">RouteCacheTimeout</span>        <span class="o">|</span> <span class="n">Maximum</span> <span class="n">time</span> <span class="n">the</span> <span class="n">route</span> <span class="n">cache</span> <span class="n">can</span>   <span class="o">|</span> <span class="n">Seconds</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span><span class="o">|</span>
+<span class="o">|</span>                          <span class="o">|</span> <span class="n">be</span> <span class="n">queued</span> <span class="ow">in</span> <span class="n">route</span> <span class="n">cache</span>           <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-------------------------</span> <span class="o">+------------------------------------+-------------+</span>
+<span class="o">|</span> <span class="n">RreqRetries</span>              <span class="o">|</span> <span class="n">Maximum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">retransmissions</span>  <span class="o">|</span> <span class="mi">16</span>          <span class="o">|</span>
+<span class="o">|</span>                          <span class="o">|</span> <span class="k">for</span> <span class="n">request</span> <span class="n">discovery</span> <span class="n">of</span> <span class="n">a</span> <span class="n">route</span>   <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-------------------------</span> <span class="o">+------------------------------------+-------------+</span>
+<span class="o">|</span> <span class="n">CacheType</span>                <span class="o">|</span> <span class="n">Use</span> <span class="n">Link</span> <span class="n">Cache</span> <span class="ow">or</span> <span class="n">use</span> <span class="n">Path</span> <span class="n">Cache</span>   <span class="o">|</span> <span class="s2">&quot;LinkCache&quot;</span> <span class="o">|</span>
+<span class="o">|</span>                          <span class="o">|</span>                                    <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-------------------------</span> <span class="o">+------------------------------------+-------------+</span>
+<span class="o">|</span> <span class="n">LinkAcknowledgment</span>       <span class="o">|</span> <span class="n">Enable</span> <span class="n">Link</span> <span class="n">layer</span> <span class="n">acknowledgment</span>   <span class="o">|</span> <span class="kc">True</span>        <span class="o">|</span>
+<span class="o">|</span>                          <span class="o">|</span> <span class="n">mechanism</span>                          <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-------------------------</span> <span class="o">+------------------------------------+-------------+</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="implementation-modification">
+<h3>Implementation modification<a class="headerlink" href="#implementation-modification" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>The DsrFsHeader has added 3 fields: message type, source id, destination id, and these changes only for post-processing</dt><dd><ol class="arabic simple">
+<li><p>Message type is used to identify the data packet from control packet</p></li>
+<li><p>source id is used to identify the real source of the data packet since we have to deliver the packet hop-by-hop and the Ipv4Header is not carrying the real source and destination ip address as needed</p></li>
+<li><p>destination id is for same reason of above</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Route Reply header is not word-aligned in DSR RFC, change it to word-aligned in implementation</p></li>
+<li><p>DSR works as a shim header between transport and network protocol, it needs its own forwarding mechanism, we are changing the packet transmission to hop-by-hop delivery, so we added two fields in dsr fixed header to notify packet delivery</p></li>
+</ul>
+</div>
+<div class="section" id="current-route-cache-implementation">
+<h3>Current Route Cache implementation<a class="headerlink" href="#current-route-cache-implementation" title="Permalink to this headline">¶</a></h3>
+<p>This implementation used “path cache”, which is simple to implement and ensures loop-free paths:</p>
+<ul class="simple">
+<li><p>the path cache has automatic expire policy</p></li>
+<li><p>the cache saves multiple route entries for a certain destination and sort the entries based on hop counts</p></li>
+<li><p>the MaxEntriesEachDst can be tuned to change the maximum entries saved for a single destination</p></li>
+<li><p>when adding multiple routes for one destination, the route is compared based on hop-count and expire time, the one with less hop count or relatively new route is favored</p></li>
+<li><p>Future implementation may include “link cache” as another possibility</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="dsr-instructions">
+<h2>DSR Instructions<a class="headerlink" href="#dsr-instructions" title="Permalink to this headline">¶</a></h2>
+<p>The following should be kept in mind when running DSR as routing protocol:</p>
+<ul class="simple">
+<li><p>NodeTraversalTime is the time it takes to traverse two neighboring nodes and should be chosen to fit the transmission range</p></li>
+<li><p>PassiveAckTimeout is the time a packet in maintenance buffer wait for passive acknowledgment, normally set as two times of NodeTraversalTime</p></li>
+<li><p>RouteCacheTimeout should be set smaller value when the nodes’ velocity become higher. The default value is 300s.</p></li>
+</ul>
+</div>
+<div class="section" id="helper">
+<h2>Helper<a class="headerlink" href="#helper" title="Permalink to this headline">¶</a></h2>
+<p>To have a node run DSR, the easiest way would be to use the DsrHelper
+and DsrMainHelpers in your simulation script. For instance:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DsrHelper</span> <span class="n">dsr</span><span class="p">;</span>
+<span class="n">DsrMainHelper</span> <span class="n">dsrMain</span><span class="p">;</span>
+<span class="n">dsrMain</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">dsr</span><span class="p">,</span> <span class="n">adhocNodes</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The example scripts inside <code class="docutils literal notranslate"><span class="pre">src/dsr/examples/</span></code> demonstrate the use of DSR based nodes in different scenarios.
+The helper source can be found inside <code class="docutils literal notranslate"><span class="pre">src/dsr/helper/dsr-main-helper.{h,cc}</span></code>
+and <code class="docutils literal notranslate"><span class="pre">src/dsr/helper/dsr-helper.{h,cc}</span></code></p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>The example can be found in <code class="docutils literal notranslate"><span class="pre">src/dsr/examples/</span></code>:</p>
+<ul class="simple">
+<li><p>dsr.cc use DSR as routing protocol within a traditional MANETs environment[3].</p></li>
+</ul>
+<p>DSR is also built in the routing comparison case in <code class="docutils literal notranslate"><span class="pre">examples/routing/</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manet-routing-compare.cc</span></code> is a comparison case with built in MANET routing protocols and can generate its own results.</p></li>
+</ul>
+</div>
+<div class="section" id="validation">
+<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<p>This model has been tested as follows:</p>
+<ul class="simple">
+<li><p>Unit tests have been written to verify the internals of DSR. This can be found in <code class="docutils literal notranslate"><span class="pre">src/dsr/test/dsr-test-suite.cc</span></code>. These tests verify whether the methods inside DSR module which deal with packet buffer, headers work correctly.</p></li>
+<li><p>Simulation cases similar to [3] have been tested and have comparable results.</p></li>
+<li><p>manet-routing-compare.cc has been used to compare DSR with three of other routing protocols.</p></li>
+</ul>
+<p>A paper was presented on these results at the Workshop on ns-3 in 2011.</p>
+</div>
+<div class="section" id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<p>The model is not fully compliant with <span class="target" id="index-1"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc4728.html"><strong>RFC 4728</strong></a>. As an example, Dsr fixed size header
+has been extended and it is four octets longer then the RFC specification.
+As a consequence, the DSR headers can not be correctly decoded by Wireshark.</p>
+<p>The model full compliance with the RFC is planned for the future.</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>[1] Original paper: <a class="reference external" href="http://www.monarch.cs.rice.edu/monarch-papers/dsr-chapter00.pdf">http://www.monarch.cs.rice.edu/monarch-papers/dsr-chapter00.pdf</a></p>
+<p>[2] RFC 4728 <a class="reference external" href="http://www6.ietf.org/rfc/rfc4728.txt">http://www6.ietf.org/rfc/rfc4728.txt</a></p>
+<p>[3] Broch’s comparison paper: <a class="reference external" href="http://www.monarch.cs.rice.edu/monarch-papers/mobicom98.ps">http://www.monarch.cs.rice.edu/monarch-papers/mobicom98.ps</a></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">DSR Routing</a><ul>
+<li><a class="reference internal" href="#dsr-routing-overview">DSR Routing Overview</a><ul>
+<li><a class="reference internal" href="#dsr-update-in-ns-3-17">DSR update in ns-3.17</a></li>
+<li><a class="reference internal" href="#useful-parameters">Useful parameters</a></li>
+<li><a class="reference internal" href="#implementation-modification">Implementation modification</a></li>
+<li><a class="reference internal" href="#current-route-cache-implementation">Current Route Cache implementation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dsr-instructions">DSR Instructions</a></li>
+<li><a class="reference internal" href="#helper">Helper</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#validation">Validation</a></li>
+<li><a class="reference internal" href="#limitations">Limitations</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="dsdv.html"
+                        title="previous chapter">DSDV Routing</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="emulation-overview.html"
+                        title="next chapter">Emulation Overview</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/dsr.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="emulation-overview.html" title="Emulation Overview"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="dsdv.html" title="DSDV Routing"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

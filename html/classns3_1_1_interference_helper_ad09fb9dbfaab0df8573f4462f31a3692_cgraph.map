@@ -1,0 +1,52 @@
+<map id="ns3::InterferenceHelper::CalculatePayloadSnrPer" name="ns3::InterferenceHelper::CalculatePayloadSnrPer">
+<area shape="rect" id="node1" title="Calculate the SNIR at the start of the payload and accumulate all SNIR changes in the SNIR vector for..." alt="" coords="5,697,191,738"/>
+<area shape="rect" id="node2" href="$classns3_1_1_interference_helper.html#a430cf5d51fa5ea6e1a74585edd6ed311" title="Calculate the success rate of the chunk given the SINR, duration, and Wi&#45;Fi mode." alt="" coords="263,566,477,607"/>
+<area shape="rect" id="node3" href="$classns3_1_1_wifi_tx_vector.html#ac56a35b49d9d77e09357adc171570d51" title=" " alt="" coords="598,507,743,549"/>
+<area shape="rect" id="node12" href="$classns3_1_1_interference_helper.html#a779ff2d6cb1a14cb5e0a18b39a3c77c0" title="Calculate the SNIR for the event (starting from now until the event end)." alt="" coords="283,814,457,855"/>
+<area shape="rect" id="node20" href="$classns3_1_1_wifi_phy.html#ab6977715f2433cf033bc41013c7c20a1" title=" " alt="" coords="241,131,499,157"/>
+<area shape="rect" id="node23" href="$classns3_1_1_wifi_phy.html#ad52c3bd28c1e0a6d54884ec7e335dd96" title=" " alt="" coords="243,256,497,283"/>
+<area shape="rect" id="node25" href="$classns3_1_1_wifi_phy.html#aa3d6056d67327dc5a757e5e49f68ab37" title=" " alt="" coords="268,697,472,738"/>
+<area shape="rect" id="node28" href="$classns3_1_1_wifi_tx_vector.html#a7125591f923091b79fe4a607dfad22e4" title=" " alt="" coords="598,755,743,797"/>
+<area shape="rect" id="node33" href="$classns3_1_1_wifi_phy.html#a97b96ccd13b360572886ba03802b3652" title=" " alt="" coords="250,456,490,483"/>
+<area shape="rect" id="node41" href="$classns3_1_1_wifi_phy.html#a89565e4a68b394ce2a3395e8eba5b01e" title=" " alt="" coords="274,1127,466,1169"/>
+<area shape="rect" id="node42" href="$classns3_1_1_wifi_phy.html#a9e4f1e101f3b4fdfdad3f4c470a16a6f" title=" " alt="" coords="261,631,479,673"/>
+<area shape="rect" id="node43" href="$classns3_1_1_wifi_phy.html#a68851f6bd60179b42af9f1bc6037c94b" title=" " alt="" coords="273,945,467,986"/>
+<area shape="rect" id="node44" href="$classns3_1_1_wifi_phy.html#ab920270da0c8596bef71e36b3141eb9c" title=" " alt="" coords="273,1010,467,1051"/>
+<area shape="rect" id="node45" href="$classns3_1_1_wifi_phy.html#a6530944dcf7e4f058a54fcf3a5ea3baf" title=" " alt="" coords="249,1076,491,1103"/>
+<area shape="rect" id="node46" href="$classns3_1_1_wifi_phy.html#ac07b1847196a6cf1bd1a24adf71e8486" title=" " alt="" coords="265,879,475,921"/>
+<area shape="rect" id="node49" href="$classns3_1_1_wifi_phy.html#a29ca897f40f750ad336503e825320d09" title=" " alt="" coords="239,43,501,69"/>
+<area shape="rect" id="node4" href="$classns3_1_1_wifi_mode.html#ad90f36e733ceaf8c5771cfbda437e14f" title=" " alt="" coords="567,704,774,731"/>
+<area shape="rect" id="node5" href="$classns3_1_1_wifi_mode_factory.html#a3086868810ff4347e31c63027726f544" title="Return a WifiModeItem at the given UID index." alt="" coords="1396,551,1589,577"/>
+<area shape="rect" id="node6" href="$classns3_1_1_wifi_mode.html#abbbea987249a16c776803ba6e2ca9973" title=" " alt="" coords="865,580,1074,607"/>
+<area shape="rect" id="node7" href="$classns3_1_1_wifi_mode_factory.html#a9c6f695d733355dee8d74bd1709868fc" title="Return a WifiModeFactory." alt="" coords="1166,514,1329,555"/>
+<area shape="rect" id="node9" href="$classns3_1_1_wifi_mode.html#a1437871ae722c85d980a8af3ba522d39" title=" " alt="" coords="840,631,1099,657"/>
+<area shape="rect" id="node10" href="$classns3_1_1_wifi_mode.html#ae92b3cca34abdd76211fe9fbf19a6c09" title=" " alt="" coords="876,681,1063,708"/>
+<area shape="rect" id="node11" href="$ipv4-address-generator_8cc.html#aaf5aa23b804d2e5e334106f207e8a6cc" title=" " alt="" coords="902,783,1037,809"/>
+<area shape="rect" id="node8" href="$classns3_1_1_wifi_mode_factory.html#a89a9c38617bd3f7be4a8919ce9675996" title="Allocate a WifiModeItem from a given uniqueUid." alt="" coords="1411,319,1574,361"/>
+<area shape="rect" id="node13" href="$classns3_1_1_interference_helper.html#aa88e8f74dfa0081f29e157bba071d90e" title="Calculate noise and interference power in W." alt="" coords="561,821,781,862"/>
+<area shape="rect" id="node14" href="$classns3_1_1_simulator.html#ac3178fa975b419f7875e7105be122800" title="Return the current simulation virtual time." alt="" coords="893,833,1046,860"/>
+<area shape="rect" id="node15" href="$group__simulator.html#ga42eb4eddad41528d4d99794a3dae3fd0" title="Get the SimulatorImpl singleton." alt="" coords="1195,833,1300,860"/>
+<area shape="rect" id="node19" href="$classns3_1_1_simulator_impl.html#aa516c50060846adc6fd316e83ef0797c" title="Return the current simulation virtual time." alt="" coords="1156,783,1339,809"/>
+<area shape="rect" id="node16" href="$classns3_1_1_object_factory.html#a52eda277f4aaab54266134ba48102ad7" title="Create an Object instance of the configured TypeId." alt="" coords="1421,767,1564,809"/>
+<area shape="rect" id="node17" href="$group__logging.html#gac4c06cbbed12229d85991ced145f6be2" title="Default Node printer." alt="" coords="1403,833,1582,860"/>
+<area shape="rect" id="node18" href="$namespacens3.html#ae01c3c7786b644dfb8a0bb8f1201b269" title="Default Time printer." alt="" coords="1405,884,1581,911"/>
+<area shape="rect" id="node21" href="$classns3_1_1_wifi_phy.html#a63b9a66fa49db202c506805e92bad63c" title="Return MCS 0 from HE MCS values." alt="" coords="578,56,763,83"/>
+<area shape="rect" id="node22" href="$classns3_1_1_wifi_mode_factory.html#ac3e6d9eb924873474e4122c86deb44c9" title=" " alt="" coords="888,113,1051,154"/>
+<area shape="rect" id="node24" href="$classns3_1_1_wifi_phy.html#afd7d25645f977d407384cdee4ba1a425" title="Return MCS 0 from HT MCS values." alt="" coords="579,107,762,133"/>
+<area shape="rect" id="node26" href="$classns3_1_1_wifi_tx_vector.html#aadd3ccf9d68dd8f06d4cfedc352498fb" title=" " alt="" coords="598,638,743,679"/>
+<area shape="rect" id="node27" href="$classns3_1_1_wifi_mode.html#a67e1664cac501221b63a2be307184cc9" title=" " alt="" coords="561,573,780,614"/>
+<area shape="rect" id="node29" href="$group__timecivil.html#ga17465a639c8d1464e76538afdd78a9f0" title=" " alt="" coords="599,1017,742,1044"/>
+<area shape="rect" id="node30" href="$classns3_1_1_time.html#a3e742c67b2764e75ff95f9b754d43fe9" title="Create a Time equal to value in unit unit." alt="" coords="883,1017,1055,1044"/>
+<area shape="rect" id="node31" href="$classns3_1_1_time.html#a8a39dc1b8cbbd7fe6d940e492d1b925e" title="Default constructor, with value 0." alt="" coords="1185,1043,1310,1069"/>
+<area shape="rect" id="node32" href="$classns3_1_1_time.html#a0b023c55c20582aa7c1781aacf128034" title="Get the Information record for timeUnit for the current Resolution." alt="" coords="1147,992,1348,1019"/>
+<area shape="rect" id="node34" href="$classns3_1_1_wifi_phy.html#a8b52ed5ee9801adab6d11b8e4dc4240f" title="Return a WifiMode for DSSS at 1Mbps." alt="" coords="552,157,789,184"/>
+<area shape="rect" id="node36" href="$classns3_1_1_wifi_phy.html#a6619a232c9506d049781aae17795b57f" title="Return a WifiMode for DSSS at 2Mbps." alt="" coords="552,208,789,235"/>
+<area shape="rect" id="node37" href="$classns3_1_1_wifi_phy.html#a334689e428371b3383e9001cbd05deba" title="Return a WifiMode for ERP&#45;OFDM at 6Mbps." alt="" coords="575,259,766,301"/>
+<area shape="rect" id="node38" href="$classns3_1_1_wifi_phy.html#ad52da7bd50e91c3cf45b6a3256b93d37" title="Return a WifiMode for OFDM at 1.5Mbps with 5MHz channel spacing." alt="" coords="567,325,774,366"/>
+<area shape="rect" id="node39" href="$classns3_1_1_wifi_phy.html#a8c565c787448b738ea94b455169371fa" title="Return a WifiMode for OFDM at 3Mbps with 10MHz channel spacing." alt="" coords="567,390,774,431"/>
+<area shape="rect" id="node40" href="$classns3_1_1_wifi_phy.html#a9945d5d1e8dd74118f90e1adcb63d6fe" title="Return a WifiMode for OFDM at 6Mbps." alt="" coords="549,456,792,483"/>
+<area shape="rect" id="node35" href="$classns3_1_1_wifi_mode_factory.html#a91e233a272c9bd36bca8d51a5da49b41" title=" " alt="" coords="888,325,1051,366"/>
+<area shape="rect" id="node47" href="$classns3_1_1_wifi_tx_vector.html#a5e6931e51698a7fc6137d7e55fb66213" title=" " alt="" coords="598,886,743,927"/>
+<area shape="rect" id="node48" href="$classns3_1_1_wifi_tx_vector.html#ae3180e05aa71a628cab66eae3667d31b" title=" " alt="" coords="598,951,743,993"/>
+<area shape="rect" id="node50" href="$classns3_1_1_wifi_phy.html#a0abd27d8c214424a39ea9ea3ac207772" title="Return MCS 0 from VHT MCS values." alt="" coords="576,5,765,32"/>
+</map>

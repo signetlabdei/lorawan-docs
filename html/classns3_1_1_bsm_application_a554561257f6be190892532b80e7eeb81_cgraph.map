@@ -1,0 +1,33 @@
+<map id="ns3::BsmApplication::ReceiveWavePacket" name="ns3::BsmApplication::ReceiveWavePacket">
+<area shape="rect" id="node1" title="Receive a WAVE BSM packet." alt="" coords="5,282,168,323"/>
+<area shape="rect" id="node2" href="$classns3_1_1_inet_socket_address.html#ade776b1109e7b9a7be0b22ced49931e3" title="Returns an InetSocketAddress which corresponds to the input Address." alt="" coords="233,27,407,69"/>
+<area shape="rect" id="node7" href="$classns3_1_1_ipv4_interface_container.html#ae708067c27bd8019edd3c0311ff150b3" title=" " alt="" coords="219,93,421,134"/>
+<area shape="rect" id="node8" href="$classns3_1_1_inet_socket_address.html#a84e0f56d0747abd33413b3ce4a3c725d" title=" " alt="" coords="233,158,407,199"/>
+<area shape="rect" id="node9" href="$classns3_1_1_ipv4_interface_container.html#a8c4b7719878a55b92e566442e990c81c" title=" " alt="" coords="219,223,421,265"/>
+<area shape="rect" id="node10" href="$classns3_1_1_application.html#ae87f816b1c745a1ce9d9a966c5bdb72f" title=" " alt="" coords="225,289,415,316"/>
+<area shape="rect" id="node11" href="$classns3_1_1_socket.html#aba642ad4301c1df47befc0aa9afa2e48" title="Return the node this socket is associated with." alt="" coords="239,340,401,367"/>
+<area shape="rect" id="node12" href="$classns3_1_1_bsm_application.html#ac70236a81b0967274fd55884f4935741" title="Handle the receipt of a WAVE BSM packet from sender to receiver." alt="" coords="216,457,424,498"/>
+<area shape="rect" id="node30" href="$classns3_1_1_inet_socket_address.html#a9426766e34e928ce5dbdbeb9563a10df" title=" " alt="" coords="233,391,407,433"/>
+<area shape="rect" id="node31" href="$classns3_1_1_socket.html#af22378d7af9a2745a9eada20210da215" title="Read a single packet from the socket and retrieve the sender address." alt="" coords="235,523,405,549"/>
+<area shape="rect" id="node3" href="$classns3_1_1_ipv4_address.html#ac6e205258d95465ce51c148e51590760" title=" " alt="" coords="475,5,689,32"/>
+<area shape="rect" id="node4" href="$classns3_1_1_inet_socket_address.html#ae194de8f5f1884e3b755179891d20bba" title="Get the underlying address type (automatically assigned)." alt="" coords="495,242,669,283"/>
+<area shape="rect" id="node6" href="$classns3_1_1_inet_socket_address.html#a574001030dfb21d2963b2b4da081889d" title=" " alt="" coords="495,57,669,98"/>
+<area shape="rect" id="node5" href="$classns3_1_1_address.html#a75d239c79bb3c39d64a8db4f2d3d9b20" title="Allocate a new type id for a new type of address." alt="" coords="741,249,907,276"/>
+<area shape="rect" id="node13" href="$classns3_1_1_mobility_helper.html#a4471ab3605ba031e02ee90fc43bf8c5d" title=" " alt="" coords="472,398,692,439"/>
+<area shape="rect" id="node14" href="$classns3_1_1_object.html#a817117ab236e4ff7f80f0239d4e28731" title="Get a pointer to the requested aggregated Object." alt="" coords="740,435,908,461"/>
+<area shape="rect" id="node29" href="$classns3_1_1_node.html#a2ed8663077afcb8db519296b0ada6355" title=" " alt="" coords="517,515,647,541"/>
+<area shape="rect" id="node15" href="$classns3_1_1_object.html#a34f8410d0f3aae5612b56eb65d044857" title="Find an Object of TypeId tid in the aggregates of this Object." alt="" coords="956,409,1143,436"/>
+<area shape="rect" id="node28" href="$namespacens3.html#af2a7557fe9afdd98d8f6f8f6e412cf5a" title=" " alt="" coords="984,460,1115,487"/>
+<area shape="rect" id="node16" href="$classns3_1_1_object.html#a4000e647d44103477c0c31825fc288b6" title="Check if any aggregated Objects have non&#45;zero reference counts." alt="" coords="1196,292,1377,319"/>
+<area shape="rect" id="node18" href="$classns3_1_1_object.html#a12101af51922401affe289e1081c43c5" title="Get the most derived TypeId for this Object." alt="" coords="1196,343,1377,385"/>
+<area shape="rect" id="node19" href="$classns3_1_1_type_id.html#ab84f81aee52154af39a8668b59c89d63" title="Get the parent of this TypeId." alt="" coords="1203,409,1371,436"/>
+<area shape="rect" id="node23" href="$classns3_1_1_object.html#a4615cee24c40b0377501f44ef85f9e53" title="Register this type." alt="" coords="1203,460,1371,487"/>
+<area shape="rect" id="node27" href="$classns3_1_1_object.html#a502c04993a228307d9eded5ba028af7c" title="Keep the list of aggregates in most&#45;recently&#45;used order." alt="" coords="1191,511,1383,553"/>
+<area shape="rect" id="node17" href="$classns3_1_1_simple_ref_count.html#a9cb85ae452ce0e1c74f11b3e4d357171" title="Get the reference count of the object." alt="" coords="1451,285,1609,326"/>
+<area shape="rect" id="node20" href="$classns3_1_1_type_id.html#ab76e26690f1af4f1cffa6a72245e8928" title="Default constructor." alt="" coords="1457,355,1603,381"/>
+<area shape="rect" id="node21" href="$classns3_1_1_singleton.html#a80a2cd3c25a27ea72add7a9f7a141ffa" title="Get a pointer to the singleton instance." alt="" coords="1677,409,1880,450"/>
+<area shape="rect" id="node22" href="$classns3_1_1_iid_manager.html#a26a0cf5d08e0e9d8ad1128b77599b1f5" title="Get the parent of a type id." alt="" coords="1431,456,1629,483"/>
+<area shape="rect" id="node24" href="$classns3_1_1_type_id.html#abaaca67ab7d2471067e7c275df0f7309" title="Set the parent TypeId." alt="" coords="1447,507,1613,533"/>
+<area shape="rect" id="node25" href="$classns3_1_1_type_id.html#a429535085325d6f926724771446d9047" title="Get the internal id of this TypeId." alt="" coords="1705,496,1853,523"/>
+<area shape="rect" id="node26" href="$classns3_1_1_iid_manager.html#a4042931260554c907699367b6811426f" title="Set the parent of a type id." alt="" coords="1680,547,1877,573"/>
+</map>

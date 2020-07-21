@@ -1,0 +1,52 @@
+<map id="ns3::SixLowPanNetDevice::CompressLowPanIphc" name="ns3::SixLowPanNetDevice::CompressLowPanIphc">
+<area shape="rect" id="node1" title="Compress the headers according to IPHC compression." alt="" coords="5,1482,196,1523"/>
+<area shape="rect" id="node2" href="$classns3_1_1_packet.html#a465108c595a0bc592095cbcab1832ed8" title="Add header to this packet." alt="" coords="844,378,1020,405"/>
+<area shape="rect" id="node12" href="$classns3_1_1_six_low_pan_net_device.html#a44cfa681aaac7a83c160e9cdfc90d7e0" title="Checks if the next header can be compressed using NHC." alt="" coords="577,75,771,116"/>
+<area shape="rect" id="node13" href="$classns3_1_1_six_low_pan_net_device.html#a41d34fd1612e7e6911614fadfef6ab67" title="Compress the headers according to NHC compression." alt="" coords="286,432,477,474"/>
+<area shape="rect" id="node14" href="$classns3_1_1_six_low_pan_net_device.html#aa163cb1c6e2c82e208692f9bae9b5189" title="Compress the headers according to NHC compression." alt="" coords="576,643,772,684"/>
+<area shape="rect" id="node15" href="$classns3_1_1_packet.html#afff7cb1ff518ee6dc0d424e10a5ad6ec" title="Returns the the size in bytes of the packet (including the zero&#45;filled initial payload)." alt="" coords="855,570,1009,597"/>
+<area shape="rect" id="node16" href="$classns3_1_1_packet.html#acc152757db7d44974640b089335b7003" title="Deserialize but does not remove the header from the internal buffer." alt="" coords="841,621,1023,648"/>
+<area shape="rect" id="node17" href="$classns3_1_1_packet.html#a0961eccf975d75f902d40956c93ba63e" title="Deserialize and remove the header from the internal buffer." alt="" coords="829,672,1035,698"/>
+<area shape="rect" id="node21" href="$classns3_1_1_ipv6_address.html#a7090d589a1640660510753153692a5e1" title="Get the bytes corresponding to the address." alt="" coords="281,861,482,888"/>
+<area shape="rect" id="node22" href="$classns3_1_1_ipv6_header.html#a6f1681b5e31c57029b95255dc7553cb5" title="Get the &quot;Destination address&quot; field." alt="" coords="264,912,499,954"/>
+<area shape="rect" id="node23" href="$classns3_1_1_ipv6_header.html#ad2c898520c80495b9703e0ad5877fd1e" title="Get the &quot;Flow label&quot; field." alt="" coords="286,978,477,1019"/>
+<area shape="rect" id="node24" href="$classns3_1_1_ipv6_header.html#a0ec7b78e38a485f6d26d59018958db7c" title="Get the &quot;Hop limit&quot; field (TTL)." alt="" coords="272,1044,491,1070"/>
+<area shape="rect" id="node25" href="$classns3_1_1_six_low_pan_iphc.html#a0c2329f9e61db040328c627db8758f4b" title="Get the M (Multicast) compression." alt="" coords="599,1183,749,1224"/>
+<area shape="rect" id="node26" href="$classns3_1_1_ipv6_header.html#a4924d98260c4764a53024deef2c143a6" title="Get the next header." alt="" coords="286,1160,477,1202"/>
+<area shape="rect" id="node27" href="$classns3_1_1_ipv6_header.html#a37a507d3cbc5fb9efc6c4ba36255fe75" title="Get the serialized size of the packet." alt="" coords="256,1226,507,1253"/>
+<area shape="rect" id="node28" href="$classns3_1_1_six_low_pan_iphc.html#a3a6e0cea6853c219c0713b1fecaea27b" title="Get the serialized size of the packet." alt="" coords="306,1095,457,1136"/>
+<area shape="rect" id="node29" href="$classns3_1_1_ipv6_header.html#a07d13db76e48e50eb613d69ae46c2ab0" title="Get the &quot;Source address&quot; field." alt="" coords="280,1328,483,1370"/>
+<area shape="rect" id="node30" href="$classns3_1_1_ipv6_header.html#a79ba3e1ef4dbd5444c4182ab6422d1e5" title="Get the &quot;Traffic class&quot; field." alt="" coords="281,1394,481,1435"/>
+<area shape="rect" id="node31" href="$classns3_1_1_ipv6_address.html#a0b549807a9ad8389c7cc82b762b7c1f1" title="If the IPv6 address is a link&#45;local address (fe80::/64)." alt="" coords="292,1511,471,1552"/>
+<area shape="rect" id="node32" href="$classns3_1_1_ipv6_address.html#a68f522d40b6db6d383848ea90bc47dd0" title="If the IPv6 address is multicast (ff00::/8)." alt="" coords="568,1489,780,1516"/>
+<area shape="rect" id="node33" href="$classns3_1_1_ipv6_address.html#ad0f3d4e3894dfe2883769087dc4c6be8" title="Make the autoconfigured link&#45;local IPv6 address from a Mac address." alt="" coords="244,1576,519,1618"/>
+<area shape="rect" id="node34" href="$global-router-interface_8cc.html#af2f17e24d29f39f6804d0d10d8cedc71" title=" " alt="" coords="321,1642,442,1669"/>
+<area shape="rect" id="node35" href="$classns3_1_1_six_low_pan_iphc.html#a75682e2991c0fdb6587e8d2bc79a5beb" title="Set the CID (Context Identifier Extension) compression." alt="" coords="306,1694,457,1735"/>
+<area shape="rect" id="node36" href="$classns3_1_1_six_low_pan_iphc.html#affc529a56bcd48d931621082f7c25ee8" title="Set the DAC (Destination Address Compression) compression." alt="" coords="306,1759,457,1800"/>
+<area shape="rect" id="node37" href="$classns3_1_1_six_low_pan_iphc.html#a749a58e326a0b383ad14082c1a2a83cb" title="Set the DAM (Destination Address Mode) compression." alt="" coords="306,1824,457,1866"/>
+<area shape="rect" id="node38" href="$classns3_1_1_six_low_pan_iphc.html#a587c9d8dad52036e1f8c174d9c60a6c0" title="Set the DSCP (6bits)." alt="" coords="306,1890,457,1931"/>
+<area shape="rect" id="node39" href="$classns3_1_1_six_low_pan_iphc.html#a9b3fafea4028bc8f41074aae87e96686" title="Set the Destination Address." alt="" coords="306,1955,457,1996"/>
+<area shape="rect" id="node40" href="$classns3_1_1_six_low_pan_iphc.html#a4d7ef8b867b083a5f70c86847d3924d8" title="Set the ECN (2bits)." alt="" coords="306,2020,457,2062"/>
+<area shape="rect" id="node41" href="$classns3_1_1_six_low_pan_iphc.html#a53a4bed58a6f97e1953b61a40a3f11da" title="Set the Flow Label (20bits)." alt="" coords="306,2086,457,2127"/>
+<area shape="rect" id="node42" href="$classns3_1_1_six_low_pan_iphc.html#a0d5a1956b408d48feea291f2d80bf71e" title="Set the HLIM (Hop Limit) compression." alt="" coords="306,2151,457,2192"/>
+<area shape="rect" id="node43" href="$classns3_1_1_six_low_pan_iphc.html#afb167197fbe12d8e8ab65c7266d8dc10" title="Set the Hop Limit field." alt="" coords="306,2216,457,2258"/>
+<area shape="rect" id="node44" href="$classns3_1_1_six_low_pan_iphc.html#ad9e3313e47f0ae06e3fd0154a8bb25e5" title="Set the M (Multicast) compression." alt="" coords="306,2282,457,2323"/>
+<area shape="rect" id="node45" href="$classns3_1_1_six_low_pan_iphc.html#a02ab2cc846b2a6391e53bb062162be32" title="Set the Next Header field." alt="" coords="306,2347,457,2388"/>
+<area shape="rect" id="node46" href="$classns3_1_1_six_low_pan_iphc.html#a31ed5379a035e04a1feff5bae285a26d" title="Set the NH (Next Header) compression." alt="" coords="306,2412,457,2454"/>
+<area shape="rect" id="node47" href="$classns3_1_1_six_low_pan_iphc.html#a9255e8785353902d7c88f6cf6b129577" title="Set the SAC (Source Address Compression) compression." alt="" coords="306,2478,457,2519"/>
+<area shape="rect" id="node48" href="$classns3_1_1_six_low_pan_iphc.html#a2dda923b3bd6ed04869c0ad8c861aea8" title="Set the SAM (Source Address Mode) compression." alt="" coords="306,2543,457,2584"/>
+<area shape="rect" id="node49" href="$classns3_1_1_six_low_pan_iphc.html#a55a9b41710bac0706ae61d6770b78e98" title="Set the Source Address." alt="" coords="306,2608,457,2650"/>
+<area shape="rect" id="node50" href="$classns3_1_1_six_low_pan_iphc.html#a5f2c75c1b36a9bc7cc0f884f407c5155" title="Set the TF (Traffic Class, Flow Label) compression." alt="" coords="306,2674,457,2715"/>
+<area shape="rect" id="node3" href="$classns3_1_1_byte_tag_list.html#acb4563fbe4299c55af41ba7a166b71d5" title="Make sure that all offsets are bigger than prependOffset which represents the location where new byte..." alt="" coords="1091,368,1297,394"/>
+<area shape="rect" id="node4" href="$classns3_1_1_buffer.html#a8abd8164c3671d3dadc98fc66fade7b1" title=" " alt="" coords="1109,170,1279,197"/>
+<area shape="rect" id="node5" href="$classns3_1_1_packet_metadata.html#abdce736c4c5f647242f0808c0d2f9249" title="Add an header." alt="" coords="1115,251,1273,292"/>
+<area shape="rect" id="node6" href="$classns3_1_1_object_base.html#abe5b43a6f5b99a92a4c3122db31f06fb" title="Get the most derived TypeId for this Object." alt="" coords="1353,512,1567,554"/>
+<area shape="rect" id="node7" href="$classns3_1_1_byte_tag_list.html#a1fec06d7e6daaf8039cf2a148e4090f2" title="Adjust the offsets stored internally by the adjustment delta." alt="" coords="1105,672,1283,698"/>
+<area shape="rect" id="node8" href="$classns3_1_1_buffer.html#acb977a0179de9abe4e295ce22023b4ca" title=" " alt="" coords="1125,520,1263,546"/>
+<area shape="rect" id="node9" href="$classns3_1_1_type_id.html#abc4965475a579c2afdc668d7a7d58374" title="Get the name." alt="" coords="1111,621,1277,648"/>
+<area shape="rect" id="node10" href="$classns3_1_1_header.html#a6ef0497eabc1b1fb0ad42738eb73f934" title=" " alt="" coords="1083,418,1305,445"/>
+<area shape="rect" id="node11" href="$classns3_1_1_header.html#afb61f1aac69ff8349a6bfe521fab5404" title=" " alt="" coords="1112,317,1276,344"/>
+<area shape="rect" id="node18" href="$classns3_1_1_ipv6_extension_header.html#a3c0ccd2b44535f3d11da824833b900d7" title="Get the length of the extension." alt="" coords="578,308,770,350"/>
+<area shape="rect" id="node19" href="$classns3_1_1_ipv6_extension_header.html#adbc7bbdf8e1008ae49433e768afd1c3b" title="Get the next header." alt="" coords="578,374,770,415"/>
+<area shape="rect" id="node20" href="$classns3_1_1_ipv6_extension_hop_by_hop_header.html#a73c5ce20fd870eb94bb05a4a2e3ad788" title="Get the serialized size of the packet." alt="" coords="567,243,781,284"/>
+</map>

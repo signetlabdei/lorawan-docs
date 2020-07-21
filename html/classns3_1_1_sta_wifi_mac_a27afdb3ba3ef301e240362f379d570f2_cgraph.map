@@ -1,0 +1,52 @@
+<map id="ns3::StaWifiMac::Enqueue" name="ns3::StaWifiMac::Enqueue">
+<area shape="rect" id="node1" title=" " alt="" coords="5,562,196,589"/>
+<area shape="rect" id="node2" href="$classns3_1_1_regular_wifi_mac.html#ae94a96d4c653e4f0c6e501b54e63ee38" title=" " alt="" coords="275,5,431,47"/>
+<area shape="rect" id="node3" href="$classns3_1_1_regular_wifi_mac.html#a23b58c52d462e580bd814db6d8af3fd0" title="Return whether the device supports QoS." alt="" coords="275,71,431,112"/>
+<area shape="rect" id="node4" href="$classns3_1_1_sta_wifi_mac.html#a5725522486784f1db97cdb7020d41246" title="Return whether we are associated with an AP." alt="" coords="244,137,461,163"/>
+<area shape="rect" id="node5" href="$classns3_1_1_wifi_mac.html#aef7418bfb03d5146dda41c392f3e6671" title=" " alt="" coords="252,187,453,214"/>
+<area shape="rect" id="node6" href="$group__wifi.html#gaa7ad20082f78b63633d0557d24927150" title=" " alt="" coords="246,238,459,265"/>
+<area shape="rect" id="node10" href="$group__wifi.html#ga4e36efcff6dd83eaee42e1af0de43d48" title=" " alt="" coords="260,289,445,315"/>
+<area shape="rect" id="node12" href="$classns3_1_1_txop.html#ae0a0bbafaed367559bce8c10c184666f" title=" " alt="" coords="285,339,420,366"/>
+<area shape="rect" id="node37" href="$classns3_1_1_wifi_mac_header.html#a6478a02b80d5c01657714c5c7a0ae1cb" title="Fill the Address 1 field with the given address." alt="" coords="276,391,429,432"/>
+<area shape="rect" id="node38" href="$classns3_1_1_wifi_mac_header.html#ab6a0efdc43d39b5da5d17eae9665271d" title="Fill the Address 2 field with the given address." alt="" coords="276,456,429,497"/>
+<area shape="rect" id="node39" href="$classns3_1_1_wifi_mac_header.html#ace2fd1624db247bd42cbe9182996bb0e" title="Fill the Address 3 field with the given address." alt="" coords="276,521,429,563"/>
+<area shape="rect" id="node40" href="$classns3_1_1_wifi_mac_header.html#a02edeb349da4aacc6b376fcf76ff99cc" title="Un&#45;set the From DS bit in the Frame Control field." alt="" coords="276,587,429,628"/>
+<area shape="rect" id="node41" href="$classns3_1_1_wifi_mac_header.html#a577e95535beca95ba7f4a61a61e8b17d" title="Set the To DS bit in the Frame Control field." alt="" coords="276,652,429,693"/>
+<area shape="rect" id="node42" href="$classns3_1_1_wifi_mac_header.html#aaea421fc6dbb1c2d1a8553fc6826ba21" title="Unset order bit in the frame control field." alt="" coords="276,717,429,759"/>
+<area shape="rect" id="node43" href="$classns3_1_1_wifi_mac_header.html#a0f884f7997eaf10238ad3c2367332e82" title="Set the QoS Ack policy in the QoS control field." alt="" coords="276,783,429,824"/>
+<area shape="rect" id="node44" href="$classns3_1_1_wifi_mac_header.html#ab2ebe7fcf213a774655f0a32e529bf4e" title="Set that A&#45;MSDU is not present." alt="" coords="276,848,429,889"/>
+<area shape="rect" id="node45" href="$classns3_1_1_wifi_mac_header.html#a911b989fc89a91b53bfb12b9005eeb09" title="Un&#45;set the end of service period (EOSP) bit in the QoS control field." alt="" coords="276,913,429,955"/>
+<area shape="rect" id="node46" href="$classns3_1_1_wifi_mac_header.html#a84a98932f5b66cca86bdfaa9cb1bcf7b" title="Set the TID for the QoS header." alt="" coords="276,979,429,1020"/>
+<area shape="rect" id="node47" href="$classns3_1_1_wifi_mac_header.html#a3fd739ae35e6a8deb3b14f81f81e9b36" title="Set TXOP limit in the QoS control field." alt="" coords="276,1044,429,1085"/>
+<area shape="rect" id="node48" href="$classns3_1_1_wifi_mac_header.html#a71172371f11f1cfcb3912bb03134c285" title="Set Type/Subtype values with the correct values depending on the given type." alt="" coords="276,1109,429,1151"/>
+<area shape="rect" id="node49" href="$classns3_1_1_sta_wifi_mac.html#a545fb78eb8b89ee48512820e31d76a81" title="Try to ensure that we are associated with an AP by taking an appropriate action depending on the curr..." alt="" coords="246,1175,459,1216"/>
+<area shape="rect" id="node7" href="$classns3_1_1_socket_priority_tag.html#a1d256d4ad07bc839ae401bd64f9d8420" title="Get the tag&#39;s priority." alt="" coords="543,81,709,123"/>
+<area shape="rect" id="node8" href="$classns3_1_1_packet.html#aec5a71b498e6cd5816de9f5e9b36c397" title="Search a matching tag and call Tag::Deserialize if it is found." alt="" coords="525,147,727,174"/>
+<area shape="rect" id="node9" href="$classns3_1_1_packet_tag_list.html#a7020b07ada157d6c81d67bc9fc2980ca" title="Find a tag and return its value." alt="" coords="839,32,980,73"/>
+<area shape="rect" id="node11" href="$ipv4-address-generator_8cc.html#aaf5aa23b804d2e5e334106f207e8a6cc" title=" " alt="" coords="559,198,693,225"/>
+<area shape="rect" id="node13" href="$classns3_1_1_txop.html#ae211c699c905b2186281923353ba0a26" title="Generate a new backoff now." alt="" coords="525,249,727,275"/>
+<area shape="rect" id="node18" href="$classns3_1_1_wifi_mac_header.html#aa1c4acbda4ace9f7a920c97d71bdd097" title="Return the address in the Address 1 field." alt="" coords="549,332,703,373"/>
+<area shape="rect" id="node19" href="$classns3_1_1_channel_access_manager.html#ad7a1a64ddd5206865b5989d9401b70ee" title="Determine if a new backoff needs to be generated when a packet is queued for transmission." alt="" coords="522,461,730,503"/>
+<area shape="rect" id="node29" href="$classns3_1_1_wifi_remote_station_manager.html#a38a2549c86091c3ca7eba3841f0060d3" title=" " alt="" coords="509,852,743,893"/>
+<area shape="rect" id="node35" href="$classns3_1_1_packet.html#a078fe922d976a417ab25ba2f3c2fd667" title="Remove a packet tag." alt="" coords="515,918,737,945"/>
+<area shape="rect" id="node36" href="$classns3_1_1_txop.html#afd99f40351a5b67181f14008d0751075" title="Request access from Txop if needed." alt="" coords="537,969,715,1011"/>
+<area shape="rect" id="node14" href="$classns3_1_1_txop.html#a3b733c5a31045a10b5074f4ff8026a81" title=" " alt="" coords="841,98,977,125"/>
+<area shape="rect" id="node15" href="$classns3_1_1_uniform_random_variable.html#ab7c7dedc88cb97e74418df2edc28a787" title="Get the next random value, as an unsigned integer in the specified range ." alt="" coords="802,149,1017,191"/>
+<area shape="rect" id="node16" href="$classns3_1_1_txop.html#ad63eb9d04c01d5a3b7568cbb182fdf1d" title=" " alt="" coords="808,215,1011,242"/>
+<area shape="rect" id="node17" href="$classns3_1_1_simulator.html#ac3178fa975b419f7875e7105be122800" title="Return the current simulation virtual time." alt="" coords="1076,397,1229,423"/>
+<area shape="rect" id="node20" href="$classns3_1_1_txop.html#af15b04ad0c613024ed1f98d0eaca2cd8" title="Return the number of slots that make up an AIFS." alt="" coords="835,317,984,343"/>
+<area shape="rect" id="node21" href="$classns3_1_1_txop.html#adbf1c8e98b66df88c983bdfb61d77bab" title="Return the current number of backoff slots." alt="" coords="811,367,1008,394"/>
+<area shape="rect" id="node22" href="$classns3_1_1_txop.html#a34a0543a372e357fb7e9b9224a531ce3" title="Return the MacLow associated with this Txop." alt="" coords="838,418,981,445"/>
+<area shape="rect" id="node23" href="$classns3_1_1_txop.html#ae7aae48e34fb861683586ff5ec0ecc71" title="Check if the Txop has frames to transmit." alt="" coords="791,469,1028,495"/>
+<area shape="rect" id="node24" href="$classns3_1_1_channel_access_manager.html#a72b37a838af8ce2f374e79ac5508bcad" title="Check if the device is busy sending or receiving, or NAV or CCA busy." alt="" coords="805,520,1013,561"/>
+<area shape="rect" id="node25" href="$classns3_1_1_txop.html#a7ad3a446bf34065eef10bc9659a0607a" title="Check for QoS TXOP." alt="" coords="829,586,990,613"/>
+<area shape="rect" id="node26" href="$group__timecivil.html#ga33c34b816f8ff6628e33d5c8e9713b9e" title=" " alt="" coords="856,637,963,663"/>
+<area shape="rect" id="node27" href="$classns3_1_1_channel_access_manager.html#a16abdc22e5c20496f49ee0d080145b2c" title="Update backoff slots for all Txops." alt="" coords="805,688,1013,729"/>
+<area shape="rect" id="node28" href="$classns3_1_1_txop.html#aab51e8f20be390e101e331aedc02a588" title="Update backoff slots that nSlots has passed." alt="" coords="815,753,1004,795"/>
+<area shape="rect" id="node30" href="$classns3_1_1_wifi_remote_station_manager.html#aa8b7470c26610407756a92a5fcb4bf4b" title="Since CTS&#45;to&#45;self parameters are not dependent on the station, it is implemented in wifi remote stati..." alt="" coords="793,819,1026,860"/>
+<area shape="rect" id="node31" href="$classns3_1_1_wifi_remote_station_manager.html#a5a6b2bfcd4959da43c54f0072bd01202" title=" " alt="" coords="793,884,1026,925"/>
+<area shape="rect" id="node32" href="$classns3_1_1_wifi_remote_station_manager.html#abf44eccb31d4b1b58644fd6721d132c9" title=" " alt="" coords="793,949,1026,991"/>
+<area shape="rect" id="node33" href="$classns3_1_1_wifi_remote_station_manager.html#a3b5ae71dce8e994b493ddfdb1d2f57f6" title=" " alt="" coords="793,1015,1026,1056"/>
+<area shape="rect" id="node34" href="$classns3_1_1_wifi_remote_station_manager.html#a230ec2422481af84c0e2a8dcc1ccb630" title="Return the station associated with the given address." alt="" coords="793,1080,1026,1121"/>
+<area shape="rect" id="node50" href="$classns3_1_1_sta_wifi_mac.html#a9c007448763eb89846914c4c836cacc1" title="Start the scanning process which trigger active or passive scanning based on the active probing flag." alt="" coords="513,1182,739,1209"/>
+</map>

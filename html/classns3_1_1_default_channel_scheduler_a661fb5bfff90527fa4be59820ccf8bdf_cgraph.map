@@ -1,0 +1,52 @@
+<map id="ns3::DefaultChannelScheduler::SwitchToNextChannel" name="ns3::DefaultChannelScheduler::SwitchToNextChannel">
+<area shape="rect" id="node1" title=" " alt="" coords="5,351,224,392"/>
+<area shape="rect" id="node2" href="$classns3_1_1_wifi_phy.html#a0fff908934055690c5774ef0890bb239" title="Return current channel number." alt="" coords="880,393,1067,435"/>
+<area shape="rect" id="node3" href="$classns3_1_1_wifi_phy.html#a7318107eb636a74fdfce0c5e0a122483" title=" " alt="" coords="880,780,1067,821"/>
+<area shape="rect" id="node4" href="$classns3_1_1_wave_net_device.html#ac10a984970dc10b82558e0c856a56b0c" title=" " alt="" coords="317,227,476,268"/>
+<area shape="rect" id="node5" href="$classns3_1_1_ocb_wifi_mac.html#ab7719e7ccdc4cbfd99a802e7694ed6d1" title=" " alt="" coords="272,121,521,147"/>
+<area shape="rect" id="node24" href="$classns3_1_1_regular_wifi_mac.html#a27dba298192a0dc28ce0eef7812c0b04" title="Remove currently attached WifiPhy device from this MAC." alt="" coords="319,292,475,333"/>
+<area shape="rect" id="node26" href="$classns3_1_1_ocb_wifi_mac.html#aee8907d49aac54ae17ca13cde9f8e844" title="To support MAC extension for multiple channel operation, Resume the activity of suspended MAC entity." alt="" coords="301,175,493,202"/>
+<area shape="rect" id="node28" href="$classns3_1_1_wifi_phy.html#a2d13cf6ae4c185cae8516516afe4a32a" title="Set channel number." alt="" coords="305,481,489,523"/>
+<area shape="rect" id="node47" href="$classns3_1_1_regular_wifi_mac.html#afac2ce0fb1181ff8f87a4972c41fe2df" title=" " alt="" coords="319,888,475,929"/>
+<area shape="rect" id="node49" href="$classns3_1_1_ocb_wifi_mac.html#aa225044c84d3a80b2f7e2d721d13b481" title="To support MAC extension for multiple channel operation, Suspend the activity in current MAC entity." alt="" coords="299,775,494,802"/>
+<area shape="rect" id="node6" href="$classns3_1_1_channel_access_manager.html#a77abe92dc446eeb4e0ff44a00c107045" title=" " alt="" coords="575,83,806,124"/>
+<area shape="rect" id="node7" href="$classns3_1_1_simulator.html#ac3178fa975b419f7875e7105be122800" title="Return the current simulation virtual time." alt="" coords="1654,115,1807,142"/>
+<area shape="rect" id="node21" href="$classns3_1_1_channel_access_manager.html#a16abdc22e5c20496f49ee0d080145b2c" title="Update backoff slots for all Txops." alt="" coords="869,83,1077,124"/>
+<area shape="rect" id="node8" href="$group__simulator.html#ga42eb4eddad41528d4d99794a3dae3fd0" title="Get the SimulatorImpl singleton." alt="" coords="1901,318,2007,345"/>
+<area shape="rect" id="node20" href="$classns3_1_1_simulator_impl.html#aa516c50060846adc6fd316e83ef0797c" title="Return the current simulation virtual time." alt="" coords="1863,65,2045,91"/>
+<area shape="rect" id="node9" href="$classns3_1_1_object_factory.html#a52eda277f4aaab54266134ba48102ad7" title="Create an Object instance of the configured TypeId." alt="" coords="2122,460,2265,501"/>
+<area shape="rect" id="node10" href="$group__logging.html#gac4c06cbbed12229d85991ced145f6be2" title="Default Node printer." alt="" coords="2104,526,2283,553"/>
+<area shape="rect" id="node11" href="$namespacens3.html#ae01c3c7786b644dfb8a0bb8f1201b269" title="Default Time printer." alt="" coords="2105,90,2281,117"/>
+<area shape="rect" id="node13" href="$classns3_1_1_string_value.html#a6f208c2778fe1c7882e5cb429b8326ae" title=" " alt="" coords="2114,141,2273,167"/>
+<area shape="rect" id="node14" href="$namespacens3.html#ab4e173cdfd43d17c1a40d5348510a670" title=" " alt="" coords="2132,191,2255,218"/>
+<area shape="rect" id="node15" href="$classns3_1_1_global_value.html#a48a99242193fb69609a17332733e8600" title="Get the value." alt="" coords="2093,242,2293,269"/>
+<area shape="rect" id="node16" href="$namespacens3.html#aebac73305345f2e2803fdeb102a7705e" title="Set the LogNodePrinter function to be used to prepend log messages with the node id." alt="" coords="2106,293,2281,319"/>
+<area shape="rect" id="node17" href="$namespacens3.html#a46cd76678f7da29799d1b41994e12ec1" title="Set the TimePrinter function to be used to prepend log messages with the simulation time." alt="" coords="2107,343,2279,370"/>
+<area shape="rect" id="node18" href="$group__simulator.html#ga233c5c38de117e4e4a5a9cd168694792" title="Get the static SimulatorImpl instance." alt="" coords="2136,577,2251,603"/>
+<area shape="rect" id="node19" href="$classns3_1_1_object_factory.html#a77dcd099064038a1eb7a6b8251229ec3" title="Set the TypeId of the Objects to be created by this factory." alt="" coords="2122,395,2265,436"/>
+<area shape="rect" id="node12" href="$classns3_1_1_time.html#a48c9bb8d93fea6a8d8cac216967219f4" title="Attach a unit to a Time, to facilitate output in a specific unit." alt="" coords="2341,49,2451,75"/>
+<area shape="rect" id="node22" href="$classns3_1_1_channel_access_manager.html#ae0a0f234530510cafd165d338fe21a53" title="Return the time when the backoff procedure started for the given Txop." alt="" coords="1135,57,1343,99"/>
+<area shape="rect" id="node23" href="$classns3_1_1_channel_access_manager.html#ad740b71c85f10fe714dcd94b621f9ae8" title="Access will never be granted to the medium before the time returned by this method." alt="" coords="1391,57,1599,99"/>
+<area shape="rect" id="node25" href="$classns3_1_1_channel_access_manager.html#a7d4b8f6e0e26865afe02bbe8aeb231dc" title="Remove current registered listener for PHY events." alt="" coords="587,227,795,268"/>
+<area shape="rect" id="node27" href="$classns3_1_1_channel_access_manager.html#a9d04948216a84575c4a717fe991e47f9" title="Notify the Txop that the device has been resumed from sleep mode." alt="" coords="1391,175,1599,216"/>
+<area shape="rect" id="node29" href="$classns3_1_1_wifi_phy.html#a373181dc2e4d4838ab979b5ca3831f4f" title="The default implementation does nothing and returns true." alt="" coords="579,627,803,654"/>
+<area shape="rect" id="node40" href="$80211b_8c.html#ae7ffc1a8f84fa47a0812b2f2b9627132" title=" " alt="" coords="954,459,993,486"/>
+<area shape="rect" id="node41" href="$classns3_1_1_wifi_phy.html#ac8659b121c5c2a39d319e15b4be71509" title="Lookup frequency/width pair for channelNumber/standard pair." alt="" coords="569,511,812,552"/>
+<area shape="rect" id="node42" href="$classns3_1_1_wifi_phy.html#adf81d01675e6e26b64940209546dfdc3" title="Get the configured Wi&#45;Fi standard." alt="" coords="595,577,786,603"/>
+<area shape="rect" id="node43" href="$classns3_1_1_wifi_phy.html#a84cca013904983c064faff606ddc80a9" title=" " alt="" coords="599,292,783,333"/>
+<area shape="rect" id="node30" href="$classns3_1_1_event_id.html#a993ae94e48e014e1afd47edb16db7a11" title="This method is syntactic sugar for the ns3::Simulator::Cancel method." alt="" coords="896,897,1051,923"/>
+<area shape="rect" id="node32" href="$classns3_1_1_interference_helper.html#a30aa5b4b44ef28dd034c124b32dd8ed1" title="Erase all events." alt="" coords="886,663,1061,704"/>
+<area shape="rect" id="node34" href="$classns3_1_1_wifi_phy.html#aa02ed143ca902af230b9e177ed0d7603" title=" " alt="" coords="860,729,1087,755"/>
+<area shape="rect" id="node35" href="$classns3_1_1_object.html#a285e5644a29f17dcadacff20767ed000" title="Check if the object has been initialized." alt="" coords="884,510,1063,537"/>
+<area shape="rect" id="node36" href="$classns3_1_1_event_id.html#a8b41e6f8c54db6bede8a7dcaf917074a" title="This method is syntactic sugar for !IsExpired()." alt="" coords="886,846,1061,873"/>
+<area shape="rect" id="node38" href="$classns3_1_1_wifi_phy.html#ac6cf5ab9c5dd429abd701dc749a361d5" title=" " alt="" coords="864,561,1083,587"/>
+<area shape="rect" id="node39" href="$classns3_1_1_simulator.html#a671882c894a08af4a5e91181bf1eec13" title="Schedule an event to expire after delay." alt="" coords="882,611,1065,638"/>
+<area shape="rect" id="node31" href="$classns3_1_1_simulator.html#a1b903a62d6117ef28f7ba3c6500689bf" title="Set the cancel bit on this event: the event&#39;s associated function will not be invoked when it expires..." alt="" coords="1647,577,1815,603"/>
+<area shape="rect" id="node33" href="$classns3_1_1_interference_helper.html#a7ac624ac3b39ccb57b8a0278a48df165" title="Add NiChange to the list at the appropriate position and return the iterator of the new event." alt="" coords="1151,663,1326,704"/>
+<area shape="rect" id="node37" href="$classns3_1_1_event_id.html#acc25141054209b1a286a5471a51bd0c0" title="This method is syntactic sugar for the ns3::Simulator::IsExpired method." alt="" coords="1153,846,1324,873"/>
+<area shape="rect" id="node44" href="$classns3_1_1_wifi_phy.html#adee4a10e843ac021862acb1893436258" title=" " alt="" coords="873,276,1074,317"/>
+<area shape="rect" id="node45" href="$classns3_1_1_callback.html#a42eb007ca42c35b96daa497d6d42d5f2" title="Check for null implementation." alt="" coords="896,342,1051,369"/>
+<area shape="rect" id="node46" href="$ipv4-address-generator_8cc.html#aaf5aa23b804d2e5e334106f207e8a6cc" title=" " alt="" coords="906,225,1041,251"/>
+<area shape="rect" id="node48" href="$classns3_1_1_channel_access_manager.html#a8f22051d42b40ab6c063ec613f45a04f" title="Set up listener for PHY events." alt="" coords="587,896,795,937"/>
+<area shape="rect" id="node50" href="$classns3_1_1_channel_access_manager.html#a8dd8096e033dca65c7a13733ebff6430" title="Notify the Txop that the device has been put in sleep mode." alt="" coords="587,831,795,872"/>
+</map>

@@ -1,0 +1,52 @@
+<map id="ns3::QueueDisc::GetQueueDiscClass" name="ns3::QueueDisc::GetQueueDiscClass">
+<area shape="rect" id="node1" title="Get the i&#45;th queue disc class." alt="" coords="1064,1443,1260,1484"/>
+<area shape="rect" id="node2" href="$classns3_1_1_prio_queue_disc.html#a31ba43338e41a4f242892aba43d79894" title="This function actually extracts a packet from the queue disc." alt="" coords="809,5,957,47"/>
+<area shape="rect" id="node3" href="$classns3_1_1_tbf_queue_disc.html#adbd2533e54dd52ba3c4f064be5e0b87e" title="This function actually extracts a packet from the queue disc." alt="" coords="807,71,959,112"/>
+<area shape="rect" id="node4" href="$class_test_parent_queue_disc.html#a2ffeaf42b7e67b41ad049f0cb5210a90" title="This function actually extracts a packet from the queue disc." alt="" coords="803,136,963,177"/>
+<area shape="rect" id="node5" href="$classns3_1_1_fq_co_del_queue_disc.html#a9763ff304b86d8c3d2f951d20e102d0a" title="This function actually enqueues a packet into the queue disc." alt="" coords="236,105,415,147"/>
+<area shape="rect" id="node6" href="$classns3_1_1_prio_queue_disc.html#a4ef8d3d710ea71edc697b9c047c2fc0d" title="This function actually enqueues a packet into the queue disc." alt="" coords="809,1344,957,1385"/>
+<area shape="rect" id="node7" href="$classns3_1_1_tbf_queue_disc.html#ad327339fa8e996a280a640cd1bb5a454" title="This function actually enqueues a packet into the queue disc." alt="" coords="807,1409,959,1451"/>
+<area shape="rect" id="node8" href="$class_test_parent_queue_disc.html#ac71c40d2e6716400d18d977d2136dad0" title="This function actually enqueues a packet into the queue disc." alt="" coords="803,1475,963,1516"/>
+<area shape="rect" id="node9" href="$classns3_1_1_prio_queue_disc.html#a4dd6b0a3c439f693759903f7909e8902" title="Return a copy of the next packet the queue disc will extract." alt="" coords="809,1540,957,1581"/>
+<area shape="rect" id="node10" href="$class_fq_co_del_queue_disc_i_p_flows_separation_and_packet_limit.html#afc60f270315ee2655e79ac8b8e2bb21b" title="Implementation to actually run this TestCase." alt="" coords="749,1605,1016,1647"/>
+<area shape="rect" id="node11" href="$class_fq_co_del_queue_disc_deficit.html#a9172161f28767de8a6893a8e0e320538" title="Implementation to actually run this TestCase." alt="" coords="787,1671,978,1712"/>
+<area shape="rect" id="node12" href="$class_fq_co_del_queue_disc_t_c_p_flows_separation.html#aedd5fa8cebf49f8414f9fd1856313887" title="Implementation to actually run this TestCase." alt="" coords="777,1736,988,1777"/>
+<area shape="rect" id="node13" href="$class_fq_co_del_queue_disc_u_d_p_flows_separation.html#a9a290a3d299c1bdef1daac72ce8d4919" title="Implementation to actually run this TestCase." alt="" coords="776,1801,989,1843"/>
+<area shape="rect" id="node14" href="$class_wifi_ac_mapping_test.html#ae0d828d29768d59590210d2f1bf8a552" title="Implementation to actually run this TestCase." alt="" coords="805,1867,960,1908"/>
+<area shape="rect" id="node15" href="$class_prio_queue_disc_test_case.html#a1de5d6d1c1f278bff9cb217335058919" title="Implementation to actually run this TestCase." alt="" coords="795,1932,970,1973"/>
+<area shape="rect" id="node16" href="$class_queue_disc_traces_test_case.html#a7ad9e3425f5a7827cf41434ab969ba75" title="Implementation to actually run this TestCase." alt="" coords="787,1997,979,2039"/>
+<area shape="rect" id="node17" href="$classns3_1_1_fq_co_del_queue_disc.html#a81c4f704aadd923d9ca96c5224d10f6d" title="Drop a packet from the head of the queue with the largest current byte count." alt="" coords="793,460,972,501"/>
+<area shape="rect" id="node18" href="$classns3_1_1_queue_disc.html#a30acf59202fdbdc24b320d3500dc70d3" title="Get the maximum size of the queue disc." alt="" coords="778,939,987,966"/>
+<area shape="rect" id="node50" href="$classns3_1_1_queue_disc.html#abd75ea268b69372beefaade33194038c" title="Set the maximum size of the queue disc." alt="" coords="779,1293,986,1319"/>
+<area shape="rect" id="node19" href="$classns3_1_1_cobalt_queue_disc.html#a4f14b327720ce9a957db503d9f068257" title="Check whether the current configuration is correct." alt="" coords="504,576,669,617"/>
+<area shape="rect" id="node20" href="$classns3_1_1_co_del_queue_disc.html#a580a58842272e8110ebae6f1503f6327" title="Check whether the current configuration is correct." alt="" coords="505,641,668,683"/>
+<area shape="rect" id="node21" href="$classns3_1_1_fifo_queue_disc.html#a36d68c243a0e0ed6096b288fdb9b9f18" title="Check whether the current configuration is correct." alt="" coords="513,707,660,748"/>
+<area shape="rect" id="node22" href="$classns3_1_1_pfifo_fast_queue_disc.html#a9fa5e68b79b7431cd734f4e8845bdced" title="Check whether the current configuration is correct." alt="" coords="497,772,677,813"/>
+<area shape="rect" id="node23" href="$classns3_1_1_pie_queue_disc.html#af6eda43da222e1013754c8ed50ebeda4" title="Check whether the current configuration is correct." alt="" coords="511,837,662,879"/>
+<area shape="rect" id="node24" href="$classns3_1_1_red_queue_disc.html#a86e75c3ab20213f1451bdc7270d18114" title="Check whether the current configuration is correct." alt="" coords="509,903,665,944"/>
+<area shape="rect" id="node25" href="$classns3_1_1_tbf_queue_disc.html#a1aca751ec280d81d8b0d7d2e9e75fde6" title="Check whether the current configuration is correct." alt="" coords="511,1188,663,1229"/>
+<area shape="rect" id="node26" href="$classns3_1_1_cobalt_queue_disc.html#a3df648f96b1bcd613b9171a0950dcf25" title="This function actually enqueues a packet into the queue disc." alt="" coords="243,917,408,959"/>
+<area shape="rect" id="node27" href="$classns3_1_1_co_del_queue_disc.html#a0c68a40b422edf668a1f225be498ff97" title="Add a packet to the queue." alt="" coords="244,181,407,223"/>
+<area shape="rect" id="node28" href="$classns3_1_1_fifo_queue_disc.html#a5a4e009ce79ad455a39af5783b959d34" title="This function actually enqueues a packet into the queue disc." alt="" coords="252,268,399,309"/>
+<area shape="rect" id="node29" href="$classns3_1_1_pfifo_fast_queue_disc.html#aac7fa518f6f59bf89a7a5fa5b9579d8b" title="This function actually enqueues a packet into the queue disc." alt="" coords="235,525,415,567"/>
+<area shape="rect" id="node30" href="$classns3_1_1_pie_queue_disc.html#a583c0ac9ca43810a32af239e23e31614" title="This function actually enqueues a packet into the queue disc." alt="" coords="250,1071,401,1112"/>
+<area shape="rect" id="node31" href="$class_fifo_queue_disc_test_case.html#ae94dbb209c30e7a8863e3822798a6802" title="Run test function." alt="" coords="239,677,412,719"/>
+<area shape="rect" id="node33" href="$classns3_1_1_pie_queue_disc.html#a73c30e9ac6e37ba9dd2a362f0b45e6e3" title="Check if a packet needs to be dropped due to probability drop." alt="" coords="511,1071,662,1112"/>
+<area shape="rect" id="node34" href="$classns3_1_1_queue_disc.html#a0b121e62752208f83a5cb2b5124b5822" title="Get the current size of the queue disc in bytes, if operating in bytes mode, or packets,..." alt="" coords="472,474,701,501"/>
+<area shape="rect" id="node39" href="$classns3_1_1_cobalt_queue_disc.html#afd615ecd755e3d94fff26423838d700a" title="Get the type ID." alt="" coords="504,1384,669,1425"/>
+<area shape="rect" id="node40" href="$classns3_1_1_co_del_queue_disc.html#ae0ee4bf739d0a32330de43741a362f59" title="Get the type ID." alt="" coords="505,1449,668,1491"/>
+<area shape="rect" id="node41" href="$classns3_1_1_fifo_queue_disc.html#adaa131c7f77c32adcc8344e178d7700b" title="Get the type ID." alt="" coords="513,1515,660,1556"/>
+<area shape="rect" id="node42" href="$classns3_1_1_fq_co_del_queue_disc.html#ac1928d4a228c995d1c24f413fde82bd2" title="Get the type ID." alt="" coords="497,1580,676,1621"/>
+<area shape="rect" id="node43" href="$classns3_1_1_pfifo_fast_queue_disc.html#a2c8d164b89f5934e2b0bbf261aba5bc9" title="Get the type ID." alt="" coords="497,1645,677,1687"/>
+<area shape="rect" id="node44" href="$classns3_1_1_pie_queue_disc.html#a77db6d3c88c9d7b3037d1c3bae6fb80f" title="Get the type ID." alt="" coords="511,1711,662,1752"/>
+<area shape="rect" id="node45" href="$classns3_1_1_red_queue_disc.html#a21c255fe1a7f38a3250af49ef1dac963" title="Get the type ID." alt="" coords="509,1253,665,1295"/>
+<area shape="rect" id="node46" href="$classns3_1_1_tbf_queue_disc.html#aa092b8643330c046b3a4f481f9c286b4" title="Get the type ID." alt="" coords="511,1319,663,1360"/>
+<area shape="rect" id="node47" href="$classns3_1_1_fq_co_del_queue_disc.html#ae4463340ee6d6a4c6d9a267ea9e3aa35" title="Initialize parameters (if any) before the first packet is enqueued." alt="" coords="497,277,676,319"/>
+<area shape="rect" id="node48" href="$classns3_1_1_red_queue_disc.html#adac83b0cbf66f22a6176304b3907995e" title="Initialize the queue parameters." alt="" coords="509,343,665,384"/>
+<area shape="rect" id="node49" href="$classns3_1_1_red_queue_disc.html#a13c713ce7e0d321a4a6f5686d600709a" title="Returns a probability using these function parameters for the DropEarly function." alt="" coords="509,408,665,449"/>
+<area shape="rect" id="node32" href="$class_fifo_queue_disc_test_case.html#a086e32c51488a550051c4a3026e6baee" title="Run test function." alt="" coords="5,677,179,719"/>
+<area shape="rect" id="node35" href="$adaptive-red-tests_8cc.html#a64451d920062e967d2c0fa8b6ae85911" title=" " alt="" coords="246,423,405,450"/>
+<area shape="rect" id="node36" href="$cobalt-vs-codel_8cc.html#a2db2ab2d8e19895b6a751c4713c67df6" title=" " alt="" coords="260,474,391,501"/>
+<area shape="rect" id="node37" href="$class_co_del_queue_disc_basic_drop.html#ab858662db8af1c6f181bd0d01d44ce48" title="Dequeue function." alt="" coords="227,357,424,399"/>
+<area shape="rect" id="node38" href="$class_red_queue_disc_test_case.html#a1580a6680062799f9317221c921f2a98" title="Run RED test function." alt="" coords="238,1452,413,1493"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="ns3::DhcpHeader::SetTran" name="ns3::DhcpHeader::SetTran">
+<area shape="rect" id="node1" title="Set the transaction ID." alt="" coords="2088,203,2279,229"/>
+<area shape="rect" id="node2" href="$classns3_1_1_dhcp_client.html#a722283f15dedcb758b71d9846867e16e" title="Sends DHCP DISCOVER and changes the client state to WAIT_OFFER." alt="" coords="1858,101,2021,128"/>
+<area shape="rect" id="node10" href="$classns3_1_1_dhcp_client.html#a8c1a264b19c02d331f0e51f9be84b09a" title="Sends the DHCP REQUEST message and changes the client state to WAIT_ACK." alt="" coords="1319,177,1505,204"/>
+<area shape="rect" id="node11" href="$classns3_1_1_dhcp_server.html#ace0985d3fafb7048b6a1f10a99c2ef64" title="Sends DHCP ACK (or NACK) after receiving Request." alt="" coords="1843,228,2035,255"/>
+<area shape="rect" id="node14" href="$classns3_1_1_dhcp_server.html#aedb1487d987f9aa542aae3ad326b9c0b" title="Sends DHCP offer after receiving DHCP Discover." alt="" coords="1839,279,2040,305"/>
+<area shape="rect" id="node3" href="$classns3_1_1_dhcp_client.html#ae7a2dde0056ad591a05f84b2a404c213" title="Handles incoming packets from the network." alt="" coords="1037,101,1244,128"/>
+<area shape="rect" id="node5" href="$classns3_1_1_dhcp_client.html#ab03efa3292800ecd9cb99968cafddee3" title="Application specific startup code." alt="" coords="512,101,748,128"/>
+<area shape="rect" id="node8" href="$classns3_1_1_dhcp_client.html#a2278f6347d69ca17aa75cd35ffd5d14e" title="Selects an OFFER from m_offerList." alt="" coords="1599,127,1771,153"/>
+<area shape="rect" id="node4" href="$classns3_1_1_dhcp_client.html#a3cabbf48dc583a62f0390f345cd4952f" title="Handles changes in LinkState." alt="" coords="796,94,989,135"/>
+<area shape="rect" id="node6" href="$classns3_1_1_dhcp_client.html#a333fc2ff1440b01d15b9631490e23289" title="Remove the current DHCP information and restart the process." alt="" coords="253,94,464,135"/>
+<area shape="rect" id="node7" href="$classns3_1_1_dhcp_client.html#aeec11ad69df96e12a053410cce443f95" title="Receives the DHCP ACK and configures IP address of the client." alt="" coords="5,160,205,187"/>
+<area shape="rect" id="node9" href="$classns3_1_1_dhcp_client.html#aa0475bb3e7bd6c56b29a9e1373108b23" title="Stores DHCP offers in m_offerList." alt="" coords="1304,127,1520,153"/>
+<area shape="rect" id="node12" href="$classns3_1_1_dhcp_server.html#acc55231b1b1e6ef243e7fb0295209fe8" title="Handles incoming packets from the network." alt="" coords="1580,253,1791,280"/>
+<area shape="rect" id="node13" href="$classns3_1_1_dhcp_server.html#ab3c7516bfe4275063212414342201940" title="Starts the DHCP Server application." alt="" coords="1292,253,1532,280"/>
+</map>

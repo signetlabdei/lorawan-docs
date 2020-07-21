@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>FqCoDel queue disc &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PIE queue disc" href="pie.html" />
+    <link rel="prev" title="CoDel queue disc" href="codel.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="pie.html" title="PIE queue disc"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="codel.html" title="CoDel queue disc"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" accesskey="U">Traffic Control Layer</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="fqcodel-queue-disc">
+<h1>FqCoDel queue disc<a class="headerlink" href="#fqcodel-queue-disc" title="Permalink to this headline">¶</a></h1>
+<p>This chapter describes the FqCoDel (<a class="reference internal" href="#hoe16" id="id1"><span>[Hoe16]</span></a>) queue disc implementation in <em>ns-3</em>.</p>
+<p>The FlowQueue-CoDel (FQ-CoDel) algorithm is a combined packet scheduler and
+Active Queue Management (AQM) algorithm developed as part of the
+bufferbloat-fighting community effort (<a class="reference internal" href="#buf16" id="id2"><span>[Buf16]</span></a>).
+FqCoDel classifies incoming packets into different queues (by default, 1024
+queues are created), which are served according to a modified Deficit Round
+Robin (DRR) queue scheduler. Each queue is managed by the CoDel AQM algorithm.
+FqCoDel distinguishes between “new” queues (which don’t build up a standing
+queue) and “old” queues, that have queued enough data to be around for more
+than one iteration of the round-robin scheduler.</p>
+<p>FqCoDel is installed by default on single-queue NetDevices (such as PointToPoint,
+Csma and Simple). Also, on multi-queue devices (such as Wifi), the default root
+qdisc is Mq with as many FqCoDel child queue discs as the number of device queues.</p>
+<div class="section" id="model-description">
+<h2>Model Description<a class="headerlink" href="#model-description" title="Permalink to this headline">¶</a></h2>
+<p>The source code for the FqCoDel queue disc is located in the directory
+<code class="docutils literal notranslate"><span class="pre">src/traffic-control/model</span></code> and consists of 2 files <cite>fq-codel-queue-disc.h</cite>
+and <cite>fq-codel-queue-disc.cc</cite> defining a FqCoDelQueueDisc class and a helper
+FqCoDelFlow class. The code was ported to <em>ns-3</em> based on Linux kernel code
+implemented by Eric Dumazet.</p>
+<ul class="simple">
+<li><p>class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">FqCoDelQueueDisc</span></code>: This class implements the main FqCoDel algorithm:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">FqCoDelQueueDisc::DoEnqueue</span> <span class="pre">()</span></code>: If no packet filter has been configured, this routine calls the QueueDiscItem::Hash() method to classify the given packet into an appropriate queue. Otherwise, the configured filters are used to classify the packet. If the filters are unable to classify the packet, the packet is dropped. Otherwise, it is handed over to the CoDel algorithm for timestamping. Then, if the queue is not currently active (i.e., if it is not in either the list of new or the list of old queues), it is added to the end of the list of new queues, and its deficit is initiated to the configured quantum. Otherwise,  the queue is left in its current queue list. Finally, the total number of enqueued packets is compared with the configured limit, and if it is above this value (which can happen since a packet was just enqueued), packets are dropped from the head of the queue with the largest current byte count until the number of dropped packets reaches the configured drop batch size or the backlog of the queue has been halved. Note that this in most cases means that the packet that was just enqueued is not among the packets that get dropped, which may even be from a different queue.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FqCoDelQueueDisc::DoDequeue</span> <span class="pre">()</span></code>: The first task performed by this routine is selecting a queue from which to dequeue a packet. To this end, the scheduler first looks at the list of new queues; for the queue at the head of that list, if that queue has a negative deficit (i.e., it has already dequeued at least a quantum of bytes), it is given an additional amount of deficit, the queue is put onto the end of the list of old queues, and the routine selects the next queue and starts again. Otherwise, that queue is selected for dequeue. If the list of new queues is empty, the scheduler proceeds down the list of old queues in the same fashion (checking the deficit, and either selecting the queue for dequeuing, or increasing deficit and putting the queue back at the end of the list). After having selected a queue from which to dequeue a packet, the CoDel algorithm is invoked on that queue. As a result of this, one or more packets may be discarded from the head of the selected queue, before the packet that should be dequeued is returned (or nothing is returned if the queue is or becomes empty while being handled by the CoDel algorithm). Finally, if the CoDel algorithm does not return a packet, then the queue must be empty, and the scheduler does one of two things: if the queue selected for dequeue came from the list of new queues, it is moved to the end of the list of old queues.  If instead it came from the list of old queues, that queue is removed from the list, to be added back (as a new queue) the next time a packet for that queue arrives. Then (since no packet was available for dequeue), the whole dequeue process is restarted from the beginning. If, instead, the scheduler did get a packet back from the CoDel algorithm, it subtracts the size of the packet from the byte deficit for the selected queue and returns the packet as the result of the dequeue operation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FqCoDelQueueDisc::FqCoDelDrop</span> <span class="pre">()</span></code>: This routine is invoked by <code class="docutils literal notranslate"><span class="pre">FqCoDelQueueDisc::DoEnqueue()</span></code> to drop packets from the head of the queue with the largest current byte count. This routine keeps dropping packets until the number of dropped packets reaches the configured drop batch size or the backlog of the queue has been halved.</p></li>
+</ul>
+</li>
+<li><p>class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">FqCoDelFlow</span></code>: This class implements a flow queue, by keeping its current status (whether it is in the list of new queues, in the list of old queues or inactive) and its current deficit.</p></li>
+</ul>
+<p>In Linux, by default, packet classification is done by hashing (using a Jenkins
+hash function) on the 5-tuple of IP protocol, and source and destination IP
+addresses and port numbers (if they exist), and taking the hash value modulo
+the number of queues. The hash is salted by modulo addition of a random value
+selected at initialisation time, to prevent possible DoS attacks if the hash
+is predictable ahead of time. Alternatively, any other packet filter can be
+configured.
+In <em>ns-3</em>, packet classification is performed in the same way as in Linux.
+Neither internal queues nor classes can be configured for an FqCoDel
+queue disc.</p>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<dl class="citation">
+<dt class="label" id="hoe16"><span class="brackets"><a class="fn-backref" href="#id1">Hoe16</a></span></dt>
+<dd><ol class="upperalpha simple" start="20">
+<li><p>Hoeiland-Joergensen, P. McKenney, D. Taht, J. Gettys and E. Dumazet, The FlowQueue-CoDel Packet Scheduler and Active Queue Management Algorithm, IETF draft.  Available online at <a class="reference external" href="https://tools.ietf.org/html/draft-ietf-aqm-fq-codel">https://tools.ietf.org/html/draft-ietf-aqm-fq-codel</a></p></li>
+</ol>
+</dd>
+<dt class="label" id="buf16"><span class="brackets"><a class="fn-backref" href="#id2">Buf16</a></span></dt>
+<dd><p>Bufferbloat.net.  Available online at <a class="reference external" href="http://www.bufferbloat.net/">http://www.bufferbloat.net/</a>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>The key attributes that the FqCoDelQueue class holds include the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Interval:</span></code> The interval parameter to be used on the CoDel queues. The default value is 100 ms.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Target:</span></code> The target parameter to be used on the CoDel queues. The default value is 5 ms.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MaxSize:</span></code> The limit on the maximum number of packets stored by FqCoDel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Flows:</span></code> The number of flow queues managed by FqCoDel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DropBatchSize:</span></code> The maximum number of packets dropped from the fat flow.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Perturbation:</span></code> The salt used as an additional input to the hash function used to classify packets.</p></li>
+</ul>
+<p>Perturbation is an optional configuration attribute and can be used to generate
+different hash outcomes for different inputs.  For instance, the tuples
+used as input to the hash may cause hash collisions (mapping to the same
+bucket) for a given set of inputs, but by changing the perturbation value,
+the same hash inputs now map to distinct buckets.</p>
+<p>Note that the quantum, i.e., the number of bytes each queue gets to dequeue on
+each round of the scheduling algorithm, is set by default to the MTU size of the
+device (at initialisation time). The <code class="docutils literal notranslate"><span class="pre">FqCoDelQueueDisc::SetQuantum</span> <span class="pre">()</span></code> method
+can be used (at any time) to configure a different value.</p>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>A typical usage pattern is to create a traffic control helper and to configure type
+and attributes of queue disc and filters from the helper. For example, FqCodel
+can be configured as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TrafficControlHelper</span> <span class="n">tch</span><span class="p">;</span>
+<span class="n">tch</span><span class="p">.</span><span class="n">SetRootQueueDisc</span> <span class="p">(</span><span class="s">&quot;ns3::FqCoDelQueueDisc&quot;</span><span class="p">,</span> <span class="s">&quot;DropBatchSize&quot;</span><span class="p">,</span> <span class="n">UintegerValue</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                                               <span class="s">&quot;Perturbation&quot;</span><span class="p">,</span> <span class="n">UintegerValue</span> <span class="p">(</span><span class="mi">256</span><span class="p">));</span>
+<span class="n">QueueDiscContainer</span> <span class="n">qdiscs</span> <span class="o">=</span> <span class="n">tch</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">devices</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="validation">
+<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<p>The FqCoDel model is tested using <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">FqCoDelQueueDiscTestSuite</span></code> class defined in <cite>src/test/ns3tc/codel-queue-test-suite.cc</cite>.  The suite includes 5 test cases:</p>
+<ul class="simple">
+<li><p>Test 1: The first test checks that packets that cannot be classified by any available filter are dropped.</p></li>
+<li><p>Test 2: The second test checks that IPv4 packets having distinct destination addresses are enqueued into different flow queues. Also, it checks that packets are dropped from the fat flow in case the queue disc capacity is exceeded.</p></li>
+<li><p>Test 3: The third test checks the dequeue operation and the deficit round robin-based scheduler.</p></li>
+<li><p>Test 4: The fourth test checks that TCP packets with distinct port numbers are enqueued into different flow queues.</p></li>
+<li><p>Test 5: The fifth test checks that UDP packets with distinct port numbers are enqueued into different flow queues.</p></li>
+</ul>
+<p>The test suite can be run using the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf configure --enable-examples --enable-tests
+$ ./waf build
+$ ./test.py -s fq-codel-queue-disc
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nv">NS_LOG</span><span class="o">=</span><span class="s2">&quot;FqCoDelQueueDisc&quot;</span> ./waf --run <span class="s2">&quot;test-runner --suite=fq-codel-queue-disc&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">FqCoDel queue disc</a><ul>
+<li><a class="reference internal" href="#model-description">Model Description</a><ul>
+<li><a class="reference internal" href="#references">References</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#validation">Validation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="codel.html"
+                        title="previous chapter">CoDel queue disc</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pie.html"
+                        title="next chapter">PIE queue disc</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/fq-codel.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="pie.html" title="PIE queue disc"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="codel.html" title="CoDel queue disc"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" >Traffic Control Layer</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

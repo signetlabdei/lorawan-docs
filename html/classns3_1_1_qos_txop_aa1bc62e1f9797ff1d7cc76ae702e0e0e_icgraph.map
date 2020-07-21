@@ -1,0 +1,13 @@
+<map id="ns3::QosTxop::GetTxopFragmentSize" name="ns3::QosTxop::GetTxopFragmentSize">
+<area shape="rect" id="node1" title="Calculate the size of the current TXOP fragment." alt="" coords="1413,89,1676,115"/>
+<area shape="rect" id="node2" href="$classns3_1_1_qos_txop.html#a38051a521b5f3f0498c657497e70f7e1" title="Calculate the size of the next TXOP fragment." alt="" coords="842,5,1046,47"/>
+<area shape="rect" id="node7" href="$classns3_1_1_qos_txop.html#a273420d09cef0f6d03f2d4832db0ce60" title="Calculate the number of TXOP fragments needed for the transmission of the current packet." alt="" coords="1120,63,1365,90"/>
+<area shape="rect" id="node9" href="$classns3_1_1_qos_txop.html#a03dc8e799f94fc24e36f528773eb93c5" title="Calculate the offset for the fragment." alt="" coords="1125,165,1360,207"/>
+<area shape="rect" id="node11" href="$classns3_1_1_qos_txop.html#a08b1d31e4c307f33dc159672a5d63c5b" title="Check if the current packet is fragmented because of an exceeded TXOP duration." alt="" coords="816,122,1072,149"/>
+<area shape="rect" id="node3" href="$classns3_1_1_qos_txop.html#af184e0bbc66688c768a3065980d9f7c0" title="Calculate the size of the current fragment." alt="" coords="522,63,753,90"/>
+<area shape="rect" id="node6" href="$classns3_1_1_qos_txop.html#a355a5b9748e510a439eb602d5871f66e" title="Calculate the size of the next fragment." alt="" coords="507,13,768,39"/>
+<area shape="rect" id="node4" href="$classns3_1_1_qos_txop.html#a9caedc29be5c5e59ac81b13322dde598" title="Get the next fragment from the packet with appropriate Wifi header for the fragment." alt="" coords="256,115,459,156"/>
+<area shape="rect" id="node5" href="$classns3_1_1_qos_txop.html#a0d5a35b715d1c8415d5d95a5f0b2814c" title="Notify the Txop that access has been granted." alt="" coords="5,56,208,97"/>
+<area shape="rect" id="node8" href="$classns3_1_1_qos_txop.html#a01a29ba8b12b02febed71b9429205b56" title="Check if the current fragment is the last fragment." alt="" coords="528,114,747,141"/>
+<area shape="rect" id="node10" href="$classns3_1_1_qos_txop.html#aaae6bbf5bdd6aa41c9aedca1223ad3f9" title="Calculate the offset for the current fragment." alt="" coords="536,165,739,207"/>
+</map>

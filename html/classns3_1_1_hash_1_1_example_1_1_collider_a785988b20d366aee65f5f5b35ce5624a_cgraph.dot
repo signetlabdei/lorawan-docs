@@ -1,0 +1,14 @@
+digraph "ns3::Hash::Example::Collider::GetHash"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ns3::Hash::Example\l::Collider::GetHash",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Get the appropriate hash value."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ns3::Hasher::clear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_hasher.html#a629108aa89019d84af8b2d85c7185f54",tooltip="Restore initial state."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ns3::Hasher::GetHash32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_hasher.html#a3d194d6c66ea950b9a89d3465f913012",tooltip="Compute 32-bit hash of a byte buffer."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ns3::Hasher::GetHash64",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classns3_1_1_hasher.html#a45f2b962235b67a23f34bce8d4752327",tooltip="Compute 64-bit hash of a byte buffer."];
+}

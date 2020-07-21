@@ -1,0 +1,16 @@
+<map id="ns3::TcpSocketBase" name="ns3::TcpSocketBase">
+<area shape="rect" id="node1" title="A base class for implementation of a stream socket using TCP." alt="" coords="1203,107,1352,133"/>
+<area shape="rect" id="node9" href="$classns3_1_1_tcp_socket_msg_base.html" title="Class for inserting callbacks special points of the flow of TCP sockets." alt="" coords="1401,107,1577,133"/>
+<area shape="rect" id="node2" href="$classns3_1_1_tcp_socket.html" title="(abstract) base class of all TcpSockets" alt="" coords="1036,107,1153,133"/>
+<area shape="rect" id="node3" href="$classns3_1_1_socket.html" title="A low&#45;level Socket API based loosely on the BSD Socket API." alt="" coords="891,107,987,133"/>
+<area shape="rect" id="node4" href="$classns3_1_1_object.html" title="A base class which provides memory management and object aggregation." alt="" coords="747,107,841,133"/>
+<area shape="rect" id="node5" href="$classns3_1_1_simple_ref_count.html" title=" " alt="" coords="532,92,697,148"/>
+<area shape="rect" id="node6" href="$classns3_1_1_object_base.html" title="Anchor the ns&#45;3 type and attribute system." alt="" coords="179,77,306,104"/>
+<area shape="rect" id="node7" href="$classns3_1_1_simple_ref_count.html" title="A template&#45;based reference counting class." alt="" coords="149,129,336,170"/>
+<area shape="rect" id="node8" href="$classns3_1_1empty.html" title="make Callback use a separate empty type" alt="" coords="5,136,100,163"/>
+<area shape="rect" id="node10" href="$classns3_1_1_tcp_socket_congested_router.html" title="A TCP socket which sends certain data packets with CE flags set for tests 5 and 6." alt="" coords="1627,5,1856,32"/>
+<area shape="rect" id="node11" href="$classns3_1_1_tcp_socket_small_acks.html" title="A TCP socket which sends ACKs smaller than the segment received." alt="" coords="1649,56,1834,83"/>
+<area shape="rect" id="node12" href="$class_tcp_dctcp_congested_router.html" title="A TCP socket which sends a data packet with CE flags set for test 3." alt="" coords="1645,107,1837,133"/>
+<area shape="rect" id="node13" href="$class_tcp_socket_advertised_window_proxy.html" title="Socket that wraps every call to AdvertisedWindowSize ()." alt="" coords="1637,158,1845,199"/>
+<area shape="rect" id="node14" href="$class_tcp_socket_half_ack.html" title="Socket that the 50% of the times saves the entire packet in the buffer, while in the other 50% saves ..." alt="" coords="1673,224,1810,251"/>
+</map>

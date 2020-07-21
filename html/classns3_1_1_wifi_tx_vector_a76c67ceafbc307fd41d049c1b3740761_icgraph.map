@@ -1,0 +1,41 @@
+<map id="ns3::WifiTxVector::GetModeInitialized" name="ns3::WifiTxVector::GetModeInitialized">
+<area shape="rect" id="node1" title=" " alt="" coords="1584,531,1729,572"/>
+<area shape="rect" id="node2" href="$classns3_1_1_wifi_tx_vector.html#a93cb4439b90c64b1baf4ff3c5246e3b2" title="The standard disallows certain combinations of WifiMode, number of spatial streams,..." alt="" coords="1367,459,1512,500"/>
+<area shape="rect" id="node19" href="$classns3_1_1_wifi_phy.html#abf2f88a74d34bd4a92ab8e19e8ef4b1e" title="Start receiving the PHY preamble of a PPDU (i.e." alt="" coords="1343,563,1536,604"/>
+<area shape="rect" id="node3" href="$classns3_1_1_wifi_ppdu.html#adf6aa0e6ec585d30f1f851b2013a2397" title="Create a single user PPDU storing a PSDU." alt="" coords="1104,437,1281,463"/>
+<area shape="rect" id="node4" href="$classns3_1_1_ideal_wifi_manager.html#a2e7570eb1f5cbef1067cfb714e94218e" title=" " alt="" coords="1109,488,1277,529"/>
+<area shape="rect" id="node5" href="$classns3_1_1_minstrel_ht_wifi_manager.html#ae830b47b0301066a9e16fed61fc1882d" title="Check the validity of a combination of number of streams, chWidth and mode." alt="" coords="1091,351,1295,392"/>
+<area shape="rect" id="node6" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a3c5c32d2a58fb45a922e435192b0cf43" title="Initialize() implementation." alt="" coords="817,285,1021,327"/>
+<area shape="rect" id="node7" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a3b59b889db624539c6d5af89fa5e9f74" title="Initialize Minstrel Table." alt="" coords="817,351,1021,392"/>
+<area shape="rect" id="node8" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a7f94804a34efa6121bdfd5d01ac34694" title="Check for initializations." alt="" coords="526,285,730,327"/>
+<area shape="rect" id="node9" href="$classns3_1_1_minstrel_ht_wifi_manager.html#abc2436c9c8dabb7c78907f478e1bb8c7" title=" " alt="" coords="257,5,461,47"/>
+<area shape="rect" id="node10" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a8628d42b27a3bf5cbbd4ea0ec2a79307" title=" " alt="" coords="257,71,461,112"/>
+<area shape="rect" id="node11" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a82e4438440288e8418b501893a11bacb" title=" " alt="" coords="257,136,461,177"/>
+<area shape="rect" id="node12" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a2a1c915cc3def7e9bff5da0123a16040" title="Typically called per A&#45;MPDU, either when a Block ACK was successfully received or when a BlockAckTime..." alt="" coords="5,224,209,265"/>
+<area shape="rect" id="node13" href="$classns3_1_1_minstrel_ht_wifi_manager.html#aa586c8a920a75e94428f44b560aefc7e" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="5,416,209,457"/>
+<area shape="rect" id="node14" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a62ad32df22d4a75101d001e6e6635559" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="257,319,461,360"/>
+<area shape="rect" id="node15" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a7f0e93d9dccdb7bbbe35ff9b6d117d53" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="257,384,461,425"/>
+<area shape="rect" id="node16" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a9891afb45c6fd574a040dfef9d85014f" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="257,449,461,491"/>
+<area shape="rect" id="node17" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a755d4934c2a8ea5392c23aed6ae85851" title="This method is a pure virtual method that must be implemented by the sub&#45;class." alt="" coords="257,515,461,556"/>
+<area shape="rect" id="node18" href="$classns3_1_1_minstrel_ht_wifi_manager.html#abb282b56803faf26139d0db929b09b22" title="Update rate." alt="" coords="257,253,461,295"/>
+<area shape="rect" id="node20" href="$classns3_1_1_spectrum_wifi_phy.html#aead1ebdbaf59361928cd6ffa7abc3161" title="Input method for delivering a signal from the spectrum channel and low&#45;level PHY interface to this Sp..." alt="" coords="1110,677,1275,719"/>
+<area shape="rect" id="node21" href="$class_test_ampdu_reception.html#a78da8669fb854461af9b5b26362d65f2" title="Send A&#45;MPDU with 3 MPDUs of different size (i&#45;th MSDU will have 100 bytes more than (i&#45;1)&#45;th)." alt="" coords="809,612,1028,653"/>
+<area shape="rect" id="node23" href="$class_test_threshold_preamble_detection_without_frame_capture.html#aaad8e18bfa83144a568b3f917815e154" title="Send packet function." alt="" coords="795,677,1043,719"/>
+<area shape="rect" id="node25" href="$class_test_threshold_preamble_detection_with_frame_capture.html#a3ee19053fa0ddcb5202c3350c010b79c" title="Send packet function." alt="" coords="800,743,1037,784"/>
+<area shape="rect" id="node27" href="$class_test_phy_headers_reception.html#a1298a9f1b235059ffafff8987a932625" title="Send packet function." alt="" coords="823,808,1014,849"/>
+<area shape="rect" id="node29" href="$class_test_simple_frame_capture_model.html#a348682089c1a86a816801e848b9ed347" title="Send packet function." alt="" coords="806,873,1031,915"/>
+<area shape="rect" id="node31" href="$class_spectrum_wifi_phy_basic_test.html#a99a44e9e6abcf378592b2a2df06ba394" title="Send signal function." alt="" coords="821,939,1016,980"/>
+<area shape="rect" id="node34" href="$class_wifi_phy_thresholds_test.html#ad003bb55e9dd86b2e9d04c8dc660256d" title="Send signal function." alt="" coords="834,481,1003,523"/>
+<area shape="rect" id="node39" href="$classns3_1_1_wifi_spectrum_phy_interface.html#a30e2efbacd400ef27f4a0bfb501bf940" title="Notify the SpectrumPhy instance of an incoming signal." alt="" coords="807,547,1030,588"/>
+<area shape="rect" id="node22" href="$class_test_ampdu_reception.html#aeb4f6e9143c9d43d54a8ab413b667995" title="Implementation to actually run this TestCase." alt="" coords="549,612,707,653"/>
+<area shape="rect" id="node24" href="$class_test_threshold_preamble_detection_without_frame_capture.html#a5f449b4f3c59a0deab196e21f8b9e048" title="Implementation to actually run this TestCase." alt="" coords="509,677,747,719"/>
+<area shape="rect" id="node26" href="$class_test_threshold_preamble_detection_with_frame_capture.html#a85e4669cc3f532b21e9d0b79190f63b6" title="Implementation to actually run this TestCase." alt="" coords="509,743,747,784"/>
+<area shape="rect" id="node28" href="$class_test_phy_headers_reception.html#a85fbabbc3721c922867e878bd583cd90" title="Implementation to actually run this TestCase." alt="" coords="533,808,723,849"/>
+<area shape="rect" id="node30" href="$class_test_simple_frame_capture_model.html#a4ef1ad62ca9e24ceec8c53124fecedce" title="Implementation to actually run this TestCase." alt="" coords="515,873,741,915"/>
+<area shape="rect" id="node32" href="$class_spectrum_wifi_phy_basic_test.html#a99138864abfa358103ae2f202ce925e7" title="Implementation to actually run this TestCase." alt="" coords="531,939,725,980"/>
+<area shape="rect" id="node33" href="$class_spectrum_wifi_phy_listener_test.html#a357f2be95efbb227365e540b9031748b" title="Implementation to actually run this TestCase." alt="" coords="522,1004,734,1045"/>
+<area shape="rect" id="node35" href="$class_wifi_phy_thresholds_weak_wifi_signal_test.html#aa91cd1cb14ddf211bd151be62e7a72b4" title="Implementation to actually run this TestCase." alt="" coords="525,351,731,392"/>
+<area shape="rect" id="node36" href="$class_wifi_phy_thresholds_weak_foreign_signal_test.html#aad1875ee85a04d40060777e01b63a724" title="Implementation to actually run this TestCase." alt="" coords="514,416,742,457"/>
+<area shape="rect" id="node37" href="$class_wifi_phy_thresholds_strong_wifi_signal_test.html#aa5aaeb6bbcebe65d8c3558bfbdb20c31" title="Implementation to actually run this TestCase." alt="" coords="523,481,733,523"/>
+<area shape="rect" id="node38" href="$class_wifi_phy_thresholds_strong_foreign_signal_test.html#a38f75ac215fb95f0e367cb54373bedcd" title="Implementation to actually run this TestCase." alt="" coords="511,547,745,588"/>
+</map>

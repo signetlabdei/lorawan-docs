@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Background &#8212; Manual</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Testing framework" href="test-framework.html" />
+    <link rel="prev" title="Overview" href="test-overview.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Manual</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="test-framework.html" title="Testing framework"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="test-overview.html" title="Overview"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="tests.html" accesskey="U">Tests</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="background">
+<h1>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h1>
+<p><strong>This chapter may be skipped by readers familiar with the basics of
+software testing.</strong></p>
+<p>Writing defect-free software is a difficult proposition.  There are many
+dimensions to the problem and there is much confusion regarding what is
+meant by different terms in different contexts.  We have found it worthwhile
+to spend a little time reviewing the subject and defining some terms.</p>
+<p>Software testing may be loosely defined as the process of executing a program
+with the intent of finding errors.  When one enters a discussion regarding
+software testing, it quickly becomes apparent that there are many distinct
+mind-sets with which one can approach the subject.</p>
+<p>For example, one could break the process into broad functional categories
+like ‘’correctness testing,’’ ‘’performance testing,’’ ‘’robustness testing’’
+and ‘’security testing.’’  Another way to look at the problem is by life-cycle:
+‘’requirements testing,’’ ‘’design testing,’’ ‘’acceptance testing,’’ and
+‘’maintenance testing.’’  Yet another view is by the scope of the tested system.
+In this case one may speak of ‘’unit testing,’’ ‘’component testing,’’
+‘’integration testing,’’ and ‘’system testing.’’  These terms are also not
+standardized in any way, and so ‘’maintenance testing’’ and ‘’regression
+testing’’ may be heard interchangeably.  Additionally, these terms are often
+misused.</p>
+<p>There are also a number of different philosophical approaches to software
+testing.  For example, some organizations advocate writing test programs
+before actually implementing the desired software, yielding ‘’test-driven
+development.’’  Some organizations advocate testing from a customer perspective
+as soon as possible, following a parallel with the agile development process:
+‘’test early and test often.’’  This is sometimes called ‘’agile testing.’’  It
+seems that there is at least one approach to testing for every development
+methodology.</p>
+<p>The <em>ns-3</em> project is not in the business of advocating for any one of
+these processes, but the project as a whole has requirements that help inform
+the test process.</p>
+<p>Like all major software products, <em>ns-3</em> has a number of qualities that
+must be present for the product to succeed.  From a testing perspective, some
+of these qualities that must be addressed are that <em>ns-3</em> must be
+‘’correct,’’ ‘’robust,’’  ‘’performant’’ and ‘’maintainable.’’  Ideally there
+should be metrics for each of these dimensions that are checked by the tests
+to identify when the product fails to meet its expectations / requirements.</p>
+<div class="section" id="correctness">
+<h2>Correctness<a class="headerlink" href="#correctness" title="Permalink to this headline">¶</a></h2>
+<p>The essential purpose of testing is to determine that a piece of software
+behaves ‘’correctly.’’  For <em>ns-3</em> this means that if we simulate
+something, the simulation should faithfully represent some physical entity or
+process to a specified accuracy and precision.</p>
+<p>It turns out that there are two perspectives from which one can view
+correctness.  Verifying that a particular model is implemented according
+to its specification is generically called <em>verification</em>.  The process of
+deciding that the model is correct for its intended use is generically called
+<em>validation</em>.</p>
+</div>
+<div class="section" id="validation-and-verification">
+<h2>Validation and Verification<a class="headerlink" href="#validation-and-verification" title="Permalink to this headline">¶</a></h2>
+<p>A computer model is a mathematical or logical representation of something. It
+can represent a vehicle, an elephant (see
+<a class="reference external" href="http://simutools.org/2009/">David Harel’s talk about modeling an elephant at SIMUTools 2009</a>, or a networking card.  Models can also represent
+processes such as global warming, freeway traffic flow or a specification of a
+networking protocol.  Models can be completely faithful representations of a
+logical process specification, but they necessarily can never completely
+simulate a physical object or process.  In most cases, a number of
+simplifications are made to the model to make simulation computationally
+tractable.</p>
+<p>Every model has a <em>target system</em> that it is attempting to simulate.  The
+first step in creating a simulation model is to identify this target system and
+the level of detail and accuracy that the simulation is desired to reproduce.
+In the case of a logical process, the target system may be identified as ‘’TCP
+as defined by RFC 793.’’  In this case, it will probably be desirable to create
+a model that completely and faithfully reproduces RFC 793.  In the case of a
+physical process this will not be possible. If, for example, you would like to
+simulate a wireless networking card, you may determine that you need,  ‘’an
+accurate MAC-level implementation of the 802.11 specification and […] a
+not-so-slow PHY-level model of the 802.11a specification.’’</p>
+<p>Once this is done, one can develop an abstract model of the target system.  This
+is typically an exercise in managing the tradeoffs between complexity, resource
+requirements and accuracy.  The process of developing an abstract model has been
+called <em>model qualification</em> in the literature.  In the case of a TCP
+protocol, this process results in a design for a collection of objects,
+interactions and behaviors that will fully implement RFC 793 in <em>ns-3</em>.
+In the case of the wireless card, this process results in a number of tradeoffs
+to allow the physical layer to be simulated and the design of a network device
+and channel for ns-3, along with the desired objects, interactions and behaviors.</p>
+<p>This abstract model is then developed into an <em>ns-3</em> model that
+implements the abstract model as a computer program.  The process of getting the
+implementation to agree with the abstract model is called <em>model
+verification</em> in the literature.</p>
+<p>The process so far is open loop. What remains is to make a determination that a
+given ns-3 model has some connection to some reality – that a model is an
+accurate representation of a real system, whether a logical process or a physical
+entity.</p>
+<p>If one is going to use a simulation model to try and predict how some real
+system is going to behave, there must be some reason to believe your results –
+i.e., can one trust that an inference made from the model translates into a
+correct prediction for the real system.  The process of getting the ns-3 model
+behavior to agree with the desired target system behavior as defined by the model
+qualification process is called <em>model validation</em> in the literature. In the
+case of a TCP implementation, you may want to compare the behavior of your ns-3
+TCP model to some reference implementation in order to validate your model.  In
+the case of a wireless physical layer simulation, you may want to compare the
+behavior of your model to that of real hardware in a controlled setting,</p>
+<p>The <em>ns-3</em> testing environment provides tools to allow for both model
+validation and testing, and encourages the publication of validation results.</p>
+</div>
+<div class="section" id="robustness">
+<h2>Robustness<a class="headerlink" href="#robustness" title="Permalink to this headline">¶</a></h2>
+<p>Robustness is the quality of being able to withstand stresses, or changes in
+environments, inputs or calculations, etc.  A system or design is ‘’robust’’
+if it can deal with such changes with minimal loss of functionality.</p>
+<p>This kind of testing is usually done with a particular focus.  For example, the
+system as a whole can be run on many different system configurations to
+demonstrate that it can perform correctly in a large number of environments.</p>
+<p>The system can be also be stressed by operating close to or beyond capacity by
+generating or simulating resource exhaustion of various kinds.  This genre of
+testing is called ‘’stress testing.’’</p>
+<p>The system and its components may be exposed to so-called ‘’clean tests’’ that
+demonstrate a positive result – that is that the system operates correctly in
+response to a large variation of expected configurations.</p>
+<p>The system and its components may also be exposed to ‘’dirty tests’’ which
+provide inputs outside the expected range.  For example, if a module expects a
+zero-terminated string representation of an integer, a dirty test might provide
+an unterminated string of random characters to verify that the system does not
+crash as a result of this unexpected input.  Unfortunately, detecting such
+‘’dirty’’ input and taking preventive measures to ensure the system does not
+fail catastrophically can require a huge amount of development overhead.  In
+order to reduce development time, a decision was taken early on in the project
+to minimize the amount of parameter validation and error handling in the
+<em>ns-3</em> codebase.  For this reason, we do not spend much time on dirty
+testing – it would just uncover the results of the design decision we know
+we took.</p>
+<p>We do want to demonstrate that <em>ns-3</em> software does work across some set
+of conditions.  We borrow a couple of definitions to narrow this down a bit.
+The <em>domain of applicability</em> is a set of prescribed conditions for which
+the model has been tested, compared against reality to the extent possible, and
+judged  suitable for use.  The <em>range of accuracy</em> is an agreement between
+the computerized model and reality within a domain of applicability.</p>
+<p>The <em>ns-3</em> testing environment provides tools to allow for setting up
+and running test environments over multiple systems (buildbot) and provides
+classes to encourage clean tests to verify the operation of the system over the
+expected ‘’domain of applicability’’ and ‘’range of accuracy.’’</p>
+</div>
+<div class="section" id="performant">
+<h2>Performant<a class="headerlink" href="#performant" title="Permalink to this headline">¶</a></h2>
+<p>Okay, ‘’performant’’ isn’t a real English word.  It is, however, a very concise
+neologism that is quite often used to describe what we want <em>ns-3</em> to
+be: powerful and fast enough to get the job done.</p>
+<p>This is really about the broad subject of software performance testing.  One of
+the key things that is done is to compare two systems to find which performs
+better (cf benchmarks).  This is used to demonstrate that, for example,
+<em>ns-3</em> can perform a basic kind of simulation at least as fast as a
+competing tool, or can be used to identify parts of the system that perform
+badly.</p>
+<p>In the <em>ns-3</em> test framework, we provide support for timing various kinds
+of tests.</p>
+</div>
+<div class="section" id="maintainability">
+<h2>Maintainability<a class="headerlink" href="#maintainability" title="Permalink to this headline">¶</a></h2>
+<p>A software product must be maintainable.  This is, again, a very broad
+statement, but a testing framework can help with the task.  Once a model has
+been developed, validated and verified, we can repeatedly execute the suite
+of tests for the entire system to ensure that it remains valid and verified
+over its lifetime.</p>
+<p>When a feature stops functioning as intended after some kind of change to the
+system is integrated, it is called generically a <em>regression</em>.
+Originally the
+term regression referred to a change that caused a previously fixed bug to
+reappear, but the term has evolved to describe any kind of change that breaks
+existing functionality.  There are many kinds of regressions that may occur
+in practice.</p>
+<p>A <em>local regression</em> is one in which a change affects the changed component
+directly.  For example, if a component is modified to allocate and free memory
+but stale pointers are used, the component itself fails.</p>
+<p>A <em>remote regression</em> is one in which a change to one component breaks
+functionality in another component.  This reflects violation of an implied but
+possibly unrecognized contract between components.</p>
+<p>An <em>unmasked regression</em> is one that creates a situation where a previously
+existing bug that had no affect is suddenly exposed in the system.  This may
+be as simple as exercising a code path for the first time.</p>
+<p>A <em>performance regression</em> is one that causes the performance requirements
+of the system to be violated.  For example, doing some work in a low level
+function that may be repeated large numbers of times may suddenly render the
+system unusable from certain perspectives.</p>
+<p>The <em>ns-3</em> testing framework provides tools for automating the process
+used to validate and verify the code in nightly test suites to help quickly
+identify possible regressions.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Background</a><ul>
+<li><a class="reference internal" href="#correctness">Correctness</a></li>
+<li><a class="reference internal" href="#validation-and-verification">Validation and Verification</a></li>
+<li><a class="reference internal" href="#robustness">Robustness</a></li>
+<li><a class="reference internal" href="#performant">Performant</a></li>
+<li><a class="reference internal" href="#maintainability">Maintainability</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="test-overview.html"
+                        title="previous chapter">Overview</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="test-framework.html"
+                        title="next chapter">Testing framework</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/test-background.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="test-framework.html" title="Testing framework"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="test-overview.html" title="Overview"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="tests.html" >Tests</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 18:24.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

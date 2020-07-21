@@ -1,0 +1,52 @@
+<map id="ns3::TcpSocketBase::ProcessClosing" name="ns3::TcpSocketBase::ProcessClosing">
+<area shape="rect" id="node1" title="Received a packet upon CLOSING." alt="" coords="5,1845,155,1887"/>
+<area shape="rect" id="node2" href="$classns3_1_1_tcp_socket_base.html#a04354f05482d826576740fd2f1691818" title="Peacefully close the socket by notifying the upper layer and deallocate end point." alt="" coords="740,1892,889,1933"/>
+<area shape="rect" id="node9" href="$classns3_1_1_tcp_header.html#aaaa261ca12b0fb50e45c7083cec88cff" title="Converts an integer into a human readable list of Tcp flags." alt="" coords="203,2009,419,2035"/>
+<area shape="rect" id="node10" href="$classns3_1_1_tcp_header.html#adae57f746870a94c0fe4181c87368b62" title="Get the flags." alt="" coords="1276,1150,1463,1177"/>
+<area shape="rect" id="node11" href="$classns3_1_1_tcp_header.html#a378fca684de64584c4fcc7dd9034e5e5" title="Get the sequence number." alt="" coords="203,2060,418,2101"/>
+<area shape="rect" id="node12" href="$global-router-interface_8cc.html#af2f17e24d29f39f6804d0d10d8cedc71" title=" " alt="" coords="1039,597,1160,623"/>
+<area shape="rect" id="node13" href="$classns3_1_1_tcp_socket_base.html#aa858913c9a4480a14d293f1014905b3e" title="Send a empty packet that carries a flag, e.g., ACK." alt="" coords="479,960,629,1001"/>
+<area shape="rect" id="node47" href="$classns3_1_1_tcp_socket_base.html#a070b9ac86f372fe0b661050686bef68e" title="Send reset and tear down this socket." alt="" coords="236,1816,385,1857"/>
+<area shape="rect" id="node49" href="$classns3_1_1_tcp_socket_base.html#acd41dedaf25ea16d290aa5737e303099" title="Move from CLOSING or FIN_WAIT_2 to TIME_WAIT state." alt="" coords="479,1959,629,2000"/>
+<area shape="rect" id="node3" href="$classns3_1_1_tcp_socket_base.html#a53791738228495d40197679dbc057392" title="Deallocate m_endPoint and m_endPoint6." alt="" coords="1021,1829,1178,1871"/>
+<area shape="rect" id="node8" href="$classns3_1_1_socket.html#a6bdec380c7dacff36147b89a05ceae84" title="Notify through the callback (if set) that the connection has been closed." alt="" coords="1003,1917,1195,1959"/>
+<area shape="rect" id="node4" href="$classns3_1_1_tcp_socket_base.html#a8dc4de52308fc01262a8c06ae0bcccc5" title="Cancel all timer when endpoint is deleted." alt="" coords="1295,1895,1444,1936"/>
+<area shape="rect" id="node6" href="$classns3_1_1_ipv4_end_point.html#a19ec16d98c501d3684e6549d7296ea0a" title="Set the default destroy callback." alt="" coords="1294,1764,1445,1805"/>
+<area shape="rect" id="node7" href="$classns3_1_1_ipv6_end_point.html#af2922ef8f9f9ead0a2604c8391e90328" title="Set the default destroy callback." alt="" coords="1294,1829,1445,1871"/>
+<area shape="rect" id="node5" href="$classns3_1_1_event_id.html#a993ae94e48e014e1afd47edb16db7a11" title="This method is syntactic sugar for the ns3::Simulator::Cancel method." alt="" coords="1528,1795,1683,1822"/>
+<area shape="rect" id="node14" href="$classns3_1_1_tcp_socket_base.html#a55087ef950f5c2f4a7cdb8c825666955" title="Add options to TcpHeader." alt="" coords="740,960,889,1001"/>
+<area shape="rect" id="node18" href="$classns3_1_1_tcp_socket_base.html#a009a4dcad47330a47e5b829918fb9140" title="Add the SACK option to the header." alt="" coords="740,895,889,936"/>
+<area shape="rect" id="node21" href="$classns3_1_1_tcp_socket_base.html#a470e7b2406d76319c457f2fdf5ff0699" title="Add the SACK PERMITTED option to the header." alt="" coords="1003,1077,1196,1119"/>
+<area shape="rect" id="node22" href="$classns3_1_1_tcp_socket_base.html#aa749dc3f6287c79a2ad39cb306220663" title="Add the window scale option to the header." alt="" coords="1025,1143,1174,1184"/>
+<area shape="rect" id="node23" href="$classns3_1_1_tcp_socket_base.html#aff0f88774a2a2aba389da4590655a839" title="Add Tags for the Socket." alt="" coords="740,1128,889,1169"/>
+<area shape="rect" id="node24" href="$classns3_1_1_tcp_socket_base.html#aa0bcf7701399b0a95fd68a1ce5ee8756" title="The amount of Rx window announced to the peer." alt="" coords="725,457,904,499"/>
+<area shape="rect" id="node25" href="$classns3_1_1_traced_value.html#af77ce761fca6254db42c875dd1a4cdc6" title="Get the underlying value." alt="" coords="733,1194,897,1221"/>
+<area shape="rect" id="node26" href="$classns3_1_1_tcp_header.html#adc8bd17b9053c53f67f3be71adbb2e54" title="Get the ACK number." alt="" coords="701,1245,929,1271"/>
+<area shape="rect" id="node27" href="$classns3_1_1_ipv6_end_point.html#a1972cd26240d42cd75f93e12d9182976" title="Get the local address." alt="" coords="741,1296,888,1337"/>
+<area shape="rect" id="node28" href="$classns3_1_1_ipv4_end_point.html#ae08283e26ace5880c3172ea5d803b6f8" title="Get the local address." alt="" coords="741,1361,888,1403"/>
+<area shape="rect" id="node29" href="$classns3_1_1_ipv6_end_point.html#a39a9fd4aa85a8ecbbf2d6c84d589080b" title="Get the local port." alt="" coords="741,1427,888,1468"/>
+<area shape="rect" id="node30" href="$classns3_1_1_ipv4_end_point.html#aab137f64770abf94f0b8a81217a0b106" title="Get the local port." alt="" coords="741,1492,888,1533"/>
+<area shape="rect" id="node31" href="$classns3_1_1_ipv6_end_point.html#aa48c776ae54d85cf0f6a61a80d7b4cd8" title="Get the peer address." alt="" coords="741,1557,888,1599"/>
+<area shape="rect" id="node32" href="$classns3_1_1_ipv4_end_point.html#a3faf5ec4dce2e951a6ade79758e2075d" title="Get the peer address." alt="" coords="741,1623,888,1664"/>
+<area shape="rect" id="node33" href="$classns3_1_1_ipv6_end_point.html#ac200f6b424104280ec1e55a415ed96fd" title="Get the peer port." alt="" coords="741,173,888,215"/>
+<area shape="rect" id="node34" href="$classns3_1_1_ipv4_end_point.html#a0954ccf4be313b3a2992894ae2baf1c6" title="Get the peer port." alt="" coords="741,239,888,280"/>
+<area shape="rect" id="node35" href="$classns3_1_1_time.html#a27cb7c22324e0447740929b024dbeb66" title="Get an approximation of the time stored in this instance in the indicated unit." alt="" coords="729,305,900,331"/>
+<area shape="rect" id="node36" href="$classns3_1_1_event_id.html#acc25141054209b1a286a5471a51bd0c0" title="This method is syntactic sugar for the ns3::Simulator::IsExpired method." alt="" coords="729,355,900,382"/>
+<area shape="rect" id="node37" href="$group__highprec.html#ga0d35bb9363c0da4cc2557158b95dbca0" title=" " alt="" coords="774,406,855,433"/>
+<area shape="rect" id="node38" href="$classns3_1_1_simulator.html#ac3178fa975b419f7875e7105be122800" title="Return the current simulation virtual time." alt="" coords="1023,67,1176,94"/>
+<area shape="rect" id="node39" href="$classns3_1_1_simulator.html#a671882c894a08af4a5e91181bf1eec13" title="Schedule an event to expire after delay." alt="" coords="723,1841,906,1867"/>
+<area shape="rect" id="node40" href="$classns3_1_1_tcp_header.html#ad594a427a382dc395261a94749e1878c" title="Set the ACK number." alt="" coords="701,523,928,550"/>
+<area shape="rect" id="node41" href="$classns3_1_1_tcp_header.html#a3259c06373ba4261eaaaed0cbf40cad3" title="Set the destination port." alt="" coords="689,574,940,601"/>
+<area shape="rect" id="node42" href="$classns3_1_1_tcp_header.html#a6574356013e9c62b4543486f640f6be6" title="Set flags of the header." alt="" coords="722,625,907,651"/>
+<area shape="rect" id="node43" href="$classns3_1_1_tcp_header.html#a3483eb1604d7db47b1163b02f74bcc25" title="Set the sequence Number." alt="" coords="708,676,921,717"/>
+<area shape="rect" id="node44" href="$classns3_1_1_tcp_header.html#aceb2630b3d43118ee576aec58f55a0ff" title="Set the source port." alt="" coords="705,742,925,769"/>
+<area shape="rect" id="node45" href="$classns3_1_1_tcp_header.html#a659d7fc71c808249fe76fd5b667baf34" title="Set the window size." alt="" coords="700,793,929,819"/>
+<area shape="rect" id="node46" href="$classns3_1_1_tcp_socket_base.html#af66bb88aa9438d6abbc9f8b941ab5cc8" title="Update the RTT history, when we send TCP segments." alt="" coords="740,5,889,47"/>
+<area shape="rect" id="node15" href="$classns3_1_1_tcp_socket_base.html#a62689196f68584e8731fb5c6b7693d30" title="Add the timestamp option to the header." alt="" coords="1014,960,1185,1001"/>
+<area shape="rect" id="node16" href="$classns3_1_1_tcp_header.html#aa5de13df3dd5cb87d63c428e5dcc3425" title="Append an option to the TCP header." alt="" coords="1259,985,1480,1011"/>
+<area shape="rect" id="node17" href="$classns3_1_1_node.html#a2ed8663077afcb8db519296b0ada6355" title=" " alt="" coords="1304,1069,1435,1095"/>
+<area shape="rect" id="node19" href="$classns3_1_1_tcp_header.html#a425ad65112fd89e42b7531c4e471bab7" title="Get maximum option length." alt="" coords="988,829,1211,871"/>
+<area shape="rect" id="node20" href="$classns3_1_1_tcp_header.html#a9bc1f1a6e00b12333c0c617d7a11f64f" title="Get the total length of appended options." alt="" coords="1002,895,1197,936"/>
+<area shape="rect" id="node48" href="$classns3_1_1_socket.html#a9b89cb8b7718d3a0641ce812970f9c16" title="Notify through the callback (if set) that the connection has been closed due to an error." alt="" coords="467,1841,641,1883"/>
+<area shape="rect" id="node50" href="$group__timecivil.html#ga33c34b816f8ff6628e33d5c8e9713b9e" title=" " alt="" coords="761,2059,868,2086"/>
+</map>

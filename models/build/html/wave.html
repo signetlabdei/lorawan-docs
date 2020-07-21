@@ -1,0 +1,1136 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>WAVE models &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Wi-Fi Module" href="wifi.html" />
+    <link rel="prev" title="UAN Framework" href="uan.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="wifi.html" title="Wi-Fi Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="uan.html" title="UAN Framework"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="wave-models">
+<h1>WAVE models<a class="headerlink" href="#wave-models" title="Permalink to this headline">¶</a></h1>
+<p>WAVE is a system architecture for wireless-based vehicular communications,
+specified by the IEEE.  This chapter documents available models for WAVE
+within <em>ns-3</em>.  The focus is on the MAC layer and MAC extension layer
+defined by <a class="reference internal" href="#ieee80211p" id="id1"><span>[ieee80211p]</span></a> and <a class="reference internal" href="#ieee1609dot4" id="id2"><span>[ieee1609dot4]</span></a>.</p>
+<div class="section" id="model-description">
+<h2>Model Description<a class="headerlink" href="#model-description" title="Permalink to this headline">¶</a></h2>
+<p>WAVE is an overall system architecture for vehicular communications.
+The standards for specifying WAVE include a set of extensions to the IEEE
+802.11 standard, found in IEEE Std 802.11p-2010 <a class="reference internal" href="#ieee80211p" id="id3"><span>[ieee80211p]</span></a>, and
+the IEEE 1609 standard set, consisting of four documents:
+resource manager:  IEEE 1609.1 <a class="reference internal" href="#ieee1609dot1" id="id4"><span>[ieee1609dot1]</span></a>,
+security services:  IEEE 1609.2 <a class="reference internal" href="#ieee1609dot2" id="id5"><span>[ieee1609dot2]</span></a>,
+network and transport layer services:  IEEE 1609.3 <a class="reference internal" href="#ieee1609dot3" id="id6"><span>[ieee1609dot3]</span></a>,
+and multi-channel coordination:  IEEE 1609.4 <a class="reference internal" href="#ieee1609dot4" id="id7"><span>[ieee1609dot4]</span></a>.
+Additionally, SAE standard J2735 <a class="reference internal" href="#saej2735" id="id8"><span>[saej2735]</span></a> describes a Dedicated
+Short Range Communications (DSRC) application message set that allows
+applications to transmit information using WAVE.</p>
+<p>In <em>ns-3</em>, the focus of the <code class="docutils literal notranslate"><span class="pre">wave</span></code> module is on both the MAC layer and the
+multi-channel coordination layer.
+The key design aspect of 802.11p-compilant MAC layer is that they allow
+communications outside the context of a basic service set (BSS).
+The literature uses the acronym OCB to denote “outside the context
+of a BSS”, and the class <code class="docutils literal notranslate"><span class="pre">ns3::OcbWifiMac</span></code> models this in <em>ns-3</em>.
+This MAC does not require any association between devices (similar to an
+adhoc WiFi MAC). Many management frames will not be used, but when used, the BSSID field
+needs to be set to a wildcard BSSID value. Management information is
+transmitted by what is called a vendor specific action (VSA) frame. With these
+changes, the packet transmissions (for a moving vehicle) can be fast with
+small delay in the MAC layer. Users can create IEEE802.11p-compliant device
+(the object of the class <code class="docutils literal notranslate"><span class="pre">ns3::WifiNetDevice</span></code> associating with
+<code class="docutils literal notranslate"><span class="pre">ns3::OcbWifiMac</span></code>) .</p>
+<p>The key design aspect of the WAVE-compilant MAC layer (including 802.11p MAC
+layer and 1609.4 MAC extension layer) is that, based on OCB features, they
+provide devices with the capability of switching between control and service channels, using a single radio or using multiple radios.
+Therefore devices can communicate with others in single or multiple
+channels, which can
+support both safety related and non-safety related service for vehicular environments.</p>
+<p>At the physical layer, the biggest difference is the use of the 5.9 GHz band
+with a channel bandwidth of 10 MHz.  These physical
+layer changes can make the wireless signal relatively more stable,
+without degrading throughput too much (ranging from 3 Mbps to 27 Mbps).</p>
+<p>The source code for the WAVE MAC models lives in the directory
+<code class="docutils literal notranslate"><span class="pre">src/wave</span></code>.</p>
+<p>For better modeling WAVE and VANET, the WAVE models for high layers
+(mainly <a class="reference internal" href="#ieee1609dot3" id="id9"><span>[ieee1609dot3]</span></a> ) are planned for a later patch.</p>
+<div class="section" id="design">
+<h3>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h3>
+<p>In <em>ns-3</em>, support for 802.11p involves the MAC and PHY layers.
+To use an 802.11p NetDevice, <code class="docutils literal notranslate"><span class="pre">ns3::Wifi80211pHelper</span></code> is suggested.</p>
+<p>In <em>ns-3</em>, support for WAVE involves the MAC, its MAC extension and PHY layers.
+To use a WAVE NetDevice, <code class="docutils literal notranslate"><span class="pre">ns3::WaveHelper</span></code> is suggested.</p>
+<div class="section" id="mac-layer">
+<h4>MAC layer<a class="headerlink" href="#mac-layer" title="Permalink to this headline">¶</a></h4>
+<p>The classes used to model the MAC layer are <code class="docutils literal notranslate"><span class="pre">ns3::OrganizationIdentifier</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ns3::VendorSpecificActionHeader</span></code> and <code class="docutils literal notranslate"><span class="pre">ns3::OcbWifiMac</span></code>.</p>
+<p>The OrganizationIdentifier and VendorSpecificActionHeader are used to support
+the sending of a Vendor Specific Action frame.</p>
+<p>OcbWifiMac is very similar to AdhocWifiMac, with some modifications.
+The <em>ns-3</em> AdhocWifiMac class is implemented very close to the 802.11p OCB
+mode rather than a real 802.11 ad-hoc mode. The AdhocWifiMac has no BSS
+context that is defined in 802.11 standard, so it will not take time to
+send beacons and to authenticate, making its behavior similar to that
+of an OcbWifiMac.</p>
+<ol class="arabic simple">
+<li><p>SetBssid, GetBssid, SetSsid, GetSsid</p></li>
+</ol>
+<blockquote>
+<div><p>These methods are related to 802.11 BSS context, and are unused in the OCB context.</p>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p>SetLinkUpCallback, SetLinkDownCallback</p>
+<p>WAVE device can send packets directly, so the WiFi link is never down.</p>
+</li>
+<li><p>SendVsc, AddReceiveVscCallback</p>
+<p>WAVE management information shall be sent by vendor specific action frames,
+sent by the upper layer 1609.4 standard as WSA
+(WAVE Service Advertisement) packets or other vendor specific information.</p>
+</li>
+<li><p>SendTimingAdvertisement (not implemented)</p>
+<p>Although Timing Advertisement is very important and specifically defined in
+802.11p standard, it is not useful in a simulation environment.
+Every node in <em>ns-3</em> vehicular simulation is assumed to be already time
+synchronized (perhaps by GPS).</p>
+</li>
+<li><p>ConfigureEdca</p>
+<p>This method will allow the user to set EDCA parameters of WAVE channels
+including CCH ans SCHs. And the OcbWifiMac itself also uses this method
+to configure default 802.11p EDCA parameters.</p>
+</li>
+<li><p>Wildcard BSSID</p>
+<p>The Wildcard BSSID is set to “ff:ff:ff:ff:ff:ff”.
+As defined in IEEE 802.11-2007, a wildcard BSSID shall not be used in the
+BSSID field except for management frames of subtype probe request. But Adhoc
+mode of <em>ns-3</em> simplifies this mechanism:  when stations receive packets,
+they will be forwarded up to the higher layer, regardless of BSSID.
+This process is very close
+to OCB mode as defined in 802.11p-2010, in which stations use the wildcard
+BSSID to allow the higher layer of other stations to hear directly.</p>
+</li>
+<li><p>Enqueue, Receive</p>
+<p>The most important methods are send and receive methods. According to the
+standard, we should filter the frames that are not permitted. Thus here we
+just identify the frames we care about; the other frames will be discarded.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="mac-extension-layer">
+<h4>MAC extension layer<a class="headerlink" href="#mac-extension-layer" title="Permalink to this headline">¶</a></h4>
+<p>Although 1609.4 is still in the MAC layer, the implementation
+approach for <em>ns-3</em> does not do much modification in the
+source code of the wifi module. Instead, if some feature is related
+to wifi MAC classes, then a relevant subclass is defined; if some
+feature has no relation to wifi MAC classes, then a new class
+will be defined. This approach was selected to be non-intrusive to the
+<em>ns-3</em> wifi module. All of these classes will be hosted in a ‘container’
+class called <code class="docutils literal notranslate"><span class="pre">ns3::</span> <span class="pre">WaveNetDevice</span></code>. This class is a subclass inherting
+from <code class="docutils literal notranslate"><span class="pre">ns3::NetDeivce</span></code>, composed of the objects of
+<code class="docutils literal notranslate"><span class="pre">ns3::ChannelScheduler</span></code>, <code class="docutils literal notranslate"><span class="pre">ns3::ChannelManager</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ns3::ChannelCoordinator</span></code> and <code class="docutils literal notranslate"><span class="pre">ns3::VsaManager</span></code>
+classes to provide the features described in 1609.4 while still
+containing the objects of <code class="docutils literal notranslate"><span class="pre">ns3::OcbWifiMac</span></code> and <code class="docutils literal notranslate"><span class="pre">ns3::WifiPhy</span></code>
+classes.  Moreover, <code class="docutils literal notranslate"><span class="pre">ns3::OcbWifiMac</span></code> class is further extended with
+support for IEEE 1609.4 associating with <code class="docutils literal notranslate"><span class="pre">ns3::HigherLayerTxVectorTag</span></code>
+and <code class="docutils literal notranslate"><span class="pre">ns3::WaveMacLow</span></code>. The main work of the WaveNetDevice is to create
+objects, configure, check arguments and provide new APIs for multiple
+channel operation as follows:</p>
+<ol class="arabic simple">
+<li><p>AddMac, GetMac and GetMacs</p></li>
+</ol>
+<blockquote>
+<div><p>Different from <code class="docutils literal notranslate"><span class="pre">ns3::WifiNetDevice</span></code>, the WAVE device will have
+multiple internal MAC entities rather than a single one. Each MAC
+entity is used to support each WAVE channel. Thus, when
+devices switch from the current channel to the next channel in different
+channel intervals, the packets in the internal queue will not be
+flushed and the current MAC entity will perform a suspend operation
+until woken up in next appropriate channel interval.</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>AddPhy, GetPhy and GetPhys</p></li>
+</ol>
+<blockquote>
+<div><p>Also in contrast to <code class="docutils literal notranslate"><span class="pre">ns3::WifiNetDevice</span></code>,  the WAVE device here
+can allow more than one PHY entity, which permits the use cases of
+of single-PHY devices or multiple-PHY devices.</p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>SetChannelScheduler and GetChannelScheduler</p></li>
+</ol>
+<blockquote>
+<div><p>How to deal with multiple MAC entities and PHY entities to assign
+channel access for different requests from higher layer? IEEE
+1609.4 <a class="reference internal" href="#ieee1609dot4" id="id10"><span>[ieee1609dot4]</span></a> does not seem to give a very clear and detailed
+mechanism, deferring to the implementor. In this model, the class
+<code class="docutils literal notranslate"><span class="pre">ns3::ChannelScheduler</span></code> provides the API and delegates to the subclasses
+to implement the virtual methods. In the current implementation, the default
+assignment mechanism for channel access,
+called <code class="docutils literal notranslate"><span class="pre">ns3::DefaultChannelScheduler</span></code>, gives a simple answer that only
+deals with multiple channel operation in the context of a single-PHY device.
+If users define their own different assignment mechanisms such as in the
+context of two PHY entities, they can easily reuse models using AddPhy and
+SetChannelScheduler methods to import a new assignment mechanism.</p>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>SetChannelManager and GetChannelManager</p></li>
+</ol>
+<blockquote>
+<div><p>class <code class="docutils literal notranslate"><span class="pre">ns3::ChannelManager</span></code> is a WAVE channel set which contains
+valid WAVE channel numbers. Moreover, the tx information in this channel
+set such as data rate and tx power level is used for transmitting management frames.</p>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>SetVsaManager and GetVsaManager</p></li>
+</ol>
+<blockquote>
+<div><p>class <code class="docutils literal notranslate"><span class="pre">ns3::VsaManager</span></code> is used to deal with sending and receiving
+VSA frames. According to different request parameters from the higher layer,
+this class may transmit VSA frames repeatedly in the appropriate channel
+number and channel interval.</p>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li><p>SetChannelCoordinator and GetChannelCoordinator</p></li>
+</ol>
+<blockquote>
+<div><p>class <code class="docutils literal notranslate"><span class="pre">ns3::ChannelCoordinator</span></code> is used to deal with channel coordination.
+The WAVE device can be aware of the channel interval at the current time or
+in the future.  It can also notify listeners about incoming channel coordination
+events. Generally this class is used in the case of assigning alternating CCH and SCH access.</p>
+</div></blockquote>
+<ol class="arabic simple" start="7">
+<li><p>StartSch and StopSch</p></li>
+</ol>
+<blockquote>
+<div><p>In contrast to the basic 802.11p device that allow transmission packets
+immediately after
+the device is created, the WAVE device should assign channel access
+for sending packets.  This method will call class <code class="docutils literal notranslate"><span class="pre">ns3::ChannelScheduler</span></code>
+to assign radio resources for the relevant channel.</p>
+</div></blockquote>
+<ol class="arabic simple" start="8">
+<li><p>ChangeAddress</p></li>
+</ol>
+<blockquote>
+<div><p>The WAVE device can support a change of address after devices are already
+initialized, which will cause all of MAC entities reset their status.</p>
+</div></blockquote>
+<ol class="arabic simple" start="9">
+<li><p>CancelTx</p></li>
+</ol>
+<blockquote>
+<div><p>The WAVE device can support a request to cancel all transmissions associated
+with the particular category and channel number, which will reset the
+particular interval queue and drop all of the queued packets in this queue.</p>
+</div></blockquote>
+<ol class="arabic simple" start="10">
+<li><p>RegisterTxProfile and DeleteTxProfile</p></li>
+</ol>
+<blockquote>
+<div><p>After channel access is assigned, we still cannot send IP-based
+(or other protocol) packets by the Send () method. A tx profile should
+be registered to specify tx parameters before transmission.</p>
+</div></blockquote>
+<ol class="arabic simple" start="11">
+<li><p>StartVsa, StopVsa and SetWaveVsaCallback</p></li>
+</ol>
+<blockquote>
+<div><p>These methods will call an object from class <code class="docutils literal notranslate"><span class="pre">ns3::VsaManager</span></code> to send
+and receive VSA frames.  Generally these methods are used by IEEE 1609.3
+for WSA management information.</p>
+</div></blockquote>
+<ol class="arabic simple" start="12">
+<li><p>SendX</p></li>
+</ol>
+<blockquote>
+<div><p>After channel access is assigned, we can send WSMP (or other protocol)
+packets via the SendX () method. We should specify the tx parameters for
+each packet, e.g. the channel number for transmit.</p>
+</div></blockquote>
+<ol class="arabic simple" start="13">
+<li><p>Send and SetReceiveCallback</p></li>
+</ol>
+<blockquote>
+<div><p>This method is the abstract method defined in the parent class
+<code class="docutils literal notranslate"><span class="pre">ns3::NetDevice</span></code>, defined to allow the sending of IP-based packets.
+The channel access should be already assigned and tx profile should
+be registered, otherwise incoming packets from the higher layer will be
+discarded. No matter whether packets are sent by Send method or SendX
+method, the received packets will be only be delivered to the higher layer
+by the registered ReceiveCallback.</p>
+</div></blockquote>
+<ol class="arabic simple" start="14">
+<li><p>other methods from its parent class <code class="docutils literal notranslate"><span class="pre">ns3::NetDevice</span></code></p></li>
+</ol>
+<blockquote>
+<div><p>These methods are implemented very similar to the code in <code class="docutils literal notranslate"><span class="pre">ns3::WifiNetDevice</span></code>.</p>
+</div></blockquote>
+<p>In the above numbered list, we can categorize the methods into three types:
+the first type, from 1 to 6 and also 14, is the configuration for modeling and
+creating a WAVE device; the second type, from 7 to 11, is
+the management plane of the standard; and the third type, 12 and 13,
+is the data plane of the standard.</p>
+<p>Channel coordination</p>
+<p>The class <code class="docutils literal notranslate"><span class="pre">ns3::ChannelCoordinator</span></code> defines the CCH Interval, SCH Interval and GuardInteval. Users can be aware of which interval the current time or
+future time will be in. If channel access mode is assigned to
+alternating CCH and SCH access,
+channel interval events will be notified repeatedly for class
+<code class="docutils literal notranslate"><span class="pre">ns3::ChannelCoordinator</span></code> to switch channels.  Current default values are
+for CCHI with 50ms interval, SCHI with 50ms interval, and GuardI with 4ms interval. Users can change these values by configuring the class attributes.</p>
+<p>Channel routing</p>
+<p>Channel routing service means different transmission approaches for WSMP data,
+IP datagram and management information.
+For WSMP data, the SendX () method implements the service primitive
+MA-UNITDATAX, and users can
+set transmission parameters for each individual packet. The parameters include
+channel number, priority,
+data rate and tx power level (expiration time is not supported now).
+For IP datagrams, the Send () method is a virtual method from <code class="docutils literal notranslate"><span class="pre">ns3::NetDevice</span></code> that implements the service primitive MA-UNITDATA.
+Users should insert QoS tags into packets themselves if they want to use QoS.
+Moreover, a tx profile should be registered
+before the Send method is called for transmit; the profile contains SCH number, data rate, power level and adaptable mode.
+For management information, StartVsa method implements the service primitive
+MLMEX-VSA. The tx information is already configured
+in <code class="docutils literal notranslate"><span class="pre">ns3::ChannelManager</span></code>, including data rate, power level and adaptable mode.</p>
+<p>Channel access assignment</p>
+<p>The channel access assignment is done by class <code class="docutils literal notranslate"><span class="pre">ns3::ChannelScheduler</span></code> to assign ContinuousAccess, ExtendedAccess
+and AlternatingAccess. Besides that, immediate access is achieved by enabling
+the “immediate” parameter, in which case
+the request channel will be switched to immediately.  However this class is a
+virtual parent class.  The current module provides a
+subclass <code class="docutils literal notranslate"><span class="pre">ns3::DefaultChannelScheduler</span></code> to assign channel access in the context of a single-PHY device. In this subclass, if the channel
+access is already assigned for another request, the next coming request will
+fail until the previous channel access is released.
+Users can implement different assignment mechanisms to deal with multiple MAC entities and multiple PHY entities by
+inheriting from parent class <code class="docutils literal notranslate"><span class="pre">ns3::ChannelScheduler</span></code>.
+An important point is that channel access should be assigned before sending
+routing packets, otherwise the packets will be discard.</p>
+<p>Vendor Specific Action frames</p>
+<p>When users want to send VSA repeatedly by calling WaveNetDevice::StartVsa, VSA will be sent repeatedly by
+<code class="docutils literal notranslate"><span class="pre">ns3::VsaManager</span></code>. It is worth noting that if the peer MAC address is a unicast address, the VSA can only
+be transmitted once even there is a repeat request. The tx parameters for VSA management frames can be obtained from the <code class="docutils literal notranslate"><span class="pre">ns3::ChannelManager</span></code>.</p>
+<p>User priority and Multi-channel synchronization</p>
+<p>Since wifi module has already implemented a QoS mechanism, the wave module
+reuses the mechanism; VSA frames will be assigned the default value with the
+highest AC according to the standard.
+Multiple-channel synchronization is very important in practice for devices
+without a local timing source.
+However, in simulation, every node is supposed to have the same system clock, which could be provided by GPS devices in a real environment, so this feature is not modelled in <em>ns-3</em>.
+During the guard interval, the device can only be in receive state, except
+for the switch state when the device does channel switching operation.</p>
+</div>
+<div class="section" id="phy-layer">
+<h4>PHY layer<a class="headerlink" href="#phy-layer" title="Permalink to this headline">¶</a></h4>
+<p>No modification or extension is made to the <em>ns-3</em> PHY layer
+corresponding to this model.
+In the 802.11p standard, the PHY layer wireless technology is still 80211a OFDM with a 10MHz channel width,
+so Wifi80211pHelper will only allow the user to set the standard
+to WIFI_PHY_STANDARD_80211_10MHZ or WIFI_PHY_STANDARD_80211_20MHZ,
+while WaveHelper will only support WIFI_PHY_STANDARD_80211_10MHZ.
+The maximum station transmit power and maximum permitted EIRP defined in
+802.11p is larger
+than that of WiFi, so transmit range can normally become longer than the
+usual WiFi.  However, this feature will
+not be implemented. Users who want to obtain longer range should configure
+attributes “TxPowerStart”,
+“TxPowerEnd” and “TxPowerLevels” of the YansWifiPhy class by themselves.</p>
+</div>
+</div>
+<div class="section" id="scope-and-limitations">
+<h3>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Does the model involve vehicular mobility of some sort?</p></li>
+</ol>
+<p>Vehicular networks involve not only communication protocols, but
+also a communication environment including vehicular mobility and
+propagation loss models. Because of specific features of the latter,
+the protocols need to change. The MAC layer model in this project just
+adapts MAC changes to vehicular environment. However this model
+does not involve any vehicular mobility with time limit. While users
+should understand that vehicular mobility is out of scope for the
+current WAVE module, they can use any mobility model in <em>ns-3</em>.  For
+example, users may use a <code class="docutils literal notranslate"><span class="pre">ns3::RandomWaypointMobilityModel</span></code> (RWP)
+for node mobilty or may generate ns-2-style playback files using
+other third-party tools and then playback those mobility traces
+using <code class="docutils literal notranslate"><span class="pre">ns3::Ns2MobilityHelper</span></code>.</p>
+<ol class="arabic simple" start="2">
+<li><p>Does this model use different propagation models?</p></li>
+</ol>
+<p>Referring to the first issue, some more realistic propagation loss
+models for vehicualr environment are suggested and welcome.  Some
+existing propagation los models in <em>ns-3</em> are also suitable.
+Normally, users can use Friis, Two-Ray Ground, and Nakagami models.
+The <code class="docutils literal notranslate"><span class="pre">ns3::VanetRoutingExample</span></code> example defaults to Two-Ray
+Ground propagation loss with no additional fading, although adding
+stochastic Nakagami-m fading is parametrically supported.</p>
+<ol class="arabic simple" start="3">
+<li><p>Are there any vehicular application models to drive the code?</p></li>
+</ol>
+<p>About vehicular application models, SAE J2375 depends on WAVE
+architecture and is an application message set in US.  Cooperative Awareness
+Messages (CAM) and Decentralized Environment Notification Messages (DENM) can
+be sent Europe between network and application layer, and is
+very close to being an application model. The BSM in J2375 [saej2735] and CAM
+send alert messages that every vehicle node will sent periodically about
+its status information to cooperate with others. The
+<code class="docutils literal notranslate"><span class="pre">ns3::VanetRoutingExample</span></code> example sets up a network of (vehicular)
+nodes that each broadcast BSMs at regular intervals and may additionally
+attempt to route non-BSM data through the network using select IP-based
+routing protocols.</p>
+<ol class="arabic simple" start="5">
+<li><p>Why are there two kinds of NetDevice helpers?</p></li>
+</ol>
+<p>The current module provides two helpers to create two kinds of NetDevice.
+The first is an object of WifiNetDevice (802.11p device) which mainly
+contains class <code class="docutils literal notranslate"><span class="pre">ns3::OcbWifiMac</span></code> to enable OCB mode. The second
+is an object of WaveNetDevice (WAVE device) which contains additional
+classes <code class="docutils literal notranslate"><span class="pre">ns3::ChannelScheduler</span></code>, <code class="docutils literal notranslate"><span class="pre">ns3::ChannelManager</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ns3::ChannelCoordinator</span></code> and <code class="docutils literal notranslate"><span class="pre">ns3::VsaManager</span></code> to support
+multi-channel operation mode.  The reason to provide a special 802.11p
+device helper is that, considering the fact that many researchers are
+interested in routing protocols or other aspects of vehicular environment in
+a single channel context, they need neither multi-channel operation nor
+WAVE architectures.
+Besides that, the European standard may also reuse an 802.11p device in an
+modified ITS-G5 implementation (maybe called ItsG5NetDevice).  Hence,
+the model supports configuration of both types of devices.</p>
+</div>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<dl class="citation">
+<dt class="label" id="ieee80211p"><span class="brackets">ieee80211p</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
+<dd><p>IEEE Std 802.11p-2010 “IEEE Standard for Information technology– Local and metropolitan area networks– Specific requirements– Part 11: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications Amendment 6: Wireless Access in Vehicular Environments”</p>
+</dd>
+<dt class="label" id="ieee1609dot1"><span class="brackets"><a class="fn-backref" href="#id4">ieee1609dot1</a></span></dt>
+<dd><p>IEEE Std 1609.1-2010 “IEEE Standard for Wireless Access in Vehicular Environments (WAVE) - Resource Manager, 2010”</p>
+</dd>
+<dt class="label" id="ieee1609dot2"><span class="brackets"><a class="fn-backref" href="#id5">ieee1609dot2</a></span></dt>
+<dd><p>IEEE Std 1609.2-2010 “IEEE Standard for Wireless Access in Vehicular Environments (WAVE) - Security Services for Applications and Management Messages, 2010”</p>
+</dd>
+<dt class="label" id="ieee1609dot3"><span class="brackets">ieee1609dot3</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id9">2</a>)</span></dt>
+<dd><p>IEEE Std 1609.3-2010 “IEEE Standard for Wireless Access in Vehicular Environments (WAVE) - Networking Services, 2010”</p>
+</dd>
+<dt class="label" id="ieee1609dot4"><span class="brackets">ieee1609dot4</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id7">2</a>,<a href="#id10">3</a>)</span></dt>
+<dd><p>IEEE Std 1609.4-2010 “IEEE Standard for Wireless Access in Vehicular Environments (WAVE) - Multi-Channel Operation, 2010”</p>
+</dd>
+<dt class="label" id="saej2735"><span class="brackets"><a class="fn-backref" href="#id8">saej2735</a></span></dt>
+<dd><p>SAE Std J2735 “J2735 dedicated short range communications (DSRC) message set dictionary. 2009”</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="helpers">
+<h3>Helpers<a class="headerlink" href="#helpers" title="Permalink to this headline">¶</a></h3>
+<p>The helpers include a) lower-level MAC and PHY channel helpers and
+b) higher-level application helpers that handle the sending and receiving
+of the Basic Safety Message (BSM).</p>
+<p>The lower-level helpers include <code class="docutils literal notranslate"><span class="pre">ns3::YansWavePhyHelper</span></code>, <code class="docutils literal notranslate"><span class="pre">ns3::NqosWaveMacHelper</span></code>, <code class="docutils literal notranslate"><span class="pre">ns3::QosWaveMacHelper</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ns3::Wifi80211pHelper</span></code> and <code class="docutils literal notranslate"><span class="pre">ns3::WaveHelper</span></code>.</p>
+<p>Wifi80211pHelper is used to create
+802.11p devices that follow the 802.11p-2010 standard. WaveHelper is
+used to create WAVE devices that follow both 802.11p-2010 and 1609.4-2010
+standards which are the MAC and PHY layers of the WAVE architecture.</p>
+<p>The relation of <code class="docutils literal notranslate"><span class="pre">ns3::NqosWaveMacHelper</span></code>, <code class="docutils literal notranslate"><span class="pre">ns3::QosWaveMacHelper</span></code> and
+<code class="docutils literal notranslate"><span class="pre">ns3::Wifi80211pHelper</span></code> is described as below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WifiHelper</span> <span class="o">------------</span><span class="n">use</span><span class="o">--------------&gt;</span>   <span class="n">WifiMacHelper</span>
+    <span class="o">^</span>                                        <span class="o">^</span>         <span class="o">^</span>
+    <span class="o">|</span>                                        <span class="o">|</span>         <span class="o">|</span>
+    <span class="o">|</span>                                        <span class="o">|</span>         <span class="o">|</span>
+  <span class="n">inherit</span>                                <span class="n">inherit</span>      <span class="n">inherit</span>
+    <span class="o">|</span>                                        <span class="o">|</span>         <span class="o">|</span>
+<span class="n">Wifi80211pHelper</span> <span class="o">------</span><span class="n">use</span><span class="o">-----&gt;</span>  <span class="n">QosWaveMacHelper</span> <span class="ow">or</span> <span class="n">NqosWaveHelper</span>
+</pre></div>
+</div>
+<p>From the above diagram, there are two Mac helper classes that both
+inherit from the WifiMacHelper; when the WAVE module was originally
+written, there were specialized versions (QoS and Nqos) of WifiMacHelper
+that have since been removed from the Wifi codebase, but the distinction
+remains in the WAVE helpers.  The functions of WiFi 802.11p device can be achieved by
+WaveNetDevice’s ContinuousAccess assignment, Wifi80211pHelper is recommended
+if there is no need for multiple channel operation.
+Usage is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span> <span class="n">nodes</span><span class="p">;</span>
+<span class="n">NetDeviceContainer</span> <span class="n">devices</span><span class="p">;</span>
+<span class="n">nodes</span><span class="o">.</span><span class="n">Create</span> <span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">YansWifiPhyHelper</span> <span class="n">wifiPhy</span> <span class="o">=</span> <span class="n">YansWifiPhyHelper</span><span class="p">::</span><span class="n">Default</span> <span class="p">();</span>
+<span class="n">YansWifiChannelHelper</span> <span class="n">wifiChannel</span> <span class="o">=</span> <span class="n">YansWifiChannelHelper</span><span class="p">::</span><span class="n">Default</span> <span class="p">();</span>
+<span class="n">wifiPhy</span><span class="o">.</span><span class="n">SetChannel</span> <span class="p">(</span><span class="n">wifiChannel</span><span class="o">.</span><span class="n">Create</span> <span class="p">());</span>
+<span class="n">NqosWave80211pMacHelper</span> <span class="n">wifi80211pMac</span> <span class="o">=</span> <span class="n">NqosWaveMacHelper</span><span class="p">::</span><span class="n">Default</span><span class="p">();</span>
+<span class="n">Wifi80211pHelper</span> <span class="mi">80211</span><span class="n">pHelper</span> <span class="o">=</span> <span class="n">Wifi80211pHelper</span><span class="p">::</span><span class="n">Default</span> <span class="p">();</span>
+<span class="n">devices</span> <span class="o">=</span> <span class="mi">80211</span><span class="n">pHelper</span><span class="o">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">wifiPhy</span><span class="p">,</span> <span class="n">wifi80211pMac</span><span class="p">,</span> <span class="n">nodes</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The relation of  <code class="docutils literal notranslate"><span class="pre">ns3::YansWavePhyHelper</span></code>, <code class="docutils literal notranslate"><span class="pre">ns3::QosWaveMacHelper</span></code> and <code class="docutils literal notranslate"><span class="pre">ns3::WaveHelper</span></code>
+is described as below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                                        <span class="n">WifiMacHelper</span>
+                                              <span class="o">^</span>
+                                              <span class="o">|</span>
+                                            <span class="n">inherit</span>
+                                              <span class="o">|</span>
+<span class="n">WaveHelper</span> <span class="o">--------</span> <span class="n">only</span> <span class="n">use</span> <span class="o">--------&gt;</span> <span class="n">QosWaveMacHelper</span>
+</pre></div>
+</div>
+<p>From the above diagram, WaveHelper is not the subclass of WifiHelper and should only
+use QosWaveMacHelper because WAVE MAC layer is based on QoS mechanism. But
+the WaveHelper is recommended if there is a need for multiple channel operation.
+Usage is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span> <span class="n">nodes</span><span class="p">;</span>
+<span class="n">NetDeviceContainer</span> <span class="n">devices</span><span class="p">;</span>
+<span class="n">nodes</span><span class="o">.</span><span class="n">Create</span> <span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">YansWifiChannelHelper</span> <span class="n">wifiChannel</span> <span class="o">=</span> <span class="n">YansWifiChannelHelper</span><span class="p">::</span><span class="n">Default</span> <span class="p">();</span>
+<span class="n">YansWavePhyHelper</span> <span class="n">wavePhy</span> <span class="o">=</span>  <span class="n">YansWavePhyHelper</span><span class="p">::</span><span class="n">Default</span> <span class="p">();</span>
+<span class="n">wavePhy</span><span class="o">.</span><span class="n">SetChannel</span> <span class="p">(</span><span class="n">wifiChannel</span><span class="o">.</span><span class="n">Create</span> <span class="p">());</span>
+<span class="n">QosWaveMacHelper</span> <span class="n">waveMac</span> <span class="o">=</span> <span class="n">QosWaveMacHelper</span><span class="p">::</span><span class="n">Default</span> <span class="p">();</span>
+<span class="n">WaveHelper</span> <span class="n">waveHelper</span> <span class="o">=</span> <span class="n">WaveHelper</span><span class="p">::</span><span class="n">Default</span> <span class="p">();</span>
+<span class="n">devices</span> <span class="o">=</span> <span class="n">waveHelper</span><span class="o">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">wavePhy</span><span class="p">,</span> <span class="n">waveMac</span><span class="p">,</span> <span class="n">nodes</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The higher-level helpers include <code class="docutils literal notranslate"><span class="pre">ns3::WaveBsmStats</span></code> and <code class="docutils literal notranslate"><span class="pre">ns3::WaveBsmHelper</span></code>.</p>
+<p>WaveBsmStats is used to collect and manage statistics, such as packet and byte
+counts and Packet Delivery Ratio (PDR), regarding the sending
+and receiving of WAVE BSM packets.  WaveBsmHelper is used by applications that
+wish to send and receive BSMs.</p>
+<p>The relation of <code class="docutils literal notranslate"><span class="pre">ns3::WaveBsmHelper</span></code> and <code class="docutils literal notranslate"><span class="pre">WaveBsmStats</span></code> is described
+below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Your</span> <span class="n">Vanet</span> <span class="n">Routing</span> <span class="n">Application</span><span class="o">&gt;</span> <span class="o">----</span><span class="n">use</span><span class="o">----&gt;</span> <span class="n">WaveBsmHelper</span> <span class="o">----</span><span class="n">use</span><span class="o">----&gt;</span> <span class="n">WaveBsmStats</span>
+</pre></div>
+</div>
+<p>From &lt;Your Vanet Routing Application&gt;, usage is as follows:</p>
+<blockquote>
+<div><p>// declare WAVE BSM helper instance
+WaveBsmHelper m_waveBsmHelper;</p>
+<p>// the following are passed to the WaveBsmHelpe::Install()
+// method, and they are thus assumed to be created and
+// initialized themselves, based on the user’s
+// simulation setup criteria.
+// container of network node
+NodeContainer m_adhocTxNodes;
+// (transmitting) devices (1 per node)
+NetDeviceContainer m_adhocTxDevices;
+// IPv4 interfaces (1 per device)
+Ipv4InterfaceContainer m_adhocTxInterfaces;
+// total simulation time (in seconds)
+double m_TotalSimTime;
+// WAVE BSM broadcast interval.  E.g., 100ms = 0.1 seconds
+double m_waveInterval; // seconds
+// time-synchronization accuracy of GPS devices.  E.g., +/- 40ns
+double m_gpsAccuracyNs;
+// array of distances (m) at which safety PDR shall be determined,
+// e.g. 50m, 100m, 200m, 300m, 400m, 500m, 600m, 800m, 1000m, and 1500m
+std::vector &lt;double&gt; m_txSafetyRanges;
+// used to get consistent random numbers across scenarios
+int64_t m_streamIndex;</p>
+<dl class="simple">
+<dt>m_waveBsmHelper.Install (m_adhocTxNodes,</dt><dd><p>m_adhocTxDevices,
+m_adhocTxInterfaces,
+Seconds(m_TotalSimTime),
+m_wavePacketSize,
+Seconds(m_waveInterval),
+// convert GPS accuracy, in ns, to Time
+Seconds(m_gpsAccuracyNs / 1000000.0),
+m_txSafetyRanges);</p>
+</dd>
+</dl>
+<p>// fix random number streams
+m_streamIndex += m_waveBsmHelper.AssignStreams (m_streamIndex);</p>
+</div></blockquote>
+<p>Example usages of BSM statistics are as follows:</p>
+<blockquote>
+<div><p>// Get the cumulative PDR of the first safety Tx range (i.e, 50m in the
+// m_txSafetyRanges example above).
+double bsm_pdr1 = m_waveBsmHelper.GetWaveBsmStats ()-&gt;GetBsmPdr (1);</p>
+<p>// total WAVE BSM bytes sent
+uint32_t cumulativeWaveBsmBytes = m_waveBsmHelper.GetWaveBsmStats ()-&gt;GetTxByteCount ();</p>
+<p>// get number of WAVE BSM packets sent
+int wavePktsSent = m_waveBsmHelper.GetWaveBsmStats ()-&gt;GetTxPktCount ();</p>
+<p>// get number of WAVE BSM packets received
+int wavePktsReceived = m_waveBsmHelper.GetWaveBsmStats ()-&gt;GetRxPktCount ();</p>
+<p>// reset count of WAVE BSM packets received
+m_waveBsmHelper.GetWaveBsmStats ()-&gt;SetRxPktCount (0);</p>
+<p>// reset count of WAVE BSM packets sent
+m_waveBsmHelper.GetWaveBsmStats ()-&gt;SetTxPktCount (0);</p>
+<p>// indicate that a node (nodeId) is moving.  (set to 0 to “stop” node)
+WaveBsmHelper::GetNodesMoving()[nodeId] = 1;</p>
+</div></blockquote>
+</div>
+<div class="section" id="apis">
+<h3>APIs<a class="headerlink" href="#apis" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id11">
+<h4>MAC layer<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<p>The 802.11p device can allow the upper layer to send different information
+over Vendor Specific Action management frames by using different
+OrganizationIdentifier fields to identify differences.</p>
+<ol class="arabic simple">
+<li><p>create some Node objects and WifiNetDevice objects, e.g. one sender and one receiver.</p></li>
+<li><p>receiver defines an OrganizationIdentifier</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">uint8_t</span> <span class="n">oi_bytes</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x50</span><span class="p">,</span> <span class="mh">0xC2</span><span class="p">,</span> <span class="mh">0x4A</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">};</span>
+<span class="n">OrganizationIdentifier</span> <span class="n">oi</span><span class="p">(</span><span class="n">oi_bytes</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>receiver defines a Callback for the defined OrganizationIdentifier</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VscCallback</span> <span class="n">vsccall</span> <span class="o">=</span> <span class="n">MakeCallback</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">VsaExample</span><span class="p">::</span><span class="n">GetWsaAndOi</span><span class="p">,</span> <span class="n">this</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>receiver registers this identifier and function</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">WifiNetDevice</span><span class="o">&gt;</span> <span class="n">device1</span> <span class="o">=</span> <span class="n">DynamicCast</span><span class="o">&lt;</span><span class="n">WifiNetDevice</span><span class="o">&gt;</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">Get</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">GetDevice</span> <span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OcbWifiMac</span><span class="o">&gt;</span> <span class="n">ocb1</span> <span class="o">=</span> <span class="n">DynamicCast</span><span class="o">&lt;</span><span class="n">OcbWifiMac</span><span class="o">&gt;</span><span class="p">(</span><span class="n">device</span><span class="o">-&gt;</span><span class="n">GetMac</span> <span class="p">());</span>
+<span class="n">ocb1</span><span class="o">-&gt;</span><span class="n">AddReceiveVscCallback</span> <span class="p">(</span><span class="n">oi</span><span class="p">,</span> <span class="n">vsccall</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>sender transmits management information over VSA frames</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">vsc</span> <span class="o">=</span> <span class="n">Create</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="p">();</span>
+<span class="n">ocb2</span><span class="o">-&gt;</span><span class="n">SendVsc</span> <span class="p">(</span><span class="n">vsc</span><span class="p">,</span> <span class="n">Mac48Address</span><span class="p">::</span><span class="n">GetBroadcast</span> <span class="p">(),</span> <span class="n">m_16093oi</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li><p>then registered callbacks in the receiver will be called.</p></li>
+</ol>
+</div>
+<div class="section" id="id12">
+<h4>MAC extension layer<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<p>The WAVE devices allow the upper layer to route packets in different control
+approaches.  However dedicated APIs and invocation sequences should be
+followed; otherwise, the packets may be discarded by devices.</p>
+<ol class="arabic simple">
+<li><p>create some Node objects and WaveNetDevice objects by helpers, e.g. one sender and one receiver.</p></li>
+<li><p>receiver registers the receive callback if WSMP and IP-based packets are supposed to be received.</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// the class ``ns3::WaveNetDeviceExample``here will has a receive method &quot;Receive&quot; to be registered.
+receiver-&gt;SetReceiveCallback (MakeCallback (&amp;WaveNetDeviceExample::Receive, this));
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>receiver registers the receive callback if WSA frames are supposed to be received.</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// the class ``ns3::WaveNetDeviceExample``here will has a receive method &quot;ReceiveVsa&quot; to be registered.
+receiver-&gt;SetWaveVsaCallback (MakeCallback  (&amp;WaveNetDeviceExample::ReceiveVsa, this));
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>sender and receiver assign channel access by StartSch method.</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">case</span> <span class="n">that</span> <span class="n">alternating</span> <span class="n">access</span> <span class="k">with</span> <span class="n">non</span><span class="o">-</span><span class="n">immediate</span> <span class="n">mode</span> <span class="ow">is</span> <span class="n">assigned</span> <span class="k">for</span> <span class="n">sender</span> <span class="ow">and</span> <span class="n">receiver</span> <span class="n">devices</span><span class="o">.</span>
+<span class="n">const</span> <span class="n">SchInfo</span> <span class="n">schInfo</span> <span class="o">=</span> <span class="n">SchInfo</span> <span class="p">(</span><span class="n">SCH1</span><span class="p">,</span> <span class="n">false</span><span class="p">,</span> <span class="n">EXTENDED_ALTERNATING</span><span class="p">);</span>
+<span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">StartSch</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">schInfo</span><span class="p">);</span>
+<span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">StartSch</span><span class="p">,</span> <span class="n">receiver</span><span class="p">,</span> <span class="n">schInfo</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">case</span> <span class="n">that</span> <span class="n">continuous</span> <span class="n">access</span> <span class="k">with</span> <span class="n">immediate</span> <span class="n">mode</span> <span class="ow">is</span> <span class="n">assigned</span> <span class="k">for</span> <span class="n">sender</span> <span class="ow">and</span> <span class="n">receiver</span> <span class="n">devices</span><span class="o">.</span>
+<span class="n">const</span> <span class="n">SchInfo</span> <span class="n">schInfo</span> <span class="o">=</span> <span class="n">SchInfo</span> <span class="p">(</span><span class="n">SCH1</span><span class="p">,</span> <span class="n">true</span><span class="p">,</span> <span class="n">EXTENDED_CONTINUOUS</span><span class="p">);</span>
+<span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">StartSch</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">schInfo</span><span class="p">);</span>
+<span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">StartSch</span><span class="p">,</span> <span class="n">receiver</span><span class="p">,</span> <span class="n">schInfo</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">case</span> <span class="n">that</span> <span class="n">extended</span> <span class="n">access</span> <span class="k">with</span> <span class="n">non</span><span class="o">-</span><span class="n">immediate</span> <span class="n">mode</span> <span class="ow">is</span> <span class="n">assigned</span> <span class="k">for</span> <span class="n">sender</span> <span class="ow">and</span> <span class="n">receiver</span> <span class="n">devices</span><span class="o">.</span>
+<span class="n">const</span> <span class="n">SchInfo</span> <span class="n">schInfo</span> <span class="o">=</span> <span class="n">SchInfo</span> <span class="p">(</span><span class="n">SCH1</span><span class="p">,</span> <span class="n">false</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+<span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">StartSch</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">schInfo</span><span class="p">);</span>
+<span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">StartSch</span><span class="p">,</span> <span class="n">receiver</span><span class="p">,</span> <span class="n">schInfo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>sender registers a tx profile if IP-based packets are planned to be transmitted</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">the</span> <span class="n">IP</span><span class="o">-</span><span class="n">based</span> <span class="n">packets</span> <span class="n">will</span> <span class="n">be</span> <span class="n">transmitted</span> <span class="ow">in</span> <span class="n">SCH1</span> <span class="k">with</span> <span class="mi">6</span><span class="n">Mbps</span> <span class="ow">and</span> <span class="mi">4</span> <span class="n">txPowerLevel</span> <span class="k">with</span> <span class="n">adaptable</span> <span class="n">mode</span><span class="o">.</span>
+<span class="n">const</span> <span class="n">TxProfile</span> <span class="n">txProfile</span> <span class="o">=</span> <span class="n">TxProfile</span> <span class="p">(</span><span class="n">SCH1</span><span class="p">,</span> <span class="n">true</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">WifiMode</span><span class="p">(</span><span class="s2">&quot;OfdmRate6MbpsBW10MHz&quot;</span><span class="p">));</span>
+<span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">2.0</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">RegisterTxProfile</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">txProfile</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li><p>sender transmits  WSMP packets by SendX method.</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">the</span> <span class="n">data</span> <span class="n">rate</span> <span class="ow">and</span> <span class="n">txPowerLevel</span> <span class="ow">is</span> <span class="n">controlled</span> <span class="n">by</span> <span class="n">the</span> <span class="n">high</span> <span class="n">layer</span> <span class="n">which</span> <span class="n">are</span> <span class="mi">6</span><span class="n">Mbps</span> <span class="ow">and</span> <span class="mi">0</span> <span class="n">level</span> <span class="n">here</span><span class="o">.</span>
+<span class="n">const</span> <span class="n">TxInfo</span> <span class="n">txInfo</span> <span class="o">=</span> <span class="n">TxInfo</span> <span class="p">(</span><span class="n">CCH</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">WifiMode</span><span class="p">(</span><span class="s2">&quot;OfdmRate6MbpsBW10MHz&quot;</span><span class="p">),</span>  <span class="mi">0</span><span class="p">);</span>
+<span class="o">//</span> <span class="n">this</span> <span class="n">packet</span> <span class="n">will</span> <span class="n">contain</span> <span class="n">WSMP</span> <span class="n">header</span> <span class="n">when</span> <span class="n">IEEE</span> <span class="mf">1609.3</span> <span class="n">model</span> <span class="ow">is</span> <span class="n">implemented</span>
+<span class="n">const</span> <span class="n">static</span> <span class="n">uint16_t</span> <span class="n">WSMP_PROT_NUMBER</span> <span class="o">=</span> <span class="mh">0x88DC</span><span class="p">;</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">wsaPacket</span>  <span class="o">=</span> <span class="n">Create</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="n">const</span> <span class="n">Address</span> <span class="n">dest</span> <span class="o">=</span> <span class="n">receiver</span><span class="o">-&gt;</span><span class="n">GetAddress</span> <span class="p">();</span>
+<span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">2.0</span><span class="p">),</span>  <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">SendX</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">wsaPacket</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">WSMP_PROT_NUMBER</span><span class="p">,</span> <span class="n">txInfo</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">the</span> <span class="n">data</span> <span class="n">rate</span> <span class="ow">and</span> <span class="n">txPowerLevel</span> <span class="ow">is</span> <span class="n">controlled</span> <span class="n">by</span> <span class="n">the</span> <span class="n">MAC</span> <span class="n">layer</span> <span class="n">which</span> <span class="n">are</span> <span class="n">decided</span> <span class="n">by</span> <span class="n">WifiRemoteStationManager</span>
+<span class="n">const</span> <span class="n">TxInfo</span> <span class="n">txInfo</span> <span class="o">=</span> <span class="n">TxInfo</span> <span class="p">(</span><span class="n">CCH</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">WifiMode</span><span class="p">(),</span>  <span class="mi">8</span><span class="p">);</span>
+<span class="o">//</span> <span class="n">this</span> <span class="n">packet</span> <span class="n">will</span> <span class="n">contain</span> <span class="n">WSMP</span> <span class="n">header</span> <span class="n">when</span> <span class="n">IEEE</span> <span class="mf">1609.3</span> <span class="n">model</span> <span class="ow">is</span> <span class="n">implemented</span>
+<span class="n">const</span> <span class="n">static</span> <span class="n">uint16_t</span> <span class="n">WSMP_PROT_NUMBER</span> <span class="o">=</span> <span class="mh">0x88DC</span><span class="p">;</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">wsaPacket</span>  <span class="o">=</span> <span class="n">Create</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="n">const</span> <span class="n">Address</span> <span class="n">dest</span> <span class="o">=</span> <span class="n">receiver</span><span class="o">-&gt;</span><span class="n">GetAddress</span> <span class="p">();</span>
+<span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">2.0</span><span class="p">),</span>  <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">SendX</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">wsaPacket</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">WSMP_PROT_NUMBER</span><span class="p">,</span> <span class="n">txInfo</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="7">
+<li><p>sender transmits IP-based packets by Send method.</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">static</span> <span class="n">uint16_t</span> <span class="n">IPv6_PROT_NUMBER</span> <span class="o">=</span> <span class="mh">0x86DD</span><span class="p">;</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">packet</span>  <span class="o">=</span> <span class="n">Create</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="n">const</span> <span class="n">Address</span> <span class="n">dest</span> <span class="o">=</span> <span class="n">receiver</span><span class="o">-&gt;</span><span class="n">GetAddress</span> <span class="p">();</span>
+<span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">2.0</span><span class="p">),</span>  <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">Send</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">packet</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">IPv6_PROT_NUMBER</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="8">
+<li><p>send transmits WSA frames repeatedly by StartVsa method.</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">//</span> <span class="n">this</span> <span class="n">packet</span> <span class="n">will</span> <span class="n">contain</span> <span class="n">WSA</span> <span class="n">management</span> <span class="n">information</span> <span class="n">when</span> <span class="n">IEEE</span> <span class="mf">1609.3</span> <span class="n">model</span> <span class="ow">is</span> <span class="n">implemented</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">wsaPacket</span> <span class="o">=</span> <span class="n">Create</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="n">Mac48Address</span> <span class="n">dest</span> <span class="o">=</span> <span class="n">Mac48Address</span><span class="p">::</span><span class="n">GetBroadcast</span> <span class="p">();</span>
+<span class="n">const</span> <span class="n">VsaInfo</span> <span class="n">vsaInfo</span> <span class="o">=</span> <span class="n">VsaInfo</span> <span class="p">(</span><span class="n">dest</span><span class="p">,</span> <span class="n">OrganizationIdentifier</span> <span class="p">(),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">wsaPacket</span><span class="p">,</span> <span class="n">SCH1</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">VSA_TRANSMIT_IN_BOTHI</span><span class="p">);</span>
+<span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">2.0</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">StartVsa</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">vsaInfo</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="9">
+<li><p>sender stops WSA frames repeatedly transmit by StopVsa method.</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">3.0</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">StopVsa</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">SCH1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="10">
+<li><p>sender and receiver release assigned channel access by StopSch method.</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">4.0</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">StopSch</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">SCH1</span><span class="p">);</span>
+<span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">4.0</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">StopSch</span><span class="p">,</span> <span class="n">receiver</span><span class="p">,</span> <span class="n">SCH1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="11">
+<li><p>sender or receiver changes current MAC address by ChangeAddress method.</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Address</span> <span class="n">newAddress</span> <span class="o">=</span> <span class="n">Mac48Address</span><span class="p">::</span><span class="n">Allocate</span> <span class="p">();</span>
+<span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">4.0</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">ChangeAddress</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">newAddress</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="12">
+<li><p>sender cancels all transmissions with the particular category and channel number by CancelTx method.</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Simulator</span><span class="p">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">4.0</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">WaveNetDevice</span><span class="p">::</span><span class="n">CancelTx</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">CCH</span><span class="p">,</span>  <span class="n">AC_BE</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>For transmitting and receiving these packets successfully,
+the normal and appropriate invocation procedures should be performed.</p>
+<p>(a) For WSMP, channel access should be assigned for transmit and receive.
+The channel access release operation may be optional if there is no need for
+transmission in another channel.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">StartSch</span> <span class="o">-------------&gt;</span> <span class="n">SendX</span> <span class="o">/</span> <span class="n">ReceiveCallback</span> <span class="o">--------------&gt;</span>  <span class="n">StopSch</span>
+</pre></div>
+</div>
+<p>(b) For IP, a tx profile should be registered before transmit and receive
+operations. The delete operation of tx profile may be
+optional if there is no need for transmission with other tx parameters.
+The channel access assignment and release optional usage is the same with
+WSMP here.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">StartSch</span> <span class="o">-------------&gt;</span> <span class="n">RegisterTxProfile</span> <span class="o">----------&gt;</span> <span class="n">Send</span> <span class="o">/</span> <span class="n">ReceiveCallback</span> <span class="o">--------------&gt;</span>  <span class="n">DeleteTxProfile</span> <span class="o">-------------&gt;</span> <span class="n">StopSch</span>
+</pre></div>
+</div>
+<p>(c) For WSA, StartVsa is called to transmit while StopVsa is an optional
+operation for canceling repeat transmit. The channel
+access assignment and release optional usage is also the same with WSMP here.
+To receive VSA, WaveVsaCallback should
+be registered; otherwise, the received VSA frames will be discard by
+the MAC extension layer and not delivered to the higher layer.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">StartSch</span> <span class="o">-------------&gt;</span> <span class="n">StartVsa</span> <span class="o">/</span> <span class="n">WaveVsaCallback</span> <span class="o">--------------&gt;</span>  <span class="n">StopVsa</span> <span class="o">---------------&gt;</span> <span class="n">StopSch</span>
+</pre></div>
+</div>
+<p>(d) Here an important point is that if the higher layer wants to transmit
+these packets in a control channel (the channel 178),
+there will be no need to request for CCH by the StartSch method, which means
+that StartSch can be optional or should be avoided
+here. The reason is that the default continuous CCH access has been assigned automatically after WAVE devices are created and initialized.
+Therefore, if calling StartSch and StopSch method with CCH as a parameter,
+the request will be discarded by devices and the method will return false to
+indicate failure.</p>
+</div>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>The channel interval duration’s default value is defined in the standard.
+However, the current implementation allows users to configure these
+attributes with other values. These attributes are included in the class
+<code class="docutils literal notranslate"><span class="pre">ns3::ChannelCoodinator</span></code> with config paths shown in the below. The method
+IsValidConfig is suggested to test whether new configuration follows the
+standard.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/NodeList/[i]/DeviceList/[i]/$ns3::WaveNetDevice/ChannelCoordinator/$ns3::ChannelCoordinator/CchInterval
+/NodeList/[i]/DeviceList/[i]/$ns3::WaveNetDevice/ChannelCoordinator/$ns3::ChannelCoordinator/SchInterval
+/NodeList/[i]/DeviceList/[i]/$ns3::WaveNetDevice/ChannelCoordinator/$ns3::ChannelCoordinator/GuardInterval
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">ns3::WaveNetDevice</span></code> is a wrapper class that contains those classes to support for multiple channel
+operation. To set or get the pointers of those objects, users can also
+use them by config paths shown in the below.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/NodeList/[i]/DeviceList/[i]/$ns3::WaveNetDevice/Mtu
+/NodeList/[i]/DeviceList/[i]/$ns3::WaveNetDevice/Channel
+/NodeList/[i]/DeviceList/[i]/$ns3::WaveNetDevice/PhyEntities
+/NodeList/[i]/DeviceList/[i]/$ns3::WaveNetDevice/MacEntities
+/NodeList/[i]/DeviceList/[i]/$ns3::WaveNetDevice/ChannelScheduler
+/NodeList/[i]/DeviceList/[i]/$ns3::WaveNetDevice/ChannelManager
+/NodeList/[i]/DeviceList/[i]/$ns3::WaveNetDevice/ChannelCoordinator
+/NodeList/[i]/DeviceList/[i]/$ns3::WaveNetDevice/VsaManager
+</pre></div>
+</div>
+</div>
+<div class="section" id="output">
+<h3>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h3>
+<p>For the 802.11p device, current classes provide output of the same type as WiFi devices;
+namely, ASCII and pcap traces, and logging output.  The 802.11p logging
+components can be enabled globally via the call to</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Wifi80211pHelper</span><span class="p">::</span><span class="n">EnableLogComponents</span> <span class="p">();</span>
+</pre></div>
+</div>
+<p>For the WAVE device, current classes provide output of the same type as WiFi
+devices; namely, ASCII and pcap traces, and logging output. The WAVE logging
+components can be enabled globally via the call to</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WaveHelper</span><span class="p">::</span><span class="n">EnableLogComponents</span> <span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="advanced-usage">
+<h3>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="advanced-wavehelper-configuration">
+<h4>Advanced WaveHelper configuration<a class="headerlink" href="#advanced-wavehelper-configuration" title="Permalink to this headline">¶</a></h4>
+<p>If users can make sure in which channel this WAVE device will work,
+they can set specific channel numbers to save resources of unused channels .
+Usage is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">case</span><span class="p">,</span> <span class="n">the</span> <span class="n">MAC</span> <span class="n">entities</span> <span class="k">for</span> <span class="n">SCH2</span> <span class="n">to</span> <span class="n">SCH6</span> <span class="n">will</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">created</span>
+<span class="n">WaveHelper</span> <span class="n">helper</span> <span class="o">=</span> <span class="n">WaveHelper</span><span class="p">::</span><span class="n">Default</span> <span class="p">();</span>
+<span class="n">uint32_t</span> <span class="n">channels</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="n">CCH</span><span class="p">,</span> <span class="n">SCH1</span><span class="p">};</span>
+<span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">uint32_t</span><span class="o">&gt;</span> <span class="n">channelsVector</span> <span class="p">(</span><span class="n">channels</span><span class="p">,</span> <span class="n">channels</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span>
+<span class="n">helper</span><span class="o">.</span><span class="n">CreateMacForChannel</span> <span class="p">(</span><span class="n">channelsVector</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>If users can create other channel access assignment mechanism, e.g.
+in the context of more PHY entities, which may be called
+“ns3::AnotherScheduler”, they can use this helper to create WAVE devices
+with new assignment mechanisms.  Usage is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WaveHelper</span> <span class="n">helper</span> <span class="o">=</span> <span class="n">WaveHelper</span><span class="p">::</span><span class="n">Default</span> <span class="p">();</span>
+<span class="n">helper</span><span class="o">.</span><span class="n">helper</span><span class="o">.</span><span class="n">CreateMacForChannel</span> <span class="p">(</span><span class="n">ChannelManager</span><span class="p">::</span><span class="n">GetWaveChannels</span> <span class="p">());</span>    <span class="o">//</span> <span class="n">create</span> <span class="nb">all</span> <span class="mi">7</span> <span class="n">MAC</span> <span class="n">entities</span> <span class="k">for</span> <span class="n">WAVE</span>
+<span class="n">helper</span><span class="o">.</span><span class="n">CreatePhys</span> <span class="p">(</span><span class="mi">2</span><span class="p">);</span>        <span class="o">//</span> <span class="ow">or</span> <span class="n">other</span> <span class="n">number</span> <span class="n">which</span> <span class="n">should</span> <span class="n">be</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">7</span>
+<span class="n">helper</span><span class="o">.</span><span class="n">SetChannelScheduler</span> <span class="p">(</span><span class="s2">&quot;ns3::AnotherScheduler&quot;</span><span class="p">);</span>    <span class="o">//</span> <span class="n">The</span> <span class="n">AnotherScheduler</span> <span class="n">should</span> <span class="n">be</span> <span class="n">implemented</span> <span class="n">by</span> <span class="n">users</span><span class="o">.</span>
+<span class="n">helper</span><span class="o">.</span><span class="n">SetRemoteStationManager</span> <span class="p">(</span><span class="s2">&quot;ns3::ConstantRateWifiManager&quot;</span><span class="p">);</span>    <span class="o">//</span> <span class="ow">or</span> <span class="n">other</span>  <span class="n">rate</span> <span class="n">control</span> <span class="n">algorithms</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>A basic example exists called <code class="docutils literal notranslate"><span class="pre">wave-simple-80211p.cc</span></code>.
+This example shows basic construction of an 802.11p node.  Two nodes
+are constructed with 802.11p devices, and by default, one node sends a single
+packet to another node (the number of packets and interval between
+them can be configured by command-line arguments).  The example shows
+typical usage of the helper classes for this mode of WiFi.</p>
+<p>Another example exists called <code class="docutils literal notranslate"><span class="pre">wave-simple-device.cc</span></code>. This
+example shows how to create WAVE devices by helpers and the routing service
+for different packets.
+After WAVE devices are configured and created by helpers, these packets are
+transmitted in different approaches.</p>
+<p>Another example exists called <code class="docutils literal notranslate"><span class="pre">vanet-routing-compare.cc</span></code>. This
+example shows how to create mobility nodes in a VANET scenario and
+send Basic Safety Message (BSM) packets are regular intervals and/or
+additional data traffic to be routed between nodes.  BSMs are transmitted
+assuming the WAVE Short Message Protocol (WSMP), whereas non-BSM data
+packets are relayed by using one of several different IP-based routing
+protocols (e.g., AODV, OLSR, DSDV, or DSR).</p>
+</div>
+<div class="section" id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h3>
+<p>To be defined.</p>
+</div>
+</div>
+<div class="section" id="validation">
+<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<p>A test suite named <code class="docutils literal notranslate"><span class="pre">wifi-80211p-ocb</span></code> is defined.  This test
+case consists of a stationary node and a mobile node.  The mobile
+node moves towards the stationary mode, and time points are checked
+at which time the physical layer starts to receive packets (and
+whether the MAC becomes associated, if applicable).  The same physical
+experiment is repeated for normal WiFi NetDevices in AP/STA mode, in
+Adhoc mode, and the new OCB mode.</p>
+<p>Another test suite named <code class="docutils literal notranslate"><span class="pre">wave-mac-extension</span></code> is defined. This test suite
+has four test cases, including <code class="docutils literal notranslate"><span class="pre">channel-coordination</span></code>, <code class="docutils literal notranslate"><span class="pre">channel-routing</span></code>,
+<code class="docutils literal notranslate"><span class="pre">channel-access</span></code> and <code class="docutils literal notranslate"><span class="pre">annex-c</span></code>. The first case is to test channel
+coordination
+feature. The second case is to test channel routing for three types of packets.
+The third case is to test four channel access assignments. And the fourth case
+is to test the implemented feature described in the Annex C of the standard.
+It is worth noting that the  <code class="docutils literal notranslate"><span class="pre">channel-routing</span></code> and <code class="docutils literal notranslate"><span class="pre">channel-access</span></code> test
+cases are both in the context of single-PHY device, which depends on the
+default channel
+access assignment mechanism <code class="docutils literal notranslate"><span class="pre">ns3:DefaultChannelScheduler</span></code>, thus they may not
+be suitable for testing when other channel access assignment mechanisms are
+used.  Although they are test cases, they are also good examples to show
+usage.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ns3::VanetRoutingExample</span></code> example was studied using mobility trace
+files in the Raleigh, NC USA area generated using Simulation for Urban
+Mobility (SUMO).  Three environments were studied:  a) an open highway
+scenario, b) a residential neighborhood scenario, and c) and urban downtown
+scenario.  For each environment, a constant number of 50-750 vehicles was
+maintained for 2000 simulation seconds (&gt; 30 minutes).  The mobility trace
+file were played back using <code class="docutils literal notranslate"><span class="pre">ns3::Ns2MobilityHelper</span></code>.  All vehicular nodes
+transmitted a 200-byte BSM at 10 Hz and the PDR was determined for
+transmission ranges of 50-1500m.  No additional non-BSM data was injected /
+routed through the network.  The default propagation loss model used
+was Two-Ray Ground.  Different fading / shadowing models were evaluated,
+including a) no fading, b) stochastic Nakagami-m fading, and c) an
+obstacle shadowing model (to be contributed to <em>ns-3</em>).  30 trials of each
+scenario were run in the North Carolina State University (NCSU) High
+Performance Computing (HPC) center, with each trial requiring from
+8 hours to 6 days of CPU time to complete.  Preliminary results were
+presented at the PhD Forum, 22nd IEEE International Conference on
+Network Protocols (ICNP), October 24, 2014, Research Triangle Park, NC.
+See:  <a class="reference external" href="http://www4.ncsu.edu/~scarpen/Research_files/Final-PHD_Forum_SE_Carpenter_2014.pdf">http://www4.ncsu.edu/~scarpen/Research_files/Final-PHD_Forum_SE_Carpenter_2014.pdf</a></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">WAVE models</a><ul>
+<li><a class="reference internal" href="#model-description">Model Description</a><ul>
+<li><a class="reference internal" href="#design">Design</a><ul>
+<li><a class="reference internal" href="#mac-layer">MAC layer</a></li>
+<li><a class="reference internal" href="#mac-extension-layer">MAC extension layer</a></li>
+<li><a class="reference internal" href="#phy-layer">PHY layer</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scope-and-limitations">Scope and Limitations</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#helpers">Helpers</a></li>
+<li><a class="reference internal" href="#apis">APIs</a><ul>
+<li><a class="reference internal" href="#id11">MAC layer</a></li>
+<li><a class="reference internal" href="#id12">MAC extension layer</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#output">Output</a></li>
+<li><a class="reference internal" href="#advanced-usage">Advanced Usage</a><ul>
+<li><a class="reference internal" href="#advanced-wavehelper-configuration">Advanced WaveHelper configuration</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#validation">Validation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="uan.html"
+                        title="previous chapter">UAN Framework</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="wifi.html"
+                        title="next chapter">Wi-Fi Module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/wave.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="wifi.html" title="Wi-Fi Module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="uan.html" title="UAN Framework"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

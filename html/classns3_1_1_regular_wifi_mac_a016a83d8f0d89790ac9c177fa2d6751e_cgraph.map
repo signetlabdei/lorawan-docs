@@ -1,0 +1,37 @@
+<map id="ns3::RegularWifiMac::GetVhtCapabilities" name="ns3::RegularWifiMac::GetVhtCapabilities">
+<area shape="rect" id="node1" title="Return the VHT capabilities of the device." alt="" coords="5,819,161,861"/>
+<area shape="rect" id="node2" href="$classns3_1_1_wifi_phy.html#af55a96fc67e724abd99aeaeab826187f" title=" " alt="" coords="248,142,435,183"/>
+<area shape="rect" id="node3" href="$classns3_1_1_wifi_mode.html#ad90f36e733ceaf8c5771cfbda437e14f" title=" " alt="" coords="238,208,445,235"/>
+<area shape="rect" id="node9" href="$classns3_1_1_wifi_mode.html#ae92b3cca34abdd76211fe9fbf19a6c09" title=" " alt="" coords="557,259,744,285"/>
+<area shape="rect" id="node11" href="$classns3_1_1_wifi_mac.html#a0206221199cff854a4a1433688c4be8b" title=" " alt="" coords="221,419,461,445"/>
+<area shape="rect" id="node14" href="$classns3_1_1_wifi_phy.html#a58a9d7c9dea69f223eb45ca4a5e0c49f" title=" " alt="" coords="228,586,455,627"/>
+<area shape="rect" id="node15" href="$classns3_1_1_wifi_phy.html#a70e3518202fa778f2a7c07be8e7c8d5f" title=" " alt="" coords="228,651,455,693"/>
+<area shape="rect" id="node16" href="$classns3_1_1_wifi_phy.html#ac5e4ea4c408896451a8ad77e77a88231" title="The WifiPhy::GetMcs() method is used (e.g., by a WifiRemoteStationManager) to determine the set of tr..." alt="" coords="262,717,421,744"/>
+<area shape="rect" id="node17" href="$classns3_1_1_wifi_mode.html#a4ba00941b5dbc4903ffecc1a0c841c6c" title=" " alt="" coords="546,309,755,336"/>
+<area shape="rect" id="node18" href="$classns3_1_1_wifi_mode.html#a67e1664cac501221b63a2be307184cc9" title=" " alt="" coords="541,361,760,402"/>
+<area shape="rect" id="node19" href="$classns3_1_1_wifi_phy.html#a6564e0e1e90982b5bb78898449f093e7" title="The WifiPhy::GetNMcs() method is used (e.g., by a WifiRemoteStationManager) to determine the set of t..." alt="" coords="257,768,426,795"/>
+<area shape="rect" id="node20" href="$classns3_1_1_wifi_mac.html#ab220f19e23821910bad1f0eba03e1a8c" title=" " alt="" coords="527,543,774,569"/>
+<area shape="rect" id="node22" href="$classns3_1_1_regular_wifi_mac.html#aec05eb1ee6425e02651bab0cffc4b60a" title="Return whether the device supports VHT." alt="" coords="263,521,419,562"/>
+<area shape="rect" id="node23" href="$classns3_1_1_vht_capabilities.html#ad991d435b13d2119ea6b3c845e2517e9" title="Set the maximum AMPDU length." alt="" coords="257,819,426,861"/>
+<area shape="rect" id="node24" href="$classns3_1_1_vht_capabilities.html#a0fe261b4360ab26244eb31f645b8ee65" title="Set the maximum MPDU length." alt="" coords="262,885,421,926"/>
+<area shape="rect" id="node25" href="$classns3_1_1_vht_capabilities.html#a06b1299759c0a76e0a49174812f6ce21" title="Set the receive highest supported LGI data rate." alt="" coords="209,950,473,991"/>
+<area shape="rect" id="node26" href="$classns3_1_1_vht_capabilities.html#a284f90719458927014ce75a782e91ef3" title="Set the receive LDPC." alt="" coords="265,1015,417,1057"/>
+<area shape="rect" id="node27" href="$classns3_1_1_vht_capabilities.html#aecde23bf93a3368f60801701c46dea0b" title=" " alt="" coords="265,1081,417,1122"/>
+<area shape="rect" id="node28" href="$classns3_1_1_vht_capabilities.html#af4c6a771c8aac939c07a2530d429169a" title="Set the receive STBC." alt="" coords="265,1146,417,1187"/>
+<area shape="rect" id="node29" href="$classns3_1_1_vht_capabilities.html#acaeb2ff60b3f3cd6406890d4c83596f3" title="Set the short guard interval 160 MHz." alt="" coords="219,1211,464,1253"/>
+<area shape="rect" id="node30" href="$classns3_1_1_vht_capabilities.html#a665a5422aaaa756f31588eddbb6881f4" title="Set the short guard interval 80 MHz." alt="" coords="223,1277,460,1318"/>
+<area shape="rect" id="node31" href="$classns3_1_1_vht_capabilities.html#a0e83453c9389a17dfba485d0f1568f39" title="Set the supported channel width set." alt="" coords="227,1342,456,1383"/>
+<area shape="rect" id="node32" href="$classns3_1_1_vht_capabilities.html#abba6286cda122b4299dcc9540cd1fed3" title="Set the transmit highest supported LGI data rate." alt="" coords="210,1407,473,1449"/>
+<area shape="rect" id="node33" href="$classns3_1_1_vht_capabilities.html#a4acad44449603f46a9a83e858e226fe2" title=" " alt="" coords="265,1473,417,1514"/>
+<area shape="rect" id="node34" href="$classns3_1_1_vht_capabilities.html#a40c1b9a1180a204b338864bb9d0cb13a" title="Set the transmit STBC." alt="" coords="265,1538,417,1579"/>
+<area shape="rect" id="node35" href="$classns3_1_1_vht_capabilities.html#aff987f3aa87dc26f9a23aace87ebcff8" title="Set the VHT supported field." alt="" coords="265,1603,417,1645"/>
+<area shape="rect" id="node4" href="$classns3_1_1_wifi_mode_factory.html#a3086868810ff4347e31c63027726f544" title="Return a WifiModeItem at the given UID index." alt="" coords="1059,187,1252,213"/>
+<area shape="rect" id="node5" href="$classns3_1_1_wifi_mode.html#abbbea987249a16c776803ba6e2ca9973" title=" " alt="" coords="546,107,755,133"/>
+<area shape="rect" id="node6" href="$classns3_1_1_wifi_mode_factory.html#a9c6f695d733355dee8d74bd1709868fc" title="Return a WifiModeFactory." alt="" coords="838,209,1001,250"/>
+<area shape="rect" id="node8" href="$classns3_1_1_wifi_mode.html#a1437871ae722c85d980a8af3ba522d39" title=" " alt="" coords="521,157,780,184"/>
+<area shape="rect" id="node10" href="$ipv4-address-generator_8cc.html#aaf5aa23b804d2e5e334106f207e8a6cc" title=" " alt="" coords="583,5,718,32"/>
+<area shape="rect" id="node7" href="$classns3_1_1_wifi_mode_factory.html#a89a9c38617bd3f7be4a8919ce9675996" title="Allocate a WifiModeItem from a given uniqueUid." alt="" coords="1074,238,1237,279"/>
+<area shape="rect" id="node12" href="$classns3_1_1_wifi_mac.html#ad2f6868310980347c60bbfa08494dc4a" title="Return the device this PHY is associated with." alt="" coords="828,492,1011,519"/>
+<area shape="rect" id="node13" href="$classns3_1_1_wifi_net_device.html#a20c98121e79afae35d03d9f5a3fa4ce8" title=" " alt="" coords="573,426,729,467"/>
+<area shape="rect" id="node21" href="$classns3_1_1_wifi_net_device.html#aab971061bafb69989fa3873cb1c36eca" title=" " alt="" coords="838,543,1001,585"/>
+</map>

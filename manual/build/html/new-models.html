@@ -1,0 +1,766 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Creating a new ns-3 model &#8212; Manual</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Adding a New Module to ns-3" href="new-modules.html" />
+    <link rel="prev" title="Support" href="support.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Manual</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="new-modules.html" title="Adding a New Module to ns-3"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="support.html" title="Support"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="support.html" accesskey="U">Support</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="creating-a-new-ns3-model">
+<h1>Creating a new <em>ns-3</em> model<a class="headerlink" href="#creating-a-new-ns3-model" title="Permalink to this headline">¶</a></h1>
+<p>This chapter walks through the design process of an <em>ns-3</em> model.  In many
+research cases, users will not be satisfied to merely adapt existing models, but
+may want to extend the core of the simulator in a novel way. We will use the
+example of adding an ErrorModel to a simple <em>ns-3</em> link as a motivating example
+of how one might approach this problem and proceed through a design and
+implementation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Documentation</p>
+<p>Here we focus on the process of creating new models
+and new modules, and some of the design choices involved.
+For the sake of clarity, we defer discussion of the
+<em>mechanics</em> of documenting models and source code to the
+<a class="reference internal" href="documentation.html"><span class="doc">Documentation</span></a> chapter.</p>
+</div>
+<div class="section" id="design-approach">
+<h2>Design Approach<a class="headerlink" href="#design-approach" title="Permalink to this headline">¶</a></h2>
+<p>Consider how you want it to work; what should it do. Think about these things:</p>
+<ul class="simple">
+<li><p><em>functionality:</em>  What functionality should it have?  What attributes or
+configuration is exposed to the user?</p></li>
+<li><p><em>reusability:</em>  How much should others be able to reuse my design?  Can I
+reuse code from <em>ns-2</em> to get started?  How does a user integrate the model
+with the rest of another simulation?</p></li>
+<li><p><em>dependencies:</em>  How can I reduce the introduction of outside dependencies on
+my new code as much as possible (to make it more modular)?  For instance,
+should I avoid any dependence on IPv4 if I want it to also be used by IPv6?
+Should I avoid any dependency on IP at all?</p></li>
+</ul>
+<p>Do not be hesitant to contact the <cite>ns-3-users</cite> or <cite>ns-developers</cite> list if you have
+questions. In particular, it is important to think about the public API of your
+new model and ask for feedback. It also helps to let others know of your work in
+case you are interested in collaborators.</p>
+<div class="section" id="example-errormodel">
+<h3>Example: <cite>ErrorModel</cite><a class="headerlink" href="#example-errormodel" title="Permalink to this headline">¶</a></h3>
+<p>An error model exists in <em>ns-2</em>. It allows packets to be passed to a stateful
+object that determines, based on a random variable, whether the packet is
+corrupted.  The caller can then decide what to do with the packet (drop it,
+etc.).</p>
+<p>The main API of the error model is a function to pass a packet to, and the
+return value of this function is a boolean that tells the caller whether any
+corruption occurred.  Note that depending on the error model, the packet data
+buffer may or may not be corrupted.  Let’s call this function “IsCorrupt()”.</p>
+<p>So far, in our design, we have:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ErrorModel</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+ <span class="cm">/**</span>
+<span class="cm">  * \returns true if the Packet is to be considered as errored/corrupted</span>
+<span class="cm">  * \param pkt Packet to apply error model to</span>
+<span class="cm">  */</span>
+  <span class="kt">bool</span> <span class="n">IsCorrupt</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">pkt</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Note that we do not pass a const pointer, thereby allowing the function to
+modify the packet if IsCorrupt() returns true. Not all error models will
+actually modify the packet; whether or not the packet data buffer is corrupted
+should be documented.</p>
+<p>We may also want specialized versions of this, such as in <em>ns-2</em>, so although it
+is not the only design choice for polymorphism, we assume that we will subclass
+a base class ErrorModel for specialized classes, such as RateErrorModel,
+ListErrorModel, etc, such as is done in <em>ns-2</em>.</p>
+<p>You may be thinking at this point, “Why not make IsCorrupt() a virtual method?”.
+That is one approach; the other is to make the public non-virtual function
+indirect through a private virtual function (this in C++ is known as the non
+virtual interface idiom and is adopted in the <em>ns-3</em> ErrorModel class).</p>
+<p>Next, should this device have any dependencies on IP or other protocols?  We do
+not want to create dependencies on Internet protocols (the error model should be
+applicable to non-Internet protocols too), so we’ll keep that in mind later.</p>
+<p>Another consideration is how objects will include this error model.  We envision
+putting an explicit setter in certain NetDevice implementations, for example.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Attach a receive ErrorModel to the PointToPointNetDevice.</span>
+<span class="cm"> *</span>
+<span class="cm"> * The PointToPointNetDevice may optionally include an ErrorModel in</span>
+<span class="cm"> * the packet receive chain.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @see ErrorModel</span>
+<span class="cm"> * @param em Ptr to the ErrorModel.</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="n">PointToPointNetDevice</span><span class="o">::</span><span class="n">SetReceiveErrorModel</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">ErrorModel</span><span class="o">&gt;</span> <span class="n">em</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Again, this is not the only choice we have (error models could be aggregated to
+lots of other objects), but it satisfies our primary use case, which is to allow
+a user to force errors on otherwise successful packet transmissions, at the
+NetDevice level.</p>
+<p>After some thinking and looking at existing <em>ns-2</em> code, here is a sample API of
+a base class and first subclass that could be posted for initial review:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ErrorModel</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">ErrorModel</span> <span class="p">();</span>
+  <span class="k">virtual</span> <span class="o">~</span><span class="n">ErrorModel</span> <span class="p">();</span>
+  <span class="kt">bool</span> <span class="nf">IsCorrupt</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">pkt</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">Reset</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">Enable</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">Disable</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+  <span class="kt">bool</span> <span class="nf">IsEnabled</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="k">private</span><span class="o">:</span>
+  <span class="k">virtual</span> <span class="kt">bool</span> <span class="n">DoCorrupt</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">pkt</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">DoReset</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">enum</span> <span class="n">ErrorUnit</span>
+  <span class="p">{</span>
+    <span class="n">EU_BIT</span><span class="p">,</span>
+    <span class="n">EU_BYTE</span><span class="p">,</span>
+    <span class="n">EU_PKT</span>
+  <span class="p">};</span>
+
+<span class="c1">// Determine which packets are errored corresponding to an underlying</span>
+<span class="c1">// random variable distribution, an error rate, and unit for the rate.</span>
+<span class="k">class</span> <span class="nc">RateErrorModel</span> <span class="o">:</span> <span class="k">public</span> <span class="n">ErrorModel</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">RateErrorModel</span> <span class="p">();</span>
+  <span class="k">virtual</span> <span class="o">~</span><span class="n">RateErrorModel</span> <span class="p">();</span>
+  <span class="k">enum</span> <span class="n">ErrorUnit</span> <span class="nf">GetUnit</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+  <span class="kt">void</span> <span class="nf">SetUnit</span> <span class="p">(</span><span class="k">enum</span> <span class="n">ErrorUnit</span> <span class="n">error_unit</span><span class="p">);</span>
+  <span class="kt">double</span> <span class="nf">GetRate</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+  <span class="kt">void</span> <span class="nf">SetRate</span> <span class="p">(</span><span class="kt">double</span> <span class="n">rate</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">SetRandomVariable</span> <span class="p">(</span><span class="k">const</span> <span class="n">RandomVariable</span> <span class="o">&amp;</span><span class="n">ranvar</span><span class="p">);</span>
+<span class="k">private</span><span class="o">:</span>
+  <span class="k">virtual</span> <span class="kt">bool</span> <span class="n">DoCorrupt</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">pkt</span><span class="p">);</span>
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">DoReset</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="scaffolding">
+<h2>Scaffolding<a class="headerlink" href="#scaffolding" title="Permalink to this headline">¶</a></h2>
+<p>Let’s say that you are ready to start implementing; you have a fairly clear
+picture of what you want to build, and you may have solicited some initial
+review or suggestions from the list.  One way to approach the next step
+(implementation) is to create scaffolding and fill in the details as the design
+matures.</p>
+<p>This section walks through many of the steps you should consider to define
+scaffolding, or a non-functional skeleton of what your model will eventually
+implement. It is usually good practice to not wait to get these details
+integrated at the end, but instead to plumb a skeleton of your model into the
+system early and then add functions later once the API and integration seems
+about right.</p>
+<p>Note that you will want to modify a few things in the below presentation for
+your model since if you follow the error model verbatim, the code you produce
+will collide with the existing error model. The below is just an outline of how
+ErrorModel was built that you can adapt to other models.</p>
+<div class="section" id="review-the-ns3-coding-style-document">
+<h3>Review the <em>ns-3</em> Coding Style Document<a class="headerlink" href="#review-the-ns3-coding-style-document" title="Permalink to this headline">¶</a></h3>
+<p>At this point, you may want to pause and read the <em>ns-3</em> coding style document,
+especially if you are considering to contribute your code back to the project.
+The coding style document is linked off the main project page: <a class="reference external" href="http://www.nsnam.org/developers/contributing-code/coding-style/">ns-3 coding
+style</a>.</p>
+</div>
+<div class="section" id="decide-where-in-the-source-tree-the-model-should-reside">
+<h3>Decide Where in the Source Tree the Model Should Reside<a class="headerlink" href="#decide-where-in-the-source-tree-the-model-should-reside" title="Permalink to this headline">¶</a></h3>
+<p>All of the <em>ns-3</em> model source code is in the directory <code class="docutils literal notranslate"><span class="pre">src/</span></code>.  You will need
+to choose which subdirectory it resides in. If it is new model code of some
+sort, it makes sense to put it into the <code class="docutils literal notranslate"><span class="pre">src/</span></code> directory somewhere,
+particularly for ease of integrating with the build system.</p>
+<p>In the case of the error model, it is very related to the packet class, so it
+makes sense to implement this in the <code class="docutils literal notranslate"><span class="pre">src/network/</span></code> module where <em>ns-3</em>
+packets are implemented.</p>
+</div>
+<div class="section" id="waf-and-wscript">
+<h3><cite>waf</cite> and <cite>wscript</cite><a class="headerlink" href="#waf-and-wscript" title="Permalink to this headline">¶</a></h3>
+<p><em>ns-3</em> uses the <a class="reference external" href="http://www.freehackers.org/~tnagy/waf.html">Waf</a> build system.
+You will want to integrate your new <em>ns-3</em> uses the Waf build system. You will
+want to integrate your new source files into this system. This requires that you
+add your files to the <code class="docutils literal notranslate"><span class="pre">wscript</span></code> file found in each directory.</p>
+<p>Let’s start with empty files error-model.h and error-model.cc, and add this to
+<code class="docutils literal notranslate"><span class="pre">src/network/wscript</span></code>. It is really just a matter of adding the .cc file to the
+rest of the source files, and the .h file to the list of the header files.</p>
+<p>Now, pop up to the top level directory and type “./test.py”.  You
+shouldn’t have broken anything by this operation.</p>
+</div>
+<div class="section" id="include-guards">
+<h3>Include Guards<a class="headerlink" href="#include-guards" title="Permalink to this headline">¶</a></h3>
+<p>Next, let’s add some <a class="reference external" href="http://en.wikipedia.org/wiki/Include_guard">include guards</a> in our header file.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef ERROR_MODEL_H</span>
+<span class="cp">#define ERROR_MODEL_H</span>
+<span class="p">...</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="namespace-ns3">
+<h3><cite>namespace ns3</cite><a class="headerlink" href="#namespace-ns3" title="Permalink to this headline">¶</a></h3>
+<p><em>ns-3</em> uses the <em>ns-3</em> <a class="reference external" href="http://en.wikipedia.org/wiki/Namespace_(computer_science)#Use_in_common_languages">namespace</a>
+to isolate its symbols from other namespaces. Typically, a user will next put
+an <em>ns-3</em> namespace block in both the cc and h file.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span> <span class="n">ns3</span> <span class="p">{</span>
+<span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>At this point, we have some skeletal files in which we can start defining
+our new classes. The header file looks like this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef ERROR_MODEL_H</span>
+<span class="cp">#define ERROR_MODEL_H</span>
+
+<span class="k">namespace</span> <span class="n">ns3</span> <span class="p">{</span>
+
+<span class="p">}</span> <span class="c1">// namespace ns3</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+<p>while the <code class="docutils literal notranslate"><span class="pre">error-model.cc</span></code> file simply looks like this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;error-model.h&quot;</span><span class="cp"></span>
+
+<span class="k">namespace</span> <span class="n">ns3</span> <span class="p">{</span>
+
+<span class="p">}</span> <span class="c1">// namespace ns3</span>
+</pre></div>
+</div>
+<p>These files should compile since they don’t really have any contents.  We’re now
+ready to start adding classes.</p>
+</div>
+</div>
+<div class="section" id="initial-implementation">
+<h2>Initial Implementation<a class="headerlink" href="#initial-implementation" title="Permalink to this headline">¶</a></h2>
+<p>At this point, we’re still working on some scaffolding, but we can begin to
+define our classes, with the functionality to be added later.</p>
+<div class="section" id="inherit-from-the-object-class">
+<h3>Inherit from the <cite>Object</cite> Class?<a class="headerlink" href="#inherit-from-the-object-class" title="Permalink to this headline">¶</a></h3>
+<p>This is an important design step; whether to use class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code> as a
+base class for your new classes.</p>
+<p>As described in the chapter on the <em>ns-3</em> <a class="reference internal" href="object-model.html#object-model"><span class="std std-ref">Object model</span></a>, classes that
+inherit from class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code> get special properties:</p>
+<ul class="simple">
+<li><p>the <em>ns-3</em> type and attribute system (see <a class="reference internal" href="attributes.html#attributes"><span class="std std-ref">Configuration and Attributes</span></a>)</p></li>
+<li><p>an object aggregation system</p></li>
+<li><p>a smart-pointer reference counting system (class Ptr)</p></li>
+</ul>
+<p>Classes that derive from class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ObjectBase</span></code>} get the first two
+properties above, but do not get smart pointers. Classes that derive from class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">RefCountBase</span></code> get only the smart-pointer reference counting system.</p>
+<p>In practice, class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code> is the variant of the three above that
+the <em>ns-3</em> developer will most commonly encounter.</p>
+<p>In our case, we want to make use of the attribute system, and we will be passing
+instances of this object across the <em>ns-3</em> public API, so class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code> is appropriate for us.</p>
+</div>
+<div class="section" id="initial-classes">
+<h3>Initial Classes<a class="headerlink" href="#initial-classes" title="Permalink to this headline">¶</a></h3>
+<p>One way to proceed is to start by defining the bare minimum functions and see if
+they will compile. Let’s review what all is needed to implement when we derive
+from class Object.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef ERROR_MODEL_H</span>
+<span class="cp">#define ERROR_MODEL_H</span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;ns3/object.h&quot;</span><span class="cp"></span>
+
+<span class="k">namespace</span> <span class="n">ns3</span> <span class="p">{</span>
+
+<span class="k">class</span> <span class="nc">ErrorModel</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Object</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="k">static</span> <span class="n">TypeId</span> <span class="n">GetTypeId</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+  <span class="n">ErrorModel</span> <span class="p">();</span>
+  <span class="k">virtual</span> <span class="o">~</span><span class="n">ErrorModel</span> <span class="p">();</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">RateErrorModel</span> <span class="o">:</span> <span class="k">public</span> <span class="n">ErrorModel</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="k">static</span> <span class="n">TypeId</span> <span class="n">GetTypeId</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+  <span class="n">RateErrorModel</span> <span class="p">();</span>
+  <span class="k">virtual</span> <span class="o">~</span><span class="n">RateErrorModel</span> <span class="p">();</span>
+<span class="p">};</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+<p>A few things to note here. We need to include <code class="docutils literal notranslate"><span class="pre">object.h</span></code>. The convention in
+<em>ns-3</em> is that if the header file is co-located in the same directory, it may be
+included without any path prefix. Therefore, if we were implementing ErrorModel
+in <code class="docutils literal notranslate"><span class="pre">src/core/model</span></code> directory, we could have just said “<code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&quot;object.h&quot;</span></code>”.
+But we are in <code class="docutils literal notranslate"><span class="pre">src/network/model</span></code>, so we must include it as “<code class="docutils literal notranslate"><span class="pre">#include</span>
+<span class="pre">&quot;ns3/object.h&quot;</span></code>”. Note also that this goes outside the namespace declaration.</p>
+<p>Second, each class must implement a static public member function called
+<code class="docutils literal notranslate"><span class="pre">GetTypeId</span> <span class="pre">(void)</span></code>.</p>
+<p>Third, it is a good idea to implement constructors and destructors rather than
+to let the compiler generate them, and to make the destructor virtual. In C++,
+note also that copy assignment operator and copy constructors are auto-generated
+if they are not defined, so if you do not want those, you should implement those
+as private members. This aspect of C++ is discussed in Scott Meyers’ Effective
+C++ book. item 45.</p>
+<p>Let’s now look at some corresponding skeletal implementation code in the .cc
+file.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;error-model.h&quot;</span><span class="cp"></span>
+
+<span class="k">namespace</span> <span class="n">ns3</span> <span class="p">{</span>
+
+<span class="n">NS_OBJECT_ENSURE_REGISTERED</span> <span class="p">(</span><span class="n">ErrorModel</span><span class="p">);</span>
+
+<span class="n">TypeId</span> <span class="n">ErrorModel</span><span class="o">::</span><span class="n">GetTypeId</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">static</span> <span class="n">TypeId</span> <span class="n">tid</span> <span class="o">=</span> <span class="n">TypeId</span> <span class="p">(</span><span class="s">&quot;ns3::ErrorModel&quot;</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">SetParent</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="p">()</span>
+    <span class="p">.</span><span class="n">SetGroupName</span> <span class="p">(</span><span class="s">&quot;Network&quot;</span><span class="p">)</span>
+    <span class="p">;</span>
+  <span class="k">return</span> <span class="n">tid</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">ErrorModel</span><span class="o">::</span><span class="n">ErrorModel</span> <span class="p">()</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="n">ErrorModel</span><span class="o">::~</span><span class="n">ErrorModel</span> <span class="p">()</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="n">NS_OBJECT_ENSURE_REGISTERED</span> <span class="p">(</span><span class="n">RateErrorModel</span><span class="p">);</span>
+
+<span class="n">TypeId</span> <span class="n">RateErrorModel</span><span class="o">::</span><span class="n">GetTypeId</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">static</span> <span class="n">TypeId</span> <span class="n">tid</span> <span class="o">=</span> <span class="n">TypeId</span> <span class="p">(</span><span class="s">&quot;ns3::RateErrorModel&quot;</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">SetParent</span><span class="o">&lt;</span><span class="n">ErrorModel</span><span class="o">&gt;</span> <span class="p">()</span>
+    <span class="p">.</span><span class="n">SetGroupName</span> <span class="p">(</span><span class="s">&quot;Network&quot;</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">AddConstructor</span><span class="o">&lt;</span><span class="n">RateErrorModel</span><span class="o">&gt;</span> <span class="p">()</span>
+    <span class="p">;</span>
+  <span class="k">return</span> <span class="n">tid</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">RateErrorModel</span><span class="o">::</span><span class="n">RateErrorModel</span> <span class="p">()</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="n">RateErrorModel</span><span class="o">::~</span><span class="n">RateErrorModel</span> <span class="p">()</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>What is the <code class="docutils literal notranslate"><span class="pre">GetTypeId</span> <span class="pre">(void)</span></code> function? This function does a few things.  It
+registers a unique string into the TypeId system. It establishes  the hierarchy
+of objects in the attribute system (via <code class="docutils literal notranslate"><span class="pre">SetParent</span></code>). It also declares that
+certain objects can be created via the object creation framework
+(<code class="docutils literal notranslate"><span class="pre">AddConstructor</span></code>).</p>
+<p>The macro <code class="docutils literal notranslate"><span class="pre">NS_OBJECT_ENSURE_REGISTERED</span> <span class="pre">(classname)</span></code> is needed also once for
+every class that defines a new GetTypeId method, and it does the actual
+registration of the class into the system.  The <a class="reference internal" href="object-model.html#object-model"><span class="std std-ref">Object model</span></a> chapter
+discusses this in more detail.</p>
+</div>
+<div class="section" id="including-external-files">
+<h3>Including External Files<a class="headerlink" href="#including-external-files" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="logging-support">
+<h3>Logging Support<a class="headerlink" href="#logging-support" title="Permalink to this headline">¶</a></h3>
+<p><em>Here, write a bit about adding |ns3| logging macros. Note that
+LOG_COMPONENT_DEFINE is done outside the namespace ns3</em></p>
+</div>
+<div class="section" id="constructor-empty-function-prototypes">
+<h3>Constructor, Empty Function Prototypes<a class="headerlink" href="#constructor-empty-function-prototypes" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="key-variables-default-values-attributes">
+<h3>Key Variables (Default Values, Attributes)<a class="headerlink" href="#key-variables-default-values-attributes" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="test-program-1">
+<h3>Test Program 1<a class="headerlink" href="#test-program-1" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="object-framework">
+<h3>Object Framework<a class="headerlink" href="#object-framework" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="adding-a-sample-script">
+<h2>Adding a Sample Script<a class="headerlink" href="#adding-a-sample-script" title="Permalink to this headline">¶</a></h2>
+<p>At this point, one may want to try to take the basic scaffolding defined above
+and add it into the system. Performing this step now allows one to use a simpler
+model when plumbing into the system and may also reveal whether any design or
+API modifications need to be made. Once this is done, we will return to building
+out the functionality of the ErrorModels themselves.</p>
+<div class="section" id="add-basic-support-in-the-class">
+<h3>Add Basic Support in the Class<a class="headerlink" href="#add-basic-support-in-the-class" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/* point-to-point-net-device.h */</span>
+  <span class="k">class</span> <span class="nc">ErrorModel</span><span class="p">;</span>
+
+  <span class="cm">/**</span>
+<span class="cm">   * Error model for receive packet events</span>
+<span class="cm">   */</span>
+  <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">ErrorModel</span><span class="o">&gt;</span> <span class="n">m_receiveErrorModel</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-accessor">
+<h3>Add Accessor<a class="headerlink" href="#add-accessor" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="n">PointToPointNetDevice</span><span class="o">::</span><span class="n">SetReceiveErrorModel</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">ErrorModel</span><span class="o">&gt;</span> <span class="n">em</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">NS_LOG_FUNCTION</span> <span class="p">(</span><span class="k">this</span> <span class="o">&lt;&lt;</span> <span class="n">em</span><span class="p">);</span>
+  <span class="n">m_receiveErrorModel</span> <span class="o">=</span> <span class="n">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+   <span class="p">.</span><span class="n">AddAttribute</span> <span class="p">(</span><span class="s">&quot;ReceiveErrorModel&quot;</span><span class="p">,</span>
+                   <span class="s">&quot;The receiver error model used to simulate packet loss&quot;</span><span class="p">,</span>
+                   <span class="n">PointerValue</span> <span class="p">(),</span>
+                   <span class="n">MakePointerAccessor</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">PointToPointNetDevice</span><span class="o">::</span><span class="n">m_receiveErrorModel</span><span class="p">),</span>
+                   <span class="n">MakePointerChecker</span><span class="o">&lt;</span><span class="n">ErrorModel</span><span class="o">&gt;</span> <span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plumb-into-the-system">
+<h3>Plumb Into the System<a class="headerlink" href="#plumb-into-the-system" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">PointToPointNetDevice</span><span class="o">::</span><span class="n">Receive</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">packet</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">NS_LOG_FUNCTION</span> <span class="p">(</span><span class="k">this</span> <span class="o">&lt;&lt;</span> <span class="n">packet</span><span class="p">);</span>
+  <span class="kt">uint16_t</span> <span class="n">protocol</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">m_receiveErrorModel</span> <span class="o">&amp;&amp;</span> <span class="n">m_receiveErrorModel</span><span class="o">-&gt;</span><span class="n">IsCorrupt</span> <span class="p">(</span><span class="n">packet</span><span class="p">)</span> <span class="p">)</span>
+    <span class="p">{</span>
+<span class="c1">//</span>
+<span class="c1">// If we have an error model and it indicates that it is time to lose a</span>
+<span class="c1">// corrupted packet, don&#39;t forward this packet up, let it go.</span>
+<span class="c1">//</span>
+      <span class="n">m_dropTrace</span> <span class="p">(</span><span class="n">packet</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="k">else</span>
+    <span class="p">{</span>
+<span class="c1">//</span>
+<span class="c1">// Hit the receive trace hook, strip off the point-to-point protocol header</span>
+<span class="c1">// and forward this packet up the protocol stack.</span>
+<span class="c1">//</span>
+      <span class="n">m_rxTrace</span> <span class="p">(</span><span class="n">packet</span><span class="p">);</span>
+      <span class="n">ProcessHeader</span><span class="p">(</span><span class="n">packet</span><span class="p">,</span> <span class="n">protocol</span><span class="p">);</span>
+      <span class="n">m_rxCallback</span> <span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">packet</span><span class="p">,</span> <span class="n">protocol</span><span class="p">,</span> <span class="n">GetRemote</span> <span class="p">());</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">m_promiscCallback</span><span class="p">.</span><span class="n">IsNull</span> <span class="p">())</span>
+        <span class="p">{</span>           <span class="n">m_promiscCallback</span> <span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">packet</span><span class="p">,</span> <span class="n">protocol</span><span class="p">,</span> <span class="n">GetRemote</span> <span class="p">(),</span>
+                      <span class="n">GetAddress</span> <span class="p">(),</span> <span class="n">NetDevice</span><span class="o">::</span><span class="n">PACKET_HOST</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-null-functional-script">
+<h3>Create Null Functional Script<a class="headerlink" href="#create-null-functional-script" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/* simple-error-model.cc */</span>
+
+  <span class="c1">// Error model</span>
+  <span class="c1">// We want to add an error model to node 3&#39;s NetDevice</span>
+  <span class="c1">// We can obtain a handle to the NetDevice via the channel and node</span>
+  <span class="c1">// pointers</span>
+  <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">PointToPointNetDevice</span><span class="o">&gt;</span> <span class="n">nd3</span> <span class="o">=</span> <span class="n">PointToPointTopology</span><span class="o">::</span><span class="n">GetNetDevice</span>
+    <span class="p">(</span><span class="n">n3</span><span class="p">,</span> <span class="n">channel2</span><span class="p">);</span>
+  <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">ErrorModel</span><span class="o">&gt;</span> <span class="n">em</span> <span class="o">=</span> <span class="n">Create</span><span class="o">&lt;</span><span class="n">ErrorModel</span><span class="o">&gt;</span> <span class="p">();</span>
+  <span class="n">nd3</span><span class="o">-&gt;</span><span class="n">SetReceiveErrorModel</span> <span class="p">(</span><span class="n">em</span><span class="p">);</span>
+
+
+<span class="kt">bool</span>
+<span class="n">ErrorModel</span><span class="o">::</span><span class="n">DoCorrupt</span> <span class="p">(</span><span class="n">Packet</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">NS_LOG_FUNCTION</span><span class="p">;</span>
+  <span class="n">NS_LOG_UNCOND</span><span class="p">(</span><span class="s">&quot;Corrupt!&quot;</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>At this point, we can run the program with our trivial ErrorModel plumbed into
+the receive path of the PointToPointNetDevice. It prints out the string
+“Corrupt!” for each packet received at node n3. Next, we return to the error
+model to add in a subclass that performs more interesting error modeling.</p>
+</div>
+</div>
+<div class="section" id="add-a-subclass">
+<h2>Add a Subclass<a class="headerlink" href="#add-a-subclass" title="Permalink to this headline">¶</a></h2>
+<p>The trivial base class ErrorModel does not do anything interesting, but it
+provides a useful base class interface (Corrupt () and Reset ()), forwarded to
+virtual functions that can be subclassed. Let’s next consider what we call a
+BasicErrorModel which is based on the <em>ns-2</em> ErrorModel class (in
+<code class="docutils literal notranslate"><span class="pre">ns-2/queue/errmodel.{cc,h}</span></code>).</p>
+<p>What properties do we want this to have, from a user interface perspective? We
+would like for the user to be able to trivially swap out the type of ErrorModel
+used in the NetDevice. We would also like the capability to set configurable
+parameters.</p>
+<p>Here are a few simple requirements we will consider:</p>
+<ul class="simple">
+<li><p>Ability to set the random variable that governs the losses (default is
+UniformVariable)</p></li>
+<li><p>Ability to set the unit (bit, byte, packet, time) of granularity over which
+errors are applied.</p></li>
+<li><p>Ability to set the rate of errors (e.g. 10^-3) corresponding to the above unit
+of granularity.</p></li>
+<li><p>Ability to enable/disable (default is enabled)</p></li>
+</ul>
+<div class="section" id="how-to-subclass">
+<h3>How to Subclass<a class="headerlink" href="#how-to-subclass" title="Permalink to this headline">¶</a></h3>
+<p>We declare BasicErrorModel to be a subclass of ErrorModel as follows,:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BasicErrorModel</span> <span class="o">:</span> <span class="k">public</span> <span class="n">ErrorModel</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="k">static</span> <span class="n">TypeId</span> <span class="n">GetTypeId</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+  <span class="p">...</span>
+<span class="k">private</span><span class="o">:</span>
+  <span class="c1">// Implement base class pure virtual functions</span>
+  <span class="k">virtual</span> <span class="kt">bool</span> <span class="n">DoCorrupt</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">p</span><span class="p">);</span>
+  <span class="k">virtual</span> <span class="kt">bool</span> <span class="nf">DoReset</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and configure the subclass GetTypeId function by setting a unique TypeId string
+and setting the Parent to ErrorModel:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TypeId</span> <span class="n">RateErrorModel</span><span class="o">::</span><span class="n">GetTypeId</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">static</span> <span class="n">TypeId</span> <span class="n">tid</span> <span class="o">=</span> <span class="n">TypeId</span> <span class="p">(</span><span class="s">&quot;ns3::RateErrorModel&quot;</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">SetParent</span><span class="o">&lt;</span><span class="n">ErrorModel</span><span class="o">&gt;</span> <span class="p">()</span>
+    <span class="p">.</span><span class="n">SetGroupName</span> <span class="p">(</span><span class="s">&quot;Network&quot;</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">AddConstructor</span><span class="o">&lt;</span><span class="n">RateErrorModel</span><span class="o">&gt;</span> <span class="p">()</span>
+  <span class="p">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="build-core-functions-and-unit-tests">
+<h2>Build Core Functions and Unit Tests<a class="headerlink" href="#build-core-functions-and-unit-tests" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="assert-macros">
+<h3>Assert Macros<a class="headerlink" href="#assert-macros" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="writing-unit-tests">
+<h3>Writing Unit Tests<a class="headerlink" href="#writing-unit-tests" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Creating a new <em>ns-3</em> model</a><ul>
+<li><a class="reference internal" href="#design-approach">Design Approach</a><ul>
+<li><a class="reference internal" href="#example-errormodel">Example: <cite>ErrorModel</cite></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scaffolding">Scaffolding</a><ul>
+<li><a class="reference internal" href="#review-the-ns3-coding-style-document">Review the <em>ns-3</em> Coding Style Document</a></li>
+<li><a class="reference internal" href="#decide-where-in-the-source-tree-the-model-should-reside">Decide Where in the Source Tree the Model Should Reside</a></li>
+<li><a class="reference internal" href="#waf-and-wscript"><cite>waf</cite> and <cite>wscript</cite></a></li>
+<li><a class="reference internal" href="#include-guards">Include Guards</a></li>
+<li><a class="reference internal" href="#namespace-ns3"><cite>namespace ns3</cite></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#initial-implementation">Initial Implementation</a><ul>
+<li><a class="reference internal" href="#inherit-from-the-object-class">Inherit from the <cite>Object</cite> Class?</a></li>
+<li><a class="reference internal" href="#initial-classes">Initial Classes</a></li>
+<li><a class="reference internal" href="#including-external-files">Including External Files</a></li>
+<li><a class="reference internal" href="#logging-support">Logging Support</a></li>
+<li><a class="reference internal" href="#constructor-empty-function-prototypes">Constructor, Empty Function Prototypes</a></li>
+<li><a class="reference internal" href="#key-variables-default-values-attributes">Key Variables (Default Values, Attributes)</a></li>
+<li><a class="reference internal" href="#test-program-1">Test Program 1</a></li>
+<li><a class="reference internal" href="#object-framework">Object Framework</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#adding-a-sample-script">Adding a Sample Script</a><ul>
+<li><a class="reference internal" href="#add-basic-support-in-the-class">Add Basic Support in the Class</a></li>
+<li><a class="reference internal" href="#add-accessor">Add Accessor</a></li>
+<li><a class="reference internal" href="#plumb-into-the-system">Plumb Into the System</a></li>
+<li><a class="reference internal" href="#create-null-functional-script">Create Null Functional Script</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#add-a-subclass">Add a Subclass</a><ul>
+<li><a class="reference internal" href="#how-to-subclass">How to Subclass</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#build-core-functions-and-unit-tests">Build Core Functions and Unit Tests</a><ul>
+<li><a class="reference internal" href="#assert-macros">Assert Macros</a></li>
+<li><a class="reference internal" href="#writing-unit-tests">Writing Unit Tests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="support.html"
+                        title="previous chapter">Support</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="new-modules.html"
+                        title="next chapter">Adding a New Module to <em>ns-3</em></a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/new-models.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="new-modules.html" title="Adding a New Module to ns-3"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="support.html" title="Support"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="support.html" >Support</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 18:24.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

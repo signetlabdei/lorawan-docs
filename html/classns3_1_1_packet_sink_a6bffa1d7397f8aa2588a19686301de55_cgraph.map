@@ -1,0 +1,52 @@
+<map id="ns3::PacketSink::HandleRead" name="ns3::PacketSink::HandleRead">
+<area shape="rect" id="node1" title="Handle a packet received by the application." alt="" coords="5,514,216,541"/>
+<area shape="rect" id="node2" href="$classns3_1_1_inet6_socket_address.html#a2177c66e1bcf17c85dcffb9d2a971f5a" title="Convert the address to a InetSocketAddress." alt="" coords="291,161,472,203"/>
+<area shape="rect" id="node9" href="$classns3_1_1_inet_socket_address.html#ade776b1109e7b9a7be0b22ced49931e3" title="Returns an InetSocketAddress which corresponds to the input Address." alt="" coords="295,311,468,352"/>
+<area shape="rect" id="node13" href="$classns3_1_1_inet_socket_address.html#a84e0f56d0747abd33413b3ce4a3c725d" title=" " alt="" coords="295,376,468,417"/>
+<area shape="rect" id="node14" href="$classns3_1_1_inet6_socket_address.html#a5f0d6425ae43b8c72fc6eaa1645a0d68" title="Get the IPv6 address." alt="" coords="291,441,472,483"/>
+<area shape="rect" id="node15" href="$classns3_1_1_inet_socket_address.html#a4516487243122789216c5e92ef89c11e" title=" " alt="" coords="295,507,468,548"/>
+<area shape="rect" id="node16" href="$classns3_1_1_inet6_socket_address.html#af5eaf7f789558618e9073452d5302cd9" title="Get the port." alt="" coords="291,572,472,613"/>
+<area shape="rect" id="node17" href="$classns3_1_1_packet.html#afff7cb1ff518ee6dc0d424e10a5ad6ec" title="Returns the the size in bytes of the packet (including the zero&#45;filled initial payload)." alt="" coords="849,579,1003,606"/>
+<area shape="rect" id="node18" href="$classns3_1_1_socket.html#aa982ca9baab28bea412b0d9710e63b43" title="Get socket address." alt="" coords="283,798,480,825"/>
+<area shape="rect" id="node19" href="$classns3_1_1_inet6_socket_address.html#a4d928c54affbfb530a12076d6d7e0540" title="If the address match." alt="" coords="291,64,472,105"/>
+<area shape="rect" id="node20" href="$classns3_1_1_inet_socket_address.html#a9426766e34e928ce5dbdbeb9563a10df" title=" " alt="" coords="295,245,468,287"/>
+<area shape="rect" id="node21" href="$classns3_1_1_simulator.html#ac3178fa975b419f7875e7105be122800" title="Return the current simulation virtual time." alt="" coords="305,1321,458,1347"/>
+<area shape="rect" id="node34" href="$classns3_1_1_packet_sink.html#af1b771e838a0596a019bdc12cadf7521" title="Packet received: calculation of the e2e statistics." alt="" coords="264,747,499,774"/>
+<area shape="rect" id="node50" href="$classns3_1_1_socket.html#af22378d7af9a2745a9eada20210da215" title="Read a single packet from the socket and retrieve the sender address." alt="" coords="297,1371,466,1398"/>
+<area shape="rect" id="node3" href="$classns3_1_1_inet6_socket_address.html#a33435953a9ae4930e4cb4d8fbe592709" title="Constructor." alt="" coords="570,123,751,164"/>
+<area shape="rect" id="node4" href="$classns3_1_1_address.html#ab6dee6b9894c5877a1ceb377b0abbb1d" title=" " alt="" coords="547,71,775,98"/>
+<area shape="rect" id="node5" href="$classns3_1_1_address.html#ad4134d0978220e8d2920c27dc13cb320" title="Copy the address bytes into a buffer." alt="" coords="581,189,741,215"/>
+<area shape="rect" id="node6" href="$classns3_1_1_ipv6_address.html#a5c6a183643ab8f7371bd490ac22c4ffc" title="Deserialize this address." alt="" coords="553,239,768,266"/>
+<area shape="rect" id="node7" href="$classns3_1_1_inet6_socket_address.html#a92ecdd9962a0384fd374be86d6a18060" title="Get the type." alt="" coords="570,5,751,47"/>
+<area shape="rect" id="node8" href="$classns3_1_1_address.html#a75d239c79bb3c39d64a8db4f2d3d9b20" title="Allocate a new type id for a new type of address." alt="" coords="843,155,1009,182"/>
+<area shape="rect" id="node10" href="$classns3_1_1_ipv4_address.html#ac6e205258d95465ce51c148e51590760" title=" " alt="" coords="553,357,768,383"/>
+<area shape="rect" id="node11" href="$classns3_1_1_inet_socket_address.html#ae194de8f5f1884e3b755179891d20bba" title="Get the underlying address type (automatically assigned)." alt="" coords="574,291,747,332"/>
+<area shape="rect" id="node12" href="$classns3_1_1_inet_socket_address.html#a574001030dfb21d2963b2b4da081889d" title=" " alt="" coords="574,408,747,449"/>
+<area shape="rect" id="node22" href="$group__simulator.html#ga42eb4eddad41528d4d99794a3dae3fd0" title="Get the SimulatorImpl singleton." alt="" coords="608,1321,713,1347"/>
+<area shape="rect" id="node33" href="$classns3_1_1_simulator_impl.html#aa516c50060846adc6fd316e83ef0797c" title="Return the current simulation virtual time." alt="" coords="569,1371,752,1398"/>
+<area shape="rect" id="node23" href="$classns3_1_1_object_factory.html#a52eda277f4aaab54266134ba48102ad7" title="Create an Object instance of the configured TypeId." alt="" coords="855,1437,997,1479"/>
+<area shape="rect" id="node24" href="$group__logging.html#gac4c06cbbed12229d85991ced145f6be2" title="Default Node printer." alt="" coords="837,1503,1015,1530"/>
+<area shape="rect" id="node25" href="$namespacens3.html#ae01c3c7786b644dfb8a0bb8f1201b269" title="Default Time printer." alt="" coords="838,1605,1014,1631"/>
+<area shape="rect" id="node26" href="$classns3_1_1_string_value.html#a6f208c2778fe1c7882e5cb429b8326ae" title=" " alt="" coords="847,1554,1005,1581"/>
+<area shape="rect" id="node27" href="$namespacens3.html#ab4e173cdfd43d17c1a40d5348510a670" title=" " alt="" coords="865,1118,987,1145"/>
+<area shape="rect" id="node28" href="$classns3_1_1_global_value.html#a48a99242193fb69609a17332733e8600" title="Get the value." alt="" coords="826,1169,1026,1195"/>
+<area shape="rect" id="node29" href="$namespacens3.html#aebac73305345f2e2803fdeb102a7705e" title="Set the LogNodePrinter function to be used to prepend log messages with the node id." alt="" coords="839,1219,1013,1246"/>
+<area shape="rect" id="node30" href="$namespacens3.html#a46cd76678f7da29799d1b41994e12ec1" title="Set the TimePrinter function to be used to prepend log messages with the simulation time." alt="" coords="840,1270,1012,1297"/>
+<area shape="rect" id="node31" href="$group__simulator.html#ga233c5c38de117e4e4a5a9cd168694792" title="Get the static SimulatorImpl instance." alt="" coords="869,1321,983,1347"/>
+<area shape="rect" id="node32" href="$classns3_1_1_object_factory.html#a77dcd099064038a1eb7a6b8251229ec3" title="Set the TypeId of the Objects to be created by this factory." alt="" coords="855,1372,997,1413"/>
+<area shape="rect" id="node35" href="$classns3_1_1_packet.html#a14ec3d4250b425468764de58f5837b6b" title="Concatenate the input packet at the end of the current packet." alt="" coords="577,798,744,825"/>
+<area shape="rect" id="node42" href="$classns3_1_1_packet.html#acdb23fec2c1dbebd9e6917895e9bcc65" title="Create a new packet which contains a fragment of the original packet." alt="" coords="556,958,765,985"/>
+<area shape="rect" id="node46" href="$classns3_1_1_e2e_stats_header.html#a4d112e5b84d9d83618201f6a6d83f182" title="Get the size information that the header is carrying." alt="" coords="582,681,739,723"/>
+<area shape="rect" id="node47" href="$classns3_1_1_packet.html#acc152757db7d44974640b089335b7003" title="Deserialize but does not remove the header from the internal buffer." alt="" coords="569,747,752,774"/>
+<area shape="rect" id="node48" href="$classns3_1_1_packet.html#a78aa207e7921dd2f9f7e0d0b7a1c730a" title="Remove size bytes from the start of the current packet." alt="" coords="559,849,762,875"/>
+<area shape="rect" id="node49" href="$classns3_1_1_packet.html#a0961eccf975d75f902d40956c93ba63e" title="Deserialize and remove the header from the internal buffer." alt="" coords="558,899,763,926"/>
+<area shape="rect" id="node36" href="$classns3_1_1_byte_tag_list.html#ac970192e923afc561a304d17af4b8a52" title=" " alt="" coords="845,630,1007,657"/>
+<area shape="rect" id="node37" href="$classns3_1_1_byte_tag_list.html#a0d8aa9cf6aaf856eb08d4f4a01f38446" title="Make sure that all offsets are smaller than appendOffset which represents the location where new byte..." alt="" coords="827,681,1025,707"/>
+<area shape="rect" id="node38" href="$classns3_1_1_packet_metadata.html#af7ceb1a4a7ded625c85dbd477b5fc8b6" title="Add a metadata at the metadata start." alt="" coords="847,732,1005,773"/>
+<area shape="rect" id="node39" href="$classns3_1_1_buffer.html#a92dd87809af24fb10696fee9a9cb56cf" title=" " alt="" coords="844,798,1008,825"/>
+<area shape="rect" id="node40" href="$classns3_1_1_byte_tag_list.html#acb4563fbe4299c55af41ba7a166b71d5" title="Make sure that all offsets are bigger than prependOffset which represents the location where new byte..." alt="" coords="823,849,1029,875"/>
+<area shape="rect" id="node41" href="$classns3_1_1_byte_tag_list.html#a1fec06d7e6daaf8039cf2a148e4090f2" title="Adjust the offsets stored internally by the adjustment delta." alt="" coords="837,899,1015,926"/>
+<area shape="rect" id="node43" href="$classns3_1_1_packet_metadata.html#a0d5fd6d6a05b04eb1bb9a00c05e6a16c" title="Creates a fragment." alt="" coords="847,951,1005,992"/>
+<area shape="rect" id="node44" href="$classns3_1_1_buffer.html#a2688c9b7aa22608ec955a40e048ec0dc" title=" " alt="" coords="823,1017,1029,1043"/>
+<area shape="rect" id="node45" href="$classns3_1_1_packet.html#a2e919d10a620ad491a57be094ef4b2bb" title="Get the packet nix&#45;vector." alt="" coords="831,1067,1021,1094"/>
+</map>

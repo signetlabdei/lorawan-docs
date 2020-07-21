@@ -1,0 +1,52 @@
+<map id="ns3::LteEnbNetDevice::GetCellId" name="ns3::LteEnbNetDevice::GetCellId">
+<area shape="rect" id="node1" title=" " alt="" coords="896,351,1061,392"/>
+<area shape="rect" id="node2" href="$classns3_1_1_drb_activator.html#ac2083f8538dcb7d2d907c4c503647765" title="Procedure firstly checks if bearer was not activated, if IMSI from trace source equals configured one..." alt="" coords="671,5,814,47"/>
+<area shape="rect" id="node3" href="$classns3_1_1_no_backhaul_epc_helper.html#aba81459f3369b2db12b9fed75440d4e6" title="Add an S1 interface between an eNB and a SGW." alt="" coords="644,71,841,112"/>
+<area shape="rect" id="node8" href="$classns3_1_1_emu_epc_helper.html#adeca48cbe7143128f3578b4904e02218" title="Add an X2 interface between two eNB." alt="" coords="665,136,821,177"/>
+<area shape="rect" id="node9" href="$class_lte_handover_target_test_case.html#a8f9888bfbd34dbc434be80c79a440669" title="A trigger that can be scheduled to &quot;shutdown&quot; the cell pointed by m_sourceCellId by reducing its powe..." alt="" coords="373,183,576,224"/>
+<area shape="rect" id="node10" href="$class_lte_handover_target_test_case.html#adc2ffaf5e89accdbf70756ad9a92ce2c" title="Run a simulation of a micro&#45;cell network using the parameters provided to the constructor function." alt="" coords="57,197,260,239"/>
+<area shape="rect" id="node11" href="$class_lte_radio_link_failure_test_case.html#a4aaba81db2f0b1c331c1eeb1e99c6a9f" title="Check connected function." alt="" coords="371,300,579,341"/>
+<area shape="rect" id="node13" href="$class_lte_rrc_connection_establishment_test_case.html#a43216a40683fd19ad571edd9d0e8600c" title="Check connected function." alt="" coords="360,365,589,407"/>
+<area shape="rect" id="node15" href="$class_lte_x2_handover_measures_test_case.html#afaab3497c199b4440d286d0cb19996f3" title="Check connected function." alt="" coords="637,409,848,451"/>
+<area shape="rect" id="node17" href="$class_lte_x2_handover_test_case.html#a60447eff6ec472a1637e479638cc0f83" title="Check connected function." alt="" coords="653,475,833,516"/>
+<area shape="rect" id="node19" href="$classns3_1_1_no_backhaul_epc_helper.html#ad603c5c8daec7c9a3d6da5421f349c20" title="DoAddX2Interface: Call AddX2Interface on top of the Enb device pointers." alt="" coords="644,917,841,959"/>
+<area shape="rect" id="node21" href="$classns3_1_1_lte_stats_calculator.html#a5d4f64c0c48a8d0a841f0b889a11af2a" title="Retrieves CellId from Enb RLC path in the attribute system." alt="" coords="643,1260,842,1301"/>
+<area shape="rect" id="node27" href="$classns3_1_1_lte_helper.html#afac168014c3a4ac5c30bfd7c1d09cb96" title="Create an eNodeB device (LteEnbNetDevice) on the given node." alt="" coords="641,753,845,795"/>
+<area shape="rect" id="node50" href="$lena-distributed-ffr_8cc.html#a7e3aa5272ba032faa7717e0f3ba2f73d" title=" " alt="" coords="651,1325,834,1367"/>
+<area shape="rect" id="node4" href="$classns3_1_1_emu_epc_helper.html#abaff0cf3ed70c034b5e0fd22dc89a7ba" title="Add an eNB to the EPC." alt="" coords="397,93,553,135"/>
+<area shape="rect" id="node5" href="$classns3_1_1_point_to_point_epc_helper.html#a6636cc9c0501b719bd81ed13efd3c589" title="Add an eNB to the EPC." alt="" coords="375,28,574,69"/>
+<area shape="rect" id="node6" href="$class_epc_s1u_dl_test_case.html#a2ac9313672e6c5e2a5a33f98a77ffec2" title="Implementation to actually run this TestCase." alt="" coords="63,10,255,37"/>
+<area shape="rect" id="node7" href="$class_epc_s1u_ul_test_case.html#a6fa27997312de46d9b0f3ab2221a24fa" title="Implementation to actually run this TestCase." alt="" coords="63,61,255,87"/>
+<area shape="rect" id="node12" href="$class_lte_radio_link_failure_test_case.html#ae7e2b1f96fbb5c77477c9b5b5905f347" title="Setup the simulation according to the configuration set by the class constructor, run it,..." alt="" coords="55,263,263,304"/>
+<area shape="rect" id="node14" href="$class_lte_rrc_connection_establishment_test_case.html#a2c32cab9b29852f42c4ad1e7b68068b2" title="Implementation to actually run this TestCase." alt="" coords="44,328,273,369"/>
+<area shape="rect" id="node16" href="$class_lte_x2_handover_measures_test_case.html#a6aefe1e71df347688687fb5d8dd54104" title="Implementation to actually run this TestCase." alt="" coords="53,393,264,435"/>
+<area shape="rect" id="node18" href="$class_lte_x2_handover_test_case.html#a5d77d6fbe61da649203846d4617b4716" title="Implementation to actually run this TestCase." alt="" coords="69,459,249,500"/>
+<area shape="rect" id="node20" href="$classns3_1_1_no_backhaul_epc_helper.html#acf379e818b7d59a9be243b58d8d9d176" title="Add an X2 interface between two eNB." alt="" coords="376,1015,573,1056"/>
+<area shape="rect" id="node22" href="$classns3_1_1_mac_stats_calculator.html#a5408fc566f68e7d3a7a98c62a74131f8" title="Trace sink for the ns3::LteEnbMac::DlScheduling trace source." alt="" coords="385,1260,564,1301"/>
+<area shape="rect" id="node24" href="$classns3_1_1_lte_stats_calculator.html#a87a9bc9d89913c21ef67854abeaf2dd3" title="Retrieves CellId from Enb MAC path in the attribute system." alt="" coords="386,1325,563,1367"/>
+<area shape="rect" id="node25" href="$classns3_1_1_mac_stats_calculator.html#abe69ec4218d1d2fb7d034f6d0fe52e68" title="Trace sink for the ns3::LteEnbMac::UlScheduling trace source." alt="" coords="385,1749,564,1791"/>
+<area shape="rect" id="node23" href="$classns3_1_1_lte_helper.html#aca02df5d8852bf9721b1541707dcd84f" title="Enable trace sinks for DL MAC layer." alt="" coords="67,1896,250,1937"/>
+<area shape="rect" id="node26" href="$classns3_1_1_lte_helper.html#ad6d528e87c4f4089fc2679f31b2c90ff" title="Enable trace sinks for UL MAC layer." alt="" coords="67,1961,250,2003"/>
+<area shape="rect" id="node28" href="$classns3_1_1_lte_helper.html#a5e009ad35ef85f46b5a6099263f15a03" title="Create a set of eNodeB devices." alt="" coords="381,949,569,991"/>
+<area shape="rect" id="node29" href="$class_lte_cell_selection_test_case.html#a2ad9dadf26f7beb5d3ed1c6dfbcef90a" title="Setup the simulation according to the configuration set by the class constructor, run it,..." alt="" coords="66,916,251,957"/>
+<area shape="rect" id="node30" href="$class_lte_ue_measurements_piecewise_test_case1.html#a76f2ad9d43e2fb22c37e4e8763296a5f" title="Setup the simulation with the intended UE measurement reporting configuration, run it,..." alt="" coords="47,981,270,1023"/>
+<area shape="rect" id="node31" href="$class_lte_ue_measurements_piecewise_test_case2.html#aa3d0caf8f82d095e8c85434b294482b6" title="Setup the simulation with the intended UE measurement reporting configuration, run it,..." alt="" coords="47,1047,270,1088"/>
+<area shape="rect" id="node32" href="$class_lte_ue_measurements_handover_test_case.html#ae81c492f54cd25f174b26310458a7e5f" title="Setup the simulation with the intended UE measurement reporting configuration, run it,..." alt="" coords="49,1112,269,1153"/>
+<area shape="rect" id="node33" href="$class_carrier_aggregation_config_test_case.html#a5bfcc4f06b1d52f4d9ca12481a1fe09c" title="Implementation to actually run this TestCase." alt="" coords="65,1177,252,1219"/>
+<area shape="rect" id="node34" href="$class_carrier_aggregation_test_case.html#a20f3e28f3a6dd2919e51e508b78afa59" title="Implementation to actually run this TestCase." alt="" coords="57,1243,260,1284"/>
+<area shape="rect" id="node35" href="$class_lena_cqa_ff_mac_scheduler_test_case1.html#a91b3e2ef4ff292dbeda5559ff0eae1e6" title="Implementation to actually run this TestCase." alt="" coords="55,1308,263,1349"/>
+<area shape="rect" id="node36" href="$class_lena_cqa_ff_mac_scheduler_test_case2.html#a773e8490a80a3afe50adf54d713d3e4a" title="Implementation to actually run this TestCase." alt="" coords="55,1373,263,1415"/>
+<area shape="rect" id="node37" href="$class_lte_cqi_generation_test_case.html#a263a0f3670c23e42ed3feb7d353bdd09" title="Implementation to actually run this TestCase." alt="" coords="62,1439,255,1480"/>
+<area shape="rect" id="node38" href="$class_lte_cqi_generation_dl_power_control_test_case.html#a8a6ba5e52123fc8ed0deb9014a8b0591" title="Implementation to actually run this TestCase." alt="" coords="41,1504,277,1545"/>
+<area shape="rect" id="node39" href="$classns3_1_1_lena_deactivate_bearer_test_case.html#a214d777e46f96b701efdfd360871f53f" title="Implementation to actually run this TestCase." alt="" coords="59,1569,258,1611"/>
+<area shape="rect" id="node40" href="$class_lte_downlink_power_control_test_case.html#a2eb1e31f7313f51061d8aa950d3f4268" title="Implementation to actually run this TestCase." alt="" coords="51,1635,267,1676"/>
+<area shape="rect" id="node41" href="$class_lte_downlink_power_control_rrc_connection_reconfiguration_test_case.html#a3f7be434747a85c448ade6fc4500d552" title="Implementation to actually run this TestCase." alt="" coords="5,1700,312,1741"/>
+<area shape="rect" id="node42" href="$class_lena_fd_bet_ff_mac_scheduler_test_case1.html#a21b7a9f396adcc1ab24ddefc919345f2" title="Implementation to actually run this TestCase." alt="" coords="48,1765,269,1807"/>
+<area shape="rect" id="node43" href="$class_lena_fd_bet_ff_mac_scheduler_test_case2.html#a51c587a50f2087be7c3950f4d2d82852" title="Implementation to actually run this TestCase." alt="" coords="48,1831,269,1872"/>
+<area shape="rect" id="node44" href="$class_lena_fd_mt_ff_mac_scheduler_test_case.html#a5cfc445b7daa4a02df317b46ee007f1a" title="Implementation to actually run this TestCase." alt="" coords="51,524,267,565"/>
+<area shape="rect" id="node45" href="$class_lena_fd_tbfq_ff_mac_scheduler_test_case1.html#ae0536bf54d4e05fbf3600c1654c14cc0" title="Implementation to actually run this TestCase." alt="" coords="57,589,260,631"/>
+<area shape="rect" id="node46" href="$class_lena_fd_tbfq_ff_mac_scheduler_test_case2.html#a2e43d4f9483463dffa86410a1ce47140" title="Implementation to actually run this TestCase." alt="" coords="57,655,260,696"/>
+<area shape="rect" id="node47" href="$class_lte_hard_fr_test_case.html#a7267927f1ffb7acff88742eb33ab2e3c" title="Implementation to actually run this TestCase." alt="" coords="83,720,234,761"/>
+<area shape="rect" id="node48" href="$class_lte_strict_fr_test_case.html#afd223c9e5a1d3e14a244303963e21425" title="Implementation to actually run this TestCase." alt="" coords="85,785,232,827"/>
+<area shape="rect" id="node49" href="$class_lte_strict_fr_area_test_case.html#a61e945e04c3b10a50c2f484198199b49" title="Implementation to actually run this TestCase." alt="" coords="71,851,247,892"/>
+</map>

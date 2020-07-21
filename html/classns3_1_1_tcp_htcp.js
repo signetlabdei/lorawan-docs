@@ -1,0 +1,26 @@
+var classns3_1_1_tcp_htcp =
+[
+    [ "TcpHtcp", "classns3_1_1_tcp_htcp.html#ab7b381b89c4a15077fe861adb48b9cea", null ],
+    [ "TcpHtcp", "classns3_1_1_tcp_htcp.html#af53e5e2908e213b39712c11ffa6d412b", null ],
+    [ "~TcpHtcp", "classns3_1_1_tcp_htcp.html#afac94f9cd5ff2a749a5c563f12c4f6ee", null ],
+    [ "CongestionAvoidance", "classns3_1_1_tcp_htcp.html#a5eb471eacd7966cf548024c3870cc3bf", null ],
+    [ "Fork", "classns3_1_1_tcp_htcp.html#ac43b14656621c83a4f229e97052c633c", null ],
+    [ "GetName", "classns3_1_1_tcp_htcp.html#adc565b9963aedfdd335884194589be9e", null ],
+    [ "GetSsThresh", "classns3_1_1_tcp_htcp.html#add36278610893b4eba23cf688f7779d8", null ],
+    [ "GetTypeId", "classns3_1_1_tcp_htcp.html#a5c56fbdce06774bbe720b02528c2400f", null ],
+    [ "PktsAcked", "classns3_1_1_tcp_htcp.html#ad09157c644632f904b019423e0bf555b", null ],
+    [ "UpdateAlpha", "classns3_1_1_tcp_htcp.html#a2eefc9a29bf9747095c705066de9c7a3", null ],
+    [ "UpdateBeta", "classns3_1_1_tcp_htcp.html#a839688dcc8178d960f750d62ca375602", null ],
+    [ "m_alpha", "classns3_1_1_tcp_htcp.html#a5cc68a58825c8ed19b2666da91e7e4d0", null ],
+    [ "m_beta", "classns3_1_1_tcp_htcp.html#a76d41b0e13e42f6aa9b98a4a0cb06400", null ],
+    [ "m_dataSent", "classns3_1_1_tcp_htcp.html#a263e88a7986de6a76ff85ac7d6d25ab5", null ],
+    [ "m_defaultBackoff", "classns3_1_1_tcp_htcp.html#a1aa22561875c042fe0bd39ca66544587", null ],
+    [ "m_delta", "classns3_1_1_tcp_htcp.html#a4642b12b72c7388148dd364d9117a129", null ],
+    [ "m_deltaL", "classns3_1_1_tcp_htcp.html#a7e13ad28ae35566e894b5e7ae279dae5", null ],
+    [ "m_lastCon", "classns3_1_1_tcp_htcp.html#a108362f874fef6c8a2ecb3941c74e340", null ],
+    [ "m_lastThroughput", "classns3_1_1_tcp_htcp.html#a5961ae9da66b8f4b0af86a83ba7c0481", null ],
+    [ "m_maxRtt", "classns3_1_1_tcp_htcp.html#a91edf7c0c42f5996d3d066ce98551c31", null ],
+    [ "m_minRtt", "classns3_1_1_tcp_htcp.html#a0cfba062b9ea4dddf100bde861e2265b", null ],
+    [ "m_throughput", "classns3_1_1_tcp_htcp.html#aff553c6ce4a85bf1fcdc441dd5f7245d", null ],
+    [ "m_throughputRatio", "classns3_1_1_tcp_htcp.html#a3ff9db9a1e69710b1e14516d55dc0357", null ]
+];

@@ -1,0 +1,27 @@
+var spectrum_value_8cc =
+[
+    [ "Integral", "spectrum-value_8cc.html#a3dd3817567502f8bc77b04e47134c070", null ],
+    [ "Log", "spectrum-value_8cc.html#ad5fc1a2db3d2b2f9f8d158ce63cffbad", null ],
+    [ "Log10", "spectrum-value_8cc.html#a852286d6b0f3471ea9fed2ec66bd4536", null ],
+    [ "Log2", "spectrum-value_8cc.html#a7f903df44671c49879b8d6284024ffd3", null ],
+    [ "Norm", "spectrum-value_8cc.html#a929727240faf05726072f417f657f654", null ],
+    [ "operator*", "spectrum-value_8cc.html#ae4e5234424fd3286aeea507a6c9f3888", null ],
+    [ "operator*", "spectrum-value_8cc.html#a503c2c84f8cc79a6bd8b1bf1ddcc94bb", null ],
+    [ "operator*", "spectrum-value_8cc.html#a9e9215dd1bab11a9fbbbb0403bcdcbb5", null ],
+    [ "operator+", "spectrum-value_8cc.html#a05ef9bc111855912424c328b054191a5", null ],
+    [ "operator+", "spectrum-value_8cc.html#a23492c76e106f19c2fd3f576e5f3803d", null ],
+    [ "operator+", "spectrum-value_8cc.html#af6d7ad175d41bc045d01d7582eb63c85", null ],
+    [ "operator+", "spectrum-value_8cc.html#a2c84ebe8080547e6147d5d1d74fab7e5", null ],
+    [ "operator-", "spectrum-value_8cc.html#a50a5430fa6182dc6973ad107685fc889", null ],
+    [ "operator-", "spectrum-value_8cc.html#a7eac5c8933a2ccf4ca2351263ed3db2f", null ],
+    [ "operator-", "spectrum-value_8cc.html#a995c528405fae9fde684ec535ce01fbe", null ],
+    [ "operator-", "spectrum-value_8cc.html#ac0c2d1ada44d8dbfe98d719a3cfcf743", null ],
+    [ "operator/", "spectrum-value_8cc.html#aa53350ae818121bcf1cf6382848fb3cb", null ],
+    [ "operator/", "spectrum-value_8cc.html#ae170715cc432dd368014580fd3ff0d85", null ],
+    [ "operator/", "spectrum-value_8cc.html#acee144de5ffcfb1863d8cd21ba4be2f4", null ],
+    [ "operator<<", "spectrum-value_8cc.html#a1e898cfd2c2fed3fdbd465a5c1b9f69d", null ],
+    [ "Pow", "spectrum-value_8cc.html#a263efa70f571fbc6d8b13f838cb9f220", null ],
+    [ "Pow", "spectrum-value_8cc.html#a3133a629dbd335c8151508cc8b1046f5", null ],
+    [ "Prod", "spectrum-value_8cc.html#ada030e93e711d4b9ea379c57cf0c5e4b", null ],
+    [ "Sum", "spectrum-value_8cc.html#afad5475661952172fe6ef1260360dad8", null ]
+];

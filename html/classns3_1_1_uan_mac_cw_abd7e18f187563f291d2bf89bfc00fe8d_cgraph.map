@@ -1,0 +1,42 @@
+<map id="ns3::UanMacCw::AttachPhy" name="ns3::UanMacCw::AttachPhy">
+<area shape="rect" id="node1" title="Attach PHY layer to this MAC." alt="" coords="5,107,205,133"/>
+<area shape="rect" id="node2" href="$group__makecallbackmemptr.html#ga9376283685aa99d204048d6a4b7610a4" title=" " alt="" coords="307,48,451,75"/>
+<area shape="rect" id="node3" href="$classns3_1_1_uan_mac_cw.html#aaed7a66d2404f6bbe4ea5bef7a9f228a" title="Packet received at lower layer in error." alt="" coords="270,99,489,141"/>
+<area shape="rect" id="node4" href="$classns3_1_1_uan_mac_cw.html#ab64da4cbab0645939aa9d02091e10755" title="Receive packet from lower layer (passed to PHY as callback)." alt="" coords="253,165,505,192"/>
+<area shape="rect" id="node5" href="$classns3_1_1_mac8_address.html#a60c112506434f766f06b548c2b853d30" title="Convert a generic address to a Mac8Address." alt="" coords="555,5,787,32"/>
+<area shape="rect" id="node9" href="$classns3_1_1_uan_mac.html#ab39b04d612b5974e68ac1b5eec07933e" title="Get the MAC Address." alt="" coords="577,56,766,83"/>
+<area shape="rect" id="node10" href="$classns3_1_1_mac8_address.html#a28c0664a44c8ea191014bc428a704698" title="Get the broadcast address (255)." alt="" coords="553,107,789,133"/>
+<area shape="rect" id="node12" href="$classns3_1_1_uan_header_common.html#a92d546ec6eb93242c3c6578a8502013c" title="Get the destination address." alt="" coords="579,158,764,199"/>
+<area shape="rect" id="node13" href="$classns3_1_1_uan_header_common.html#adfae6303ccb528564a83a2352a7a7758" title="Get the packet type value." alt="" coords="579,223,764,265"/>
+<area shape="rect" id="node14" href="$classns3_1_1_uan_header_common.html#a752f6c20958be24f0d681a56273046d3" title="Get the source address." alt="" coords="579,289,764,330"/>
+<area shape="rect" id="node15" href="$classns3_1_1_packet.html#a0961eccf975d75f902d40956c93ba63e" title="Deserialize and remove the header from the internal buffer." alt="" coords="569,355,774,381"/>
+<area shape="rect" id="node6" href="$classns3_1_1_mac8_address.html#a6d6d87013c99c897b9c5f7eadd697eb2" title="Check that a generic Address is compatible with Mac8Address." alt="" coords="837,5,1087,32"/>
+<area shape="rect" id="node7" href="$classns3_1_1_mac8_address.html#a8f3e301d85f104d306af94d3e2b67158" title="Get the Mac8Address type." alt="" coords="1141,5,1342,32"/>
+<area shape="rect" id="node8" href="$classns3_1_1_address.html#a75d239c79bb3c39d64a8db4f2d3d9b20" title="Allocate a new type id for a new type of address." alt="" coords="1396,5,1563,32"/>
+<area shape="rect" id="node11" href="$classns3_1_1_mac8_address.html#afb55d36f0398e8ce0cd86f1fb73db76e" title="Constructor." alt="" coords="845,107,1079,133"/>
+<area shape="rect" id="node16" href="$classns3_1_1_byte_tag_list.html#a1fec06d7e6daaf8039cf2a148e4090f2" title="Adjust the offsets stored internally by the adjustment delta." alt="" coords="873,203,1051,229"/>
+<area shape="rect" id="node17" href="$classns3_1_1_buffer.html#acb977a0179de9abe4e295ce22023b4ca" title=" " alt="" coords="893,253,1031,280"/>
+<area shape="rect" id="node25" href="$classns3_1_1_header.html#a78be9400bb66b2a8543606f395ef5396" title=" " alt="" coords="871,355,1053,381"/>
+<area shape="rect" id="node26" href="$classns3_1_1_object_base.html#abe5b43a6f5b99a92a4c3122db31f06fb" title="Get the most derived TypeId for this Object." alt="" coords="1135,381,1348,422"/>
+<area shape="rect" id="node27" href="$classns3_1_1_type_id.html#abc4965475a579c2afdc668d7a7d58374" title="Get the name." alt="" coords="879,623,1045,649"/>
+<area shape="rect" id="node30" href="$classns3_1_1_buffer.html#adeecbb3e8f518aec6fee0437578ade4b" title=" " alt="" coords="862,304,1062,331"/>
+<area shape="rect" id="node34" href="$classns3_1_1_packet_metadata.html#afa8a589ec783d4998516d7f39f21242d" title="Remove an header." alt="" coords="883,457,1041,498"/>
+<area shape="rect" id="node18" href="$classns3_1_1_buffer.html#a200897ee202518b0d2bf91ead4e82be9" title="Checks the internal buffer structures consistency." alt="" coords="1146,246,1337,287"/>
+<area shape="rect" id="node19" href="$namespacens3.html#aaad5cc5702ff29a1fcc8cdffd10a12e9" title=" " alt="" coords="1448,241,1511,268"/>
+<area shape="rect" id="node20" href="$classns3_1_1_net_device_container.html#a7ca8bc1d7ec00fd4fcc63869987fbda5" title="Append the contents of another NetDeviceContainer to the end of this container." alt="" coords="1611,179,1828,205"/>
+<area shape="rect" id="node23" href="$classns3_1_1_node.html#a2ed8663077afcb8db519296b0ada6355" title=" " alt="" coords="1654,229,1785,256"/>
+<area shape="rect" id="node24" href="$global-router-interface_8cc.html#af2f17e24d29f39f6804d0d10d8cedc71" title=" " alt="" coords="1659,280,1780,307"/>
+<area shape="rect" id="node21" href="$classns3_1_1_net_device_container.html#a4ddc336af319061f5b61c515f0453242" title="Get an iterator which refers to the first NetDevice in the container." alt="" coords="1892,142,2076,183"/>
+<area shape="rect" id="node22" href="$classns3_1_1_net_device_container.html#a436d9df206570861f96c3f278eaccb92" title="Get an iterator which indicates past&#45;the&#45;last NetDevice in the container." alt="" coords="1876,208,2092,235"/>
+<area shape="rect" id="node28" href="$classns3_1_1_singleton.html#a80a2cd3c25a27ea72add7a9f7a141ffa" title="Get a pointer to the singleton instance." alt="" coords="1140,615,1343,657"/>
+<area shape="rect" id="node29" href="$classns3_1_1_iid_manager.html#a6658aaa8120efd885e98addb76a6f1d4" title="Get the name of a type id." alt="" coords="1143,681,1339,708"/>
+<area shape="rect" id="node31" href="$namespacevisualizer_1_1core.html#a2a35e5d8a34af358b508dac8635754e0" title=" " alt="" coords="1166,312,1317,339"/>
+<area shape="rect" id="node32" href="$namespacevisualizer_1_1base.html#ad171497a5ff1afe0a73bedaebf35448f" title=" " alt="" coords="1403,318,1555,359"/>
+<area shape="rect" id="node33" href="$namespacevisualizer_1_1base.html#a6b0ffcff1e17ec4027496f50177e5b9e" title=" " alt="" coords="1632,331,1807,373"/>
+<area shape="rect" id="node35" href="$classns3_1_1_type_id.html#a429535085325d6f926724771446d9047" title="Get the internal id of this TypeId." alt="" coords="1167,447,1315,473"/>
+<area shape="rect" id="node36" href="$classns3_1_1_packet_metadata.html#a547dc7d09f1b2d41a28445a91c2fcf37" title="Check if the metadata state is ok." alt="" coords="1162,498,1321,539"/>
+<area shape="rect" id="node39" href="$classns3_1_1_packet_metadata.html#a7fe144386274167b6aac05ac0a0cdf6f" title="Read items." alt="" coords="1400,561,1559,602"/>
+<area shape="rect" id="node37" href="$classns3_1_1_packet_metadata.html#ac6fcebd163b3655b041476c3277102c1" title="Check if the position is valid." alt="" coords="1400,430,1559,471"/>
+<area shape="rect" id="node38" href="$classns3_1_1_packet_metadata.html#ac9e6db729cae99e9755981de02f3ffa0" title="Check if the position is valid." alt="" coords="1400,495,1559,537"/>
+<area shape="rect" id="node40" href="$classns3_1_1_packet_metadata.html#a7378e5fe71fcefd939f19c1669e54c79" title="Read a ULEB128 (Unsigned Little Endian Base 128) coded number." alt="" coords="1640,561,1799,602"/>
+</map>

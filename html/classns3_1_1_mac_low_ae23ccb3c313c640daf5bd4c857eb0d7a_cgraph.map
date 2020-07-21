@@ -1,0 +1,52 @@
+<map id="ns3::MacLow::GetResponseDuration" name="ns3::MacLow::GetResponseDuration">
+<area shape="rect" id="node1" title="Return the time required to transmit the response frames (Ack or BAR+BA following the policy configur..." alt="" coords="5,612,205,653"/>
+<area shape="rect" id="node2" href="$classns3_1_1_mac_low.html#a66918702d4803f26e27bf173b4766d16" title="Return the time required to transmit the Ack (including preamble and FCS)." alt="" coords="253,513,471,539"/>
+<area shape="rect" id="node10" href="$classns3_1_1_wifi_tx_vector.html#aadd3ccf9d68dd8f06d4cfedc352498fb" title=" " alt="" coords="583,612,728,653"/>
+<area shape="rect" id="node14" href="$classns3_1_1_mac_low.html#a43f501698b2688e1803a648065d59018" title="Return the time required to transmit the BlockAck to the specified address given the TXVECTOR of the ..." alt="" coords="263,256,461,297"/>
+<area shape="rect" id="node18" href="$classns3_1_1_mac_low.html#af2b46b598171aa8e300f1265fdb8b1ca" title="Return the time required to transmit the BlockAckRequest to the specified address given the TXVECTOR ..." alt="" coords="263,372,461,413"/>
+<area shape="rect" id="node22" href="$classns3_1_1_mac_low.html#a227f7cf96af4e059f660cd6668869e69" title="Return a TXVECTOR for the BlockAck frame given the destination and the mode of the Data used by the s..." alt="" coords="263,1088,461,1129"/>
+<area shape="rect" id="node48" href="$classns3_1_1_mac_low.html#a142444428826e0a5f67265dfd7b0f4d2" title="Return Short Interframe Space (SIFS) of this MacLow." alt="" coords="281,1154,443,1181"/>
+<area shape="rect" id="node49" href="$group__timecivil.html#ga33c34b816f8ff6628e33d5c8e9713b9e" title=" " alt="" coords="309,1478,415,1505"/>
+<area shape="rect" id="node3" href="$classns3_1_1_wifi_phy.html#aee98c7241bb4f0bb8e6d90f5771dacc7" title=" " alt="" coords="562,397,749,439"/>
+<area shape="rect" id="node6" href="$namespacens3.html#a653be81d3cd5994b5f79044abaea458e" title="Return the total Ack size (including FCS trailer)." alt="" coords="592,289,719,315"/>
+<area shape="rect" id="node9" href="$classns3_1_1_wifi_phy.html#afca470e272ec5c3126da63c0a6102f4c" title=" " alt="" coords="555,238,755,265"/>
+<area shape="rect" id="node11" href="$classns3_1_1_wifi_mode.html#a67e1664cac501221b63a2be307184cc9" title=" " alt="" coords="852,1231,1071,1272"/>
+<area shape="rect" id="node4" href="$classns3_1_1_wifi_phy.html#a1793e6110ca3623131def396f487c11d" title=" " alt="" coords="855,463,1067,504"/>
+<area shape="rect" id="node5" href="$classns3_1_1_wifi_phy.html#aa7b7e725d0e30ccf348e4302629d68b8" title=" " alt="" coords="869,397,1054,439"/>
+<area shape="rect" id="node7" href="$classns3_1_1_wifi_mac_header.html#a5330ccda676bc7348bc633acc67df8fc" title="Return the size of the WifiMacHeader in octets." alt="" coords="885,201,1038,243"/>
+<area shape="rect" id="node8" href="$classns3_1_1_wifi_mac_header.html#a71172371f11f1cfcb3912bb03134c285" title="Set Type/Subtype values with the correct values depending on the given type." alt="" coords="885,136,1038,177"/>
+<area shape="rect" id="node12" href="$classns3_1_1_wifi_mode_factory.html#a3086868810ff4347e31c63027726f544" title="Return a WifiModeItem at the given UID index." alt="" coords="1341,1238,1535,1265"/>
+<area shape="rect" id="node13" href="$classns3_1_1_wifi_mode_factory.html#a9c6f695d733355dee8d74bd1709868fc" title="Return a WifiModeFactory." alt="" coords="1131,1260,1293,1301"/>
+<area shape="rect" id="node15" href="$namespacens3.html#a9c30b51d3ef2d1e671ae4c8d57d44321" title="Return the total BlockAck size (including FCS trailer)." alt="" coords="574,143,737,170"/>
+<area shape="rect" id="node16" href="$classns3_1_1_ctrl_b_ack_response_header.html#a00aa8dba4586e6ed26bf6a8c520cc3ff" title=" " alt="" coords="852,71,1071,112"/>
+<area shape="rect" id="node17" href="$classns3_1_1_ctrl_b_ack_response_header.html#aa726aabb711b481d35703f1bf5fe59d9" title="Set the block ack type." alt="" coords="852,5,1071,47"/>
+<area shape="rect" id="node19" href="$namespacens3.html#a91e39d8eb8e48719aee120727b1aef3c" title="Return the total BlockAckRequest size (including FCS trailer)." alt="" coords="547,339,763,366"/>
+<area shape="rect" id="node20" href="$classns3_1_1_ctrl_b_ack_request_header.html#a6ed78dd6f7cbe32811f36ff95195fcbb" title=" " alt="" coords="857,267,1066,308"/>
+<area shape="rect" id="node21" href="$classns3_1_1_ctrl_b_ack_request_header.html#a2de2783f9b09f03bbb16a0270ed8340f" title="Set the block ack type." alt="" coords="857,332,1066,373"/>
+<area shape="rect" id="node23" href="$namespacens3.html#a979caa1d7cbfc08ececb6fd3ad561e26" title="Convert the guard interval to nanoseconds based on the WifiMode." alt="" coords="559,495,752,536"/>
+<area shape="rect" id="node29" href="$classns3_1_1_wifi_phy.html#af55a96fc67e724abd99aeaeab826187f" title=" " alt="" coords="562,1405,749,1447"/>
+<area shape="rect" id="node30" href="$namespacens3.html#a3b6822ca0fc413acfcfa182b22f6fa86" title="Return the channel width that corresponds to the selected mode (instead of letting the PHY&#39;s default ..." alt="" coords="519,1303,792,1330"/>
+<area shape="rect" id="node31" href="$classns3_1_1_mac_low.html#aebd46ed9f77a2e2cc6a10d5832046f11" title="Get control answer mode function." alt="" coords="521,1354,789,1381"/>
+<area shape="rect" id="node35" href="$classns3_1_1_wifi_remote_station_manager.html#aa8712084939846a0c39de0d9c618a0ec" title=" " alt="" coords="539,1471,772,1512"/>
+<area shape="rect" id="node36" href="$classns3_1_1_wifi_phy.html#a6bc056d30b3942be3cb0459096385e56" title=" " alt="" coords="544,678,767,705"/>
+<area shape="rect" id="node37" href="$namespacens3.html#ae180410a6fd89fcc32fd0f720b1c0a40" title="Return the preamble to be used for the transmission." alt="" coords="533,1537,777,1563"/>
+<area shape="rect" id="node38" href="$classns3_1_1_wifi_phy.html#a8371199e86407919480c847d16462240" title="Return whether short guard interval is supported." alt="" coords="552,1121,759,1163"/>
+<area shape="rect" id="node39" href="$classns3_1_1_wifi_remote_station_manager.html#a9864b09190adb8e2b0c2d3658eacc6ce" title="Return whether the device uses short PHY preambles." alt="" coords="539,1588,772,1629"/>
+<area shape="rect" id="node40" href="$classns3_1_1_mac48_address.html#a56fbd59ebf507db02609a1e77c7c4656" title=" " alt="" coords="577,1653,733,1695"/>
+<area shape="rect" id="node41" href="$classns3_1_1_wifi_tx_vector.html#a2bd711576c12a747bc3a800ef4cc0a5b" title="Sets the selected channelWidth (in MHz)" alt="" coords="583,729,728,771"/>
+<area shape="rect" id="node42" href="$classns3_1_1_wifi_tx_vector.html#a40280b31baf8d7cef1a7234715969d06" title="Sets the guard interval duration (in nanoseconds)" alt="" coords="583,795,728,836"/>
+<area shape="rect" id="node43" href="$classns3_1_1_wifi_tx_vector.html#af39f17fec348c22f8c963bcb6bb5fc53" title="Sets the selected payload transmission mode." alt="" coords="583,860,728,901"/>
+<area shape="rect" id="node44" href="$classns3_1_1_wifi_tx_vector.html#af6b333491a8b20c064d8d1ad35381194" title="Sets the number of Nss refer to IEEE 802.11n Table 20&#45;28 for explanation and range." alt="" coords="583,925,728,967"/>
+<area shape="rect" id="node45" href="$classns3_1_1_wifi_tx_vector.html#afa5117513e1a7bfa717c3d7556192525" title="Sets the preamble type." alt="" coords="583,991,728,1032"/>
+<area shape="rect" id="node46" href="$classns3_1_1_wifi_tx_vector.html#a25743cd89a5cb95ec22a9e584fa044f3" title="Sets the selected transmission power level." alt="" coords="583,1056,728,1097"/>
+<area shape="rect" id="node47" href="$classns3_1_1_wifi_remote_station_manager.html#ad0838e2b79a382cf65f68b7cde8ec608" title=" " alt="" coords="539,1187,772,1228"/>
+<area shape="rect" id="node24" href="$classns3_1_1_he_configuration.html#a84ff8e1105cfb4f2874b47021e45edd0" title=" " alt="" coords="882,528,1041,569"/>
+<area shape="rect" id="node25" href="$classns3_1_1_wifi_net_device.html#af4a86ccc320631308e9f1023baecdd6b" title=" " alt="" coords="882,711,1041,752"/>
+<area shape="rect" id="node26" href="$classns3_1_1_wifi_net_device.html#a20c98121e79afae35d03d9f5a3fa4ce8" title=" " alt="" coords="883,949,1039,991"/>
+<area shape="rect" id="node27" href="$classns3_1_1_time.html#aff67d7a8139243a066d5292595caa966" title="Get an approximation of the time stored in this instance in the indicated unit." alt="" coords="859,594,1063,621"/>
+<area shape="rect" id="node28" href="$classns3_1_1_ht_configuration.html#ae4ebac23f5cbf42f1badfc9511a2117f" title=" " alt="" coords="840,645,1083,687"/>
+<area shape="rect" id="node32" href="$classns3_1_1_wifi_remote_station_manager.html#aa8cff366278b007565ad4a5547201162" title="Return the MCS at the given list index." alt="" coords="845,1296,1078,1337"/>
+<area shape="rect" id="node33" href="$classns3_1_1_wifi_remote_station_manager.html#ab239018079ee424c7dfe9a81b4abc3b0" title="Return a basic mode from the set of basic modes." alt="" coords="845,1361,1078,1403"/>
+<area shape="rect" id="node34" href="$classns3_1_1_wifi_remote_station_manager.html#a2422db307a1cd07b938ec2d4b8442668" title="Return the default Modulation and Coding Scheme (MCS) index." alt="" coords="845,1427,1078,1468"/>
+<area shape="rect" id="node50" href="$classns3_1_1_time.html#a60e845f4a74e62495b86356afe604cb4" title="Create a Time equal to value in unit unit." alt="" coords="569,1719,741,1746"/>
+</map>

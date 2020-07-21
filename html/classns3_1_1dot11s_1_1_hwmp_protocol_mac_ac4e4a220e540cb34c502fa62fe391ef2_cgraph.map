@@ -1,0 +1,52 @@
+<map id="ns3::dot11s::HwmpProtocolMac::UpdateOutcomingFrame" name="ns3::dot11s::HwmpProtocolMac::UpdateOutcomingFrame">
+<area shape="rect" id="node1" title="allow HwmpProtocol class friend access" alt="" coords="5,842,221,883"/>
+<area shape="rect" id="node2" href="$classns3_1_1_packet.html#a465108c595a0bc592095cbcab1832ed8" title="Add header to this packet." alt="" coords="293,404,469,431"/>
+<area shape="rect" id="node36" href="$classns3_1_1dot11s_1_1_hwmp_tag.html#a27bbcfb2e59ca91f1ef287306cb75ade" title="Get address from tag." alt="" coords="296,594,465,635"/>
+<area shape="rect" id="node37" href="$classns3_1_1dot11s_1_1_hwmp_tag.html#a0d7af89abc80841a95e46cb7c8e7c144" title="Get the sequence number." alt="" coords="296,659,465,701"/>
+<area shape="rect" id="node38" href="$classns3_1_1_packet.html#afff7cb1ff518ee6dc0d424e10a5ad6ec" title="Returns the the size in bytes of the packet (including the zero&#45;filled initial payload)." alt="" coords="303,725,458,752"/>
+<area shape="rect" id="node39" href="$classns3_1_1dot11s_1_1_hwmp_tag.html#a52db26903d54e1f7ae1044da436b8d09" title="Get the TTL value." alt="" coords="296,777,465,818"/>
+<area shape="rect" id="node40" href="$classns3_1_1_wifi_mac_header.html#ab7141548a921f63a084720b3b022de79" title="Return true if the Type is DATA." alt="" coords="304,842,457,883"/>
+<area shape="rect" id="node41" href="$classns3_1_1_packet.html#a078fe922d976a417ab25ba2f3c2fd667" title="Remove a packet tag." alt="" coords="269,908,492,935"/>
+<area shape="rect" id="node47" href="$classns3_1_1_wifi_mac_header.html#a6478a02b80d5c01657714c5c7a0ae1cb" title="Fill the Address 1 field with the given address." alt="" coords="304,959,457,1001"/>
+<area shape="rect" id="node48" href="$classns3_1_1dot11s_1_1_mesh_header.html#a120bb1f7c7e741bd518a8973b870685a" title="Set four&#45;byte mesh sequence number." alt="" coords="287,1025,474,1066"/>
+<area shape="rect" id="node49" href="$classns3_1_1dot11s_1_1_mesh_header.html#a415c88e6de2716bd6d10bbb848a80c90" title="Set mesh TTL subfield corresponding to the remaining number of hops the MSDU/MMPDU is forwarded." alt="" coords="287,1090,474,1131"/>
+<area shape="rect" id="node50" href="$classns3_1_1_wifi_mac_header.html#ad2eac5d6e09a5e09bf0350e35c614166" title="Set the Mesh Control Present flag for the QoS header." alt="" coords="277,1155,484,1197"/>
+<area shape="rect" id="node3" href="$classns3_1_1_byte_tag_list.html#acb4563fbe4299c55af41ba7a166b71d5" title="Make sure that all offsets are bigger than prependOffset which represents the location where new byte..." alt="" coords="548,235,755,261"/>
+<area shape="rect" id="node9" href="$classns3_1_1_buffer.html#a8abd8164c3671d3dadc98fc66fade7b1" title=" " alt="" coords="566,365,737,392"/>
+<area shape="rect" id="node19" href="$classns3_1_1_packet_metadata.html#abdce736c4c5f647242f0808c0d2f9249" title="Add an header." alt="" coords="572,573,731,614"/>
+<area shape="rect" id="node23" href="$classns3_1_1_object_base.html#abe5b43a6f5b99a92a4c3122db31f06fb" title="Get the most derived TypeId for this Object." alt="" coords="1061,837,1275,878"/>
+<area shape="rect" id="node29" href="$classns3_1_1_byte_tag_list.html#a1fec06d7e6daaf8039cf2a148e4090f2" title="Adjust the offsets stored internally by the adjustment delta." alt="" coords="563,83,740,109"/>
+<area shape="rect" id="node30" href="$classns3_1_1_buffer.html#acb977a0179de9abe4e295ce22023b4ca" title=" " alt="" coords="582,433,721,460"/>
+<area shape="rect" id="node31" href="$classns3_1_1_type_id.html#abc4965475a579c2afdc668d7a7d58374" title="Get the name." alt="" coords="569,820,734,847"/>
+<area shape="rect" id="node34" href="$classns3_1_1_header.html#a6ef0497eabc1b1fb0ad42738eb73f934" title=" " alt="" coords="540,133,763,160"/>
+<area shape="rect" id="node35" href="$classns3_1_1_header.html#afb61f1aac69ff8349a6bfe521fab5404" title=" " alt="" coords="569,184,733,211"/>
+<area shape="rect" id="node4" href="$classns3_1_1_byte_tag_list.html#ab1d2c5671ea01900fa9ef58e33d1e739" title="Returns an iterator pointing to the very first tag in this list." alt="" coords="817,5,1007,32"/>
+<area shape="rect" id="node6" href="$classns3_1_1_tag_buffer.html#afe07a9e117449ff5b5d5857291671349" title="Copy the nternal structure of another TagBuffer." alt="" coords="817,56,1007,83"/>
+<area shape="rect" id="node7" href="$classns3_1_1_byte_tag_list_1_1_iterator.html#a44e33e812e3eba4fdc168e36380853af" title="Used to determine if the iterator is at the end of the byteTagList." alt="" coords="820,107,1004,149"/>
+<area shape="rect" id="node8" href="$classns3_1_1_byte_tag_list_1_1_iterator.html#af521864d800baab1d9c5262f59ce4433" title="Returns the next Item from the ByteTagList." alt="" coords="820,173,1004,214"/>
+<area shape="rect" id="node5" href="$classns3_1_1_byte_tag_list.html#a22bb3fbf008c3bd4821429521a35c82d" title=" " alt="" coords="1081,5,1255,32"/>
+<area shape="rect" id="node10" href="$classns3_1_1_buffer.html#a200897ee202518b0d2bf91ead4e82be9" title="Checks the internal buffer structures consistency." alt="" coords="817,442,1007,483"/>
+<area shape="rect" id="node12" href="$classns3_1_1_buffer.html#a340c9888e35cf55d024808adfbd75913" title="Create a buffer data storage." alt="" coords="840,391,984,417"/>
+<area shape="rect" id="node15" href="$classns3_1_1_buffer.html#a1042168f1f6f3b24ad08a668662ab373" title="Get the buffer real size." alt="" coords="811,340,1013,367"/>
+<area shape="rect" id="node16" href="$classns3_1_1_buffer.html#aa14d4354b6de0c9d6044805f6503ecd2" title="Recycle the buffer memory." alt="" coords="836,289,988,316"/>
+<area shape="rect" id="node17" href="$namespacevisualizer_1_1core.html#a2a35e5d8a34af358b508dac8635754e0" title=" " alt="" coords="837,239,987,265"/>
+<area shape="rect" id="node11" href="$namespacens3.html#aaad5cc5702ff29a1fcc8cdffd10a12e9" title=" " alt="" coords="1137,395,1199,421"/>
+<area shape="rect" id="node13" href="$classns3_1_1_buffer.html#a7bbfa888d618a79ee413fe01a7b4ff68" title="Allocate a buffer data storage." alt="" coords="1091,344,1245,371"/>
+<area shape="rect" id="node14" href="$classns3_1_1_buffer.html#a5cf2847bcc22da58cfa7e3a6b0279a01" title="Deallocate the buffer memory." alt="" coords="1083,293,1253,320"/>
+<area shape="rect" id="node18" href="$namespacevisualizer_1_1base.html#ad171497a5ff1afe0a73bedaebf35448f" title=" " alt="" coords="1092,227,1244,269"/>
+<area shape="rect" id="node20" href="$classns3_1_1_packet_metadata.html#ae5ad09674e28733405c49b2655c51a5a" title="Add an header." alt="" coords="833,573,991,614"/>
+<area shape="rect" id="node24" href="$classns3_1_1_type_id.html#a429535085325d6f926724771446d9047" title="Get the internal id of this TypeId." alt="" coords="838,639,986,665"/>
+<area shape="rect" id="node25" href="$classns3_1_1_packet_metadata.html#a547dc7d09f1b2d41a28445a91c2fcf37" title="Check if the metadata state is ok." alt="" coords="833,507,991,549"/>
+<area shape="rect" id="node21" href="$classns3_1_1_packet_metadata.html#a9d74d684e6a7448a6790220c6c8e99f2" title="Add a SmallItem." alt="" coords="1089,707,1247,749"/>
+<area shape="rect" id="node22" href="$classns3_1_1_packet_metadata.html#a3baa0c324423e6fd600b31858aa4ade9" title="Update the head." alt="" coords="1089,642,1247,683"/>
+<area shape="rect" id="node26" href="$classns3_1_1_packet_metadata.html#ac6fcebd163b3655b041476c3277102c1" title="Check if the position is valid." alt="" coords="1089,511,1247,553"/>
+<area shape="rect" id="node27" href="$classns3_1_1_packet_metadata.html#ac9e6db729cae99e9755981de02f3ffa0" title="Check if the position is valid." alt="" coords="1089,577,1247,618"/>
+<area shape="rect" id="node28" href="$classns3_1_1_packet_metadata.html#a7fe144386274167b6aac05ac0a0cdf6f" title="Read items." alt="" coords="1089,446,1247,487"/>
+<area shape="rect" id="node32" href="$classns3_1_1_singleton.html#a80a2cd3c25a27ea72add7a9f7a141ffa" title="Get a pointer to the singleton instance." alt="" coords="811,842,1013,883"/>
+<area shape="rect" id="node33" href="$classns3_1_1_iid_manager.html#a6658aaa8120efd885e98addb76a6f1d4" title="Get the name of a type id." alt="" coords="814,791,1010,817"/>
+<area shape="rect" id="node42" href="$classns3_1_1_tag.html#a01c8efdea943fd8cce2ef5d4d67eefa6" title=" " alt="" coords="553,959,750,985"/>
+<area shape="rect" id="node43" href="$classns3_1_1_packet_tag_list.html#a043d984c546f67adc273448747784ee3" title="Remove (the first instance of) tag from the list." alt="" coords="581,1010,722,1051"/>
+<area shape="rect" id="node44" href="$classns3_1_1_packet_tag_list.html#a7d98f0fe590d22f8224d718af0ac9713" title="Traverse the list implementing copy&#45;on&#45;write, using Writer." alt="" coords="841,1025,983,1066"/>
+<area shape="rect" id="node46" href="$classns3_1_1_packet_tag_list.html#aceea9c63e697635ba35564610a7150cc" title="Copy&#45;on&#45;write implementing Remove." alt="" coords="841,959,983,1001"/>
+<area shape="rect" id="node45" href="$classns3_1_1_packet_tag_list.html#abfab9cfb3a21336e2f7962cc51fcff94" title="Allocate and construct a TagData struct, sizing the data area large enough to serialize dataSize byte..." alt="" coords="1097,1025,1239,1066"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="ns3::MacRxMiddle::IsDuplicate" name="ns3::MacRxMiddle::IsDuplicate">
+<area shape="rect" id="node1" title="Check if we have already received the packet from the sender before (by looking at the sequence contr..." alt="" coords="5,78,228,105"/>
+<area shape="rect" id="node2" href="$classns3_1_1_originator_rx_status.html#a5a0b78a7859549881d79d729ef66fb71" title="Return the last sequence control we received." alt="" coords="276,5,467,47"/>
+<area shape="rect" id="node3" href="$classns3_1_1_wifi_mac_header.html#ad4af293cb29d73a7661a93099e363b56" title="Return the raw Sequence Control field." alt="" coords="290,71,453,112"/>
+<area shape="rect" id="node4" href="$classns3_1_1_wifi_mac_header.html#a749bc7828d30ab647a23d2cdead853b3" title="Return if the Retry bit is set." alt="" coords="295,136,448,177"/>
+</map>

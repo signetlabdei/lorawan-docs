@@ -1,0 +1,4 @@
+var classanonymous__namespace_02traced_callback_typedef_test_suite_8cc_03_1_1_traced_cb_sink_3_01_t11f68121c26e329b2cd97127d701e0d6a =
+[
+    [ "Sink", "classanonymous__namespace_02traced-callback-typedef-test-suite_8cc_03_1_1_traced_cb_sink_3_01_t11f68121c26e329b2cd97127d701e0d6a.html#a6ec741e02a98ce53d9d5ea9d96c0e797", null ]
+];

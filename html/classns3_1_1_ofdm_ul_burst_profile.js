@@ -1,0 +1,36 @@
+var classns3_1_1_ofdm_ul_burst_profile =
+[
+    [ "Uiuc", "classns3_1_1_ofdm_ul_burst_profile.html#ae528783c4b3c6700ff49dfd7a555cb3d", [
+      [ "UIUC_INITIAL_RANGING", "classns3_1_1_ofdm_ul_burst_profile.html#ae528783c4b3c6700ff49dfd7a555cb3daaea7b6256d4bcd0125f0248c0560c94e", null ],
+      [ "UIUC_REQ_REGION_FULL", "classns3_1_1_ofdm_ul_burst_profile.html#ae528783c4b3c6700ff49dfd7a555cb3daae074d10caa7fe18da973227c7f9942f", null ],
+      [ "UIUC_REQ_REGION_FOCUSED", "classns3_1_1_ofdm_ul_burst_profile.html#ae528783c4b3c6700ff49dfd7a555cb3da3d02d63517ee75fb1740c4bd13c5bcb7", null ],
+      [ "UIUC_FOCUSED_CONTENTION_IE", "classns3_1_1_ofdm_ul_burst_profile.html#ae528783c4b3c6700ff49dfd7a555cb3da98297c6c3c66bd115e1b1912200b4a08", null ],
+      [ "UIUC_BURST_PROFILE_5", "classns3_1_1_ofdm_ul_burst_profile.html#ae528783c4b3c6700ff49dfd7a555cb3da079b5408a66358de8b0d4afdc880d22a", null ],
+      [ "UIUC_BURST_PROFILE_6", "classns3_1_1_ofdm_ul_burst_profile.html#ae528783c4b3c6700ff49dfd7a555cb3dad83dc59c38492f96faaf788f981e8d66", null ],
+      [ "UIUC_BURST_PROFILE_7", "classns3_1_1_ofdm_ul_burst_profile.html#ae528783c4b3c6700ff49dfd7a555cb3da876466c4ff2656b75374a2f3f245ac94", null ],
+      [ "UIUC_BURST_PROFILE_8", "classns3_1_1_ofdm_ul_burst_profile.html#ae528783c4b3c6700ff49dfd7a555cb3da3c686ed9ad556420c8438af9bc26e13e", null ],
+      [ "UIUC_BURST_PROFILE_9", "classns3_1_1_ofdm_ul_burst_profile.html#ae528783c4b3c6700ff49dfd7a555cb3dafdfb50db8822a33e296905e7588639ea", null ],
+      [ "UIUC_BURST_PROFILE_10", "classns3_1_1_ofdm_ul_burst_profile.html#ae528783c4b3c6700ff49dfd7a555cb3daceb82fa6eca795e19e5e9d3039523711", null ],
+      [ "UIUC_BURST_PROFILE_11", "classns3_1_1_ofdm_ul_burst_profile.html#ae528783c4b3c6700ff49dfd7a555cb3da6a09e9eb0f865f539dc8c2e77576edb9", null ],
+      [ "UIUC_BURST_PROFILE_12", "classns3_1_1_ofdm_ul_burst_profile.html#ae528783c4b3c6700ff49dfd7a555cb3dafdb5af5e91f01aba953de4e7856a164b", null ],
+      [ "UIUC_SUBCH_NETWORK_ENTRY", "classns3_1_1_ofdm_ul_burst_profile.html#ae528783c4b3c6700ff49dfd7a555cb3daf0c50c447926212bea22d1f4b951027f", null ],
+      [ "UIUC_END_OF_MAP", "classns3_1_1_ofdm_ul_burst_profile.html#ae528783c4b3c6700ff49dfd7a555cb3dabef491e8d426af16beba1541b947b7e9", null ]
+    ] ],
+    [ "OfdmUlBurstProfile", "classns3_1_1_ofdm_ul_burst_profile.html#a7456933f4cea3828b048e8535927c9c9", null ],
+    [ "~OfdmUlBurstProfile", "classns3_1_1_ofdm_ul_burst_profile.html#a5cee58a5d330667b5d0d1512bab43636", null ],
+    [ "GetFecCodeType", "classns3_1_1_ofdm_ul_burst_profile.html#a3fe3a9ac85f310216a83562d42815347", null ],
+    [ "GetLength", "classns3_1_1_ofdm_ul_burst_profile.html#acd2baa795a38bf8091132410c9903040", null ],
+    [ "GetSize", "classns3_1_1_ofdm_ul_burst_profile.html#aa3885924c71b924935a6e0b5c3bd7ee3", null ],
+    [ "GetType", "classns3_1_1_ofdm_ul_burst_profile.html#a32019ca3bcdfd0aecad85c8df4d63fea", null ],
+    [ "GetUiuc", "classns3_1_1_ofdm_ul_burst_profile.html#ac0fc764f8c84aa04a9f6ed45a0d918b4", null ],
+    [ "Read", "classns3_1_1_ofdm_ul_burst_profile.html#afc1f7cb1bc77bf18d412e5e1421c6327", null ],
+    [ "SetFecCodeType", "classns3_1_1_ofdm_ul_burst_profile.html#a4ea1fa42525c8f13f749fcefbe90ac8f", null ],
+    [ "SetLength", "classns3_1_1_ofdm_ul_burst_profile.html#a26e9453e7d7a428b8a79342ed6a462fe", null ],
+    [ "SetType", "classns3_1_1_ofdm_ul_burst_profile.html#a60ea600da037b76adbefcbb967c30570", null ],
+    [ "SetUiuc", "classns3_1_1_ofdm_ul_burst_profile.html#a2b078a5c2aaef2d8fc62be58ca2bd097", null ],
+    [ "Write", "classns3_1_1_ofdm_ul_burst_profile.html#ad245da2a845200b923c1e4a5f966b0e2", null ],
+    [ "m_fecCodeType", "classns3_1_1_ofdm_ul_burst_profile.html#ae500c755ce6140558cefb540e6107bfa", null ],
+    [ "m_length", "classns3_1_1_ofdm_ul_burst_profile.html#a08cc4689ce7ac290c9c5b7ccf3814031", null ],
+    [ "m_type", "classns3_1_1_ofdm_ul_burst_profile.html#a3310244574658f1dc41aba964c5d1c31", null ],
+    [ "m_uiuc", "classns3_1_1_ofdm_ul_burst_profile.html#a30a8c14666e0bc78126bcb6a57acd102", null ]
+];

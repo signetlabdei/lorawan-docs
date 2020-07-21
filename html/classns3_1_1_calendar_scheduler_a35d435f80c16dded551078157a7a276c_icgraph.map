@@ -1,0 +1,12 @@
+<map id="ns3::CalendarScheduler::IsEmpty" name="ns3::CalendarScheduler::IsEmpty">
+<area shape="rect" id="node1" title="Test if the schedule is empty." alt="" coords="1119,201,1293,243"/>
+<area shape="rect" id="node2" href="$classns3_1_1_calendar_scheduler.html#a42c114e7a4bb68943b63fa9dfc841610" title="Remove the earliest event." alt="" coords="896,172,1071,213"/>
+<area shape="rect" id="node6" href="$classns3_1_1_calendar_scheduler.html#aee9db8a165f257bc94b51ffedc9b98d8" title="Remove a specific event from the event list." alt="" coords="5,119,180,160"/>
+<area shape="rect" id="node7" href="$classns3_1_1_calendar_scheduler.html#ad86df04ee956851c73dfcc38d0fb3ac6" title="Remove the earliest event from the event list." alt="" coords="5,184,180,225"/>
+<area shape="rect" id="node10" href="$classns3_1_1_calendar_scheduler.html#a715c6c2ca35e0c7df8ed9335c837e32a" title="Get a pointer to the next event." alt="" coords="896,289,1071,331"/>
+<area shape="rect" id="node3" href="$classns3_1_1_calendar_scheduler.html#a259100bf1a7128f6bfd27edfc2acd089" title="Compute the new bucket size, based on up to the first 25 entries." alt="" coords="673,121,848,163"/>
+<area shape="rect" id="node4" href="$classns3_1_1_calendar_scheduler.html#ab626f95ab5482e5e6e2a9d5f74363d6c" title="Resize to a new number of buckets, with automatically computed width." alt="" coords="451,121,625,163"/>
+<area shape="rect" id="node5" href="$classns3_1_1_calendar_scheduler.html#ad177bb1ae48629ed93d2ffc55aa52312" title="Halve the number of buckets if necessary." alt="" coords="228,121,403,163"/>
+<area shape="rect" id="node8" href="$classns3_1_1_calendar_scheduler.html#a6ad5ca9624349ac1a4a3ce565333385f" title="Double the number of buckets if necessary." alt="" coords="228,56,403,97"/>
+<area shape="rect" id="node9" href="$classns3_1_1_calendar_scheduler.html#aaf70c05e7468c8c232d4a309ce7c52c3" title="Insert a new Event in the schedule." alt="" coords="5,53,180,95"/>
+</map>

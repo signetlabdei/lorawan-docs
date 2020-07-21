@@ -1,0 +1,52 @@
+<map id="VanetRoutingExperiment::ConfigureMobility" name="VanetRoutingExperiment::ConfigureMobility">
+<area shape="rect" id="node1" title="Configure mobility." alt="" coords="5,887,191,928"/>
+<area shape="rect" id="node2" href="$class_vanet_routing_experiment.html#acf2df13ed0e08bde0c167bf12cd63bd9" title="Set up the adhoc mobility nodes." alt="" coords="239,887,440,928"/>
+<area shape="rect" id="node3" href="$classns3_1_1_position_allocator.html#a654c787e42def6e4463731d50b337057" title="Assign a fixed random variable stream number to the random variables used by this model." alt="" coords="499,239,662,280"/>
+<area shape="rect" id="node4" href="$classns3_1_1_mobility_helper.html#a13e35a27577e5927574af6cfdec4c605" title="Assign a fixed random variable stream number to the random variables used by the mobility models (inc..." alt="" coords="506,304,655,345"/>
+<area shape="rect" id="node7" href="$classns3_1_1_object.html#a817117ab236e4ff7f80f0239d4e28731" title="Get a pointer to the requested aggregated Object." alt="" coords="729,311,897,338"/>
+<area shape="rect" id="node16" href="$group__config.html#ga4014f151241cd0939b6cb64409605736" title=" " alt="" coords="503,767,659,794"/>
+<area shape="rect" id="node22" href="$class_vanet_routing_experiment.html#a8ada2acdbc365c03785b1db5c93153db" title="Course change function." alt="" coords="488,1063,673,1104"/>
+<area shape="rect" id="node25" href="$classns3_1_1_object_factory.html#a52eda277f4aaab54266134ba48102ad7" title="Create an Object instance of the configured TypeId." alt="" coords="741,363,884,404"/>
+<area shape="rect" id="node34" href="$classns3_1_1_mobility_helper.html#a4da4b0cc1211f4c9288b978ed7d3f85a" title="&quot;Layout&quot; a single node according to the current position allocator type." alt="" coords="506,491,655,532"/>
+<area shape="rect" id="node38" href="$classns3_1_1_ns2_mobility_helper.html#abc85feeb736f55564fa629fee1e873e5" title="Read the ns2 trace file and configure the movement patterns of all nodes contained in the global ns3:..." alt="" coords="493,1128,668,1169"/>
+<area shape="rect" id="node42" href="$group__makeboundcallback.html#ga1725d6362e6065faa0709f7c93f8d770" title=" " alt="" coords="488,1194,673,1221"/>
+<area shape="rect" id="node44" href="$classns3_1_1_object_factory.html#aef5c0d5019c96bdf01cefd1ff83f4a68" title="Set an attribute to be set during construction." alt="" coords="727,953,898,979"/>
+<area shape="rect" id="node48" href="$classns3_1_1_mobility_helper.html#a030275011b6f40682e70534d30280aba" title=" " alt="" coords="506,945,655,987"/>
+<area shape="rect" id="node49" href="$classns3_1_1_object_factory.html#a77dcd099064038a1eb7a6b8251229ec3" title="Set the TypeId of the Objects to be created by this factory." alt="" coords="741,1004,884,1045"/>
+<area shape="rect" id="node50" href="$classns3_1_1_mobility_helper.html#ac59d5295076be3cc11021566713a28c5" title="Set the position allocator which will be used to allocate the initial position of every node initiali..." alt="" coords="500,1245,661,1287"/>
+<area shape="rect" id="node5" href="$classns3_1_1_node_container.html#a2bfe1f50688c96e0888b1907e1e2f324" title="Get an iterator which refers to the first Node in the container." alt="" coords="737,245,888,287"/>
+<area shape="rect" id="node6" href="$classns3_1_1_node_container.html#a4904853b5d3e86f622a2ef8b4e959e08" title="Get an iterator which indicates past&#45;the&#45;last Node in the container." alt="" coords="721,194,904,221"/>
+<area shape="rect" id="node8" href="$classns3_1_1_object.html#a34f8410d0f3aae5612b56eb65d044857" title="Find an Object of TypeId tid in the aggregates of this Object." alt="" coords="962,189,1149,215"/>
+<area shape="rect" id="node15" href="$namespacens3.html#af2a7557fe9afdd98d8f6f8f6e412cf5a" title=" " alt="" coords="990,138,1121,165"/>
+<area shape="rect" id="node9" href="$classns3_1_1_object.html#a4000e647d44103477c0c31825fc288b6" title="Check if any aggregated Objects have non&#45;zero reference counts." alt="" coords="1232,189,1413,215"/>
+<area shape="rect" id="node10" href="$classns3_1_1_object.html#a12101af51922401affe289e1081c43c5" title="Get the most derived TypeId for this Object." alt="" coords="1232,5,1413,47"/>
+<area shape="rect" id="node11" href="$classns3_1_1_type_id.html#ab84f81aee52154af39a8668b59c89d63" title="Get the parent of this TypeId." alt="" coords="1487,479,1655,506"/>
+<area shape="rect" id="node13" href="$classns3_1_1_object.html#a4615cee24c40b0377501f44ef85f9e53" title="Register this type." alt="" coords="1239,71,1407,98"/>
+<area shape="rect" id="node14" href="$classns3_1_1_object.html#a502c04993a228307d9eded5ba028af7c" title="Keep the list of aggregates in most&#45;recently&#45;used order." alt="" coords="1227,123,1419,164"/>
+<area shape="rect" id="node12" href="$classns3_1_1_singleton.html#a80a2cd3c25a27ea72add7a9f7a141ffa" title="Get a pointer to the singleton instance." alt="" coords="1703,519,1905,560"/>
+<area shape="rect" id="node17" href="$classns3_1_1_config_1_1_config_impl.html#a5db61ce4675ab9e3548b6da5703848fe" title=" " alt="" coords="725,760,900,801"/>
+<area shape="rect" id="node18" href="$classns3_1_1_config_1_1_match_container.html#a3faec88bf2938163282336eef46e21ee" title=" " alt="" coords="952,792,1159,833"/>
+<area shape="rect" id="node19" href="$classns3_1_1_config_1_1_match_container.html#a9e7455e824d416a6658b429165481d5f" title=" " alt="" coords="952,857,1159,899"/>
+<area shape="rect" id="node20" href="$classns3_1_1_config_1_1_config_impl.html#aef8d461e235704cdeb8a85581ba249fb" title=" " alt="" coords="968,661,1143,703"/>
+<area shape="rect" id="node21" href="$classns3_1_1_config_1_1_config_impl.html#ab482a563857309e0e70beba3af32be71" title="Break a Config path into the leading path and the last leaf token." alt="" coords="968,727,1143,768"/>
+<area shape="rect" id="node23" href="$group__simulator.html#gac3635e2e87f7ce316c89290ee1b01d0d" title="create an ns3::Time instance which contains the current simulation time." alt="" coords="771,1077,854,1103"/>
+<area shape="rect" id="node24" href="$classns3_1_1_simulator.html#ac3178fa975b419f7875e7105be122800" title="Return the current simulation virtual time." alt="" coords="979,1207,1132,1234"/>
+<area shape="rect" id="node26" href="$classns3_1_1_object.html#a3183f228d0d4cd56f1b17cff0b841d83" title="Initialize all member variables registered as Attributes of this TypeId." alt="" coords="973,431,1138,458"/>
+<area shape="rect" id="node30" href="$classns3_1_1_type_id.html#a66b2628edf921fc88945ec8a8f3a1683" title="Get the constructor callback." alt="" coords="955,370,1156,397"/>
+<area shape="rect" id="node32" href="$classns3_1_1_object.html#aa6ed5d48f17e3d0fd28714777239e6c4" title="Set the TypeId of this Object." alt="" coords="972,305,1139,331"/>
+<area shape="rect" id="node27" href="$classns3_1_1_object_base.html#a5cda18dec6d0744cb652a3ed60056958" title="Complete construction of ObjectBase; invoked by derived classes." alt="" coords="1211,509,1434,535"/>
+<area shape="rect" id="node28" href="$classns3_1_1_type_id.html#abc4965475a579c2afdc668d7a7d58374" title="Get the name." alt="" coords="1488,661,1653,687"/>
+<area shape="rect" id="node29" href="$classns3_1_1_iid_manager.html#a6658aaa8120efd885e98addb76a6f1d4" title="Get the name of a type id." alt="" coords="1706,661,1902,687"/>
+<area shape="rect" id="node31" href="$classns3_1_1_iid_manager.html#a5222ca2d43248c46812b39b993eb2e08" title="Get the constructor Callback of a type id." alt="" coords="1207,341,1439,367"/>
+<area shape="rect" id="node33" href="$classns3_1_1_object.html#a7dc4a16a2f85427034a0102c0f6adaf9" title="Verify that this Object is still live, by checking it&#39;s reference count." alt="" coords="1251,290,1394,317"/>
+<area shape="rect" id="node35" href="$classns3_1_1_object_factory.html#a407b4dcbcd856749f6096ce72d88d8f7" title="Get the TypeId which will be created by this ObjectFactory." alt="" coords="741,428,884,469"/>
+<area shape="rect" id="node36" href="$classns3_1_1_mobility_model.html#ac584b3d5a309709d2f13ed6ada1e7640" title=" " alt="" coords="739,493,886,535"/>
+<area shape="rect" id="node37" href="$classns3_1_1_mobility_model.html#aa2f52cd86754da71ac649413c049785e" title=" " alt="" coords="982,493,1129,535"/>
+<area shape="rect" id="node39" href="$classns3_1_1_node_list.html#a93d2211831f5cb71d1dbb721e2721d7f" title=" " alt="" coords="735,1135,890,1162"/>
+<area shape="rect" id="node41" href="$classns3_1_1_node_list.html#a027a558c16e6078e25c7ffc67becb559" title=" " alt="" coords="741,1186,884,1213"/>
+<area shape="rect" id="node40" href="$classns3_1_1_node_list_priv.html#a746ce1482b3c1cf31d5a50cd55cffa92" title="Get the node list object." alt="" coords="972,1258,1139,1285"/>
+<area shape="rect" id="node43" href="$group__ptr.html#ga0406dd2d929ceac05ce39d4579fa3e4b" title=" " alt="" coords="765,1237,861,1263"/>
+<area shape="rect" id="node45" href="$classns3_1_1_attribute_construction_list.html#a6f418bf1a2de8828ae99278c9d3facdd" title="Add an Attribute to the list." alt="" coords="959,1040,1151,1081"/>
+<area shape="rect" id="node46" href="$classns3_1_1_attribute_value.html#ab316311212c334f6061c0fc8b5fb2625" title=" " alt="" coords="982,975,1129,1016"/>
+<area shape="rect" id="node47" href="$classns3_1_1_type_id.html#ac93d12d22acdb179d34039511d6680e7" title="Find an Attribute by name, retrieving the associated AttributeInformation." alt="" coords="1219,443,1426,484"/>
+</map>

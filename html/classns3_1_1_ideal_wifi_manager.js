@@ -1,0 +1,28 @@
+var classns3_1_1_ideal_wifi_manager =
+[
+    [ "Thresholds", "classns3_1_1_ideal_wifi_manager.html#ae4c6d6e6edd816faeb30a2f010eec7d7", null ],
+    [ "IdealWifiManager", "classns3_1_1_ideal_wifi_manager.html#a4d5bed0e67bbea6721accc7084e526c4", null ],
+    [ "~IdealWifiManager", "classns3_1_1_ideal_wifi_manager.html#ae83d746cc97747ef93c14b13b0b580e3", null ],
+    [ "AddSnrThreshold", "classns3_1_1_ideal_wifi_manager.html#a07b8198f3c1f258c46af76a3ffe746a7", null ],
+    [ "DoCreateStation", "classns3_1_1_ideal_wifi_manager.html#a8ddf0080f72afc507fbe7ffdb382116d", null ],
+    [ "DoGetDataTxVector", "classns3_1_1_ideal_wifi_manager.html#a2e7570eb1f5cbef1067cfb714e94218e", null ],
+    [ "DoGetRtsTxVector", "classns3_1_1_ideal_wifi_manager.html#ab263f9a1c04747b2c2b55774bf97854a", null ],
+    [ "DoInitialize", "classns3_1_1_ideal_wifi_manager.html#a678947f49366ca1734b6299b667845da", null ],
+    [ "DoReportAmpduTxStatus", "classns3_1_1_ideal_wifi_manager.html#aa3784a2bcc47408f2471aa629db566ff", null ],
+    [ "DoReportDataFailed", "classns3_1_1_ideal_wifi_manager.html#aa9f4a7d3ed8e58cb7a5d0c1d312c0ce9", null ],
+    [ "DoReportDataOk", "classns3_1_1_ideal_wifi_manager.html#a80a9c2d8cda6728bc2ae4a12096a33c1", null ],
+    [ "DoReportFinalDataFailed", "classns3_1_1_ideal_wifi_manager.html#a6192666e6f32a33d59d832f6af4ca00b", null ],
+    [ "DoReportFinalRtsFailed", "classns3_1_1_ideal_wifi_manager.html#a982b93142de6352a7d1dfbe524720f4a", null ],
+    [ "DoReportRtsFailed", "classns3_1_1_ideal_wifi_manager.html#a517e8e8d340df21fde394236daae107e", null ],
+    [ "DoReportRtsOk", "classns3_1_1_ideal_wifi_manager.html#a3baa107493052456308092dd737f94a0", null ],
+    [ "DoReportRxOk", "classns3_1_1_ideal_wifi_manager.html#ab970bb587d9ff4913983e9120600b5d9", null ],
+    [ "GetChannelWidthForNonHtMode", "classns3_1_1_ideal_wifi_manager.html#a46c4b1202ba2df4fe9f54d82fd26d091", null ],
+    [ "GetSnrThreshold", "classns3_1_1_ideal_wifi_manager.html#a54dbe87febb24476928b3ad7806bb00b", null ],
+    [ "GetTypeId", "classns3_1_1_ideal_wifi_manager.html#a98bda34492dd38b9dddeee56113a068d", null ],
+    [ "IsLowLatency", "classns3_1_1_ideal_wifi_manager.html#a34e6d6e51740309e22ac28f1a69655e8", null ],
+    [ "Reset", "classns3_1_1_ideal_wifi_manager.html#a052a3d3e3ea99b1068de57124a17b50e", null ],
+    [ "SetupPhy", "classns3_1_1_ideal_wifi_manager.html#ae05781ebf4eaf1d86f4c85d63d4dc894", null ],
+    [ "m_ber", "classns3_1_1_ideal_wifi_manager.html#a470ced4d78876560eaffb1d96cb2a1d9", null ],
+    [ "m_currentRate", "classns3_1_1_ideal_wifi_manager.html#ace233bd5a507e354ee1eac6c77b3944b", null ],
+    [ "m_thresholds", "classns3_1_1_ideal_wifi_manager.html#add5cf767e7cc6a6d86da48d7be2ed2c9", null ]
+];

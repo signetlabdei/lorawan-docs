@@ -1,0 +1,52 @@
+<map id="ns3::PacketMetadata::IsSharedPointerOk" name="ns3::PacketMetadata::IsSharedPointerOk">
+<area shape="rect" id="node1" title="Check if the position is valid." alt="" coords="971,1773,1129,1815"/>
+<area shape="rect" id="node2" href="$classns3_1_1_packet_metadata.html#a547dc7d09f1b2d41a28445a91c2fcf37" title="Check if the metadata state is ok." alt="" coords="764,1773,923,1815"/>
+<area shape="rect" id="node3" href="$classns3_1_1_packet_metadata.html#af7ceb1a4a7ded625c85dbd477b5fc8b6" title="Add a metadata at the metadata start." alt="" coords="557,1143,716,1184"/>
+<area shape="rect" id="node33" href="$classns3_1_1_packet_metadata.html#abdce736c4c5f647242f0808c0d2f9249" title="Add an header." alt="" coords="557,1453,716,1495"/>
+<area shape="rect" id="node40" href="$classns3_1_1_packet_metadata.html#afd698b5f0ce0e9f498fff8a6915837c5" title="Add a trailer." alt="" coords="557,1773,716,1815"/>
+<area shape="rect" id="node42" href="$classns3_1_1_packet_metadata.html#a7c76154f5302bd55a68406f0103d50c6" title="Remove a chunk of metadata at the metadata end." alt="" coords="557,1839,716,1880"/>
+<area shape="rect" id="node45" href="$classns3_1_1_packet_metadata.html#a9a0300e7ae709f269d59b6733e590d56" title="Remove a chunk of metadata at the metadata start." alt="" coords="557,1708,716,1749"/>
+<area shape="rect" id="node47" href="$classns3_1_1_packet_metadata.html#afa8a589ec783d4998516d7f39f21242d" title="Remove an header." alt="" coords="557,1985,716,2027"/>
+<area shape="rect" id="node49" href="$classns3_1_1_packet_metadata.html#a2eaa46d9f7c88a5aef121521b196753c" title="Remove a trailer." alt="" coords="557,1909,716,1951"/>
+<area shape="rect" id="node4" href="$classns3_1_1_packet.html#a14ec3d4250b425468764de58f5837b6b" title="Concatenate the input packet at the end of the current packet." alt="" coords="323,874,490,901"/>
+<area shape="rect" id="node5" href="$classns3_1_1_originator_rx_status.html#a59c38c4a21335b5e82da00fdb0561af0" title="We have received a last fragment of the fragmented packets (indicated by the no more fragment field)." alt="" coords="33,253,229,295"/>
+<area shape="rect" id="node6" href="$classns3_1_1_csma_net_device.html#a736bf6ce5851ace677f8fc693a92855c" title="Adds the necessary headers and trailers to a packet of data in order to respect the packet type." alt="" coords="51,1755,210,1796"/>
+<area shape="rect" id="node7" href="$classns3_1_1_mpdu_aggregator.html#a8e4e158ca23bbd3141f8c584dcb7a5dc" title="Aggregate an MPDU to an A&#45;MPDU." alt="" coords="50,749,211,791"/>
+<area shape="rect" id="node8" href="$bench-packets_8cc.html#a74bbacc91e7fa270b5102afc76959cf1" title=" " alt="" coords="71,319,191,346"/>
+<area shape="rect" id="node9" href="$bench-packets_8cc.html#a6cabc7d91c4117351e595e4bb94b141d" title=" " alt="" coords="69,815,192,842"/>
+<area shape="rect" id="node10" href="$classns3_1_1_pending_data.html#ab04639a5fcb15f47daa91c071f5cdfd2" title="Copy data starting from a give offset." alt="" coords="25,371,236,412"/>
+<area shape="rect" id="node11" href="$classns3_1_1_wifi_mac_queue_item.html#a6000ff915d70a940ac16fa35ee2fe933" title="Aggregate the MSDU contained in the given MPDU to this MPDU (thus constituting an A&#45;MSDU)." alt="" coords="41,867,220,908"/>
+<area shape="rect" id="node12" href="$classns3_1_1_lte_rlc_am.html#a529666294956659251df1e79ffd3fca5" title="MAC SAP." alt="" coords="32,1689,229,1731"/>
+<area shape="rect" id="node13" href="$classns3_1_1_lte_rlc_um.html#a8d744cea1946d4fe5ecaaf867e51d19a" title="MAC SAP." alt="" coords="31,1245,230,1287"/>
+<area shape="rect" id="node14" href="$classns3_1_1_base_station_net_device.html#a0a6bf3deb17ab1adde07a1ed62875067" title="Receive packet." alt="" coords="31,932,230,973"/>
+<area shape="rect" id="node15" href="$classns3_1_1_subscriber_station_net_device.html#a2cdd421837891adea005eb7cde668a1f" title="Receive a packet." alt="" coords="35,436,226,477"/>
+<area shape="rect" id="node16" href="$class_packet_metadata_test.html#a5157cf5ecf0e631ad2a70c61375ebfc3" title="Implementation to actually run this TestCase." alt="" coords="54,1951,207,1992"/>
+<area shape="rect" id="node17" href="$class_packet_test.html#a2f4d69aa1b21616ea14efd54fee55da2" title="Implementation to actually run this TestCase." alt="" coords="59,2017,202,2043"/>
+<area shape="rect" id="node18" href="$class_ns3_wimax_fragmentation_test_case.html#ac4725340138d07d67dbb72aaa5ccd84b" title="Implementation to actually run this TestCase." alt="" coords="23,501,238,543"/>
+<area shape="rect" id="node19" href="$classns3_1_1_tcp_rx_buffer.html#a0a1254a5afa4cec6307a40af3ff46d30" title="Extract data from the head of the buffer as indicated by nextRxSeq." alt="" coords="38,567,223,594"/>
+<area shape="rect" id="node20" href="$classns3_1_1_wifi_psdu.html#a5613df833c8652c3be93192a06b516e6" title="Get a copy of the i&#45;th A&#45;MPDU subframe (includes subframe header, MPDU, and possibly padding)" alt="" coords="5,998,256,1025"/>
+<area shape="rect" id="node21" href="$classns3_1_1_ipv4_l3_protocol_1_1_fragments.html#adb45e745bcafe1fad9fdfbb88e685df5" title="Get the entire packet." alt="" coords="44,619,217,660"/>
+<area shape="rect" id="node22" href="$classns3_1_1_ipv6_extension_fragment_1_1_fragments.html#a2308b508eac529beff323396eaaaebab" title="Get the entire packet." alt="" coords="27,684,234,725"/>
+<area shape="rect" id="node23" href="$classns3_1_1_six_low_pan_net_device_1_1_fragments.html#aa9ec2708c8a1717ed5b9acd52c1bf0a1" title="Get the entire packet." alt="" coords="35,5,226,47"/>
+<area shape="rect" id="node24" href="$classns3_1_1_ipv4_l3_protocol_1_1_fragments.html#a13e7ea53f11130744dea53667fb3ff83" title="Get the complete part of the packet." alt="" coords="23,71,238,112"/>
+<area shape="rect" id="node25" href="$classns3_1_1_ipv6_extension_fragment_1_1_fragments.html#a1a7a254bba0ce4afcb74d5a3e99bb906" title="Get the packet parts so far received." alt="" coords="23,136,238,177"/>
+<area shape="rect" id="node26" href="$classns3_1_1_tcp_tx_buffer.html#acd8b1a260f0016fcfd315db108ae596c" title="Merge two TcpTxItem." alt="" coords="23,202,239,229"/>
+<area shape="rect" id="node27" href="$classns3_1_1_packet_sink.html#af1b771e838a0596a019bdc12cadf7521" title="Packet received: calculation of the e2e statistics." alt="" coords="13,1377,248,1403"/>
+<area shape="rect" id="node28" href="$classns3_1_1_lte_rlc_am.html#ada1201339d0a54e50adc27b09d3c5c1e" title="Reassemble and deliver." alt="" coords="29,1428,232,1469"/>
+<area shape="rect" id="node29" href="$classns3_1_1_lte_rlc_um.html#a103ba1e3d14eb2604a44d1bef7fe7cb7" title="Reassemble and deliver function." alt="" coords="29,1493,233,1535"/>
+<area shape="rect" id="node30" href="$classns3_1_1_three_gpp_http_client.html#aefb3b587a587f771128f50882b019280" title="Simulate a consumption of the received packet by subtracting the packet size from the internal counte..." alt="" coords="39,1049,222,1091"/>
+<area shape="rect" id="node31" href="$classns3_1_1olsr_1_1_routing_protocol.html#a0ee7494c6ac857210f7f12d40d39e349" title="Creates as many OLSR packets as needed in order to send all buffered OLSR messages." alt="" coords="37,1115,225,1156"/>
+<area shape="rect" id="node32" href="$classns3_1_1_icmpv6_l4_protocol.html#a775f19603b15e25f287f54096a3f26cb" title="Send an ICMPv6 Redirection." alt="" coords="46,1180,215,1221"/>
+<area shape="rect" id="node34" href="$classns3_1_1_packet.html#a465108c595a0bc592095cbcab1832ed8" title="Add header to this packet." alt="" coords="319,1286,495,1313"/>
+<area shape="rect" id="node35" href="$classns3_1_1dsr_1_1_dsr_routing.html#a8ce910f1c56dc238ff98117c784c4541" title="This function is called to add ack request header for network acknowledgement." alt="" coords="54,1885,207,1927"/>
+<area shape="rect" id="node36" href="$classns3_1_1_point_to_point_net_device.html#a041de407f1f7fac39ba2c961f857fedb" title="Adds the necessary headers and trailers to a packet of data in order to respect the protocol implemen..." alt="" coords="30,1624,231,1665"/>
+<area shape="rect" id="node37" href="$classns3_1_1_arp_queue_disc_item.html#a7bf1c37bc6b9af40c9fe16bfb4a92fcc" title="Add the header to the packet." alt="" coords="43,1820,218,1861"/>
+<area shape="rect" id="node38" href="$classns3_1_1_ipv4_queue_disc_item.html#a935709924d746dddbdc4d82e7a4a751d" title="Add the header to the packet." alt="" coords="40,1311,221,1352"/>
+<area shape="rect" id="node39" href="$classns3_1_1_ipv6_queue_disc_item.html#a265d5b2e270107d4a243b0af10f01ac7" title="Add the header to the packet." alt="" coords="40,1559,221,1600"/>
+<area shape="rect" id="node41" href="$classns3_1_1_packet.html#ae26b490c30ae5bc98be5181ec6e06db8" title="Add trailer to this packet." alt="" coords="321,1781,492,1807"/>
+<area shape="rect" id="node43" href="$classns3_1_1_packet_metadata.html#a0d5fd6d6a05b04eb1bb9a00c05e6a16c" title="Creates a fragment." alt="" coords="327,1835,486,1876"/>
+<area shape="rect" id="node44" href="$classns3_1_1_packet.html#a607de6c1abda2a960e99a3b59fd35d14" title="Remove size bytes from the end of the current packet." alt="" coords="309,1939,505,1966"/>
+<area shape="rect" id="node46" href="$classns3_1_1_packet.html#a78aa207e7921dd2f9f7e0d0b7a1c730a" title="Remove size bytes from the start of the current packet." alt="" coords="305,1697,508,1723"/>
+<area shape="rect" id="node48" href="$classns3_1_1_packet.html#a575415d53459792269f7109ac8d92010" title="Deserialize and remove the header from the internal buffer." alt="" coords="304,2041,509,2067"/>
+<area shape="rect" id="node50" href="$classns3_1_1_packet.html#a2155e042083e9a17ad3b33f9fecb4be4" title="Remove a deserialized trailer from the internal buffer." alt="" coords="307,1990,506,2017"/>
+</map>

@@ -1,0 +1,52 @@
+<map id="ns3::Ipv6Address::CombinePrefix" name="ns3::Ipv6Address::CombinePrefix">
+<area shape="rect" id="node1" title="Combine this address with a prefix." alt="" coords="1176,216,1375,257"/>
+<area shape="rect" id="node2" href="$classns3_1_1_ipv6_address_helper.html#aa1e2f0d4055cd9be0573e54f3526bc43" title="Constructor." alt="" coords="914,5,1090,47"/>
+<area shape="rect" id="node3" href="$classns3_1_1_rip_ng.html#adb06ee7b823c0d7ae5b45b637c1ffd19" title="Handle RIPng requests." alt="" coords="609,231,815,258"/>
+<area shape="rect" id="node7" href="$classns3_1_1_rip_ng.html#ade057ef030dc8cd6479949e35315ed7b" title="Handle RIPng responses." alt="" coords="604,181,820,207"/>
+<area shape="rect" id="node8" href="$classns3_1_1_ipv6_address.html#adee719a6ea20a80c98c813e3f3939e96" title="Compares an address and a prefix." alt="" coords="900,173,1104,199"/>
+<area shape="rect" id="node9" href="$classns3_1_1_ipv6_address.html#a387b9b364c7b1d2e5ef0aaf16ed6676f" title="If the IPv6 address is a documentation address (2001:DB8::/32)." alt="" coords="876,122,1128,149"/>
+<area shape="rect" id="node12" href="$classns3_1_1_ipv6_interface_address.html#aa60f5cb8d0b03efd98b812ec8fa36a2f" title="Checks if the address is in the same subnet." alt="" coords="617,49,807,91"/>
+<area shape="rect" id="node15" href="$classns3_1_1_ipv6_address.html#a0b549807a9ad8389c7cc82b762b7c1f1" title="If the IPv6 address is a link&#45;local address (fe80::/64)." alt="" coords="913,499,1091,540"/>
+<area shape="rect" id="node35" href="$classns3_1_1_ipv6_address_helper.html#a5f3df4b8e9d41e4241f2334381c2c883" title="Allocate a new Ipv6Address with interface ID equal to the next one in the underlying generator." alt="" coords="914,739,1090,780"/>
+<area shape="rect" id="node48" href="$classns3_1_1_ipv6_address_helper.html#a13467412e9da6263395c09460681c0f1" title="Set the base network number, network prefix, and base interface ID." alt="" coords="624,1324,800,1365"/>
+<area shape="rect" id="node4" href="$classns3_1_1_rip_ng.html#ae8891520b5ae87abed2e2a15d50ba4d8" title="Receive RIPng packets." alt="" coords="333,231,485,258"/>
+<area shape="rect" id="node5" href="$classns3_1_1_rip_ng.html#a81a7056d4a1d1afc266181406f5dbf64" title="Start protocol operation." alt="" coords="26,231,201,258"/>
+<area shape="rect" id="node6" href="$classns3_1_1_rip_ng.html#a588e191ae91316e498a8e5c84a9c77fb" title="Notify when specified interface goes UP." alt="" coords="5,497,221,523"/>
+<area shape="rect" id="node10" href="$classns3_1_1_ipv6_l3_protocol.html#ac956e0aaed5e961b6c25210c2b696da6" title="Forward a packet." alt="" coords="637,115,787,156"/>
+<area shape="rect" id="node11" href="$classns3_1_1_ipv6_l3_protocol.html#a8a95d576e8aee9a571db93bf686d850a" title="Receive method when a packet arrive in the stack." alt="" coords="334,115,483,156"/>
+<area shape="rect" id="node13" href="$classns3_1_1_ping6.html#a90c69934f60e7260d72f6c9fa1e6b341" title="Send a packet." alt="" coords="344,57,473,83"/>
+<area shape="rect" id="node14" href="$classns3_1_1_ping6.html#af89c8bf41945f6182411ee068708bc3d" title="Schedule sending a packet." alt="" coords="7,57,220,83"/>
+<area shape="rect" id="node16" href="$classns3_1_1_ipv6_static_routing.html#a9c09d10eb7d7d67c29bdc05bb620c241" title="Add route to host." alt="" coords="628,596,796,637"/>
+<area shape="rect" id="node18" href="$classns3_1_1_rip_ng.html#a9d8c7bb0b6622946c347a88dabc06802" title="Add route to network." alt="" coords="596,662,828,689"/>
+<area shape="rect" id="node21" href="$classns3_1_1_ipv6_static_routing.html#adc37dbd1518eaadfd0c88161a7bb85ae" title="Add route to network." alt="" coords="628,713,796,755"/>
+<area shape="rect" id="node22" href="$classns3_1_1_six_low_pan_net_device.html#a0e1957fbfb793cd011b4b3f89c550b8f" title="Compress the headers according to HC1 compression." alt="" coords="617,779,807,820"/>
+<area shape="rect" id="node24" href="$classns3_1_1_six_low_pan_net_device.html#a67bf1501ba018d90c5bdb442371a3722" title="Compress the headers according to IPHC compression." alt="" coords="617,844,807,885"/>
+<area shape="rect" id="node26" href="$class_ipv6_l3_protocol_test_case.html#ac052c03e25689da8fed383146b988a7e" title="Implementation to actually run this TestCase." alt="" coords="624,909,800,951"/>
+<area shape="rect" id="node27" href="$classns3_1_1_icmpv6_l4_protocol.html#a0a7a989da20971c66f85b210be7559c1" title="Function called when DAD timeout." alt="" coords="627,975,797,1016"/>
+<area shape="rect" id="node29" href="$classns3_1_1_animation_interface.html#a89512d6e59613518d1b880e81ab6db1b" title="Get IPv6 address." alt="" coords="623,1040,801,1081"/>
+<area shape="rect" id="node30" href="$classns3_1_1_icmpv6_l4_protocol.html#acec910926a1fdbbea699c10d638aa704" title="Receive Neighbor Solicitation method." alt="" coords="627,283,797,324"/>
+<area shape="rect" id="node31" href="$classns3_1_1_icmpv6_l4_protocol.html#aa4d97bb59a89c2d5b41c76ebe9a54f14" title="Lookup in the ND cache for the IPv6 address (similar as ARP protocol)." alt="" coords="627,348,797,389"/>
+<area shape="rect" id="node32" href="$classns3_1_1_rip_ng.html#ad85da69a6006cd5089e1a69e7a6be13b" title="Route an input packet (to be forwarded or locally delivered)" alt="" coords="627,414,797,441"/>
+<area shape="rect" id="node33" href="$classns3_1_1_ipv6_l3_protocol.html#ac281dd6c5aff55330904e7a298c1881b" title="Higher&#45;level layers call this method to send a packet down the stack to the MAC and PHY layers." alt="" coords="637,465,787,507"/>
+<area shape="rect" id="node34" href="$classns3_1_1_ipv6_l3_protocol.html#a77acb50e395f36951381977368ebc5cb" title="Choose the source address to use with destination address." alt="" coords="619,531,805,572"/>
+<area shape="rect" id="node17" href="$classns3_1_1_ipv6_static_routing.html#a9750930029ffe2eaafda77ba77918472" title="Notify when specified interface goes UP." alt="" coords="325,545,493,587"/>
+<area shape="rect" id="node19" href="$classns3_1_1_rip_ng.html#aec1f0a59262b185e302f69395a615a87" title="Add a default route to the router through the nextHop located on interface." alt="" coords="296,611,521,638"/>
+<area shape="rect" id="node20" href="$classns3_1_1_rip_ng.html#a9d6ffbffc76b029e5dfc9f394549d670" title="Notify when specified interface add an address." alt="" coords="300,662,517,689"/>
+<area shape="rect" id="node23" href="$classns3_1_1_six_low_pan_net_device.html#a0cd8b4fc52f256bd7743310434ac4680" title=" " alt="" coords="313,779,504,820"/>
+<area shape="rect" id="node25" href="$classns3_1_1_six_low_pan_net_device.html#a41d34fd1612e7e6911614fadfef6ab67" title="Compress the headers according to NHC compression." alt="" coords="313,844,504,885"/>
+<area shape="rect" id="node28" href="$classns3_1_1_ipv6_interface.html#a8faa5a72b30720eb01f9fc1d1113ad19" title="Add an IPv6 address." alt="" coords="339,909,478,951"/>
+<area shape="rect" id="node36" href="$classns3_1_1_ipv6_address_helper.html#aad4685588aea1757beaf881bc4157912" title="Allocate an Ipv6InterfaceContainer with auto&#45;assigned addresses." alt="" coords="624,1259,800,1300"/>
+<area shape="rect" id="node37" href="$classns3_1_1_csma_star_helper.html#a0ff467c2d76ed22673aa7b16e319ab7b" title=" " alt="" coords="325,1536,493,1577"/>
+<area shape="rect" id="node38" href="$classns3_1_1_point_to_point_dumbbell_helper.html#ad8dfcb5147e9b4eddc9460780f96628c" title=" " alt="" coords="303,1601,514,1643"/>
+<area shape="rect" id="node39" href="$classns3_1_1_point_to_point_grid_helper.html#a14989a2160bb0fe95af28cc59f1fd4ef" title="Assigns Ipv6 addresses to all the row and column interfaces." alt="" coords="307,975,510,1016"/>
+<area shape="rect" id="node40" href="$classns3_1_1_point_to_point_star_helper.html#a9a3381195fbbba9e1e5f1e3213270e48" title=" " alt="" coords="307,1040,510,1081"/>
+<area shape="rect" id="node41" href="$class_icmp_v6_echo_reply_test_case.html#aeb51729abf2617c2adf993a518e79282" title="Implementation to actually run this TestCase." alt="" coords="310,1105,507,1147"/>
+<area shape="rect" id="node42" href="$class_ip_address_helper_test_casev6.html#a784cec04a31e92a998b06becb3538e2d" title="Implementation to actually run this TestCase." alt="" coords="307,1171,510,1212"/>
+<area shape="rect" id="node43" href="$class_ipv6_ripng_test.html#a17887a8153acca820752d31c2b49ac50" title="Implementation to actually run this TestCase." alt="" coords="327,1237,491,1263"/>
+<area shape="rect" id="node44" href="$class_ipv6_ripng_count_to_infinity_test.html#af62c0342d626eafa5b632b92c8636eb3" title="Implementation to actually run this TestCase." alt="" coords="316,1288,501,1329"/>
+<area shape="rect" id="node45" href="$class_ipv6_ripng_split_horizon_strategy_test.html#a8e3dad1362842eedd70ef21bff0a75c5" title="Implementation to actually run this TestCase." alt="" coords="298,1353,519,1395"/>
+<area shape="rect" id="node46" href="$class_lte_ipv6_routing_test_case.html#a346533727aeb404f4eef06a2a8c41d5d" title="Implementation to actually run this TestCase." alt="" coords="319,1419,498,1460"/>
+<area shape="rect" id="node47" href="$class_uan_experiment.html#a908ec4a08805d3d723087a4aa8a8722e" title="Set the UAN nodes communication channels." alt="" coords="269,1485,548,1511"/>
+<area shape="rect" id="node49" href="$classns3_1_1_no_backhaul_epc_helper.html#a8822666431eefe3a78ba2a0bf4ca1bae" title="Constructor." alt="" coords="310,1732,507,1773"/>
+<area shape="rect" id="node50" href="$class_three_gpp_http_object_test_case.html#a3634fb8fa5e627226721846bd729fdf1" title=" " alt="" coords="298,1667,519,1708"/>
+</map>

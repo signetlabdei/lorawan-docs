@@ -1,0 +1,52 @@
+<map id="ns3::RipNg::HandleRequests" name="ns3::RipNg::HandleRequests">
+<area shape="rect" id="node1" title="Handle RIPng requests." alt="" coords="5,1536,212,1563"/>
+<area shape="rect" id="node2" href="$classns3_1_1_packet.html#a465108c595a0bc592095cbcab1832ed8" title="Add header to this packet." alt="" coords="303,339,479,365"/>
+<area shape="rect" id="node19" href="$classns3_1_1_packet.html#ac4a6bcd77e58bdc14c42a7d572d66cc9" title="Add a packet tag." alt="" coords="293,1016,488,1043"/>
+<area shape="rect" id="node22" href="$ipv4-address-generator_8cc.html#aaf5aa23b804d2e5e334106f207e8a6cc" title=" " alt="" coords="893,1092,1027,1119"/>
+<area shape="rect" id="node23" href="$classns3_1_1_rip_ng_header.html#aff4addcf8979f24166e07c5c85547e3c" title="Add a RTE to the message." alt="" coords="293,1143,488,1169"/>
+<area shape="rect" id="node24" href="$classns3_1_1_rip_ng_header.html#a422816bd3c69a5457eba0e683de835f4" title="Clear all the RTEs from the header." alt="" coords="285,1193,496,1220"/>
+<area shape="rect" id="node25" href="$classns3_1_1_ipv6_address.html#a3279a6dcdad36e8791f172daaa7be533" title="Combine this address with a prefix." alt="" coords="588,1237,787,1278"/>
+<area shape="rect" id="node27" href="$classns3_1_1_ipv6_address.html#a2783e8badfc98c8b0a8508bba6e1b91e" title="Get the &quot;any&quot; (::) Ipv6Address." alt="" coords="296,1361,485,1388"/>
+<area shape="rect" id="node28" href="$classns3_1_1_rip_ng_header.html#ac158486b7f7bada5bde6ffd85030b1c4" title="Get the list of the RTEs included in the message." alt="" coords="283,1412,498,1439"/>
+<area shape="rect" id="node29" href="$classns3_1_1_rip_ng_header.html#a21c6758b9ce6f9206d18fa66f97657e1" title="Get the number of RTE included in the message." alt="" coords="295,1463,487,1505"/>
+<area shape="rect" id="node30" href="$classns3_1_1_ipv6_interface_address.html#a4485ddce4365f878d4078bb9ea78b290" title="Get address scope." alt="" coords="295,1529,486,1570"/>
+<area shape="rect" id="node31" href="$classns3_1_1_ipv6_header.html#a37a507d3cbc5fb9efc6c4ba36255fe75" title="Get the serialized size of the packet." alt="" coords="265,1595,516,1621"/>
+<area shape="rect" id="node32" href="$classns3_1_1_rip_ng_rte.html#a7f0f8d6de2377baccb68e15bf76f5669" title="Get the serialized size of the packet." alt="" coords="569,1671,805,1697"/>
+<area shape="rect" id="node33" href="$classns3_1_1_rip_ng_header.html#a2d736e7f5b88e94f6af89300d56f835b" title="Get the serialized size of the packet." alt="" coords="260,1645,521,1672"/>
+<area shape="rect" id="node34" href="$classns3_1_1_udp_header.html#a373a84b58a2d76e250778866e024e982" title=" " alt="" coords="267,1747,515,1773"/>
+<area shape="rect" id="node35" href="$classns3_1_1_ipv6_prefix.html#ab32d2dbadcd8fa048ff296cb0a0e34ff" title="Get the zero prefix ( /0)." alt="" coords="301,1797,481,1824"/>
+<area shape="rect" id="node36" href="$classns3_1_1_ipv6_address.html#a0b549807a9ad8389c7cc82b762b7c1f1" title="If the IPv6 address is a link&#45;local address (fe80::/64)." alt="" coords="301,1295,480,1337"/>
+<area shape="rect" id="node38" href="$classns3_1_1_packet.html#a0961eccf975d75f902d40956c93ba63e" title="Deserialize and remove the header from the internal buffer." alt="" coords="288,604,493,631"/>
+<area shape="rect" id="node42" href="$classns3_1_1_packet.html#a078fe922d976a417ab25ba2f3c2fd667" title="Remove a packet tag." alt="" coords="279,864,502,891"/>
+<area shape="rect" id="node44" href="$classns3_1_1_socket.html#af898fce6a58e0dbba23c1c6de1d4220e" title="Send data to a specified peer." alt="" coords="315,1848,466,1875"/>
+<area shape="rect" id="node45" href="$classns3_1_1_rip_ng_header.html#a3960f8da70fe2d21b867770b8a47b2cc" title="Set the command." alt="" coords="273,1899,508,1925"/>
+<area shape="rect" id="node46" href="$classns3_1_1_socket_ipv6_hop_limit_tag.html#a788df60ac4c987e997e15ba8cb691b60" title="Set the tag&#39;s Hop Limit." alt="" coords="288,1950,493,1991"/>
+<area shape="rect" id="node47" href="$classns3_1_1_rip_ng_rte.html#a405f3033dbdf82b9ac169d9894b01c5e" title="Set the prefix." alt="" coords="300,2016,481,2043"/>
+<area shape="rect" id="node48" href="$classns3_1_1_rip_ng_rte.html#a65d28fd1e776d13560da86d7a01f59a5" title="Set the prefix length." alt="" coords="289,2067,493,2093"/>
+<area shape="rect" id="node49" href="$classns3_1_1_rip_ng_rte.html#a7e3642309fa1f99ba7b99bf646e32dd8" title="Set the route metric." alt="" coords="279,2117,502,2144"/>
+<area shape="rect" id="node50" href="$classns3_1_1_rip_ng_rte.html#afb05e3f3cc1f2ce458f5c05474bff0b5" title="Set the route tag." alt="" coords="289,2168,492,2195"/>
+<area shape="rect" id="node3" href="$classns3_1_1_byte_tag_list.html#acb4563fbe4299c55af41ba7a166b71d5" title="Make sure that all offsets are bigger than prependOffset which represents the location where new byte..." alt="" coords="584,107,791,133"/>
+<area shape="rect" id="node8" href="$classns3_1_1_buffer.html#a8abd8164c3671d3dadc98fc66fade7b1" title=" " alt="" coords="602,259,773,285"/>
+<area shape="rect" id="node12" href="$classns3_1_1_packet_metadata.html#abdce736c4c5f647242f0808c0d2f9249" title="Add an header." alt="" coords="608,361,767,402"/>
+<area shape="rect" id="node13" href="$classns3_1_1_object_base.html#abe5b43a6f5b99a92a4c3122db31f06fb" title="Get the most derived TypeId for this Object." alt="" coords="853,681,1067,722"/>
+<area shape="rect" id="node14" href="$classns3_1_1_byte_tag_list.html#a1fec06d7e6daaf8039cf2a148e4090f2" title="Adjust the offsets stored internally by the adjustment delta." alt="" coords="599,427,776,453"/>
+<area shape="rect" id="node15" href="$classns3_1_1_buffer.html#acb977a0179de9abe4e295ce22023b4ca" title=" " alt="" coords="618,477,757,504"/>
+<area shape="rect" id="node16" href="$classns3_1_1_type_id.html#abc4965475a579c2afdc668d7a7d58374" title="Get the name." alt="" coords="605,747,770,773"/>
+<area shape="rect" id="node17" href="$classns3_1_1_header.html#a6ef0497eabc1b1fb0ad42738eb73f934" title=" " alt="" coords="576,157,799,184"/>
+<area shape="rect" id="node18" href="$classns3_1_1_header.html#afb61f1aac69ff8349a6bfe521fab5404" title=" " alt="" coords="605,208,769,235"/>
+<area shape="rect" id="node4" href="$classns3_1_1_byte_tag_list.html#ab1d2c5671ea01900fa9ef58e33d1e739" title="Returns an iterator pointing to the very first tag in this list." alt="" coords="865,5,1055,32"/>
+<area shape="rect" id="node5" href="$classns3_1_1_tag_buffer.html#afe07a9e117449ff5b5d5857291671349" title="Copy the nternal structure of another TagBuffer." alt="" coords="865,56,1055,83"/>
+<area shape="rect" id="node6" href="$classns3_1_1_byte_tag_list_1_1_iterator.html#a44e33e812e3eba4fdc168e36380853af" title="Used to determine if the iterator is at the end of the byteTagList." alt="" coords="868,107,1052,149"/>
+<area shape="rect" id="node7" href="$classns3_1_1_byte_tag_list_1_1_iterator.html#af521864d800baab1d9c5262f59ce4433" title="Returns the next Item from the ByteTagList." alt="" coords="868,173,1052,214"/>
+<area shape="rect" id="node9" href="$classns3_1_1_buffer.html#a200897ee202518b0d2bf91ead4e82be9" title="Checks the internal buffer structures consistency." alt="" coords="865,470,1055,511"/>
+<area shape="rect" id="node10" href="$classns3_1_1_buffer.html#a340c9888e35cf55d024808adfbd75913" title="Create a buffer data storage." alt="" coords="888,252,1032,279"/>
+<area shape="rect" id="node11" href="$classns3_1_1_buffer.html#a1042168f1f6f3b24ad08a668662ab373" title="Get the buffer real size." alt="" coords="859,303,1061,329"/>
+<area shape="rect" id="node20" href="$classns3_1_1_packet_tag_list.html#af0d2442e29d24184d7c439f69977fbad" title="Add a tag to the head of this branch." alt="" coords="600,1067,775,1093"/>
+<area shape="rect" id="node21" href="$classns3_1_1_tag.html#a01c8efdea943fd8cce2ef5d4d67eefa6" title=" " alt="" coords="861,1016,1059,1043"/>
+<area shape="rect" id="node26" href="$classns3_1_1_ipv6_address.html#aa5566a72cd0db41ef149a444977b6d7f" title="Sets an Ipv6Address by parsing the input C&#45;string." alt="" coords="879,1244,1041,1271"/>
+<area shape="rect" id="node37" href="$classns3_1_1_ipv6_address.html#a68f522d40b6db6d383848ea90bc47dd0" title="If the IPv6 address is multicast (ff00::/8)." alt="" coords="581,1303,793,1329"/>
+<area shape="rect" id="node39" href="$classns3_1_1_header.html#a78be9400bb66b2a8543606f395ef5396" title=" " alt="" coords="597,528,778,555"/>
+<area shape="rect" id="node40" href="$classns3_1_1_buffer.html#adeecbb3e8f518aec6fee0437578ade4b" title=" " alt="" coords="587,579,787,605"/>
+<area shape="rect" id="node41" href="$classns3_1_1_packet_metadata.html#afa8a589ec783d4998516d7f39f21242d" title="Remove an header." alt="" coords="608,681,767,722"/>
+<area shape="rect" id="node43" href="$classns3_1_1_packet_tag_list.html#a043d984c546f67adc273448747784ee3" title="Remove (the first instance of) tag from the list." alt="" coords="617,798,758,839"/>
+</map>

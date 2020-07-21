@@ -1,0 +1,14 @@
+<map id="ns3::WallClockSynchronizer::DoSynchronize" name="ns3::WallClockSynchronizer::DoSynchronize">
+<area shape="rect" id="node1" title="Wait until the real time is in sync with the specified simulation time." alt="" coords="5,93,208,135"/>
+<area shape="rect" id="node2" href="$classns3_1_1_wall_clock_synchronizer.html#a8f7eb1d2c3fd95183d566f8aa67a4282" title="Get the drift between the real time clock used to synchronize the simulation and the current simulati..." alt="" coords="507,96,709,137"/>
+<area shape="rect" id="node6" href="$classns3_1_1_wall_clock_synchronizer.html#af9eaa5c3014c416b69176fa2234aee90" title="Compute a correction to the nominal delay to account for realtime drift since the last DoSynchronize." alt="" coords="256,123,459,164"/>
+<area shape="rect" id="node7" href="$classns3_1_1_wall_clock_synchronizer.html#a1adbfec497fb2868e685759e60ca1b4d" title="Put our process to sleep for some number of nanoseconds." alt="" coords="256,5,459,47"/>
+<area shape="rect" id="node10" href="$classns3_1_1_wall_clock_synchronizer.html#aa236882980f6c82e0e7f716e670e5c1f" title="Do a busy&#45;wait until the normalized realtime equals the argument or the condition variable becomes tr..." alt="" coords="256,188,459,229"/>
+<area shape="rect" id="node3" href="$classns3_1_1_wall_clock_synchronizer.html#a1a9757f294c7677e211b19ef10867780" title="Get the current normalized real time, in ns." alt="" coords="761,121,964,163"/>
+<area shape="rect" id="node4" href="$classns3_1_1_wall_clock_synchronizer.html#a9ffb2b0572abca0763b56889a72867dd" title="Get the current absolute real time (in ns since the epoch)." alt="" coords="1016,121,1219,163"/>
+<area shape="rect" id="node5" href="$classns3_1_1_wall_clock_synchronizer.html#a591dbd1a2beb7b8b9bae50ad230204fa" title="Convert a timeval to absolute time, in ns." alt="" coords="1267,121,1469,163"/>
+<area shape="rect" id="node8" href="$classns3_1_1_system_condition.html#af86d685047fcc5e68d36d6a3b033b626" title="Wait a maximum of ns nanoseconds for the condition to be true." alt="" coords="526,5,690,47"/>
+<area shape="rect" id="node9" href="$classns3_1_1_system_condition_private.html#a9c5f7d03c27f1986c56dabe609798b8a" title="Unset the condition, then wait for a limited amount of wall&#45;clock time for another thread to set it w..." alt="" coords="757,5,968,47"/>
+<area shape="rect" id="node11" href="$classns3_1_1_system_condition.html#a4b6665089213af3531f8903373947239" title="Get the value of the underlying condition." alt="" coords="526,213,690,255"/>
+<area shape="rect" id="node12" href="$classns3_1_1_system_condition_private.html#a304f88722c58b734ebfc701f702c844c" title="Get the condition value." alt="" coords="757,213,968,255"/>
+</map>

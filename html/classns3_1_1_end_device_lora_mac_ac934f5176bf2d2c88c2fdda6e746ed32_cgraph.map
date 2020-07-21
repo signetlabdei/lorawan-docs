@@ -1,0 +1,15 @@
+<map id="ns3::EndDeviceLoraMac::ParseCommands" name="ns3::EndDeviceLoraMac::ParseCommands">
+<area shape="rect" id="node1" title="Parse and take action on the commands contained on this FrameHeader." alt="" coords="5,169,183,211"/>
+<area shape="rect" id="node2" href="$classns3_1_1_end_device_lora_mac.html#a376087aea5eab464d5e29e7e36d9066e" title="Perform the actions that need to be taken when receiving a DevStatusReq command." alt="" coords="231,5,408,47"/>
+<area shape="rect" id="node3" href="$classns3_1_1_end_device_lora_mac.html#aa7ce5c457b96e85c5768a0ff3c960b55" title="Perform the actions that need to be taken when receiving a DutyCycleReq command." alt="" coords="231,71,408,112"/>
+<area shape="rect" id="node4" href="$classns3_1_1_end_device_lora_mac.html#ac09b8bd4b8264162bfc5f04081ca01f0" title="Perform the actions that need to be taken when receiving a LinkAdrReq command." alt="" coords="231,201,408,243"/>
+<area shape="rect" id="node9" href="$classns3_1_1_end_device_lora_mac.html#a6887d27c0a4e01bf3fcfeb2d76a7ab7f" title="Perform the actions that need to be taken when receiving a LinkCheckAns command." alt="" coords="231,267,408,308"/>
+<area shape="rect" id="node10" href="$classns3_1_1_end_device_lora_mac.html#a30707d66f657d3f032ad196b99b37a33" title="Perform the actions that need to be taken when receiving a NewChannelReq command." alt="" coords="231,332,408,373"/>
+<area shape="rect" id="node13" href="$classns3_1_1_end_device_lora_mac.html#ab8278f6e94a286879d29c31f1047f9d5" title="Perform the actions that need to be taken when receiving a RxParamSetupReq command." alt="" coords="231,136,408,177"/>
+<area shape="rect" id="node5" href="$classns3_1_1_lora_mac.html#a9484de104225822227ed94bb148c0dc3" title="Get the BW corresponding to a data rate, based on this MAC&#39;s region." alt="" coords="475,136,683,177"/>
+<area shape="rect" id="node6" href="$classns3_1_1_logical_lora_channel_helper.html#a1a5150ca03b2d0fea47076ae280fdcf5" title="Get the list of LogicalLoraChannels currently registered on this helper." alt="" coords="468,267,691,308"/>
+<area shape="rect" id="node7" href="$classns3_1_1_lora_mac.html#a54ee8358c3a90c45df861c3327a27e56" title="Get the transmission power in dBm that corresponds, in this region, to the encoded 8&#45;bit txPower." alt="" coords="476,201,683,243"/>
+<area shape="rect" id="node8" href="$classns3_1_1_lora_mac.html#a7f59bceeb30682a895f507c6b738b756" title="Get the SF corresponding to a data rate, based on this MAC&#39;s region." alt="" coords="456,85,703,111"/>
+<area shape="rect" id="node11" href="$classns3_1_1_end_device_lora_mac.html#a418e49d7db13464b1da17fe75d0af655" title="Set a new logical channel in the helper." alt="" coords="491,332,668,373"/>
+<area shape="rect" id="node12" href="$classns3_1_1_logical_lora_channel_helper.html#a26708c2df1d3bf7586361007ea6369c9" title="Set a new channel at a fixed index." alt="" coords="751,332,973,373"/>
+</map>

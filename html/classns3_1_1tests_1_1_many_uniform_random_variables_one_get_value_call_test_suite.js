@@ -1,0 +1,4 @@
+var classns3_1_1tests_1_1_many_uniform_random_variables_one_get_value_call_test_suite =
+[
+    [ "ManyUniformRandomVariablesOneGetValueCallTestSuite", "classns3_1_1tests_1_1_many_uniform_random_variables_one_get_value_call_test_suite.html#a80e8b997e4394f8ca6647f4568524b67", null ]
+];

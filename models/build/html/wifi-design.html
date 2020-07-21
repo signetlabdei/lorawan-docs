@@ -1,0 +1,997 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Design Documentation &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User Documentation" href="wifi-user.html" />
+    <link rel="prev" title="Wi-Fi Module" href="wifi.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="wifi-user.html" title="User Documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="wifi.html" title="Wi-Fi Module"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="wifi.html" accesskey="U">Wi-Fi Module</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="design-documentation">
+<h1>Design Documentation<a class="headerlink" href="#design-documentation" title="Permalink to this headline">¶</a></h1>
+<p><em>ns-3</em> nodes can contain a collection of NetDevice objects, much like an actual
+computer contains separate interface cards for Ethernet, Wifi, Bluetooth, etc.
+This chapter describes the <em>ns-3</em> WifiNetDevice and related models. By adding
+WifiNetDevice objects to <em>ns-3</em> nodes, one can create models of 802.11-based
+infrastructure and ad hoc networks.</p>
+<div class="section" id="overview-of-the-model">
+<h2>Overview of the model<a class="headerlink" href="#overview-of-the-model" title="Permalink to this headline">¶</a></h2>
+<p>The WifiNetDevice models a wireless network interface controller based
+on the IEEE 802.11 standard <a class="reference internal" href="wifi-references.html#ieee80211" id="id1"><span>[ieee80211]</span></a>. We will go into more detail below but in brief,
+<em>ns-3</em> provides models for these aspects of 802.11:</p>
+<ul class="simple">
+<li><p>basic 802.11 DCF with <strong>infrastructure</strong> and <strong>adhoc</strong> modes</p></li>
+<li><p><strong>802.11a</strong>, <strong>802.11b</strong>, <strong>802.11g</strong>, <strong>802.11n</strong> (both 2.4 and 5 GHz bands), <strong>802.11ac</strong> and <strong>802.11ax</strong> (both 2.4 and 5 GHz bands) physical layers</p></li>
+<li><p><strong>MSDU aggregation</strong> and <strong>MPDU aggregation</strong> extensions of 802.11n, and both can be combined together (two-level aggregation)</p></li>
+<li><p>QoS-based EDCA and queueing extensions of <strong>802.11e</strong></p></li>
+<li><p>the ability to use different propagation loss models and propagation delay models,
+please see the chapter on <a class="reference internal" href="propagation.html#propagation"><span class="std std-ref">Propagation</span></a> for more detail</p></li>
+<li><p>various rate control algorithms including <strong>Aarf, Arf, Cara, Onoe, Rraa,
+ConstantRate, and Minstrel</strong></p></li>
+<li><p>802.11s (mesh), described in another chapter</p></li>
+<li><p>802.11p and WAVE (vehicular), described in another chapter</p></li>
+</ul>
+<p>The set of 802.11 models provided in <em>ns-3</em> attempts to provide an accurate
+MAC-level implementation of the 802.11 specification and to provide a
+packet-level abstraction of the PHY-level for different PHYs, corresponding to
+802.11a/b/e/g/n/ac/ax specifications.</p>
+<p>In <em>ns-3</em>, nodes can have multiple WifiNetDevices on separate channels, and the
+WifiNetDevice can coexist with other device types.
+With the use of the <strong>SpectrumWifiPhy</strong> framework, one can also build scenarios
+involving cross-channel interference or multiple wireless technologies on
+a single channel.</p>
+<p>The source code for the WifiNetDevice and its models lives in the directory
+<code class="docutils literal notranslate"><span class="pre">src/wifi</span></code>.</p>
+<p>The implementation is modular and provides roughly three sublayers of models:</p>
+<ul class="simple">
+<li><p>the <strong>PHY layer models</strong></p></li>
+<li><p>the so-called <strong>MAC low models</strong>: they model functions such as medium
+access (DCF and EDCA), RTS/CTS and ACK.  In <em>ns-3</em>, the lower-level MAC
+is further subdivided into a <strong>MAC low</strong> and <strong>MAC middle</strong> sublayering,
+with channel access grouped into the <strong>MAC middle</strong>.</p></li>
+<li><p>the so-called <strong>MAC high models</strong>: they implement non-time-critical processes
+in Wifi such as the MAC-level beacon generation, probing, and association
+state machines, and a set of <strong>Rate control algorithms</strong>.  In the literature,
+this sublayer is sometimes called the <strong>upper MAC</strong> and consists of more
+software-oriented implementations vs. time-critical hardware implementations.</p></li>
+</ul>
+<p>Next, we provide an design overview of each layer, shown in
+Figure <a class="reference internal" href="#wifi-architecture"><span class="std std-ref">WifiNetDevice architecture.</span></a>.</p>
+<div class="figure align-default" id="id31">
+<span id="wifi-architecture"></span><img alt="_images/WifiArchitecture.png" src="_images/WifiArchitecture.png" />
+<p class="caption"><span class="caption-text">WifiNetDevice architecture.</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="mac-high-models">
+<h3>MAC high models<a class="headerlink" href="#mac-high-models" title="Permalink to this headline">¶</a></h3>
+<p>There are presently three <strong>MAC high models</strong> that provide for the three
+(non-mesh; the mesh equivalent, which is a sibling of these with common
+parent <code class="docutils literal notranslate"><span class="pre">ns3::RegularWifiMac</span></code>, is not discussed here) Wi-Fi topological
+elements - Access Point (AP) (<code class="docutils literal notranslate"><span class="pre">ns3::ApWifiMac</span></code>),
+non-AP Station (STA) (<code class="docutils literal notranslate"><span class="pre">ns3::StaWifiMac</span></code>), and STA in an Independent
+Basic Service Set (IBSS) - also commonly referred to as an ad hoc
+network (<code class="docutils literal notranslate"><span class="pre">ns3::AdhocWifiMac</span></code>).</p>
+<p>The simplest of these is <code class="docutils literal notranslate"><span class="pre">ns3::AdhocWifiMac</span></code>, which implements a
+Wi-Fi MAC that does not perform any kind of beacon generation,
+probing, or association. The <code class="docutils literal notranslate"><span class="pre">ns3::StaWifiMac</span></code> class implements
+an active probing and association state machine that handles automatic
+re-association whenever too many beacons are missed. Finally,
+<code class="docutils literal notranslate"><span class="pre">ns3::ApWifiMac</span></code> implements an AP that generates periodic
+beacons, and that accepts every attempt to associate.</p>
+<p>These three MAC high models share a common parent in
+<code class="docutils literal notranslate"><span class="pre">ns3::RegularWifiMac</span></code>, which exposes, among other MAC
+configuration, an attribute <code class="docutils literal notranslate"><span class="pre">QosSupported</span></code> that allows
+configuration of 802.11e/WMM-style QoS support, an attribute
+<code class="docutils literal notranslate"><span class="pre">HtSupported</span></code> that allows configuration of 802.11n High Throughput
+style support, an attribute <code class="docutils literal notranslate"><span class="pre">VhtSupported</span></code> that allows configuration
+of 802.11ac Very High Throughput style support and an attribute <code class="docutils literal notranslate"><span class="pre">HeSupported</span></code>
+that allows configuration of 802.11ax High Efficiency style support.</p>
+<p>There are also several <strong>rate control algorithms</strong> that can be used by the
+MAC low layer.  A complete list of available rate control algorithms is
+provided in a separate section.</p>
+</div>
+<div class="section" id="mac-low-layer">
+<h3>MAC low layer<a class="headerlink" href="#mac-low-layer" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>MAC low layer</strong> is split into three main components:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ns3::MacLow</span></code> which takes care of RTS/CTS/DATA/ACK transactions and also
+performs MPDU aggregation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ns3::ChannelAccessManager</span></code> and <code class="docutils literal notranslate"><span class="pre">ns3::DcfState</span></code> which implements the DCF and EDCAF
+functions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ns3::Txop</span></code> and <code class="docutils literal notranslate"><span class="pre">ns3::QosTxop</span></code> which handle the packet queue,
+packet fragmentation, and packet retransmissions if they are needed.
+The <code class="docutils literal notranslate"><span class="pre">ns3::Txop</span></code> object is used by high MACs that are not QoS-enabled,
+and for transmission of frames (e.g., of type Management)
+that the standard says should access the medium using the DCF.
+<code class="docutils literal notranslate"><span class="pre">ns3::QosTxop</span></code> is is used by QoS-enabled high MACs and also
+performs MSDU aggregation.</p></li>
+</ol>
+</div>
+<div class="section" id="phy-layer-models">
+<h3>PHY layer models<a class="headerlink" href="#phy-layer-models" title="Permalink to this headline">¶</a></h3>
+<p>In short, the physical layer models are mainly responsible for modeling
+the reception of packets and for tracking energy consumption.  There
+are typically three main components to packet reception:</p>
+<ul class="simple">
+<li><p>each packet received is probabilistically evaluated for successful or
+failed reception.  The probability depends on the modulation, on
+the signal to noise (and interference) ratio for the packet, and on
+the state of the physical layer (e.g. reception is not possible while
+transmission or sleeping is taking place);</p></li>
+<li><p>an object exists to track (bookkeeping) all received signals so that
+the correct interference power for each packet can be computed when
+a reception decision has to be made; and</p></li>
+<li><p>one or more error models corresponding to the modulation and standard
+are used to look up probability of successful reception.</p></li>
+</ul>
+<p><em>ns-3</em> offers users a choice between two physical layer models, with a
+base interface defined in the <code class="docutils literal notranslate"><span class="pre">ns3::WifiPhy</span></code> class.  The YansWifiPhy
+class has been the only physical layer model until recently; the model
+implemented there is described in a paper entitled
+<a class="reference external" href="https://dl.acm.org/doi/pdf/10.1145/1190455.1190467?download=true">Yet Another Network Simulator</a>
+The acronym <em>Yans</em> derives from this paper title.  The SpectrumWifiPhy
+class is an alternative implementation based on the Spectrum framework
+used for other <em>ns-3</em> wireless models.  Spectrum allows a fine-grained
+frequency decomposition of the signal, and permits scenarios to
+include multiple technologies coexisting on the same channel.</p>
+</div>
+</div>
+<div class="section" id="scope-and-limitations">
+<h2>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Permalink to this headline">¶</a></h2>
+<p>The IEEE 802.11 standard <a class="reference internal" href="wifi-references.html#ieee80211" id="id2"><span>[ieee80211]</span></a> is a large specification,
+and not all aspects are covered by <em>ns-3</em>; the documentation of <em>ns-3</em>’s
+conformance by itself would lead to a very long document.  This section
+attempts to summarize compliance with the standard and with behavior
+found in practice.</p>
+<p>The physical layer and channel models operate on a per-packet basis, with
+no frequency-selective propagation or interference effects when using
+the default YansWifiPhy model.  Directional antennas are also not
+supported at this time.  For additive white Gaussian noise (AWGN)
+scenarios, or wideband interference scenarios, performance is governed
+by the application of analytical models (based on modulation and factors
+such as channel width) to the received signal-to-noise ratio, where noise
+combines the effect of thermal noise and of interference from other Wi-Fi
+packets.  Moreover, interference from other technologies is not modeled.
+The following details pertain to the physical layer and channel models:</p>
+<ul class="simple">
+<li><p>802.11ax MU-OFDMA is not supported</p></li>
+<li><p>802.11ax only supports SU PPDU format</p></li>
+<li><p>802.11ac/ax MU-MIMO is not supported, and no more than 4 antennas can be configured</p></li>
+<li><p>802.11n/ac/ax beamforming is not supported</p></li>
+<li><p>802.11 HCF/HCCA are not implemented</p></li>
+<li><p>802.11 PCF implementation currently assumes a DTIM interval equal to the beacon interval</p></li>
+<li><p>Authentication and encryption are missing</p></li>
+<li><p>Processing delays are not modeled</p></li>
+<li><p>PHY_RXSTART is not supported</p></li>
+<li><p>The current implementation assumes that secondary channels are always higher than primary channels</p></li>
+<li><p>Cases where RTS/CTS and ACK are transmitted using HT/VHT/HE formats are not supported</p></li>
+<li><p>Energy consumption model does not consider MIMO</p></li>
+</ul>
+<p>At the MAC layer, most of the main functions found in deployed Wi-Fi
+equipment for 802.11a/b/e/g/n/ac/ax are implemented, but there are scattered instances
+where some limitations in the models exist. Support for 802.11n, ac and ax is evolving.</p>
+<p>Some implementation choices that are not imposed by the standard are listed below:</p>
+<ul class="simple">
+<li><p>BSSBasicRateSet for 802.11b has been assumed to be 1-2 Mbit/s</p></li>
+<li><p>BSSBasicRateSet for 802.11a/g has been assumed to be 6-12-24 Mbit/s</p></li>
+<li><p>The wifi manager always selects the lowest basic rate for management frames.</p></li>
+</ul>
+</div>
+<div class="section" id="design-details">
+<h2>Design Details<a class="headerlink" href="#design-details" title="Permalink to this headline">¶</a></h2>
+<p>The remainder of this section is devoted to more in-depth design descriptions
+of some of the Wi-Fi models.  Users interested in skipping to the section
+on usage of the wifi module (User Documentation) may do so at this point.
+We organize these more detailed sections from the bottom-up, in terms of
+layering, by describing the channel and PHY models first, followed by
+the MAC models.</p>
+<p>We focus first on the choice between physical layer frameworks.  <em>ns-3</em>
+contains support for a Wi-Fi-only physical layer model called YansWifiPhy
+that offers no frequency-level decomposition of the signal.  For simulations
+that involve only Wi-Fi signals on the Wi-Fi channel, and that do not
+involve frequency-dependent propagation loss or fading models, the default
+YansWifiPhy framework is a suitable choice.  For simulations involving
+mixed technologies on the same channel, or frequency dependent effects,
+the SpectrumWifiPhy is more appropriate.  The two frameworks are very
+similarly configured.</p>
+<p>The SpectrumWifiPhy framework uses the <code class="docutils literal notranslate"><span class="pre">Spectrum</span></code> channel
+framework, which is not documented herein but in the Spectrum module
+documentation.</p>
+<p>The YansWifiChannel is the only concrete channel model class in
+the <em>ns-3</em> wifi module.  The
+<code class="docutils literal notranslate"><span class="pre">ns3::YansWifiChannel</span></code> implementation uses the propagation loss and
+delay models provided within the <em>ns-3</em> <a class="reference internal" href="propagation.html#propagation"><span class="std std-ref">Propagation</span></a> module.
+In particular, a number of propagation models can be added (chained together,
+if multiple loss models are added) to the channel object, and a propagation
+delay model also added. Packets sent from a <code class="docutils literal notranslate"><span class="pre">ns3::YansWifiPhy</span></code> object
+onto the channel with a particular signal power, are copied to all of the
+other <code class="docutils literal notranslate"><span class="pre">ns3::YansWifiPhy</span></code> objects after the signal power is reduced due
+to the propagation loss model(s), and after a delay corresponding to
+transmission (serialization) delay and propagation delay due to
+any channel propagation delay model (typically due to speed-of-light
+delay between the positions of the devices).</p>
+<p>Only objects of <code class="docutils literal notranslate"><span class="pre">ns3::YansWifiPhy</span></code> may be attached to a
+<code class="docutils literal notranslate"><span class="pre">ns3::YansWifiChannel</span></code>; therefore, objects modeling other
+(interfering) technologies such as LTE are not allowed.    Furthermore,
+packets from different channels do not interact; if a channel is logically
+configured for e.g. channels 5 and 6, the packets do not cause
+adjacent channel interference (even if their channel numbers overlap).</p>
+<div class="section" id="wifiphy-and-related-models">
+<h3>WifiPhy and related models<a class="headerlink" href="#wifiphy-and-related-models" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">ns3::WifiPhy</span></code> is an abstract base class representing the 802.11
+physical layer functions.  Packets passed to this object (via a
+<code class="docutils literal notranslate"><span class="pre">SendPacket()</span></code> method) are sent over a channel object, and
+upon reception, the receiving PHY object decides (based on signal power
+and interference) whether the packet was successful or not.  This class
+also provides a number of callbacks for notifications of physical layer
+events, exposes a notion of a state machine that can be monitored for
+MAC-level processes such as carrier sense, and handles sleep/wake models
+and energy consumption.  The <code class="docutils literal notranslate"><span class="pre">ns3::WifiPhy</span></code> hooks to the <code class="docutils literal notranslate"><span class="pre">ns3::MacLow</span></code>
+object in the WifiNetDevice.</p>
+<p>There are currently two implementations of the <code class="docutils literal notranslate"><span class="pre">WifiPhy</span></code>: the
+<code class="docutils literal notranslate"><span class="pre">ns3::YansWifiPhy</span></code> and the <code class="docutils literal notranslate"><span class="pre">ns3::SpectrumWifiPhy</span></code>.  They each work in
+conjunction with three other objects:</p>
+<ul class="simple">
+<li><p><strong>WifiPhyStateHelper</strong>:  Maintains the PHY state machine</p></li>
+<li><p><strong>InterferenceHelper</strong>:  Tracks all packets observed on the channel</p></li>
+<li><p><strong>ErrorModel</strong>:  Computes a probability of error for a given SNR</p></li>
+</ul>
+<div class="section" id="yanswifiphy-and-wifiphystatehelper">
+<h4>YansWifiPhy and WifiPhyStateHelper<a class="headerlink" href="#yanswifiphy-and-wifiphystatehelper" title="Permalink to this headline">¶</a></h4>
+<p>Class <code class="docutils literal notranslate"><span class="pre">ns3::YansWifiPhy</span></code> is responsible for taking packets passed to
+it from the MAC (the <code class="docutils literal notranslate"><span class="pre">ns3::MacLow</span></code> object) and sending them onto the
+<code class="docutils literal notranslate"><span class="pre">ns3::YansWifiChannel</span></code> to which it is attached.  It is also responsible
+to receive packets from that channel, and, if reception is deemed to have
+been successful, to pass them up to the MAC.</p>
+<p>The energy of the signal intended to be received is
+calculated from the transmission power and adjusted based on the Tx gain
+of the transmitter, Rx gain of the receiver, and any path loss propagation
+model in effect.</p>
+<p>Class <code class="docutils literal notranslate"><span class="pre">ns3::WifiPhyStateHelper</span></code> manages the state machine of the PHY
+layer, and allows other objects to hook as <em>listeners</em> to monitor PHY
+state.  The main use of listeners is for the MAC layer to know when
+the PHY is busy or not (for transmission and collision avoidance).</p>
+<p>The PHY layer can be in one of six states:</p>
+<ol class="arabic simple">
+<li><p>TX: the PHY is currently transmitting a signal on behalf of its associated
+MAC</p></li>
+<li><p>RX: the PHY is synchronized on a signal and is waiting until it has received
+its last bit to forward it to the MAC.</p></li>
+<li><p>IDLE: the PHY is not in the TX, RX, or CCA BUSY states.</p></li>
+<li><p>CCA Busy: the PHY is not in TX or RX state but the measured energy is higher than the energy detection threshold.</p></li>
+<li><p>SWITCHING: the PHY is switching channels.</p></li>
+<li><p>SLEEP: the PHY is in a power save mode and cannot send nor receive frames.</p></li>
+</ol>
+<p>Packet reception works as follows.  For <code class="docutils literal notranslate"><span class="pre">YansWifiPhy</span></code>, most of the logic
+is implemented in the <code class="docutils literal notranslate"><span class="pre">WifiPhy</span></code> base class.  The <code class="docutils literal notranslate"><span class="pre">YansWifiChannel</span></code> calls
+<code class="docutils literal notranslate"><span class="pre">WifiPhy::StartReceivePreamble</span> <span class="pre">()</span></code> to start packet reception, but first
+there is a check of the packet’s notional signal power level against a
+threshold value stored in the attribute <code class="docutils literal notranslate"><span class="pre">WifiPhy::RxSensitivity</span></code>.  Any
+packet with a power lower than RxSensitivity will be dropped with no
+further processing.  The default value is -101 dBm, which is the thermal
+noise floor for 20 MHz signal at room temperature.  The purpose of this
+attribute is two-fold:  1) very weak signals that will not affect the
+outcome will otherwise consume simulation memory and event processing, so
+they are discarded, and 2) this value can be adjusted upwards to function as
+a basic carrier sense threshold limitation for experiments involving
+spatial reuse considerations.  Users are cautioned about the behavior of
+raising this threshold; namely, that all packets with power below this
+threshold will be discarded upon reception.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">StartReceivePreamble</span> <span class="pre">()</span></code>, the packet is immediately added
+to the interference helper for signal-to-noise
+tracking, and then further reception steps are decided upon the state of
+the PHY.  In the case that the PHY is transmitting, for instance, the
+packet will be dropped.  If the PHY is IDLE, or if the PHY is receiving and
+an optional FrameCaptureModel is being used (and the packet is within
+the capture window), then <code class="docutils literal notranslate"><span class="pre">WifiPhy::StartRx</span> <span class="pre">()</span></code> is called next.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">WifiPhy::StartRx</span> <span class="pre">()</span></code> will typically schedule an event,
+<code class="docutils literal notranslate"><span class="pre">WifiPhy::StartReceiveHeader</span> <span class="pre">()</span></code>, to occur at
+the notional end of the first OFDM symbol, to check whether the preamble
+has been detected.  As of revisions to the model in ns-3.30, any state
+machine transitions from IDLE state are suppressed until after the preamble
+detection event.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">StartReceiveHeader</span> <span class="pre">()</span></code> method will check, with a preamble detection
+model, whether the signal is strong enough to be received, and if so,
+an event <code class="docutils literal notranslate"><span class="pre">WifiPhy::EndReceive</span> <span class="pre">()</span></code> is scheduled for the end of reception,
+and the PHY is put into the RX state.  Currently, there is only a
+simple threshold-based preamble detection model in ns-3,
+called <code class="docutils literal notranslate"><span class="pre">ThresholdPreambleDetectionModel</span></code>.  If there is no preamble detection
+model, the preamble is assumed to have been detected.
+It is important to note that, starting with the ns-3.30 release, the default
+in the WifiPhyHelper is to add the <code class="docutils literal notranslate"><span class="pre">ThresholdPreambleDetectionModel</span></code> with
+a threshold RSSI of -82 dBm, and a threshold SNR of 4 dB.  Both the RSSI
+and SNR must be above these respective values for the preamble to be
+successfully detected.  The default sensitivity has been reduced in ns-3.30
+compared with that of previous releases, so some packet receptions that were
+previously successful will now fail on this check.  More details on the
+modeling behind this change are provided in <a class="reference internal" href="wifi-references.html#lanante2019" id="id3"><span>[lanante2019]</span></a>.</p>
+<p>In a real system, the <code class="docutils literal notranslate"><span class="pre">EndReceive</span> <span class="pre">()</span></code> time would
+not be determined until later when the PHY headers are successfully decoded,
+but this ns-3 model has the available information at the start of the
+packet to schedule this.  The second event to schedule is
+<code class="docutils literal notranslate"><span class="pre">StartReceivePayload</span> <span class="pre">()</span></code> for the time at which the PHY headers
+have been received and the payload is about to start.</p>
+<p>The next event at <code class="docutils literal notranslate"><span class="pre">StartReceivePayload</span> <span class="pre">()</span></code> checks, using the interference
+helper and error model, whether the header was successfully decoded, and if so,
+a <code class="docutils literal notranslate"><span class="pre">PhyRxPayloadBegin</span></code> callback (equivalent to the PHY-RXSTART primitive)
+is triggered.
+The PHY header is often transmitted
+at a lower modulation rate than is the payload.  The portion of the packet
+corresponding to the PHY header is evaluated for probability of error
+based on the observed SNR.  The InterferenceHelper object returns a value
+for “probability of error (PER)” for this header based on the SNR that has
+been tracked by the InterferenceHelper.  The <code class="docutils literal notranslate"><span class="pre">YansWifiPhy</span></code> then draws
+a random number from a uniform distribution and compares it against the
+PER and decides success or failure.  The process is again repeated after
+the payload has been received (possibly with a different error model
+applied for the different modulation).  If both the header and payload
+are successfully received, the packet is passed up to the <code class="docutils literal notranslate"><span class="pre">MacLow</span></code> object.</p>
+<p>If the header is determined to have errors, then a “PlcpSuccess” flag is
+set for future reference, but the <code class="docutils literal notranslate"><span class="pre">EndReceive</span> <span class="pre">()</span></code> is not cancelled and
+the PHY stays in RX state; upon the <code class="docutils literal notranslate"><span class="pre">EndReceive</span> <span class="pre">()</span></code> event, the packet
+will be considered errored in this case regardless of the payload reception,
+based on the PlcpSuccess flag.</p>
+<p>Even if packet objects received by the PHY are not part of the reception
+process, they are tracked by the InterferenceHelper object for purposes
+of SINR computation and making clear channel assessment decisions.
+If, in the course of reception, a packet is errored or dropped due to
+the PHY being in a state in which it cannot receive a packet, the packet
+is added to the interference helper, and the aggregate of the energy of
+all such signals is compared against an energy detection threshold to
+determine whether the PHY should enter a CCA_BUSY state.
+The <code class="docutils literal notranslate"><span class="pre">WifiPhy::CcaEdThreshold</span></code> attribute
+corresponds to what the standard calls the “ED threshold” for CCA Mode 1.
+In section 16.4.8.5 in the 802.11-2012 standard: “CCA Mode 1: Energy above
+threshold. CCA shall report a busy medium upon detection of any energy above
+the ED threshold.” By default, this value is set to the -62 dBm level specified
+in the standard for 20 MHz channels. When using <code class="docutils literal notranslate"><span class="pre">YansWifiPhy</span></code>, there are no
+non-Wi-Fi signals, so it is unlikely that this attribute would play much of a
+role in Yans wifi models if left at the default value, but if there is a strong
+Wi-Fi signal that is not otherwise being received by the model, it has
+the possibility to raise the CCA_BUSY while the overall energy exceeds
+this threshold.</p>
+<p>The above describes the case in which the packet is a single MPDU.  For
+more recent Wi-Fi standards using MPDU aggregation, each individual MPDU
+in the aggregate is sent as a single <code class="docutils literal notranslate"><span class="pre">ns3::Packet</span></code>, and the logic in
+the <code class="docutils literal notranslate"><span class="pre">WifiPhy</span></code> is a bit different than the above for handling such
+MPDUs (MPDUs after the first arrive without a preamble and header).</p>
+</div>
+<div class="section" id="interferencehelper">
+<h4>InterferenceHelper<a class="headerlink" href="#interferencehelper" title="Permalink to this headline">¶</a></h4>
+<p>The InterferenceHelper is an object that tracks all incoming packets and
+calculates probability of error values for packets being received, and
+also evaluates whether energy on the channel rises above the CCA
+threshold.</p>
+<p>The basic operation of probability of error calculations is shown in Figure
+<a class="reference internal" href="#snir"><span class="std std-ref">SNIR function over time.</span></a>.  Packets are represented as bits (not symbols) in the <em>ns-3</em>
+model, and the InterferenceHelper breaks the packet into one or more
+“chunks”, each with a different signal to noise (and interference) ratio
+(SNIR).  Each chunk is separately evaluated by asking for the probability
+of error for a given number of bits from the error model in use.  The
+InterferenceHelper builds an aggregate “probability of error” value
+based on these chunks and their duration, and returns this back to
+the <code class="docutils literal notranslate"><span class="pre">YansWifiPhy</span></code> for a reception decision.</p>
+<div class="figure align-default" id="id32">
+<span id="snir"></span><img alt="_images/snir.png" src="_images/snir.png" />
+<p class="caption"><span class="caption-text"><em>SNIR function over time.</em></span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
+</div>
+<p>From the SNIR function we can derive the Bit Error Rate (BER) and Packet
+Error Rate (PER) for
+the modulation and coding scheme being used for the transmission.</p>
+</div>
+<div class="section" id="errormodel">
+<h4>ErrorModel<a class="headerlink" href="#errormodel" title="Permalink to this headline">¶</a></h4>
+<p>The error models are described in more detail in outside references.  Please refer to <a class="reference internal" href="wifi-references.html#pei80211ofdm" id="id4"><span>[pei80211ofdm]</span></a>, <a class="reference internal" href="wifi-references.html#pei80211b" id="id5"><span>[pei80211b]</span></a>, <a class="reference internal" href="wifi-references.html#lacage2006yans" id="id6"><span>[lacage2006yans]</span></a>, <a class="reference internal" href="wifi-references.html#haccoun" id="id7"><span>[Haccoun]</span></a> and <a class="reference internal" href="wifi-references.html#frenger" id="id8"><span>[Frenger]</span></a> for a detailed description of the available BER/PER models.</p>
+<p>The current <em>ns-3</em> error rate models are for additive white gaussian
+noise channels (AWGN) only; any potential fast fading effects are not modeled.</p>
+<p>The original error rate model was called the <code class="docutils literal notranslate"><span class="pre">ns3::YansErrorRateModel</span></code> and
+was based on analytical results.  For 802.11b modulations, the 1 Mbps mode
+is based on DBPSK. BER is from equation 5.2-69 from <a class="reference internal" href="wifi-references.html#proakis2001" id="id9"><span>[proakis2001]</span></a>.
+The 2 Mbps model is based on DQPSK. Equation 8 of <a class="reference internal" href="wifi-references.html#ferrari2004" id="id10"><span>[ferrari2004]</span></a>.
+More details are provided in <a class="reference internal" href="wifi-references.html#lacage2006yans" id="id11"><span>[lacage2006yans]</span></a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ns3::NistErrorRateModel</span></code> was later added and became the <em>ns-3</em> default.
+The model was largely aligned with the previous <code class="docutils literal notranslate"><span class="pre">ns3::YansErrorRateModel</span></code>
+for DSSS modulations 1 Mbps and 2 Mbps, but the 5.5 Mbps and 11 Mbps models
+were re-based on equations (17) and (18) from <a class="reference internal" href="wifi-references.html#pursley2009" id="id12"><span>[pursley2009]</span></a>.
+For OFDM modulations, newer results were
+obtained based on work previously done at NIST <a class="reference internal" href="wifi-references.html#miller2003" id="id13"><span>[miller2003]</span></a>.  The results
+were also compared against the CMU wireless network emulator, and details
+of the validation are provided in <a class="reference internal" href="wifi-references.html#pei80211ofdm" id="id14"><span>[pei80211ofdm]</span></a>.  Since OFDM modes use
+hard-decision of punctured codes, the coded BER is calculated using
+Chernoff bounds.</p>
+<p>The 802.11b model was split from the OFDM model when the NIST error rate
+model was added, into a new model called DsssErrorRateModel.</p>
+<p>Furthermore, the 5.5 Mbps and 11 Mbps models for 802.11b rely on library
+methods implemented in the GNU Scientific Library (GSL).  The Waf build
+system tries to detect whether the host platform has GSL installed; if so,
+it compiles in the newer models from <a class="reference internal" href="wifi-references.html#pursley2009" id="id15"><span>[pursley2009]</span></a> for 5.5 Mbps and 11 Mbps;
+if not, it uses a backup model derived from Matlab simulations.</p>
+<p>As a result, there are three error models:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ns3::DsssErrorRateModel</span></code>:  contains models for 802.11b modes.  The
+802.11b 1 Mbps and 2 Mbps error models are based on classical modulation
+analysis.  If GSL is installed, the 5.5 Mbps and 11 Mbps from
+<a class="reference internal" href="wifi-references.html#pursley2009" id="id16"><span>[pursley2009]</span></a> are used; otherwise, a backup Matlab model is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ns3::NistErrorRateModel</span></code>: is the default for OFDM modes and reuses
+<code class="docutils literal notranslate"><span class="pre">ns3::DsssErrorRateModel</span></code> for 802.11b modes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ns3::YansErrorRateModel</span></code>: is the legacy for OFDM modes and reuses
+<code class="docutils literal notranslate"><span class="pre">ns3::DsssErrorRateModel</span></code> for 802.11b modes.</p></li>
+</ol>
+<p>Users should select either Nist or Yans models for OFDM (Nist is default),
+and Dsss will be used in either case for 802.11b.</p>
+</div>
+<div class="section" id="spectrumwifiphy">
+<h4>SpectrumWifiPhy<a class="headerlink" href="#spectrumwifiphy" title="Permalink to this headline">¶</a></h4>
+<p>This section describes the implementation of the <code class="docutils literal notranslate"><span class="pre">SpectrumWifiPhy</span></code>
+class that can be found in <code class="docutils literal notranslate"><span class="pre">src/wifi/model/spectrum-wifi-phy.{cc,h}</span></code>.</p>
+<p>The implementation also makes use of additional classes found in the
+same directory:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">wifi-spectrum-phy-interface.{cc,h}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wifi-spectrum-signal-parameters.{cc,h}</span></code></p></li>
+</ul>
+<p>and classes found in the spectrum module:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">wifi-spectrum-value-helper.{cc,h}</span></code></p></li>
+</ul>
+<p>The current <code class="docutils literal notranslate"><span class="pre">SpectrumWifiPhy</span></code> class
+reuses the existing interference manager and error rate models originally
+built for YansWifiPhy, but allows, as a first step, foreign (non Wi-Fi)
+signals to be treated as additive noise.</p>
+<p>Two main changes were needed to adapt the Spectrum framework to Wi-Fi.
+First, the physical layer must send signals compatible with the
+Spectrum channel framework, and in particular, the
+<code class="docutils literal notranslate"><span class="pre">MultiModelSpectrumChannel</span></code> that allows signals from different
+technologies to coexist.  Second, the InterferenceHelper must be
+extended to support the insertion of non-Wi-Fi signals and to
+add their received power to the noise, in the same way that
+unintended Wi-Fi signals (perhaps from a different SSID or arriving
+late from a hidden node) are added to the noise.</p>
+<p>Unlike YansWifiPhy, where there are no foreign signals, CCA BUSY state
+will be raised for foreign signals that are higher than CcaEdThreshold
+(see section 16.4.8.5 in the 802.11-2012 standard for definition of
+CCA Mode 1).  The attribute <code class="docutils literal notranslate"><span class="pre">WifiPhy::CcaEdThreshold</span></code> therefore
+potentially plays a larger role in this model than in the <code class="docutils literal notranslate"><span class="pre">YansWifiPhy</span></code>
+model.</p>
+<p>To support the Spectrum channel, the <code class="docutils literal notranslate"><span class="pre">YansWifiPhy</span></code> transmit and receive methods
+were adapted to use the Spectrum channel API.  This required developing
+a few <code class="docutils literal notranslate"><span class="pre">SpectrumModel</span></code>-related classes.  The class
+<code class="docutils literal notranslate"><span class="pre">WifiSpectrumValueHelper</span></code> is used to create Wi-Fi signals with the
+spectrum framework and spread their energy across the bands. The
+spectrum is sub-divided into sub-bands (the width of an OFDM
+subcarrier, which depends on the technology). The power allocated to a particular channel
+is spread across the sub-bands roughly according to how power would
+be allocated to sub-carriers. Adjacent channels are models by the use of
+OFDM transmit spectrum masks as defined in the standards.</p>
+<p>To support an easier user configuration experience, the existing
+YansWifi helper classes (in <code class="docutils literal notranslate"><span class="pre">src/wifi/helper</span></code>) were copied and
+adapted to provide equivalent SpectrumWifi helper classes.</p>
+<p>Finally, for reasons related to avoiding C++ multiple inheritance
+issues, a small forwarding class called <code class="docutils literal notranslate"><span class="pre">WifiSpectrumPhyInterface</span></code>
+was inserted as a shim between the <code class="docutils literal notranslate"><span class="pre">SpectrumWifiPhy</span></code> and the
+Spectrum channel.  The <code class="docutils literal notranslate"><span class="pre">WifiSpectrumPhyInterface</span></code> calls a different
+<code class="docutils literal notranslate"><span class="pre">SpectrumWifiPhy::StartRx</span> <span class="pre">()</span></code> method to start the reception process.
+This method performs the check of the signal power against the
+<code class="docutils literal notranslate"><span class="pre">WifiPhy::RxSensitivity</span></code> attribute and discards weak signals, and
+also checks if the signal is a Wi-Fi signal; non-Wi-Fi signals are added
+to the InterferenceHelper and can raise CCA_BUSY but are not further processed
+in the reception chain.   After this point, valid Wi-Fi signals cause
+<code class="docutils literal notranslate"><span class="pre">WifiPhy::StartReceivePreamble</span></code> to be called, and the processing continues
+as described above.</p>
+</div>
+</div>
+<div class="section" id="the-mac-model">
+<h3>The MAC model<a class="headerlink" href="#the-mac-model" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="infrastructure-association">
+<h4>Infrastructure association<a class="headerlink" href="#infrastructure-association" title="Permalink to this headline">¶</a></h4>
+<p>Association in infrastructure mode is a high-level MAC function.
+Either active probing or passive scanning is used (default is passive scan).
+At the start of the simulation, Wi-Fi network devices configured as
+STA will attempt to scan the channel. Depends on whether passive or active
+scanning is selected, STA will attempt to gather beacons, or send a probe
+request and gather probe responses until the respective timeout occurs. The
+end result will be a list of candidate AP to associate to. STA will then try
+to associate to the best AP (i.e., best SNR).</p>
+<p>If association is rejected by the AP for some reason, the STA will try to
+associate to the next best AP until the candidate list is exhausted which
+then sends STA to ‘REFUSED’ state. If this occurs, the simulation user will
+need to force reassociation retry in some way, perhaps by changing
+configuration (i.e. the STA will not persistently try to associate upon a
+refusal).</p>
+<p>When associated, if the configuration is changed by the simulation user,
+the STA will try to reassociate with the existing AP.</p>
+<p>If the number of missed beacons exceeds the threshold, the STA will notify
+the rest of the device that the link is down (association is lost) and
+restart the scanning process. Note that this can also happen when an
+association request fails without explicit refusal (i.e., the AP fails to
+respond to association request).</p>
+</div>
+<div class="section" id="roaming">
+<h4>Roaming<a class="headerlink" href="#roaming" title="Permalink to this headline">¶</a></h4>
+<p>Roaming at layer-2 (i.e. a STA migrates its association from one AP to
+another) is not presently supported. Because of that, the Min/Max channel
+dwelling time implementation as described by the IEEE 802.11 standard
+<a class="reference internal" href="wifi-references.html#ieee80211" id="id17"><span>[ieee80211]</span></a> is also omitted, since it is only meaningful on the context
+of channel roaming.</p>
+</div>
+<div class="section" id="channel-access">
+<h4>Channel access<a class="headerlink" href="#channel-access" title="Permalink to this headline">¶</a></h4>
+<p>The 802.11 Distributed Coordination Function is used to calculate when to grant
+access to the transmission medium. While implementing the DCF would have been
+particularly easy if we had used a recurring timer that expired every slot, we
+chose to use the method described in <a class="reference internal" href="wifi-references.html#ji2004sslswn" id="id18"><span>[ji2004sslswn]</span></a>
+where the backoff timer duration is lazily calculated whenever needed since it
+is claimed to have much better performance than the simpler recurring timer
+solution.</p>
+<p>The DCF basic access is described in section 10.3.4.2 of <a class="reference internal" href="wifi-references.html#ieee80211-2016" id="id19"><span>[ieee80211-2016]</span></a>.</p>
+<ul class="simple">
+<li><p>“A STA may transmit an MPDU when it is operating under the DCF access method
+[..] when the STA determines that the medium is idle when a frame is queued
+for transmission, and remains idle for a period of a DIFS, or an EIFS
+(10.3.2.3.7) from the end of the immediately preceding medium-busy event,
+whichever is the greater, and the backoff timer is zero. Otherwise the random
+backoff procedure described in 10.3.4.3 shall be followed.”</p></li>
+</ul>
+<p>Thus, a station is allowed not to invoke the backoff procedure if all of the
+following conditions are met:</p>
+<ul class="simple">
+<li><p>the medium is idle when a frame is queued for transmission</p></li>
+<li><p>the medium remains idle until the most recent of these two events: a DIFS
+from the time when the frame is queued for transmission; an EIFS from the
+end of the immediately preceding medium-busy event (associated with the
+reception of an erroneous frame)</p></li>
+<li><p>the backoff timer is zero</p></li>
+</ul>
+<p>The backoff procedure of DCF is described in section 10.3.4.3 of <a class="reference internal" href="wifi-references.html#ieee80211-2016" id="id20"><span>[ieee80211-2016]</span></a>.</p>
+<ul class="simple">
+<li><p>“A STA shall invoke the backoff procedure to transfer a frame
+when finding the medium busy as indicated by either the physical or
+virtual CS mechanism.”</p></li>
+<li><p>“A backoff procedure shall be performed immediately after the end of
+every transmission with the More Fragments bit set to 0 of an MPDU of
+type Data, Management, or Control with subtype PS-Poll, even if no
+additional transmissions are currently queued.”</p></li>
+</ul>
+<p>The EDCA backoff procedure is slightly different than the DCF backoff procedure
+and is described in section 10.22.2.2 of <a class="reference internal" href="wifi-references.html#ieee80211-2016" id="id21"><span>[ieee80211-2016]</span></a>. The backoff procedure
+shall be invoked by an EDCAF when any of the following events occur:</p>
+<ul class="simple">
+<li><p>a frame is “queued for transmission such that one of the transmit queues
+associated with that AC has now become non-empty and any other transmit queues
+associated with that AC are empty; the medium is busy on the primary channel”</p></li>
+<li><p>“The transmission of the MPDU in the final PPDU transmitted by the TXOP holder
+during the TXOP for that AC has completed and the TXNAV timer has expired, and
+the AC was a primary AC”</p></li>
+<li><p>“The transmission of an MPDU in the initial PPDU of a TXOP fails [..] and the
+AC was a primary AC”</p></li>
+<li><p>“The transmission attempt collides internally with another EDCAF of an AC that
+has higher priority”</p></li>
+<li><p>(optionally) “The transmission by the TXOP holder of an MPDU in a non-initial
+PPDU of a TXOP fails”</p></li>
+</ul>
+<p>Additionally, section 10.22.2.4 of <a class="reference internal" href="wifi-references.html#ieee80211-2016" id="id22"><span>[ieee80211-2016]</span></a> introduces the notion of
+slot boundary, which basically occurs following SIFS + AIFSN * slotTime of idle
+medium after the last busy medium that was the result of a reception of a frame
+with a correct FCS or following EIFS - DIFS + AIFSN * slotTime + SIFS of idle
+medium after the last indicated busy medium that was the result of a frame reception
+that has resulted in FCS error, or following a slotTime of idle medium occurring
+immediately after any of these conditions.</p>
+<p>On these specific slot boundaries, each EDCAF shall make a determination to perform
+one and only one of the following functions:</p>
+<ul class="simple">
+<li><p>Decrement the backoff timer.</p></li>
+<li><p>Initiate the transmission of a frame exchange sequence.</p></li>
+<li><p>Invoke the backoff procedure due to an internal collision.</p></li>
+<li><p>Do nothing.</p></li>
+</ul>
+<p>Thus, if an EDCAF decrements its backoff timer on a given slot boundary and, as
+a result, the backoff timer has a zero value, the EDCAF cannot immediately
+transmit, but it has to wait for another slotTime of idle medium before transmission
+can start.</p>
+<p>The higher-level MAC functions are implemented in a set of other C++ classes and
+deal with:</p>
+<ul class="simple">
+<li><p>packet fragmentation and defragmentation,</p></li>
+<li><p>use of the RTS/CTS protocol,</p></li>
+<li><p>rate control algorithm,</p></li>
+<li><p>connection and disconnection to and from an Access Point,</p></li>
+<li><p>the MAC transmission queue,</p></li>
+<li><p>beacon generation,</p></li>
+<li><p>MSDU aggregation,</p></li>
+<li><p>etc.</p></li>
+</ul>
+</div>
+<div class="section" id="rate-control-algorithms">
+<h4>Rate control algorithms<a class="headerlink" href="#rate-control-algorithms" title="Permalink to this headline">¶</a></h4>
+<p>Multiple rate control algorithms are available in <em>ns-3</em>.
+Some rate control algorithms are modeled after real algorithms used in real devices;
+others are found in literature.
+The following rate control algorithms can be used by the MAC low layer:</p>
+<p>Algorithms found in real devices:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ArfWifiManager</span></code> (default for <code class="docutils literal notranslate"><span class="pre">WifiHelper</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OnoeWifiManager</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ConstantRateWifiManager</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MinstrelWifiManager</span></code></p></li>
+</ul>
+<p>Algorithms in literature:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IdealWifiManager</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AarfWifiManager</span></code> <a class="reference internal" href="wifi-references.html#lacage2004aarfamrr" id="id23"><span>[lacage2004aarfamrr]</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AmrrWifiManager</span></code> <a class="reference internal" href="wifi-references.html#lacage2004aarfamrr" id="id24"><span>[lacage2004aarfamrr]</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CaraWifiManager</span></code> <a class="reference internal" href="wifi-references.html#kim2006cara" id="id25"><span>[kim2006cara]</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RraaWifiManager</span></code> <a class="reference internal" href="wifi-references.html#wong2006rraa" id="id26"><span>[wong2006rraa]</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AarfcdWifiManager</span></code> <a class="reference internal" href="wifi-references.html#maguolo2008aarfcd" id="id27"><span>[maguolo2008aarfcd]</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ParfWifiManager</span></code> <a class="reference internal" href="wifi-references.html#akella2007parf" id="id28"><span>[akella2007parf]</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AparfWifiManager</span></code> <a class="reference internal" href="wifi-references.html#chevillat2005aparf" id="id29"><span>[chevillat2005aparf]</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="constantratewifimanager">
+<h4>ConstantRateWifiManager<a class="headerlink" href="#constantratewifimanager" title="Permalink to this headline">¶</a></h4>
+<p>The constant rate control algorithm always uses the same
+transmission mode for every packet. Users can set a desired
+‘DataMode’ for all ‘unicast’ packets and ‘ControlMode’ for all
+‘request’ control packets (e.g. RTS).</p>
+<p>To specify different data mode for non-unicast packets, users
+must set the ‘NonUnicastMode’ attribute of the
+WifiRemoteStationManager.  Otherwise, WifiRemoteStationManager
+will use a mode with the lowest rate for non-unicast packets.</p>
+<p>The 802.11 standard is quite clear on the rules for selection
+of transmission parameters for control response frames (e.g.
+CTS and ACK).  <em>ns-3</em> follows the standard and selects the rate
+of control response frames from the set of basic rates or
+mandatory rates. This means that control response frames may
+be sent using different rate even though the ConstantRateWifiManager
+is used.  The ControlMode attribute of the ConstantRateWifiManager
+is used for RTS frames only.  The rate of CTS and ACK frames are
+selected according to the 802.11 standard.  However, users can still
+manually add WifiMode to the basic rate set that will allow control
+response frames to be sent at other rates.  Please consult the
+<a class="reference external" href="https://www.nsnam.org/wiki/HOWTO_add_basic_rates_to_802.11">project wiki</a> on how to do this.</p>
+<p>Available attributes:</p>
+<ul class="simple">
+<li><p>DataMode (default WifiMode::OfdmRate6Mbps): specify a mode for
+all non-unicast packets</p></li>
+<li><p>ControlMode (default WifiMode::OfdmRate6Mbps): specify a mode for
+all ‘request’ control packets</p></li>
+</ul>
+</div>
+<div class="section" id="idealwifimanager">
+<h4>IdealWifiManager<a class="headerlink" href="#idealwifimanager" title="Permalink to this headline">¶</a></h4>
+<p>The ideal rate control algorithm selects the best
+mode according to the SNR of the previous packet sent.
+Consider node <em>A</em> sending a unicast packet to node <em>B</em>.
+When <em>B</em> successfully receives the packet sent from <em>A</em>,
+<em>B</em> records the SNR of the received packet into a <code class="docutils literal notranslate"><span class="pre">ns3::SnrTag</span></code>
+and adds the tag to an ACK back to <em>A</em>.
+By doing this, <em>A</em> is able to learn the SNR of the packet sent to <em>B</em>
+using an out-of-band mechanism (thus the name ‘ideal’).
+<em>A</em> then uses the SNR to select a transmission mode based
+on a set of SNR thresholds, which was built from a target BER and
+mode-specific SNR/BER curves.</p>
+<p>Available attribute:</p>
+<ul class="simple">
+<li><p>BerThreshold (default 10e-6): The maximum Bit Error Rate
+that is used to calculate the SNR threshold for each mode.</p></li>
+</ul>
+</div>
+<div class="section" id="minstrelwifimanager">
+<h4>MinstrelWifiManager<a class="headerlink" href="#minstrelwifimanager" title="Permalink to this headline">¶</a></h4>
+<p>The minstrel rate control algorithm is a rate control algorithm originated from
+madwifi project.  It is currently the default rate control algorithm of the Linux kernel.</p>
+<p>Minstrel keeps track of the probability of successfully sending a frame of each available rate.
+Minstrel then calculates the expected throughput by multiplying the probability with the rate.
+This approach is chosen to make sure that lower rates are not selected in favor of the higher
+rates (since lower rates are more likely to have higher probability).</p>
+<p>In minstrel, roughly 10 percent of transmissions are sent at the so-called lookaround rate.
+The goal of the lookaround rate is to force minstrel to try higher rate than the currently used rate.</p>
+<p>For a more detailed information about minstrel, see <a class="reference internal" href="wifi-references.html#linuxminstrel" id="id30"><span>[linuxminstrel]</span></a>.</p>
+</div>
+<div class="section" id="ack-policy-selection">
+<h4>Ack policy selection<a class="headerlink" href="#ack-policy-selection" title="Permalink to this headline">¶</a></h4>
+<p>Since the introduction of the IEEE 802.11e amendment, multiple acknowledgment policies
+are available, which are coded in the Ack Policy subfield in the QoS Control field of
+QoS Data frames (see Section 9.2.4.5.4 of the IEEE 802.11-2016 standard). For instance,
+an A-MPDU can be sent with the <em>Normal Ack or Implicit Block Ack Request</em> policy, in which
+case the receiver replies with a Normal Ack or a Block Ack depending on whether the A-MPDU
+contains a single MPDU or multiple MPDUs, or with the <em>Block Ack</em> policy, in which case
+the receiver waits to receive a Block Ack Request in the future to which it replies with
+a Block Ack.</p>
+<p><code class="docutils literal notranslate"><span class="pre">WifiAckPolicySelector</span></code> is the abstract base class introduced to provide an interface
+for multiple ack policy selectors. Currently, the default ack policy selector is
+the <code class="docutils literal notranslate"><span class="pre">ConstantWifiAckPolicySelector</span></code>.</p>
+</div>
+<div class="section" id="constantwifiackpolicyselector">
+<h4>ConstantWifiAckPolicySelector<a class="headerlink" href="#constantwifiackpolicyselector" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">ConstantWifiAckPolicySelector</span></code> allows to determine which acknowledgment policy
+to use depending on the value of its attributes:</p>
+<ul class="simple">
+<li><p>UseExplicitBar: used to determine the ack policy to use when a response is needed from
+the recipient and the current transmission includes multiple frames (A-MPDU) or there are
+frames transmitted previously for which an acknowledgment is needed. If this attribute is
+true, the <em>Block Ack</em> policy is used. Otherwise, the <em>Implicit Block Ack Request</em> policy is used.</p></li>
+<li><p>BaThreshold: used to determine when the originator of a Block Ack agreement needs to
+request a response from the recipient. A value of zero means that a response is requested
+at every frame transmission. Otherwise, a non-zero value (less than or equal to 1) means
+that a response is requested upon transmission of a frame whose sequence number is distant
+at least BaThreshold multiplied by the transmit window size from the starting sequence
+number of the transmit window.</p></li>
+</ul>
+</div>
+<div class="section" id="ax-obss-pd-spatial-reuse">
+<h4>802.11ax OBSS PD spatial reuse<a class="headerlink" href="#ax-obss-pd-spatial-reuse" title="Permalink to this headline">¶</a></h4>
+<p>802.11ax mode supports OBSS PD spatial reuse feature.
+OBSS PD stands for Overlapping Basic Service Set Preamble-Detection.
+OBSS PD is an 802.11ax specific feature that allows a STA, under specific conditions,
+to ignore an inter-BSS PPDU.</p>
+</div>
+<div class="section" id="obss-pd-algorithm">
+<h4>OBSS PD Algorithm<a class="headerlink" href="#obss-pd-algorithm" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">ObssPdAlgorithm</span></code> is the base class of OBSS PD algorithms.
+It implements the common functionalities. First, it makes sure the necessary callbacks are setup.
+Second, when a PHY reset is requested by the algorithm, it performs the computation to determine the TX power
+restrictions and informs the PHY object.</p>
+<p>The PHY keeps tracks of incoming requests from the MAC to get access to the channel.
+If a request is received and if PHY reset(s) indicating TX power limitations occured
+before a packet was transmitted, the next packet to be transmitted will be sent with
+a reduced power. Otherwise, no TX power restrictions will be applied.</p>
+</div>
+<div class="section" id="constant-obss-pd-algorithm">
+<h4>Constant OBSS PD Algorithm<a class="headerlink" href="#constant-obss-pd-algorithm" title="Permalink to this headline">¶</a></h4>
+<p>Constant OBSS PD algorithm is a simple OBSS PD algorithm implemented in the <code class="docutils literal notranslate"><span class="pre">ConstantObssPdAlgorithm</span></code> class.</p>
+<p>Once a HE preamble and its header have been received by the PHY, <code class="docutils literal notranslate"><span class="pre">ConstantObssPdAlgorithm::</span>
+<span class="pre">ReceiveHeSig</span></code> is triggered.
+The algorithm then checks whether this is an OBSS frame by comparing its own BSS color with the BSS color of the received preamble.
+If this is an OBSS frame, it compares the received RSSI with its configured OBSS PD level value. The PHY then gets reset to IDLE
+state in case the received RSSI is lower than that constant OBSS PD level value, and is informed about a TX power restrictions.</p>
+<p>Note: since our model is based on a single threshold, the PHY only supports one restricted power level.</p>
+</div>
+<div class="section" id="modifying-wifi-model">
+<h4>Modifying Wifi model<a class="headerlink" href="#modifying-wifi-model" title="Permalink to this headline">¶</a></h4>
+<p>Modifying the default wifi model is one of the common tasks when performing research.
+We provide an overview of how to make changes to the default wifi model in this section.
+Depending on your goal, the common tasks are (in no particular order):</p>
+<ul class="simple">
+<li><p>Creating or modifying the default Wi-Fi frames/headers by making changes to <code class="docutils literal notranslate"><span class="pre">wifi-mac-header.*</span></code>.</p></li>
+<li><p>MAC low modification. For example, handling new/modified control frames (think RTS/CTS/ACK/Block ACK),
+making changes to two-way transaction/four-way transaction.  Users usually make changes to
+<code class="docutils literal notranslate"><span class="pre">mac-low.*</span></code> to accomplish this.  Handling of control frames is performed in
+<code class="docutils literal notranslate"><span class="pre">MacLow::ReceiveOk</span></code>.</p></li>
+<li><p>MAC high modification. For example, handling new management frames (think beacon/probe),
+beacon/probe generation.  Users usually make changes to <code class="docutils literal notranslate"><span class="pre">regular-wifi-mac.*</span></code>,
+<code class="docutils literal notranslate"><span class="pre">infrastructure-wifi-mac.*</span></code>,``sta-wifi-mac.*``, <code class="docutils literal notranslate"><span class="pre">ap-wifi-mac.*</span></code>, or <code class="docutils literal notranslate"><span class="pre">adhoc-wifi-mac.*</span></code> to accomplish this.</p></li>
+<li><p>Wi-Fi queue management.  The files <code class="docutils literal notranslate"><span class="pre">txop.*</span></code> and <code class="docutils literal notranslate"><span class="pre">qos-txop.*</span></code> are of interest for this task.</p></li>
+<li><p>Channel access management.  Users should modify the files <code class="docutils literal notranslate"><span class="pre">channel-access-manager.*</span></code>, which grant access to
+<code class="docutils literal notranslate"><span class="pre">Txop</span></code> and <code class="docutils literal notranslate"><span class="pre">QosTxop</span></code>.</p></li>
+<li><p>Fragmentation and RTS threholds are handled by Wi-Fi remote station manager.  Note that Wi-Fi remote
+station manager simply indicates if fragmentation and RTS are needed.  Fragmentation is handled by
+<code class="docutils literal notranslate"><span class="pre">Txop</span></code> or <code class="docutils literal notranslate"><span class="pre">QosTxop</span></code> while RTS/CTS transaction is handled by <code class="docutils literal notranslate"><span class="pre">MacLow</span></code>.</p></li>
+<li><p>Modifying or creating new rate control algorithms can be done by creating a new child class of Wi-Fi remote
+station manager or modifying the existing ones.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Design Documentation</a><ul>
+<li><a class="reference internal" href="#overview-of-the-model">Overview of the model</a><ul>
+<li><a class="reference internal" href="#mac-high-models">MAC high models</a></li>
+<li><a class="reference internal" href="#mac-low-layer">MAC low layer</a></li>
+<li><a class="reference internal" href="#phy-layer-models">PHY layer models</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scope-and-limitations">Scope and Limitations</a></li>
+<li><a class="reference internal" href="#design-details">Design Details</a><ul>
+<li><a class="reference internal" href="#wifiphy-and-related-models">WifiPhy and related models</a><ul>
+<li><a class="reference internal" href="#yanswifiphy-and-wifiphystatehelper">YansWifiPhy and WifiPhyStateHelper</a></li>
+<li><a class="reference internal" href="#interferencehelper">InterferenceHelper</a></li>
+<li><a class="reference internal" href="#errormodel">ErrorModel</a></li>
+<li><a class="reference internal" href="#spectrumwifiphy">SpectrumWifiPhy</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-mac-model">The MAC model</a><ul>
+<li><a class="reference internal" href="#infrastructure-association">Infrastructure association</a></li>
+<li><a class="reference internal" href="#roaming">Roaming</a></li>
+<li><a class="reference internal" href="#channel-access">Channel access</a></li>
+<li><a class="reference internal" href="#rate-control-algorithms">Rate control algorithms</a></li>
+<li><a class="reference internal" href="#constantratewifimanager">ConstantRateWifiManager</a></li>
+<li><a class="reference internal" href="#idealwifimanager">IdealWifiManager</a></li>
+<li><a class="reference internal" href="#minstrelwifimanager">MinstrelWifiManager</a></li>
+<li><a class="reference internal" href="#ack-policy-selection">Ack policy selection</a></li>
+<li><a class="reference internal" href="#constantwifiackpolicyselector">ConstantWifiAckPolicySelector</a></li>
+<li><a class="reference internal" href="#ax-obss-pd-spatial-reuse">802.11ax OBSS PD spatial reuse</a></li>
+<li><a class="reference internal" href="#obss-pd-algorithm">OBSS PD Algorithm</a></li>
+<li><a class="reference internal" href="#constant-obss-pd-algorithm">Constant OBSS PD Algorithm</a></li>
+<li><a class="reference internal" href="#modifying-wifi-model">Modifying Wifi model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="wifi.html"
+                        title="previous chapter">Wi-Fi Module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="wifi-user.html"
+                        title="next chapter">User Documentation</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/wifi-design.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="wifi-user.html" title="User Documentation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="wifi.html" title="Wi-Fi Module"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="wifi.html" >Wi-Fi Module</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

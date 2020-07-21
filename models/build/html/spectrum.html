@@ -1,0 +1,923 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Spectrum Module &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6LoWPAN: Transmission of IPv6 Packets over IEEE 802.15.4 Networks" href="sixlowpan.html" />
+    <link rel="prev" title="Propagation" href="propagation.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sixlowpan.html" title="6LoWPAN: Transmission of IPv6 Packets over IEEE 802.15.4 Networks"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="propagation.html" title="Propagation"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="spectrum-module">
+<span id="sec-spectrum-module"></span><h1>Spectrum Module<a class="headerlink" href="#spectrum-module" title="Permalink to this headline">¶</a></h1>
+<p>The Spectrum module aims at providing support for modeling the frequency-dependent
+aspects of communications in <em>ns-3</em>.
+The model was first introduced in
+<a class="reference internal" href="#baldo2009spectrum" id="id1"><span>[Baldo2009Spectrum]</span></a>, and has been enhanced and refined over the years.</p>
+<div class="figure align-center" id="id21">
+<span id="fig-spectrum-analyzer-example"></span><img alt="_images/spectrum-analyzer-example.png" src="_images/spectrum-analyzer-example.png" />
+<p class="caption"><span class="caption-text">Spectrogram produced by a spectrum analyzer in a scenario
+involving wifi signals interfered by a microwave oven, as simulated
+by the example <code class="docutils literal notranslate"><span class="pre">adhoc-aloha-ideal-phy-with-microwave-oven</span></code>.</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="model-description">
+<h2>Model Description<a class="headerlink" href="#model-description" title="Permalink to this headline">¶</a></h2>
+<p>The module provides:</p>
+<ul class="simple">
+<li><p>a set of classes for modeling signals and</p></li>
+<li><p>a Channel/PHY interface based on a power spectral density
+signal representation that is technology-independent</p></li>
+<li><p>two technology-independent Channel implementations based on the Channel/PHY interface</p></li>
+<li><p>a set of basic PHY model implementations based on the Channel/PHY interface</p></li>
+</ul>
+<p>The source code for the spectrum module is located at <code class="docutils literal notranslate"><span class="pre">src/spectrum</span></code>.</p>
+<div class="section" id="design">
+<h3>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="signal-model">
+<h4>Signal model<a class="headerlink" href="#signal-model" title="Permalink to this headline">¶</a></h4>
+<p>The signal model is implemented by the
+<code class="docutils literal notranslate"><span class="pre">SpectrumSignalParameters</span></code> class. This class provides the following
+information for a signal being transmitted/received by PHY devices:</p>
+<ul class="simple">
+<li><p>a reference to the transmitting PHY device</p></li>
+<li><p>a reference to the antenna model used by the transmitting PHY device
+to transmit this signal</p></li>
+<li><p>the duration of the signal</p></li>
+<li><p>its Power Spectral Density (PSD) of the signal, which is assumed to be constant for
+the duration of the signal.</p></li>
+</ul>
+<p>The PSD is represented as a set of discrete scalar values each
+corresponding to a certain subband in frequency. The set of frequency subbands
+to which the PSD refers to is defined by an instance of the
+<code class="docutils literal notranslate"><span class="pre">SpectrumModel</span></code> class. The PSD itself is implemented as an instance
+of the <code class="docutils literal notranslate"><span class="pre">SpectrumValue</span></code> class which contains a reference to the
+associated <code class="docutils literal notranslate"><span class="pre">SpectrumModel</span></code> class instance. The <code class="docutils literal notranslate"><span class="pre">SpectrumValue</span></code>
+class provides several arithmetic operators to allow to perform calculations
+with PSD instances. Additionally, the <code class="docutils literal notranslate"><span class="pre">SpectrumConverter</span></code> class
+provides means for the conversion of <code class="docutils literal notranslate"><span class="pre">SpectrumValue</span></code> instances from
+one <code class="docutils literal notranslate"><span class="pre">SpectrumModel</span></code> to another.</p>
+<p>For a more formal mathematical description of the signal model just
+described, the reader is referred to <a class="reference internal" href="#baldo2009spectrum" id="id2"><span>[Baldo2009Spectrum]</span></a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">SpectrumSignalParameters</span></code> class is meant to include only
+information that is valid for all signals; as such, it is not meant to
+be modified to add technology-specific information (such as type of
+modulation and coding schemes used, info on preambles and reference
+signals, etc). Instead, such information shall be put in a new class
+that inherits from <code class="docutils literal notranslate"><span class="pre">SpectrumSignalParameters</span></code> and extends it with
+any technology-specific information that is needed. This design
+is intended to model the fact that in the real world we have signals
+of different technologies being simultaneously transmitted and
+received over the air.</p>
+</div>
+<div class="section" id="channel-phy-interface">
+<h4>Channel/PHY interface<a class="headerlink" href="#channel-phy-interface" title="Permalink to this headline">¶</a></h4>
+<p>The spectrum Channel/PHY interface is defined by the base classes <code class="docutils literal notranslate"><span class="pre">SpectrumChannel</span></code>
+and <code class="docutils literal notranslate"><span class="pre">SpectrumPhy</span></code>. Their interaction simulates the transmission and
+reception of signals over the medium. The way this interaction works is depicted in <a class="reference internal" href="#fig-spectrum-channel-phy-interface"><span class="std std-ref">Sequence diagram showing the interaction between SpectrumPhy and SpectrumChannel</span></a>:</p>
+<div class="figure align-center" id="id22">
+<span id="fig-spectrum-channel-phy-interface"></span><img alt="_images/spectrum-channel-phy-interface.png" src="_images/spectrum-channel-phy-interface.png" />
+<p class="caption"><span class="caption-text">Sequence diagram showing the interaction between SpectrumPhy and SpectrumChannel</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="spectrum-channel-implementations">
+<h4>Spectrum Channel implementations<a class="headerlink" href="#spectrum-channel-implementations" title="Permalink to this headline">¶</a></h4>
+<p>The module provides two <code class="docutils literal notranslate"><span class="pre">SpectrumChannel</span></code> implementations:
+<code class="docutils literal notranslate"><span class="pre">SingleModelSpectrumChannel</span></code> and <code class="docutils literal notranslate"><span class="pre">MultiModelSpectrumChannel</span></code>. They
+both provide this functionality:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Propagation loss modeling, in two forms:</p>
+<ul>
+<li><p>you can plug models based on <code class="docutils literal notranslate"><span class="pre">PropagationLossModel</span></code> on these
+channels. Only linear models (where the loss value does not
+depend on the transmission power) can be used.
+These models are single-frequency in the sense that the loss value is
+applied equally to all components of the power spectral density.</p></li>
+<li><p>you can plug models based on <code class="docutils literal notranslate"><span class="pre">SpectrumPropagationLossModel</span></code> on these
+channels. These models can have frequency-dependent loss, i.e.,
+a separate loss value is calculated and applied to each component
+of the power spectral density.</p></li>
+</ul>
+</li>
+<li><p>Propagation delay modeling, by plugging a model based on
+<code class="docutils literal notranslate"><span class="pre">PropagationDelayModel</span></code>. The delay is independent of frequency and
+applied to the signal as a whole. Delay modeling is implemented by
+scheduling the <code class="docutils literal notranslate"><span class="pre">StartRx</span></code> event with a delay respect to the
+<code class="docutils literal notranslate"><span class="pre">StartTx</span></code> event.</p></li>
+</ul>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">SingleModelSpectrumChannel</span></code> and <code class="docutils literal notranslate"><span class="pre">MultiModelSpectrumChannel</span></code> are
+quite similar, the main difference is that
+<code class="docutils literal notranslate"><span class="pre">MultiModelSpectrumChannel</span></code> allows to use different
+<code class="docutils literal notranslate"><span class="pre">SpectrumModel</span></code> instances with the same channel instance, by
+automatically taking care of the conversion of PSDs among the
+different models.</p>
+</div>
+<div class="section" id="example-model-implementations">
+<span id="sec-example-model-implementations"></span><h4>Example model implementations<a class="headerlink" href="#example-model-implementations" title="Permalink to this headline">¶</a></h4>
+<p>The spectrum module provides some basic implementation of several components that
+are mainly intended as a proof-of-concept and as an example for
+building custom models with the spectrum module. Here is a brief list
+of the available implementations:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SpectrumModel300Khz300GhzLog</span></code> and
+<code class="docutils literal notranslate"><span class="pre">SpectrumModelIsm2400MhzRes1Mhz</span></code> are two example <code class="docutils literal notranslate"><span class="pre">SpectrumModel</span></code> implementations</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HalfDuplexIdealPhy</span></code>: a basic PHY model using a gaussian
+interference model (implemented in <code class="docutils literal notranslate"><span class="pre">SpectrumInterference</span></code>)
+together with an error model based on Shannon capacity (described
+in <a class="reference internal" href="#baldo2009spectrum" id="id3"><span>[Baldo2009Spectrum]</span></a> and implemented in <code class="docutils literal notranslate"><span class="pre">SpectrumErrorModel</span></code>. This PHY
+uses the <code class="docutils literal notranslate"><span class="pre">GenericPhy</span></code> interface. Its addditional custom signal
+parameters are defined in <code class="docutils literal notranslate"><span class="pre">HalfDuplexIdealPhySignalParameters</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">WifiSpectrumValueHelper</span></code> is an helper object that makes it easy
+to create <code class="docutils literal notranslate"><span class="pre">SpectrumValues</span></code> representing PSDs and RF filters for
+the wifi technology.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AlohaNoackNetDevice</span></code>: a minimal NetDevice that allows to send
+packets over <code class="docutils literal notranslate"><span class="pre">HalfDuplexIdealPhy</span></code> (or other PHY model based on
+the  <code class="docutils literal notranslate"><span class="pre">GenericPhy</span></code> interface).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SpectrumAnalyzer</span></code>, <code class="docutils literal notranslate"><span class="pre">WaveformGenerator</span></code> and <code class="docutils literal notranslate"><span class="pre">MicrowaveOven</span></code> are examples of PHY
+models other than communication devices - the names should be
+self-explaining.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<dl class="citation">
+<dt class="label" id="baldo2009spectrum"><span class="brackets">Baldo2009Spectrum</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>)</span></dt>
+<dd><p>N. Baldo and M. Miozzo, “Spectrum-aware Channel and PHY layer modeling for ns3”,
+Proceedings of ICST NSTools 2009, Pisa, Italy</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>The main use case of the spectrum model is for developers who want to
+develop a new model for the PHY layer of some wireless technology to
+be used within ns-3.
+Here are some notes on how the spectrum module is expected to be used.</p>
+<blockquote>
+<div><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">SpectrumPhy</span></code> and <code class="docutils literal notranslate"><span class="pre">SpectrumChannel</span></code> are abstract base classes. Real
+code will use classes that inherit from these classes.</p></li>
+<li><p>If you are implementing a new model for some wireless
+technology of your interest, and want to use the spectrum module,
+you’ll typically create your own module and make it depend on the
+spectrum module. Then you typically have to implement:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>a child class of <code class="docutils literal notranslate"><span class="pre">SpectrumModel</span></code> which defines the (sets of) frequency
+subbands used by the considered wireless technology. <strong>Note</strong>:
+instances of <code class="docutils literal notranslate"><span class="pre">SpectrumModel</span></code> are typically statically allocated,
+in order to allow several <code class="docutils literal notranslate"><span class="pre">SpectrumValue</span></code> instances to reference
+the same <code class="docutils literal notranslate"><span class="pre">SpectrumModel</span></code> instance.</p></li>
+<li><p>a child class of <code class="docutils literal notranslate"><span class="pre">SpectrumPhy</span></code> which will handle transmission and
+reception of signals (including, if appropriate, interference
+and error modeling).</p></li>
+<li><p>a child class of <code class="docutils literal notranslate"><span class="pre">SpectrumSignalParameters</span></code> which will contain
+all the information needed to model the signals for the wireless
+technology being considered that is not already provided by the
+base <code class="docutils literal notranslate"><span class="pre">SpectrumSignalParameters</span></code> class. Examples of such
+information are the type of modulation and coding schemes used,
+the PHY preamble format, info on the pilot/reference signals, etc.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>The available <code class="docutils literal notranslate"><span class="pre">SpectrumChannel</span></code> implementations
+(<code class="docutils literal notranslate"><span class="pre">SingleModelSpectrumChannel</span></code> and <code class="docutils literal notranslate"><span class="pre">MultiModelSpectrumChannel</span></code>,
+are quite generic. Chances are you can use them as-is. Whether you
+prefer one or the other it is just a matter of whether you will
+have a single SpectrumModel or multiple ones in your
+simulations.</p></li>
+<li><p>Typically, there will be a single SpectrumChannel instance to which
+several SpectrumPhy instances are plugged. The rule of thumb is
+that all PHYs that are interfering with each other shall be plugged
+on the same channel. Multiple SpectrumChannel instances are
+expected to be used mainly when simulating completely orthogonal
+channels; for example, when simulating the uplink and downlink
+of a Frequency Division Duplex system, it is a good choice to use
+two SpectrumChannel instances in order to reduce computational
+complexity.</p></li>
+<li><p>Different types of SpectrumPhy (i.e., instances of different child
+classes) can be plugged on the same SpectrumChannel instance. This
+is one of the main features of the
+spectrum module, to support inter-technology interference. For
+example, if you implement a WifiSpectrumPhy and a
+BluetoohSpectrumPhy, and plug both on a SpectrumChannel, then you’ll
+be able to simulate interference between wifi and bluetooth and
+vice versa.</p></li>
+<li><p>Different child classes of <code class="docutils literal notranslate"><span class="pre">SpectrumSignalParameters</span></code> can coexist
+in the same simulation, and be transmitted over the same channel
+object.  Again, this is part of the support for inter-technology
+interference. A PHY device model is expected to use the
+<code class="docutils literal notranslate"><span class="pre">DynamicCast&lt;&gt;</span></code> operator to determine if a signal is of a certain
+type it can attempt to receive. If not, the signal is normally
+expected to be considered as interference.</p></li>
+</ul>
+</div></blockquote>
+<div class="section" id="helpers">
+<h3>Helpers<a class="headerlink" href="#helpers" title="Permalink to this headline">¶</a></h3>
+<p>The helpers provided in <code class="docutils literal notranslate"><span class="pre">src/spectrum/helpers</span></code> are mainly intended
+for the example implementations described in <a class="reference internal" href="#sec-example-model-implementations"><span class="std std-ref">Example model implementations</span></a>.
+If you are developing your custom model based on the
+spectrum framework, you will probably prefer to define your own
+helpers.</p>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Both <code class="docutils literal notranslate"><span class="pre">SingleModelSpectrumChannel</span></code> and
+<code class="docutils literal notranslate"><span class="pre">MultiModelSpectrumChannel</span></code> have an attribute <code class="docutils literal notranslate"><span class="pre">MaxLossDb</span></code> which
+can use to avoid propagating signals affected by very high
+propagation loss. You can use this to reduce the complexity of
+interference calculations. Just be careful to choose a value that
+does not make the interference calculations inaccurate.</p></li>
+<li><p>The example implementations described in <a class="reference internal" href="#sec-example-model-implementations"><span class="std std-ref">Example model implementations</span></a> also have several attributes.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="output">
+<h3>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Both <code class="docutils literal notranslate"><span class="pre">SingleModelSpectrumChannel</span></code> and
+<code class="docutils literal notranslate"><span class="pre">MultiModelSpectrumChannel</span></code> provide a trace source called
+<code class="docutils literal notranslate"><span class="pre">PathLoss</span></code> which is fired whenever a new path loss value is
+calclulated. <strong>Note</strong>: only single-frequency path loss is accounted
+for, see the attribute description.</p></li>
+<li><p>The example implementations described in <a class="reference internal" href="#sec-example-model-implementations"><span class="std std-ref">Example model implementations</span></a> also provide some trace sources.</p></li>
+<li><p>The helper class <code class="docutils literal notranslate"><span class="pre">SpectrumAnalyzerHelper</span></code> can be conveniently
+used to generate an output text file containing the spectrogram
+produced by a SpectrumAnalyzer instance. The format is designed to
+be easily plotted with <code class="docutils literal notranslate"><span class="pre">gnuplot</span></code>. For example, if your run the
+example <code class="docutils literal notranslate"><span class="pre">adhoc-aloha-ideal-phy-with-microwave-oven</span></code> you will get
+an output file called <code class="docutils literal notranslate"><span class="pre">spectrum-analyzer-output-3-0.tr</span></code>. From
+this output file, you can generate a figure similar to
+<a class="reference internal" href="#fig-spectrum-analyzer-example"><span class="std std-ref">Spectrogram produced by a spectrum analyzer in a scenario
+involving wifi signals interfered by a microwave oven, as simulated
+by the example adhoc-aloha-ideal-phy-with-microwave-oven.</span></a> by executing the following
+gnuplot commands:</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>unset surface
+set pm3d at s
+set palette
+set key off
+set view 50,50
+set xlabel &quot;time (ms)&quot;
+set ylabel &quot;freq (MHz)&quot;
+set zlabel &quot;PSD (dBW/Hz)&quot; offset 15,0,0
+splot &quot;./spectrum-analyzer-output-3-0.tr&quot; using ($1*1000.0):($2/1e6):(10*log10($3))
+</pre></div>
+</div>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>The example programs in <code class="docutils literal notranslate"><span class="pre">src/spectrum/examples/</span></code> allow to see the
+example implementations described in <a class="reference internal" href="#sec-example-model-implementations"><span class="std std-ref">Example model implementations</span></a> in action.</p>
+</div>
+<div class="section" id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Disclaimer on inter-technology interference</strong>: the spectrum model
+makes it very easy to implement an inter-technology interference
+model, but this does not guarantee
+that the resulting model is accurate. For example, the gaussian
+interference model implemented in the <code class="docutils literal notranslate"><span class="pre">SpectrumInterference</span></code> class can be used
+to calculate inter-technology interference, however the results might not be valid in some
+scenarios, depending on the actual waveforms involved, the number
+of interferers, etc. Moreover, it is very important to use error
+models that are consistent with the interference model. The
+responsibility of ensuring that the models being used are correct
+is left to the user.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<p>In this section we describe the test suites that are provided within
+the spectrum module.</p>
+<div class="section" id="spectrumvalue-test">
+<h3>SpectrumValue test<a class="headerlink" href="#spectrumvalue-test" title="Permalink to this headline">¶</a></h3>
+<p>The test suite <code class="docutils literal notranslate"><span class="pre">spectrum-value</span></code> verifies the correct functionality of the arithmetic
+operators implemented by the <code class="docutils literal notranslate"><span class="pre">SpectrumValue</span></code> class. Each test case
+corresponds to a different operator. The test passes if the result
+provided by the operator implementation is equal to the reference
+values which were calculated offline by hand. Equality is verified
+within a tolerance of <img class="math" src="_images/math/7e21945d9e6e712189e545e2144022340947d5fa.png" alt="10^{-6}"/> which is to account for
+numerical errors.</p>
+</div>
+<div class="section" id="spectrumconverter-test">
+<h3>SpectrumConverter test<a class="headerlink" href="#spectrumconverter-test" title="Permalink to this headline">¶</a></h3>
+<p>The test suite <code class="docutils literal notranslate"><span class="pre">spectrum-converter</span></code> verifies the correct
+functionality of the <code class="docutils literal notranslate"><span class="pre">SpectrumConverter</span></code> class. Different test cases
+correspond to the conversion of different <code class="docutils literal notranslate"><span class="pre">SpectrumValue</span></code> instances
+to different <code class="docutils literal notranslate"><span class="pre">SpectrumModel</span></code> instances. Each test passes if the
+<code class="docutils literal notranslate"><span class="pre">SpectrumValue</span></code> instance resulting from the conversion is equal to the reference
+values which were calculated offline by hand. Equality is verified
+within a tolerance of <img class="math" src="_images/math/7e21945d9e6e712189e545e2144022340947d5fa.png" alt="10^{-6}"/> which is to account for
+numerical errors.</p>
+<p>Describe how the model has been tested/validated.  What tests run in the
+test suite?  How much API and code is covered by the tests?  Again,
+references to outside published work may help here.</p>
+</div>
+<div class="section" id="interference-test">
+<h3>Interference test<a class="headerlink" href="#interference-test" title="Permalink to this headline">¶</a></h3>
+<p>The test suite <code class="docutils literal notranslate"><span class="pre">spectrum-interference</span></code> verifies the correct
+functionality of the <code class="docutils literal notranslate"><span class="pre">SpectrumInterference</span></code> and
+<code class="docutils literal notranslate"><span class="pre">ShannonSpectrumErrorModel</span></code> in a scenario involving four
+signals (an intended signal plus three interferers). Different test
+cases are created corresponding to different PSDs of the intended
+signal and different amount of transmitted bytes. The test passes if
+the output of the error model (successful or failed) coincides with
+the expected one which was determine offline by manually calculating
+the achievable rate using Shannon’s formula.</p>
+</div>
+<div class="section" id="idealphy-test">
+<h3>IdealPhy test<a class="headerlink" href="#idealphy-test" title="Permalink to this headline">¶</a></h3>
+<p>The test verifies that <code class="docutils literal notranslate"><span class="pre">AlohaNoackNetDevice</span></code> and
+<code class="docutils literal notranslate"><span class="pre">HalfDuplexIdealPhy</span></code> work properly when installed in a node. The
+test recreates a scenario with two nodes (a TX and a RX) affected by a path loss such
+that a certain SNR is obtained. The TX node transmits with a
+pre-determined PHY rate and with an application layer rate which is
+larger than the PHY rate, so as to saturate the
+channel. <code class="docutils literal notranslate"><span class="pre">PacketSocket</span></code> is used in order to avoid protocol
+overhead. Different
+test cases correspond to different PHY rate and SNR values. For each
+test case, we calculated offline (using Shannon’s formula) whether
+the PHY rate is achievable or not. Each test case passes if the
+following conditions are satisfied:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>if the PHY rate is achievable, the application throughput shall be within
+<img class="math" src="_images/math/db747a742f16f548182e8483e6603e72bc887b78.png" alt="1\%"/> of the PHY rate;</p></li>
+<li><p>if the PHY rate is not achievable, the application throughput shall
+be zero.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="additional-models">
+<h2>Additional Models<a class="headerlink" href="#additional-models" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tv-transmitter-model">
+<h3>TV Transmitter Model<a class="headerlink" href="#tv-transmitter-model" title="Permalink to this headline">¶</a></h3>
+<p>A TV Transmitter model is implemented by the <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitter</span></code> class.
+This model enables transmission of realistic TV signals to be simulated and can
+be used for interference modeling. It provides a customizable power spectral
+density (PSD) model, with configurable attributes including the type of
+modulation (with models for analog, 8-VSB, and COFDM), signal bandwidth,
+power spectral density level, frequency, and transmission duration. A helper
+class, <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitterHelper</span></code>, is also provided to assist users in
+setting up simulations.</p>
+<div class="section" id="main-model-class">
+<h4>Main Model Class<a class="headerlink" href="#main-model-class" title="Permalink to this headline">¶</a></h4>
+<p>The main TV Transmitter model class, <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitter</span></code>, provides a
+user-configurable PSD model that can be transmitted on the <code class="docutils literal notranslate"><span class="pre">SpectrumChannel</span></code>.
+It inherits from <code class="docutils literal notranslate"><span class="pre">SpectrumPhy</span></code> and is comprised of attributes and methods to
+create and transmit the signal on the channel.</p>
+<div class="figure align-center" id="id23">
+<span id="spectrum-tv-cofdm"></span><img alt="_images/spectrum-tv-cofdm.png" src="_images/spectrum-tv-cofdm.png" />
+<p class="caption"><span class="caption-text">8K COFDM signal spectrum generated from <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitter</span></code> (Left) and
+theoretical COFDM signal spectrum <a class="reference internal" href="#koppcofdm" id="id4"><span>[KoppCOFDM]</span></a> (Right)</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+<p>One of the user-configurable attributes is the type of modulation for the TV
+transmitter to use. The options are 8-VSB (Eight-Level Vestigial Sideband
+Modulation) which is notably used in the North America ATSC digital television
+standard, COFDM (Coded Orthogonal Frequency Division Multiplexing) which is
+notably used in the DVB-T and ISDB-T digital television standards adopted by
+various countries around the world, and analog modulation which is a legacy
+technology but is still being used by some countries today. To accomplish
+realistic PSD models for these modulation types, the signals’ PSDs were
+approximated from real standards and developed into models that are scalable by
+frequency and power. The COFDM PSD is approximated from Figure 12 (8k mode) of
+<a class="reference internal" href="#koppcofdm" id="id5"><span>[KoppCOFDM]</span></a>, the 8-VSB PSD is approximated from Figure 3 of <a class="reference internal" href="#baron8vsb" id="id6"><span>[Baron8VSB]</span></a>, and the
+analog PSD is approximated from Figure 4 of <a class="reference internal" href="#qualcommanalog" id="id7"><span>[QualcommAnalog]</span></a>. Note that the
+analog model is approximated from the NTSC standard, but other analog modulation
+standards such as PAL have similar signals. The approximated COFDM PSD model is
+in 8K mode. The other configurable attributes are the start frequency,
+signal/channel bandwidth, base PSD, antenna type, starting time,
+and transmit duration.</p>
+<p><code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitter</span></code> uses <code class="docutils literal notranslate"><span class="pre">IsotropicAntennaModel</span></code> as its antenna model by
+default, but any model that inherits from <code class="docutils literal notranslate"><span class="pre">AntennaModel</span></code> is selectable, so
+directional antenna models can also be used. The propagation loss models used
+in simulation are configured in the <code class="docutils literal notranslate"><span class="pre">SpectrumChannel</span></code> that the user chooses to
+use. Terrain and spherical Earth/horizon effects may be supported in future ns-3
+propagation loss models.</p>
+<p>After the attributes are set, along with the <code class="docutils literal notranslate"><span class="pre">SpectrumChannel</span></code>,
+<code class="docutils literal notranslate"><span class="pre">MobilityModel</span></code>, and node locations, the PSD of the TV transmitter signal can
+be created and transmitted on the channel.</p>
+</div>
+<div class="section" id="helper-class">
+<span id="sec-tv-helper-class"></span><h4>Helper Class<a class="headerlink" href="#helper-class" title="Permalink to this headline">¶</a></h4>
+<p>The helper class, <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitterHelper</span></code>, consists of features to
+assist users in setting up TV transmitters for their simulations. Functionality
+is also provided to easily simulate real-world scenarios.</p>
+<div class="figure align-center" id="id24">
+<span id="spectrum-tv-8vsb"></span><img alt="_images/spectrum-tv-8vsb.png" src="_images/spectrum-tv-8vsb.png" />
+<p class="caption"><span class="caption-text">North America ATSC channel 19 &amp; 20 signals generated using
+<code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitterHelper</span></code> (Left) and theoretical 8-VSB signal
+<a class="reference internal" href="#baron8vsb" id="id8"><span>[Baron8VSB]</span></a> (Right). Note that the theoretical signal is not shown in dB
+while the ns-3 generated signals are.</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</div>
+<p>Using this helper class, users can easily set up TV transmitters right after
+configuring attributes. Multiple transmitters can be created at a time. Also
+included are real characteristics of specific geographic regions that can be
+used to run realistic simulations. The regions currently included are
+North America, Europe, and Japan. The frequencies and bandwidth of each TV
+channel for each these regions are provided.</p>
+<div class="figure align-center" id="id25">
+<span id="spectrum-tv-rand-geo-points"></span><img alt="_images/spectrum-tv-rand-geo-points.png" src="_images/spectrum-tv-rand-geo-points.png" />
+<p class="caption"><span class="caption-text">Plot from MATLAB implementation of CreateRegionalTvTransmitters method in
+<code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitterHelper</span></code>. Shows 100 random points on Earth’s surface
+(with altitude 0) corresponding to TV transmitter locations within a 2000 km
+radius of 35° latitude and -100° longitude.</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</div>
+<p>A method (CreateRegionalTvTransmitters) is provided that enables users to
+randomly generate multiple TV transmitters from a specified region with a given
+density within a chosen radius around a point on Earth’s surface. The region,
+which determines the channel frequencies of the generated TV transmitters, can
+be specified to be one of the three provided, while the density determines the
+amount of transmitters generated. The TV transmitters’ antenna heights
+(altitude) above Earth’s surface can also be randomly generated to be within a
+given maximum altitude. This method models Earth as a perfect sphere, and
+generated location points are referenced accordingly in Earth-Centered
+Earth-Fixed Cartesian coordinates. Note that bodies of water on Earth are not
+considered in location point generation–TV transmitters can be generated
+anywhere on Earth around the origin point within the chosen maximum radius.</p>
+</div>
+<div class="section" id="id9">
+<h4>Examples<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p>Two example simulations are provided that demonstrate the functionality of the
+TV transmitter model. <code class="docutils literal notranslate"><span class="pre">tv-trans-example</span></code> simulates two 8-VSB TV transmitters
+with adjacent channel frequencies. <code class="docutils literal notranslate"><span class="pre">tv-trans-regional-example</span></code> simulates
+randomly generated COFDM TV transmitters (modeling the DVB-T standard)
+located around the Paris, France area with channel frequencies and bandwidths
+corresponding to the European television channel allocations.</p>
+</div>
+<div class="section" id="id10">
+<h4>Testing<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">tv-spectrum-transmitter</span></code> test suite verifies the accuracy of the
+spectrum/PSD model in <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitter</span></code> by testing if the maximum power
+spectral density, start frequency, and end frequency comply with expected values
+for various test cases.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">tv-helper-distribution</span></code> test suite verifies the functionality of the
+method in <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitterHelper</span></code> that generates a random number of TV
+transmitters based on the given density (low, medium, or high) and maximum
+number of TV channels. It verifies that the number of TV transmitters generated
+does not exceed the expected bounds.</p>
+<p>The CreateRegionalTvTransmitters method in <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitterHelper</span></code>
+described in <a class="reference internal" href="#sec-tv-helper-class"><span class="std std-ref">Helper Class</span></a> uses two methods from the
+<code class="docutils literal notranslate"><span class="pre">GeographicPositions</span></code> class in the Mobility module to generate the random
+Cartesian points on or above earth’s surface around an origin point which
+correspond to TV transmitter positions. The first method converts Earth
+geographic coordinates to Earth-Centered Earth-Fixed (ECEF) Cartesian
+coordinates, and is tested in the <code class="docutils literal notranslate"><span class="pre">geo-to-cartesian</span></code> test suite by comparing
+(with 10 meter tolerance) its output with the output of the geographic to ECEF
+conversion function <a class="reference internal" href="#matlabgeo" id="id11"><span>[MatlabGeo]</span></a> of the MATLAB Mapping Toolbox for numerous
+test cases. The other used method generates random ECEF Cartesian points around
+the given geographic origin point, and is tested in the <code class="docutils literal notranslate"><span class="pre">rand-cart-around-geo</span></code>
+test suite by verifying that the generated points do not exceed the given
+maximum distance radius from the origin point.</p>
+</div>
+</div>
+<div class="section" id="gpp-tr-38-901-fast-fading-model">
+<h3>3GPP TR 38.901 fast fading model<a class="headerlink" href="#gpp-tr-38-901-fast-fading-model" title="Permalink to this headline">¶</a></h3>
+<p>The framework described by TR 38.901 <a class="reference internal" href="#tr38901" id="id12"><span>[TR38901]</span></a> is a 3D statistical Spatial
+Channel Model supporting different propagation environments (e.g., urban,
+rural, indoor), multi-antenna operations and the modeling of wireless channels
+between 0.5 and 100 GHz.
+The overall channel is represented by the matrix H(t,τ), in which each
+entry H <sub>u,s</sub> (t,τ) corresponds to the impulse response of the channel between the
+s-th element of the transmitting antenna and the u-th element of the receiving
+antenna. H <sub>u,s</sub> (t,τ) is generated by the superposition of N different multi-path
+components, called clusters, each of which composed of M different rays.
+The channel matrix generation procedure accounts for large and small scale
+propagation phenomena. The classes ThreeGppSpectrumPropagationLossModel and
+ThreeGppChannelModel included in the spectrum module takes care of the generation
+of the channel coefficients and the computation of the frequency-dependent
+propagation loss.</p>
+<div class="section" id="implementation">
+<h4>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h4>
+<p>Our implementation is described in <a class="reference internal" href="#zugno" id="id13"><span>[Zugno]</span></a>. It is based on the model described
+in <a class="reference internal" href="#zhang" id="id14"><span>[Zhang]</span></a>, but the code has been refactored, extended, and aligned to TR 38.901
+<a class="reference internal" href="#tr38901" id="id15"><span>[TR38901]</span></a>.
+The fundamental assumption behind this model is the channel reciprocity, i.e.,
+the impulse response of the channel between node a and node b is the same as
+between node b and node a.
+To deal with the equivalence of the channel between a and b, no matter who is
+the transmitter and who is the receiver, the model considers the pair of nodes
+to be composed by one “s” and one “u” node. The channel matrix, as well as other
+parameters, are saved and used under the assumption that, within a pair, the
+definition of the “s” and “u” node will always be the same. For more details,
+please have a look at the documentation of the classes
+ThreeGppChannelModel and ThreeGppSpectrumPropagationLossModel.</p>
+<p><strong>Note:</strong></p>
+<blockquote>
+<div><ul>
+<li><p>Currently, no error model is provided; a link-to-system campaign may be
+needed to incorporate it in existing modules.</p></li>
+<li><p>The model does not include any spatial consistency update procedure
+(see <a class="reference internal" href="#tr38901" id="id16"><span>[TR38901]</span></a>, Sec. 7.6.1). The implementation of this feature is left
+as future work.</p></li>
+<li><p>Issue regarding the blockage model: according to 3GPP TR 38.901 v15.0.0
+(2018-06) section 7.6.4.1, the blocking region for self-blocking is provided
+in LCS.</p>
+<p>However, here, clusterAOA and clusterZOA are in GCS and blocking check is
+performed for self-blocking similar to non-self blocking, that is in GCS.
+One would expect the angles to be transposed to LCS before checking
+self-blockage.</p>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="threegppspectrumpropagationlossmodel">
+<h4>ThreeGppSpectrumPropagationLossModel<a class="headerlink" href="#threegppspectrumpropagationlossmodel" title="Permalink to this headline">¶</a></h4>
+<p>The class ThreeGppSpectrumPropagationLossModel extends the SpectrumPropagationLossModel
+interface and enables the modeling of frequency
+dependent propagation phenomena. The main method is DoCalcRxPowerSpectralDensity,
+which takes as input the power spectral density (PSD) of the transmitted signal,
+the mobility models of the transmitting node and receiving node, and
+returns the PSD of the received signal.</p>
+<p>Procedure used to compute the PSD of to compute the PSD of the received signal:</p>
+<p>1. Retrieve the beamforming vectors
+To account for the beamforming, ThreeGppSpectrumPropagationLossModel has to
+retrieve the beamforming vectors of the transmitting and receiving antennas.
+The method DoCalcRxPowerSpectralDensity uses m_deviceAntennaMap to obtain the
+antenna objects associated to the transmitting and receiving devices, and calls
+the method GetCurrentBeamformingVector to retrieve the beamforming vectors.
+For each device using the channel, the m_deviceAntennaMap contains the associated
+antenna object of type ThreeGppAntennaArrayModel. Since the mapping is one-to-one,
+the model supports a single antenna object for each device.
+The m_deviceAntennaMap has to be initialized by inserting the device-antenna
+pairs using the method AddDevice.</p>
+<p>2. Retrieve the channel matrix
+The ThreeGppSpectrumPropagationLossModel relies on the ThreeGppChannelModel class
+to obtain the channel matrix. In particular, it makes use of the method GetChannel,
+which returns a ThreeGppChannelMatrix object containing the channel
+matrix and other channel parameters.
+The ThreeGppChannelModel instance is automatically
+created in the the ThreeGppSpectrumPropagationLossModel constructor and it can
+be configured using the method SetChannelModelAttribute ().</p>
+<p>4. Compute the long term component
+The method GetLongTerm returns the long term component obtained by multiplying
+the channel matrix and the beamforming vectors. To reduce the computational
+load, the long term components associated to the different channels are
+stored in the m_longTermMap and recomputed only if the associated channel
+matrix is updated or if the transmitting and/or receiving beamforming vectors
+have changed. Given the channel reciprocity assumption, for each node pair a
+single long term component is saved in the map.</p>
+<p>5. Apply the small scale fading and compute the channel gain
+The method CalcBeamformingGain computes the channel gain in each sub-band and
+applies it to the PSD of the transmitted signal to obtain the received PSD.
+To compute the sub-band gain, it accounts for the Doppler phenomenon and the
+time dispersion effect on each cluster.
+In order to reduce the computational load, the Doppler component of each
+cluster is computed considering only the central ray.</p>
+</div>
+<div class="section" id="threegppchannelmodel">
+<h4>ThreeGppChannelModel<a class="headerlink" href="#threegppchannelmodel" title="Permalink to this headline">¶</a></h4>
+<p>The class ThreeGppChannelModel implements the channel matrix generation procedure
+described in Sec. of <a class="reference internal" href="#tr38901" id="id17"><span>[TR38901]</span></a>.
+The main method is GetChannel, which takes as input the mobility models of
+the transmitter and receiver nodes, the associated antenna objects,
+and returns a ThreeGppChannelMatrix object containing:</p>
+<ul class="simple">
+<li><p>the channel matrix of size UxSxN, where U is the number of receiving antenna elements, S is the number of transmitting antenna elements and N is the number of clusters</p></li>
+<li><p>the clusters delays, as an array of size N</p></li>
+<li><p>the clusters arrival and departure angles, as a 2D array in which each row corresponds to a direction (AOA, ZOA, AOD, ZOD) and each column corresponds to a different cluster</p></li>
+<li><p>a time stamp indicating the time at which the channel matrix was generated</p></li>
+<li><p>the node IDs</p></li>
+<li><p>other channel parameters</p></li>
+</ul>
+<p>The ThreeGppChannelMatrix objects are saved
+in the map m_channelMap and updated when the coherence time
+expires, or in case the LOS/NLOS channel condition changes.
+The coherence time can be configured through
+the attribute “UpdatePeriod”, and should be chosen by taking into account all the
+factors that affects the channel variability, such as mobility, frequency,
+propagation scenario, etc. By default, it is set to 0, which means that the
+channel is recomputed only when the LOS/NLOS condition changes.
+It is possible to configure the propagation scenario and the operating frequency
+of interest through the attributes “Scenario” and “Frequency”, respectively.</p>
+<p><strong>Blockage model:</strong> 3GPP TR 38.901 also provides an optional
+feature that can be used to model the blockage effect due to the
+presence of obstacles, such as trees, cars or humans, at the level
+of a single cluster. This differs from a complete blockage, which
+would result in an LOS to NLOS transition. Therefore, when this
+feature is enabled, an additional attenuation is added to certain
+clusters, depending on their angle of arrival. There are two possi-
+ble methods for the computation of the additional attenuation, i.e.,
+stochastic (Model A) and geometric (Model B). In this work, we
+used the implementation provided by <a class="reference internal" href="#zhang" id="id18"><span>[Zhang]</span></a>, which
+uses the stochastic method. In particular, the model is implemented by the
+method CalcAttenuationOfBlockage, which computes the additional attenuation.
+The blockage feature can be disable through the attribute “Blockage”. Also, the
+attributes “NumNonselfBlocking”, “PortraitMode” and “BlockerSpeed” can be used
+to configure the model.</p>
+</div>
+<div class="section" id="id19">
+<h4>Testing<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<p>The test suite ThreeGppChannelTestSuite includes three test cases:</p>
+<ul>
+<li><p>ThreeGppChannelMatrixComputationTest checks if the channel matrix has the
+correct dimensions and if it correctly normalized</p></li>
+<li><p>ThreeGppChannelMatrixUpdateTest, which checks if the channel matrix
+is correctly updated when the coherence time exceeds</p></li>
+<li><p>ThreeGppSpectrumPropagationLossModelTest, which tests the functionalities
+of the class ThreeGppSpectrumPropagationLossModel. It builds a simple
+network composed of two nodes, computes the power spectral density
+received by the receiving node, and</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Checks if the long term components for the direct and
+the reverse link are the same,</p></li>
+<li><p>Checks if the long term component is updated when changing
+the beamforming vectors,</p></li>
+<li><p>Checks if the long term is updated when changing the channel matrix</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>Note:</strong> TR 38.901 includes a calibration procedure that can be used to validate
+the model, but it requires some additional features which are not currently
+implemented, thus is left as future work.</p>
+</div>
+<div class="section" id="id20">
+<h4>References<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+<dl class="citation">
+<dt class="label" id="baron8vsb"><span class="brackets">Baron8VSB</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id8">2</a>)</span></dt>
+<dd><p>Baron, Stanley. “First-Hand:Digital Television: The Digital
+Terrestrial Television Broadcasting (DTTB) Standard.” IEEE Global History
+Network. &lt;http://www.ieeeghn.org/wiki/index.php/First-Hand:Digital_Television:_The_Digital_Terrestrial_Television_Broadcasting_(DTTB)_Standard&gt;.</p>
+</dd>
+<dt class="label" id="koppcofdm"><span class="brackets">KoppCOFDM</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>)</span></dt>
+<dd><p>Kopp, Carlo. “High Definition Television.” High Definition
+Television. Air Power Australia. &lt;<a class="reference external" href="http://www.ausairpower.net/AC-1100.html">http://www.ausairpower.net/AC-1100.html</a>&gt;.</p>
+</dd>
+<dt class="label" id="matlabgeo"><span class="brackets"><a class="fn-backref" href="#id11">MatlabGeo</a></span></dt>
+<dd><p>“Geodetic2ecef.” Convert Geodetic to Geocentric (ECEF)
+Coordinates. The MathWorks, Inc.
+&lt;<a class="reference external" href="http://www.mathworks.com/help/map/ref/geodetic2ecef.html">http://www.mathworks.com/help/map/ref/geodetic2ecef.html</a>&gt;.</p>
+</dd>
+<dt class="label" id="qualcommanalog"><span class="brackets"><a class="fn-backref" href="#id7">QualcommAnalog</a></span></dt>
+<dd><p>Stephen Shellhammer, Ahmed Sadek, and Wenyi Zhang.
+“Technical Challenges for Cognitive Radio in the TV White Space Spectrum.”
+Qualcomm Incorporated.</p>
+</dd>
+<dt class="label" id="tr38901"><span class="brackets">TR38901</span><span class="fn-backref">(<a href="#id12">1</a>,<a href="#id15">2</a>,<a href="#id16">3</a>,<a href="#id17">4</a>)</span></dt>
+<dd><p>3GPP. 2018. TR 38.901. Study on channel for frequencies from 0.5 to
+100 GHz. V.15.0.0. (2018-06).</p>
+</dd>
+<dt class="label" id="zhang"><span class="brackets">Zhang</span><span class="fn-backref">(<a href="#id14">1</a>,<a href="#id18">2</a>)</span></dt>
+<dd><p>Menglei Zhang, Michele Polese, Marco Mezzavilla, Sundeep Rangan,
+Michele Zorzi. “ns-3 Implementation of the 3GPP MIMO Channel Model for
+Frequency Spectrum above 6 GHz”. In Proceedings of the Workshop on ns-3
+(WNS3 ‘17). 2017.</p>
+</dd>
+<dt class="label" id="zugno"><span class="brackets"><a class="fn-backref" href="#id13">Zugno</a></span></dt>
+<dd><p>Tommaso Zugno, Michele Polese, Natale Patriciello, Biljana Bojovic,
+Sandra Lagen, Michele Zorzi. “Implementation of a Spatial Channel Model for
+ns-3”. Submitted to the Workshop on ns-3 (WNS3 ‘20). 2020.
+Available: <a class="reference external" href="https://arxiv.org/abs/2002.09341">https://arxiv.org/abs/2002.09341</a></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Spectrum Module</a><ul>
+<li><a class="reference internal" href="#model-description">Model Description</a><ul>
+<li><a class="reference internal" href="#design">Design</a><ul>
+<li><a class="reference internal" href="#signal-model">Signal model</a></li>
+<li><a class="reference internal" href="#channel-phy-interface">Channel/PHY interface</a></li>
+<li><a class="reference internal" href="#spectrum-channel-implementations">Spectrum Channel implementations</a></li>
+<li><a class="reference internal" href="#example-model-implementations">Example model implementations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#helpers">Helpers</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#output">Output</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#testing">Testing</a><ul>
+<li><a class="reference internal" href="#spectrumvalue-test">SpectrumValue test</a></li>
+<li><a class="reference internal" href="#spectrumconverter-test">SpectrumConverter test</a></li>
+<li><a class="reference internal" href="#interference-test">Interference test</a></li>
+<li><a class="reference internal" href="#idealphy-test">IdealPhy test</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#additional-models">Additional Models</a><ul>
+<li><a class="reference internal" href="#tv-transmitter-model">TV Transmitter Model</a><ul>
+<li><a class="reference internal" href="#main-model-class">Main Model Class</a></li>
+<li><a class="reference internal" href="#helper-class">Helper Class</a></li>
+<li><a class="reference internal" href="#id9">Examples</a></li>
+<li><a class="reference internal" href="#id10">Testing</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gpp-tr-38-901-fast-fading-model">3GPP TR 38.901 fast fading model</a><ul>
+<li><a class="reference internal" href="#implementation">Implementation</a></li>
+<li><a class="reference internal" href="#threegppspectrumpropagationlossmodel">ThreeGppSpectrumPropagationLossModel</a></li>
+<li><a class="reference internal" href="#threegppchannelmodel">ThreeGppChannelModel</a></li>
+<li><a class="reference internal" href="#id19">Testing</a></li>
+<li><a class="reference internal" href="#id20">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="propagation.html"
+                        title="previous chapter">Propagation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sixlowpan.html"
+                        title="next chapter">6LoWPAN: Transmission of IPv6 Packets over IEEE 802.15.4 Networks</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/spectrum.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sixlowpan.html" title="6LoWPAN: Transmission of IPv6 Packets over IEEE 802.15.4 Networks"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="propagation.html" title="Propagation"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

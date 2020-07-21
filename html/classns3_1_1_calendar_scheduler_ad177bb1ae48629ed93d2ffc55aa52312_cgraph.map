@@ -1,0 +1,12 @@
+<map id="ns3::CalendarScheduler::ResizeDown" name="ns3::CalendarScheduler::ResizeDown">
+<area shape="rect" id="node1" title="Halve the number of buckets if necessary." alt="" coords="5,72,180,113"/>
+<area shape="rect" id="node2" href="$classns3_1_1_calendar_scheduler.html#ab626f95ab5482e5e6e2a9d5f74363d6c" title="Resize to a new number of buckets, with automatically computed width." alt="" coords="228,72,403,113"/>
+<area shape="rect" id="node3" href="$classns3_1_1_calendar_scheduler.html#a259100bf1a7128f6bfd27edfc2acd089" title="Compute the new bucket size, based on up to the first 25 entries." alt="" coords="451,39,625,80"/>
+<area shape="rect" id="node9" href="$classns3_1_1_calendar_scheduler.html#a9c7a10fd444508c2dd8034cb49e21b7d" title="Resize the number of buckets and width." alt="" coords="451,104,625,145"/>
+<area shape="rect" id="node4" href="$classns3_1_1_calendar_scheduler.html#a89cf4c06b7763187a0155320013cf1d1" title="Insert a new event in to the correct bucket." alt="" coords="673,71,848,112"/>
+<area shape="rect" id="node7" href="$classns3_1_1_calendar_scheduler.html#a42c114e7a4bb68943b63fa9dfc841610" title="Remove the earliest event." alt="" coords="673,5,848,47"/>
+<area shape="rect" id="node5" href="$classns3_1_1_calendar_scheduler.html#a51f1a1745f932881c83eb4c21891da2a" title="Hash the dimensionless time to a bucket." alt="" coords="896,127,1071,168"/>
+<area shape="rect" id="node6" href="$global-router-interface_8cc.html#af2f17e24d29f39f6804d0d10d8cedc71" title=" " alt="" coords="923,75,1044,102"/>
+<area shape="rect" id="node8" href="$classns3_1_1_calendar_scheduler.html#a35d435f80c16dded551078157a7a276c" title="Test if the schedule is empty." alt="" coords="896,5,1071,47"/>
+<area shape="rect" id="node10" href="$classns3_1_1_calendar_scheduler.html#a3bf6cdaed8ea65882707fe6eba13eedf" title="Initialize the calendar queue." alt="" coords="673,136,848,177"/>
+</map>

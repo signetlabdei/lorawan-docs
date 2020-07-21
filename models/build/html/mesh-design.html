@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Design Documentation &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User Documentation" href="mesh-user.html" />
+    <link rel="prev" title="Wi-Fi Mesh Module Documentation" href="mesh.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mesh-user.html" title="User Documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mesh.html" title="Wi-Fi Mesh Module Documentation"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="mesh.html" accesskey="U">Wi-Fi Mesh Module Documentation</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="design-documentation">
+<h1>Design Documentation<a class="headerlink" href="#design-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The <em>ns-3</em> <cite>mesh</cite> module extends the <em>ns-3</em> <cite>wifi</cite> module to provide mesh
+networking capabilities according to the IEEE 802.11s standard <a class="reference internal" href="mesh-references.html#ieee80211s" id="id1"><span>[ieee80211s]</span></a>.</p>
+<p>The basic purpose of IEEE 802.11s is to define a mode of operation for
+Wi-Fi that permits frames to be forwarded over multiple radio hops
+transparent to higher layer protocols such as IP.  To accomplish this,
+mesh-capable stations form a <cite>Mesh Basic Service Set</cite> (MBSS) by running
+a pair-wise peering protocol to establish forwarding associations, and
+by running a routing protocol to find paths through the network.  A
+special gateway device called a <cite>mesh gate</cite> allows a MBSS to interconnect
+with a Distribution System (DS).</p>
+<p>The basic enhancements defined by IEEE 802.11s include:</p>
+<ul class="simple">
+<li><p>discovery services</p></li>
+<li><p>peering management</p></li>
+<li><p>security</p></li>
+<li><p>beaconing and synchronization</p></li>
+<li><p>the Mesh Coordination Function (MCF)</p></li>
+<li><p>power management</p></li>
+<li><p>channel switching</p></li>
+<li><p>extended frame formats</p></li>
+<li><p>path selection and forwarding</p></li>
+<li><p>interworking (proxy mesh gateways)</p></li>
+<li><p>intra-mesh congestion control, and</p></li>
+<li><p>emergency service support.</p></li>
+</ul>
+<p>The <em>ns-3</em> models implement only a subset of the above service extensions,
+focusing mainly on those items related to peering and routing/forwarding
+of data frames through the mesh.</p>
+<p>The Mesh NetDevice based on 802.11s D3.0 draft standard
+was added in <em>ns-3.6</em> and includes the Mesh Peering Management Protocol and
+HWMP (routing) protocol implementations. An overview
+presentation by Kirill Andreev was published at the Workshop on ns-3
+in 2009 <a class="reference internal" href="mesh-references.html#and09" id="id2"><span>[And09]</span></a>.  An overview paper is available at <a class="reference internal" href="mesh-references.html#and10" id="id3"><span>[And10]</span></a>.</p>
+<p>As of ns-3.23 release, the model has been updated to the 802.11s-2012
+standard <a class="reference internal" href="mesh-references.html#ieee80211s" id="id4"><span>[ieee80211s]</span></a> with regard to packet formats, based on the
+contribution in <a class="reference internal" href="mesh-references.html#hep15" id="id5"><span>[Hep15]</span></a>.</p>
+<p>These changes include:</p>
+<ul class="simple">
+<li><p>Category codes and the categories compliant to IEEE-802.11-2012 Table 8-38—Category values.</p></li>
+<li><p>Information Elements (An adjustment of the element ID values was needed according to Table 8-54 of IEEE-802.11-2012).</p></li>
+<li><p>Mesh Peering Management element format changed according to IEEE-802.11-2012 Figure 8-370.</p></li>
+<li><p>Mesh Configuration element format changed according to IEEE-802.11-2012 Figure 8-363.</p></li>
+<li><p>PERR element format changed according to IEEE-802.11-2012 Figure 8-394.</p></li>
+</ul>
+<p>With these changes the messages of the Peering Management Protocol and Hybrid Wireless Mesh Protocol will be transmitted compliant to IEEE802.11-2012 and the resulting pcap trace files can be analyzed by Wireshark.</p>
+<p>The multi-interface mesh points are supported as an extension of IEEE draft version 3.0. Note that corresponding <em>ns-3</em> mesh device helper creates a single interface station by default.</p>
+<div class="section" id="overview-of-ieee-802-11s">
+<h3>Overview of IEEE 802.11s<a class="headerlink" href="#overview-of-ieee-802-11s" title="Permalink to this headline">¶</a></h3>
+<p>The implementation of the 802.11s extension consists of two main parts: the Peer Management Protocol (PMP) and Hybrid Wireless Mesh Protocol (HWMP).</p>
+<p>The tasks of the peer management protocol are the following:</p>
+<ul class="simple">
+<li><p>opening links, detecting beacons, and starting peer link finite state machine, and</p></li>
+<li><p>closing peer links due to transmission failures or beacon loss.</p></li>
+</ul>
+<p>If a peer link between the sender and receiver does not exist, a frame will be
+dropped. So, the plug-in to the peer management protocol (PMP) is the first
+in the list of <code class="docutils literal notranslate"><span class="pre">ns3::MeshWifiInterfaceMacPlugins</span></code> to be used.</p>
+<div class="section" id="peer-management-protocol">
+<h4>Peer management protocol<a class="headerlink" href="#peer-management-protocol" title="Permalink to this headline">¶</a></h4>
+<p>The peer management protocol consists of three main parts:</p>
+<ul class="simple">
+<li><p>the protocol itself, <code class="docutils literal notranslate"><span class="pre">ns3::dot11s::PeerManagementProtocol</span></code>, which keeps all active peer links on interfaces, handles all changes of their states and notifies the routing protocol about link failures.</p></li>
+<li><p>the MAC plug-in, <code class="docutils literal notranslate"><span class="pre">ns3::dot11s::PeerManagementProtocolMac</span></code>, which drops frames if there is no peer link, and peeks all needed information from management frames and information elements from beacons.</p></li>
+<li><p>the peer link, <code class="docutils literal notranslate"><span class="pre">ns3::dot11s::PeerLink</span></code>, which keeps finite state machine of each peer link, keeps beacon loss counter and counter of successive transmission failures.</p></li>
+</ul>
+<p>The procedure of closing a peer link is not described in detail in the
+standard, so in the model the link may be closed by:</p>
+<ul class="simple">
+<li><p>beacon loss (see an appropriate attribute of ns3::dot11s::PeerLink class)</p></li>
+<li><p>transmission failure – when a predefined number of successive packets have failed to transmit, the link will be closed.</p></li>
+</ul>
+<p>The peer management protocol is also responsible for beacon collision avoidance, because it keeps beacon timing elements from all neighbours. Note that the PeerManagementProtocol is not attached to the MeshPointDevice as a routing protocol, but the structure is similar: the upper tier of the protocol is
+<code class="docutils literal notranslate"><span class="pre">ns3::dot11s::PeerManagementProtocol</span></code> and its plug-in is
+<code class="docutils literal notranslate"><span class="pre">ns3::dot11s::PeerManagementProtocolMac</span></code>.</p>
+</div>
+<div class="section" id="hybrid-wireless-mesh-protocol">
+<h4>Hybrid Wireless Mesh Protocol<a class="headerlink" href="#hybrid-wireless-mesh-protocol" title="Permalink to this headline">¶</a></h4>
+<p>HWMP is implemented in both modes, reactive and proactive, although path maintenance is not implemented (so active routes may time out and need to be rebuilt, causing packet loss). Also the model implements an ability to transmit broadcast data and management frames as unicasts (see appropriate attributes). This feature is disabled at a station when the number of neighbors of the station is more than a threshold value.</p>
+</div>
+</div>
+</div>
+<div class="section" id="scope-and-limitations">
+<h2>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="supported-features">
+<h3>Supported features<a class="headerlink" href="#supported-features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Peering Management Protocol (PMP), including link close heuristics and beacon collision avoidance.</p></li>
+<li><p>Hybrid Wireless Mesh Protocol (HWMP), including proactive and reactive modes, unicast/broadcast propagation of management traffic, multi-radio extensions.</p></li>
+<li><p>802.11e compatible airtime link metric.</p></li>
+</ul>
+</div>
+<div class="section" id="verification">
+<h3>Verification<a class="headerlink" href="#verification" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Comes with the custom Wireshark dissector.</p></li>
+<li><p>Linux kernel mac80211 layer compatible message formats.</p></li>
+</ul>
+</div>
+<div class="section" id="unsupported-features">
+<h3>Unsupported features<a class="headerlink" href="#unsupported-features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Mesh Coordinated Channel Access (MCCA).</p></li>
+<li><p>Internetworking: mesh access point and mesh portal.</p></li>
+<li><p>Security.</p></li>
+<li><p>Power save.</p></li>
+<li><p>Path maintenance (sending PREQ proactively before a path expires)</p></li>
+<li><p>Though multi-radio operation is supported, no channel assignment protocol is proposed for now. (Correct channel switching is not implemented)</p></li>
+</ul>
+</div>
+<div class="section" id="models-yet-to-be-created">
+<h3>Models yet to be created<a class="headerlink" href="#models-yet-to-be-created" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Mesh access point (QoS + non-QoS?)</p></li>
+<li><p>Mesh portal (QoS + non-QoS?)</p></li>
+</ul>
+</div>
+<div class="section" id="open-issues">
+<h3>Open issues<a class="headerlink" href="#open-issues" title="Permalink to this headline">¶</a></h3>
+<p>A bug exists in the Wi-Fi module that manifests itself as performance
+degradation in large mesh networks, due to incorrect duplicate frame
+detection for QoS data frames (bug 2326).</p>
+<p>Mesh does not work for 802.11n/ac stations (bug 2276).</p>
+<p>Energy module can not be used on mesh devices (bug 2265).</p>
+<p>IE11S_MESH_PEERING_PROTOCOL_VERSION should be removed as per standard.
+Protocol ID should actually be part of the Mesh Peering Management IE (bug 2600).</p>
+<p>Node packet processing times are not modeled; some evaluation of the impact
+of packet processing delays is discussed in <a class="reference internal" href="mesh-references.html#hep16" id="id6"><span>[Hep16]</span></a>.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Design Documentation</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a><ul>
+<li><a class="reference internal" href="#overview-of-ieee-802-11s">Overview of IEEE 802.11s</a><ul>
+<li><a class="reference internal" href="#peer-management-protocol">Peer management protocol</a></li>
+<li><a class="reference internal" href="#hybrid-wireless-mesh-protocol">Hybrid Wireless Mesh Protocol</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scope-and-limitations">Scope and Limitations</a><ul>
+<li><a class="reference internal" href="#supported-features">Supported features</a></li>
+<li><a class="reference internal" href="#verification">Verification</a></li>
+<li><a class="reference internal" href="#unsupported-features">Unsupported features</a></li>
+<li><a class="reference internal" href="#models-yet-to-be-created">Models yet to be created</a></li>
+<li><a class="reference internal" href="#open-issues">Open issues</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="mesh.html"
+                        title="previous chapter">Wi-Fi Mesh Module Documentation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="mesh-user.html"
+                        title="next chapter">User Documentation</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mesh-design.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mesh-user.html" title="User Documentation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mesh.html" title="Wi-Fi Mesh Module Documentation"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="mesh.html" >Wi-Fi Mesh Module Documentation</a><span class="navelem">&nbsp;</span></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

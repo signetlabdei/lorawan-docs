@@ -1,0 +1,28 @@
+var struct_i_net_stack =
+[
+    [ "~INetStack", "struct_i_net_stack.html#aa4febc7e2b66d861acfba1f4beebda0e", null ],
+    [ "add_default_gateway", "struct_i_net_stack.html#a73f8126b5bfa498c7558fe3144b79b22", null ],
+    [ "buffer_size", "struct_i_net_stack.html#a62459a1b7e52395f643b00c4c17336a0", null ],
+    [ "cmd", "struct_i_net_stack.html#acdadbd6bddaa81e538a9fd88d90df883", null ],
+    [ "get_hz", "struct_i_net_stack.html#a2e4dceb2e0e63c45a251e84b5a5a380d", null ],
+    [ "get_id", "struct_i_net_stack.html#aa2fa7aa24856935a2141675fd735b5ff", null ],
+    [ "get_name", "struct_i_net_stack.html#a665ce57b538c87f2ba7b0f03ca5f89be", null ],
+    [ "get_var", "struct_i_net_stack.html#a2245e510856bdda751196d2161e44bae", null ],
+    [ "if_attach", "struct_i_net_stack.html#aa092e60f18b07a756727ef3d48fb23c2", null ],
+    [ "if_receive_packet", "struct_i_net_stack.html#a717976f6495da376e006b6ac1b54c086", null ],
+    [ "if_send_finish", "struct_i_net_stack.html#afffc356feed7f466f83c20804192df28", null ],
+    [ "if_send_packet", "struct_i_net_stack.html#a2aa79cbc69b2aa0003c2a0e727d6438a", null ],
+    [ "increment_ticks", "struct_i_net_stack.html#a97a74f983e4fd5fddeeff3cf7180a617", null ],
+    [ "init", "struct_i_net_stack.html#a586b23bb19f9161cd326a2df9a88e205", null ],
+    [ "new_sctp_socket", "struct_i_net_stack.html#af4593b1f78902bc5a5c0f655ed33dd82", null ],
+    [ "new_tcp_socket", "struct_i_net_stack.html#a6379ab96d754f8cefa330ba186bb6b2a", null ],
+    [ "new_udp_socket", "struct_i_net_stack.html#aa60d96b381e97cc1bd06d3de8797b802", null ],
+    [ "set_diagnostic", "struct_i_net_stack.html#a568cca15e43babd4483ff48ac39de10d", null ],
+    [ "set_var", "struct_i_net_stack.html#a87dcc53b24d552658aa841d5149713e3", null ],
+    [ "show_config", "struct_i_net_stack.html#ac93016db66cb785cd922da2e933cec5b", null ],
+    [ "sysctl", "struct_i_net_stack.html#a0a438f5ca8eea27a04997801e9bc37c3", null ],
+    [ "sysctl_get", "struct_i_net_stack.html#a396b535a199299a904f52e00d0dbf590", null ],
+    [ "sysctl_getnum", "struct_i_net_stack.html#a102073dbedc3c2f290658795ede66aa0", null ],
+    [ "sysctl_set", "struct_i_net_stack.html#ad237b6c2a8d492e07fbb6db85feabdda", null ],
+    [ "timer_interrupt", "struct_i_net_stack.html#adea013a2541f16b8cbf0548744be937b", null ]
+];

@@ -1,0 +1,52 @@
+<map id="ns3::GlobalRouter::DiscoverLSAs" name="ns3::GlobalRouter::DiscoverLSAs">
+<area shape="rect" id="node1" title="Walk the connected channels, discover the adjacent routers and build the associated number of Global ..." alt="" coords="5,1247,152,1288"/>
+<area shape="rect" id="node2" href="$classns3_1_1_global_router.html#abe9aa30589c955585b76ac6ddaa5cca7" title="Build one NetworkLSA for each net device talking to a network that we are the designated router for." alt="" coords="217,1120,363,1161"/>
+<area shape="rect" id="node6" href="$classns3_1_1_global_router.html#aaa5c7fc2847ab205c8b3ce2522b90670" title="Given a node and a net device, find an IPV4 interface index that corresponds to that net device." alt="" coords="747,524,917,565"/>
+<area shape="rect" id="node8" href="$classns3_1_1_node.html#a2ed8663077afcb8db519296b0ada6355" title=" " alt="" coords="767,983,897,1010"/>
+<area shape="rect" id="node9" href="$classns3_1_1_net_device_container.html#a44e6db6a23ab528c0a467e32a4046413" title="Get the number of Ptr&lt;NetDevice&gt; stored in this container." alt="" coords="455,1181,639,1223"/>
+<area shape="rect" id="node10" href="$classns3_1_1_object.html#a817117ab236e4ff7f80f0239d4e28731" title="Get a pointer to the requested aggregated Object." alt="" coords="748,707,916,734"/>
+<area shape="rect" id="node23" href="$global-router-interface_8cc.html#af2f17e24d29f39f6804d0d10d8cedc71" title=" " alt="" coords="771,758,893,785"/>
+<area shape="rect" id="node24" href="$classns3_1_1_global_routing_l_s_a.html#a97f6a00183d783cef4afb54c2216fa2f" title="Set the Advertising Router as defined by the OSPF spec." alt="" coords="462,1247,633,1288"/>
+<area shape="rect" id="node25" href="$classns3_1_1_global_routing_l_s_a.html#af31bd5b6ff2fe784f3df4e5b921b4081" title="Set the Link State ID is defined by the OSPF spec." alt="" coords="462,1312,633,1353"/>
+<area shape="rect" id="node26" href="$classns3_1_1_global_routing_l_s_a.html#a8f68a559296813ae47d5cabc5f566ddb" title="Set the LS type field of the LSA." alt="" coords="462,1377,633,1419"/>
+<area shape="rect" id="node27" href="$classns3_1_1_global_routing_l_s_a.html#ad4b9b4146d6ce7e34cc860ae977e3cb1" title="For a Network LSA, set the Network Mask field that precedes the list of attached routers." alt="" coords="437,1443,658,1484"/>
+<area shape="rect" id="node28" href="$classns3_1_1_global_routing_l_s_a.html#a75f588e4c849e00f611755a58125a88a" title="Set the Node pointer of the node that originated this LSA." alt="" coords="462,831,633,872"/>
+<area shape="rect" id="node29" href="$classns3_1_1_global_routing_l_s_a.html#a0a3a59c56967eac866a2a3a2a5ded93f" title="Set the SPF status of the advertisement." alt="" coords="462,1508,633,1549"/>
+<area shape="rect" id="node30" href="$classns3_1_1_global_router.html#a7c6430b2da06fff5ce1fda4ac90c4836" title="Clear list of LSAs." alt="" coords="217,888,363,929"/>
+<area shape="rect" id="node31" href="$classns3_1_1_node.html#ad5e10d46d12a255573c53d5db0fc043b" title="Retrieve the index&#45;th NetDevice associated to this node." alt="" coords="209,1675,371,1702"/>
+<area shape="rect" id="node32" href="$ipv4-address-generator_8cc.html#aaf5aa23b804d2e5e334106f207e8a6cc" title=" " alt="" coords="765,1625,899,1651"/>
+<area shape="rect" id="node33" href="$classns3_1_1_node.html#ab160c405a94d258f6fc5e4e3fd33cecd" title=" " alt="" coords="200,1726,380,1753"/>
+<area shape="rect" id="node34" href="$classns3_1_1_global_router.html#ad275c2afaa7fb8b0ceac4903c43bd9ee" title="Decide whether or not a given net device is being bridged by a BridgeNetDevice." alt="" coords="215,1777,365,1819"/>
+<area shape="rect" id="node35" href="$classns3_1_1_global_router.html#af981be58153ef32690b434072cd3205b" title="Process a generic broadcast link." alt="" coords="208,393,372,435"/>
+<area shape="rect" id="node49" href="$classns3_1_1_global_router.html#a9f0501e0e46b6ef841ea82a953b3f33b" title="Process a point to point link." alt="" coords="458,561,637,603"/>
+<area shape="rect" id="node3" href="$classns3_1_1_global_routing_l_s_a.html#a86209d0965f82b2a424caae435a770a3" title="Add an attached router to the list in the NetworkLSA." alt="" coords="462,896,633,937"/>
+<area shape="rect" id="node4" href="$classns3_1_1_global_router.html#ad328e195b8566f68491ec4eda2bfc238" title="Clear the list of bridges visited on the link." alt="" coords="757,5,907,47"/>
+<area shape="rect" id="node5" href="$classns3_1_1_global_router.html#a1ef6bb021637f6dd7b6109ad63316eb6" title="Return a container of all non&#45;bridged NetDevices on a link." alt="" coords="428,1013,667,1055"/>
+<area shape="rect" id="node7" href="$classns3_1_1_net_device_container.html#ae114b3a9fc193fee40c07e4a4207aef4" title="Get the Ptr&lt;NetDevice&gt; stored in this container at a given index." alt="" coords="440,1079,655,1106"/>
+<area shape="rect" id="node11" href="$classns3_1_1_object.html#a34f8410d0f3aae5612b56eb65d044857" title="Find an Object of TypeId tid in the aggregates of this Object." alt="" coords="1015,733,1201,759"/>
+<area shape="rect" id="node22" href="$namespacens3.html#af2a7557fe9afdd98d8f6f8f6e412cf5a" title=" " alt="" coords="1043,682,1173,709"/>
+<area shape="rect" id="node12" href="$classns3_1_1_object.html#a4000e647d44103477c0c31825fc288b6" title="Check if any aggregated Objects have non&#45;zero reference counts." alt="" coords="1272,615,1453,642"/>
+<area shape="rect" id="node14" href="$classns3_1_1_object.html#a12101af51922401affe289e1081c43c5" title="Get the most derived TypeId for this Object." alt="" coords="1272,667,1453,708"/>
+<area shape="rect" id="node15" href="$classns3_1_1_type_id.html#ab84f81aee52154af39a8668b59c89d63" title="Get the parent of this TypeId." alt="" coords="1279,783,1447,810"/>
+<area shape="rect" id="node19" href="$classns3_1_1_object.html#a4615cee24c40b0377501f44ef85f9e53" title="Register this type." alt="" coords="1279,733,1447,759"/>
+<area shape="rect" id="node21" href="$classns3_1_1_object.html#a502c04993a228307d9eded5ba028af7c" title="Keep the list of aggregates in most&#45;recently&#45;used order." alt="" coords="1267,835,1459,876"/>
+<area shape="rect" id="node13" href="$classns3_1_1_simple_ref_count.html#a9cb85ae452ce0e1c74f11b3e4d357171" title="Get the reference count of the object." alt="" coords="1527,608,1685,649"/>
+<area shape="rect" id="node16" href="$classns3_1_1_type_id.html#ab76e26690f1af4f1cffa6a72245e8928" title="Default constructor." alt="" coords="1533,809,1679,835"/>
+<area shape="rect" id="node17" href="$classns3_1_1_singleton.html#a80a2cd3c25a27ea72add7a9f7a141ffa" title="Get a pointer to the singleton instance." alt="" coords="1753,776,1956,817"/>
+<area shape="rect" id="node18" href="$classns3_1_1_iid_manager.html#a26a0cf5d08e0e9d8ad1128b77599b1f5" title="Get the parent of a type id." alt="" coords="1507,758,1705,785"/>
+<area shape="rect" id="node20" href="$classns3_1_1_type_id.html#abaaca67ab7d2471067e7c275df0f7309" title="Set the parent TypeId." alt="" coords="1523,707,1689,734"/>
+<area shape="rect" id="node36" href="$classns3_1_1_global_router.html#a55dc2cb5f7e41f52f5c465b5f8ff396b" title="Process a bridged broadcast link." alt="" coords="440,393,655,435"/>
+<area shape="rect" id="node48" href="$classns3_1_1_global_router.html#a16b0eecb167b84a7160c8903839a826f" title="Process a single broadcast link." alt="" coords="445,291,649,332"/>
+<area shape="rect" id="node37" href="$classns3_1_1_net_device_container.html#a7ca8bc1d7ec00fd4fcc63869987fbda5" title="Append the contents of another NetDeviceContainer to the end of this container." alt="" coords="723,473,941,499"/>
+<area shape="rect" id="node40" href="$classns3_1_1_global_routing_l_s_a.html#a2b2bdf9b121a61fe793c88ab216f4fb9" title="Add a given Global Routing Link Record to the LSA." alt="" coords="747,356,917,397"/>
+<area shape="rect" id="node41" href="$classns3_1_1_global_router.html#aaca30a12cd905fdb6b02ac956bf32294" title="Checks for the presence of another router on the NetDevice." alt="" coords="751,291,913,332"/>
+<area shape="rect" id="node42" href="$classns3_1_1_ipv4_address.html#adfdc8899f368a102d7286f7110866d57" title="Combine this address with a network mask." alt="" coords="715,71,949,98"/>
+<area shape="rect" id="node45" href="$classns3_1_1_ipv4_mask.html#af0e131a08c4b0c983e92568fd4b23712" title="Get the host&#45;order 32&#45;bit IP mask." alt="" coords="1035,267,1181,294"/>
+<area shape="rect" id="node46" href="$classns3_1_1_global_router.html#a03599f842ce89bfc81fb61319cf08a88" title="Finds a designated router." alt="" coords="726,173,938,215"/>
+<area shape="rect" id="node47" href="$classns3_1_1_ipv4_address.html#a7204982c2906b7df3f73739ca472dacb" title="input address is in host order." alt="" coords="751,239,913,266"/>
+<area shape="rect" id="node38" href="$classns3_1_1_net_device_container.html#a4ddc336af319061f5b61c515f0453242" title="Get an iterator which refers to the first NetDevice in the container." alt="" coords="1016,436,1200,477"/>
+<area shape="rect" id="node39" href="$classns3_1_1_net_device_container.html#a436d9df206570861f96c3f278eaccb92" title="Get an iterator which indicates past&#45;the&#45;last NetDevice in the container." alt="" coords="1000,502,1216,529"/>
+<area shape="rect" id="node43" href="$classns3_1_1_ipv4_address.html#aaabb51dd481f4b6908afd72affc49b20" title=" " alt="" coords="997,46,1219,73"/>
+<area shape="rect" id="node44" href="$classns3_1_1_ipv4_address.html#a154da9b1ff6eb451dc4840613fe43e73" title="Get the host&#45;order 32&#45;bit IP address." alt="" coords="1026,97,1190,123"/>
+<area shape="rect" id="node50" href="$classns3_1_1_global_router.html#a4c6db4287648ade181aec2dde597b362" title="Link through the given channel and find the net device that&#39;s on the other end." alt="" coords="759,641,905,683"/>
+</map>

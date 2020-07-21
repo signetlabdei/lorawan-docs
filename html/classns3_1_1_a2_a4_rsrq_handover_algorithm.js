@@ -1,0 +1,25 @@
+var classns3_1_1_a2_a4_rsrq_handover_algorithm =
+[
+    [ "UeMeasure", "classns3_1_1_a2_a4_rsrq_handover_algorithm_1_1_ue_measure.html", "classns3_1_1_a2_a4_rsrq_handover_algorithm_1_1_ue_measure" ],
+    [ "MeasurementRow_t", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#a36b466ab32bda84bd5a6c0843608ab2a", null ],
+    [ "MeasurementTable_t", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#a27c0f07941cacc1c54a799a27ea7821c", null ],
+    [ "A2A4RsrqHandoverAlgorithm", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#a4ddb6f19752cdf9b5db9d98ec0888a5c", null ],
+    [ "~A2A4RsrqHandoverAlgorithm", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#ab199f6eec6267db06ed58a162eb68a1d", null ],
+    [ "DoDispose", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#a3da521192195d0401eb49c275ca70174", null ],
+    [ "DoInitialize", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#a47e9fb10c8dacf9d2b6cae95a3fe1a5c", null ],
+    [ "DoReportUeMeas", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#a49d20f578c2853426103a532e9f862ec", null ],
+    [ "EvaluateHandover", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#a95414290544e888109dd5cbb5c022512", null ],
+    [ "GetLteHandoverManagementSapProvider", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#accacf1f5305c5d210dc41c64f0ae1f6a", null ],
+    [ "GetTypeId", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#a0185c791e561824abf4506ee551375dd", null ],
+    [ "IsValidNeighbour", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#a6d9106afebe16783ac637e9672a2fae1", null ],
+    [ "SetLteHandoverManagementSapUser", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#aa0800422eef0bbf24cd4a38991973fe0", null ],
+    [ "UpdateNeighbourMeasurements", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#a789156746868d391bf23b1b185a3e328", null ],
+    [ "MemberLteHandoverManagementSapProvider< A2A4RsrqHandoverAlgorithm >", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#a19b73e89b335cae4f61749f6146e7a8f", null ],
+    [ "m_a2MeasId", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#ac52e42e6ee41a0faffdcbc75ff7e2e02", null ],
+    [ "m_a4MeasId", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#acad13d470305131b7cfa66f5feb0f0bf", null ],
+    [ "m_handoverManagementSapProvider", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#a5c2d8213a131a7d934c2b5ef4907597b", null ],
+    [ "m_handoverManagementSapUser", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#a117b9e0cb1751dc8b2b96532c2915679", null ],
+    [ "m_neighbourCellMeasures", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#ab02d6372aec766c1d6e7611111456fa4", null ],
+    [ "m_neighbourCellOffset", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#afe15ce0bd178565ef3f42d83ada4428b", null ],
+    [ "m_servingCellThreshold", "classns3_1_1_a2_a4_rsrq_handover_algorithm.html#acb5609bb57548a7cd9fe92fbef4dd99b", null ]
+];

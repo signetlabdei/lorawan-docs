@@ -1,0 +1,52 @@
+<map id="ns3::MinstrelHtWifiManager::RateInit" name="ns3::MinstrelHtWifiManager::RateInit">
+<area shape="rect" id="node1" title="Initialize Minstrel Table." alt="" coords="5,489,209,530"/>
+<area shape="rect" id="node2" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a8a5fa60f2ebd2df3d8b52022161e1f5e" title="Calculate the number of retransmissions to set for the index rate." alt="" coords="560,1006,764,1047"/>
+<area shape="rect" id="node5" href="$classns3_1_1_minstrel_ht_wifi_manager.html#ab18b51d0f2e2313dc166797e2082cfb9" title="Find a rate to use from Minstrel Table." alt="" coords="275,802,479,843"/>
+<area shape="rect" id="node8" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a2c3213dddeb9e0917073482f732127ed" title="Set the next sample from Sample Table." alt="" coords="841,649,1045,690"/>
+<area shape="rect" id="node9" href="$classns3_1_1_wifi_remote_station_manager.html#a2b5787163f54eb6edadf431c8f432545" title="Return the channel width supported by the station." alt="" coords="261,263,494,305"/>
+<area shape="rect" id="node10" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a88255302b3e7c9b3f0dcc079e47b4a27" title="Obtain the TxTime saved in the group information." alt="" coords="275,329,479,370"/>
+<area shape="rect" id="node11" href="$classns3_1_1_wifi_remote_station_manager.html#ac057485196988b0360215978f32a474b" title="Return the WifiMode supported by the specified station at the specified index." alt="" coords="545,941,779,982"/>
+<area shape="rect" id="node19" href="$classns3_1_1_wifi_mode.html#a4ba00941b5dbc4903ffecc1a0c841c6c" title=" " alt="" coords="839,44,1048,71"/>
+<area shape="rect" id="node23" href="$classns3_1_1_wifi_mode.html#a67e1664cac501221b63a2be307184cc9" title=" " alt="" coords="834,95,1053,137"/>
+<area shape="rect" id="node24" href="$classns3_1_1_wifi_remote_station_manager.html#a0b892949ceb7de13dd489049563f203c" title="Return the number of spatial streams supported by the station." alt="" coords="257,459,497,501"/>
+<area shape="rect" id="node25" href="$classns3_1_1_wifi_remote_station_manager.html#a3c27f0a1f9869f53f64173b762b8023e" title="Return the WifiPhy." alt="" coords="261,642,494,683"/>
+<area shape="rect" id="node26" href="$classns3_1_1_wifi_remote_station_manager.html#adb98eb113923b79180be2394fa36838d" title="Return whether the device has SGI support enabled." alt="" coords="1108,205,1351,246"/>
+<area shape="rect" id="node29" href="$classns3_1_1_wifi_remote_station_manager.html#a378e951feaf5fefbe0f32e0cfc0ce765" title="Return whether the device has VHT capability support enabled." alt="" coords="261,394,494,435"/>
+<area shape="rect" id="node31" href="$classns3_1_1_minstrel_ht_wifi_manager.html#ae830b47b0301066a9e16fed61fc1882d" title="Check the validity of a combination of number of streams, chWidth and mode." alt="" coords="275,577,479,618"/>
+<area shape="rect" id="node38" href="$classns3_1_1_minstrel_ht_wifi_manager.html#add9ba12485354ddfaae5a68a90469a92" title="Update the Minstrel Table every 1/10 seconds." alt="" coords="275,1225,479,1266"/>
+<area shape="rect" id="node3" href="$classns3_1_1_minstrel_ht_wifi_manager.html#abfb93cac2326912eff1a1c1ee11a076e" title="Return the groupId from the global index." alt="" coords="841,1006,1045,1047"/>
+<area shape="rect" id="node4" href="$classns3_1_1_minstrel_ht_wifi_manager.html#abdc35be5043a680fa473ce3d2d079882" title="For managing rates from different groups, a global index for all rates in all groups is used." alt="" coords="841,1071,1045,1113"/>
+<area shape="rect" id="node6" href="$classns3_1_1_minstrel_ht_wifi_manager.html#ad60507f89e6ccff15b821b053bb92170" title="Getting the next sample from Sample Table." alt="" coords="560,773,764,814"/>
+<area shape="rect" id="node7" href="$classns3_1_1_minstrel_ht_wifi_manager.html#ade3462ab53b8539429390305d1760b3f" title="Returns the global index corresponding to the groupId and rateId." alt="" coords="841,1319,1045,1361"/>
+<area shape="rect" id="node12" href="$classns3_1_1_wifi_remote_station_manager.html#aae31cddb0568964f6e11e61dbfcf2542" title="Return the number of MCS supported by the station." alt="" coords="827,827,1060,869"/>
+<area shape="rect" id="node13" href="$classns3_1_1_wifi_remote_station_manager.html#a6a5c20f231324799e383594b546ca733" title="Return the state of the station associated with the given address." alt="" coords="1113,441,1346,482"/>
+<area shape="rect" id="node14" href="$classns3_1_1_wifi_phy.html#af55a96fc67e724abd99aeaeab826187f" title=" " alt="" coords="1422,407,1609,449"/>
+<area shape="rect" id="node15" href="$classns3_1_1_wifi_remote_station_manager.html#a2422db307a1cd07b938ec2d4b8442668" title="Return the default Modulation and Coding Scheme (MCS) index." alt="" coords="1399,473,1632,514"/>
+<area shape="rect" id="node16" href="$classns3_1_1_wifi_remote_station_manager.html#a0f76976a6d7a8761b1ae1b9b74f18fbf" title="Return the default transmission mode." alt="" coords="1399,538,1632,579"/>
+<area shape="rect" id="node17" href="$classns3_1_1_wifi_remote_station_manager.html#af042a3c6cc1e936255e794c4aa21e68c" title="Return the supported HE guard interval duration (in nanoseconds)." alt="" coords="1399,342,1632,383"/>
+<area shape="rect" id="node18" href="$classns3_1_1_wifi_phy.html#adf2fa40dcba4e52e9bc67c6ffc819170" title="Return the device this PHY is associated with." alt="" coords="1680,253,1859,280"/>
+<area shape="rect" id="node20" href="$classns3_1_1_wifi_mode_factory.html#a3086868810ff4347e31c63027726f544" title="Return a WifiModeItem at the given UID index." alt="" coords="1419,72,1612,99"/>
+<area shape="rect" id="node21" href="$classns3_1_1_wifi_mode_factory.html#a9c6f695d733355dee8d74bd1709868fc" title="Return a WifiModeFactory." alt="" coords="1148,37,1311,78"/>
+<area shape="rect" id="node22" href="$classns3_1_1_wifi_mode_factory.html#a89a9c38617bd3f7be4a8919ce9675996" title="Allocate a WifiModeItem from a given uniqueUid." alt="" coords="1434,6,1597,47"/>
+<area shape="rect" id="node27" href="$classns3_1_1_wifi_net_device.html#a20c98121e79afae35d03d9f5a3fa4ce8" title=" " alt="" coords="1691,162,1847,203"/>
+<area shape="rect" id="node28" href="$classns3_1_1_wifi_remote_station_manager.html#ae2d1200da0ec74745ef9b496f9c0251f" title="Return whether the device has HT capability support enabled." alt="" coords="1399,174,1632,215"/>
+<area shape="rect" id="node30" href="$classns3_1_1_wifi_net_device.html#aab971061bafb69989fa3873cb1c36eca" title=" " alt="" coords="581,342,743,383"/>
+<area shape="rect" id="node32" href="$classns3_1_1_wifi_tx_vector.html#a93cb4439b90c64b1baf4ff3c5246e3b2" title="The standard disallows certain combinations of WifiMode, number of spatial streams,..." alt="" coords="589,459,735,501"/>
+<area shape="rect" id="node35" href="$classns3_1_1_wifi_tx_vector.html#a2bd711576c12a747bc3a800ef4cc0a5b" title="Sets the selected channelWidth (in MHz)" alt="" coords="589,707,735,749"/>
+<area shape="rect" id="node36" href="$classns3_1_1_wifi_tx_vector.html#af39f17fec348c22f8c963bcb6bb5fc53" title="Sets the selected payload transmission mode." alt="" coords="589,577,735,618"/>
+<area shape="rect" id="node37" href="$classns3_1_1_wifi_tx_vector.html#af6b333491a8b20c064d8d1ad35381194" title="Sets the number of Nss refer to IEEE 802.11n Table 20&#45;28 for explanation and range." alt="" coords="589,642,735,683"/>
+<area shape="rect" id="node33" href="$classns3_1_1_wifi_tx_vector.html#a76c67ceafbc307fd41d049c1b3740761" title=" " alt="" coords="871,459,1016,501"/>
+<area shape="rect" id="node34" href="$classns3_1_1_wifi_mode.html#a9d391f77af3a264f5954ea8f9161b8c9" title=" " alt="" coords="828,161,1059,188"/>
+<area shape="rect" id="node39" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a4abf99deab7f8f14406396843523f9da" title="Perform EWMSD (Exponentially Weighted Moving Standard Deviation) calculation." alt="" coords="560,1554,764,1595"/>
+<area shape="rect" id="node40" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a460ae381cadb85a4a31565c8d9a81c06" title="Return the average throughput of the MCS defined by groupId and rateId." alt="" coords="560,1437,764,1478"/>
+<area shape="rect" id="node42" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a650e9d652d32cc166aea59f46149dcdf" title="Returns the lowest global index of the rates supported by the station." alt="" coords="560,1319,764,1361"/>
+<area shape="rect" id="node43" href="$namespacens3.html#aaad5cc5702ff29a1fcc8cdffd10a12e9" title=" " alt="" coords="631,1503,693,1529"/>
+<area shape="rect" id="node47" href="$classns3_1_1_simulator.html#ac3178fa975b419f7875e7105be122800" title="Return the current simulation virtual time." alt="" coords="585,1203,739,1229"/>
+<area shape="rect" id="node48" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a434fb6aadb02a74cc097ba54b7b02cb3" title="Printing Minstrel Table." alt="" coords="560,1254,764,1295"/>
+<area shape="rect" id="node49" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a4f8adb0cd7eba7dc4de0892ca33267bb" title="Set index rate as maxProbRate if it is better than current value." alt="" coords="560,1071,764,1113"/>
+<area shape="rect" id="node50" href="$classns3_1_1_minstrel_ht_wifi_manager.html#a3c64036c5d4998a6ecc3f530f87ccf14" title="Set index rate as maxTpRate or maxTp2Rate if is better than current values." alt="" coords="560,1137,764,1178"/>
+<area shape="rect" id="node41" href="$classns3_1_1_time.html#a27cb7c22324e0447740929b024dbeb66" title="Get an approximation of the time stored in this instance in the indicated unit." alt="" coords="858,1423,1029,1449"/>
+<area shape="rect" id="node44" href="$classns3_1_1_net_device_container.html#a7ca8bc1d7ec00fd4fcc63869987fbda5" title="Append the contents of another NetDeviceContainer to the end of this container." alt="" coords="835,1575,1052,1601"/>
+<area shape="rect" id="node45" href="$classns3_1_1_node.html#a2ed8663077afcb8db519296b0ada6355" title=" " alt="" coords="878,1473,1009,1500"/>
+<area shape="rect" id="node46" href="$global-router-interface_8cc.html#af2f17e24d29f39f6804d0d10d8cedc71" title=" " alt="" coords="883,1524,1004,1551"/>
+</map>

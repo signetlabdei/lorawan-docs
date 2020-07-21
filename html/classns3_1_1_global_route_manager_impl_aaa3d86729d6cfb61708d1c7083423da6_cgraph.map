@@ -1,0 +1,52 @@
+<map id="ns3::GlobalRouteManagerImpl::SPFNext" name="ns3::GlobalRouteManagerImpl::SPFNext">
+<area shape="rect" id="node1" title="Examine the links in v&#39;s LSA and update the list of candidates with any vertices not already on the l..." alt="" coords="5,1541,224,1582"/>
+<area shape="rect" id="node2" href="$classns3_1_1_candidate_queue.html#ae38da80d9768287e0c350c09a26efb14" title="Searches the Candidate Queue for a Shortest Path First Vertex pointer that points to a vertex having ..." alt="" coords="303,116,465,157"/>
+<area shape="rect" id="node3" href="$classns3_1_1_s_p_f_vertex.html#aee273fe68ca8969878e0d23b24f7bfd3" title="Get the Vertex ID field of a SPFVertex object." alt="" coords="823,64,1030,91"/>
+<area shape="rect" id="node4" href="$classns3_1_1_global_routing_l_s_a.html#a6b0c41fc33c50d2f4afdcdb3d43b002b" title="Return an Ipv4Address corresponding to the specified attached router." alt="" coords="841,1889,1012,1930"/>
+<area shape="rect" id="node5" href="$ipv4-address-generator_8cc.html#aaf5aa23b804d2e5e334106f207e8a6cc" title=" " alt="" coords="1113,984,1247,1011"/>
+<area shape="rect" id="node6" href="$classns3_1_1_s_p_f_vertex.html#abec08bd486fa602e2e86888ff37324b4" title="Get the distance from the root vertex to &quot;this&quot; SPFVertex object." alt="" coords="823,1802,1031,1844"/>
+<area shape="rect" id="node7" href="$classns3_1_1_global_routing_link_record.html#ab56e5ee06ec3c740bf94795d50823c85" title="Get the Link ID field of the Global Routing Link Record." alt="" coords="818,501,1035,542"/>
+<area shape="rect" id="node8" href="$classns3_1_1_global_routing_l_s_a.html#acb1684442a660e70d3cc3e8bd838af50" title="Return a pointer to the specified Global Routing Link Record." alt="" coords="841,1352,1012,1393"/>
+<area shape="rect" id="node9" href="$classns3_1_1_global_routing_l_s_a.html#ae393e76bb179f591a47e10e51121a9ab" title="Get the Link State ID as defined by the OSPF spec." alt="" coords="570,385,741,426"/>
+<area shape="rect" id="node10" href="$classns3_1_1_global_routing_link_record.html#a7160442a4e6dcbbe4508b2a14ac502d4" title="Get the Link Type field of the Global Routing Link Record." alt="" coords="547,1508,764,1549"/>
+<area shape="rect" id="node11" href="$classns3_1_1_global_route_manager_l_s_d_b.html#a64eda702541d4bd6afa2b5518ec86e1d" title="Look up the Link State Advertisement associated with the given link state ID (address)." alt="" coords="272,1960,496,2001"/>
+<area shape="rect" id="node12" href="$classns3_1_1_s_p_f_vertex.html#a4385952b5f26b0451ebc4420076c3d6e" title="Get the Global Router Link State Advertisement returned by the Global Router represented by this SPFV..." alt="" coords="839,699,1015,726"/>
+<area shape="rect" id="node13" href="$classns3_1_1_global_route_manager_l_s_d_b.html#aec1596aa3bca59291fa377690f880884" title="Look up the Link State Advertisement associated with the given link state ID (address)." alt="" coords="272,1457,496,1498"/>
+<area shape="rect" id="node15" href="$classns3_1_1_global_routing_l_s_a.html#a1b9d99bfd22d948880df3b812c0b5583" title="Return the number of Global Routing Link Records in the LSA." alt="" coords="570,1573,741,1614"/>
+<area shape="rect" id="node16" href="$classns3_1_1_global_routing_l_s_a.html#a4826a007aad0538e86df4c0e1337d93d" title="Return the LSType field of the LSA." alt="" coords="570,1137,741,1178"/>
+<area shape="rect" id="node17" href="$classns3_1_1_global_routing_link_record.html#a03caf9027a31e85f13e4db1dda515b26" title="Get the Metric Data field of the Global Routing Link Record." alt="" coords="275,2025,493,2066"/>
+<area shape="rect" id="node18" href="$classns3_1_1_global_routing_l_s_a.html#a3065d95382bf12c0af60f14fa006832e" title="Return the number of attached routers listed in the NetworkLSA." alt="" coords="299,2090,469,2132"/>
+<area shape="rect" id="node19" href="$classns3_1_1_global_routing_l_s_a.html#a1b3fbb0a72002866e50ec3efdbfccb77" title="Get the SPF status of the advertisement." alt="" coords="299,2156,469,2197"/>
+<area shape="rect" id="node20" href="$classns3_1_1_s_p_f_vertex.html#a68bd38b15f1f69bf901c8548cc4631e3" title="Get the Vertex Type field of a SPFVertex object." alt="" coords="815,1740,1039,1767"/>
+<area shape="rect" id="node21" href="$classns3_1_1_s_p_f_vertex.html#a1f8549748a9888722110a947f5932981" title="Merge the Parent list from the v into this vertex." alt="" coords="279,1406,489,1432"/>
+<area shape="rect" id="node22" href="$global-router-interface_8cc.html#af2f17e24d29f39f6804d0d10d8cedc71" title=" " alt="" coords="866,1203,987,1230"/>
+<area shape="rect" id="node23" href="$classns3_1_1_s_p_f_vertex.html#a4fc3b7cdcd705457993f644046e89318" title="Merge into &#39;this&#39; vertex the list of exit directions from another vertex." alt="" coords="285,2221,483,2262"/>
+<area shape="rect" id="node24" href="$classns3_1_1_candidate_queue.html#a52f6bdb3651569f349f5e522ccc4d88f" title="Push a Shortest Path First Vertex pointer onto the queue according to the priority scheme." alt="" coords="303,1792,465,1833"/>
+<area shape="rect" id="node26" href="$classns3_1_1_candidate_queue.html#af258e0f4eb3ed5f04fb99c2e6e40c6c2" title="Reorders the Candidate Queue according to the priority scheme." alt="" coords="303,1726,465,1768"/>
+<area shape="rect" id="node27" href="$classns3_1_1_global_routing_l_s_a.html#a0a3a59c56967eac866a2a3a2a5ded93f" title="Set the SPF status of the advertisement." alt="" coords="299,2286,469,2328"/>
+<area shape="rect" id="node28" href="$classns3_1_1_global_route_manager_impl.html#ab082a78c423009f77c9cfe9018d40021" title="Calculate nexthop from root through V (parent) to vertex W (destination) with given distance from roo..." alt="" coords="275,780,493,821"/>
+<area shape="rect" id="node49" href="$classns3_1_1_global_route_manager_impl.html#ae7824a06e22187d1dc6823c46c95a3fc" title="Adds a vertex to the list of children in each of its parents." alt="" coords="275,1238,493,1280"/>
+<area shape="rect" id="node14" href="$classns3_1_1_global_routing_link_record.html#ae329213648a513bef41aca9efe8c951a" title="Get the Link Data field of the Global Routing Link Record." alt="" coords="818,809,1035,850"/>
+<area shape="rect" id="node25" href="$classns3_1_1_candidate_queue.html#a13b908ec4dca38705cd12d7c6684099e" title="return true if v1 &lt; v2" alt="" coords="575,1792,736,1833"/>
+<area shape="rect" id="node29" href="$classns3_1_1_global_route_manager_impl.html#a55b3c7bf042d95de52cf56cc6699dc9a" title="Return the interface number corresponding to a given IP address and mask." alt="" coords="546,166,765,208"/>
+<area shape="rect" id="node40" href="$classns3_1_1_global_routing_l_s_a.html#ab86e01b05862166f3225be53cfe2474d" title="For a Network LSA, get the Network Mask field that precedes the list of attached routers." alt="" coords="544,450,767,492"/>
+<area shape="rect" id="node41" href="$classns3_1_1_s_p_f_vertex.html#af06a05cbef13c14694d3cee4a4e20169" title="Get a pointer to the SPFVector that is the parent of &quot;this&quot; SPFVertex." alt="" coords="559,1203,752,1230"/>
+<area shape="rect" id="node42" href="$classns3_1_1_s_p_f_vertex.html#a089da2ba061b7d6280956fe5ba9a69a9" title="Obtain a pair indicating the exit direction from the root." alt="" coords="823,977,1030,1018"/>
+<area shape="rect" id="node43" href="$classns3_1_1_ipv4_address.html#aeeb1c76b35d4ab612fda7bc51e99c5db" title=" " alt="" coords="558,516,753,543"/>
+<area shape="rect" id="node44" href="$classns3_1_1_s_p_f_vertex.html#a3031d94106d3ce70776b2fe9a73ae36c" title="Inherit all root exit directions from a given vertex to &#39;this&#39; vertex." alt="" coords="562,568,749,609"/>
+<area shape="rect" id="node45" href="$classns3_1_1_s_p_f_vertex.html#a30885442cd0d8f7ae0e4690373b2c50a" title="Set the distance from the root vertex to &quot;this&quot; SPFVertex object." alt="" coords="552,633,759,674"/>
+<area shape="rect" id="node46" href="$classns3_1_1_s_p_f_vertex.html#a4f8e0fed65db9fe485dae7ad9667ff40" title="Set the pointer to the SPFVector that is the parent of &quot;this&quot; SPFVertex." alt="" coords="560,867,751,894"/>
+<area shape="rect" id="node47" href="$classns3_1_1_s_p_f_vertex.html#a8538efb9de281a8a76bfeb7124dee3ae" title="Set the IP address and outgoing interface index that should be used to begin forwarding packets from ..." alt="" coords="553,918,757,960"/>
+<area shape="rect" id="node48" href="$classns3_1_1_global_route_manager_impl.html#a4c868c90e06e063ac2eb60cfe93c2c84" title="Search for a link between two vertices." alt="" coords="546,750,765,792"/>
+<area shape="rect" id="node30" href="$classns3_1_1_node_list.html#a93d2211831f5cb71d1dbb721e2721d7f" title=" " alt="" coords="849,115,1004,142"/>
+<area shape="rect" id="node33" href="$classns3_1_1_node_list.html#a027a558c16e6078e25c7ffc67becb559" title=" " alt="" coords="855,166,998,192"/>
+<area shape="rect" id="node34" href="$classns3_1_1_object.html#a817117ab236e4ff7f80f0239d4e28731" title="Get a pointer to the requested aggregated Object." alt="" coords="843,216,1011,243"/>
+<area shape="rect" id="node31" href="$classns3_1_1_node_list_priv.html#a746ce1482b3c1cf31d5a50cd55cffa92" title="Get the node list object." alt="" coords="1097,126,1263,152"/>
+<area shape="rect" id="node32" href="$classns3_1_1_node_list_priv.html#a6f0222de939567a488905f1c6876c4ca" title="Get the node list object." alt="" coords="1341,118,1483,160"/>
+<area shape="rect" id="node35" href="$classns3_1_1_object.html#a34f8410d0f3aae5612b56eb65d044857" title="Find an Object of TypeId tid in the aggregates of this Object." alt="" coords="1087,256,1273,283"/>
+<area shape="rect" id="node39" href="$namespacens3.html#af2a7557fe9afdd98d8f6f8f6e412cf5a" title=" " alt="" coords="1115,206,1245,232"/>
+<area shape="rect" id="node36" href="$classns3_1_1_object.html#a4000e647d44103477c0c31825fc288b6" title="Check if any aggregated Objects have non&#45;zero reference counts." alt="" coords="1321,256,1503,283"/>
+<area shape="rect" id="node37" href="$classns3_1_1_object.html#a12101af51922401affe289e1081c43c5" title="Get the most derived TypeId for this Object." alt="" coords="1321,308,1503,349"/>
+<area shape="rect" id="node38" href="$classns3_1_1_type_id.html#ab84f81aee52154af39a8668b59c89d63" title="Get the parent of this TypeId." alt="" coords="1328,206,1496,232"/>
+<area shape="rect" id="node50" href="$classns3_1_1_s_p_f_vertex.html#ae15d2c3bc1fb5285f467b494d27869d9" title="Get a borrowed SPFVertex pointer to the specified child of &quot;this&quot; SPFVertex." alt="" coords="562,1254,749,1280"/>
+</map>

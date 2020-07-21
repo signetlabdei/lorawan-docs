@@ -1,0 +1,27 @@
+var classns3_1_1_epc_x2 =
+[
+    [ "EpcX2", "classns3_1_1_epc_x2.html#abb1f73b452bf9552772b910e0aa5cdd5", null ],
+    [ "~EpcX2", "classns3_1_1_epc_x2.html#a3b818e925c4a5894a011d53af38bdde5", null ],
+    [ "AddX2Interface", "classns3_1_1_epc_x2.html#a4bcd4423802914da0356051ecf79d2f1", null ],
+    [ "DoDispose", "classns3_1_1_epc_x2.html#accf3543ad5e0150d238edd6bbf626435", null ],
+    [ "DoSendHandoverPreparationFailure", "classns3_1_1_epc_x2.html#a6b426becb1b31625fc2aada18d825d70", null ],
+    [ "DoSendHandoverRequest", "classns3_1_1_epc_x2.html#a8008ce25fcdf78a02d7945768ae3084b", null ],
+    [ "DoSendHandoverRequestAck", "classns3_1_1_epc_x2.html#a0c10744b59810accae456d5e7a5ebf3b", null ],
+    [ "DoSendLoadInformation", "classns3_1_1_epc_x2.html#aa6e72c1fe568b09e0527de001ac33d8e", null ],
+    [ "DoSendResourceStatusUpdate", "classns3_1_1_epc_x2.html#a556c1c456108f8e1dff65289073d9b55", null ],
+    [ "DoSendSnStatusTransfer", "classns3_1_1_epc_x2.html#adab34a68d321212ad653935239fedd4e", null ],
+    [ "DoSendUeContextRelease", "classns3_1_1_epc_x2.html#a21fd33c24044a655a707fc0b68961fef", null ],
+    [ "DoSendUeData", "classns3_1_1_epc_x2.html#a8a20256ed59b6f7f03095c3386ecc6d1", null ],
+    [ "GetEpcX2SapProvider", "classns3_1_1_epc_x2.html#a8e0c457eda78448e403f6769be8e25c9", null ],
+    [ "GetTypeId", "classns3_1_1_epc_x2.html#a4c5cfede886af2ff95ede07dda646e7d", null ],
+    [ "RecvFromX2cSocket", "classns3_1_1_epc_x2.html#a72bf05af65397dab7bc65df72bb09ebf", null ],
+    [ "RecvFromX2uSocket", "classns3_1_1_epc_x2.html#af7142276a4a54af090466d51a31c796f", null ],
+    [ "SetEpcX2SapUser", "classns3_1_1_epc_x2.html#ae91f9247984c4e0f55f5712cb062074e", null ],
+    [ "EpcX2SpecificEpcX2SapProvider< EpcX2 >", "classns3_1_1_epc_x2.html#a5fa3eadb39e71e0c9f7a469a8315c690", null ],
+    [ "m_x2cUdpPort", "classns3_1_1_epc_x2.html#aa2fe730659f6fc10fcd8c44272f96dde", null ],
+    [ "m_x2InterfaceCellIds", "classns3_1_1_epc_x2.html#ac2a7cd7a712f47a9f429254842762482", null ],
+    [ "m_x2InterfaceSockets", "classns3_1_1_epc_x2.html#a0665276228b9b99a52ef6d5e9bdb306d", null ],
+    [ "m_x2SapProvider", "classns3_1_1_epc_x2.html#a0f18e63c998d9dc8771e80d325870fc2", null ],
+    [ "m_x2SapUser", "classns3_1_1_epc_x2.html#a0a74a3c19067fe18af3021c7b4c24c19", null ],
+    [ "m_x2uUdpPort", "classns3_1_1_epc_x2.html#aa0e3b62bf699a12b65309cb25f232974", null ]
+];

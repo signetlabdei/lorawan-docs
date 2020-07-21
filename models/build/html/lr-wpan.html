@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Low-Rate Wireless Personal Area Network (LR-WPAN) &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="LTE Module" href="lte.html" />
+    <link rel="prev" title="Internet Applications Module Documentation" href="internet-apps.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="lte.html" title="LTE Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="internet-apps.html" title="Internet Applications Module Documentation"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p>PageBreak</p>
+<div class="section" id="low-rate-wireless-personal-area-network-lr-wpan">
+<h1>Low-Rate Wireless Personal Area Network (LR-WPAN)<a class="headerlink" href="#low-rate-wireless-personal-area-network-lr-wpan" title="Permalink to this headline">¶</a></h1>
+<p>This chapter describes the implementation of ns-3 models for the
+low-rate, wireless personal area network (LR-WPAN) as specified by
+IEEE standard 802.15.4 (2006).</p>
+<div class="section" id="model-description">
+<h2>Model Description<a class="headerlink" href="#model-description" title="Permalink to this headline">¶</a></h2>
+<p>The source code for the lr-wpan module lives in the directory <code class="docutils literal notranslate"><span class="pre">src/lr-wpan</span></code>.</p>
+<div class="section" id="design">
+<h3>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h3>
+<p>The model design closely follows the standard from an architectural standpoint.</p>
+<div class="figure align-default" id="id1">
+<span id="fig-lr-wpan-arch"></span><img alt="_images/lr-wpan-arch.png" src="_images/lr-wpan-arch.png" />
+<p class="caption"><span class="caption-text">Architecture and scope of lr-wpan models</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>The grey areas in the figure (adapted from Fig 3. of IEEE Std. 802.15.4-2006)
+show the scope of the model.</p>
+<p>The Spectrum NetDevice from Nicola Baldo is the basis for the implementation.</p>
+<p>The implementation also plans to borrow from the ns-2 models developed by
+Zheng and Lee in the future.</p>
+<div class="section" id="apis">
+<h4>APIs<a class="headerlink" href="#apis" title="Permalink to this headline">¶</a></h4>
+<p>The APIs closely follow the standard, adapted for ns-3 naming conventions
+and idioms.  The APIs are organized around the concept of service primitives
+as shown in the following figure adapted from Figure 14 of
+IEEE Std. 802.15.4-2006.</p>
+<div class="figure align-default" id="id2">
+<span id="fig-lr-wpan-primitives"></span><img alt="_images/lr-wpan-primitives.png" src="_images/lr-wpan-primitives.png" />
+<p class="caption"><span class="caption-text">Service primitives</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>The APIs are organized around four conceptual services and service access
+points (SAP):</p>
+<ul class="simple">
+<li><p>MAC data service (MCPS)</p></li>
+<li><p>MAC management service  (MLME)</p></li>
+<li><p>PHY data service (PD)</p></li>
+<li><p>PHY management service (PLME)</p></li>
+</ul>
+<p>In general, primitives are standardized as follows (e.g. Sec 7.1.1.1.1
+of IEEE 802.15.4-2006)::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MCPS</span><span class="o">-</span><span class="n">DATA</span><span class="o">.</span><span class="n">request</span>      <span class="p">(</span>
+                        <span class="n">SrcAddrMode</span><span class="p">,</span>
+                        <span class="n">DstAddrMode</span><span class="p">,</span>
+                        <span class="n">DstPANId</span><span class="p">,</span>
+                        <span class="n">DstAddr</span><span class="p">,</span>
+                        <span class="n">msduLength</span><span class="p">,</span>
+                        <span class="n">msdu</span><span class="p">,</span>
+                        <span class="n">msduHandle</span><span class="p">,</span>
+                        <span class="n">TxOptions</span><span class="p">,</span>
+                        <span class="n">SecurityLevel</span><span class="p">,</span>
+                        <span class="n">KeyIdMode</span><span class="p">,</span>
+                        <span class="n">KeySource</span><span class="p">,</span>
+                        <span class="n">KeyIndex</span>
+                        <span class="p">)</span>
+</pre></div>
+</div>
+<p>This maps to ns-3 classes and methods such as::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">McpsDataRequestParameters</span>
+<span class="p">{</span>
+  <span class="n">uint8_t</span> <span class="n">m_srcAddrMode</span><span class="p">;</span>
+  <span class="n">uint8_t</span> <span class="n">m_dstAddrMode</span><span class="p">;</span>
+  <span class="o">...</span>
+<span class="p">};</span>
+
+<span class="n">void</span>
+<span class="n">LrWpanMac</span><span class="p">::</span><span class="n">McpsDataRequest</span> <span class="p">(</span><span class="n">McpsDataRequestParameters</span> <span class="n">params</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mac">
+<h4>MAC<a class="headerlink" href="#mac" title="Permalink to this headline">¶</a></h4>
+<p>The MAC at present implements the unslotted CSMA/CA variant, without beaconing.
+Currently there is no support for coordinators and the relevant APIs.</p>
+<p>The implemented MAC is similar to Contiki’s NullMAC, i.e., a MAC without sleep
+features. The radio is assumed to be always active (receiving or transmitting),
+of completely shut down. Frame reception is not disabled while performing the
+CCA.</p>
+<p>The main API supported is the data transfer API
+(McpsDataRequest/Indication/Confirm).  CSMA/CA according to Stc 802.15.4-2006,
+section 7.5.1.4 is supported. Frame reception and rejection according to
+Std 802.15.4-2006, section 7.5.6.2 is supported, including acknowledgements.
+Only short addressing completely implemented. Various trace sources are
+supported, and trace sources can be hooked to sinks.</p>
+</div>
+<div class="section" id="phy">
+<h4>PHY<a class="headerlink" href="#phy" title="Permalink to this headline">¶</a></h4>
+<p>The physical layer components consist of a Phy model, an error rate model,
+and a loss model.  The error rate model presently models the error rate
+for IEEE 802.15.4 2.4 GHz AWGN channel for OQPSK; the model description can
+be found in IEEE Std 802.15.4-2006, section E.4.1.7.   The Phy model is
+based on SpectrumPhy and it follows specification described in section 6
+of IEEE Std 802.15.4-2006. It models PHY service specifications, PPDU
+formats, PHY constants and PIB attributes. It currently only supports
+the transmit power spectral density mask specified in 2.4 GHz per section
+6.5.3.1. The noise power density assumes uniformly distributed thermal
+noise across the frequency bands. The loss model can fully utilize all
+existing simple (non-spectrum phy) loss models. The Phy model uses
+the existing single spectrum channel model.
+The physical layer is modeled on packet level, that is, no preamble/SFD
+detection is done. Packet reception will be started with the first bit of the
+preamble (which is not modeled), if the SNR is more than -5 dB, see IEEE
+Std 802.15.4-2006, appendix E, Figure E.2. Reception of the packet will finish
+after the packet was completely transmitted. Other packets arriving during
+reception will add up to the interference/noise.</p>
+<p>Currently the receiver sensitivity is set to a fixed value of -106.58 dBm. This
+corresponds to a packet error rate of 1% for 20 byte reference packets for this
+signal power, according to IEEE Std 802.15.4-2006, section 6.1.7. In the future
+we will provide support for changing the sensitivity to different values.</p>
+<div class="figure align-default" id="id3">
+<span id="fig-802-15-4-per-sens"></span><img alt="_images/802-15-4-per-sens.png" src="_images/802-15-4-per-sens.png" />
+<p class="caption"><span class="caption-text">Packet error rate vs. signal power</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="netdevice">
+<h4>NetDevice<a class="headerlink" href="#netdevice" title="Permalink to this headline">¶</a></h4>
+<p>Although it is expected that other technology profiles (such as
+6LoWPAN and ZigBee) will write their own NetDevice classes, a basic
+LrWpanNetDevice is provided, which encapsulates the common operations
+of creating a generic LrWpan device and hooking things together.</p>
+</div>
+</div>
+<div class="section" id="scope-and-limitations">
+<h3>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Permalink to this headline">¶</a></h3>
+<p>Future versions of this document will contain a PICS proforma similar to
+Appendix D of IEEE 802.15.4-2006.  The current emphasis is on the
+unslotted mode of 802.15.4 operation for use in Zigbee, and the scope
+is limited to enabling a single mode (CSMA/CA) with basic data transfer
+capabilities. Association with PAN coordinators is not yet supported, nor the
+use of extended addressing. Interference is modeled as AWGN but this is
+currently not thoroughly tested.</p>
+<p>The NetDevice Tx queue is not limited, i.e., packets are never dropped
+due to queue becoming full. They may be dropped due to excessive transmission
+retries or channel access failure.</p>
+</div>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Wireless Medium Access Control (MAC) and Physical Layer (PHY) Specifications for Low-Rate Wireless Personal Area Networks (WPANs), IEEE Computer Society, IEEE Std 802.15.4-2006, 8 September 2006.</p></li>
+<li><ol class="upperalpha simple" start="10">
+<li><p>Zheng and Myung J. Lee, “A comprehensive performance study of IEEE 802.15.4,” Sensor Network Operations, IEEE Press, Wiley Interscience, Chapter 4, pp. 218-237, 2006.</p></li>
+</ol>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="enabling-lr-wpan">
+<h3>Enabling lr-wpan<a class="headerlink" href="#enabling-lr-wpan" title="Permalink to this headline">¶</a></h3>
+<p>Add <code class="docutils literal notranslate"><span class="pre">lr-wpan</span></code> to the list of modules built with ns-3.</p>
+</div>
+<div class="section" id="helper">
+<h3>Helper<a class="headerlink" href="#helper" title="Permalink to this headline">¶</a></h3>
+<p>The helper is patterned after other device helpers.  In particular,
+tracing (ascii and pcap) is enabled similarly, and enabling of all
+lr-wpan log components is performed similarly.  Use of the helper
+is exemplified in <code class="docutils literal notranslate"><span class="pre">examples/lr-wpan-data.cc</span></code>.  For ascii tracing,
+the transmit and receive traces are hooked at the Mac layer.</p>
+<p>The default propagation loss model added to the channel, when this helper
+is used, is the LogDistancePropagationLossModel with default parameters.</p>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>The following examples have been written, which can be found in <code class="docutils literal notranslate"><span class="pre">src/lr-wpan/examples/</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">lr-wpan-data.cc</span></code>:  A simple example showing end-to-end data transfer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lr-wpan-error-distance-plot.cc</span></code>:  An example to plot variations of the packet success ratio as a function of distance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lr-wpan-error-model-plot.cc</span></code>:  An example to test the phy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lr-wpan-packet-print.cc</span></code>:  An example to print out the MAC header fields.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lr-wpan-phy-test.cc</span></code>:  An example to test the phy.</p></li>
+</ul>
+<p>In particular, the module enables a very simplified end-to-end data
+transfer scenario, implemented in <code class="docutils literal notranslate"><span class="pre">lr-wpan-data.cc</span></code>.  The figure
+shows a sequence of events that are triggered when the MAC receives
+a DataRequest from the higher layer.  It invokes a Clear Channel
+Assessment (CCA) from the PHY, and if successful, sends the frame
+down to the PHY where it is transmitted over the channel and results
+in a DataIndication on the peer node.</p>
+<div class="figure align-default" id="id4">
+<span id="fig-lr-wpan-data"></span><img alt="_images/lr-wpan-data-example.png" src="_images/lr-wpan-data-example.png" />
+<p class="caption"><span class="caption-text">Data example for simple LR-WPAN data transfer end-to-end</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>The example <code class="docutils literal notranslate"><span class="pre">lr-wpan-error-distance-plot.cc</span></code> plots the packet success
+ratio (PSR) as a function of distance, using the default LogDistance
+propagation loss model and the 802.15.4 error model.  The channel (default 11),
+packet size (default 20 bytes) and transmit power (default 0 dBm) can be
+varied by command line arguments.  The program outputs a file named
+<code class="docutils literal notranslate"><span class="pre">802.15.4-psr-distance.plt</span></code>.  Loading this file into gnuplot yields
+a file <code class="docutils literal notranslate"><span class="pre">802.15.4-psr-distance.eps</span></code>, which can be converted to pdf or
+other formats.  The default output is shown below.</p>
+<div class="figure align-default" id="id5">
+<span id="fig-802-15-4-psr-distance"></span><img alt="_images/802-15-4-psr-distance.png" src="_images/802-15-4-psr-distance.png" />
+<p class="caption"><span class="caption-text">Default output of the program <code class="docutils literal notranslate"><span class="pre">lr-wpan-error-distance-plot.cc</span></code></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="tests">
+<h3>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h3>
+<p>The following tests have been written, which can be found in <code class="docutils literal notranslate"><span class="pre">src/lr-wpan/tests/</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">lr-wpan-ack-test.cc</span></code>:  Check that acknowledgments are being used and issued in the correct order.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lr-wpan-collision-test.cc</span></code>:  Test correct reception of packets with interference and collisions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lr-wpan-error-model-test.cc</span></code>:  Check that the error model gives predictable values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lr-wpan-packet-test.cc</span></code>:  Test the 802.15.4 MAC header/trailer classes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lr-wpan-pd-plme-sap-test.cc</span></code>:  Test the PLME and PD SAP per IEEE 802.15.4</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lr-wpan-spectrum-value-helper-test.cc</span></code>:  Test that the conversion between power (expressed as a scalar quantity) and spectral power, and back again, falls within a 25% tolerance across the range of possible channels and input powers.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="validation">
+<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<p>The model has not been validated against real hardware.  The error model
+has been validated against the data in IEEE Std 802.15.4-2006,
+section E.4.1.7 (Figure E.2). The MAC behavior (CSMA backoff) has been
+validated by hand against expected behavior.  The below plot is an example
+of the error model validation and can be reproduced by running
+<code class="docutils literal notranslate"><span class="pre">lr-wpan-error-model-plot.cc</span></code>:</p>
+<div class="figure align-default" id="id6">
+<span id="fig-802-15-4-ber"></span><img alt="_images/802-15-4-ber.png" src="_images/802-15-4-ber.png" />
+<p class="caption"><span class="caption-text">Default output of the program <code class="docutils literal notranslate"><span class="pre">lr-wpan-error-model-plot.cc</span></code></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Low-Rate Wireless Personal Area Network (LR-WPAN)</a><ul>
+<li><a class="reference internal" href="#model-description">Model Description</a><ul>
+<li><a class="reference internal" href="#design">Design</a><ul>
+<li><a class="reference internal" href="#apis">APIs</a></li>
+<li><a class="reference internal" href="#mac">MAC</a></li>
+<li><a class="reference internal" href="#phy">PHY</a></li>
+<li><a class="reference internal" href="#netdevice">NetDevice</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scope-and-limitations">Scope and Limitations</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#enabling-lr-wpan">Enabling lr-wpan</a></li>
+<li><a class="reference internal" href="#helper">Helper</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#tests">Tests</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#validation">Validation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="internet-apps.html"
+                        title="previous chapter">Internet Applications Module Documentation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="lte.html"
+                        title="next chapter">LTE Module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/lr-wpan.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="lte.html" title="LTE Module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="internet-apps.html" title="Internet Applications Module Documentation"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,593 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>LTE Module &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Design Documentation" href="lte-design.html" />
+    <link rel="prev" title="Low-Rate Wireless Personal Area Network (LR-WPAN)" href="lr-wpan.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="lte-design.html" title="Design Documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="lr-wpan.html" title="Low-Rate Wireless Personal Area Network (LR-WPAN)"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="lte-module">
+<h1>LTE Module<a class="headerlink" href="#lte-module" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lte-design.html">Design Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#design-criteria">Design Criteria</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#lte-model">LTE Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#epc-model">EPC Model</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#architecture">Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#id6">LTE Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#ue-architecture">UE architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#enb-architecture">eNB architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#id7">EPC Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#epc-data-plane">EPC data plane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#epc-control-plane">EPC control plane</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#channel-and-propagation">Channel and Propagation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#use-of-the-buildings-model-with-lte">Use of the Buildings model with LTE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#fading-model">Fading Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#antennas">Antennas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#phy">PHY</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#id13">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#subframe-structure">Subframe Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#mac-to-channel-delay">MAC to Channel delay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#cqi-feedback">CQI feedback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#interference-model">Interference Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#lte-spectrum-model">LTE Spectrum Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#data-phy-error-model">Data PHY Error Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#miesm">MIESM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#bler-curves">BLER Curves</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#integration-of-the-bler-curves-in-the-ns-3-lte-module">Integration of the BLER curves in the ns-3 LTE module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#control-channels-phy-error-model">Control Channels PHY Error Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#pcfich-pdcch-error-model">PCFICH + PDCCH Error Model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#mimo-model">MIMO Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#ue-phy-measurements-model">UE PHY Measurements Model</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#harq">HARQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#mac">MAC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#resource-allocation-model">Resource Allocation Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#adaptive-modulation-and-coding">Adaptive Modulation and Coding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#transport-block-model">Transport Block model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#the-femtoforum-mac-scheduler-interface">The FemtoForum MAC Scheduler Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#round-robin-rr-scheduler">Round Robin (RR) Scheduler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#proportional-fair-pf-scheduler">Proportional Fair (PF) Scheduler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#maximum-throughput-mt-scheduler">Maximum Throughput (MT) Scheduler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#throughput-to-average-tta-scheduler">Throughput to Average (TTA) Scheduler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#blind-average-throughput-scheduler">Blind Average Throughput Scheduler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#token-bank-fair-queue-scheduler">Token Bank Fair Queue Scheduler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#priority-set-scheduler">Priority Set Scheduler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#channel-and-qos-aware-scheduler">Channel and QoS Aware Scheduler</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#random-access">Random Access</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#rlc">RLC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#id70">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#service-interfaces">Service Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#rlc-service-interface">RLC Service Interface</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="lte-design.html#rlc-service-primitives">RLC Service Primitives</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#mac-service-interface">MAC Service Interface</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="lte-design.html#mac-service-primitives">MAC Service Primitives</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#am-rlc">AM RLC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#buffers-for-the-transmit-operations">Buffers for the transmit operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#transmit-operations-in-downlink">Transmit operations in downlink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#retransmission-in-downlink">Retransmission in downlink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#transmit-operations-in-uplink">Transmit operations in uplink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#retransmission-in-uplink">Retransmission in uplink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#calculation-of-the-buffer-size">Calculation of the buffer size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#concatenation-and-segmentation">Concatenation and Segmentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#re-segmentation">Re-segmentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#unsupported-features">Unsupported features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#um-rlc">UM RLC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#id81">Transmit operations in downlink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#id83">Transmit operations in uplink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#id84">Calculation of the buffer size</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#tm-rlc">TM RLC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#id85">Transmit operations in downlink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#id87">Transmit operations in uplink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#id88">Calculation of the buffer size</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#sm-rlc">SM RLC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#pdcp">PDCP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#pdcp-model-overview">PDCP Model Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#pdcp-service-interface">PDCP Service Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#pdcp-service-primitives">PDCP Service Primitives</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#rrc">RRC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#id91">Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#ue-rrc-state-machine">UE RRC State Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#enb-rrc-state-machine">ENB RRC State Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#initial-cell-selection">Initial Cell Selection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#cell-search">Cell Search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#broadcast-of-system-information">Broadcast of System Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#cell-selection-evaluation">Cell Selection Evaluation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#radio-admission-control">Radio Admission Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#radio-bearer-configuration">Radio Bearer Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#radio-link-failure">Radio Link Failure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#rlf-detection-implementation">RLF detection implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#actions-upon-rlf">Actions upon RLF</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#ue-rrc-measurements-model">UE RRC Measurements Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#ue-rrc-measurements-support">UE RRC measurements support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#overall-design">Overall design</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#measurement-configuration">Measurement configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#performing-measurements">Performing measurements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#measurement-reporting-triggering">Measurement reporting triggering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#measurement-reporting">Measurement reporting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#handover">Handover</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#handover-algorithm">Handover algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#no-op-handover-algorithm">No-op handover algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#a2-a4-rsrq-handover-algorithm">A2-A4-RSRQ handover algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#strongest-cell-handover-algorithm">Strongest cell handover algorithm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#neighbour-relation">Neighbour Relation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#neighbour-relation-table">Neighbour Relation Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#role-of-anr-in-simulation">Role of ANR in Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#rrc-sequence-diagrams">RRC sequence diagrams</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#rrc-connection-establishment">RRC connection establishment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#rrc-connection-reconfiguration">RRC connection reconfiguration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#rrc-protocol-models">RRC protocol models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#ideal-rrc-protocol-model">Ideal RRC protocol model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#real-rrc-protocol-model">Real RRC protocol model</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="lte-design.html#signaling-radio-bearer-model">Signaling Radio Bearer model</a></li>
+<li class="toctree-l5"><a class="reference internal" href="lte-design.html#asn-1-encoding-of-rrc-ie-s">ASN.1 encoding of RRC IE’s</a></li>
+<li class="toctree-l5"><a class="reference internal" href="lte-design.html#asn1header-class-implementation-of-base-asn-1-types">Asn1Header class - Implementation of base ASN.1 types</a></li>
+<li class="toctree-l5"><a class="reference internal" href="lte-design.html#rrcasn1header-common-ies">RrcAsn1Header : Common IEs</a></li>
+<li class="toctree-l5"><a class="reference internal" href="lte-design.html#rrc-specific-messages-ies-classes">Rrc specific messages/IEs classes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#nas">NAS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#s1-s5-and-s11">S1, S5 and S11</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#s1-u-and-s5-user-plane">S1-U and S5 (user plane)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#s1ap">S1AP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#s5-and-s11">S5 and S11</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#x2">X2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#x2-interfaces">X2 interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#x2-c">X2-C</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#x2-u">X2-U</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#x2-service-interface">X2 Service Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#x2-c-primitives-for-handover-execution">X2-C primitives for handover execution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#x2-c-son-primitives">X2-C SON primitives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#unsupported-primitives">Unsupported primitives</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#s11">S11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#power-control">Power Control</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#downlink-power-control">Downlink Power Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#uplink-power-control">Uplink Power Control</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#uplink-power-control-for-pusch">Uplink Power Control for PUSCH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#uplink-power-control-for-pucch">Uplink Power Control for PUCCH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#uplink-power-control-for-srs">Uplink Power Control for SRS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#fractional-frequency-reuse">Fractional Frequency Reuse</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#id134">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#supported-fr-algorithms">Supported FR algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#no-frequency-reuse">No Frequency Reuse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#hard-frequency-reuse">Hard Frequency Reuse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#strict-frequency-reuse">Strict Frequency Reuse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#soft-frequency-reuse">Soft Frequency Reuse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#soft-fractional-frequency-reuse">Soft Fractional Frequency Reuse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#enhanced-fractional-frequency-reuse">Enhanced Fractional Frequency Reuse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#distributed-fractional-frequency-reuse">Distributed Fractional Frequency Reuse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#carrier-aggregation">Carrier Aggregation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#id139">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#impact-on-rrc-layer">Impact on RRC layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#impact-on-pcdcp-layer">Impact on PCDCP layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#impact-on-rlc-layer">Impact on RLC layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#impact-on-mac-layer">Impact on MAC layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#impact-on-phy-layer">Impact on PHY layer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-design.html#code-structure-design">Code Structure Design</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#ca-impact-on-data-plane-of-enodeb">CA impact on data plane of eNodeB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#ca-impact-on-control-plane-of-enodeb">CA impact on control plane of eNodeB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#ca-impact-on-data-plane-of-ue">CA impact on data plane of UE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#ca-impact-on-control-plane-of-ue">CA impact on control plane of UE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#ccm-rrc-mac-interfaces">CCM RRC MAC interfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#ccm-rrc-sap-interfaces">CCM RRC SAP interfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-design.html#component-carrier-managers">Component carrier managers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-design.html#helpers">Helpers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lte-user.html">User Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#usage-overview">Usage Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#basic-simulation-program">Basic simulation program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#configuration-of-lte-model-parameters">Configuration of LTE model parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#configure-lte-mac-scheduler">Configure LTE MAC Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#simulation-output">Simulation Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#fading-trace-usage">Fading Trace Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-user.html#fading-traces-generation">Fading Traces Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-user.html#fading-traces-usage">Fading Traces Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#mobility-model-with-buildings">Mobility Model with Buildings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#phy-error-model">PHY Error Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#mimo-model">MIMO Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#use-of-antennamodel">Use of AntennaModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#radio-environment-maps">Radio Environment Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#amc-model-and-cqi-calculation">AMC Model and CQI Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#evolved-packet-core-epc">Evolved Packet Core (EPC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#using-the-epc-with-emulation-mode">Using the EPC with emulation mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#custom-backhaul">Custom Backhaul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#network-attachment">Network Attachment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-user.html#manual-attachment">Manual attachment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-user.html#automatic-attachment-using-idle-mode-cell-selection-procedure">Automatic attachment using Idle mode cell selection procedure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-user.html#closed-subscriber-group">Closed Subscriber Group</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#configure-ue-measurements">Configure UE measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#x2-based-handover">X2-based handover</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-user.html#manual-handover-trigger">Manual handover trigger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-user.html#automatic-handover-trigger">Automatic handover trigger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-user.html#tuning-simulation-with-handover">Tuning simulation with handover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-user.html#handover-traces">Handover traces</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#frequency-reuse-algorithms">Frequency Reuse Algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-user.html#manual-configuration">Manual configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-user.html#hard-frequency-reuse-algorithm">Hard Frequency Reuse Algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-user.html#strict-frequency-reuse-algorithm">Strict Frequency Reuse Algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-user.html#soft-frequency-reuse-algorithm">Soft Frequency Reuse Algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-user.html#soft-fractional-frequency-reuse-algorithm">Soft Fractional Frequency Reuse Algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-user.html#enhanced-fractional-frequency-reuse-algorithm">Enhanced Fractional Frequency Reuse Algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-user.html#distributed-fractional-frequency-reuse-algorithm">Distributed Fractional Frequency Reuse Algorithm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-user.html#automatic-configuration">Automatic configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#uplink-power-control">Uplink Power Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#examples-programs">Examples Programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#reference-scenarios">Reference scenarios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-user.html#handover-simulation-campaign">Handover simulation campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-user.html#frequency-reuse-examples">Frequency Reuse examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#carrier-aggregation-examples">Carrier aggregation examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#radio-link-failure-example">Radio link failure example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-user.html#troubleshooting-and-debugging-tips">Troubleshooting and debugging tips</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lte-testing.html">Testing Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lte-testing.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-testing.html#description-of-the-test-suites">Description of the test suites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-testing.html#unit-tests">Unit Tests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#sinr-calculation-in-the-downlink">SINR calculation in the Downlink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#sinr-calculation-in-the-uplink">SINR calculation in the Uplink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#e-utra-absolute-radio-frequency-channel-number-earfcn">E-UTRA Absolute Radio Frequency Channel Number (EARFCN)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-testing.html#system-tests">System Tests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#dedicated-bearer-deactivation-tests">Dedicated Bearer Deactivation Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#adaptive-modulation-and-coding-tests">Adaptive Modulation and Coding Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#inter-cell-interference-tests">Inter-cell Interference Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#ue-measurements-tests">UE Measurements Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#ue-measurement-configuration-tests">UE measurement configuration tests</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="lte-testing.html#piecewise-configuration">Piecewise configuration</a></li>
+<li class="toctree-l5"><a class="reference internal" href="lte-testing.html#handover-configuration">Handover configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#round-robin-scheduler-performance">Round Robin scheduler performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#proportional-fair-scheduler-performance">Proportional Fair scheduler performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#maximum-throughput-scheduler-performance">Maximum Throughput scheduler performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#throughput-to-average-scheduler-performance">Throughput to Average scheduler performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#blind-average-throughput-scheduler-performance">Blind Average Throughput scheduler performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#token-band-fair-queue-scheduler-performance">Token Band Fair Queue scheduler performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#priority-set-scheduler-performance">Priority Set scheduler performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#channel-and-qos-aware-scheduler-performance">Channel and QoS aware scheduler performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#building-propagation-loss-model">Building Propagation Loss Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#physical-error-model">Physical Error Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#harq-model">HARQ Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#mimo-model">MIMO Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#antenna-model-integration">Antenna Model integration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#rlc">RLC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#rrc">RRC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#initial-cell-selection">Initial cell selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#gtp-u-protocol">GTP-U protocol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#s1-u-interface">S1-U interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#tft-classifier">TFT classifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#end-to-end-lte-epc-data-plane-functionality">End-to-end LTE-EPC data plane functionality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#x2-handover">X2 handover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#automatic-x2-handover">Automatic X2 handover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#handover-delays">Handover delays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#selection-of-target-cell-in-handover-algorithm">Selection of target cell in handover algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#downlink-power-control">Downlink Power Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#uplink-power-control-tests">Uplink Power Control Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#frequency-reuse-algorithms">Frequency Reuse Algorithms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#inter-cell-interference-with-fr-algorithms-tests">Inter-cell Interference with FR algorithms Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#carrier-aggregation-test">Carrier aggregation test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#carrier-aggregation-test-for-enb-and-ue-configuration">Carrier aggregation test for eNB and UE configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-testing.html#radio-link-failure-test">Radio link failure Test</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="lte-testing.html#one-enb-using-ideal-and-real-rrc">One eNB using Ideal and Real RRC</a></li>
+<li class="toctree-l5"><a class="reference internal" href="lte-testing.html#two-enbs-using-ideal-and-real-rrc">Two eNBs using Ideal and Real RRC</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lte-profiling.html">Profiling Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lte-profiling.html#overview-and-objectives">Overview and objectives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lte-profiling.html#framework-description">Framework description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-profiling.html#simulation-scripts">Simulation scripts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-profiling.html#simulation-input-parameters">Simulation input parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-profiling.html#time-measurement">Time measurement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lte-profiling.html#perl-script">Perl script</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-profiling.html#requirements">Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-profiling.html#plotting-results">Plotting results</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-profiling.html#reference-software-and-equipment">Reference software and equipment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lte-profiling.html#results">Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lte-profiling.html#e-utran">E-UTRAN</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-profiling.html#running-time">Running time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-profiling.html#propagation-model">Propagation model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-profiling.html#simulation-time">Simulation time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-profiling.html#memory-usage">Memory usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lte-profiling.html#epc">EPC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lte-profiling.html#id1">Running time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lte-profiling.html#id2">Simulation time</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lte-references.html">References</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="lr-wpan.html"
+                        title="previous chapter">Low-Rate Wireless Personal Area Network (LR-WPAN)</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="lte-design.html"
+                        title="next chapter">Design Documentation</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/lte.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="lte-design.html" title="Design Documentation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="lr-wpan.html" title="Low-Rate Wireless Personal Area Network (LR-WPAN)"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

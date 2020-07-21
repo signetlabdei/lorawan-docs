@@ -1,0 +1,52 @@
+<map id="ns3::ChannelAccessManager::GetBackoffStartFor" name="ns3::ChannelAccessManager::GetBackoffStartFor">
+<area shape="rect" id="node1" title="Return the time when the backoff procedure started for the given Txop." alt="" coords="2207,493,2415,535"/>
+<area shape="rect" id="node2" href="$classns3_1_1_channel_access_manager.html#a1e38ecb70f2cbab09955d359fe642695" title="Return the time when the backoff procedure ended (or will ended) for the given Txop." alt="" coords="1951,428,2159,469"/>
+<area shape="rect" id="node39" href="$classns3_1_1_channel_access_manager.html#a16abdc22e5c20496f49ee0d080145b2c" title="Update backoff slots for all Txops." alt="" coords="1695,609,1903,651"/>
+<area shape="rect" id="node3" href="$classns3_1_1_channel_access_manager.html#ab456b95950fd1381ed14c4f7289b997e" title="Grant access to Txop using DCF/EDCF contention rules." alt="" coords="1695,428,1903,469"/>
+<area shape="rect" id="node5" href="$classns3_1_1_channel_access_manager.html#a4197521f9ff8b1a70f837ed87e8737e3" title=" " alt="" coords="1116,479,1368,520"/>
+<area shape="rect" id="node4" href="$classns3_1_1_channel_access_manager.html#a0b155956cb94bba762d15d54cc1fe7ca" title="Called when access timeout should occur (e.g." alt="" coords="1427,479,1635,520"/>
+<area shape="rect" id="node10" href="$classns3_1_1_channel_access_manager.html#abb772d23a9ee81e9b6ce46b3aefc67a8" title=" " alt="" coords="855,416,1063,457"/>
+<area shape="rect" id="node6" href="$classns3_1_1_channel_access_manager.html#ad6ada9e298f4ba088d5761960dad307b" title="Notify that ack timer has reset." alt="" coords="852,481,1065,523"/>
+<area shape="rect" id="node7" href="$classns3_1_1_channel_access_manager.html#a34d6b5afc6410e08275fa93817d00f25" title="Notify that CTS timer has reset." alt="" coords="853,547,1064,588"/>
+<area shape="rect" id="node8" href="$classns3_1_1_channel_access_manager.html#ad718d29686e51027419769b3735e5dd4" title=" " alt="" coords="855,672,1063,713"/>
+<area shape="rect" id="node9" href="$classns3_1_1_mesh_wifi_interface_mac.html#a2d850463970dd7f6d477dd0ecf615e2b" title="Switch frequency channel." alt="" coords="597,672,795,713"/>
+<area shape="rect" id="node11" href="$classns3_1_1_qos_txop.html#a3d5d94d486873862978c1fde6e295422" title="Restart access request if needed." alt="" coords="591,232,801,273"/>
+<area shape="rect" id="node19" href="$classns3_1_1_txop.html#a734dc1c8f48818cb6896f9d7cbe90160" title="Restart access request if needed." alt="" coords="603,435,789,476"/>
+<area shape="rect" id="node24" href="$classns3_1_1_txop.html#a9bd5d9353a092b4cfe7896451fb768d6" title="Sends CF frame to STA with address addr." alt="" coords="606,583,786,610"/>
+<area shape="rect" id="node25" href="$classns3_1_1_qos_txop.html#a31afaa3f2374697d39987905d5127868" title="Request access from Txop if needed." alt="" coords="599,167,793,208"/>
+<area shape="rect" id="node26" href="$classns3_1_1_txop.html#afd99f40351a5b67181f14008d0751075" title="Request access from Txop if needed." alt="" coords="607,517,785,559"/>
+<area shape="rect" id="node12" href="$classns3_1_1_qos_txop.html#a30f5c2af1b50e6ee48771de46cd8033f" title="Callback when ADDBA response is not received after timeout." alt="" coords="308,173,531,215"/>
+<area shape="rect" id="node13" href="$classns3_1_1_qos_txop.html#ac9eb0a34c5182eecd976e4b0b6b69c2f" title="Event handler when an ADDBA response is received." alt="" coords="296,239,543,266"/>
+<area shape="rect" id="node14" href="$classns3_1_1_qos_txop.html#aefd7967703c6f16501599e943f94298b" title="Event handler when an Ack is missed." alt="" coords="325,290,513,317"/>
+<area shape="rect" id="node15" href="$classns3_1_1_qos_txop.html#a53f04ba906e1b7c99f35eafbb11d4479" title="Event handler when a BlockAck timeout has occurred." alt="" coords="307,341,531,367"/>
+<area shape="rect" id="node16" href="$classns3_1_1_qos_txop.html#a89bd16f2271d51bb1ddafb339b07f54a" title="Notify the Txop that internal collision has occurred." alt="" coords="315,5,523,47"/>
+<area shape="rect" id="node17" href="$classns3_1_1_qos_txop.html#a0b82aec30711d3b4fb94d164388ecf9c" title="Event handler when a CTS timeout has occurred." alt="" coords="307,71,532,98"/>
+<area shape="rect" id="node18" href="$classns3_1_1_qos_txop.html#a376a2de891a03e243c56c6af5544c6ae" title="Update backoff and restart access if needed." alt="" coords="312,122,527,149"/>
+<area shape="rect" id="node20" href="$classns3_1_1_txop.html#acd1bb8b45e7a39cfc7e1e710dc514b3e" title="Event handler when an Ack is received." alt="" coords="349,493,489,519"/>
+<area shape="rect" id="node21" href="$classns3_1_1_txop.html#a1b21acbf674cd1a9f56c0b8d79454d26" title="Event handler when a CF&#45;END frame is received." alt="" coords="342,543,497,570"/>
+<area shape="rect" id="node22" href="$classns3_1_1_txop.html#a76ed6b61366d7c6797a6910d8ad4eaa5" title="Event handler when an Ack is missed." alt="" coords="338,391,501,418"/>
+<area shape="rect" id="node23" href="$classns3_1_1_txop.html#ae969e1203237fc063ed27d2a23a1e773" title="Event handler when a CTS timeout has occurred." alt="" coords="339,442,499,469"/>
+<area shape="rect" id="node27" href="$classns3_1_1_txop.html#ae0a0bbafaed367559bce8c10c184666f" title=" " alt="" coords="352,669,487,695"/>
+<area shape="rect" id="node28" href="$classns3_1_1_ocb_wifi_mac.html#a8bff620142abd07f3a1f7410f26502b7" title=" " alt="" coords="29,383,224,410"/>
+<area shape="rect" id="node29" href="$classns3_1_1_adhoc_wifi_mac.html#a476b75b5ca672a00be5234c507787968" title=" " alt="" coords="49,435,204,476"/>
+<area shape="rect" id="node30" href="$classns3_1_1_sta_wifi_mac.html#a27afdb3ba3ef301e240362f379d570f2" title=" " alt="" coords="31,501,222,527"/>
+<area shape="rect" id="node31" href="$classns3_1_1_ap_wifi_mac.html#aa311e26f32fea82c50ac2d92ea627774" title="Forward the packet down to DCF/EDCAF (enqueue the packet)." alt="" coords="17,551,237,578"/>
+<area shape="rect" id="node32" href="$classns3_1_1_sta_wifi_mac.html#af2ab6272caa11513770336a92cd714bc" title="Forward an association or reassociation request packet to the DCF." alt="" coords="5,603,248,644"/>
+<area shape="rect" id="node33" href="$classns3_1_1_ap_wifi_mac.html#ad7fef463a6076916fa1f5a989e56f13d" title="Forward an association or a reassociation response packet to the DCF." alt="" coords="10,669,243,695"/>
+<area shape="rect" id="node34" href="$classns3_1_1_mesh_wifi_interface_mac.html#ad83362b1af946376ee349a8ea0c4d7ba" title="Send beacon." alt="" coords="27,720,226,761"/>
+<area shape="rect" id="node35" href="$classns3_1_1_ap_wifi_mac.html#a6c8cbc0fc95f3eaf4840d4ffcf78fac5" title="Forward a beacon packet to the beacon special DCF." alt="" coords="8,786,245,813"/>
+<area shape="rect" id="node36" href="$classns3_1_1_sta_wifi_mac.html#a2280584632094368d217112ceb2c4e44" title="Forward a probe request packet to the DCF." alt="" coords="25,837,229,879"/>
+<area shape="rect" id="node37" href="$classns3_1_1_ap_wifi_mac.html#a0a9fcbd87326c5c56644deb3504038df" title="Forward a probe response packet to the DCF." alt="" coords="11,903,243,930"/>
+<area shape="rect" id="node38" href="$classns3_1_1_ocb_wifi_mac.html#a89a354cd6596253ce69e246f437d02f5" title=" " alt="" coords="29,954,224,981"/>
+<area shape="rect" id="node40" href="$classns3_1_1_channel_access_manager.html#ad7a1a64ddd5206865b5989d9401b70ee" title="Determine if a new backoff needs to be generated when a packet is queued for transmission." alt="" coords="1138,792,1346,833"/>
+<area shape="rect" id="node41" href="$classns3_1_1_channel_access_manager.html#a77abe92dc446eeb4e0ff44a00c107045" title=" " alt="" coords="1416,857,1647,899"/>
+<area shape="rect" id="node46" href="$classns3_1_1_channel_access_manager.html#af9608e1d461240a1733b755bf1894aa6" title=" " alt="" coords="1427,609,1635,651"/>
+<area shape="rect" id="node47" href="$classns3_1_1_channel_access_manager.html#a160cbda504ab97595bc05487b537d788" title=" " alt="" coords="1427,544,1635,585"/>
+<area shape="rect" id="node49" href="$classns3_1_1_channel_access_manager.html#a3a498d23de39cd32c5c0fbf73e1839f2" title=" " alt="" coords="1427,675,1635,716"/>
+<area shape="rect" id="node42" href="$classns3_1_1_ocb_wifi_mac.html#ab7719e7ccdc4cbfd99a802e7694ed6d1" title=" " alt="" coords="1117,923,1367,950"/>
+<area shape="rect" id="node45" href="$classns3_1_1_phy_listener.html#a9426df05b7b07a9b4abc4a0888259d7b" title=" " alt="" coords="1153,857,1331,899"/>
+<area shape="rect" id="node43" href="$classns3_1_1_default_channel_scheduler.html#a04e74683a8fce5f193b3c1f948c73bb9" title="This method will assign default CCH access for CCH." alt="" coords="849,948,1068,989"/>
+<area shape="rect" id="node44" href="$classns3_1_1_default_channel_scheduler.html#a661fb5bfff90527fa4be59820ccf8bdf" title=" " alt="" coords="849,883,1068,924"/>
+<area shape="rect" id="node48" href="$classns3_1_1_phy_listener.html#afe631afd9702794114c1a1951ae5e448" title=" " alt="" coords="1153,544,1331,585"/>
+<area shape="rect" id="node50" href="$classns3_1_1_phy_listener.html#abb3ba3252562c813884760b46aeb0426" title=" " alt="" coords="1153,675,1331,716"/>
+</map>

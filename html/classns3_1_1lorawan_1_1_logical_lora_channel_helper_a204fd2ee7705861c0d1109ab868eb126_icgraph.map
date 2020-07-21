@@ -1,0 +1,18 @@
+<map id="ns3::lorawan::LogicalLoraChannelHelper::GetSubBandFromFrequency" name="ns3::lorawan::LogicalLoraChannelHelper::GetSubBandFromFrequency">
+<area shape="rect" id="node1" title="Get the SubBand a frequency belongs to." alt="" coords="2161,97,2468,138"/>
+<area shape="rect" id="node2" href="$classns3_1_1lorawan_1_1_logical_lora_channel_helper.html#af55c016ff95a8002eeb1c8143c79d1b2" title="Get the SubBand a channel belongs to." alt="" coords="1821,97,2113,138"/>
+<area shape="rect" id="node3" href="$classns3_1_1lorawan_1_1_logical_lora_channel_helper.html#ae48a646b236962de394678f054d5fc7b" title="Register the transmission of a packet." alt="" coords="1564,47,1752,89"/>
+<area shape="rect" id="node7" href="$classns3_1_1lorawan_1_1_logical_lora_channel_helper.html#ae4467bd31813cf74dcac7f4990f5aa15" title="Get the time it is necessary to wait for before transmitting on a given channel." alt="" coords="1543,129,1773,170"/>
+<area shape="rect" id="node4" href="$class_logical_lora_channel_test.html#ab0bf5ae5cb014f7910e4bbc9636ef6fe" title="Implementation to actually run this TestCase." alt="" coords="1289,30,1463,71"/>
+<area shape="rect" id="node5" href="$classns3_1_1lorawan_1_1_gateway_lorawan_mac.html#aef19bf39d04ccfddea3bed88ce3008da" title="Send a packet." alt="" coords="1263,95,1489,137"/>
+<area shape="rect" id="node6" href="$classns3_1_1lorawan_1_1_class_a_end_device_lorawan_mac.html#ac7b64ba4334286815704a06698e5bbdf" title="Add headers and send a packet with the sending function of the physical layer." alt="" coords="977,50,1204,91"/>
+<area shape="rect" id="node8" href="$classns3_1_1lorawan_1_1_end_device_lorawan_mac.html#a5c557ce04b7146aeb18c32d879bb994f" title="Find a suitable channel for transmission." alt="" coords="1257,161,1495,202"/>
+<area shape="rect" id="node15" href="$classns3_1_1lorawan_1_1_end_device_lorawan_mac.html#a306ab1eef6773b69b903b69bdaa8047a" title="Find the minimum waiting time before the next possible transmission." alt="" coords="1257,226,1495,267"/>
+<area shape="rect" id="node16" href="$classns3_1_1lorawan_1_1_gateway_lorawan_mac.html#aafd94e7eb91ef8ae371b90c005b96b95" title="Return the next time at which we will be able to transmit." alt="" coords="1263,291,1489,333"/>
+<area shape="rect" id="node9" href="$classns3_1_1lorawan_1_1_end_device_lorawan_mac.html#a900e9fd6570341bb894619fe4aadefd0" title="Send a packet." alt="" coords="972,194,1209,235"/>
+<area shape="rect" id="node10" href="$classns3_1_1lorawan_1_1_class_a_end_device_lorawan_mac.html#a138a5b2791dc4e7c049744589fcb15f6" title="Perform operations needed to close the second receive window." alt="" coords="625,129,924,170"/>
+<area shape="rect" id="node13" href="$classns3_1_1lorawan_1_1_class_a_end_device_lorawan_mac.html#aaa039e3679cb6a6e16710109b9263218" title="Function called by lower layers to inform this layer that reception of a packet we were locked on fai..." alt="" coords="661,194,888,235"/>
+<area shape="rect" id="node14" href="$classns3_1_1lorawan_1_1_class_a_end_device_lorawan_mac.html#ae88fee83a23200046f4bd0b1afe46b04" title="Receive a packet." alt="" coords="661,259,888,301"/>
+<area shape="rect" id="node11" href="$classns3_1_1lorawan_1_1_class_a_end_device_lorawan_mac.html#a067092267e290bb041f85bb206172ecb" title="Perform operations needed to open the second receive window." alt="" coords="280,129,577,170"/>
+<area shape="rect" id="node12" href="$classns3_1_1lorawan_1_1_class_a_end_device_lorawan_mac.html#ada2556b5391481d4a4b1da6f53785a0b" title="Perform the actions that are required after a packet send." alt="" coords="5,129,232,170"/>
+</map>

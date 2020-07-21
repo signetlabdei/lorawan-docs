@@ -1,0 +1,680 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Wimax NetDevice &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="References" href="wifi-references.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="wifi-references.html" title="References"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="wimax-netdevice">
+<h1>Wimax NetDevice<a class="headerlink" href="#wimax-netdevice" title="Permalink to this headline">¶</a></h1>
+<p>This chapter describes the <em>ns-3</em> WimaxNetDevice and related models. By
+adding WimaxNetDevice objects to <em>ns-3</em> nodes, one can create models of
+802.16-based networks. Below, we list some more details about what
+the <em>ns-3</em> WiMAX models cover but, in summary, the most important features
+of the <em>ns-3</em> model are:</p>
+<ul class="simple">
+<li><p>a scalable and realistic physical layer and channel model</p></li>
+<li><p>a packet classifier for the IP convergence sublayer</p></li>
+<li><p>efficient uplink and downlink schedulers</p></li>
+<li><p>support for Multicast and Broadcast Service (MBS), and</p></li>
+<li><p>packet tracing functionality</p></li>
+</ul>
+<p>The source code for the WiMAX models lives in the directory
+<code class="docutils literal notranslate"><span class="pre">src/wimax</span></code>.</p>
+<p>There have been two academic papers published on this model:</p>
+<ul class="simple">
+<li><p>M.A. Ismail, G. Piro, L.A. Grieco, and T. Turletti, “An Improved IEEE 802.16
+WiMAX Module for the NS-3 Simulator”, SIMUTools 2010 Conference, March 2010.</p></li>
+<li><p>J. Farooq and T. Turletti, “An IEEE 802.16 WiMAX module for the NS-3
+Simulator,” SIMUTools 2009 Conference, March 2009.</p></li>
+</ul>
+<div class="section" id="scope-of-the-model">
+<h2>Scope of the model<a class="headerlink" href="#scope-of-the-model" title="Permalink to this headline">¶</a></h2>
+<p>From a MAC perspective, there are two basic modes of operation, that of a
+Subscriber Station (SS) or a Base Station (BS). These are implemented as two
+subclasses of the base class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::NetDevice</span></code>, class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SubscriberStationNetDevice</span></code> and class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">BaseStationNetDevice</span></code>. As is typical in <em>ns-3</em>, there is also a
+physical layer class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">WimaxPhy</span></code> and a channel class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">WimaxChannel</span></code> which serves to hold the references to all of the
+attached Phy devices. The main physical layer class is the
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SimpleOfdmWimaxChannel</span></code> class.</p>
+<p>Another important aspect of WiMAX is the uplink and downlink scheduler, and
+there are three primary scheduler types implemented:</p>
+<ul class="simple">
+<li><p>SIMPLE:  a simple priority based FCFS scheduler</p></li>
+<li><p>RTPS:  a real-time polling service (rtPS) scheduler</p></li>
+<li><p>MBQOS:  a migration-based uplink scheduler</p></li>
+</ul>
+<p>The following additional aspects of the 802.16 specifications, as well as
+physical layer and channel models, are modelled:</p>
+<ul class="simple">
+<li><p>leverages existing <em>ns-3</em> wireless propagation loss and delay models, as well
+as <em>ns-3</em> mobility models</p></li>
+<li><p>Point-to-Multipoint (PMP) mode and the WirelessMAN-OFDM PHY layer</p></li>
+<li><p>Initial Ranging</p></li>
+<li><p>Service Flow Initialization</p></li>
+<li><p>Management Connection</p></li>
+<li><p>Transport Initialization</p></li>
+<li><p>UGS, rtPS, nrtPS, and BE connections</p></li>
+</ul>
+<p>The following aspects are not presently modelled but would be good topics for
+future extensions:</p>
+<ul class="simple">
+<li><p>OFDMA PHY layer</p></li>
+<li><p>Link adaptation</p></li>
+<li><p>Mesh topologies</p></li>
+<li><p>ARQ</p></li>
+<li><p>ertPS connection</p></li>
+<li><p>packet header suppression</p></li>
+</ul>
+</div>
+<div class="section" id="using-the-wimax-models">
+<h2>Using the Wimax models<a class="headerlink" href="#using-the-wimax-models" title="Permalink to this headline">¶</a></h2>
+<p>The main way that users who write simulation scripts will typically interact
+with the Wimax models is through the helper API and through the publicly visible
+attributes of the model.</p>
+<p>The helper API is defined in <code class="docutils literal notranslate"><span class="pre">src/wimax/helper/wimax-helper.{cc,h}</span></code>.</p>
+<p>The example <code class="docutils literal notranslate"><span class="pre">src/wimax/examples/wimax-simple.cc</span></code> contains some basic code that
+shows how to set up the model:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">switch</span> <span class="p">(</span><span class="n">schedType</span><span class="p">)</span>
+  <span class="p">{</span>
+  <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+    <span class="n">scheduler</span> <span class="o">=</span> <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SCHED_TYPE_SIMPLE</span><span class="p">;</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+    <span class="n">scheduler</span> <span class="o">=</span> <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SCHED_TYPE_MBQOS</span><span class="p">;</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+    <span class="n">scheduler</span> <span class="o">=</span> <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SCHED_TYPE_RTPS</span><span class="p">;</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">default</span><span class="o">:</span>
+    <span class="n">scheduler</span> <span class="o">=</span> <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SCHED_TYPE_SIMPLE</span><span class="p">;</span>
+  <span class="p">}</span>
+
+<span class="n">NodeContainer</span> <span class="n">ssNodes</span><span class="p">;</span>
+<span class="n">NodeContainer</span> <span class="n">bsNodes</span><span class="p">;</span>
+
+<span class="n">ssNodes</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">bsNodes</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="n">WimaxHelper</span> <span class="n">wimax</span><span class="p">;</span>
+
+<span class="n">NetDeviceContainer</span> <span class="n">ssDevs</span><span class="p">,</span> <span class="n">bsDevs</span><span class="p">;</span>
+
+<span class="n">ssDevs</span> <span class="o">=</span> <span class="n">wimax</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">ssNodes</span><span class="p">,</span>
+                        <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">DEVICE_TYPE_SUBSCRIBER_STATION</span><span class="p">,</span>
+                        <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SIMPLE_PHY_TYPE_OFDM</span><span class="p">,</span>
+                        <span class="n">scheduler</span><span class="p">);</span>
+<span class="n">bsDevs</span> <span class="o">=</span> <span class="n">wimax</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">bsNodes</span><span class="p">,</span> <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">DEVICE_TYPE_BASE_STATION</span><span class="p">,</span> <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SIMPLE_PHY_TYPE_OFDM</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This example shows that there are two subscriber stations and one base station
+created. The helper method <code class="docutils literal notranslate"><span class="pre">Install</span></code> allows the user to specify the scheduler
+type, the physical layer type, and the device type.</p>
+<p>Different variants of <code class="docutils literal notranslate"><span class="pre">Install</span></code> are available; for instance, the example
+<code class="docutils literal notranslate"><span class="pre">src/wimax/examples/wimax-multicast.cc</span></code> shows how to specify a non-default channel
+or propagation model:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">channel</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">SimpleOfdmWimaxChannel</span><span class="o">&gt;</span> <span class="p">();</span>
+<span class="n">channel</span><span class="o">-&gt;</span><span class="n">SetPropagationModel</span> <span class="p">(</span><span class="n">SimpleOfdmWimaxChannel</span><span class="o">::</span><span class="n">COST231_PROPAGATION</span><span class="p">);</span>
+<span class="n">ssDevs</span> <span class="o">=</span> <span class="n">wimax</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">ssNodes</span><span class="p">,</span>
+                        <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">DEVICE_TYPE_SUBSCRIBER_STATION</span><span class="p">,</span>
+                        <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SIMPLE_PHY_TYPE_OFDM</span><span class="p">,</span>
+                        <span class="n">channel</span><span class="p">,</span>
+                        <span class="n">scheduler</span><span class="p">);</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">WimaxNetDevice</span><span class="o">&gt;</span> <span class="n">dev</span> <span class="o">=</span> <span class="n">wimax</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">bsNodes</span><span class="p">.</span><span class="n">Get</span> <span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+                                         <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">DEVICE_TYPE_BASE_STATION</span><span class="p">,</span>
+                                         <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SIMPLE_PHY_TYPE_OFDM</span><span class="p">,</span>
+                                         <span class="n">channel</span><span class="p">,</span>
+                                         <span class="n">scheduler</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Mobility is also supported in the same way as in Wifi models; see the
+<code class="docutils literal notranslate"><span class="pre">src/wimax/examples/wimax-multicast.cc</span></code>.</p>
+<p>Another important concept in WiMAX is that of a service flow. This is a
+unidirectional flow of packets with a set of QoS parameters such as traffic
+priority, rate, scheduling type, etc. The base station is responsible for
+issuing service flow identifiers and mapping them to WiMAX connections. The
+following code from <code class="docutils literal notranslate"><span class="pre">src/wimax/examples/wimax-multicast.cc</span></code> shows how this is
+configured from a helper level:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ServiceFlow</span> <span class="n">MulticastServiceFlow</span> <span class="o">=</span> <span class="n">wimax</span><span class="p">.</span><span class="n">CreateServiceFlow</span> <span class="p">(</span><span class="n">ServiceFlow</span><span class="o">::</span><span class="n">SF_DIRECTION_DOWN</span><span class="p">,</span>
+                                                            <span class="n">ServiceFlow</span><span class="o">::</span><span class="n">SF_TYPE_UGS</span><span class="p">,</span>
+                                                            <span class="n">MulticastClassifier</span><span class="p">);</span>
+
+ <span class="n">bs</span><span class="o">-&gt;</span><span class="n">GetServiceFlowManager</span> <span class="p">()</span><span class="o">-&gt;</span><span class="n">AddMulticastServiceFlow</span> <span class="p">(</span><span class="n">MulticastServiceFlow</span><span class="p">,</span> <span class="n">WimaxPhy</span><span class="o">::</span><span class="n">MODULATION_TYPE_QPSK_12</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="wimax-attributes">
+<h2>Wimax Attributes<a class="headerlink" href="#wimax-attributes" title="Permalink to this headline">¶</a></h2>
+<p>The WimaxNetDevice makes heavy use of the <em>ns-3</em> attributes subsystem for
+configuration and default value management.  Presently, approximately 60 values
+are stored in this system.</p>
+<p>For instance, class <code class="docutils literal notranslate"><span class="pre">ns-3::SimpleOfdmWimaxPhy</span></code> exports these
+attributes:</p>
+<ul class="simple">
+<li><p>NoiseFigure:  Loss (dB) in the Signal-to-Noise-Ratio due to non-idealities in the receiver.</p></li>
+<li><p>TxPower:  Transmission power (dB)</p></li>
+<li><p>G:  The ratio of CP time to useful time</p></li>
+<li><p>txGain:  Transmission gain (dB)</p></li>
+<li><p>RxGain:  Reception gain (dB)</p></li>
+<li><p>Nfft:  FFT size</p></li>
+<li><p>TraceFilePath:  Path to the directory containing SNR to block error rate files</p></li>
+</ul>
+<p>For a full list of attributes in these models, consult the Doxygen page that
+lists all attributes for <em>ns-3</em>.</p>
+</div>
+<div class="section" id="wimax-tracing">
+<h2>Wimax Tracing<a class="headerlink" href="#wimax-tracing" title="Permalink to this headline">¶</a></h2>
+<p><em>ns-3</em> has a sophisticated tracing infrastructure that allows users to hook into
+existing trace sources, or to define and export new ones.</p>
+<p>Many <em>ns-3</em> users use the built-in Pcap or Ascii tracing, and the
+WimaxHelper has similar APIs:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AsciiTraceHelper</span> <span class="n">ascii</span><span class="p">;</span>
+<span class="n">WimaxHelper</span> <span class="n">wimax</span><span class="p">;</span>
+<span class="n">wimax</span><span class="p">.</span><span class="n">EnablePcap</span> <span class="p">(</span><span class="s">&quot;wimax-program&quot;</span><span class="p">,</span> <span class="nb">false</span><span class="p">);</span>
+<span class="n">wimax</span><span class="p">.</span><span class="n">EnableAsciiAll</span> <span class="p">(</span><span class="n">ascii</span><span class="p">.</span><span class="n">CreateFileStream</span> <span class="p">(</span><span class="s">&quot;wimax-program.tr&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Unlike other helpers, there is also a special <code class="docutils literal notranslate"><span class="pre">EnableAsciiForConnection()</span></code>
+method that limits the ascii tracing to a specific device and connection.</p>
+<p>These helpers access the low level trace sources that exist in the WiMAX
+physical layer, net device, and queue models. Like other <em>ns-3</em> trace sources,
+users may hook their own functions to these trace sources if they want to do
+customized things based on the packet events. See the Doxygen List of trace
+sources for a complete list of these sources.</p>
+</div>
+<div class="section" id="wimax-mac-model">
+<h2>Wimax MAC model<a class="headerlink" href="#wimax-mac-model" title="Permalink to this headline">¶</a></h2>
+<p>The 802.16 model provided in <em>ns-3</em> attempts to provide an accurate MAC and PHY
+level implementation of the 802.16 specification with the Point-to-Multipoint
+(PMP) mode and the WirelessMAN-OFDM PHY layer. The model is mainly composed of
+three layers:</p>
+<ul class="simple">
+<li><p>The convergence sublayer (CS)</p></li>
+<li><p>The MAC CP Common Part Sublayer (MAC-CPS)</p></li>
+<li><p>Physical (PHY) layer</p></li>
+</ul>
+<p>The following figure <a class="reference internal" href="#wimax-architecture"><span class="std std-ref">WiMAX architecture</span></a> shows the relationships of these
+models.</p>
+<div class="figure align-default" id="id1">
+<span id="wimax-architecture"></span><img alt="_images/WimaxArchitecture.png" src="_images/WimaxArchitecture.png" />
+<p class="caption"><span class="caption-text">WiMAX architecture</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="convergence-sublayer">
+<h3>Convergence Sublayer<a class="headerlink" href="#convergence-sublayer" title="Permalink to this headline">¶</a></h3>
+<p>The Convergence sublayer (CS) provided with this module implements the Packet
+CS, designed to work with the packet-based protocols at higher layers. The CS is
+responsible of receiving packet from the higher layer and from peer stations,
+classifying packets to appropriate connections (or service flows) and processing
+packets. It keeps a mapping of transport connections to service flows. This
+enables the MAC CPS identifying the Quality of Service (QoS) parameters
+associated to a transport connection and ensuring the QoS requirements. The CS
+currently employs an IP classifier.</p>
+</div>
+<div class="section" id="ip-packet-classifier">
+<h3>IP Packet Classifier<a class="headerlink" href="#ip-packet-classifier" title="Permalink to this headline">¶</a></h3>
+<p>An IP packet classifier is used to map incoming packets to appropriate
+connections based on a set of criteria. The classifier maintains a list of
+mapping rules which associate an IP flow (src IP address and mask, dst IP
+address and mask, src port range, dst port range and protocol) to one of the
+service flows.  By analyzing the IP and the TCP/UDP headers the classifier will
+append the incoming packet (from the upper layer) to the queue of the
+appropriate WiMAX connection. Class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">IpcsClassifier</span></code> and class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">IpcsClassifierRecord</span></code> implement the classifier module for both SS
+and BS</p>
+</div>
+<div class="section" id="mac-common-part-sublayer">
+<h3>MAC Common Part Sublayer<a class="headerlink" href="#mac-common-part-sublayer" title="Permalink to this headline">¶</a></h3>
+<p>The MAC Common Part Sublayer (CPS) is the main sublayer of the IEEE 802.16 MAC
+and performs the fundamental functions of the MAC. The module implements the
+Point-Multi-Point (PMP) mode. In PMP mode BS is responsible of managing
+communication among multiple SSs. The key functionalities of the MAC CPS include
+framing and addressing, generation of MAC management messages, SS initialization
+and registration, service flow management, bandwidth management and scheduling
+services.  Class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">WimaxNetDevice</span></code> represents the MAC layer of a WiMAX
+network device. This class extends the class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">NetDevice</span></code> of the <em>ns-3</em>
+API that provides abstraction of a network device. Class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">WimaxNetDevice</span></code> is further extended by class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">BaseStationNetDevice</span></code> and class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SubscriberStationNetDevice</span></code>, defining MAC layers of BS and SS,
+respectively.  Besides these main classes, the key functions of MAC are
+distributed to several other classes.</p>
+</div>
+<div class="section" id="framing-and-management-messages">
+<h3>Framing and Management Messages<a class="headerlink" href="#framing-and-management-messages" title="Permalink to this headline">¶</a></h3>
+<p>The module implements a frame as a fixed duration of time, i.e., frame
+boundaries are defined with respect to time. Each frame is further subdivided
+into downlink (DL) and uplink (UL) subframes. The module implements the Time
+Division Duplex (TDD) mode where DL and UL operate on same frequency but are
+separated in time. A number of DL and UL bursts are then allocated in DL and UL
+subframes, respectively. Since the standard allows sending and receiving bursts
+of packets in a given DL or UL burst, the unit of transmission at the MAC layer
+is a packet burst. The module implements a special PacketBurst data structure
+for this purpose. A packet burst is essentially a list of packets. The BS
+downlink and uplink schedulers, implemented by class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">BSScheduler</span></code>
+and class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">UplinkScheduler</span></code>, are responsible of generating DL and UL
+subframes, respectively. In the case of DL, the subframe is simulated by
+transmitting consecutive bursts (instances PacketBurst). In case of UL, the
+subframe is divided, with respect to time, into a number of slots. The bursts
+transmitted by the SSs in these slots are then aligned to slot boundaries. The
+frame is divided into integer number of symbols and Physical Slots (PS) which
+helps in managing bandwidth more effectively. The number of symbols per frame
+depends on the  underlying implementation of the PHY layer. The size of a DL or
+UL burst is specified in units of symbols.</p>
+</div>
+<div class="section" id="network-entry-and-initialization">
+<h3>Network Entry and Initialization<a class="headerlink" href="#network-entry-and-initialization" title="Permalink to this headline">¶</a></h3>
+<p>The network entry and initialization phase is basically divided into two
+sub-phases, (1) scanning and synchronization and (2) initial ranging. The entire
+phase is performed by the LinkManager component of SS and BS. Once an SS wants
+to join the network, it first scans the downlink frequencies to search for a
+suitable channel. The search is complete as soon as it detects a PHY frame. The
+next step is to establish synchronization with the BS. Once SS receives a
+Downlink-MAP (DL-MAP) message the synchronization phase is complete and it
+remains synchronized as long as it keeps receiving DL-MAP and  Downlink Channel
+Descriptor (DCD) messages. After the synchronization is established, SS waits
+for a Uplink Channel Descriptor (UCD) message to acquire uplink channel
+parameters. Once acquired, the first sub-phase of the network entry and
+initialization is complete. Once synchronization is achieved, the SS waits for a
+UL-MAP message to locate a special grant, called initial ranging interval, in
+the UL subframe. This grant is allocated by the BS Uplink Scheduler at regular
+intervals. Currently this interval is set to 0.5 ms, however the user is enabled
+to modify its value from the simulation script.</p>
+</div>
+<div class="section" id="connections-and-addressing">
+<h3>Connections and Addressing<a class="headerlink" href="#connections-and-addressing" title="Permalink to this headline">¶</a></h3>
+<p>All communication at the MAC layer is carried in terms of connections. The
+standard defines a connection as a unidirectional mapping between the SS and
+BS’s MAC entities for the transmission of traffic. The standard defines two
+types of connections: management connections for transmitting control messages
+and transport connections for data transmission. A connection is identified by a
+16-bit Connection Identifier (CID).  Class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">WimaxConnection</span></code> and
+class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Cid</span></code> implement the connection and CID, respectively. Note that
+each connection maintains its own transmission queue where packets to transmit
+on that connection are queued. The ConnectionManager component of BS is
+responsible of creating and managing connections for all SSs.</p>
+<p>The two key management connections defined by the standard, namely the Basic and
+Primary management connections, are created and allocated to the SS during the
+ranging process. Basic connection plays an important role throughout the
+operation of SS also because all (unicast) DL and UL grants are directed towards
+SS’s Basic CID. In addition to management connections, an SS may have one or
+more transport connections to send data packets. The Connection Manager
+component of SS manages the connections associated to SS. As defined by the
+standard, a management connection is bidirectional, i.e., a pair of downlink and
+uplink connections is represented by the same CID. This feature is implemented
+in a way that one connection (in DL direction) is created by the BS and upon
+receiving the CID the SS then creates an identical connection (in UL direction)
+with the same CID.</p>
+</div>
+<div class="section" id="scheduling-services">
+<h3>Scheduling Services<a class="headerlink" href="#scheduling-services" title="Permalink to this headline">¶</a></h3>
+<p>The module supports the four scheduling services defined by the 802.16-2004
+standard:</p>
+<ul class="simple">
+<li><p>Unsolicited Grant Service (UGS)</p></li>
+<li><p>Real-Time Polling Services (rtPS)</p></li>
+<li><p>Non Real-Time Polling Services (nrtPS)</p></li>
+<li><p>Best Effort (BE)</p></li>
+</ul>
+<p>These scheduling services behave differently with respect to how they request
+bandwidth as well as how the it is granted. Each service flow is associated to
+exactly one scheduling service, and the QoS parameter set associated to a
+service flow actually defines the scheduling service it belongs to. When a
+service flow is created the UplinkScheduler calculates necessary parameters such
+as grant size and grant interval based on QoS parameters associated to it.</p>
+</div>
+<div class="section" id="wimax-uplink-scheduler-model">
+<h3>WiMAX Uplink Scheduler Model<a class="headerlink" href="#wimax-uplink-scheduler-model" title="Permalink to this headline">¶</a></h3>
+<p>Uplink Scheduler at the BS decides which of the SSs will be assigned uplink
+allocations based on the QoS parameters associated to a service flow (or
+scheduling service) and bandwidth requests from the SSs. Uplink scheduler
+together with Bandwidth Manager implements the complete scheduling service
+functionality. The standard defines up to four scheduling services (BE, UGS,
+rtPS, nrtPS) for applications with different types of QoS requirements. The
+service flows of these scheduling services behave differently with respect to
+how they request for bandwidth as well as how the bandwidth is granted. The
+module supports all four scheduling services. Each service flow is associated to
+exactly one transport connection and one scheduling service. The QoS parameters
+associated to a service flow actually define the scheduling service it belongs
+to. Standard QoS parameters for UGS, rtPS, nrtPS and BE services, as specified
+in Tables 111a to 111d of the 802.16e amendment, are supported. When a service
+flow is created the uplink scheduler calculates necessary parameters such as
+grant size and allocation interval based on QoS parameters associated to it.
+The current WiMAX module provides three different versions of schedulers.</p>
+<ul class="simple">
+<li><p>The first one is a simple priority-based First Come First Serve (FCFS).  For
+the real-time services (UGS and rtPS) the BS then allocates grants/polls on
+regular basis based on the calculated interval. For the non real-time services
+(nrtPS and BE) only minimum reserved bandwidth is guaranteed if available
+after servicing real-time flows. Note that not all of these parameters are
+utilized by the uplink scheduler. Also note that currently only service flow
+with fixed-size packet size are supported, as currently set up in simulation
+scenario with OnOff application of fixed packet size. This scheduler is
+implemented by class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">BSSchedulerSimple</span></code> and class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">UplinkSchedulerSimple</span></code>.</p></li>
+<li><p>The second one is similar to first scheduler except by rtPS service flow. All
+rtPS Connections are able to transmit all packet in the queue according to the
+available bandwidth. The bandwidth saturation control has been implemented to
+redistribute the effective available bandwidth to all rtPS that have at least
+one packet to transmit. The remaining bandwidth is allocated to nrtPS and BE
+Connections. This scheduler is implemented by class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">BSSchedulerRtps</span></code> and class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">UplinkSchedulerRtps</span></code>.</p></li>
+<li><p>The third one is a Migration-based Quality of Service uplink scheduler This
+uplink scheduler uses three queues, the low priority queue, the intermediate
+queue and the high priority queue. The scheduler serves the requests in
+strict priority order from the high priority queue to the low priority queue.
+The low priority queue stores the bandwidth requests of the BE service flow.
+The intermediate queue holds bandwidth requests sent by rtPS and by nrtPS
+connections. rtPS and nrtPS requests can migrate to the high priority queue to
+guarantee that their QoS requirements are met. Besides the requests migrated
+from the intermediate queue, the high priority queue stores periodic grants
+and unicast request opportunities that must be scheduled in the following
+frame. To guarantee the maximum delay requirement, the BS assigns a deadline
+to each rtPS bandwidth request in the intermediate queue. The minimum
+bandwidth requirement of both rtPS and nrtPS connections is guaranteed over a
+window of duration T. This scheduler is implemented by class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">UplinkSchedulerMBQoS</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="wimax-outbound-schedulers-model">
+<h3>WiMAX Outbound Schedulers Model<a class="headerlink" href="#wimax-outbound-schedulers-model" title="Permalink to this headline">¶</a></h3>
+<p>Besides the uplink scheduler these are the outbound schedulers at BS and SS side
+(BSScheduler and SSScheduler). The outbound schedulers decide which of the
+packets from the outbound queues will be transmitted in a given allocation. The
+outbound scheduler at the BS schedules the downlink traffic, i.e., packets to be
+transmitted to the SSs in the downlink subframe. Similarly the outbound
+scheduler at a SS schedules the packet to be transmitted in the uplink
+allocation assigned to that SS in the uplink subframe. All three schedulers have
+been implemented to work as FCFS scheduler, as they allocate grants starting
+from highest priority scheduling service to the lower priority one (UGS&gt; rtPS&gt;
+nrtPS&gt; BE). The standard does not suggest any scheduling algorithm and instead
+leaves this decision up to the manufacturers. Of course more sophisticated
+algorithms can be added later if required.</p>
+</div>
+</div>
+<div class="section" id="wimaxchannel-and-wimaxphy-models">
+<h2>WimaxChannel and WimaxPhy models<a class="headerlink" href="#wimaxchannel-and-wimaxphy-models" title="Permalink to this headline">¶</a></h2>
+<p>The module implements the Wireless MAN OFDM PHY specifications as the more
+relevant for implementation as it is the schema chosen by the WiMAX Forum. This
+specification is designed for non-light-of-sight (NLOS) including fixed and
+mobile broadband wireless access. The proposed model uses a 256 FFT processor,
+with 192 data subcarriers. It supports all the seven modulation and coding
+schemes specified by Wireless MAN-OFDM. It is composed of two parts: the channel
+model and the physical model.</p>
+</div>
+<div class="section" id="channel-model">
+<h2>Channel model<a class="headerlink" href="#channel-model" title="Permalink to this headline">¶</a></h2>
+<p>The channel model we propose is implemented by the class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SimpleOFDMWimaxChannel</span></code> which extends the class
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wimaxchannel</span></code>. The channel entity has a private structure named
+m_phyList which handles all the physical devices connected to it. When a
+physical device sends a packet (FEC Block) to the channel, the channel handles
+the packet, and then for each physical device connected to it, it calculates the
+propagation delay, the path loss according to a given propagation model and
+eventually forwards the packet to the receiver device.  The channel class uses
+the method <cite>GetDistanceFrom()</cite> to calculate the distance between two physical
+entities according to their 3D coordinates. The delay is
+computed as <cite>delay = distance/C</cite>, where <cite>C</cite> is the speed of the light.</p>
+</div>
+<div class="section" id="physical-model">
+<h2>Physical model<a class="headerlink" href="#physical-model" title="Permalink to this headline">¶</a></h2>
+<p>The physical layer performs two main operations: (i) It receives a burst from a
+channel and forwards it to the MAC layer, (ii) it receives a burst from the MAC
+layer and transmits it on the channel. In order to reduce the simulation
+complexity of the WiMAX physical layer, we have chosen to model offline part of
+the physical layer. More specifically we have developed an OFDM simulator to
+generate trace files used by the reception process to evaluate if a FEC block
+can be correctly decoded or not.</p>
+<p>Transmission Process: A burst is a set of WiMAX MAC PDUs. At the sending
+process, a burst is converted into bit-streams and then split into smaller
+FEC blocks which are then sent to the channel with a power equal P_tx.</p>
+<p>Reception Process: The reception process includes the following operations:</p>
+<ol class="arabic simple">
+<li><p>Receive a FEC block from the channel.</p></li>
+<li><p>Calculate the noise level.</p></li>
+<li><p>Estimate the signal to noise ratio (SNR) with the following formula.</p></li>
+<li><p>Determine if a FEC block can be correctly decoded.</p></li>
+<li><p>Concatenate received FEC blocks to reconstruct the original burst.</p></li>
+<li><p>Forward the burst to the upper layer.</p></li>
+</ol>
+<p>The developed process to evaluate if a FEC block can be correctly received or
+not uses pre-generated traces.  The trace files are generated by an external
+OFDM simulator (described later). A class named SNRToBlockErrorRateManager
+handles a repository containing seven trace files (one for each modulation and
+coding scheme). A repository is specific for a particular channel model.</p>
+<p>A trace file is made of 6 columns. The first column provides the SNR value (1),
+whereas the other columns give respectively the bit error rate BER (2), the
+block error rate BlcER(3), the standard deviation on BlcER, and the confidence
+interval (4 and 5).  These trace files are loaded into memory by the
+SNRToBlockErrorRateManager entity at the beginning of the simulation.</p>
+<p>Currently, The first process uses the first and third columns to determine if a
+FEC block is correctly received. When the physical layer receives a packet with
+an SNR equal to SNR_rx, it asks the SNRToBlockErrorRateManager to return the
+corresponding block error rate BlcER. A random number RAND between 0 and 1 is
+then generated. If RAND is greater than BlcER, then the block is correctly
+received, otherwise the block is considered erroneous and is ignored.</p>
+<p>The module provides defaults SNR to block error rate traces in default-traces.h.
+The traces have been generated by an External WiMAX OFDM simulator. The
+simulator is based on an external mathematics and signal processing library IT++
+and includes : a random block generator, a Reed Solomon (RS) coder, a
+convolutional coder, an interleaver, a 256 FFT-based OFDM modulator, a
+multi-path channel simulator and an equalizer. The multipath channel is
+simulated using the TDL_channel class of the IT++ library.</p>
+<p>Users can configure the module to use their own traces generated by another OFDM
+simulator or ideally by performing experiments in real environment. For this
+purpose, a path to a repository containing trace files should be provided.  If
+no repository is provided the traces form default-traces.h will be loaded. A
+valid repository should contain 7 files, one for each modulation and coding
+scheme.</p>
+<p>The names of the files should respect the following format: modulation0.txt for
+modulation 0, modulation1.txt for modulation 1 and so on…  The file format
+should be as follows:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SNR_value1   BER  Blc_ER  STANDARD_DEVIATION  CONFIDENCE_INTERVAL1  CONFIDENCE_INTERVAL2
+SNR_value2   BER  Blc_ER  STANDARD_DEVIATION  CONFIDENCE_INTERVAL1  CONFIDENCE_INTERVAL2
+ ...          ...  ...     ...                 ...                   ...
+ ...          ...  ...     ...                 ...                   ...
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Wimax NetDevice</a><ul>
+<li><a class="reference internal" href="#scope-of-the-model">Scope of the model</a></li>
+<li><a class="reference internal" href="#using-the-wimax-models">Using the Wimax models</a></li>
+<li><a class="reference internal" href="#wimax-attributes">Wimax Attributes</a></li>
+<li><a class="reference internal" href="#wimax-tracing">Wimax Tracing</a></li>
+<li><a class="reference internal" href="#wimax-mac-model">Wimax MAC model</a><ul>
+<li><a class="reference internal" href="#convergence-sublayer">Convergence Sublayer</a></li>
+<li><a class="reference internal" href="#ip-packet-classifier">IP Packet Classifier</a></li>
+<li><a class="reference internal" href="#mac-common-part-sublayer">MAC Common Part Sublayer</a></li>
+<li><a class="reference internal" href="#framing-and-management-messages">Framing and Management Messages</a></li>
+<li><a class="reference internal" href="#network-entry-and-initialization">Network Entry and Initialization</a></li>
+<li><a class="reference internal" href="#connections-and-addressing">Connections and Addressing</a></li>
+<li><a class="reference internal" href="#scheduling-services">Scheduling Services</a></li>
+<li><a class="reference internal" href="#wimax-uplink-scheduler-model">WiMAX Uplink Scheduler Model</a></li>
+<li><a class="reference internal" href="#wimax-outbound-schedulers-model">WiMAX Outbound Schedulers Model</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wimaxchannel-and-wimaxphy-models">WimaxChannel and WimaxPhy models</a></li>
+<li><a class="reference internal" href="#channel-model">Channel model</a></li>
+<li><a class="reference internal" href="#physical-model">Physical model</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="wifi-references.html"
+                        title="previous chapter">References</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/wimax.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="wifi-references.html" title="References"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<map id="ns3::MacLow::DeaggregateAmpduAndReceive" name="ns3::MacLow::DeaggregateAmpduAndReceive">
+<area shape="rect" id="node1" title=" " alt="" coords="5,517,204,559"/>
+<area shape="rect" id="node2" href="$classns3_1_1_wifi_mac_header.html#aa1c4acbda4ace9f7a920c97d71bdd097" title="Return the address in the Address 1 field." alt="" coords="823,444,977,485"/>
+<area shape="rect" id="node3" href="$classns3_1_1_wifi_mac_header.html#a5d32ca3e3a34f1185df86927d4346430" title="Return the address in the Address 2 field." alt="" coords="823,1315,977,1356"/>
+<area shape="rect" id="node4" href="$classns3_1_1_wifi_mac_header.html#a1bfde4f8ca07ee46bd0bdc1ab6597e48" title="Return the duration from the Duration/ID field (Time object)." alt="" coords="823,1689,977,1731"/>
+<area shape="rect" id="node6" href="$classns3_1_1_wifi_mac_header.html#a07391fd5b12f7a90fe55325fcccc8e3a" title="Return the Traffic ID of a QoS header." alt="" coords="547,65,700,107"/>
+<area shape="rect" id="node7" href="$classns3_1_1_wifi_mac_header.html#a368b97ef91b953af76794112fd3681c2" title="Return true if the Type is DATA and Subtype is one of the possible values for QoS Data." alt="" coords="823,99,977,140"/>
+<area shape="rect" id="node8" href="$classns3_1_1_wifi_mac_header.html#a3d393ad4f9cfaca5ce0ac239a27f2763" title="Return the sequence number of the header." alt="" coords="271,291,439,332"/>
+<area shape="rect" id="node9" href="$classns3_1_1_mac_low.html#a142444428826e0a5f67265dfd7b0f4d2" title="Return Short Interframe Space (SIFS) of this MacLow." alt="" coords="819,393,981,419"/>
+<area shape="rect" id="node10" href="$classns3_1_1_wifi_mac_header.html#a140dc7acdb206bfb5b929325d92967b5" title="Return true if the header is an Ack header." alt="" coords="547,327,700,368"/>
+<area shape="rect" id="node12" href="$classns3_1_1_wifi_tx_vector.html#aae65c13f3633fbf99f95084a49d4b39e" title="Checks whether the PSDU contains A&#45;MPDU." alt="" coords="283,459,428,500"/>
+<area shape="rect" id="node13" href="$classns3_1_1_wifi_mac_header.html#a16f7fffa3791bb30ab760a98ec54afba" title="Return true if the header is a BlockAck header." alt="" coords="547,196,700,237"/>
+<area shape="rect" id="node14" href="$classns3_1_1_wifi_mac_header.html#a97830b03ca05944b92bff4defed50716" title="Return true if the header is a BlockAckRequest header." alt="" coords="547,261,700,303"/>
+<area shape="rect" id="node15" href="$classns3_1_1_wifi_mac_header.html#ab7141548a921f63a084720b3b022de79" title="Return true if the Type is DATA." alt="" coords="547,444,700,485"/>
+<area shape="rect" id="node16" href="$classns3_1_1_wifi_mac_header.html#a08a4aa07029641c46820044c7e51bf2e" title="Return if the QoS Ack policy is Normal Ack." alt="" coords="547,131,700,172"/>
+<area shape="rect" id="node17" href="$classns3_1_1_event_id.html#a8b41e6f8c54db6bede8a7dcaf917074a" title="This method is syntactic sugar for !IsExpired()." alt="" coords="813,2037,987,2063"/>
+<area shape="rect" id="node19" href="$classns3_1_1_mac_low.html#a8a11f1b12b7dc41fba389b1b480c55f9" title="Notify NAV function." alt="" coords="533,881,713,907"/>
+<area shape="rect" id="node32" href="$classns3_1_1_simulator.html#a671882c894a08af4a5e91181bf1eec13" title="Schedule an event to expire after delay." alt="" coords="809,1773,991,1799"/>
+<area shape="rect" id="node35" href="$classns3_1_1_mac_low.html#a2fffa82ad11ebe0e113232813a816eff" title=" " alt="" coords="263,1083,447,1110"/>
+<area shape="rect" id="node49" href="$classns3_1_1_mac_low.html#aafa012c5d2dde80484d6546c802f02f8" title="Every time that a BlockAckRequest or a packet with Ack Policy equals to Block Ack are received,..." alt="" coords="518,1920,729,1961"/>
+<area shape="rect" id="node50" href="$classns3_1_1_mac_low.html#af6e2acc771d188c0959871f142912296" title="Invoked after an A&#45;MPDU has been received." alt="" coords="252,2033,459,2075"/>
+<area shape="rect" id="node5" href="$group__timecivil.html#ga17465a639c8d1464e76538afdd78a9f0" title=" " alt="" coords="1095,1811,1237,1838"/>
+<area shape="rect" id="node11" href="$classns3_1_1_wifi_mac_header.html#ac602baa163798e5da4945338dd5ef9b5" title="Return the type (enum WifiMacType)" alt="" coords="1089,417,1243,459"/>
+<area shape="rect" id="node18" href="$classns3_1_1_event_id.html#acc25141054209b1a286a5471a51bd0c0" title="This method is syntactic sugar for the ns3::Simulator::IsExpired method." alt="" coords="1081,2011,1251,2038"/>
+<area shape="rect" id="node20" href="$classns3_1_1_wifi_phy.html#a1793e6110ca3623131def396f487c11d" title=" " alt="" coords="1060,1067,1272,1108"/>
+<area shape="rect" id="node21" href="$classns3_1_1_wifi_phy.html#aee98c7241bb4f0bb8e6d90f5771dacc7" title=" " alt="" coords="807,1096,993,1137"/>
+<area shape="rect" id="node22" href="$classns3_1_1_mac_low.html#abcc34d5e7e18f1f9df32adb248efccea" title="Reset NAV with the given duration." alt="" coords="788,1213,1012,1239"/>
+<area shape="rect" id="node23" href="$classns3_1_1_simulator.html#ac3178fa975b419f7875e7105be122800" title="Return the current simulation virtual time." alt="" coords="1089,1238,1243,1265"/>
+<area shape="rect" id="node24" href="$classns3_1_1_mac_low.html#ab35a898f608bb1103394e56a77c01343" title="Start NAV with the given duration." alt="" coords="791,1162,1009,1189"/>
+<area shape="rect" id="node25" href="$classns3_1_1_wifi_phy.html#afca470e272ec5c3126da63c0a6102f4c" title=" " alt="" coords="800,810,1000,837"/>
+<area shape="rect" id="node26" href="$classns3_1_1_wifi_mac_header.html#a5f303b5e5e6bb7bd9f9bda3f0b20892f" title="Return the raw duration from the Duration/ID field." alt="" coords="823,861,977,903"/>
+<area shape="rect" id="node27" href="$classns3_1_1_mac_low.html#a89fbeddfe91a47f0dcc1f3d7fd5108a0" title="Return a TXVECTOR for the RTS frame given the destination." alt="" coords="792,927,1008,954"/>
+<area shape="rect" id="node28" href="$classns3_1_1_wifi_mac_header.html#ad5ce3997a84fa55ebe60dd927c37d526" title=" " alt="" coords="823,979,977,1020"/>
+<area shape="rect" id="node29" href="$classns3_1_1_mac_low.html#a6c8806c531633adc7e524eba5e2f3106" title="Return slot duration of this MacLow." alt="" coords="803,693,997,719"/>
+<area shape="rect" id="node30" href="$classns3_1_1_wifi_mac_header.html#a67147b01fd61827c27316473c7e19ea8" title="Return true if the header is a CF&#45;End header." alt="" coords="823,627,977,668"/>
+<area shape="rect" id="node31" href="$classns3_1_1_wifi_mac_header.html#a2308af17e822e5b423c039740418f055" title="Return true if the header is a RTS header." alt="" coords="823,561,977,603"/>
+<area shape="rect" id="node33" href="$group__timecivil.html#ga33c34b816f8ff6628e33d5c8e9713b9e" title=" " alt="" coords="847,1381,953,1407"/>
+<area shape="rect" id="node34" href="$classns3_1_1_wifi_mac_header.html#a71172371f11f1cfcb3912bb03134c285" title="Set Type/Subtype values with the correct values depending on the given type." alt="" coords="823,744,977,785"/>
+<area shape="rect" id="node36" href="$classns3_1_1_packet.html#ac4a6bcd77e58bdc14c42a7d572d66cc9" title="Add a packet tag." alt="" coords="526,1033,721,1059"/>
+<area shape="rect" id="node37" href="$classns3_1_1_event_id.html#a993ae94e48e014e1afd47edb16db7a11" title="This method is syntactic sugar for the ns3::Simulator::Cancel method." alt="" coords="823,1847,977,1874"/>
+<area shape="rect" id="node38" href="$classns3_1_1_snr_tag.html#af71e7cca59717042ddd859dff02e4fc9" title="Return the SNR value." alt="" coords="560,1134,687,1161"/>
+<area shape="rect" id="node39" href="$classns3_1_1_wifi_mac_queue_item.html#aeb59c1e3b526361838d5d3a6f3035039" title="Get the header stored in this item." alt="" coords="534,1185,713,1227"/>
+<area shape="rect" id="node40" href="$classns3_1_1_wifi_tx_vector.html#aadd3ccf9d68dd8f06d4cfedc352498fb" title=" " alt="" coords="551,2088,696,2129"/>
+<area shape="rect" id="node41" href="$classns3_1_1_wifi_mac_queue_item.html#a01d29092eafa110090998f339bfabd97" title="Get the packet stored in this item." alt="" coords="534,1251,713,1292"/>
+<area shape="rect" id="node42" href="$classns3_1_1_mac_low.html#a42324a6a9affe03004a854dc0daa5f27" title="Return Reduced Interframe Space (RIFS) of this MacLow." alt="" coords="542,1317,705,1343"/>
+<area shape="rect" id="node43" href="$classns3_1_1_wifi_remote_station_manager.html#a68dc3eb191060d3f98f265b9013d7e4a" title="Return whether the device can use RIFS." alt="" coords="507,1368,740,1409"/>
+<area shape="rect" id="node44" href="$classns3_1_1_ctrl_b_ack_request_header.html#a8ca10bacb9cc50ae0f849044769ca88d" title="Return the starting sequence number." alt="" coords="519,1433,728,1475"/>
+<area shape="rect" id="node45" href="$classns3_1_1_ctrl_b_ack_request_header.html#a884fbe9f6ba028fb3dde88fe31ba6bab" title="Return the Traffic ID (TID)." alt="" coords="519,1499,728,1540"/>
+<area shape="rect" id="node46" href="$classns3_1_1_txop.html#a4c3271887c9fb5dcb2ef61651a3a60de" title="Return the TXOP limit." alt="" coords="533,1565,714,1591"/>
+<area shape="rect" id="node47" href="$classns3_1_1_txop.html#a728794caac9a10954c087382fa5e52e3" title="Return the remaining duration in the current TXOP." alt="" coords="514,1083,733,1110"/>
+<area shape="rect" id="node48" href="$classns3_1_1_wifi_mac_header.html#a7c2f88bdefc903df253eef1e5b7bf2af" title="Return a string corresponds to the header type." alt="" coords="547,713,700,755"/>
+</map>

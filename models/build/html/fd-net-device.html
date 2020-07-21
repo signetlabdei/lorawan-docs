@@ -1,0 +1,666 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>File Descriptor NetDevice &#8212; Model Library</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Flow Monitor" href="flow-monitor.html" />
+    <link rel="prev" title="Energy Framework" href="energy.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Models</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="flow-monitor.html" title="Flow Monitor"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="energy.html" title="Energy Framework"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="file-descriptor-netdevice">
+<h1>File Descriptor NetDevice<a class="headerlink" href="#file-descriptor-netdevice" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">src/fd-net-device</span></code> module provides the <code class="docutils literal notranslate"><span class="pre">FdNetDevice</span></code> class,
+which is able to read and write traffic using a file descriptor
+provided by the user.  This file descriptor can be associated to a TAP
+device, to a raw socket, to a user space process generating/consuming
+traffic, etc.
+The user has full freedom to define how external traffic is generated
+and <em>ns-3</em> traffic is consumed.</p>
+<p>Different mechanisms to associate a simulation to external traffic can
+be provided through helper classes.  Three specific helpers are provided:</p>
+<ul class="simple">
+<li><p>EmuFdNetDeviceHelper (to associate the <em>ns-3</em> device with a physical device
+in the host machine)</p></li>
+<li><p>TapFdNetDeviceHelper (to associate the ns-3 device with the file descriptor
+from a tap device in the host machine)</p></li>
+<li><p>PlanteLabFdNetDeviceHelper (to automate the creation of tap devices in
+PlanetLab nodes, enabling <em>ns-3</em> simulations that can send and receive
+traffic though the Internet using PlanetLab resource.</p></li>
+</ul>
+<div class="section" id="model-description">
+<h2>Model Description<a class="headerlink" href="#model-description" title="Permalink to this headline">¶</a></h2>
+<p>The source code for this module lives in the directory <code class="docutils literal notranslate"><span class="pre">src/fd-net-device</span></code>.</p>
+<p>The FdNetDevice is a special type of <em>ns-3</em> NetDevice that reads traffic
+to and from a file descriptor.  That is, unlike pure simulation NetDevice
+objects that write frames to and from a simulated channel, this FdNetDevice
+directs frames out of the simulation to a file descriptor.  The file
+descriptor may be associated to a Linux TUN/TAP device, to a socket, or
+to a user-space process.</p>
+<p>It is up to the user of this device to provide a file descriptor.  The
+type of file descriptor being provided determines what is being
+modelled.  For instance, if the file descriptor provides a raw socket
+to a WiFi card on the host machine, the device being modelled is a
+WiFi device.</p>
+<p>From the conceptual “top” of the device looking down, it looks to the
+simulated node like a device supporting a 48-bit IEEE MAC address that
+can be bridged, supports broadcast, and uses IPv4 ARP or IPv6 Neighbor
+Discovery, although these attributes can be tuned on a per-use-case basis.</p>
+<div class="section" id="design">
+<h3>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h3>
+<p>The FdNetDevice implementation makes use of a reader object,
+extended from the <code class="docutils literal notranslate"><span class="pre">FdReader</span></code> class in the <em>ns-3</em> <code class="docutils literal notranslate"><span class="pre">src/core</span></code> module,
+which manages a separate thread from the main <em>ns-3</em> execution thread, in order
+to read traffic from the file descriptor.</p>
+<p>Upon invocation of the <code class="docutils literal notranslate"><span class="pre">StartDevice</span></code> method, the reader object is initialized
+and starts the reading thread.
+Before device start, a file descriptor must be previously associated to the
+FdNetDevice with the <code class="docutils literal notranslate"><span class="pre">SetFileDescriptor</span></code> invocation.</p>
+<p>The creation and configuration of the file descriptor can be left to a
+number of helpers, described in more detail below. When this is done, the
+invocation of <code class="docutils literal notranslate"><span class="pre">SetFileDescriptor</span></code> is responsibility of
+the helper and must not be directly invoked by the user.</p>
+<p>Upon reading an incoming frame from the file descriptor, the reader
+will pass the frame to the <code class="docutils literal notranslate"><span class="pre">ReceiveCallback</span></code> method, whose
+task it is to schedule the reception of the frame by the device as a
+<em>ns-3</em> simulation event. Since the new frame is passed from the reader
+thread to the main <em>ns-3</em> simulation thread, thread-safety issues
+are avoided by using the <code class="docutils literal notranslate"><span class="pre">ScheduleWithContext</span></code> call instead of the
+regular <code class="docutils literal notranslate"><span class="pre">Schedule</span></code> call.</p>
+<p>In order to avoid overwhelming the scheduler when the incoming data rate
+is too high, a counter is kept with the number of frames that are currently
+scheduled to be received by the device. If this counter reaches the value
+given by the <code class="docutils literal notranslate"><span class="pre">RxQueueSize</span></code> attribute in the device, then the new frame will
+be dropped silently.</p>
+<p>The actual reception of the new frame by the device occurs when the
+scheduled <code class="docutils literal notranslate"><span class="pre">FordwarUp</span></code> method is invoked by the simulator.
+This method acts as if a new frame had arrived from a channel attached
+to the device. The device then decapsulates the frame, removing any layer 2
+headers, and forwards it to upper network stack layers of the node.
+The <code class="docutils literal notranslate"><span class="pre">ForwardUp</span></code> method will remove the frame headers,
+according to the frame encapsulation type defined by the <code class="docutils literal notranslate"><span class="pre">EncapsulationMode</span></code>
+attribute, and invoke the receive callback passing an IP packet.</p>
+<p>An extra header, the PI header, can be present when the file descriptor is
+associated to a TAP device that was created without setting the IFF_NO_PI flag.
+This extra header is removed if <code class="docutils literal notranslate"><span class="pre">EncapsulationMode</span></code> is set to DIXPI value.</p>
+<p>In the opposite direction, packets generated inside the simulation that are
+sent out through the device, will be passed to the <code class="docutils literal notranslate"><span class="pre">Send</span></code> method, which
+will in turn invoke the <code class="docutils literal notranslate"><span class="pre">SendFrom</span></code> method. The latter method will add the
+necessary layer 2 headers, and simply write the newly created frame to the
+file descriptor.</p>
+</div>
+<div class="section" id="scope-and-limitations">
+<h3>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Permalink to this headline">¶</a></h3>
+<p>Users of this device are cautioned that there is no flow control
+across the file descriptor boundary, when using in emulation mode.
+That is, in a Linux system, if the speed of writing network packets
+exceeds the ability of the underlying physical device to buffer the
+packets, backpressure up to the writing application will be applied
+to avoid local packet loss.  No such flow control is provided across
+the file descriptor interface, so users must be aware of this limitation.</p>
+<p>As explained before, the RxQueueSize attribute limits the number of packets
+that can be pending to be received by the device.
+Frames read from the file descriptor while the number of pending packets is
+in its maximum will be silently dropped.</p>
+<p>The mtu of the device defaults to the Ethernet II MTU value. However, helpers
+are supposed to set the mtu to the right value to reflect the characteristics
+of the network interface associated to the file descriptor.
+If no helper is used, then the responsibility of setting the correct mtu value
+for the device falls back to the user.
+The size of the read buffer on the file descriptor reader is set to the
+mtu value in the <code class="docutils literal notranslate"><span class="pre">StartDevice</span></code> method.</p>
+<p>The FdNetDevice class currently supports three encapsulation modes,
+DIX for Ethernet II frames, LLC for 802.2 LLC/SNAP frames,
+and DIXPI for Ethernet II frames with an additional TAP PI header.
+This means that traffic traversing the file descriptor is expected to be
+Ethernet II compatible.  IEEE 802.1q (VLAN) tagging is not supported.
+Attaching an FdNetDevice to a wireless interface is possible as long as the
+driver provides Ethernet II frames to the socket API.
+Note that to associate a FdNetDevice to a wireless card in ad-hoc mode,
+the MAC address of the device must be set to the real card MAC address, else
+any incoming traffic a fake MAC address will be discarded by the driver.</p>
+<p>As mentioned before, three helpers are provided with the fd-net-device module.
+Each individual helper (file descriptor type) may have platform
+limitations.  For instance, threading, real-time simulation mode, and the
+ability to create TUN/TAP devices are prerequisites to using the
+provided helpers.  Support for these modes can be found in the output
+of the <code class="docutils literal notranslate"><span class="pre">waf</span> <span class="pre">configure</span></code> step, e.g.:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Threading Primitives          : enabled
+Real Time Simulator           : enabled
+Emulated Net Device           : enabled
+Tap Bridge                    : enabled
+</pre></div>
+</div>
+<p>It is important to mention that while testing the <code class="docutils literal notranslate"><span class="pre">FdNetDevice</span></code> we have found
+an upper bound limit for TCP throughput when using 1Gb Ethernet links of 60Mbps.
+This limit is most likely due to the processing power of the computers involved
+in the tests.</p>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>The usage pattern for this type of device is similar to other net devices
+with helpers that install to node pointers or node containers.
+When using the base <code class="docutils literal notranslate"><span class="pre">FdNetDeviceHelper</span></code> the user is responsible for
+creating and setting the file descriptor by himself.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">FdNetDeviceHelper</span> <span class="n">fd</span><span class="p">;</span>
+<span class="n">NetDeviceContainer</span> <span class="n">devices</span> <span class="o">=</span> <span class="n">fd</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">nodes</span><span class="p">);</span>
+
+<span class="c1">// file descriptor generation</span>
+<span class="p">...</span>
+
+<span class="n">device</span><span class="o">-&gt;</span><span class="n">SetFileDescriptor</span> <span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Most commonly a FdNetDevice will be used to interact with the host system.
+In these cases it is almost certain that the user will want to run in real-time
+emulation mode, and to enable checksum computations.
+The typical program statements are as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">GlobalValue</span><span class="o">::</span><span class="n">Bind</span> <span class="p">(</span><span class="s">&quot;SimulatorImplementationType&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;ns3::RealtimeSimulatorImpl&quot;</span><span class="p">));</span>
+<span class="n">GlobalValue</span><span class="o">::</span><span class="n">Bind</span> <span class="p">(</span><span class="s">&quot;ChecksumEnabled&quot;</span><span class="p">,</span> <span class="n">BooleanValue</span> <span class="p">(</span><span class="nb">true</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>The easiest way to set up an experiment that interacts with a Linux host
+system is to user the <code class="docutils literal notranslate"><span class="pre">Emu</span></code> and <code class="docutils literal notranslate"><span class="pre">Tap</span></code> helpers.
+Perhaps the most unusual part of these helper implementations
+relates to the requirement for executing some of the code with super-user
+permissions. Rather than force the user to execute the entire simulation as
+root, we provide a small “creator” program that runs as root and does any
+required high-permission sockets work. The easiest way to set the right
+privileges for the “creator” programs, is by enabling the <code class="docutils literal notranslate"><span class="pre">--enable-sudo</span></code>
+flag when performing <code class="docutils literal notranslate"><span class="pre">waf</span> <span class="pre">configure</span></code>.</p>
+<p>We do a similar thing for both the <code class="docutils literal notranslate"><span class="pre">Emu</span></code> and the <code class="docutils literal notranslate"><span class="pre">Tap</span></code> devices.  The
+high-level view is that the <code class="docutils literal notranslate"><span class="pre">CreateFileDescriptor</span></code> method creates a local interprocess
+(Unix) socket, forks, and executes the small creation program. The small
+program, which runs as suid root, creates a raw socket and sends back the raw
+socket file descriptor over the Unix socket that is passed to it as a parameter.
+The raw socket is passed as a control message (sometimes called ancillary data)
+of type SCM_RIGHTS.</p>
+<div class="section" id="helpers">
+<h3>Helpers<a class="headerlink" href="#helpers" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="emufdnetdevicehelper">
+<h4>EmuFdNetDeviceHelper<a class="headerlink" href="#emufdnetdevicehelper" title="Permalink to this headline">¶</a></h4>
+<p>The EmuFdNetDeviceHelper creates a raw socket to an underlying physical
+device, and provides the socket descriptor to the FdNetDevice.  This
+allows the <em>ns-3</em> simulation to read frames from and write frames to
+a network device on the host.</p>
+<p>The emulation helper permits to transparently integrate a simulated
+<em>ns-3</em> node into a network composed of real nodes.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>+----------------------+     +-----------------------+
+|         host 1       |     |         host 2        |
++----------------------+     +-----------------------+
+|    ns-3 simulation   |     |                       |
++----------------------+     |         Linux         |
+|       ns-3 Node      |     |     Network Stack     |
+|  +----------------+  |     |   +----------------+  |
+|  |    ns-3 TCP    |  |     |   |       TCP      |  |
+|  +----------------+  |     |   +----------------+  |
+|  |    ns-3 IP     |  |     |   |       IP       |  |
+|  +----------------+  |     |   +----------------+  |
+|  |   FdNetDevice  |  |     |   |                |  |
+|  |    10.1.1.1    |  |     |   |                |  |
+|  +----------------+  |     |   +    ETHERNET    +  |
+|  |   raw socket   |  |     |   |                |  |
+|--+----------------+--|     |   +----------------+  |
+|       | eth0 |       |     |        | eth0 |       |
++-------+------+-------+     +--------+------+-------+
+
+        10.1.1.11                     10.1.1.12
+
+            |                            |
+            +----------------------------+
+</pre></div>
+</div>
+<p>This helper replaces the functionality of the <code class="docutils literal notranslate"><span class="pre">EmuNetDevice</span></code> found in
+<em>ns-3</em> prior to ns-3.17, by bringing this type of device into the common
+framework of the FdNetDevice.  The <code class="docutils literal notranslate"><span class="pre">EmuNetDevice</span></code> was deprecated
+in favor of this new helper.</p>
+<p>The device is configured to perform
+MAC spoofing to separate simulation network traffic from other
+network traffic that may be flowing to and from the host.</p>
+<p>One can use this helper in a testbed situation where the host on
+which the simulation is running has a specific interface of interest which
+drives the testbed hardware. You would also need to set this specific interface
+into promiscuous mode and provide an appropriate device name to the <em>ns-3</em>
+simulation.  Additionally, hardware offloading of segmentation and checksums
+should be disabled.</p>
+<p>The helper only works if the underlying interface is up and in
+promiscuous mode. Packets will be sent out over the device, but we use MAC
+spoofing. The MAC addresses will be generated (by default) using the
+Organizationally Unique Identifier (OUI) 00:00:00 as a base. This vendor code
+is not assigned to any organization and so should not conflict with any real
+hardware.</p>
+<p>It is always up to the user to determine that using these MAC addresses is okay
+on your network and won’t conflict with anything else (including another
+simulation using such devices) on your network. If you are using the emulated
+FdNetDevice configuration in separate simulations,
+you must consider global MAC address
+assignment issues and ensure that MAC addresses are unique across all
+simulations. The emulated net device respects the MAC address provided in the
+<code class="docutils literal notranslate"><span class="pre">Address</span></code> attribute so you can do this manually. For larger simulations, you
+may want to set the OUI in the MAC address allocation function.</p>
+<p>Before invoking the <code class="docutils literal notranslate"><span class="pre">Install</span></code> method, the correct device name must be configured
+on the helper using the <code class="docutils literal notranslate"><span class="pre">SetDeviceName</span></code> method. The device name is required to
+identify which physical device should be used to open the raw socket.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">EmuFdNetDeviceHelper</span> <span class="n">emu</span><span class="p">;</span>
+<span class="n">emu</span><span class="p">.</span><span class="n">SetDeviceName</span> <span class="p">(</span><span class="n">deviceName</span><span class="p">);</span>
+<span class="n">NetDeviceContainer</span> <span class="n">devices</span> <span class="o">=</span> <span class="n">emu</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">node</span><span class="p">);</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">device</span> <span class="o">=</span> <span class="n">devices</span><span class="p">.</span><span class="n">Get</span> <span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">device</span><span class="o">-&gt;</span><span class="n">SetAttribute</span> <span class="p">(</span><span class="s">&quot;Address&quot;</span><span class="p">,</span> <span class="n">Mac48AddressValue</span> <span class="p">(</span><span class="n">Mac48Address</span><span class="o">::</span><span class="n">Allocate</span> <span class="p">()));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tapfdnetdevicehelper">
+<h4>TapFdNetDeviceHelper<a class="headerlink" href="#tapfdnetdevicehelper" title="Permalink to this headline">¶</a></h4>
+<p>A Tap device is a special type of Linux device for which one end of the
+device appears to the kernel as a virtual net_device, and the other
+end is provided as a file descriptor to user-space.  This file descriptor
+can be passed to the FdNetDevice.  Packets forwarded to the TAP device
+by the kernel will show up in the FdNetDevice in <em>ns-3</em>.</p>
+<p>Users should note that this usage of TAP devices is different than that
+provided by the TapBridge NetDevice found in <code class="docutils literal notranslate"><span class="pre">src/tap-bridge</span></code>.
+The model in this helper is as follows:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>+-------------------------------------+
+|                host                 |
++-------------------------------------+
+|    ns-3 simulation   |              |
++----------------------+              |
+|      ns-3 Node       |              |
+|  +----------------+  |              |
+|  |    ns-3 TCP    |  |              |
+|  +----------------+  |              |
+|  |    ns-3 IP     |  |              |
+|  +----------------+  |              |
+|  |   FdNetDevice  |  |              |
+|--+----------------+--+    +------+  |
+|       | TAP  |            | eth0 |  |
+|       +------+            +------+  |
+|     192.168.0.1               |     |
++-------------------------------|-----+
+                                |
+                                |
+                                ------------ (Internet) -----
+</pre></div>
+</div>
+<p>In the above, the configuration requires that the host be able to forward
+traffic generated by the simulation to the Internet.</p>
+<p>The model in TapBridge (in another module) is as follows:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>+--------+
+|  Linux |
+|  host  |                    +----------+
+| ------ |                    |   ghost  |
+|  apps  |                    |   node   |
+| ------ |                    | -------- |
+|  stack |                    |    IP    |     +----------+
+| ------ |                    |   stack  |     |   node   |
+|  TAP   |                    |==========|     | -------- |
+| device | &lt;----- IPC ------&gt; |   tap    |     |    IP    |
++--------+                    |  bridge  |     |   stack  |
+                              | -------- |     | -------- |
+                              |   ns-3   |     |   ns-3   |
+                              |   net    |     |   net    |
+                              |  device  |     |  device  |
+                              +----------+     +----------+
+                                   ||               ||
+                              +---------------------------+
+                              |        ns-3 channel       |
+                              +---------------------------+
+</pre></div>
+</div>
+<p>In the above, packets instead traverse <em>ns-3</em> NetDevices and Channels.</p>
+<p>The usage pattern for this example is that the user sets the
+MAC address and either (or both) the IPv4 and IPv6 addresses and masks
+on the device, and the PI header if needed.  For example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TapFdNetDeviceHelper</span> <span class="n">helper</span><span class="p">;</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">SetDeviceName</span> <span class="p">(</span><span class="n">deviceName</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">SetModePi</span> <span class="p">(</span><span class="n">modePi</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">SetTapIpv4Address</span> <span class="p">(</span><span class="n">tapIp</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">SetTapIpv4Mask</span> <span class="p">(</span><span class="n">tapMask</span><span class="p">);</span>
+<span class="p">...</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">node</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="planetlabfdnetdevicehelper">
+<h4>PlanetLabFdNetDeviceHelper<a class="headerlink" href="#planetlabfdnetdevicehelper" title="Permalink to this headline">¶</a></h4>
+<p>PlanetLab is a world wide distributed network testbed composed of
+nodes connected to the Internet.
+Running ns-3 simulations in PlanetLab nodes using the
+PlanetLabFdNetDeviceHelper allows to send simulated traffic generated by
+ns-3 directly to the Internet. This setup can be useful to validate
+ns-3 Internet protocols or other future protocols implemented in ns-3.</p>
+<p>To run experiments using PlanetLab nodes it is required to have a
+PlanetLab account.
+Only members of PlanetLab partner institutions can obtain such accounts
+( for more information visit <a class="reference external" href="http://www.planet-lab.org/">http://www.planet-lab.org/</a> or
+<a class="reference external" href="http://www.planet-lab.eu">http://www.planet-lab.eu</a> ).
+Once the account is obtained, a PlanetLab <cite>slice</cite> must be requested in
+order to conduct experiments.
+A slice represents an experiment unit related to a group of PlanetLab users,
+and can be associated to virtual machines in different PlanetLab nodes.
+Slices can also be customized by adding configuration tags to it
+(this is done by PlanetLab administrators).</p>
+<p>The PlanetLabFdNetDeviceHelper creates TAP devices on PlanetLab nodes
+using specific PlanetLab mechanisms (i.e. the vsys system), and
+associates the TAP device to a FdNetDevice in ns-3.
+The functionality provided by this helper is similar to that provided
+by the FdTapNetDeviceHelper, except that the underlying mechanisms
+to create the TAP device are different.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>+-------------------------------------+
+|         PlanetLab  host             |
++-------------------------------------+
+|    ns-3 simulation   |              |
++----------------------+              |
+|       ns-3 Node      |              |
+|  +----------------+  |              |
+|  |    ns-3 TCP    |  |              |
+|  +----------------+  |              |
+|  |    ns-3 IP     |  |              |
+|  +----------------+  |              |
+|  |   FdNetDevice  |  |              |
+|--+----------------+--+    +------+  |
+|       | TAP  |            | eth0 |  |
+|       +------+            +------+  |
+|     192.168.0.1               |     |
++-------------------------------|-----+
+                                |
+                                |
+                                ------------ (Internet) -----
+</pre></div>
+</div>
+<p>In order to be able to assign private IPv4 addresses to the TAP devices,
+account holders must request the <cite>vsys_vnet</cite> tag to be added to their slice
+by PlanetLab administrators.
+The vsys_vnet tag is associated to private network segment and only addresses
+from this segment can be used in experiments.</p>
+<p>The syntax used to create a TAP device with this helper is similar to that
+used for the previously described helpers:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PlanetLabFdNetDeviceHelper</span> <span class="n">helper</span><span class="p">;</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">SetTapIpAddress</span> <span class="p">(</span><span class="n">tapIp</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">SetTapMask</span> <span class="p">(</span><span class="n">tapMask</span><span class="p">);</span>
+<span class="p">...</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">node</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>PlanetLab nodes have a Fedora based distribution, so ns-3 can be installed
+following the instructions for ns-3 Linux installation.</p>
+</div>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">FdNetDevice</span></code> provides a number of attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Address</span></code>:  The MAC address of the device</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Start</span></code>:  The simulation start time to spin up the device thread</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Stop</span></code>:  The simulation start time to stop the device thread</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">EncapsulationMode</span></code>:  Link-layer encapsulation format</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">RxQueueSize</span></code>:  The buffer size of the read queue on the file descriptor</dt><dd><p>thread (default of 1000 packets)</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">Start</span></code> and <code class="docutils literal notranslate"><span class="pre">Stop</span></code> do not normally need to be specified unless the
+user wants to limit the time during which this device is active.
+<code class="docutils literal notranslate"><span class="pre">Address</span></code> needs to be set to some kind of unique MAC address if the
+simulation will be interacting with other real devices somehow using
+real MAC addresses.  Typical code:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">device</span><span class="o">-&gt;</span><span class="n">SetAttribute</span> <span class="p">(</span><span class="s">&quot;Address&quot;</span><span class="p">,</span> <span class="n">Mac48AddressValue</span> <span class="p">(</span><span class="n">Mac48Address</span><span class="o">::</span><span class="n">Allocate</span> <span class="p">()));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="output">
+<h3>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h3>
+<p>Ascii and PCAP tracing is provided similar to the other <em>ns-3</em> NetDevice
+types, through the helpers, such as (e.g.):</p>
+<dl class="simple">
+<dt>::</dt><dd><p>EmuFdNetDeviceHelper emu;
+NetDeviceContainer devices = emu.Install (node);
+…
+emu.EnablePcap (“emu-ping”, device, true);</p>
+</dd>
+</dl>
+<p>The standard set of Mac-level NetDevice trace sources is provided.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MaxTx</span></code>:  Trace source triggered when <em>ns-3</em> provides the device with a
+new frame to send</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MaxTxDrop</span></code>:  Trace source if write to file descriptor fails</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MaxPromiscRx</span></code>:  Whenever any valid Mac frame is received</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MaxRx</span></code>:  Whenever a valid Mac frame is received for this device</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Sniffer</span></code>:  Non-promiscuous packet sniffer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PromiscSniffer</span></code>:  Promiscuous packet sniffer (for tcpdump-like traces)</p></li>
+</ul>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>Several examples are provided:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dummy-network.cc</span></code>:  This simple example creates two nodes and
+interconnects them with a Unix pipe by passing the file descriptors
+from the socketpair into the FdNetDevice objects of the respective nodes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">realtime-dummy-network.cc</span></code>:  Same as dummy-network.cc but uses the real time
+simulator implementnation instead of the default one.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fd2fd-onoff.cc</span></code>: This example is aimed at measuring the throughput of the
+FdNetDevice in a pure simulation. For this purpose two FdNetDevices, attached to
+different nodes but in a same simulation, are connected using a socket pair.
+TCP traffic is sent at a saturating data rate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fd-emu-onoff.cc</span></code>: This example is aimed at measuring the throughput of the
+FdNetDevice  when using the EmuFdNetDeviceHelper to attach the simulated
+device to a real device in the host machine. This is achieved by saturating
+the channel with TCP traffic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fd-emu-ping.cc</span></code>: This example uses the EmuFdNetDeviceHelper to send ICMP
+traffic over a real channel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fd-emu-udp-echo.cc</span></code>: This example uses the EmuFdNetDeviceHelper to send UDP
+traffic over a real channel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fd-planetlab-ping.cc</span></code>: This example shows how to set up an experiment to send
+ICMP traffic from a PlanetLab node to the Internet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fd-tap-ping.cc</span></code>: This example uses the TapFdNetDeviceHelper to send ICMP
+traffic over a real channel.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">File Descriptor NetDevice</a><ul>
+<li><a class="reference internal" href="#model-description">Model Description</a><ul>
+<li><a class="reference internal" href="#design">Design</a></li>
+<li><a class="reference internal" href="#scope-and-limitations">Scope and Limitations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#helpers">Helpers</a><ul>
+<li><a class="reference internal" href="#emufdnetdevicehelper">EmuFdNetDeviceHelper</a></li>
+<li><a class="reference internal" href="#tapfdnetdevicehelper">TapFdNetDeviceHelper</a></li>
+<li><a class="reference internal" href="#planetlabfdnetdevicehelper">PlanetLabFdNetDeviceHelper</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#output">Output</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="energy.html"
+                        title="previous chapter">Energy Framework</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="flow-monitor.html"
+                        title="next chapter">Flow Monitor</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/fd-net-device.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="flow-monitor.html" title="Flow Monitor"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="energy.html" title="Energy Framework"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 17:37.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

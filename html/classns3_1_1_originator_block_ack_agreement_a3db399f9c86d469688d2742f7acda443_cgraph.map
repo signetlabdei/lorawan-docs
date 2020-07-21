@@ -1,0 +1,7 @@
+<map id="ns3::OriginatorBlockAckAgreement::AdvanceTxWindow" name="ns3::OriginatorBlockAckAgreement::AdvanceTxWindow">
+<area shape="rect" id="node1" title="Advance the transmit window so that the starting sequence number is the nearest unacknowledged MPDU." alt="" coords="5,35,256,76"/>
+<area shape="rect" id="node2" href="$classns3_1_1_block_ack_window.html#a5b9251c6163090e5751819fa3baa6710" title="Advance the current winStart by the given number of positions." alt="" coords="315,5,480,47"/>
+<area shape="rect" id="node5" href="$classns3_1_1_block_ack_window.html#ae55f3ebd7abd264d2680940f1a1ff798" title="Get a reference to the element in the window having the given distance from the current winStart." alt="" coords="304,71,491,98"/>
+<area shape="rect" id="node3" href="$classns3_1_1_block_ack_window.html#a07353e10e9876c6f3e310e8696b7f4ed" title="Reset the window by clearing all the elements and setting winStart to the given value." alt="" coords="539,5,704,47"/>
+<area shape="rect" id="node4" href="$classns3_1_1_block_ack_window.html#adb6893143136ff776615557026b4c295" title="Initialize the window with the given starting sequence number and size." alt="" coords="752,5,917,47"/>
+</map>

@@ -1,0 +1,1367 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Configuration and Attributes &#8212; Manual</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Object names" href="object-names.html" />
+    <link rel="prev" title="Object model" href="object-model.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico" 
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+      
+
+  </head><body>
+  <div id="titlearea">
+    <table cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+	<tr style="height: 56px;">
+	  <td id="projectlogo">
+	    <a id="ns3_home1"
+	       href="http://www.nsnam.org/">
+	       <img alt="ns-3 Logo"
+		    src="_static/ns-3-inverted-notext-small.png"/>
+	    </a>
+	  </td>
+	  <td id="projecttext">
+	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
+	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+	  </td>
+	      
+	  <td id="ns3-menu">
+	    <div class="menu">
+	      <ul >
+	        <li><a id="ns3_home2"
+		       href="http://www.nsnam.org/"
+		       >&nbsp;&nbsp;Home</a>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mTuts')" 
+		      onmouseout="mclosetime()"
+			>Tutorials &nbsp;&#x25BC;</span>
+		    <div id="mTuts" 
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_tut"
+			 href="/docs/tutorial/html/index.html"
+			  >English</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDocs')" 
+		      onmouseout="mclosetime()"
+			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
+		    <div id="mDocs"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_wiki"
+			 href="http://www.nsnam.org/wiki"
+			 >Wiki</a><br/>
+		      <a id="ns3_man"
+			 href="/docs/manual/html/index.html"
+			 >Manual</a><br/>
+		      <a id="ns3_mod"
+			 href="/docs/models/html/index.html"
+			 >Models</a><br/>
+	        </li>
+	        <li><span
+		      onmouseover="mopen('mDev')" 
+		      onmouseout="mclosetime()"
+			>Develop &#x25BC;</span>
+		    <div id="mDev"
+		        onmouseover="mcancelclosetime()" 
+		        onmouseout="mclosetime()">
+		      <a id="ns3_api"
+			 href="/docs/doxygen/html/index.html"
+			 >API</a><br/>
+		      <a id="ns3_bugs"
+		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </td>
+	  <td id="projectsection">
+	    <span style="margin-right:10px">Manual</span>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <script  type="text/javascript">ns3_write_links()</script>
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="object-names.html" title="Object names"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="object-model.html" title="Object model"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="configuration-and-attributes">
+<span id="attributes"></span><h1>Configuration and Attributes<a class="headerlink" href="#configuration-and-attributes" title="Permalink to this headline">¶</a></h1>
+<p>In <em>ns-3</em> simulations, there are two main aspects to configuration:</p>
+<ul class="simple">
+<li><p>The simulation topology and how objects are connected.</p></li>
+<li><p>The values used by the models instantiated in the topology.</p></li>
+</ul>
+<p>This chapter focuses on the second item above: how the many values in use in
+<em>ns-3</em> are organized, documented, and modifiable by <em>ns-3</em> users. The <em>ns-3</em>
+attribute system is also the underpinning of how traces and statistics are
+gathered in the simulator.</p>
+<p>In the course of this chapter we will discuss the various ways to set or
+modify the values used by <em>ns-3</em> model objects.  In increasing order of
+specificity, these are:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Scope</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Default Attribute values set when
+Attributes are defined in
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">GetTypeId</span> <span class="pre">()</span></code>.</p></td>
+<td><p>Affect all instances of the class.</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">CommandLine</span></code></div>
+<div class="line"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Config::SetDefault()</span></code></div>
+<div class="line"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ConfigStore</span></code></div>
+</div>
+</td>
+<td><p>Affect all future instances.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ObjectFactory</span></code></p></td>
+<td><p>Affects all instances created with
+the factory.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Helper methods with (string/
+AttributeValue) parameter pairs</p></td>
+<td><p>Affects all instances created by
+the helper.</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">MyClass::SetX</span> <span class="pre">()</span></code></div>
+<div class="line"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Object::SetAttribute</span> <span class="pre">()</span></code></div>
+<div class="line"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Config::Set()</span></code></div>
+</div>
+</td>
+<td><p>Alters this particular instance.
+Generally this is the only form
+which can be scheduled to alter
+an instance once the simulation
+is running.</p></td>
+</tr>
+</tbody>
+</table>
+<p>By “specificity” we mean that methods in later rows in the table
+override the values set by, and typically affect fewer instances than,
+earlier methods.</p>
+<p>Before delving into details of the attribute value system, it will help to
+review some basic properties of class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code>.</p>
+<div class="section" id="object-overview">
+<h2>Object Overview<a class="headerlink" href="#object-overview" title="Permalink to this headline">¶</a></h2>
+<p><em>ns-3</em> is fundamentally a C++ object-based system. By this we mean that new C++
+classes (types) can be declared, defined, and subclassed as usual.</p>
+<p>Many <em>ns-3</em> objects inherit from the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code> base class.  These
+objects have some additional properties that we exploit for organizing the
+system and improving the memory management of our objects:</p>
+<ul class="simple">
+<li><p>“Metadata” system that links the class name to a lot of meta-information
+about the object, including:</p>
+<ul>
+<li><p>The base class of the subclass,</p></li>
+<li><p>The set of accessible constructors in the subclass,</p></li>
+<li><p>The set of “attributes” of the subclass,</p></li>
+<li><p>Whether each attribute can be set, or is read-only,</p></li>
+<li><p>The allowed range of values for each attribute.</p></li>
+</ul>
+</li>
+<li><p>Reference counting smart pointer implementation, for memory management.</p></li>
+</ul>
+<p><em>ns-3</em> objects that use the attribute system derive from either
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code> or <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ObjectBase</span></code>. Most <em>ns-3</em> objects we
+will discuss derive from <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code>, but a few that are outside
+the smart pointer memory management framework derive from
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ObjectBase</span></code>.</p>
+<p>Let’s review a couple of properties of these objects.</p>
+<div class="section" id="smart-pointers">
+<h3>Smart Pointers<a class="headerlink" href="#smart-pointers" title="Permalink to this headline">¶</a></h3>
+<p>As introduced in the <em>ns-3</em> tutorial, <em>ns-3</em> objects are memory managed by a
+<a class="reference external" href="http://en.wikipedia.org/wiki/Smart_pointer">reference counting smart pointer implementation</a>, class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Ptr</span></code>.</p>
+<p>Smart pointers are used extensively in the <em>ns-3</em> APIs, to avoid passing
+references to heap-allocated objects that may cause memory leaks.
+For most basic usage (syntax), treat a smart pointer like a regular pointer:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">WifiNetDevice</span><span class="o">&gt;</span> <span class="n">nd</span> <span class="o">=</span> <span class="p">...;</span>
+<span class="n">nd</span><span class="o">-&gt;</span><span class="n">CallSomeFunction</span> <span class="p">();</span>
+<span class="c1">// etc.</span>
+</pre></div>
+</div>
+<p>So how do you get a smart pointer to an object, as in the first line
+of this example?</p>
+<div class="section" id="createobject">
+<h4>CreateObject<a class="headerlink" href="#createobject" title="Permalink to this headline">¶</a></h4>
+<p>As we discussed above in <a class="reference internal" href="object-model.html#memory-management-and-class-ptr"><span class="std std-ref">Memory management and class Ptr</span></a>, at the
+lowest-level API, objects of type <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code> are not instantiated
+using <code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">new</span></code> as usual but instead by a templated function called
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CreateObject</span> <span class="pre">()</span></code>.</p>
+<p>A typical way to create such an object is as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">WifiNetDevice</span><span class="o">&gt;</span> <span class="n">nd</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">WifiNetDevice</span><span class="o">&gt;</span> <span class="p">();</span>
+</pre></div>
+</div>
+<p>You can think of this as being functionally equivalent to:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">WifiNetDevice</span><span class="o">*</span> <span class="n">nd</span> <span class="o">=</span> <span class="k">new</span> <span class="n">WifiNetDevice</span> <span class="p">();</span>
+</pre></div>
+</div>
+<p>Objects that derive from <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code> must be allocated on the heap
+using <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CreateObject</span> <span class="pre">()</span></code>. Those deriving from <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ObjectBase</span></code>,
+such as <em>ns-3</em> helper functions and packet headers and trailers,
+can be allocated on the stack.</p>
+<p>In some scripts, you may not see a lot of <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CreateObject</span> <span class="pre">()</span></code> calls
+in the code; this is because there are some helper objects in effect
+that are doing the <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CreateObject</span> <span class="pre">()</span></code> calls for you.</p>
+</div>
+</div>
+<div class="section" id="typeid">
+<h3>TypeId<a class="headerlink" href="#typeid" title="Permalink to this headline">¶</a></h3>
+<p><em>ns-3</em> classes that derive from class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code> can include
+a metadata class called <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">TypeId</span></code> that records meta-information
+about the class, for use in the object aggregation and component manager
+systems:</p>
+<ul class="simple">
+<li><p>A unique string identifying the class.</p></li>
+<li><p>The base class of the subclass, within the metadata system.</p></li>
+<li><p>The set of accessible constructors in the subclass.</p></li>
+<li><p>A list of publicly accessible properties (“attributes”) of the class.</p></li>
+</ul>
+</div>
+<div class="section" id="object-summary">
+<h3>Object Summary<a class="headerlink" href="#object-summary" title="Permalink to this headline">¶</a></h3>
+<p>Putting all of these concepts together, let’s look at a specific
+example: class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Node</span></code>.</p>
+<p>The public header file <code class="docutils literal notranslate"><span class="pre">node.h</span></code> has a declaration that includes
+a static <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">GetTypeId</span> <span class="pre">()</span></code> function call:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Object</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="k">static</span> <span class="n">TypeId</span> <span class="n">GetTypeId</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+  <span class="p">...</span>
+</pre></div>
+</div>
+<p>This is defined in the <code class="docutils literal notranslate"><span class="pre">node.cc</span></code> file as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TypeId</span>
+<span class="n">Node</span><span class="o">::</span><span class="n">GetTypeId</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">static</span> <span class="n">TypeId</span> <span class="n">tid</span> <span class="o">=</span> <span class="n">TypeId</span> <span class="p">(</span><span class="s">&quot;ns3::Node&quot;</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">SetParent</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="p">()</span>
+    <span class="p">.</span><span class="n">SetGroupName</span> <span class="p">(</span><span class="s">&quot;Network&quot;</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">AddConstructor</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="p">()</span>
+    <span class="p">.</span><span class="n">AddAttribute</span> <span class="p">(</span><span class="s">&quot;DeviceList&quot;</span><span class="p">,</span>
+                   <span class="s">&quot;The list of devices associated to this Node.&quot;</span><span class="p">,</span>
+                   <span class="n">ObjectVectorValue</span> <span class="p">(),</span>
+                   <span class="n">MakeObjectVectorAccessor</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">Node</span><span class="o">::</span><span class="n">m_devices</span><span class="p">),</span>
+                   <span class="n">MakeObjectVectorChecker</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="p">())</span>
+    <span class="p">.</span><span class="n">AddAttribute</span> <span class="p">(</span><span class="s">&quot;ApplicationList&quot;</span><span class="p">,</span>
+                   <span class="s">&quot;The list of applications associated to this Node.&quot;</span><span class="p">,</span>
+                   <span class="n">ObjectVectorValue</span> <span class="p">(),</span>
+                   <span class="n">MakeObjectVectorAccessor</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">Node</span><span class="o">::</span><span class="n">m_applications</span><span class="p">),</span>
+                   <span class="n">MakeObjectVectorChecker</span><span class="o">&lt;</span><span class="n">Application</span><span class="o">&gt;</span> <span class="p">())</span>
+    <span class="p">.</span><span class="n">AddAttribute</span> <span class="p">(</span><span class="s">&quot;Id&quot;</span><span class="p">,</span>
+                   <span class="s">&quot;The id (unique integer) of this Node.&quot;</span><span class="p">,</span>
+                   <span class="n">TypeId</span><span class="o">::</span><span class="n">ATTR_GET</span><span class="p">,</span> <span class="c1">// allow only getting it.</span>
+                   <span class="n">UintegerValue</span> <span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+                   <span class="n">MakeUintegerAccessor</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">Node</span><span class="o">::</span><span class="n">m_id</span><span class="p">),</span>
+                   <span class="n">MakeUintegerChecker</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span> <span class="p">())</span>
+    <span class="p">;</span>
+  <span class="k">return</span> <span class="n">tid</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Consider the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">TypeId</span></code> of the <em>ns-3</em> <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code> class
+as an extended form of run time type information (RTTI). The C++ language
+includes a simple kind of RTTI in order to support <code class="docutils literal notranslate"><span class="pre">dynamic_cast</span></code> and
+<code class="docutils literal notranslate"><span class="pre">typeid</span></code> operators.</p>
+<p>The <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">SetParent&lt;Object&gt;</span> <span class="pre">()</span></code> call in the definition above is used in
+conjunction with our object aggregation mechanisms to allow safe up- and
+down-casting in inheritance trees during <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">GetObject</span> <span class="pre">()</span></code>.
+It also enables subclasses to inherit the Attributes of their parent class.</p>
+<p>The <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">AddConstructor&lt;Node&gt;</span> <span class="pre">()</span></code> call is used in conjunction
+with our abstract object factory mechanisms to allow us to construct
+C++ objects without forcing a user to know the concrete class of
+the object she is building.</p>
+<p>The three calls to <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">AddAttribute</span> <span class="pre">()</span></code> associate a given string
+with a strongly typed value in the class. Notice that you must provide
+a help string which may be displayed, for example, <em>via</em> command line
+processors. Each <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Attribute</span></code> is associated with mechanisms
+for accessing the underlying member variable in the object (for example,
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">MakeUintegerAccessor</span> <span class="pre">()</span></code> tells the generic <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Attribute</span></code>
+code how to get to the node ID above). There are also “Checker” methods which
+are used to validate values against range limitations, such as maximum
+and minimum allowed values.</p>
+<p>When users want to create Nodes, they will usually call some form of
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CreateObject</span> <span class="pre">()</span></code>,:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="p">();</span>
+</pre></div>
+</div>
+<p>or more abstractly, using an object factory, you can create a
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Node</span></code> object without even knowing the concrete C++ type:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ObjectFactory</span> <span class="n">factory</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">typeId</span> <span class="o">=</span> <span class="s">&quot;ns3::Node&#39;&#39;;</span>
+<span class="n">factory</span><span class="p">.</span><span class="n">SetTypeId</span> <span class="p">(</span><span class="n">typeId</span><span class="p">);</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">node</span> <span class="o">=</span> <span class="n">factory</span><span class="p">.</span><span class="n">Create</span> <span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="p">();</span>
+</pre></div>
+</div>
+<p>Both of these methods result in fully initialized attributes being available
+in the resulting <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Object</span></code> instances.</p>
+<p>We next discuss how attributes (values associated with member variables or
+functions of the class) are plumbed into the above <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">TypeId</span></code>.</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Attributes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>The goal of the attribute system is to organize the access of
+internal member objects of a simulation. This goal arises because,
+typically in simulation, users will cut and paste/modify existing
+simulation scripts, or will use higher-level simulation constructs,
+but often will be interested in studying or tracing particular
+internal variables.  For instance, use cases such as:</p>
+<ul class="simple">
+<li><p><em>“I want to trace the packets on the wireless interface only on the first
+access point.”</em></p></li>
+<li><p><em>“I want to trace the value of the TCP congestion window (every time it
+changes) on a particular TCP socket.”</em></p></li>
+<li><p><em>“I want a dump of all values that were used in my simulation.”</em></p></li>
+</ul>
+<p>Similarly, users may want fine-grained access to internal variables in the
+simulation, or may want to broadly change the initial value used for a
+particular parameter in all subsequently created objects. Finally, users may
+wish to know what variables are settable and retrievable in a simulation
+configuration. This is not just for direct simulation interaction on the command
+line; consider also a (future) graphical user interface that would like to be
+able to provide a feature whereby a user might right-click on an node on the
+canvas and see a hierarchical, organized list of parameters that are settable on
+the node and its constituent member objects, and help text and default values
+for each parameter.</p>
+<div class="section" id="defining-attributes">
+<h3>Defining Attributes<a class="headerlink" href="#defining-attributes" title="Permalink to this headline">¶</a></h3>
+<p>We provide a way for users to access values deep in the system, without having
+to plumb accessors (pointers) through the system and walk pointer chains to get
+to them. Consider a class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">QueueBase</span></code> that has a member variable
+<code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">m_maxSize</span></code> controlling the depth of the queue.</p>
+<p>If we look at the declaration of <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">QueueBase</span></code>, we see
+the following:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">QueueBase</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Object</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="k">static</span> <span class="n">TypeId</span> <span class="n">GetTypeId</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+  <span class="p">...</span>
+
+<span class="k">private</span><span class="o">:</span>
+  <span class="p">...</span>
+  <span class="n">QueueSize</span> <span class="n">m_maxSize</span><span class="p">;</span>                <span class="c1">//!&lt; max queue size</span>
+  <span class="p">...</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">QueueSize</span></code> is a special type in <em>ns-3</em> that allows size
+to be represented in different units:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span> <span class="n">QueueSizeUnit</span>
+<span class="p">{</span>
+  <span class="n">PACKETS</span><span class="p">,</span>     <span class="cm">/**&lt; Use number of packets for queue size */</span>
+  <span class="n">BYTES</span><span class="p">,</span>       <span class="cm">/**&lt; Use number of bytes for queue size */</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">QueueSize</span>
+<span class="p">{</span>
+  <span class="p">...</span>
+<span class="k">private</span><span class="o">:</span>
+  <span class="p">...</span>
+  <span class="n">QueueSizeUnit</span> <span class="n">m_unit</span><span class="p">;</span> <span class="c1">//!&lt; unit</span>
+  <span class="kt">uint32_t</span> <span class="n">m_value</span><span class="p">;</span>     <span class="c1">//!&lt; queue size [bytes or packets]</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Finally, the class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">DropTailQueue</span></code> inherits from this base
+class and provides the semantics that packets that are submitted to
+a full queue will be dropped from the back of the queue (“drop tail”).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * \ingroup queue</span>
+<span class="cm"> *</span>
+<span class="cm"> * \brief A FIFO packet queue that drops tail-end packets on overflow</span>
+<span class="cm"> */</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Item</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">DropTailQueue</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">Item</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Let’s consider things that a user may want to do with the value of
+<code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">m_maxSize</span></code>:</p>
+<ul class="simple">
+<li><p>Set a default value for the system, such that whenever a new
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">DropTailQueue</span></code> is created, this member is initialized
+to that default.</p></li>
+<li><p>Set or get the value on an already instantiated queue.</p></li>
+</ul>
+<p>The above things typically require providing <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">()</span></code> and <code class="docutils literal notranslate"><span class="pre">Get</span> <span class="pre">()</span></code>
+functions, and some type of global default value.</p>
+<p>In the <em>ns-3</em> attribute system, these value definitions and accessor function
+registrations are moved into the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">TypeId</span></code> class; <em>e.g</em>.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NS_OBJECT_ENSURE_REGISTERED</span> <span class="p">(</span><span class="n">QueueBase</span><span class="p">);</span>
+
+<span class="n">TypeId</span>
+<span class="n">QueueBase</span><span class="o">::</span><span class="n">GetTypeId</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">static</span> <span class="n">TypeId</span> <span class="n">tid</span> <span class="o">=</span> <span class="n">TypeId</span> <span class="p">(</span><span class="s">&quot;ns3::DropTailQueue&quot;</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">SetParent</span><span class="o">&lt;</span><span class="n">Queue</span><span class="o">&gt;</span> <span class="p">()</span>
+    <span class="p">.</span><span class="n">SetGroupName</span> <span class="p">(</span><span class="s">&quot;Network&quot;</span><span class="p">)</span>
+    <span class="p">...</span>
+    <span class="p">.</span><span class="n">AddAttribute</span> <span class="p">(</span><span class="s">&quot;MaxSize&quot;</span><span class="p">,</span>
+                   <span class="s">&quot;The max queue size&quot;</span><span class="p">,</span>
+                   <span class="n">QueueSizeValue</span> <span class="p">(</span><span class="n">QueueSize</span> <span class="p">(</span><span class="s">&quot;100p&quot;</span><span class="p">)),</span>
+                   <span class="n">MakeQueueSizeAccessor</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">QueueBase</span><span class="o">::</span><span class="n">SetMaxSize</span><span class="p">,</span>
+                                          <span class="o">&amp;</span><span class="n">QueueBase</span><span class="o">::</span><span class="n">GetMaxSize</span><span class="p">),</span>
+                   <span class="n">MakeQueueSizeChecker</span> <span class="p">())</span>
+    <span class="p">...</span>
+    <span class="p">;</span>
+
+  <span class="k">return</span> <span class="n">tid</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">AddAttribute</span> <span class="pre">()</span></code> method is performing a number of things for the
+<code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">m_maxSize</span></code> value:</p>
+<ul class="simple">
+<li><p>Binding the (usually private) member variable <code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">m_maxSize</span></code>
+to a public string <code class="docutils literal notranslate"><span class="pre">&quot;MaxSize&quot;</span></code>.</p></li>
+<li><p>Providing a default value (0 packets).</p></li>
+<li><p>Providing some help text defining the meaning of the value.</p></li>
+<li><p>Providing a “Checker” (not used in this example) that can be used to set
+bounds on the allowable range of values.</p></li>
+</ul>
+<p>The key point is that now the value of this variable and its default value are
+accessible in the attribute namespace, which is based on strings such as
+<code class="docutils literal notranslate"><span class="pre">&quot;MaxSize&quot;</span></code> and <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">TypeId</span></code> name strings. In the next section,
+we will provide an example script that shows how users may manipulate
+these values.</p>
+<p>Note that initialization of the attribute relies on the macro
+<code class="docutils literal notranslate"><span class="pre">NS_OBJECT_ENSURE_REGISTERED</span> <span class="pre">(QueueBase)</span></code> being called; if you leave this
+out of your new class implementation, your attributes will not be initialized
+correctly.</p>
+<p>While we have described how to create attributes, we still haven’t described how
+to access and manage these values. For instance, there is no <code class="docutils literal notranslate"><span class="pre">globals.h</span></code>
+header file where these are stored; attributes are stored with their classes.
+Questions that naturally arise are how do users easily learn about all of the
+attributes of their models, and how does a user access these attributes, or
+document their values as part of the record of their simulation?</p>
+<p>Detailed documentation of the actual attributes defined for a type,
+and a global list of all defined attributes, are available in
+the API documentation.  For the rest of this document we are going
+to demonstrate the various ways of getting and setting attribute values.</p>
+</div>
+<div class="section" id="setting-default-values">
+<h3>Setting Default Values<a class="headerlink" href="#setting-default-values" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="config-setdefault-and-commandline">
+<h4>Config::SetDefault and CommandLine<a class="headerlink" href="#config-setdefault-and-commandline" title="Permalink to this headline">¶</a></h4>
+<p>Let’s look at how a user script might access a specific attribute value.
+We’re going to use the
+<code class="docutils literal notranslate"><span class="pre">src/point-to-point/examples/main-attribute-value.cc</span></code>
+script for illustration, with some details stripped out.  The <code class="docutils literal notranslate"><span class="pre">main</span></code>
+function begins:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// This is a basic example of how to use the attribute system to</span>
+<span class="c1">// set and get a value in the underlying system; namely, the maximum</span>
+<span class="c1">// size of the FIFO queue in the PointToPointNetDevice</span>
+<span class="c1">//</span>
+
+<span class="kt">int</span>
+<span class="nf">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+
+  <span class="c1">// Queues in ns-3 are objects that hold items (other objects) in</span>
+  <span class="c1">// a queue structure.  The C++ implementation uses templates to</span>
+  <span class="c1">// allow queues to hold various types of items, but the most</span>
+  <span class="c1">// common is a pointer to a packet (Ptr&lt;Packet&gt;).</span>
+  <span class="c1">//</span>
+  <span class="c1">// The maximum queue size can either be enforced in bytes (&#39;b&#39;) or</span>
+  <span class="c1">// packets (&#39;p&#39;).  A special type called the ns3::QueueSize can</span>
+  <span class="c1">// hold queue size values in either unit (bytes or packets).  The</span>
+  <span class="c1">// queue base class ns3::QueueBase has a MaxSize attribute that can</span>
+  <span class="c1">// be set to a QueueSize.</span>
+
+  <span class="c1">// By default, the MaxSize attribute has a value of 100 packets (&#39;100p&#39;)</span>
+  <span class="c1">// (this default can be observed in the function QueueBase::GetTypeId)</span>
+  <span class="c1">//</span>
+  <span class="c1">// Here, we set it to 80 packets.  We could use one of two value types:</span>
+  <span class="c1">// a string-based value or a QueueSizeValue value</span>
+  <span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::QueueBase::MaxSize&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;80p&quot;</span><span class="p">));</span>
+  <span class="c1">// The below function call is redundant</span>
+  <span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::QueueBase::MaxSize&quot;</span><span class="p">,</span> <span class="n">QueueSizeValue</span> <span class="p">(</span><span class="n">QueueSize</span> <span class="p">(</span><span class="n">QueueSizeUnit</span><span class="o">::</span><span class="n">PACKETS</span><span class="p">,</span> <span class="mi">80</span><span class="p">)));</span>
+</pre></div>
+</div>
+<p>The main thing to notice in the above are the two equivalent calls to
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Config::SetDefault</span> <span class="pre">()</span></code>.  This is how we set the default value
+for all subsequently instantiated <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">DropTailQueue</span></code>s.  We illustrate
+that two types of <code class="docutils literal notranslate"><span class="pre">Value</span></code> classes, a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">StringValue</span></code> and
+a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">QueueSizeValue</span></code> class, can be used to assign the value
+to the attribute named by “ns3::QueueBase::MaxSize”.</p>
+<p>It is also possible to manipulate Attributes using the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">CommandLine</span></code>;
+we saw some examples early in the <em>ns-3</em> Tutorial.  In particular, it is
+straightforward to add a shorthand argument name, such as <code class="docutils literal notranslate"><span class="pre">--maxSize</span></code>,
+for an Attribute that is particular relevant for your model, in this case
+<code class="docutils literal notranslate"><span class="pre">&quot;ns3::QueueBase::MaxSize&quot;</span></code>.  This has the additional feature that
+the help string for the Attribute will be printed as part of the usage
+message for the script.  For more information see
+the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">CommandLine</span></code> API documentation.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Allow the user to override any of the defaults and the above</span>
+<span class="c1">// SetDefaults() at run-time, via command-line arguments</span>
+<span class="c1">// For example, via &quot;--ns3::QueueBase::MaxSize=80p&quot;</span>
+<span class="n">CommandLine</span> <span class="n">cmd</span><span class="p">;</span>
+<span class="c1">// This provides yet another way to set the value from the command line:</span>
+<span class="n">cmd</span><span class="p">.</span><span class="n">AddValue</span> <span class="p">(</span><span class="s">&quot;maxSize&quot;</span><span class="p">,</span> <span class="s">&quot;ns3::QueueBase::MaxSize&quot;</span><span class="p">);</span>
+<span class="n">cmd</span><span class="p">.</span><span class="n">Parse</span> <span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Now, we will create a few objects using the low-level API.  Our
+newly created queues will not have <code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">m_maxSize</span></code> initialized to
+0 packets, as defined in the <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">QueueBase::GetTypeId</span> <span class="pre">()</span></code>
+function, but to 80 packets, because of what we did above with
+default values.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">n0</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="p">();</span>
+
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">PointToPointNetDevice</span><span class="o">&gt;</span> <span class="n">net0</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">PointToPointNetDevice</span><span class="o">&gt;</span> <span class="p">();</span>
+<span class="n">n0</span><span class="o">-&gt;</span><span class="n">AddDevice</span> <span class="p">(</span><span class="n">net0</span><span class="p">);</span>
+
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">q</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">DropTailQueue</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="p">();</span>
+<span class="n">net0</span><span class="o">-&gt;</span><span class="n">AddQueue</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>At this point, we have created a single <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Node</span></code> (<code class="docutils literal notranslate"><span class="pre">n0</span></code>)
+and a single <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">PointToPointNetDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">net0</span></code>),
+and added a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">DropTailQueue</span></code> (<code class="docutils literal notranslate"><span class="pre">q</span></code>) to <code class="docutils literal notranslate"><span class="pre">net0</span></code>.</p>
+</div>
+<div class="section" id="constructors-helpers-and-objectfactory">
+<h4>Constructors, Helpers and ObjectFactory<a class="headerlink" href="#constructors-helpers-and-objectfactory" title="Permalink to this headline">¶</a></h4>
+<p>Arbitrary combinations of attributes can be set and fetched from
+the helper and low-level APIs; either from the constructors themselves:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">GridPositionAllocator</span><span class="o">&gt;</span> <span class="n">p</span> <span class="o">=</span>
+  <span class="n">CreateObjectWithAttributes</span><span class="o">&lt;</span><span class="n">GridPositionAllocator</span><span class="o">&gt;</span>
+    <span class="p">(</span><span class="s">&quot;MinX&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span> <span class="p">(</span><span class="o">-</span><span class="mf">100.0</span><span class="p">),</span>
+     <span class="s">&quot;MinY&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span> <span class="p">(</span><span class="o">-</span><span class="mf">100.0</span><span class="p">),</span>
+     <span class="s">&quot;DeltaX&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span> <span class="p">(</span><span class="mf">5.0</span><span class="p">),</span>
+     <span class="s">&quot;DeltaY&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span> <span class="p">(</span><span class="mf">20.0</span><span class="p">),</span>
+     <span class="s">&quot;GridWidth&quot;</span><span class="p">,</span> <span class="n">UintegerValue</span> <span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+     <span class="s">&quot;LayoutType&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;RowFirst&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>or from the higher-level helper APIs, such as:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">mobility</span><span class="p">.</span><span class="n">SetPositionAllocator</span>
+    <span class="p">(</span><span class="s">&quot;ns3::GridPositionAllocator&quot;</span><span class="p">,</span>
+     <span class="s">&quot;MinX&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span> <span class="p">(</span><span class="o">-</span><span class="mf">100.0</span><span class="p">),</span>
+     <span class="s">&quot;MinY&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span> <span class="p">(</span><span class="o">-</span><span class="mf">100.0</span><span class="p">),</span>
+     <span class="s">&quot;DeltaX&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span> <span class="p">(</span><span class="mf">5.0</span><span class="p">),</span>
+     <span class="s">&quot;DeltaY&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span> <span class="p">(</span><span class="mf">20.0</span><span class="p">),</span>
+     <span class="s">&quot;GridWidth&quot;</span><span class="p">,</span> <span class="n">UintegerValue</span> <span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+     <span class="s">&quot;LayoutType&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;RowFirst&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>We don’t illustrate it here, but you can also configure an
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ObjectFactory</span></code> with new values for specific attributes.
+Instances created by the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ObjectFactory</span></code> will have those
+attributes set during construction.  This is very similar to using
+one of the helper APIs for the class.</p>
+<p>To review, there are several ways to set values for attributes for
+class instances <em>to be created in the future:</em></p>
+<ul class="simple">
+<li><p><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Config::SetDefault</span> <span class="pre">()</span></code></p></li>
+<li><p><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CommandLine::AddValue</span> <span class="pre">()</span></code></p></li>
+<li><p><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CreateObjectWithAttributes&lt;&gt;</span> <span class="pre">()</span></code></p></li>
+<li><p>Various helper APIs</p></li>
+</ul>
+<p>But what if you’ve already created an instance, and you want
+to change the value of the attribute?  In this example, how can we
+manipulate the <code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">m_maxSize</span></code> value of the already instantiated
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">DropTailQueue</span></code>?  Here are various ways to do that.</p>
+</div>
+</div>
+<div class="section" id="changing-values">
+<h3>Changing Values<a class="headerlink" href="#changing-values" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="smartpointer">
+<h4>SmartPointer<a class="headerlink" href="#smartpointer" title="Permalink to this headline">¶</a></h4>
+<p>Assume that a smart pointer (<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Ptr</span></code>) to a relevant network device
+is in hand; in the current example, it is the <code class="docutils literal notranslate"><span class="pre">net0</span></code> pointer.</p>
+<p>One way to change the value is to access a pointer to the underlying queue and
+modify its attribute.</p>
+<p>First, we observe that we can get a pointer to the (base class)
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Queue</span></code> <em>via</em> the
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">PointToPointNetDevice</span></code> attributes, where it is called
+<code class="docutils literal notranslate"><span class="pre">&quot;TxQueue&quot;</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PointerValue</span> <span class="n">ptr</span><span class="p">;</span>
+<span class="n">net0</span><span class="o">-&gt;</span><span class="n">GetAttribute</span> <span class="p">(</span><span class="s">&quot;TxQueue&quot;</span><span class="p">,</span> <span class="n">ptr</span><span class="p">);</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">txQueue</span> <span class="o">=</span> <span class="n">ptr</span><span class="p">.</span><span class="n">Get</span><span class="o">&lt;</span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="p">();</span>
+</pre></div>
+</div>
+<p>Using the <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">GetObject</span> <span class="pre">()</span></code> function, we can perform a safe downcast
+to a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">DropTailQueue</span></code>.  The <cite>NS_ASSERT</cite> checks that the pointer is
+valid.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">DropTailQueue</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">dtq</span> <span class="o">=</span> <span class="n">txQueue</span><span class="o">-&gt;</span><span class="n">GetObject</span> <span class="o">&lt;</span><span class="n">DropTailQueue</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="p">();</span>
+<span class="n">NS_ASSERT</span> <span class="p">(</span><span class="n">dtq</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Next, we can get the value of an attribute on this queue.  We have introduced
+wrapper <code class="docutils literal notranslate"><span class="pre">Value</span></code> classes for the underlying data types, similar
+to Java wrappers around these types, since the attribute system stores values
+serialized to strings, and not disparate types.  Here, the attribute value
+is assigned to a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">QueueSizeValue</span></code>, and the <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Get</span> <span class="pre">()</span></code>
+method on this value produces the (unwrapped) <code class="docutils literal notranslate"><span class="pre">QueueSize</span></code>.  That is,
+the variable <cite>limit</cite> is written into by the GetAttribute method.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QueueSizeValue</span> <span class="n">limit</span><span class="p">;</span>
+<span class="n">dtq</span><span class="o">-&gt;</span><span class="n">GetAttribute</span> <span class="p">(</span><span class="s">&quot;MaxSize&quot;</span><span class="p">,</span> <span class="n">limit</span><span class="p">);</span>
+<span class="n">NS_LOG_INFO</span> <span class="p">(</span><span class="s">&quot;1.  dtq limit: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">limit</span><span class="p">.</span><span class="n">Get</span> <span class="p">());</span>
+</pre></div>
+</div>
+<p>Note that the above downcast is not really needed; we could have gotten
+the attribute value directly from <code class="docutils literal notranslate"><span class="pre">txQueue</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">txQueue</span><span class="o">-&gt;</span><span class="n">GetAttribute</span> <span class="p">(</span><span class="s">&quot;MaxSize&quot;</span><span class="p">,</span> <span class="n">limit</span><span class="p">);</span>
+<span class="n">NS_LOG_INFO</span> <span class="p">(</span><span class="s">&quot;2.  txQueue limit: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">limit</span><span class="p">.</span><span class="n">Get</span> <span class="p">());</span>
+</pre></div>
+</div>
+<p>Now, let’s set it to another value (60 packets).  Let’s also make
+use of the StringValue shorthand notation to set the size by
+passing in a string (the string must be a positive integer suffixed
+by either the <cite>p</cite> or <cite>b</cite> character).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">txQueue</span><span class="o">-&gt;</span><span class="n">SetAttribute</span> <span class="p">(</span><span class="s">&quot;MaxSize&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;60p&quot;</span><span class="p">));</span>
+<span class="n">txQueue</span><span class="o">-&gt;</span><span class="n">GetAttribute</span> <span class="p">(</span><span class="s">&quot;MaxSize&quot;</span><span class="p">,</span> <span class="n">limit</span><span class="p">);</span>
+<span class="n">NS_LOG_INFO</span> <span class="p">(</span><span class="s">&quot;3.  txQueue limit changed: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">limit</span><span class="p">.</span><span class="n">Get</span> <span class="p">());</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="config-namespace-path">
+<h4>Config Namespace Path<a class="headerlink" href="#config-namespace-path" title="Permalink to this headline">¶</a></h4>
+<p>An alternative way to get at the attribute is to use the configuration
+namespace.  Here, this attribute resides on a known path in this namespace; this
+approach is useful if one doesn’t have access to the underlying pointers and
+would like to configure a specific attribute with a single statement.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Config</span><span class="o">::</span><span class="n">Set</span> <span class="p">(</span><span class="s">&quot;/NodeList/0/DeviceList/0/TxQueue/MaxSize&quot;</span><span class="p">,</span>
+             <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;25p&quot;</span><span class="p">));</span>
+<span class="n">txQueue</span><span class="o">-&gt;</span><span class="n">GetAttribute</span> <span class="p">(</span><span class="s">&quot;MaxSize&quot;</span><span class="p">,</span> <span class="n">limit</span><span class="p">);</span>
+<span class="n">NS_LOG_INFO</span> <span class="p">(</span><span class="s">&quot;4.  txQueue limit changed through namespace: &quot;</span>
+             <span class="o">&lt;&lt;</span> <span class="n">limit</span><span class="p">.</span><span class="n">Get</span> <span class="p">());</span>
+</pre></div>
+</div>
+<p>The configuration path often has the form of
+<code class="docutils literal notranslate"><span class="pre">&quot;.../&lt;container</span> <span class="pre">name&gt;/&lt;index&gt;/.../&lt;attribute&gt;/&lt;attribute&gt;&quot;</span></code>
+to refer to a specific instance by index of an object in the container.
+In this case the first container is the list of all <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Node</span></code>s;
+the second container is the list of all <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">NetDevice</span></code>s on
+the chosen <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Node</span></code>.  Finally, the configuration path usually
+ends with a succession of member attributes, in this case the <code class="docutils literal notranslate"><span class="pre">&quot;MaxSize&quot;</span></code>
+attribute of the <code class="docutils literal notranslate"><span class="pre">&quot;TxQueue&quot;</span></code> of the chosen <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">NetDevice</span></code>.</p>
+<p>We could have also used wildcards to set this value for all nodes and all net
+devices (which in this simple example has the same effect as the previous
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Config::Set</span> <span class="pre">()</span></code>):</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Config</span><span class="o">::</span><span class="n">Set</span> <span class="p">(</span><span class="s">&quot;/NodeList/*/DeviceList/*/TxQueue/MaxSize&quot;</span><span class="p">,</span>
+             <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;15p&quot;</span><span class="p">));</span>
+<span class="n">txQueue</span><span class="o">-&gt;</span><span class="n">GetAttribute</span> <span class="p">(</span><span class="s">&quot;MaxSize&quot;</span><span class="p">,</span> <span class="n">limit</span><span class="p">);</span>
+<span class="n">NS_LOG_INFO</span> <span class="p">(</span><span class="s">&quot;5.  txQueue limit changed through wildcarded namespace: &quot;</span>
+             <span class="o">&lt;&lt;</span> <span class="n">limit</span><span class="p">.</span><span class="n">Get</span> <span class="p">());</span>
+</pre></div>
+</div>
+<p>If you run this program from the command line, you should see the following
+output corresponding to the steps we took above:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf --run main-attribute-value
+<span class="m">1</span>.  dtq limit: 80p
+<span class="m">2</span>.  txQueue limit: 80p
+<span class="m">3</span>.  txQueue limit changed: 60p
+<span class="m">4</span>.  txQueue limit changed through namespace: 25p
+<span class="m">5</span>.  txQueue limit changed through wildcarded namespace: 15p
+</pre></div>
+</div>
+</div>
+<div class="section" id="object-name-service">
+<h4>Object Name Service<a class="headerlink" href="#object-name-service" title="Permalink to this headline">¶</a></h4>
+<p>Another way to get at the attribute is to use the object name service facility.
+The object name service allows us to add items to the configuration
+namespace under the <code class="docutils literal notranslate"><span class="pre">&quot;/Names/&quot;</span></code> path with a user-defined name string.
+This approach is useful if one doesn’t have access to the underlying
+pointers and it is difficult to determine the required concrete configuration
+namespace path.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;server&quot;</span><span class="p">,</span> <span class="n">n0</span><span class="p">);</span>
+<span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;server/eth0&quot;</span><span class="p">,</span> <span class="n">net0</span><span class="p">);</span>
+
+<span class="p">...</span>
+
+<span class="n">Config</span><span class="o">::</span><span class="n">Set</span> <span class="p">(</span><span class="s">&quot;/Names/server/eth0/TxQueue/MaxPackets&quot;</span><span class="p">,</span> <span class="n">UintegerValue</span> <span class="p">(</span><span class="mi">25</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>Here we’ve added the path elements <code class="docutils literal notranslate"><span class="pre">&quot;server&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;eth0&quot;</span></code> under
+the <code class="docutils literal notranslate"><span class="pre">&quot;/Names/&quot;</span></code> namespace, then used the resulting configuration path
+to set the attribute.</p>
+<p>See <a class="reference internal" href="object-names.html#object-names"><span class="std std-ref">Object names</span></a> for a fuller treatment of the <em>ns-3</em> configuration namespace.</p>
+</div>
+</div>
+</div>
+<div class="section" id="implementation-details">
+<h2>Implementation Details<a class="headerlink" href="#implementation-details" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="value-classes">
+<h3>Value Classes<a class="headerlink" href="#value-classes" title="Permalink to this headline">¶</a></h3>
+<p>Readers will note the <code class="docutils literal notranslate"><span class="pre">TypeValue</span></code> classes which are subclasses of the
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AttributeValue</span></code> base class. These can be thought of as
+intermediate classes which are used to convert from raw types to the
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AttributeValue</span></code>s that are used by the attribute system.
+Recall that this database is holding objects of many types serialized
+to strings. Conversions to this type can either be done using
+an intermediate class (such as <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">IntegerValue</span></code>,
+or <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">DoubleValue</span></code> for floating point numbers)
+or <em>via</em> strings. Direct implicit conversion of types to
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AttributeValue</span></code> is not really practical.
+So in the above, users have a choice of using strings or values:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">-&gt;</span><span class="n">Set</span> <span class="p">(</span><span class="s">&quot;cwnd&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;100&quot;</span><span class="p">));</span> <span class="c1">// string-based setter</span>
+<span class="n">p</span><span class="o">-&gt;</span><span class="n">Set</span> <span class="p">(</span><span class="s">&quot;cwnd&quot;</span><span class="p">,</span> <span class="n">IntegerValue</span> <span class="p">(</span><span class="mi">100</span><span class="p">));</span> <span class="c1">// integer-based setter</span>
+</pre></div>
+</div>
+<p>The system provides some macros that help users declare and define
+new AttributeValue subclasses for new types that they want to introduce into
+the attribute system:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ATTRIBUTE_HELPER_HEADER</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ATTRIBUTE_HELPER_CPP</span></code></p></li>
+</ul>
+<p>See the API documentation for these constructs for more information.</p>
+</div>
+<div class="section" id="initialization-order">
+<h3>Initialization Order<a class="headerlink" href="#initialization-order" title="Permalink to this headline">¶</a></h3>
+<p>Attributes in the system must not depend on the state of any other Attribute in
+this system. This is because an ordering of Attribute initialization is not
+specified, nor enforced, by the system. A specific example of this can be seen
+in automated configuration programs such as <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ConfigStore</span></code>.
+Although a given model may arrange it so that Attributes are initialized in a
+particular order, another automatic configurator may decide independently to
+change Attributes in, for example, alphabetic order.</p>
+<p>Because of this non-specific ordering, no Attribute in the system may have any
+dependence on any other Attribute. As a corollary, Attribute setters must never
+fail due to the state of another Attribute. No Attribute setter may change (set)
+any other Attribute value as a result of changing its value.</p>
+<p>This is a very strong restriction and there are cases where Attributes must set
+consistently to allow correct operation. To this end we do allow for consistency
+checking <em>when the attribute is used</em> (<em>cf</em>. <code class="docutils literal notranslate"><span class="pre">NS_ASSERT_MSG</span></code>
+or <code class="docutils literal notranslate"><span class="pre">NS_ABORT_MSG</span></code>).</p>
+<p>In general, the attribute code to assign values to the underlying class member
+variables is executed after an object is constructed. But what if you need the
+values assigned before the constructor body executes, because you need them in
+the logic of the constructor? There is a way to do this, used for example in the
+class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ConfigStore</span></code>: call <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ObjectBase::ConstructSelf</span> <span class="pre">()</span></code> as
+follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ConfigStore</span><span class="o">::</span><span class="n">ConfigStore</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">ObjectBase</span><span class="o">::</span><span class="n">ConstructSelf</span> <span class="p">(</span><span class="n">AttributeConstructionList</span> <span class="p">());</span>
+  <span class="c1">// continue on with constructor.</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Beware that the object and all its derived classes must also implement
+a <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">GetInstanceTypeId</span> <span class="pre">()</span></code> method. Otherwise
+the <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ObjectBase::ConstructSelf</span> <span class="pre">()</span></code> will not be able to read
+the attributes.</p>
+</div>
+<div class="section" id="adding-attributes">
+<h3>Adding Attributes<a class="headerlink" href="#adding-attributes" title="Permalink to this headline">¶</a></h3>
+<p>The <em>ns-3</em> system will place a number of internal values under the attribute
+system, but undoubtedly users will want to extend this to pick up ones we have
+missed, or to add their own classes to the system.</p>
+<p>There are three typical use cases:</p>
+<ul class="simple">
+<li><p>Making an existing class data member accessible as an Attribute,
+when it isn’t already.</p></li>
+<li><p>Making a new class able to expose some data members as Attributes
+by giving it a TypeId.</p></li>
+<li><p>Creating an <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AttributeValue</span></code> subclass for a new class
+so that it can be accessed as an Attribute.</p></li>
+</ul>
+<div class="section" id="existing-member-variable">
+<h4>Existing Member Variable<a class="headerlink" href="#existing-member-variable" title="Permalink to this headline">¶</a></h4>
+<p>Consider this variable in <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">TcpSocket</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint32_t</span> <span class="n">m_cWnd</span><span class="p">;</span>   <span class="c1">// Congestion window</span>
+</pre></div>
+</div>
+<p>Suppose that someone working with TCP wanted to get or set the value of that
+variable using the metadata system. If it were not already provided by <em>ns-3</em>,
+the user could declare the following addition in the runtime metadata system (to
+the <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">GetTypeId()</span></code> definition for <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">TcpSocket</span></code>):</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="n">AddAttribute</span> <span class="p">(</span><span class="s">&quot;Congestion window&quot;</span><span class="p">,</span>
+               <span class="s">&quot;Tcp congestion window (bytes)&quot;</span><span class="p">,</span>
+               <span class="n">UintegerValue</span> <span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+               <span class="n">MakeUintegerAccessor</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">TcpSocket</span><span class="o">::</span><span class="n">m_cWnd</span><span class="p">),</span>
+               <span class="n">MakeUintegerChecker</span><span class="o">&lt;</span><span class="kt">uint16_t</span><span class="o">&gt;</span> <span class="p">())</span>
+</pre></div>
+</div>
+<p>Now, the user with a pointer to a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">TcpSocket</span></code> instance
+can perform operations such as
+setting and getting the value, without having to add these functions explicitly.
+Furthermore, access controls can be applied, such as allowing the parameter to
+be read and not written, or bounds checking on the permissible values can be
+applied.</p>
+</div>
+<div class="section" id="new-class-typeid">
+<h4>New Class TypeId<a class="headerlink" href="#new-class-typeid" title="Permalink to this headline">¶</a></h4>
+<p>Here, we discuss the impact on a user who wants to add a new class to <em>ns-3</em>.
+What additional things must be done to enable it to hold attributes?</p>
+<p>Let’s assume our new class, called <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::MyMobility</span></code>,
+is a type of mobility model.  First, the class should inherit from
+its parent class, <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::MobilityModel</span></code>.
+In the <code class="docutils literal notranslate"><span class="pre">my-mobility.h</span></code> header file:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span> <span class="n">ns3</span> <span class="p">{</span>
+
+<span class="k">class</span> <span class="nc">MyMobility</span> <span class="o">:</span> <span class="k">public</span> <span class="n">MobilityModel</span>
+<span class="p">{</span>
+</pre></div>
+</div>
+<p>This requires we declare the <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">GetTypeId</span> <span class="pre">()</span></code> function.
+This is a one-line public function declaration:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="o">:</span>
+  <span class="cm">/**</span>
+<span class="cm">   *  Register this type.</span>
+<span class="cm">   *  \return The object TypeId.</span>
+<span class="cm">   */</span>
+  <span class="k">static</span> <span class="n">TypeId</span> <span class="n">GetTypeId</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>We’ve already introduced what a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">TypeId</span></code> definition will look like
+in the <code class="docutils literal notranslate"><span class="pre">my-mobility.cc</span></code> implementation file:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NS_OBJECT_ENSURE_REGISTERED</span> <span class="p">(</span><span class="n">MyMobility</span><span class="p">);</span>
+
+<span class="n">TypeId</span>
+<span class="n">MyMobility</span><span class="o">::</span><span class="n">GetTypeId</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">static</span> <span class="n">TypeId</span> <span class="n">tid</span> <span class="o">=</span> <span class="n">TypeId</span> <span class="p">(</span><span class="s">&quot;ns3::MyMobility&quot;</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">SetParent</span><span class="o">&lt;</span><span class="n">MobilityModel</span><span class="o">&gt;</span> <span class="p">()</span>
+    <span class="p">.</span><span class="n">SetGroupName</span> <span class="p">(</span><span class="s">&quot;Mobility&quot;</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">AddConstructor</span><span class="o">&lt;</span><span class="n">MyMobility</span><span class="o">&gt;</span> <span class="p">()</span>
+    <span class="p">.</span><span class="n">AddAttribute</span> <span class="p">(</span><span class="s">&quot;Bounds&quot;</span><span class="p">,</span>
+                   <span class="s">&quot;Bounds of the area to cruise.&quot;</span><span class="p">,</span>
+                   <span class="n">RectangleValue</span> <span class="p">(</span><span class="n">Rectangle</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">)),</span>
+                   <span class="n">MakeRectangleAccessor</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">MyMobility</span><span class="o">::</span><span class="n">m_bounds</span><span class="p">),</span>
+                   <span class="n">MakeRectangleChecker</span> <span class="p">())</span>
+    <span class="p">.</span><span class="n">AddAttribute</span> <span class="p">(</span><span class="s">&quot;Time&quot;</span><span class="p">,</span>
+                   <span class="s">&quot;Change current direction and speed after moving for this delay.&quot;</span><span class="p">,</span>
+                   <span class="n">TimeValue</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">)),</span>
+                   <span class="n">MakeTimeAccessor</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">MyMobility</span><span class="o">::</span><span class="n">m_modeTime</span><span class="p">),</span>
+                   <span class="n">MakeTimeChecker</span> <span class="p">())</span>
+    <span class="c1">// etc (more parameters).</span>
+    <span class="p">;</span>
+  <span class="k">return</span> <span class="n">tid</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If we don’t want to subclass from an existing class, in the header file
+we just inherit from <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::Object</span></code>, and in the object file
+we set the parent class to <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::Object</span></code> with
+<code class="docutils literal notranslate"><span class="pre">.SetParent&lt;Object&gt;</span> <span class="pre">()</span></code>.</p>
+<p>Typical mistakes here involve:</p>
+<ul class="simple">
+<li><p>Not calling <code class="docutils literal notranslate"><span class="pre">NS_OBJECT_ENSURE_REGISTERED</span> <span class="pre">()</span></code></p></li>
+<li><p>Not calling the <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">SetParent</span> <span class="pre">()</span></code> method,
+or calling it with the wrong type.</p></li>
+<li><p>Not calling the <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">AddConstructor</span> <span class="pre">()</span></code> method,
+or calling it with the wrong type.</p></li>
+<li><p>Introducing a typographical error in the name of the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">TypeId</span></code>
+in its constructor.</p></li>
+<li><p>Not using the fully-qualified C++ typename of the enclosing C++ class as the
+name of the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">TypeId</span></code>.  Note that <code class="docutils literal notranslate"><span class="pre">&quot;ns3::&quot;</span></code> is required.</p></li>
+</ul>
+<p>None of these mistakes can be detected by the <em>ns-3</em> codebase, so users
+are advised to check carefully multiple times that they got these right.</p>
+</div>
+<div class="section" id="new-attributevalue-type">
+<h4>New AttributeValue Type<a class="headerlink" href="#new-attributevalue-type" title="Permalink to this headline">¶</a></h4>
+<p>From the perspective of the user who writes a new class in the system and wants
+it to be accessible as an attribute, there is mainly the matter of writing the
+conversions to/from strings and attribute values.  Most of this can be
+copy/pasted with macro-ized code.  For instance, consider a class declaration
+for <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Rectangle</span></code> in the <code class="docutils literal notranslate"><span class="pre">src/mobility/model</span></code> directory:</p>
+<div class="section" id="header-file">
+<h5>Header File<a class="headerlink" href="#header-file" title="Permalink to this headline">¶</a></h5>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * \brief a 2d rectangle</span>
+<span class="cm"> */</span>
+<span class="k">class</span> <span class="nc">Rectangle</span>
+<span class="p">{</span>
+  <span class="p">...</span>
+
+  <span class="kt">double</span> <span class="n">xMin</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">xMax</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">yMin</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">yMax</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>One macro call and two operators, must be added below the class declaration in
+order to turn a Rectangle into a value usable by the <code class="docutils literal notranslate"><span class="pre">Attribute</span></code> system:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="k">operator</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">os</span><span class="p">,</span> <span class="k">const</span> <span class="n">Rectangle</span> <span class="o">&amp;</span><span class="n">rectangle</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="k">operator</span> <span class="o">&gt;&gt;</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">is</span><span class="p">,</span> <span class="n">Rectangle</span> <span class="o">&amp;</span><span class="n">rectangle</span><span class="p">);</span>
+
+<span class="n">ATTRIBUTE_HELPER_HEADER</span> <span class="p">(</span><span class="n">Rectangle</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="implementation-file">
+<h5>Implementation File<a class="headerlink" href="#implementation-file" title="Permalink to this headline">¶</a></h5>
+<p>In the class definition (<code class="docutils literal notranslate"><span class="pre">.cc</span></code> file), the code looks like this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ATTRIBUTE_HELPER_CPP</span> <span class="p">(</span><span class="n">Rectangle</span><span class="p">);</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span>
+<span class="k">operator</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">os</span><span class="p">,</span> <span class="k">const</span> <span class="n">Rectangle</span> <span class="o">&amp;</span><span class="n">rectangle</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="n">rectangle</span><span class="p">.</span><span class="n">xMin</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;|&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">rectangle</span><span class="p">.</span><span class="n">xMax</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;|&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">rectangle</span><span class="p">.</span><span class="n">yMin</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;|&quot;</span>
+     <span class="o">&lt;&lt;</span> <span class="n">rectangle</span><span class="p">.</span><span class="n">yMax</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">os</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">std</span><span class="o">::</span><span class="n">istream</span> <span class="o">&amp;</span>
+<span class="k">operator</span> <span class="o">&gt;&gt;</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">is</span><span class="p">,</span> <span class="n">Rectangle</span> <span class="o">&amp;</span><span class="n">rectangle</span><span class="p">)</span>
+ <span class="p">{</span>
+  <span class="kt">char</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c3</span><span class="p">;</span>
+  <span class="n">is</span> <span class="o">&gt;&gt;</span> <span class="n">rectangle</span><span class="p">.</span><span class="n">xMin</span> <span class="o">&gt;&gt;</span> <span class="n">c1</span> <span class="o">&gt;&gt;</span> <span class="n">rectangle</span><span class="p">.</span><span class="n">xMax</span> <span class="o">&gt;&gt;</span> <span class="n">c2</span> <span class="o">&gt;&gt;</span> <span class="n">rectangle</span><span class="p">.</span><span class="n">yMin</span> <span class="o">&gt;&gt;</span> <span class="n">c3</span>
+     <span class="o">&gt;&gt;</span> <span class="n">rectangle</span><span class="p">.</span><span class="n">yMax</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">c1</span> <span class="o">!=</span> <span class="sc">&#39;|&#39;</span> <span class="o">||</span>
+      <span class="n">c2</span> <span class="o">!=</span> <span class="sc">&#39;|&#39;</span> <span class="o">||</span>
+      <span class="n">c3</span> <span class="o">!=</span> <span class="sc">&#39;|&#39;</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">is</span><span class="p">.</span><span class="n">setstate</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ios_base</span><span class="o">::</span><span class="n">failbit</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="k">return</span> <span class="n">is</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>These stream operators simply convert from a string representation of the
+Rectangle (<code class="docutils literal notranslate"><span class="pre">&quot;xMin|xMax|yMin|yMax&quot;</span></code>) to the underlying Rectangle.  The modeler
+must specify these operators and the string syntactical representation of an
+instance of the new class.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="configstore">
+<h2>ConfigStore<a class="headerlink" href="#configstore" title="Permalink to this headline">¶</a></h2>
+<p>Values for <em>ns-3</em> attributes can be stored in an ASCII or XML text file
+and loaded into a future simulation run.  This feature is known as the
+<em>ns-3</em> ConfigStore.  The <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ConfigStore</span></code> is a specialized database for attribute values and default values.</p>
+<p>Although it is a separately maintained module in the
+<code class="docutils literal notranslate"><span class="pre">src/config-store/</span></code> directory, we document it here because of its
+sole dependency on <em>ns-3</em> core module and attributes.</p>
+<p>We can explore this system by using an example from
+<code class="docutils literal notranslate"><span class="pre">src/config-store/examples/config-store-save.cc</span></code>.</p>
+<p>First, all users of the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ConfigStore</span></code> must include
+the following statement:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;ns3/config-store-module.h&quot;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p>Next, this program adds a sample object <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ConfigExample</span></code>
+to show how the system is extended:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ConfigExample</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Object</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="k">static</span> <span class="n">TypeId</span> <span class="n">GetTypeId</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="n">TypeId</span> <span class="n">tid</span> <span class="o">=</span> <span class="n">TypeId</span> <span class="p">(</span><span class="s">&quot;ns3::A&quot;</span><span class="p">)</span>
+      <span class="p">.</span><span class="n">SetParent</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="p">()</span>
+      <span class="p">.</span><span class="n">AddAttribute</span> <span class="p">(</span><span class="s">&quot;TestInt16&quot;</span><span class="p">,</span> <span class="s">&quot;help text&quot;</span><span class="p">,</span>
+                     <span class="n">IntegerValue</span> <span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">),</span>
+                     <span class="n">MakeIntegerAccessor</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">A</span><span class="o">::</span><span class="n">m_int16</span><span class="p">),</span>
+                     <span class="n">MakeIntegerChecker</span><span class="o">&lt;</span><span class="kt">int16_t</span><span class="o">&gt;</span> <span class="p">())</span>
+      <span class="p">;</span>
+      <span class="k">return</span> <span class="n">tid</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="kt">int16_t</span> <span class="n">m_int16</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">NS_OBJECT_ENSURE_REGISTERED</span> <span class="p">(</span><span class="n">ConfigExample</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Next, we use the Config subsystem to override the defaults in a couple of
+ways:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::ConfigExample::TestInt16&quot;</span><span class="p">,</span> <span class="n">IntegerValue</span> <span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">));</span>
+
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">ConfigExample</span><span class="o">&gt;</span> <span class="n">a_obj</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">ConfigExample</span><span class="o">&gt;</span> <span class="p">();</span>
+<span class="n">NS_ABORT_MSG_UNLESS</span> <span class="p">(</span><span class="n">a_obj</span><span class="o">-&gt;</span><span class="n">m_int16</span> <span class="o">==</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span>
+                     <span class="s">&quot;Cannot set ConfigExample&#39;s integer attribute via Config::SetDefault&quot;</span><span class="p">);</span>
+
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">ConfigExample</span><span class="o">&gt;</span> <span class="n">a2_obj</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">ConfigExample</span><span class="o">&gt;</span> <span class="p">();</span>
+<span class="n">a2_obj</span><span class="o">-&gt;</span><span class="n">SetAttribute</span> <span class="p">(</span><span class="s">&quot;TestInt16&quot;</span><span class="p">,</span> <span class="n">IntegerValue</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">));</span>
+<span class="n">IntegerValue</span> <span class="n">iv</span><span class="p">;</span>
+<span class="n">a2_obj</span><span class="o">-&gt;</span><span class="n">GetAttribute</span> <span class="p">(</span><span class="s">&quot;TestInt16&quot;</span><span class="p">,</span> <span class="n">iv</span><span class="p">);</span>
+<span class="n">NS_ABORT_MSG_UNLESS</span> <span class="p">(</span><span class="n">iv</span><span class="p">.</span><span class="n">Get</span> <span class="p">()</span> <span class="o">==</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span>
+                     <span class="s">&quot;Cannot set ConfigExample&#39;s integer attribute via SetAttribute&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The next statement is necessary to make sure that (one of) the objects
+created is rooted in the configuration namespace as an object instance.
+This normally happens when you aggregate objects to a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::Node</span></code>
+or <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::Channel</span></code> instance,
+but here, since we are working at the core level, we need to create a
+new root namespace object:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Config</span><span class="o">::</span><span class="n">RegisterRootNamespaceObject</span> <span class="p">(</span><span class="n">a2_obj</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="section" id="writing">
+<h3>Writing<a class="headerlink" href="#writing" title="Permalink to this headline">¶</a></h3>
+<p>Next, we want to output the configuration store.  The examples show how
+to do it in two formats, XML and raw text.  In practice, one should perform
+this step just before calling <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Simulator::Run</span> <span class="pre">()</span></code> to save the
+final configuration just before running the simulation.</p>
+<p>There are three Attributes that govern the behavior of the ConfigStore:
+<code class="docutils literal notranslate"><span class="pre">&quot;Mode&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Filename&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;FileFormat&quot;</span></code>.  The Mode (default <code class="docutils literal notranslate"><span class="pre">&quot;None&quot;</span></code>)
+configures whether <em>ns-3</em> should load configuration from a previously saved file
+(specify <code class="docutils literal notranslate"><span class="pre">&quot;Mode=Load&quot;</span></code>) or save it to a file (specify <code class="docutils literal notranslate"><span class="pre">&quot;Mode=Save&quot;</span></code>).
+The Filename (default <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>) is where the ConfigStore should read or write
+its data.  The FileFormat (default <code class="docutils literal notranslate"><span class="pre">&quot;RawText&quot;</span></code>) governs whether
+the ConfigStore format is plain text or Xml (<code class="docutils literal notranslate"><span class="pre">&quot;FileFormat=Xml&quot;</span></code>)</p>
+<p>The example shows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::ConfigStore::Filename&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;output-attributes.xml&quot;</span><span class="p">));</span>
+<span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::ConfigStore::FileFormat&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;Xml&quot;</span><span class="p">));</span>
+<span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::ConfigStore::Mode&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;Save&quot;</span><span class="p">));</span>
+<span class="n">ConfigStore</span> <span class="n">outputConfig</span><span class="p">;</span>
+<span class="n">outputConfig</span><span class="p">.</span><span class="n">ConfigureDefaults</span> <span class="p">();</span>
+<span class="n">outputConfig</span><span class="p">.</span><span class="n">ConfigureAttributes</span> <span class="p">();</span>
+
+<span class="c1">// Output config store to txt format</span>
+<span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::ConfigStore::Filename&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;output-attributes.txt&quot;</span><span class="p">));</span>
+<span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::ConfigStore::FileFormat&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;RawText&quot;</span><span class="p">));</span>
+<span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::ConfigStore::Mode&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;Save&quot;</span><span class="p">));</span>
+<span class="n">ConfigStore</span> <span class="n">outputConfig2</span><span class="p">;</span>
+<span class="n">outputConfig2</span><span class="p">.</span><span class="n">ConfigureDefaults</span> <span class="p">();</span>
+<span class="n">outputConfig2</span><span class="p">.</span><span class="n">ConfigureAttributes</span> <span class="p">();</span>
+
+<span class="n">Simulator</span><span class="o">::</span><span class="n">Run</span> <span class="p">();</span>
+
+<span class="n">Simulator</span><span class="o">::</span><span class="n">Destroy</span> <span class="p">();</span>
+</pre></div>
+</div>
+<p>Note the placement of these statements just prior to the
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Simulator::Run</span> <span class="pre">()</span></code> statement.  This output logs all of the
+values in place just prior to starting the simulation (<em>i.e</em>. after
+all of the configuration has taken place).</p>
+<p>After running, you can open the <code class="docutils literal notranslate"><span class="pre">output-attributes.txt</span></code> file and see:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>...
+default ns3::ErrorModel::IsEnabled &quot;true&quot;
+default ns3::RateErrorModel::ErrorUnit &quot;ERROR_UNIT_BYTE&quot;
+default ns3::RateErrorModel::ErrorRate &quot;0&quot;
+default ns3::RateErrorModel::RanVar &quot;ns3::UniformRandomVariable[Min=0.0|Max=1.0]&quot;
+default ns3::BurstErrorModel::ErrorRate &quot;0&quot;
+default ns3::BurstErrorModel::BurstStart &quot;ns3::UniformRandomVariable[Min=0.0|Max=1.0]&quot;
+default ns3::BurstErrorModel::BurstSize &quot;ns3::UniformRandomVariable[Min=1|Max=4]&quot;
+default ns3::PacketSocket::RcvBufSize &quot;131072&quot;
+default ns3::PcapFileWrapper::CaptureSize &quot;65535&quot;
+default ns3::PcapFileWrapper::NanosecMode &quot;false&quot;
+default ns3::SimpleNetDevice::PointToPointMode &quot;false&quot;
+default ns3::SimpleNetDevice::TxQueue &quot;ns3::DropTailQueue&lt;Packet&gt;&quot;
+default ns3::SimpleNetDevice::DataRate &quot;0bps&quot;
+default ns3::PacketSocketClient::MaxPackets &quot;100&quot;
+default ns3::PacketSocketClient::Interval &quot;+1000000000.0ns&quot;
+default ns3::PacketSocketClient::PacketSize &quot;1024&quot;
+default ns3::PacketSocketClient::Priority &quot;0&quot;
+default ns3::ConfigStore::Mode &quot;Save&quot;
+default ns3::ConfigStore::Filename &quot;output-attributes.txt&quot;
+default ns3::ConfigStore::FileFormat &quot;RawText&quot;
+default ns3::ConfigExample::TestInt16 &quot;-5&quot;
+global SimulatorImplementationType &quot;ns3::DefaultSimulatorImpl&quot;
+global SchedulerType &quot;ns3::MapScheduler&quot;
+global RngSeed &quot;1&quot;
+global RngRun &quot;1&quot;
+global ChecksumEnabled &quot;false&quot;
+value /$ns3::ConfigExample/TestInt16 &quot;-3&quot;
+</pre></div>
+</div>
+<p>In the above, several of the default values for attributes for the core
+and network modules are shown.  Then, all the values for the <em>ns-3</em> global values
+are recorded.  Finally, the value of the instance of <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ConfigExample</span></code>
+that was rooted in the configuration namespace is shown.  In a real
+<em>ns-3</em> program, many more models, attributes, and defaults would be shown.</p>
+<p>An XML version also exists in <code class="docutils literal notranslate"><span class="pre">output-attributes.xml</span></code>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;ns3&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::ErrorModel::IsEnabled&quot;</span> <span class="na">value=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::RateErrorModel::ErrorUnit&quot;</span> <span class="na">value=</span><span class="s">&quot;ERROR_UNIT_BYTE&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::RateErrorModel::ErrorRate&quot;</span> <span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::RateErrorModel::RanVar&quot;</span> <span class="na">value=</span><span class="s">&quot;ns3::UniformRandomVariable[Min=0.0|Max=1.0]&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::BurstErrorModel::ErrorRate&quot;</span> <span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::BurstErrorModel::BurstStart&quot;</span> <span class="na">value=</span><span class="s">&quot;ns3::UniformRandomVariable[Min=0.0|Max=1.0]&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::BurstErrorModel::BurstSize&quot;</span> <span class="na">value=</span><span class="s">&quot;ns3::UniformRandomVariable[Min=1|Max=4]&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::PacketSocket::RcvBufSize&quot;</span> <span class="na">value=</span><span class="s">&quot;131072&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::PcapFileWrapper::CaptureSize&quot;</span> <span class="na">value=</span><span class="s">&quot;65535&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::PcapFileWrapper::NanosecMode&quot;</span> <span class="na">value=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::SimpleNetDevice::PointToPointMode&quot;</span> <span class="na">value=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::SimpleNetDevice::TxQueue&quot;</span> <span class="na">value=</span><span class="s">&quot;ns3::DropTailQueue&amp;lt;Packet&amp;gt;&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::SimpleNetDevice::DataRate&quot;</span> <span class="na">value=</span><span class="s">&quot;0bps&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::PacketSocketClient::MaxPackets&quot;</span> <span class="na">value=</span><span class="s">&quot;100&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::PacketSocketClient::Interval&quot;</span> <span class="na">value=</span><span class="s">&quot;+1000000000.0ns&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::PacketSocketClient::PacketSize&quot;</span> <span class="na">value=</span><span class="s">&quot;1024&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::PacketSocketClient::Priority&quot;</span> <span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::ConfigStore::Mode&quot;</span> <span class="na">value=</span><span class="s">&quot;Save&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::ConfigStore::Filename&quot;</span> <span class="na">value=</span><span class="s">&quot;output-attributes.xml&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::ConfigStore::FileFormat&quot;</span> <span class="na">value=</span><span class="s">&quot;Xml&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;default</span> <span class="na">name=</span><span class="s">&quot;ns3::ConfigExample::TestInt16&quot;</span> <span class="na">value=</span><span class="s">&quot;-5&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;global</span> <span class="na">name=</span><span class="s">&quot;SimulatorImplementationType&quot;</span> <span class="na">value=</span><span class="s">&quot;ns3::DefaultSimulatorImpl&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;global</span> <span class="na">name=</span><span class="s">&quot;SchedulerType&quot;</span> <span class="na">value=</span><span class="s">&quot;ns3::MapScheduler&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;global</span> <span class="na">name=</span><span class="s">&quot;RngSeed&quot;</span> <span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;global</span> <span class="na">name=</span><span class="s">&quot;RngRun&quot;</span> <span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;global</span> <span class="na">name=</span><span class="s">&quot;ChecksumEnabled&quot;</span> <span class="na">value=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;value</span> <span class="na">path=</span><span class="s">&quot;/$ns3::ConfigExample/TestInt16&quot;</span> <span class="na">value=</span><span class="s">&quot;-3&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ns3&gt;</span>
+</pre></div>
+</div>
+<p>This file can be archived with your simulation script and output data.</p>
+</div>
+<div class="section" id="reading">
+<h3>Reading<a class="headerlink" href="#reading" title="Permalink to this headline">¶</a></h3>
+<p>Next, we discuss configuring simulations <em>via</em> a stored input
+configuration file.  There are a couple of key differences
+compared to writing the final simulation configuration.  First, we
+need to place statements such as these at the beginning of the program,
+before simulation configuration statements are written (so the values
+are registered before being used in object construction).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::ConfigStore::Filename&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;input-defaults.xml&quot;</span><span class="p">));</span>
+<span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::ConfigStore::Mode&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;Load&quot;</span><span class="p">));</span>
+<span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::ConfigStore::FileFormat&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;Xml&quot;</span><span class="p">));</span>
+<span class="n">ConfigStore</span> <span class="n">inputConfig</span><span class="p">;</span>
+<span class="n">inputConfig</span><span class="p">.</span><span class="n">ConfigureDefaults</span> <span class="p">();</span>
+</pre></div>
+</div>
+<p>Next, note that loading of input configuration data is limited to Attribute
+default (<em>i.e</em>. not instance) values, and global values.  Attribute instance
+values are not supported because at this stage of the simulation, before
+any objects are constructed, there are no such object instances around.
+(Note, future enhancements to the config store may change this behavior).</p>
+<p>Second, while the output of <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ConfigStore</span></code> state
+will list everything in the database, the input file need only contain
+the specific values to be overridden.  So, one way to use this class
+for input file configuration is to generate an initial configuration
+using the output (<code class="docutils literal notranslate"><span class="pre">&quot;Save&quot;</span></code>) <code class="docutils literal notranslate"><span class="pre">&quot;Mode&quot;</span></code> described above, extract from
+that configuration file only the elements one wishes to change,
+and move these minimal elements to a new configuration file
+which can then safely be edited and loaded in a subsequent simulation run.</p>
+<p>When the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ConfigStore</span></code> object is instantiated, its attributes
+<code class="docutils literal notranslate"><span class="pre">&quot;Filename&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Mode&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;FileFormat&quot;</span></code> must be set,
+either <em>via</em> command-line or <em>via</em> program statements.</p>
+</div>
+<div class="section" id="reading-writing-example">
+<h3>Reading/Writing Example<a class="headerlink" href="#reading-writing-example" title="Permalink to this headline">¶</a></h3>
+<p>As a more complicated example, let’s assume that we want to read in a
+configuration of defaults from an input file named <code class="docutils literal notranslate"><span class="pre">input-defaults.xml</span></code>, and
+write out the resulting attributes to a separate file called
+<code class="docutils literal notranslate"><span class="pre">output-attributes.xml</span></code>.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;ns3/config-store-module.h&quot;</span><span class="cp"></span>
+<span class="p">...</span>
+<span class="kt">int</span> <span class="n">main</span> <span class="p">(...)</span>
+<span class="p">{</span>
+
+  <span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::ConfigStore::Filename&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;input-defaults.xml&quot;</span><span class="p">));</span>
+  <span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::ConfigStore::Mode&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;Load&quot;</span><span class="p">));</span>
+  <span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::ConfigStore::FileFormat&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;Xml&quot;</span><span class="p">));</span>
+  <span class="n">ConfigStore</span> <span class="n">inputConfig</span><span class="p">;</span>
+  <span class="n">inputConfig</span><span class="p">.</span><span class="n">ConfigureDefaults</span> <span class="p">();</span>
+
+  <span class="c1">//</span>
+  <span class="c1">// Allow the user to override any of the defaults and the above Bind () at</span>
+  <span class="c1">// run-time, viacommand-line arguments</span>
+  <span class="c1">//</span>
+  <span class="n">CommandLine</span> <span class="n">cmd</span><span class="p">;</span>
+  <span class="n">cmd</span><span class="p">.</span><span class="n">Parse</span> <span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
+
+  <span class="c1">// setup topology</span>
+  <span class="p">...</span>
+
+  <span class="c1">// Invoke just before entering Simulator::Run ()</span>
+  <span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::ConfigStore::Filename&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;output-attributes.xml&quot;</span><span class="p">));</span>
+  <span class="n">Config</span><span class="o">::</span><span class="n">SetDefault</span> <span class="p">(</span><span class="s">&quot;ns3::ConfigStore::Mode&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;Save&quot;</span><span class="p">));</span>
+  <span class="n">ConfigStore</span> <span class="n">outputConfig</span><span class="p">;</span>
+  <span class="n">outputConfig</span><span class="p">.</span><span class="n">ConfigureAttributes</span> <span class="p">();</span>
+  <span class="n">Simulator</span><span class="o">::</span><span class="n">Run</span> <span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configstore-gui">
+<h3>ConfigStore GUI<a class="headerlink" href="#configstore-gui" title="Permalink to this headline">¶</a></h3>
+<p>There is a GTK-based front end for the ConfigStore.  This allows users to use a
+GUI to access and change variables.  Screenshots of this feature are available
+in the <a class="reference external" href="http://www.nsnam.org/docs/ns-3-overview.pdf">|ns3| Overview</a>
+presentation.</p>
+<p>To use this feature, one must install <code class="docutils literal notranslate"><span class="pre">libgtk</span></code> and <code class="docutils literal notranslate"><span class="pre">libgtk-dev</span></code>; an example
+Ubuntu installation command is:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install libgtk2.0-0 libgtk2.0-dev
+</pre></div>
+</div>
+<p>To check whether it is configured or not, check the output of the step:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf configure --enable-examples --enable-tests
+
+---- Summary of optional NS-3 features:
+Python Bindings               : enabled
+Python API Scanning Support   : enabled
+NS-3 Click Integration        : enabled
+GtkConfigStore                : not enabled <span class="o">(</span>library <span class="s1">&#39;gtk+-2.0 &gt;= 2.12&#39;</span> not found<span class="o">)</span>
+</pre></div>
+</div>
+<p>In the above example, it was not enabled, so it cannot be used until a suitable
+version is installed and:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf configure --enable-examples --enable-tests
+$ ./waf
+</pre></div>
+</div>
+<p>is rerun.</p>
+<p>Usage is almost the same as the non-GTK-based version, but there
+are no <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ConfigStore</span></code> attributes involved:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Invoke just before entering Simulator::Run ()</span>
+<span class="n">GtkConfigStore</span> <span class="n">config</span><span class="p">;</span>
+<span class="n">config</span><span class="p">.</span><span class="n">ConfigureDefaults</span> <span class="p">();</span>
+<span class="n">config</span><span class="p">.</span><span class="n">ConfigureAttributes</span> <span class="p">();</span>
+</pre></div>
+</div>
+<p>Now, when you run the script, a GUI should pop up, allowing you to open menus of
+attributes on different nodes/objects, and then launch the simulation execution
+when you are done.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configuration and Attributes</a><ul>
+<li><a class="reference internal" href="#object-overview">Object Overview</a><ul>
+<li><a class="reference internal" href="#smart-pointers">Smart Pointers</a><ul>
+<li><a class="reference internal" href="#createobject">CreateObject</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#typeid">TypeId</a></li>
+<li><a class="reference internal" href="#object-summary">Object Summary</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id1">Attributes</a><ul>
+<li><a class="reference internal" href="#defining-attributes">Defining Attributes</a></li>
+<li><a class="reference internal" href="#setting-default-values">Setting Default Values</a><ul>
+<li><a class="reference internal" href="#config-setdefault-and-commandline">Config::SetDefault and CommandLine</a></li>
+<li><a class="reference internal" href="#constructors-helpers-and-objectfactory">Constructors, Helpers and ObjectFactory</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#changing-values">Changing Values</a><ul>
+<li><a class="reference internal" href="#smartpointer">SmartPointer</a></li>
+<li><a class="reference internal" href="#config-namespace-path">Config Namespace Path</a></li>
+<li><a class="reference internal" href="#object-name-service">Object Name Service</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#implementation-details">Implementation Details</a><ul>
+<li><a class="reference internal" href="#value-classes">Value Classes</a></li>
+<li><a class="reference internal" href="#initialization-order">Initialization Order</a></li>
+<li><a class="reference internal" href="#adding-attributes">Adding Attributes</a><ul>
+<li><a class="reference internal" href="#existing-member-variable">Existing Member Variable</a></li>
+<li><a class="reference internal" href="#new-class-typeid">New Class TypeId</a></li>
+<li><a class="reference internal" href="#new-attributevalue-type">New AttributeValue Type</a><ul>
+<li><a class="reference internal" href="#header-file">Header File</a></li>
+<li><a class="reference internal" href="#implementation-file">Implementation File</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configstore">ConfigStore</a><ul>
+<li><a class="reference internal" href="#writing">Writing</a></li>
+<li><a class="reference internal" href="#reading">Reading</a></li>
+<li><a class="reference internal" href="#reading-writing-example">Reading/Writing Example</a></li>
+<li><a class="reference internal" href="#configstore-gui">ConfigStore GUI</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="object-model.html"
+                        title="previous chapter">Object model</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="object-names.html"
+                        title="next chapter">Object names</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/attributes.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="object-names.html" title="Object names"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="object-model.html" title="Object model"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019.
+      Last updated on Apr 29, 2020 18:24.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

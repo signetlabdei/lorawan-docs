@@ -1,0 +1,34 @@
+<map id="ns3::WifiInformationElement::ElementIdExt" name="ns3::WifiInformationElement::ElementIdExt">
+<area shape="rect" id="node1" title=" " alt="" coords="808,603,1017,644"/>
+<area shape="rect" id="node2" href="$classns3_1_1_wifi_information_element.html#a8ce15156403cf18af657c4bee2e071aa" title="Deserialize entire IE if it is present." alt="" coords="551,235,760,276"/>
+<area shape="rect" id="node11" href="$classns3_1_1_wifi_information_element.html#a75fdda2e8009a87c8f2b255454ac0110" title="Compare two IEs for equality by ID &amp; Length, and then through memcmp of serialised version." alt="" coords="551,603,760,644"/>
+<area shape="rect" id="node12" href="$classns3_1_1_wifi_information_element.html#a8662b6056d624747d927e9c041e24ab0" title="Serialize entire IE including Element ID and length fields." alt="" coords="551,969,760,1011"/>
+<area shape="rect" id="node3" href="$classns3_1_1_wifi_information_element.html#a533a553c7a33a4870f1819b25d43d15b" title="Deserialize entire IE, which must be present." alt="" coords="289,176,499,217"/>
+<area shape="rect" id="node4" href="$classns3_1_1dot11s_1_1_peer_link_open_start.html#a315473be0f383a55415b452b45f688bb" title=" " alt="" coords="24,71,219,112"/>
+<area shape="rect" id="node5" href="$classns3_1_1dot11s_1_1_peer_link_confirm_start.html#a6109a09962014a5c64c7a2fd9470978e" title=" " alt="" coords="15,136,228,177"/>
+<area shape="rect" id="node6" href="$classns3_1_1_mgt_assoc_request_header.html#a660806ee6d8ccb5ee7d1790506770e45" title=" " alt="" coords="13,201,229,243"/>
+<area shape="rect" id="node7" href="$classns3_1_1_mgt_reassoc_request_header.html#a176e868c24d3e341f088d8ae0e8e74f2" title=" " alt="" coords="5,267,237,308"/>
+<area shape="rect" id="node8" href="$classns3_1_1_mgt_assoc_response_header.html#a02b3614f4b8248577849c4091220666d" title=" " alt="" coords="8,332,235,373"/>
+<area shape="rect" id="node9" href="$classns3_1_1_mgt_probe_request_header.html#a622524bcbe9ec5ba9bea8e83c43302db" title=" " alt="" coords="14,397,229,439"/>
+<area shape="rect" id="node10" href="$classns3_1_1_mgt_probe_response_header.html#acf693465957d06ea7f1a06881052b71a" title=" " alt="" coords="9,5,234,47"/>
+<area shape="rect" id="node13" href="$classns3_1_1dot11s_1_1_peer_link_open_start.html#a28e40c3958541868d9b891f7762c7341" title=" " alt="" coords="24,1341,219,1383"/>
+<area shape="rect" id="node14" href="$classns3_1_1dot11s_1_1_peer_link_close_start.html#a91fbf1728b00cbcca221f636b6647caf" title=" " alt="" coords="295,1355,493,1396"/>
+<area shape="rect" id="node15" href="$classns3_1_1dot11s_1_1_peer_link_confirm_start.html#a8e02c9eb2f65d3e3981ba1cb40ded937" title=" " alt="" coords="15,1512,228,1553"/>
+<area shape="rect" id="node16" href="$classns3_1_1_cf_parameter_set.html#a9173d89bf209197aab6da4a9df444c67" title=" " alt="" coords="316,563,472,604"/>
+<area shape="rect" id="node17" href="$classns3_1_1_mgt_probe_response_header.html#a1f83599e2f55616f48c23e5115749d93" title=" " alt="" coords="9,817,234,859"/>
+<area shape="rect" id="node18" href="$classns3_1_1_dsss_parameter_set.html#a311c8b7f70d49cfebdd4c62cd7662808" title=" " alt="" coords="307,445,481,487"/>
+<area shape="rect" id="node19" href="$classns3_1_1_edca_parameter_set.html#a1e9211bf5bb8f74857ed61e8003a51bf" title=" " alt="" coords="307,693,481,735"/>
+<area shape="rect" id="node20" href="$classns3_1_1_mgt_assoc_response_header.html#ac7eb0a62c467eb513d37dc095c896985" title=" " alt="" coords="8,919,235,960"/>
+<area shape="rect" id="node21" href="$classns3_1_1_erp_information.html#a647ca63253a099f4e9a03ab14f6f347e" title=" " alt="" coords="319,759,469,800"/>
+<area shape="rect" id="node22" href="$classns3_1_1_extended_capabilities.html#a6bfc9e52ad54ecee9f11bc6a7e9dea7d" title=" " alt="" coords="299,1028,489,1069"/>
+<area shape="rect" id="node23" href="$classns3_1_1_mgt_assoc_request_header.html#a7cb51405dd8d72be95accc8969d65c96" title=" " alt="" coords="13,1224,229,1265"/>
+<area shape="rect" id="node24" href="$classns3_1_1_mgt_reassoc_request_header.html#a765bf32b0d25f3432af0ab61599dc0a4" title=" " alt="" coords="5,1159,237,1200"/>
+<area shape="rect" id="node25" href="$classns3_1_1_mgt_probe_request_header.html#a3b82244e9567a46fc332747dd7f3de2f" title=" " alt="" coords="14,1093,229,1135"/>
+<area shape="rect" id="node26" href="$classns3_1_1_he_capabilities.html#a2539a6048077d3f1c333a060943fcce3" title=" " alt="" coords="320,1093,468,1135"/>
+<area shape="rect" id="node27" href="$classns3_1_1_he_operation.html#ad60be854ad8ae9aee9841a811f463a67" title=" " alt="" coords="295,825,493,851"/>
+<area shape="rect" id="node28" href="$classns3_1_1_ht_capabilities.html#a8c602ed95290cd1aa75cafaa1744f6ba" title=" " alt="" coords="321,1159,467,1200"/>
+<area shape="rect" id="node29" href="$classns3_1_1_ht_operation.html#a417fa79492660ee92a87483324584414" title=" " alt="" coords="296,875,492,902"/>
+<area shape="rect" id="node30" href="$classns3_1_1_extended_supported_rates_i_e.html#aa9c2e690fce4f090645460828d041e3a" title=" " alt="" coords="285,1289,503,1331"/>
+<area shape="rect" id="node31" href="$classns3_1_1_vht_capabilities.html#a13178aba277c65e0bb1734e542726952" title=" " alt="" coords="318,1224,470,1265"/>
+<area shape="rect" id="node32" href="$classns3_1_1_vht_operation.html#a758c678059f165599c9f46c9bcfc8781" title=" " alt="" coords="321,628,467,669"/>
+</map>

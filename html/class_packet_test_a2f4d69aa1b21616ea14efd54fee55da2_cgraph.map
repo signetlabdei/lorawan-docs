@@ -1,0 +1,52 @@
+<map id="PacketTest::DoRun" name="PacketTest::DoRun">
+<area shape="rect" id="node1" title="Implementation to actually run this TestCase." alt="" coords="5,1233,148,1260"/>
+<area shape="rect" id="node2" href="$classns3_1_1_packet.html#a14ec3d4250b425468764de58f5837b6b" title="Concatenate the input packet at the end of the current packet." alt="" coords="236,941,403,968"/>
+<area shape="rect" id="node10" href="$classns3_1_1_packet.html#afff7cb1ff518ee6dc0d424e10a5ad6ec" title="Returns the the size in bytes of the packet (including the zero&#45;filled initial payload)." alt="" coords="525,1721,679,1748"/>
+<area shape="rect" id="node11" href="$classns3_1_1_packet.html#ad62c58f829e211a1604d203b871098af" title="Tag each byte included in this packet with a new byte tag." alt="" coords="229,1735,410,1761"/>
+<area shape="rect" id="node16" href="$classns3_1_1_packet.html#a465108c595a0bc592095cbcab1832ed8" title="Add header to this packet." alt="" coords="231,616,407,643"/>
+<area shape="rect" id="node22" href="$classns3_1_1_packet.html#ac4a6bcd77e58bdc14c42a7d572d66cc9" title="Add a packet tag." alt="" coords="222,1812,417,1839"/>
+<area shape="rect" id="node24" href="$classns3_1_1_packet.html#ae964f1fcfd496c6c0db1b73f27e78530" title="Add a zero&#45;filled padding to the packet." alt="" coords="210,1604,429,1631"/>
+<area shape="rect" id="node26" href="$classns3_1_1_packet.html#ae26b490c30ae5bc98be5181ec6e06db8" title="Add trailer to this packet." alt="" coords="234,1411,405,1437"/>
+<area shape="rect" id="node31" href="$classns3_1_1_packet.html#afb38be706cfc761bc1c0591f595fc1b7" title="performs a COW copy of the packet." alt="" coords="251,1863,388,1889"/>
+<area shape="rect" id="node32" href="$classns3_1_1_packet.html#a5bafd70ccf970b10524e2d61afd39dc1" title="Copy the packet contents to a byte buffer." alt="" coords="235,1965,403,1992"/>
+<area shape="rect" id="node34" href="$classns3_1_1_packet.html#acdb23fec2c1dbebd9e6917895e9bcc65" title="Create a new packet which contains a fragment of the original packet." alt="" coords="215,249,424,276"/>
+<area shape="rect" id="node42" href="$classns3_1_1_packet.html#aec5a71b498e6cd5816de9f5e9b36c397" title="Search a matching tag and call Tag::Deserialize if it is found." alt="" coords="219,1027,420,1053"/>
+<area shape="rect" id="node44" href="$classns3_1_1_packet.html#a6c7bc5d1067c1d7fbd0fd70289182e8b" title="Remove all packet tags." alt="" coords="196,2121,443,2148"/>
+<area shape="rect" id="node46" href="$classns3_1_1_packet.html#a607de6c1abda2a960e99a3b59fd35d14" title="Remove size bytes from the end of the current packet." alt="" coords="504,5,700,32"/>
+<area shape="rect" id="node47" href="$classns3_1_1_packet.html#a78aa207e7921dd2f9f7e0d0b7a1c730a" title="Remove size bytes from the start of the current packet." alt="" coords="218,717,421,744"/>
+<area shape="rect" id="node48" href="$classns3_1_1_packet.html#a0961eccf975d75f902d40956c93ba63e" title="Deserialize and remove the header from the internal buffer." alt="" coords="217,848,422,875"/>
+<area shape="rect" id="node49" href="$classns3_1_1_packet.html#a078fe922d976a417ab25ba2f3c2fd667" title="Remove a packet tag." alt="" coords="208,1233,431,1260"/>
+<area shape="rect" id="node50" href="$classns3_1_1_packet.html#a2155e042083e9a17ad3b33f9fecb4be4" title="Remove a deserialized trailer from the internal buffer." alt="" coords="220,1132,419,1159"/>
+<area shape="rect" id="node3" href="$classns3_1_1_byte_tag_list.html#ac970192e923afc561a304d17af4b8a52" title=" " alt="" coords="521,797,683,824"/>
+<area shape="rect" id="node5" href="$classns3_1_1_byte_tag_list.html#a0d8aa9cf6aaf856eb08d4f4a01f38446" title="Make sure that all offsets are smaller than appendOffset which represents the location where new byte..." alt="" coords="503,1436,701,1463"/>
+<area shape="rect" id="node6" href="$classns3_1_1_packet_metadata.html#af7ceb1a4a7ded625c85dbd477b5fc8b6" title="Add a metadata at the metadata start." alt="" coords="523,899,681,941"/>
+<area shape="rect" id="node7" href="$classns3_1_1_buffer.html#a92dd87809af24fb10696fee9a9cb56cf" title=" " alt="" coords="520,1604,684,1631"/>
+<area shape="rect" id="node8" href="$classns3_1_1_byte_tag_list.html#acb4563fbe4299c55af41ba7a166b71d5" title="Make sure that all offsets are bigger than prependOffset which represents the location where new byte..." alt="" coords="499,747,705,773"/>
+<area shape="rect" id="node9" href="$classns3_1_1_byte_tag_list.html#a1fec06d7e6daaf8039cf2a148e4090f2" title="Adjust the offsets stored internally by the adjustment delta." alt="" coords="513,645,691,672"/>
+<area shape="rect" id="node4" href="$namespacevisualizer_1_1core.html#a2a35e5d8a34af358b508dac8635754e0" title=" " alt="" coords="793,325,943,352"/>
+<area shape="rect" id="node12" href="$classns3_1_1_object_base.html#abe5b43a6f5b99a92a4c3122db31f06fb" title="Get the most derived TypeId for this Object." alt="" coords="761,1226,975,1267"/>
+<area shape="rect" id="node13" href="$classns3_1_1_type_id.html#abc4965475a579c2afdc668d7a7d58374" title="Get the name." alt="" coords="519,1132,685,1159"/>
+<area shape="rect" id="node14" href="$classns3_1_1_tag.html#a01c8efdea943fd8cce2ef5d4d67eefa6" title=" " alt="" coords="769,1899,967,1925"/>
+<area shape="rect" id="node15" href="$classns3_1_1_tag.html#ac9aa7c4f923da5d2c82de94690101dc3" title=" " alt="" coords="799,1949,937,1976"/>
+<area shape="rect" id="node17" href="$classns3_1_1_buffer.html#a8abd8164c3671d3dadc98fc66fade7b1" title=" " alt="" coords="517,477,687,504"/>
+<area shape="rect" id="node18" href="$classns3_1_1_packet_metadata.html#abdce736c4c5f647242f0808c0d2f9249" title="Add an header." alt="" coords="523,579,681,621"/>
+<area shape="rect" id="node19" href="$classns3_1_1_buffer.html#acb977a0179de9abe4e295ce22023b4ca" title=" " alt="" coords="533,696,671,723"/>
+<area shape="rect" id="node20" href="$classns3_1_1_header.html#a6ef0497eabc1b1fb0ad42738eb73f934" title=" " alt="" coords="491,427,713,453"/>
+<area shape="rect" id="node21" href="$classns3_1_1_header.html#afb61f1aac69ff8349a6bfe521fab5404" title=" " alt="" coords="520,376,684,403"/>
+<area shape="rect" id="node23" href="$classns3_1_1_packet_tag_list.html#af0d2442e29d24184d7c439f69977fbad" title="Add a tag to the head of this branch." alt="" coords="515,1924,689,1951"/>
+<area shape="rect" id="node25" href="$classns3_1_1_packet_metadata.html#a9398445226b4df97e2d489cf0a431ace" title="Add some padding at the end." alt="" coords="523,1655,681,1697"/>
+<area shape="rect" id="node27" href="$classns3_1_1_packet_metadata.html#afd698b5f0ce0e9f498fff8a6915837c5" title="Add a trailer." alt="" coords="523,1487,681,1529"/>
+<area shape="rect" id="node28" href="$classns3_1_1_buffer.html#abad1405368fbdd7ee25568624cb45e2e" title=" " alt="" coords="539,1183,665,1209"/>
+<area shape="rect" id="node29" href="$classns3_1_1_trailer.html#a6af7be196bad576c3601e267b0637ff7" title=" " alt="" coords="494,1335,710,1361"/>
+<area shape="rect" id="node30" href="$classns3_1_1_trailer.html#a160451b2ded3a615b1ccfa25ab60c2e3" title=" " alt="" coords="523,1385,681,1412"/>
+<area shape="rect" id="node33" href="$classns3_1_1_buffer.html#a767c8ec06a1307b569b9a5996dcacf91" title="Copy the specified amount of data from the buffer to the given output stream." alt="" coords="519,2076,685,2103"/>
+<area shape="rect" id="node35" href="$classns3_1_1_packet_metadata.html#a0d5fd6d6a05b04eb1bb9a00c05e6a16c" title="Creates a fragment." alt="" coords="523,107,681,149"/>
+<area shape="rect" id="node37" href="$classns3_1_1_buffer.html#a2688c9b7aa22608ec955a40e048ec0dc" title=" " alt="" coords="499,275,705,301"/>
+<area shape="rect" id="node38" href="$classns3_1_1_buffer.html#a60c9172d2b102f8856c81b2126c8b209" title=" " alt="" coords="793,224,943,251"/>
+<area shape="rect" id="node40" href="$classns3_1_1_packet.html#a2e919d10a620ad491a57be094ef4b2bb" title="Get the packet nix&#45;vector." alt="" coords="507,173,697,200"/>
+<area shape="rect" id="node41" href="$classns3_1_1_packet.html#a7e02c5b608a578c845aafd838f155989" title="Set the packet nix&#45;vector." alt="" coords="507,56,697,83"/>
+<area shape="rect" id="node36" href="$classns3_1_1_packet_metadata.html#a7c76154f5302bd55a68406f0103d50c6" title="Remove a chunk of metadata at the metadata end." alt="" coords="789,53,947,94"/>
+<area shape="rect" id="node39" href="$classns3_1_1_buffer.html#a83b30fd8e1202e778fb471757b800d47" title=" " alt="" coords="771,275,965,301"/>
+<area shape="rect" id="node43" href="$classns3_1_1_packet_tag_list.html#a7020b07ada157d6c81d67bc9fc2980ca" title="Find a tag and return its value." alt="" coords="531,965,673,1006"/>
+<area shape="rect" id="node45" href="$classns3_1_1_packet_tag_list.html#a798eb1d77415704e948194564d0eaa4e" title="Remove all tags from this list (up to the first merge)." alt="" coords="531,2127,673,2169"/>
+</map>

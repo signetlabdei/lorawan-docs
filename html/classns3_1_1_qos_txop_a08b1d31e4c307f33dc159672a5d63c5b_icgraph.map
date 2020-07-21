@@ -1,0 +1,9 @@
+<map id="ns3::QosTxop::IsTxopFragmentation" name="ns3::QosTxop::IsTxopFragmentation">
+<area shape="rect" id="node1" title="Check if the current packet is fragmented because of an exceeded TXOP duration." alt="" coords="844,97,1100,123"/>
+<area shape="rect" id="node2" href="$classns3_1_1_qos_txop.html#aaae6bbf5bdd6aa41c9aedca1223ad3f9" title="Calculate the offset for the current fragment." alt="" coords="579,5,782,47"/>
+<area shape="rect" id="node5" href="$classns3_1_1_qos_txop.html#af184e0bbc66688c768a3065980d9f7c0" title="Calculate the size of the current fragment." alt="" coords="565,71,796,98"/>
+<area shape="rect" id="node6" href="$classns3_1_1_qos_txop.html#a355a5b9748e510a439eb602d5871f66e" title="Calculate the size of the next fragment." alt="" coords="256,173,517,199"/>
+<area shape="rect" id="node7" href="$classns3_1_1_qos_txop.html#a01a29ba8b12b02febed71b9429205b56" title="Check if the current fragment is the last fragment." alt="" coords="571,122,790,149"/>
+<area shape="rect" id="node3" href="$classns3_1_1_qos_txop.html#a9caedc29be5c5e59ac81b13322dde598" title="Get the next fragment from the packet with appropriate Wifi header for the fragment." alt="" coords="285,56,488,97"/>
+<area shape="rect" id="node4" href="$classns3_1_1_qos_txop.html#a0d5a35b715d1c8415d5d95a5f0b2814c" title="Notify the Txop that access has been granted." alt="" coords="5,115,208,156"/>
+</map>

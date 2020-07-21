@@ -1,0 +1,26 @@
+var classns3_1_1_parf_wifi_manager =
+[
+    [ "ParfWifiManager", "classns3_1_1_parf_wifi_manager.html#a1df1b5330a16cfa4a3c102e5d250e86e", null ],
+    [ "~ParfWifiManager", "classns3_1_1_parf_wifi_manager.html#aaed63179abd0893127a81ea13650ae5a", null ],
+    [ "CheckInit", "classns3_1_1_parf_wifi_manager.html#a2a7ea7d1accf1ce9056c91929db2e7eb", null ],
+    [ "DoCreateStation", "classns3_1_1_parf_wifi_manager.html#abf14595b0f7e491d39888e1256801c74", null ],
+    [ "DoGetDataTxVector", "classns3_1_1_parf_wifi_manager.html#a5a7cc006d12987077a3afc4edd76da86", null ],
+    [ "DoGetRtsTxVector", "classns3_1_1_parf_wifi_manager.html#a693981d57d5f1bdce6a80acf2b0f36a2", null ],
+    [ "DoInitialize", "classns3_1_1_parf_wifi_manager.html#aa389bf9e269c90f99b091fb462326fee", null ],
+    [ "DoReportDataFailed", "classns3_1_1_parf_wifi_manager.html#a852f0d8e8da9139971a07432bf4e3c1c", null ],
+    [ "DoReportDataOk", "classns3_1_1_parf_wifi_manager.html#a64ccf2bcb3b346b47ce063385f497eb1", null ],
+    [ "DoReportFinalDataFailed", "classns3_1_1_parf_wifi_manager.html#a786c8146f4de4776ae0ce75b1b767221", null ],
+    [ "DoReportFinalRtsFailed", "classns3_1_1_parf_wifi_manager.html#aa41db21325acb461de32bc03c9314d6e", null ],
+    [ "DoReportRtsFailed", "classns3_1_1_parf_wifi_manager.html#acd9a39a40cc9560ec8e71498c9c2c19b", null ],
+    [ "DoReportRtsOk", "classns3_1_1_parf_wifi_manager.html#add9a92a6b50947848336836df3fb2406", null ],
+    [ "DoReportRxOk", "classns3_1_1_parf_wifi_manager.html#a62eedee7db373aa2f782eca8879e9019", null ],
+    [ "GetTypeId", "classns3_1_1_parf_wifi_manager.html#a97357e8d12070945049cae0b20d88b64", null ],
+    [ "IsLowLatency", "classns3_1_1_parf_wifi_manager.html#a104ab43568a0b41b50c79a6620699403", null ],
+    [ "SetupPhy", "classns3_1_1_parf_wifi_manager.html#aedcdd20a3e9a8934f54e8239106e81ef", null ],
+    [ "m_attemptThreshold", "classns3_1_1_parf_wifi_manager.html#aab9760bab8628fc4822c12b2dd2bf0ea", null ],
+    [ "m_maxPower", "classns3_1_1_parf_wifi_manager.html#ab2b60ec091e6f61141a6f97e354c31b9", null ],
+    [ "m_minPower", "classns3_1_1_parf_wifi_manager.html#ad5cb2f0cee85f10cf26bfabf3039be89", null ],
+    [ "m_powerChange", "classns3_1_1_parf_wifi_manager.html#a3551006adb796a78525bc93430950b21", null ],
+    [ "m_rateChange", "classns3_1_1_parf_wifi_manager.html#a6523cc884410af743890db3d24970f70", null ],
+    [ "m_successThreshold", "classns3_1_1_parf_wifi_manager.html#a20cddc69111e0c419ae3f4c36e4d4548", null ]
+];

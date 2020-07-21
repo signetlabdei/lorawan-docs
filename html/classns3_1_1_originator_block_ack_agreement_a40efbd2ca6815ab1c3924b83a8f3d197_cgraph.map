@@ -1,0 +1,12 @@
+<map id="ns3::OriginatorBlockAckAgreement::NotifyAckedMpdu" name="ns3::OriginatorBlockAckAgreement::NotifyAckedMpdu">
+<area shape="rect" id="node1" title="Record that the given MPDU has been acknowledged and advance the transmit window if possible." alt="" coords="5,93,256,135"/>
+<area shape="rect" id="node2" href="$classns3_1_1_originator_block_ack_agreement.html#a3db399f9c86d469688d2742f7acda443" title="Advance the transmit window so that the starting sequence number is the nearest unacknowledged MPDU." alt="" coords="304,5,555,47"/>
+<area shape="rect" id="node6" href="$classns3_1_1_block_ack_window.html#ae55f3ebd7abd264d2680940f1a1ff798" title="Get a reference to the element in the window having the given distance from the current winStart." alt="" coords="635,71,821,98"/>
+<area shape="rect" id="node7" href="$classns3_1_1_originator_block_ack_agreement.html#ab33cb13eaeac16e18a84fff27b1e0dbb" title="Get the distance between the current starting sequence number and the given sequence number." alt="" coords="304,123,555,164"/>
+<area shape="rect" id="node10" href="$classns3_1_1_block_ack_window.html#a7d441c6a6b4824230d14237500be65bc" title="Get the current winStart value." alt="" coords="901,181,1067,223"/>
+<area shape="rect" id="node3" href="$classns3_1_1_block_ack_window.html#a5b9251c6163090e5751819fa3baa6710" title="Advance the current winStart by the given number of positions." alt="" coords="645,5,811,47"/>
+<area shape="rect" id="node4" href="$classns3_1_1_block_ack_window.html#a07353e10e9876c6f3e310e8696b7f4ed" title="Reset the window by clearing all the elements and setting winStart to the given value." alt="" coords="901,5,1067,47"/>
+<area shape="rect" id="node5" href="$classns3_1_1_block_ack_window.html#adb6893143136ff776615557026b4c295" title="Initialize the window with the given starting sequence number and size." alt="" coords="1115,5,1280,47"/>
+<area shape="rect" id="node8" href="$classns3_1_1_originator_block_ack_agreement.html#a71138fdae2b41a8a99f62195d9167975" title="Return the starting sequence number of the transmit window, if a transmit window has been initialized..." alt="" coords="603,123,853,164"/>
+<area shape="rect" id="node9" href="$classns3_1_1_block_ack_window.html#a583d4d55d9e51f115ea2f64fb8b28fa2" title="Get the window size." alt="" coords="901,116,1067,157"/>
+</map>
