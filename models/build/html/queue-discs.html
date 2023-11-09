@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>Queue disciplines &#8212; Model Library</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>33.2. Queue disciplines &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Fifo queue disc" href="fifo.html" />
-    <link rel="prev" title="Traffic Control Layer" href="traffic-control-layer.html" />
+    <link rel="next" title="33.3. Fifo queue disc" href="fifo.html" />
+    <link rel="prev" title="33.1. Traffic Control Layer" href="traffic-control-layer.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Models</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,16 +126,17 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="fifo.html" title="Fifo queue disc"
+          <a href="fifo.html" title="33.3. Fifo queue disc"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="traffic-control-layer.html" title="Traffic Control Layer"
+          <a href="traffic-control-layer.html" title="33.1. Traffic Control Layer"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
 
-          <li class="nav-item nav-item-1"><a href="traffic-control.html" accesskey="U">Traffic Control Layer</a><span class="navelem">&nbsp;</span></li> 
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" accesskey="U"><span class="section-number">33. </span>Traffic Control Layer</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">33.2. </span>Queue disciplines</a></li> 
       </ul>
     </div>  
 
@@ -130,10 +145,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="queue-disciplines">
-<h1>Queue disciplines<a class="headerlink" href="#queue-disciplines" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="model-description">
-<h2>Model Description<a class="headerlink" href="#model-description" title="Permalink to this headline">¶</a></h2>
+  <section id="queue-disciplines">
+<h1><span class="section-number">33.2. </span>Queue disciplines<a class="headerlink" href="#queue-disciplines" title="Link to this heading">¶</a></h1>
+<section id="model-description">
+<h2><span class="section-number">33.2.1. </span>Model Description<a class="headerlink" href="#model-description" title="Link to this heading">¶</a></h2>
 <p>Packets received by the Traffic Control layer for transmission to a netdevice
 can be passed to a queueing discipline (queue disc) to perform scheduling and
 policing.  The <em>ns-3</em> term “queue disc” corresponds to what Linux calls a “qdisc”.
@@ -192,7 +207,7 @@ of the queue disc. The following identities hold:</p>
 <p>Separate counters are also kept for each possible reason to drop a packet.
 When a packet is dropped by an internal queue, e.g., because the queue is full,
 the reason is “Dropped by internal queue”. When a packet is dropped by a child
-queue disc, the reason is “(Dropped by child queue disc) ” followed by the
+queue disc, the reason is “(Dropped by child queue disc) “ followed by the
 reason why the child queue disc dropped the packet.</p>
 <p>The QueueDisc base class provides the SojournTime trace source, which provides
 the sojourn time of every packet dequeued from a queue disc, including packets
@@ -200,19 +215,19 @@ that are dropped or requeued after being dequeued. The sojourn time is taken
 when the packet is dequeued from the queue disc, hence it does not account for
 the additional time the packet is retained within the queue disc in case it is
 requeued.</p>
-<div class="section" id="design">
-<h3>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h3>
+<section id="design">
+<h3><span class="section-number">33.2.1.1. </span>Design<a class="headerlink" href="#design" title="Link to this heading">¶</a></h3>
 <p>A C++ abstract base class, class QueueDisc, is subclassed to implement a specific
 queue disc. A subclass is required to implement the following methods:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">DoEnqueue</span> <span class="pre">(Ptr&lt;QueueDiscItem&gt;</span> <span class="pre">item)</span></code>:  Enqueue a packet</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Ptr&lt;QueueDiscItem&gt;</span> <span class="pre">DoDequeue</span> <span class="pre">(void)</span></code>:  Dequeue a packet</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">CheckConfig</span> <span class="pre">(void)</span> <span class="pre">const</span></code>: Check if the configuration is correct</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">InitializeParams</span> <span class="pre">(void)</span></code>: Initialize queue disc parameters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ptr&lt;QueueDiscItem&gt;</span> <span class="pre">DoDequeue</span> <span class="pre">()</span></code>:  Dequeue a packet</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">CheckConfig</span> <span class="pre">()</span> <span class="pre">const</span></code>: Check if the configuration is correct</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">InitializeParams</span> <span class="pre">()</span></code>: Initialize queue disc parameters</p></li>
 </ul>
 <p>and may optionally override the default implementation of the following method:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Ptr&lt;const</span> <span class="pre">QueueDiscItem&gt;</span> <span class="pre">DoPeek</span> <span class="pre">(void)</span> <span class="pre">const</span></code>: Peek the next packet to extract</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ptr&lt;const</span> <span class="pre">QueueDiscItem&gt;</span> <span class="pre">DoPeek</span> <span class="pre">()</span> <span class="pre">const</span></code>: Peek the next packet to extract</p></li>
 </ul>
 <p>The default implementation of the <code class="docutils literal notranslate"><span class="pre">DoPeek</span></code> method is based on the qdisc_peek_dequeued
 function of the Linux kernel, which dequeues a packet and retains it in the
@@ -271,10 +286,10 @@ to check that the protocol of the packet matches the protocol of the filter and 
 calls <code class="docutils literal notranslate"><span class="pre">DoClassify</span></code>. Specific filters subclassed from PacketFilter should not be
 placed in the traffic-control module but in the module corresponding to the protocol
 of the classified packets.</p>
-</div>
-</div>
-<div class="section" id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="usage">
+<h2><span class="section-number">33.2.2. </span>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
 <p>The traffic control layer is automatically created and inserted on an <code class="docutils literal notranslate"><span class="pre">ns3::Node</span></code> object
 when typical device and internet module helpers are used.  By default, the
 <code class="docutils literal notranslate"><span class="pre">InternetStackHelper::Install()</span></code> method aggregates a TrafficControlLayer object to every
@@ -290,15 +305,27 @@ can be removed from the device after assigning an IP address, by using the
 Uninstall method of the TrafficControlHelper C++ class, and then installing a different
 queue disc on the device.  By uninstalling without adding a new queue disc, it is also possible
 to have no queue disc installed on a device.</p>
-<div class="section" id="helpers">
-<h3>Helpers<a class="headerlink" href="#helpers" title="Permalink to this headline">¶</a></h3>
+<p>Note that if no queue disc is installed on an underlying device, the traffic
+control layer will still respect flow control signals provided by the device, if
+any.  Specifically, if no queue disc is installed on a device, and the device is
+stopped, then any packet for that device will be dropped in the traffic control
+layer, and the device’s drop trace will not record the drop – instead, the TcDrop
+drop trace in the traffic control layer will record the drop.</p>
+<p>Flow control can be disabled for the devices that support it by using the
+<code class="docutils literal notranslate"><span class="pre">DisableFlowControl</span></code> method of their helpers.  If there is no queue disc
+installed on the device, and the device is not performing flow control, then
+packets will immediately transit the traffic control layer and be sent to the
+device, regardless or not of whether the device’s internal queue can accept it,
+and the traffic control layer’s TcDrop trace will not be called.</p>
+<section id="helpers">
+<h3><span class="section-number">33.2.2.1. </span>Helpers<a class="headerlink" href="#helpers" title="Link to this heading">¶</a></h3>
 <p>A typical usage pattern is to create a traffic control helper and to configure type
 and attributes of queue discs, queues, classes and filters from the helper, For example,
 the pfifo_fast can be configured as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TrafficControlHelper</span> <span class="n">tch</span><span class="p">;</span>
-<span class="kt">uint16_t</span> <span class="n">handle</span> <span class="o">=</span> <span class="n">tch</span><span class="p">.</span><span class="n">SetRootQueueDisc</span> <span class="p">(</span><span class="s">&quot;ns3::PfifoFastQueueDisc&quot;</span><span class="p">);</span>
-<span class="n">tch</span><span class="p">.</span><span class="n">AddInternalQueues</span> <span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&quot;ns3::DropTailQueue&quot;</span><span class="p">,</span> <span class="s">&quot;MaxSize&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;1000p&quot;</span><span class="p">));</span>
-<span class="n">QueueDiscContainer</span> <span class="n">qdiscs</span> <span class="o">=</span> <span class="n">tch</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">devices</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TrafficControlHelper</span><span class="w"> </span><span class="n">tch</span><span class="p">;</span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tch</span><span class="p">.</span><span class="n">SetRootQueueDisc</span><span class="p">(</span><span class="s">&quot;ns3::PfifoFastQueueDisc&quot;</span><span class="p">);</span>
+<span class="n">tch</span><span class="p">.</span><span class="n">AddInternalQueues</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ns3::DropTailQueue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MaxSize&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">StringValue</span><span class="p">(</span><span class="s">&quot;1000p&quot;</span><span class="p">));</span>
+<span class="n">QueueDiscContainer</span><span class="w"> </span><span class="n">qdiscs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tch</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">devices</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The above code adds three internal queues to the root queue disc of type PfifoFast.
@@ -309,11 +336,25 @@ device of the i-th node (the index of a device is the same as in DeviceList) is:
 <p>/NodeList/[i]/$ns3::TrafficControlLayer/RootQueueDiscList/[j]/InternalQueueList/1</p>
 <p>For this helper’s configuration to take effect, it should be added to the ns-3 program after
 <code class="docutils literal notranslate"><span class="pre">InternetStackHelper::Install()</span></code> is called, but before IP addresses are configured using
-<code class="docutils literal notranslate"><span class="pre">Ipv{4,6}AddressHelper</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">Ipv{4,6}AddressHelper</span></code>. For an example program, see examples/traffic-control/traffic-control.cc.</p>
+<p>If it is desired to install no queue disc on a device, it is necessary to use the Uninstall
+method of the TrafficControlHelper:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TrafficControlHelper</span><span class="w"> </span><span class="n">tch</span><span class="p">;</span>
+<span class="n">tch</span><span class="p">.</span><span class="n">Uninstall</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+</pre></div>
 </div>
-</div>
-<div class="section" id="implementation-details">
-<h2>Implementation details<a class="headerlink" href="#implementation-details" title="Permalink to this headline">¶</a></h2>
+<p>Note that the Uninstall method must be called after <code class="docutils literal notranslate"><span class="pre">InternetStackHelper::Install()</span></code> is called
+and after that IP addresses are configured using <code class="docutils literal notranslate"><span class="pre">Ipv{4,6}AddressHelper</span></code>. For an example program,
+see src/test/ns3tcp/ns3tcp-cwnd-test-suite.cc (look at the <code class="docutils literal notranslate"><span class="pre">Ns3TcpCwndTestCase2::DoRun</span></code> method).
+Note also that this method does not uninstall the traffic control layer but instead
+removes the root queue disc on the device but keeps the traffic control layer present.
+Also, note that removing the root queue disc on a device supporting flow control does not disable
+the flow control. As mentioned above, this requires to call the DisableFlowControl method of the
+device helper, so that the device is created without support for the flow control.</p>
+</section>
+</section>
+<section id="implementation-details">
+<h2><span class="section-number">33.2.3. </span>Implementation details<a class="headerlink" href="#implementation-details" title="Link to this heading">¶</a></h2>
 <p>In Linux, the struct netdev_queue is used to store information about a single
 transmission queue of a device: status (i.e., whether it has been stopped or not),
 data used by techniques such as Byte Queue Limits and a qdisc pointer field that
@@ -348,16 +389,20 @@ netdevice queues. It follows that the wake mode of a classless queue disc must
 necessarily be WAKE_ROOT. These two configurations are illustrated by the figures below.</p>
 <p><a class="reference internal" href="#fig-classful-queue-disc"><span class="std std-ref">Setup of a queue disc (wake mode: WAKE_ROOT)</span></a> below shows how the TrafficControlLayer map looks like in
 case of a classful root queue disc whose wake mode is WAKE_ROOT.</p>
-<div class="figure align-default" id="id1">
+<figure class="align-default" id="id1">
 <span id="fig-classful-queue-disc"></span><img alt="_images/classful-queue-disc.png" src="_images/classful-queue-disc.png" />
-<p class="caption"><span class="caption-text">Setup of a queue disc (wake mode: WAKE_ROOT)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Setup of a queue disc (wake mode: WAKE_ROOT)</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p><a class="reference internal" href="#fig-multi-queue-aware-queue-disc"><span class="std std-ref">Setup of a multi-queue aware queue disc</span></a> below shows instead how the TrafficControlLayer
 map looks like in case of a classful root queue disc whose wake mode is WAKE_CHILD.</p>
-<div class="figure align-default" id="id2">
+<figure class="align-default" id="id2">
 <span id="fig-multi-queue-aware-queue-disc"></span><img alt="_images/multi-queue-aware-queue-disc.png" src="_images/multi-queue-aware-queue-disc.png" />
-<p class="caption"><span class="caption-text">Setup of a multi-queue aware queue disc</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Setup of a multi-queue aware queue disc</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>A NetDeviceQueueInterface object is used by the traffic control layer to access the
 information stored in the NetDeviceQueue objects, retrieve the number of transmission
 queues of the device and get the transmission queue selected for the transmission of a
@@ -371,8 +416,8 @@ method <code class="docutils literal notranslate"><span class="pre">CsmaHelper::
 <li><p>when notified that a netdevice queue interface has been aggregated, traffic control aware devices can cache the pointer to the netdevice queue interface created by the traffic control layer into a member variable. Also, multi-queue devices can set the number of device transmission queues and set the select queue callback through the netdevice queue interface</p></li>
 <li><p>at initialization time, the traffic control (after calling device-&gt;Initialize () to ensure that the netdevice has set the number of device transmission queues, if it has to do so) completes the installation of the queue discs by setting the wake callbacks on the device transmission queues (through the netdevice queue interface). Also, the traffic control calls the Initialize method of the root queue discs.  This initialization of queue discs triggers calls to the <code class="docutils literal notranslate"><span class="pre">CheckConfig</span></code> and <code class="docutils literal notranslate"><span class="pre">InitializeParams</span></code> methods of the queue disc.</p></li>
 </ul>
-<div class="section" id="requeue">
-<h3>Requeue<a class="headerlink" href="#requeue" title="Permalink to this headline">¶</a></h3>
+<section id="requeue">
+<h3><span class="section-number">33.2.3.1. </span>Requeue<a class="headerlink" href="#requeue" title="Link to this heading">¶</a></h3>
 <p>In Linux, a packet dequeued from a queue disc can be requeued (i.e., stored somewhere
 and sent to the device at a later time) in some circumstances. Firstly, the function
 used to dequeue a packet (dequeue_skb) actually dequeues a packet only if the device
@@ -406,41 +451,48 @@ packet is not requeued.</p>
 </ul>
 <p>It turns out that packets may only be requeued when the underlying device is multi-queue
 and supports flow control.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Queue disciplines</a><ul>
-<li><a class="reference internal" href="#model-description">Model Description</a><ul>
-<li><a class="reference internal" href="#design">Design</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">33.2. Queue disciplines</a><ul>
+<li><a class="reference internal" href="#model-description">33.2.1. Model Description</a><ul>
+<li><a class="reference internal" href="#design">33.2.1.1. Design</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#usage">Usage</a><ul>
-<li><a class="reference internal" href="#helpers">Helpers</a></li>
+<li><a class="reference internal" href="#usage">33.2.2. Usage</a><ul>
+<li><a class="reference internal" href="#helpers">33.2.2.1. Helpers</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#implementation-details">Implementation details</a><ul>
-<li><a class="reference internal" href="#requeue">Requeue</a></li>
+<li><a class="reference internal" href="#implementation-details">33.2.3. Implementation details</a><ul>
+<li><a class="reference internal" href="#requeue">33.2.3.1. Requeue</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="traffic-control-layer.html"
-                        title="previous chapter">Traffic Control Layer</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="fifo.html"
-                        title="next chapter">Fifo queue disc</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="traffic-control-layer.html"
+                          title="previous chapter"><span class="section-number">33.1. </span>Traffic Control Layer</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="fifo.html"
+                          title="next chapter"><span class="section-number">33.3. </span>Fifo queue disc</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -452,12 +504,12 @@ and supports flow control.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -469,22 +521,23 @@ and supports flow control.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="fifo.html" title="Fifo queue disc"
+          <a href="fifo.html" title="33.3. Fifo queue disc"
              >next</a> |</li>
         <li class="right" >
-          <a href="traffic-control-layer.html" title="Traffic Control Layer"
+          <a href="traffic-control-layer.html" title="33.1. Traffic Control Layer"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
 
-          <li class="nav-item nav-item-1"><a href="traffic-control.html" >Traffic Control Layer</a><span class="navelem">&nbsp;</span></li> 
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" ><span class="section-number">33. </span>Traffic Control Layer</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">33.2. </span>Queue disciplines</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 17:37.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:57.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

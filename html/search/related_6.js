@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['hwmpprotocol_59893',['HwmpProtocol',['../classns3_1_1dot11s_1_1_hwmp_protocol_mac.html#ab167f03f2bcac9989eb4e637bc9da429',1,'ns3::dot11s::HwmpProtocolMac']]],
-  ['hwmpprotocolmac_59894',['HwmpProtocolMac',['../classns3_1_1dot11s_1_1_hwmp_protocol.html#a56ef929e9b9723614942cd480b041c27',1,'ns3::dot11s::HwmpProtocol']]]
+  ['getpointer_0',['GetPointer',['../df/dff/classns3_1_1_ptr.html#abdd7bdc0273e8d49ccc4d193bfd7dbb1',1,'ns3::Ptr']]],
+  ['globalroutinglsa_1',['GlobalRoutingLSA',['../d8/d25/classns3_1_1_global_routing_link_record.html#aea7a34c33905cb81b05fc8bfa34f7db9',1,'ns3::GlobalRoutingLinkRecord']]],
+  ['gnuplot_2',['Gnuplot',['../dc/dc1/classns3_1_1_gnuplot_dataset.html#a1c5849e8b50d57cb5e3c7a2557e875e9',1,'ns3::GnuplotDataset']]]
 ];

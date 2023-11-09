@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>Traffic Control Layer &#8212; Model Library</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>33.1. Traffic Control Layer &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Queue disciplines" href="queue-discs.html" />
-    <link rel="prev" title="Traffic Control Layer" href="traffic-control.html" />
+    <link rel="next" title="33.2. Queue disciplines" href="queue-discs.html" />
+    <link rel="prev" title="33. Traffic Control Layer" href="traffic-control.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Models</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,16 +126,17 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="queue-discs.html" title="Queue disciplines"
+          <a href="queue-discs.html" title="33.2. Queue disciplines"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="traffic-control.html" title="Traffic Control Layer"
+          <a href="traffic-control.html" title="33. Traffic Control Layer"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
 
-          <li class="nav-item nav-item-1"><a href="traffic-control.html" accesskey="U">Traffic Control Layer</a><span class="navelem">&nbsp;</span></li> 
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" accesskey="U"><span class="section-number">33. </span>Traffic Control Layer</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">33.1. </span>Traffic Control Layer</a></li> 
       </ul>
     </div>  
 
@@ -130,14 +145,14 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="traffic-control-layer">
-<h1>Traffic Control Layer<a class="headerlink" href="#traffic-control-layer" title="Permalink to this headline">¶</a></h1>
+  <section id="traffic-control-layer">
+<h1><span class="section-number">33.1. </span>Traffic Control Layer<a class="headerlink" href="#traffic-control-layer" title="Link to this heading">¶</a></h1>
 <p>The Traffic Control layer aims at introducing an equivalent of the Linux Traffic
 Control infrastructure into ns-3. The Traffic Control layer sits in between
 the NetDevices (L2) and any network protocol (e.g. IP). It is in charge of processing
 packets and performing actions on them: scheduling, dropping, marking, policing, etc.</p>
-<div class="section" id="introducing-the-traffic-control-layer">
-<h2>Introducing the Traffic Control Layer<a class="headerlink" href="#introducing-the-traffic-control-layer" title="Permalink to this headline">¶</a></h2>
+<section id="introducing-the-traffic-control-layer">
+<h2><span class="section-number">33.1.1. </span>Introducing the Traffic Control Layer<a class="headerlink" href="#introducing-the-traffic-control-layer" title="Link to this heading">¶</a></h2>
 <p>The Traffic Control layer intercepts both outgoing packets flowing downwards from
 the network layer to the network device and incoming packets flowing in the opposite
 direction. Currently, only outgoing packets are processed by the Traffic Control layer.
@@ -146,24 +161,24 @@ multiple actions on them.</p>
 <p>In the following, more details are given about how the Traffic Control layer intercepts
 outgoing and incoming packets and, more in general, about how the packets traverse the
 network stack.</p>
-<div class="section" id="transmitting-packets">
-<h3>Transmitting packets<a class="headerlink" href="#transmitting-packets" title="Permalink to this headline">¶</a></h3>
+<section id="transmitting-packets">
+<h3><span class="section-number">33.1.1.1. </span>Transmitting packets<a class="headerlink" href="#transmitting-packets" title="Link to this heading">¶</a></h3>
 <p>The IPv{4,6} interfaces uses the aggregated object TrafficControlLayer to send
 down packets, instead of calling NetDevice::Send() directly. After the analysis
 and the process of the packet, when the backpressure mechanism allows it,
 TrafficControlLayer will call the Send() method on the right NetDevice.</p>
-</div>
-<div class="section" id="receiving-packets">
-<h3>Receiving packets<a class="headerlink" href="#receiving-packets" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="receiving-packets">
+<h3><span class="section-number">33.1.1.2. </span>Receiving packets<a class="headerlink" href="#receiving-packets" title="Link to this heading">¶</a></h3>
 <p>The callback chain that (in the past) involved IPv{4,6}L3Protocol and NetDevices,
 through ReceiveCallback, is extended to involve TrafficControlLayer. When an
 IPv{4,6}Interface is added in the IPv{4,6}L3Protocol, the callback chain is
 configured to have the following packet exchange:</p>
 <p>NetDevice –&gt; Node –&gt; TrafficControlLayer –&gt; IPv{4,6}L3Protocol</p>
-</div>
-</div>
-<div class="section" id="brief-description-of-old-node-device-protocol-interactions">
-<h2>Brief description of old node/device/protocol interactions<a class="headerlink" href="#brief-description-of-old-node-device-protocol-interactions" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="brief-description-of-old-node-device-protocol-interactions">
+<h2><span class="section-number">33.1.2. </span>Brief description of old node/device/protocol interactions<a class="headerlink" href="#brief-description-of-old-node-device-protocol-interactions" title="Link to this heading">¶</a></h2>
 <p>The main question that we would like to answer in the following paragraphs is:
 how a ns-3 node can send/receive packets?</p>
 <p>If we analyze any example out there, the ability of the node to receive/transmit
@@ -172,8 +187,8 @@ packets derives from the interaction of two helper:</p>
 <li><p>L2 Helper (something derived from NetDevice)</p></li>
 <li><p>L3 Helper (usually from Internet module)</p></li>
 </ul>
-<div class="section" id="l2-helper-main-operations">
-<h3>L2 Helper main operations<a class="headerlink" href="#l2-helper-main-operations" title="Permalink to this headline">¶</a></h3>
+<section id="l2-helper-main-operations">
+<h3><span class="section-number">33.1.2.1. </span>L2 Helper main operations<a class="headerlink" href="#l2-helper-main-operations" title="Link to this heading">¶</a></h3>
 <p>Any good L2 Helper will do the following operations:</p>
 <ul class="simple">
 <li><p>Create n netdevices (n&gt;1)</p></li>
@@ -193,9 +208,9 @@ which accept as signature:</p>
 invoked.</p>
 <p>Who is responsible to set ProtocolHandler ? We will analyze that in the next
 section.</p>
-</div>
-<div class="section" id="l3-helper">
-<h3>L3 Helper<a class="headerlink" href="#l3-helper" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="l3-helper">
+<h3><span class="section-number">33.1.2.2. </span>L3 Helper<a class="headerlink" href="#l3-helper" title="Link to this heading">¶</a></h3>
 <p>We have only internet which provides network protocol (IP). That module splits
 the operations between two helpers: InternetStackHelper and Ipv{4,6}AddressHelper.</p>
 <p>InternetStackHelper::Install (internet/helper/internet-stack-helper.cc:423)
@@ -211,9 +226,9 @@ a list of NetDevice. For each of them, the node and Ipv4L3Protocol pointers are
 retrieved; if an Ipv4Interface is already registered for the device, on that the
 address is set. Otherwise, the method Ipv4L3Protocol::AddInterface is called,
 before adding the address.</p>
-</div>
-<div class="section" id="ip-interfaces">
-<h3>IP interfaces<a class="headerlink" href="#ip-interfaces" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ip-interfaces">
+<h3><span class="section-number">33.1.2.3. </span>IP interfaces<a class="headerlink" href="#ip-interfaces" title="Link to this heading">¶</a></h3>
 <p>In Ipv4L3Protocol::AddInterface (src/internet/model/ipv4-l3-protocol.cc:300)
 two protocol handlers are installed: one that react to ipv4 protocol number,
 and one that react to arp protocol number (Ipv4L3Protocol::Receive and
@@ -227,40 +242,47 @@ frame padding. If checksum is not OK, it drops the packet. Otherwise, forward
 the packet to the raw sockets (not used). Then, it ask the routing protocol what
 is the destiny of that packet. The choices are: Ipv4L3Protocol::{IpForward,
 IpMulticastForward,LocalDeliver,RouteInputError}.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Traffic Control Layer</a><ul>
-<li><a class="reference internal" href="#introducing-the-traffic-control-layer">Introducing the Traffic Control Layer</a><ul>
-<li><a class="reference internal" href="#transmitting-packets">Transmitting packets</a></li>
-<li><a class="reference internal" href="#receiving-packets">Receiving packets</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">33.1. Traffic Control Layer</a><ul>
+<li><a class="reference internal" href="#introducing-the-traffic-control-layer">33.1.1. Introducing the Traffic Control Layer</a><ul>
+<li><a class="reference internal" href="#transmitting-packets">33.1.1.1. Transmitting packets</a></li>
+<li><a class="reference internal" href="#receiving-packets">33.1.1.2. Receiving packets</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#brief-description-of-old-node-device-protocol-interactions">Brief description of old node/device/protocol interactions</a><ul>
-<li><a class="reference internal" href="#l2-helper-main-operations">L2 Helper main operations</a></li>
-<li><a class="reference internal" href="#l3-helper">L3 Helper</a></li>
-<li><a class="reference internal" href="#ip-interfaces">IP interfaces</a></li>
+<li><a class="reference internal" href="#brief-description-of-old-node-device-protocol-interactions">33.1.2. Brief description of old node/device/protocol interactions</a><ul>
+<li><a class="reference internal" href="#l2-helper-main-operations">33.1.2.1. L2 Helper main operations</a></li>
+<li><a class="reference internal" href="#l3-helper">33.1.2.2. L3 Helper</a></li>
+<li><a class="reference internal" href="#ip-interfaces">33.1.2.3. IP interfaces</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="traffic-control.html"
-                        title="previous chapter">Traffic Control Layer</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="queue-discs.html"
-                        title="next chapter">Queue disciplines</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="traffic-control.html"
+                          title="previous chapter"><span class="section-number">33. </span>Traffic Control Layer</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="queue-discs.html"
+                          title="next chapter"><span class="section-number">33.2. </span>Queue disciplines</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -272,12 +294,12 @@ IpMulticastForward,LocalDeliver,RouteInputError}.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -289,22 +311,23 @@ IpMulticastForward,LocalDeliver,RouteInputError}.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="queue-discs.html" title="Queue disciplines"
+          <a href="queue-discs.html" title="33.2. Queue disciplines"
              >next</a> |</li>
         <li class="right" >
-          <a href="traffic-control.html" title="Traffic Control Layer"
+          <a href="traffic-control.html" title="33. Traffic Control Layer"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
 
-          <li class="nav-item nav-item-1"><a href="traffic-control.html" >Traffic Control Layer</a><span class="navelem">&nbsp;</span></li> 
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" ><span class="section-number">33. </span>Traffic Control Layer</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">33.1. </span>Traffic Control Layer</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 17:37.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:57.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

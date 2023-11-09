@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>Tracing &#8212; Manual</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3.3. Tracing &#8212; Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Data Collection" href="data-collection.html" />
-    <link rel="prev" title="Logging" href="logging.html" />
+    <link rel="next" title="3.4. Data Collection" href="data-collection.html" />
+    <link rel="prev" title="3.2. Hash Functions" href="hash-functions.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Manual</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Manual</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,15 +126,17 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="data-collection.html" title="Data Collection"
+          <a href="data-collection.html" title="3.4. Data Collection"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="logging.html" title="Logging"
+          <a href="hash-functions.html" title="3.2. Hash Functions"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
- 
+
+          <li class="nav-item nav-item-1"><a href="features.html" accesskey="U"><span class="section-number">3. </span>Additional Tools</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">3.3. </span>Tracing</a></li> 
       </ul>
     </div>  
 
@@ -129,8 +145,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="tracing">
-<h1>Tracing<a class="headerlink" href="#tracing" title="Permalink to this headline">¶</a></h1>
+  <section id="tracing">
+<h1><span class="section-number">3.3. </span>Tracing<a class="headerlink" href="#tracing" title="Link to this heading">¶</a></h1>
 <p>The tracing subsystem is one of the most important mechanisms to understand in
 <em>ns-3</em>. In most cases, <em>ns-3</em> users will have a brilliant idea for some new and
 improved networking feature. In order to verify that this idea works, the
@@ -140,18 +156,18 @@ behavior of the feature.</p>
 <p>In other words, the whole point of running a simulation is to generate output
 for further study. In <em>ns-3</em>, the subsystem that enables a researcher to do this
 is the tracing subsystem.</p>
-<div class="section" id="tracing-motivation">
-<h2>Tracing Motivation<a class="headerlink" href="#tracing-motivation" title="Permalink to this headline">¶</a></h2>
+<section id="tracing-motivation">
+<h2><span class="section-number">3.3.1. </span>Tracing Motivation<a class="headerlink" href="#tracing-motivation" title="Link to this heading">¶</a></h2>
 <p>There are many ways to get information out of a program. The most
 straightforward way is to just directly print the information to the standard
 output, as in,</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="p">...</span>
-<span class="kt">int</span> <span class="n">main</span> <span class="p">()</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span>
 <span class="p">{</span>
-  <span class="p">...</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;The value of x is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-  <span class="p">...</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;The value of x is &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="p">...</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -174,9 +190,9 @@ of interest changed or an interesting event happened.</p>
 <p>The <em>ns-3</em> tracing system is designed to work along those lines and is
 well-integrated with the Attribute and Config substems allowing for relatively
 simple use scenarios.</p>
-</div>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="overview">
+<h2><span class="section-number">3.3.2. </span>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
 <p>The tracing subsystem relies heavily on the <em>ns-3</em> Callback and Attribute
 mechanisms. You should read and understand the corresponding sections of the
 manual before attempting to understand the tracing system.</p>
@@ -215,18 +231,18 @@ interesting event happens, the trace source invokes its <code class="docutils li
 zero or more parameters. This tells the source to go through its list of
 callbacks invoking each one in turn. In this way, the parameter(s) are
 communicated to the trace sinks, which are just functions.</p>
-<div class="section" id="the-simplest-example">
-<h3>The Simplest Example<a class="headerlink" href="#the-simplest-example" title="Permalink to this headline">¶</a></h3>
+<section id="the-simplest-example">
+<h3><span class="section-number">3.3.2.1. </span>The Simplest Example<a class="headerlink" href="#the-simplest-example" title="Link to this heading">¶</a></h3>
 <p>It will be useful to go walk a quick example just to reinforce what we’ve
 said.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;ns3/object.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;ns3/uinteger.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;ns3/traced-value.h&quot;&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;ns3/trace-source-accessor.h&quot;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ns3/object.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ns3/uinteger.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ns3/traced-value.h&quot;</span><span class="c1">&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ns3/trace-source-accessor.h&quot;</span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">ns3</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ns3</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>The first thing to do is include the required files. As mentioned above, the
@@ -242,23 +258,23 @@ plain-old-data (POD) types. Operator=, operator++, operator–, operator+,
 operator==, etc.</p>
 <p>What this all means is that you will be able to trace changes to an object
 made using those operators.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyObject</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Object</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyObject</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Object</span>
 <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-  <span class="k">static</span> <span class="n">TypeId</span> <span class="n">GetTypeId</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="k">static</span> <span class="n">TypeId</span> <span class="n">tid</span> <span class="o">=</span> <span class="n">TypeId</span> <span class="p">(</span><span class="s">&quot;MyObject&quot;</span><span class="p">)</span>
-      <span class="p">.</span><span class="n">SetParent</span> <span class="p">(</span><span class="n">Object</span><span class="o">::</span><span class="n">GetTypeId</span> <span class="p">())</span>
-      <span class="p">.</span><span class="n">AddConstructor</span><span class="o">&lt;</span><span class="n">MyObject</span><span class="o">&gt;</span> <span class="p">()</span>
-      <span class="p">.</span><span class="n">AddTraceSource</span> <span class="p">(</span><span class="s">&quot;MyInteger&quot;</span><span class="p">,</span>
-                       <span class="s">&quot;An integer value to trace.&quot;</span><span class="p">,</span>
-                       <span class="n">MakeTraceSourceAccessor</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">MyObject</span><span class="o">::</span><span class="n">m_myInt</span><span class="p">))</span>
-      <span class="p">;</span>
-    <span class="k">return</span> <span class="n">tid</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">TypeId</span><span class="w"> </span><span class="n">GetTypeId</span><span class="p">()</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">TypeId</span><span class="w"> </span><span class="n">tid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TypeId</span><span class="p">(</span><span class="s">&quot;MyObject&quot;</span><span class="p">)</span>
+<span class="w">      </span><span class="p">.</span><span class="n">SetParent</span><span class="p">(</span><span class="n">Object</span><span class="o">::</span><span class="n">GetTypeId</span><span class="p">())</span>
+<span class="w">      </span><span class="p">.</span><span class="n">AddConstructor</span><span class="o">&lt;</span><span class="n">MyObject</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="w">      </span><span class="p">.</span><span class="n">AddTraceSource</span><span class="p">(</span><span class="s">&quot;MyInteger&quot;</span><span class="p">,</span>
+<span class="w">                      </span><span class="s">&quot;An integer value to trace.&quot;</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">MakeTraceSourceAccessor</span><span class="p">(</span><span class="o">&amp;</span><span class="n">MyObject</span><span class="o">::</span><span class="n">m_myInt</span><span class="p">))</span>
+<span class="w">      </span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">tid</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 
-  <span class="n">MyObject</span> <span class="p">()</span> <span class="p">{}</span>
-  <span class="n">TracedValue</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span> <span class="n">m_myInt</span><span class="p">;</span>
+<span class="w">  </span><span class="n">MyObject</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="n">TracedValue</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_myInt</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -271,9 +287,9 @@ source to the outside world. The <code class="docutils literal notranslate"><spa
 infrastructure that overloads the operators mentioned above and drives the
 callback process.:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span>
-<span class="nf">IntTrace</span> <span class="p">(</span><span class="n">Int</span> <span class="n">oldValue</span><span class="p">,</span> <span class="n">Int</span> <span class="n">newValue</span><span class="p">)</span>
+<span class="nf">IntTrace</span><span class="p">(</span><span class="n">Int</span><span class="w"> </span><span class="n">oldValue</span><span class="p">,</span><span class="w"> </span><span class="n">Int</span><span class="w"> </span><span class="n">newValue</span><span class="p">)</span>
 <span class="p">{</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Traced &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">oldValue</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; to &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">newValue</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Traced &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">oldValue</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; to &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">newValue</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -281,13 +297,13 @@ callback process.:</p>
 function. This function will be called whenever one of the operators of the
 <code class="docutils literal notranslate"><span class="pre">TracedValue</span></code> is executed.:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span>
-<span class="nf">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
-  <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">MyObject</span><span class="o">&gt;</span> <span class="n">myObject</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">MyObject</span><span class="o">&gt;</span> <span class="p">();</span>
+<span class="w">  </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">MyObject</span><span class="o">&gt;</span><span class="w"> </span><span class="n">myObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">MyObject</span><span class="o">&gt;</span><span class="p">();</span>
 
-  <span class="n">myObject</span><span class="o">-&gt;</span><span class="n">TraceConnectWithoutContext</span> <span class="p">(</span><span class="s">&quot;MyInteger&quot;</span><span class="p">,</span> <span class="n">MakeCallback</span><span class="p">(</span><span class="o">&amp;</span><span class="n">IntTrace</span><span class="p">));</span>
+<span class="w">  </span><span class="n">myObject</span><span class="o">-&gt;</span><span class="n">TraceConnectWithoutContext</span><span class="p">(</span><span class="s">&quot;MyInteger&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MakeCallback</span><span class="p">(</span><span class="o">&amp;</span><span class="n">IntTrace</span><span class="p">));</span>
 
-  <span class="n">myObject</span><span class="o">-&gt;</span><span class="n">m_myInt</span> <span class="o">=</span> <span class="mi">1234</span><span class="p">;</span>
+<span class="w">  </span><span class="n">myObject</span><span class="o">-&gt;</span><span class="n">m_myInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1234</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -303,7 +319,7 @@ the callback. The overloaded operators (++, –, etc.) will use this
 of the Attribute assigned to the trace source. Let’s ignore the bit about
 context for now since it is not important yet.</p>
 <p>Finally, the line,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">myObject</span><span class="o">-&gt;</span><span class="n">m_myInt</span> <span class="o">=</span> <span class="mi">1234</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">myObject</span><span class="o">-&gt;</span><span class="n">m_myInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1234</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>should be interpreted as an invocation of <code class="docutils literal notranslate"><span class="pre">operator=</span></code> on the member variable
@@ -319,22 +335,22 @@ connect trace sources to trace sinks. The act of “hitting” a trace source is
 executing an operator on the trace source which fires callbacks. This results in
 the trace sink callbacks registering interest in the source being called with
 the parameters provided by the source.</p>
-</div>
-<div class="section" id="using-the-config-subsystem-to-connect-to-trace-sources">
-<h3>Using the Config Subsystem to Connect to Trace Sources<a class="headerlink" href="#using-the-config-subsystem-to-connect-to-trace-sources" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="using-the-config-subsystem-to-connect-to-trace-sources">
+<h3><span class="section-number">3.3.2.2. </span>Using the Config Subsystem to Connect to Trace Sources<a class="headerlink" href="#using-the-config-subsystem-to-connect-to-trace-sources" title="Link to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">TraceConnectWithoutContext</span></code> call shown above in the simple example is
 actually very rarely used in the system. More typically, the <code class="docutils literal notranslate"><span class="pre">Config</span></code>
 subsystem is used to allow selecting a trace source in the system using what is
 called a <em>config path</em>.</p>
 <p>For example, one might find something that looks like the following in the
 system (taken from <code class="docutils literal notranslate"><span class="pre">examples/tcp-large-transfer.cc</span></code>):</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">CwndTracer</span> <span class="p">(</span><span class="kt">uint32_t</span> <span class="n">oldval</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">newval</span><span class="p">)</span> <span class="p">{}</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">CwndTracer</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">oldval</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">newval</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
 
 <span class="p">...</span>
 
-<span class="n">Config</span><span class="o">::</span><span class="n">ConnectWithoutContext</span> <span class="p">(</span>
-  <span class="s">&quot;/NodeList/0/$ns3::TcpL4Protocol/SocketList/0/CongestionWindow&quot;</span><span class="p">,</span>
-  <span class="n">MakeCallback</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">CwndTracer</span><span class="p">));</span>
+<span class="n">Config</span><span class="o">::</span><span class="n">ConnectWithoutContext</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;/NodeList/0/$ns3::TcpL4Protocol/SocketList/0/CongestionWindow&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">MakeCallback</span><span class="p">(</span><span class="o">&amp;</span><span class="n">CwndTracer</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>This should look very familiar. It is the same thing as the previous example,
@@ -345,11 +361,11 @@ provided.</p>
 must be an <code class="docutils literal notranslate"><span class="pre">Attribute</span></code> of an <code class="docutils literal notranslate"><span class="pre">Object</span></code>. In fact, if you had a pointer to the
 <code class="docutils literal notranslate"><span class="pre">Object</span></code> that has the “CongestionWindow” <code class="docutils literal notranslate"><span class="pre">Attribute</span></code> handy (call it
 <code class="docutils literal notranslate"><span class="pre">theObject</span></code>), you could write this just like the previous example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">CwndTracer</span> <span class="p">(</span><span class="kt">uint32_t</span> <span class="n">oldval</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">newval</span><span class="p">)</span> <span class="p">{}</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">CwndTracer</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">oldval</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">newval</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
 
 <span class="p">...</span>
 
-<span class="n">theObject</span><span class="o">-&gt;</span><span class="n">TraceConnectWithoutContext</span> <span class="p">(</span><span class="s">&quot;CongestionWindow&quot;</span><span class="p">,</span> <span class="n">MakeCallback</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">CwndTracer</span><span class="p">));</span>
+<span class="n">theObject</span><span class="o">-&gt;</span><span class="n">TraceConnectWithoutContext</span><span class="p">(</span><span class="s">&quot;CongestionWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MakeCallback</span><span class="p">(</span><span class="o">&amp;</span><span class="n">CwndTracer</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>It turns out that the code for <code class="docutils literal notranslate"><span class="pre">Config::ConnectWithoutContext</span></code> does exactly
@@ -379,7 +395,7 @@ simulation.</p>
 <p>This socket, the type of which turns out to be an <code class="docutils literal notranslate"><span class="pre">ns3::TcpSocketImpl</span></code> defines
 an attribute called “CongestionWindow” which is a <code class="docutils literal notranslate"><span class="pre">TracedValue&lt;uint32_t&gt;</span></code>.
 The <code class="docutils literal notranslate"><span class="pre">Config::ConnectWithoutContext</span></code> now does a,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">object</span><span class="o">-&gt;</span><span class="n">TraceConnectWithoutContext</span> <span class="p">(</span><span class="s">&quot;CongestionWindow&quot;</span><span class="p">,</span> <span class="n">MakeCallback</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">CwndTracer</span><span class="p">));</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">object</span><span class="o">-&gt;</span><span class="n">TraceConnectWithoutContext</span><span class="p">(</span><span class="s">&quot;CongestionWindow&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MakeCallback</span><span class="p">(</span><span class="o">&amp;</span><span class="n">CwndTracer</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>using the object pointer from “SocketList/0” which makes the connection between
@@ -388,10 +404,16 @@ the trace source defined in the socket to the callback – <code class="docutils
 congestion window in the TCP socket, the registered callback will be executed
 and the function <code class="docutils literal notranslate"><span class="pre">CwndTracer</span></code> will be called printing out the old and new
 values of the TCP congestion window.</p>
-</div>
-</div>
-<div class="section" id="using-the-tracing-api">
-<h2>Using the Tracing API<a class="headerlink" href="#using-the-tracing-api" title="Permalink to this headline">¶</a></h2>
+<p>As a final note, the <cite>Config::Connect…()</cite> functions
+will throw an error if the targeted TraceSource does not exist at the path
+given.  There are also “fail-safe” versions,
+<cite>Config::Connect…FailSafe()</cite>, if you can’t be sure the TraceSource
+exists.  The fail-safe versions return <cite>true</cite> if at least one connection
+could be made.</p>
+</section>
+</section>
+<section id="using-the-tracing-api">
+<h2><span class="section-number">3.3.3. </span>Using the Tracing API<a class="headerlink" href="#using-the-tracing-api" title="Link to this heading">¶</a></h2>
 <p>There are three levels of interaction with the tracing system:</p>
 <ul class="simple">
 <li><p>Beginning user can easily control which objects are participating in tracing;</p></li>
@@ -401,18 +423,18 @@ the core of the simulator;</p></li>
 <li><p>Advanced users can modify the simulator core to add new tracing sources and
 sinks.</p></li>
 </ul>
-</div>
-<div class="section" id="using-trace-helpers">
-<h2>Using Trace Helpers<a class="headerlink" href="#using-trace-helpers" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="using-trace-helpers">
+<h2><span class="section-number">3.3.4. </span>Using Trace Helpers<a class="headerlink" href="#using-trace-helpers" title="Link to this heading">¶</a></h2>
 <p>The <em>ns-3</em> trace helpers provide a rich environment for configuring and selecting
 different trace events and writing them to files. In previous sections,
 primarily “Building Topologies,” we have seen several varieties of the trace
 helper methods designed for use inside other (device) helpers.</p>
 <p>Perhaps you will recall seeing some of these variations:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pointToPoint</span><span class="p">.</span><span class="n">EnablePcapAll</span> <span class="p">(</span><span class="s">&quot;second&quot;</span><span class="p">);</span>
-<span class="n">pointToPoint</span><span class="p">.</span><span class="n">EnablePcap</span> <span class="p">(</span><span class="s">&quot;second&quot;</span><span class="p">,</span> <span class="n">p2pNodes</span><span class="p">.</span><span class="n">Get</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">GetId</span> <span class="p">(),</span> <span class="mi">0</span><span class="p">);</span>
-<span class="n">csma</span><span class="p">.</span><span class="n">EnablePcap</span> <span class="p">(</span><span class="s">&quot;third&quot;</span><span class="p">,</span> <span class="n">csmaDevices</span><span class="p">.</span><span class="n">Get</span> <span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nb">true</span><span class="p">);</span>
-<span class="n">pointToPoint</span><span class="p">.</span><span class="n">EnableAsciiAll</span> <span class="p">(</span><span class="n">ascii</span><span class="p">.</span><span class="n">CreateFileStream</span> <span class="p">(</span><span class="s">&quot;myfirst.tr&quot;</span><span class="p">));</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pointToPoint</span><span class="p">.</span><span class="n">EnablePcapAll</span><span class="p">(</span><span class="s">&quot;second&quot;</span><span class="p">);</span>
+<span class="n">pointToPoint</span><span class="p">.</span><span class="n">EnablePcap</span><span class="p">(</span><span class="s">&quot;second&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">p2pNodes</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">GetId</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="n">csma</span><span class="p">.</span><span class="n">EnablePcap</span><span class="p">(</span><span class="s">&quot;third&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">csmaDevices</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+<span class="n">pointToPoint</span><span class="p">.</span><span class="n">EnableAsciiAll</span><span class="p">(</span><span class="n">ascii</span><span class="p">.</span><span class="n">CreateFileStream</span><span class="p">(</span><span class="s">&quot;myfirst.tr&quot;</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>What may not be obvious, though, is that there is a consistent model for all of
@@ -437,11 +459,6 @@ but we do strive to make them all work as similarly as possible; and whenever
 possible there are analogs for all methods in all classes.</p>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 49%" />
-<col style="width: 26%" />
-<col style="width: 26%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"></th>
 <th class="head"><p>pcap</p></th>
@@ -466,8 +483,8 @@ inherited by a subclass. Inheriting from a mixin is not considered a form of
 specialization but is really a way to collect functionality.</p>
 <p>Let’s take a quick look at all four of these cases and their respective
 <code class="docutils literal notranslate"><span class="pre">mixins</span></code>.</p>
-<div class="section" id="pcap-tracing-device-helpers">
-<h3>Pcap Tracing Device Helpers<a class="headerlink" href="#pcap-tracing-device-helpers" title="Permalink to this headline">¶</a></h3>
+<section id="pcap-tracing-device-helpers">
+<h3><span class="section-number">3.3.4.1. </span>Pcap Tracing Device Helpers<a class="headerlink" href="#pcap-tracing-device-helpers" title="Link to this heading">¶</a></h3>
 <p>The goal of these helpers is to make it easy to add a consistent pcap trace
 facility to an <em>ns-3</em> device. We want all of the various flavors of pcap tracing
 to work the same across all devices, so the methods of these helpers are
@@ -476,14 +493,14 @@ want to follow the discussion while looking at real code.</p>
 <p>The class <code class="docutils literal notranslate"><span class="pre">PcapHelperForDevice</span></code> is a <code class="docutils literal notranslate"><span class="pre">mixin</span></code> provides the high level
 functionality for using pcap tracing in an <em>ns-3</em> device. Every device must
 implement a single virtual method inherited from this class.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="nf">EnablePcapInternal</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">nd</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">promiscuous</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcapInternal</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nd</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">promiscuous</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>The signature of this method reflects the device-centric view of the situation
 at this level. All of the public methods inherited from class
 <code class="docutils literal notranslate"><span class="pre">PcapUserHelperForDevice</span></code> reduce to calling this single device-dependent
 implementation method. For example, the lowest level pcap method,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">EnablePcap</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">nd</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">promiscuous</span> <span class="o">=</span> <span class="nb">false</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">explicitFilename</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcap</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nd</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">promiscuous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">explicitFilename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>will call the device implementation of <code class="docutils literal notranslate"><span class="pre">EnablePcapInternal</span></code> directly. All
@@ -492,19 +509,19 @@ additional user-level functionality. What this means to the user is that all
 device helpers in the system will have all of the pcap trace methods available;
 and these methods will all work in the same way across devices if the device
 implements <code class="docutils literal notranslate"><span class="pre">EnablePcapInternal</span></code> correctly.</p>
-<div class="section" id="pcap-tracing-device-helper-methods">
-<h4>Pcap Tracing Device Helper Methods<a class="headerlink" href="#pcap-tracing-device-helper-methods" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">EnablePcap</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">nd</span><span class="p">,</span>
-                 <span class="kt">bool</span> <span class="n">promiscuous</span> <span class="o">=</span> <span class="nb">false</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">explicitFilename</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnablePcap</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ndName</span><span class="p">,</span>
-                 <span class="kt">bool</span> <span class="n">promiscuous</span> <span class="o">=</span> <span class="nb">false</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">explicitFilename</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnablePcap</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">NetDeviceContainer</span> <span class="n">d</span><span class="p">,</span>
-                 <span class="kt">bool</span> <span class="n">promiscuous</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnablePcap</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">NodeContainer</span> <span class="n">n</span><span class="p">,</span>
-                 <span class="kt">bool</span> <span class="n">promiscuous</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnablePcap</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">nodeid</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">deviceid</span><span class="p">,</span>
-                 <span class="kt">bool</span> <span class="n">promiscuous</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnablePcapAll</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">promiscuous</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
+<section id="pcap-tracing-device-helper-methods">
+<h4><span class="section-number">3.3.4.1.1. </span>Pcap Tracing Device Helper Methods<a class="headerlink" href="#pcap-tracing-device-helper-methods" title="Link to this heading">¶</a></h4>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcap</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nd</span><span class="p">,</span>
+<span class="w">                </span><span class="kt">bool</span><span class="w"> </span><span class="n">promiscuous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">explicitFilename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcap</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">ndName</span><span class="p">,</span>
+<span class="w">                </span><span class="kt">bool</span><span class="w"> </span><span class="n">promiscuous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">explicitFilename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcap</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">d</span><span class="p">,</span>
+<span class="w">                </span><span class="kt">bool</span><span class="w"> </span><span class="n">promiscuous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcap</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">n</span><span class="p">,</span>
+<span class="w">                </span><span class="kt">bool</span><span class="w"> </span><span class="n">promiscuous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcap</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">nodeid</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">deviceid</span><span class="p">,</span>
+<span class="w">                </span><span class="kt">bool</span><span class="w"> </span><span class="n">promiscuous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcapAll</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">promiscuous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>In each of the methods shown above, there is a default parameter called
@@ -512,9 +529,9 @@ implements <code class="docutils literal notranslate"><span class="pre">EnablePc
 should not be gathered in promiscuous mode. If you do want your traces to
 include all traffic seen by the device (and if the device supports a promiscuous
 mode) simply add a true parameter to any of the calls above. For example,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">nd</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nd</span><span class="p">;</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcap</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="n">nd</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcap</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nd</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>will enable promiscuous mode captures on the <code class="docutils literal notranslate"><span class="pre">NetDevice</span></code> specified by <code class="docutils literal notranslate"><span class="pre">nd</span></code>.</p>
@@ -525,9 +542,9 @@ find the details of these methods; but to summarize …</p>
 <p>You can enable pcap tracing on a particular node/net-device pair by providing a
 <code class="docutils literal notranslate"><span class="pre">Ptr&lt;NetDevice&gt;</span></code> to an <code class="docutils literal notranslate"><span class="pre">EnablePcap</span></code> method. The <code class="docutils literal notranslate"><span class="pre">Ptr&lt;Node&gt;</span></code> is implicit
 since the net device must belong to exactly one <code class="docutils literal notranslate"><span class="pre">Node</span></code>. For example,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">nd</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nd</span><span class="p">;</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcap</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="n">nd</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcap</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nd</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can enable pcap tracing on a particular node/net-device pair by providing a
@@ -535,10 +552,10 @@ since the net device must belong to exactly one <code class="docutils literal no
 method.  The <code class="docutils literal notranslate"><span class="pre">Ptr&lt;NetDevice&gt;</span></code> is looked up from the name string.  Again, the
 <code class="docutils literal notranslate"><span class="pre">&lt;Node&gt;</span></code> is implicit since the named net device must belong to exactly one
 <code class="docutils literal notranslate"><span class="pre">Node</span></code>.  For example,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;server&quot;</span> <span class="p">...);</span>
-<span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;server/eth0&quot;</span> <span class="p">...);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Names</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;server&quot;</span><span class="w"> </span><span class="p">...);</span>
+<span class="n">Names</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;server/eth0&quot;</span><span class="w"> </span><span class="p">...);</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcap</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="s">&quot;server/ath0&quot;</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcap</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;server/ath0&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can enable pcap tracing on a collection of node/net-device pairs by
@@ -547,9 +564,9 @@ type is checked.  For each device of the proper type (the same type as is
 managed by the device helper), tracing is enabled. Again, the <code class="docutils literal notranslate"><span class="pre">&lt;Node&gt;</span></code> is
 implicit since the found net device must belong to exactly one <code class="docutils literal notranslate"><span class="pre">Node</span></code>. For
 example,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NetDeviceContainer</span> <span class="n">d</span> <span class="o">=</span> <span class="p">...;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcap</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="n">d</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcap</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can enable pcap tracing on a collection of node/net-device pairs by
@@ -558,25 +575,25 @@ attached <code class="docutils literal notranslate"><span class="pre">NetDevices
 node in the container, the type of that device is checked.  For each device of
 the proper type (the same type as is managed by the device helper), tracing is
 enabled.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span> <span class="n">n</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcap</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcap</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can enable pcap tracing on the basis of node ID and device ID as well as
 with explicit <code class="docutils literal notranslate"><span class="pre">Ptr</span></code>. Each <code class="docutils literal notranslate"><span class="pre">Node</span></code> in the system has an integer node ID and
 each device connected to a node has an integer device ID.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnablePcap</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnablePcap</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Finally, you can enable pcap tracing for all devices in the system, with the
 same type as that managed by the device helper.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnablePcapAll</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnablePcapAll</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="pcap-tracing-device-helper-filename-selection">
-<h4>Pcap Tracing Device Helper Filename Selection<a class="headerlink" href="#pcap-tracing-device-helper-filename-selection" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="pcap-tracing-device-helper-filename-selection">
+<h4><span class="section-number">3.3.4.1.2. </span>Pcap Tracing Device Helper Filename Selection<a class="headerlink" href="#pcap-tracing-device-helper-filename-selection" title="Link to this heading">¶</a></h4>
 <p>Implicit in the method descriptions above is the construction of a complete
 filename by the implementation method. By convention, pcap traces in the <em>ns-3</em>
 system are of the form <code class="docutils literal notranslate"><span class="pre">&lt;prefix&gt;-&lt;node</span> <span class="pre">id&gt;-&lt;device</span> <span class="pre">id&gt;.pcap</span></code></p>
@@ -592,8 +609,8 @@ example, if you use the object name service to assign the name “server” to n
 your pcap file name will automatically pick this up and be called
 <code class="docutils literal notranslate"><span class="pre">prefix-server-eth0.pcap</span></code>.</p>
 <p>Finally, two of the methods shown above,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">EnablePcap</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">nd</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">promiscuous</span> <span class="o">=</span> <span class="nb">false</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">explicitFilename</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnablePcap</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ndName</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">promiscuous</span> <span class="o">=</span> <span class="nb">false</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">explicitFilename</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcap</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nd</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">promiscuous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">explicitFilename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcap</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">ndName</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">promiscuous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">explicitFilename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>have a default parameter called <code class="docutils literal notranslate"><span class="pre">explicitFilename</span></code>. When set to true, this
@@ -603,17 +620,17 @@ enable pcap tracing on a single device.</p>
 <p>For example, in order to arrange for a device helper to create a single
 promiscuous pcap capture file of a specific name (<code class="docutils literal notranslate"><span class="pre">my-pcap-file.pcap</span></code>) on a
 given device, one could:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">nd</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nd</span><span class="p">;</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcap</span> <span class="p">(</span><span class="s">&quot;my-pcap-file.pcap&quot;</span><span class="p">,</span> <span class="n">nd</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcap</span><span class="p">(</span><span class="s">&quot;my-pcap-file.pcap&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nd</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The first <code class="docutils literal notranslate"><span class="pre">true</span></code> parameter enables promiscuous mode traces and the second
 tells the helper to interpret the <code class="docutils literal notranslate"><span class="pre">prefix</span></code> parameter as a complete filename.</p>
-</div>
-</div>
-<div class="section" id="ascii-tracing-device-helpers">
-<h3>Ascii Tracing Device Helpers<a class="headerlink" href="#ascii-tracing-device-helpers" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="ascii-tracing-device-helpers">
+<h3><span class="section-number">3.3.4.2. </span>Ascii Tracing Device Helpers<a class="headerlink" href="#ascii-tracing-device-helpers" title="Link to this heading">¶</a></h3>
 <p>The behavior of the ASCII trace helper <code class="docutils literal notranslate"><span class="pre">mixin</span></code> is substantially similar to
 the pcap version. Take a look at <code class="docutils literal notranslate"><span class="pre">src/network/helper/trace-helper.h</span></code> if you want to
 follow the discussion while looking at real code.</p>
@@ -621,7 +638,7 @@ follow the discussion while looking at real code.</p>
 using ASCII tracing to a device helper class. As in the pcap case, every device
 must implement a single virtual method inherited from the ASCII trace
 <code class="docutils literal notranslate"><span class="pre">mixin</span></code>.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="nf">EnableAsciiInternal</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">nd</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiInternal</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nd</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>The signature of this method reflects the device-centric view of the situation
@@ -630,8 +647,8 @@ output stream. All of the public ASCII-trace-related methods inherited from
 class <code class="docutils literal notranslate"><span class="pre">AsciiTraceHelperForDevice</span></code> reduce to calling this single device-
 dependent implementation method. For example, the lowest level ASCII trace
 methods,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">EnableAscii</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">nd</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnableAscii</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">nd</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">EnableAscii</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nd</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAscii</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nd</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>will call the device implementation of <code class="docutils literal notranslate"><span class="pre">EnableAsciiInternal</span></code> directly,
@@ -641,25 +658,25 @@ functionality. What this means to the user is that all device helpers in the
 system will have all of the ASCII trace methods available; and these methods
 will all work in the same way across devices if the devices implement
 <code class="docutils literal notranslate"><span class="pre">EnablAsciiInternal</span></code> correctly.</p>
-<div class="section" id="ascii-tracing-device-helper-methods">
-<h4>Ascii Tracing Device Helper Methods<a class="headerlink" href="#ascii-tracing-device-helper-methods" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">EnableAscii</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">nd</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnableAscii</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">nd</span><span class="p">);</span>
+<section id="ascii-tracing-device-helper-methods">
+<h4><span class="section-number">3.3.4.2.1. </span>Ascii Tracing Device Helper Methods<a class="headerlink" href="#ascii-tracing-device-helper-methods" title="Link to this heading">¶</a></h4>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">EnableAscii</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nd</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAscii</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nd</span><span class="p">);</span>
 
-<span class="kt">void</span> <span class="nf">EnableAscii</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ndName</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnableAscii</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ndName</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAscii</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">ndName</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAscii</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">ndName</span><span class="p">);</span>
 
-<span class="kt">void</span> <span class="nf">EnableAscii</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">NetDeviceContainer</span> <span class="n">d</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnableAscii</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">,</span> <span class="n">NetDeviceContainer</span> <span class="n">d</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAscii</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAscii</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
 
-<span class="kt">void</span> <span class="nf">EnableAscii</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">NodeContainer</span> <span class="n">n</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnableAscii</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">,</span> <span class="n">NodeContainer</span> <span class="n">n</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAscii</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAscii</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
 
-<span class="kt">void</span> <span class="nf">EnableAscii</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">nodeid</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">deviceid</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnableAscii</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">nodeid</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">deviceid</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAscii</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">nodeid</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">deviceid</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAscii</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">nodeid</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">deviceid</span><span class="p">);</span>
 
-<span class="kt">void</span> <span class="nf">EnableAsciiAll</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnableAsciiAll</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiAll</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiAll</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You are encouraged to peruse the Doxygen for class <code class="docutils literal notranslate"><span class="pre">TraceHelperForDevice</span></code> to
@@ -675,9 +692,9 @@ of API methods is doubled to allow all combinations.</p>
 node/net-device pair by providing a <code class="docutils literal notranslate"><span class="pre">Ptr&lt;NetDevice&gt;</span></code> to an <code class="docutils literal notranslate"><span class="pre">EnableAscii</span></code>
 method. The <code class="docutils literal notranslate"><span class="pre">Ptr&lt;Node&gt;</span></code> is implicit since the net device must belong to
 exactly one <code class="docutils literal notranslate"><span class="pre">Node</span></code>. For example,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">nd</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nd</span><span class="p">;</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="n">nd</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nd</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>In this case, no trace contexts are written to the ASCII trace file since they
@@ -687,13 +704,13 @@ suffix “.tr” instead of “.pcap”.</p>
 <p>If you want to enable ASCII tracing on more than one net device and have all
 traces sent to a single file, you can do that as well by using an object to
 refer to a single file:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">nd1</span><span class="p">;</span>
-<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">nd2</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nd1</span><span class="p">;</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nd2</span><span class="p">;</span>
 <span class="p">...</span>
-<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">asciiTraceHelper</span><span class="p">.</span><span class="n">CreateFileStream</span> <span class="p">(</span><span class="s">&quot;trace-file-name.tr&quot;</span><span class="p">);</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asciiTraceHelper</span><span class="p">.</span><span class="n">CreateFileStream</span><span class="p">(</span><span class="s">&quot;trace-file-name.tr&quot;</span><span class="p">);</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span> <span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">nd1</span><span class="p">);</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span> <span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">nd2</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">nd1</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">nd2</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>In this case, trace contexts are written to the ASCII trace file since they
@@ -705,28 +722,28 @@ for consistency.</p>
 <code class="docutils literal notranslate"><span class="pre">EnablePcap</span></code> method.  The <code class="docutils literal notranslate"><span class="pre">Ptr&lt;NetDevice&gt;</span></code> is looked up from the name
 string.  Again, the <code class="docutils literal notranslate"><span class="pre">&lt;Node&gt;</span></code> is implicit since the named net device must
 belong to exactly one <code class="docutils literal notranslate"><span class="pre">Node</span></code>.  For example,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;client&quot;</span> <span class="p">...);</span>
-<span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;client/eth0&quot;</span> <span class="p">...);</span>
-<span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;server&quot;</span> <span class="p">...);</span>
-<span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;server/eth0&quot;</span> <span class="p">...);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Names</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;client&quot;</span><span class="w"> </span><span class="p">...);</span>
+<span class="n">Names</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;client/eth0&quot;</span><span class="w"> </span><span class="p">...);</span>
+<span class="n">Names</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;server&quot;</span><span class="w"> </span><span class="p">...);</span>
+<span class="n">Names</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;server/eth0&quot;</span><span class="w"> </span><span class="p">...);</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="s">&quot;client/eth0&quot;</span><span class="p">);</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="s">&quot;server/eth0&quot;</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;client/eth0&quot;</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;server/eth0&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This would result in two files named <code class="docutils literal notranslate"><span class="pre">prefix-client-eth0.tr</span></code> and
 <code class="docutils literal notranslate"><span class="pre">prefix-server-eth0.tr</span></code> with traces for each device in the respective trace
 file. Since all of the EnableAscii functions are overloaded to take a stream
 wrapper, you can use that form as well:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;client&quot;</span> <span class="p">...);</span>
-<span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;client/eth0&quot;</span> <span class="p">...);</span>
-<span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;server&quot;</span> <span class="p">...);</span>
-<span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;server/eth0&quot;</span> <span class="p">...);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Names</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;client&quot;</span><span class="w"> </span><span class="p">...);</span>
+<span class="n">Names</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;client/eth0&quot;</span><span class="w"> </span><span class="p">...);</span>
+<span class="n">Names</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;server&quot;</span><span class="w"> </span><span class="p">...);</span>
+<span class="n">Names</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;server/eth0&quot;</span><span class="w"> </span><span class="p">...);</span>
 <span class="p">...</span>
-<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">asciiTraceHelper</span><span class="p">.</span><span class="n">CreateFileStream</span> <span class="p">(</span><span class="s">&quot;trace-file-name.tr&quot;</span><span class="p">);</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asciiTraceHelper</span><span class="p">.</span><span class="n">CreateFileStream</span><span class="p">(</span><span class="s">&quot;trace-file-name.tr&quot;</span><span class="p">);</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span> <span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="s">&quot;client/eth0&quot;</span><span class="p">);</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span> <span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="s">&quot;server/eth0&quot;</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;client/eth0&quot;</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;server/eth0&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This would result in a single trace file called <code class="docutils literal notranslate"><span class="pre">trace-file-name.tr</span></code> that
@@ -737,19 +754,19 @@ providing a <code class="docutils literal notranslate"><span class="pre">NetDevi
 type is checked. For each device of the proper type (the same type as is managed
 by the device helper), tracing is enabled. Again, the <code class="docutils literal notranslate"><span class="pre">&lt;Node&gt;</span></code> is implicit
 since the found net device must belong to exactly one <code class="docutils literal notranslate"><span class="pre">Node</span></code>.  For example,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NetDeviceContainer</span> <span class="n">d</span> <span class="o">=</span> <span class="p">...;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="n">d</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This would result in a number of ASCII trace files being created, each of which
 follows the &lt;prefix&gt;-&lt;node id&gt;-&lt;device id&gt;.tr convention. Combining all of the
 traces into a single file is accomplished similarly to the examples above:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NetDeviceContainer</span> <span class="n">d</span> <span class="o">=</span> <span class="p">...;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
 <span class="p">...</span>
-<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">asciiTraceHelper</span><span class="p">.</span><span class="n">CreateFileStream</span> <span class="p">(</span><span class="s">&quot;trace-file-name.tr&quot;</span><span class="p">);</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asciiTraceHelper</span><span class="p">.</span><span class="n">CreateFileStream</span><span class="p">(</span><span class="s">&quot;trace-file-name.tr&quot;</span><span class="p">);</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span> <span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">d</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can enable ascii tracing on a collection of node/net-device pairs by
@@ -758,9 +775,9 @@ attached <code class="docutils literal notranslate"><span class="pre">NetDevices
 node in the container, the type of that device is checked.  For each device of
 the proper type (the same type as is managed by the device helper), tracing is
 enabled.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span> <span class="n">n</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This would result in a number of ASCII trace files being created, each of which
@@ -769,13 +786,13 @@ traces into a single file is accomplished similarly to the examples above:</p>
 <p>You can enable pcap tracing on the basis of node ID and device ID as well as
 with explicit <code class="docutils literal notranslate"><span class="pre">Ptr</span></code>. Each <code class="docutils literal notranslate"><span class="pre">Node</span></code> in the system has an integer node ID and
 each device connected to a node has an integer device ID.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnableAscii</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Of course, the traces can be combined into a single file as shown above.</p>
 <p>Finally, you can enable pcap tracing for all devices in the system, with the
 same type as that managed by the device helper.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiAll</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiAll</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This would result in a number of ASCII trace files being created, one for
@@ -783,9 +800,9 @@ every device in the system of the type managed by the helper. All of these
 files will follow the &lt;prefix&gt;-&lt;node id&gt;-&lt;device id&gt;.tr convention. Combining
 all of the traces into a single file is accomplished similarly to the examples
 above.</p>
-</div>
-<div class="section" id="ascii-tracing-device-helper-filename-selection">
-<h4>Ascii Tracing Device Helper Filename Selection<a class="headerlink" href="#ascii-tracing-device-helper-filename-selection" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="ascii-tracing-device-helper-filename-selection">
+<h4><span class="section-number">3.3.4.2.2. </span>Ascii Tracing Device Helper Filename Selection<a class="headerlink" href="#ascii-tracing-device-helper-filename-selection" title="Link to this heading">¶</a></h4>
 <p>Implicit in the prefix-style method descriptions above is the construction of
 the complete filenames by the implementation method. By convention, ASCII traces
 in the <em>ns-3</em> system are of the form <code class="docutils literal notranslate"><span class="pre">&lt;prefix&gt;-&lt;node</span> <span class="pre">id&gt;-&lt;device</span> <span class="pre">id&gt;.tr</span></code>.</p>
@@ -800,10 +817,10 @@ example, if you use the object name service to assign the name “server” to n
 <code class="docutils literal notranslate"><span class="pre">prefix-server-1.tr</span></code> and if you also assign the name “eth0” to the device,
 your ASCII trace file name will automatically pick this up and be called
 <code class="docutils literal notranslate"><span class="pre">prefix-server-eth0.tr</span></code>.</p>
-</div>
-</div>
-<div class="section" id="pcap-tracing-protocol-helpers">
-<h3>Pcap Tracing Protocol Helpers<a class="headerlink" href="#pcap-tracing-protocol-helpers" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="pcap-tracing-protocol-helpers">
+<h3><span class="section-number">3.3.4.3. </span>Pcap Tracing Protocol Helpers<a class="headerlink" href="#pcap-tracing-protocol-helpers" title="Link to this heading">¶</a></h3>
 <p>The goal of these <code class="docutils literal notranslate"><span class="pre">mixins</span></code> is to make it easy to add a consistent pcap trace
 facility to protocols. We want all of the various flavors of pcap tracing to
 work the same across all protocols, so the methods of these helpers are
@@ -820,14 +837,14 @@ will be a separate implementation for <code class="docutils literal notranslate"
 difference will be in the method names and signatures.  Different method names
 are required to disambiguate class <code class="docutils literal notranslate"><span class="pre">Ipv4</span></code> from <code class="docutils literal notranslate"><span class="pre">Ipv6</span></code> which are both derived
 from class <code class="docutils literal notranslate"><span class="pre">Object</span></code>, and methods that share the same signature.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="nf">EnablePcapIpv4Internal</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="n">ipv4</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">interface</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcapIpv4Internal</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ipv4</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">interface</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>The signature of this method reflects the protocol and interface-centric view of
 the situation at this level. All of the public methods inherited from class
 <code class="docutils literal notranslate"><span class="pre">PcapHelperForIpv4</span></code> reduce to calling this single device-dependent
 implementation method.  For example, the lowest level pcap method,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">EnablePcapIpv4</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="n">ipv4</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">interface</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcapIpv4</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ipv4</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">interface</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>will call the device implementation of <code class="docutils literal notranslate"><span class="pre">EnablePcapIpv4Internal</span></code> directly.  All
@@ -836,36 +853,36 @@ additional user-level functionality. What this means to the user is that all
 protocol helpers in the system will have all of the pcap trace methods
 available; and these methods will all work in the same way across protocols if
 the helper implements <code class="docutils literal notranslate"><span class="pre">EnablePcapIpv4Internal</span></code> correctly.</p>
-<div class="section" id="pcap-tracing-protocol-helper-methods">
-<h4>Pcap Tracing Protocol Helper Methods<a class="headerlink" href="#pcap-tracing-protocol-helper-methods" title="Permalink to this headline">¶</a></h4>
+<section id="pcap-tracing-protocol-helper-methods">
+<h4><span class="section-number">3.3.4.3.1. </span>Pcap Tracing Protocol Helper Methods<a class="headerlink" href="#pcap-tracing-protocol-helper-methods" title="Link to this heading">¶</a></h4>
 <p>These methods are designed to be in one-to-one correspondence with the <code class="docutils literal notranslate"><span class="pre">Node</span></code>-
 and <code class="docutils literal notranslate"><span class="pre">NetDevice</span></code>- centric versions of the device versions. Instead of
 <code class="docutils literal notranslate"><span class="pre">Node</span></code> and <code class="docutils literal notranslate"><span class="pre">NetDevice</span></code> pair constraints, we use protocol and interface
 constraints.</p>
 <p>Note that just like in the device version, there are six methods:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">EnablePcapIpv4</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="n">ipv4</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">interface</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnablePcapIpv4</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ipv4Name</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">interface</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnablePcapIpv4</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">Ipv4InterfaceContainer</span> <span class="n">c</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnablePcapIpv4</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">NodeContainer</span> <span class="n">n</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnablePcapIpv4</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">nodeid</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">interface</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnablePcapIpv4All</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcapIpv4</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ipv4</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">interface</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcapIpv4</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">ipv4Name</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">interface</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcapIpv4</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">Ipv4InterfaceContainer</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcapIpv4</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcapIpv4</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">nodeid</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">interface</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnablePcapIpv4All</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You are encouraged to peruse the Doxygen for class <code class="docutils literal notranslate"><span class="pre">PcapHelperForIpv4</span></code> to find
 the details of these methods; but to summarize …</p>
 <p>You can enable pcap tracing on a particular protocol/interface pair by providing
 a <code class="docutils literal notranslate"><span class="pre">Ptr&lt;Ipv4&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">interface</span></code> to an <code class="docutils literal notranslate"><span class="pre">EnablePcap</span></code> method.  For example,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="n">ipv4</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">GetObject</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="p">();</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ipv4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node</span><span class="o">-&gt;</span><span class="n">GetObject</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcapIpv4</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="n">ipv4</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcapIpv4</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ipv4</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can enable pcap tracing on a particular node/net-device pair by providing a
 <code class="docutils literal notranslate"><span class="pre">std::string</span></code> representing an object name service string to an <code class="docutils literal notranslate"><span class="pre">EnablePcap</span></code>
 method.  The <code class="docutils literal notranslate"><span class="pre">Ptr&lt;Ipv4&gt;</span></code> is looked up from the name string.  For example,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;serverIPv4&quot;</span> <span class="p">...);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Names</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;serverIPv4&quot;</span><span class="w"> </span><span class="p">...);</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcapIpv4</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="s">&quot;serverIpv4&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcapIpv4</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;serverIpv4&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can enable pcap tracing on a collection of protocol/interface pairs by
@@ -873,41 +890,41 @@ providing an <code class="docutils literal notranslate"><span class="pre">Ipv4In
 the container the protocol type is checked. For each protocol of the proper type
 (the same type as is managed by the device helper), tracing is enabled for the
 corresponding interface.  For example,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span> <span class="n">nodes</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">nodes</span><span class="p">;</span>
 <span class="p">...</span>
-<span class="n">NetDeviceContainer</span> <span class="n">devices</span> <span class="o">=</span> <span class="n">deviceHelper</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">nodes</span><span class="p">);</span>
+<span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">devices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deviceHelper</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">nodes</span><span class="p">);</span>
 <span class="p">...</span>
-<span class="n">Ipv4AddressHelper</span> <span class="n">ipv4</span><span class="p">;</span>
-<span class="n">ipv4</span><span class="p">.</span><span class="n">SetBase</span> <span class="p">(</span><span class="s">&quot;10.1.1.0&quot;</span><span class="p">,</span> <span class="s">&quot;255.255.255.0&quot;</span><span class="p">);</span>
-<span class="n">Ipv4InterfaceContainer</span> <span class="n">interfaces</span> <span class="o">=</span> <span class="n">ipv4</span><span class="p">.</span><span class="n">Assign</span> <span class="p">(</span><span class="n">devices</span><span class="p">);</span>
+<span class="n">Ipv4AddressHelper</span><span class="w"> </span><span class="n">ipv4</span><span class="p">;</span>
+<span class="n">ipv4</span><span class="p">.</span><span class="n">SetBase</span><span class="p">(</span><span class="s">&quot;10.1.1.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;255.255.255.0&quot;</span><span class="p">);</span>
+<span class="n">Ipv4InterfaceContainer</span><span class="w"> </span><span class="n">interfaces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ipv4</span><span class="p">.</span><span class="n">Assign</span><span class="p">(</span><span class="n">devices</span><span class="p">);</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcapIpv4</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="n">interfaces</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcapIpv4</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">interfaces</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can enable pcap tracing on a collection of protocol/interface pairs by
 providing a <code class="docutils literal notranslate"><span class="pre">NodeContainer</span></code>. For each <code class="docutils literal notranslate"><span class="pre">Node</span></code> in the <code class="docutils literal notranslate"><span class="pre">NodeContainer</span></code> the
 appropriate protocol is found. For each protocol, its interfaces are enumerated
 and tracing is enabled on the resulting pairs. For example,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span> <span class="n">n</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcapIpv4</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnablePcapIpv4</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can enable pcap tracing on the basis of node ID and interface as well. In
 this case, the node-id is translated to a <code class="docutils literal notranslate"><span class="pre">Ptr&lt;Node&gt;</span></code> and the appropriate
 protocol is looked up in the node. The resulting protocol and interface are used
 to specify the resulting trace source.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnablePcapIpv4</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnablePcapIpv4</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Finally, you can enable pcap tracing for all interfaces in the system, with
 associated protocol being the same type as that managed by the device helper.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnablePcapIpv4All</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnablePcapIpv4All</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="pcap-tracing-protocol-helper-filename-selection">
-<h4>Pcap Tracing Protocol Helper Filename Selection<a class="headerlink" href="#pcap-tracing-protocol-helper-filename-selection" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="pcap-tracing-protocol-helper-filename-selection">
+<h4><span class="section-number">3.3.4.3.2. </span>Pcap Tracing Protocol Helper Filename Selection<a class="headerlink" href="#pcap-tracing-protocol-helper-filename-selection" title="Link to this heading">¶</a></h4>
 <p>Implicit in all of the method descriptions above is the construction of the
 complete filenames by the implementation method. By convention, pcap traces
 taken for devices in the <em>ns-3</em> system are of the form <code class="docutils literal notranslate"><span class="pre">&lt;prefix&gt;-&lt;node</span>
@@ -930,10 +947,10 @@ would be “prefix-n21-i1.pcap”.</p>
 For example, if you use the object name service to assign the name “serverIpv4”
 to the Ptr&lt;Ipv4&gt; on node 21, the resulting pcap trace file name will
 automatically become, “prefix-nserverIpv4-i1.pcap”.</p>
-</div>
-</div>
-<div class="section" id="ascii-tracing-protocol-helpers">
-<h3>Ascii Tracing Protocol Helpers<a class="headerlink" href="#ascii-tracing-protocol-helpers" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="ascii-tracing-protocol-helpers">
+<h3><span class="section-number">3.3.4.4. </span>Ascii Tracing Protocol Helpers<a class="headerlink" href="#ascii-tracing-protocol-helpers" title="Link to this heading">¶</a></h3>
 <p>The behavior of the ASCII trace helpers is substantially similar to the pcap
 case.  Take a look at <code class="docutils literal notranslate"><span class="pre">src/network/helper/trace-helper.h</span></code> if you want to follow the
 discussion while looking at real code.</p>
@@ -944,8 +961,8 @@ and call <code class="docutils literal notranslate"><span class="pre">EnableAsci
 <p>The class <code class="docutils literal notranslate"><span class="pre">AsciiTraceHelperForIpv4</span></code> adds the high level functionality for
 using ASCII tracing to a protocol helper. Each protocol that enables these
 methods must implement a single virtual method inherited from this class.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="nf">EnableAsciiIpv4Internal</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span>
-                                      <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="n">ipv4</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">interface</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiIpv4Internal</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span>
+<span class="w">                                     </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ipv4</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">interface</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>The signature of this method reflects the protocol- and interface-centric view
@@ -954,8 +971,8 @@ to a shared output stream.  All of the public methods inherited from class
 <code class="docutils literal notranslate"><span class="pre">PcapAndAsciiTraceHelperForIpv4</span></code> reduce to calling this single device-
 dependent implementation method. For example, the lowest level ascii trace
 methods,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="n">ipv4</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">interface</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="n">ipv4</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">interface</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiIpv4</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ipv4</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">interface</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiIpv4</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ipv4</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">interface</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>will call the device implementation of <code class="docutils literal notranslate"><span class="pre">EnableAsciiIpv4Internal</span></code> directly,
@@ -965,25 +982,25 @@ functionality. What this means to the user is that all device helpers in the
 system will have all of the ascii trace methods available; and these methods
 will all work in the same way across protocols if the protocols implement
 <code class="docutils literal notranslate"><span class="pre">EnablAsciiIpv4Internal</span></code> correctly.</p>
-<div class="section" id="id1">
-<h4>Ascii Tracing Device Helper Methods<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="n">ipv4</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">interface</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">,</span> <span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="n">ipv4</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">interface</span><span class="p">);</span>
+<section id="id1">
+<h4><span class="section-number">3.3.4.4.1. </span>Ascii Tracing Device Helper Methods<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h4>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiIpv4</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ipv4</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">interface</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiIpv4</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ipv4</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">interface</span><span class="p">);</span>
 
-<span class="kt">void</span> <span class="nf">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ipv4Name</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">interface</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ipv4Name</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">interface</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiIpv4</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">ipv4Name</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">interface</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiIpv4</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">ipv4Name</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">interface</span><span class="p">);</span>
 
-<span class="kt">void</span> <span class="nf">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">Ipv4InterfaceContainer</span> <span class="n">c</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">,</span> <span class="n">Ipv4InterfaceContainer</span> <span class="n">c</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiIpv4</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">Ipv4InterfaceContainer</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiIpv4</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">Ipv4InterfaceContainer</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
 
-<span class="kt">void</span> <span class="nf">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">NodeContainer</span> <span class="n">n</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">,</span> <span class="n">NodeContainer</span> <span class="n">n</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiIpv4</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiIpv4</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
 
-<span class="kt">void</span> <span class="nf">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">nodeid</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">deviceid</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">nodeid</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">interface</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiIpv4</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">nodeid</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">deviceid</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiIpv4</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">nodeid</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">interface</span><span class="p">);</span>
 
-<span class="kt">void</span> <span class="nf">EnableAsciiIpv4All</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">prefix</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">EnableAsciiIpv4All</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiIpv4All</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">EnableAsciiIpv4All</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You are encouraged to peruse the Doxygen for class <code class="docutils literal notranslate"><span class="pre">PcapAndAsciiHelperForIpv4</span></code>
@@ -998,9 +1015,9 @@ file; and the number of API methods is doubled to allow all combinations.</p>
 <p>Just as in pcap tracing, you can enable ASCII tracing on a particular
 protocol/interface pair by providing a <code class="docutils literal notranslate"><span class="pre">Ptr&lt;Ipv4&gt;</span></code> and an <code class="docutils literal notranslate"><span class="pre">interface</span></code> to an
 <code class="docutils literal notranslate"><span class="pre">EnableAscii</span></code> method.  For example,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="n">ipv4</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ipv4</span><span class="p">;</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="n">ipv4</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ipv4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>In this case, no trace contexts are written to the ASCII trace file since they
@@ -1011,13 +1028,13 @@ suffix “.tr” instead of “.pcap”.</p>
 traces sent to a single file, you can do that as well by using an object to
 refer to a single file. We have already something similar to this in the “cwnd”
 example above:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="n">protocol1</span> <span class="o">=</span> <span class="n">node1</span><span class="o">-&gt;</span><span class="n">GetObject</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="p">();</span>
-<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="n">protocol2</span> <span class="o">=</span> <span class="n">node2</span><span class="o">-&gt;</span><span class="n">GetObject</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span> <span class="p">();</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">protocol1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node1</span><span class="o">-&gt;</span><span class="n">GetObject</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">protocol2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node2</span><span class="o">-&gt;</span><span class="n">GetObject</span><span class="o">&lt;</span><span class="n">Ipv4</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="p">...</span>
-<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">asciiTraceHelper</span><span class="p">.</span><span class="n">CreateFileStream</span> <span class="p">(</span><span class="s">&quot;trace-file-name.tr&quot;</span><span class="p">);</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asciiTraceHelper</span><span class="p">.</span><span class="n">CreateFileStream</span><span class="p">(</span><span class="s">&quot;trace-file-name.tr&quot;</span><span class="p">);</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">protocol1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">protocol2</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">protocol1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">protocol2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>In this case, trace contexts are written to the ASCII trace file since they are
@@ -1029,24 +1046,24 @@ for consistency.</p>
 method.  The <code class="docutils literal notranslate"><span class="pre">Ptr&lt;Ipv4&gt;</span></code> is looked up from the name string.  The <code class="docutils literal notranslate"><span class="pre">&lt;Node&gt;</span></code> in
 the resulting filenames is implicit since there is a one-to-one correspondence
 between protocol instances and nodes, For example,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;node1Ipv4&quot;</span> <span class="p">...);</span>
-<span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;node2Ipv4&quot;</span> <span class="p">...);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Names</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;node1Ipv4&quot;</span><span class="w"> </span><span class="p">...);</span>
+<span class="n">Names</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;node2Ipv4&quot;</span><span class="w"> </span><span class="p">...);</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="s">&quot;node1Ipv4&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="s">&quot;node2Ipv4&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;node1Ipv4&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;node2Ipv4&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This would result in two files named “prefix-nnode1Ipv4-i1.tr” and
 “prefix-nnode2Ipv4-i1.tr” with traces for each interface in the respective
 trace file. Since all of the EnableAscii functions are overloaded to take a
 stream wrapper, you can use that form as well:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;node1Ipv4&quot;</span> <span class="p">...);</span>
-<span class="n">Names</span><span class="o">::</span><span class="n">Add</span> <span class="p">(</span><span class="s">&quot;node2Ipv4&quot;</span> <span class="p">...);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Names</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;node1Ipv4&quot;</span><span class="w"> </span><span class="p">...);</span>
+<span class="n">Names</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;node2Ipv4&quot;</span><span class="w"> </span><span class="p">...);</span>
 <span class="p">...</span>
-<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">asciiTraceHelper</span><span class="p">.</span><span class="n">CreateFileStream</span> <span class="p">(</span><span class="s">&quot;trace-file-name.tr&quot;</span><span class="p">);</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asciiTraceHelper</span><span class="p">.</span><span class="n">CreateFileStream</span><span class="p">(</span><span class="s">&quot;trace-file-name.tr&quot;</span><span class="p">);</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="s">&quot;node1Ipv4&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="s">&quot;node2Ipv4&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;node1Ipv4&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;node2Ipv4&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This would result in a single trace file called “trace-file-name.tr” that
@@ -1057,41 +1074,41 @@ providing an <code class="docutils literal notranslate"><span class="pre">Ipv4In
 (the same type as is managed by the device helper), tracing is enabled for the
 corresponding interface.  Again, the <code class="docutils literal notranslate"><span class="pre">&lt;Node&gt;</span></code> is implicit since there is a
 one-to-one correspondence between each protocol and its node. For example,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span> <span class="n">nodes</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">nodes</span><span class="p">;</span>
 <span class="p">...</span>
-<span class="n">NetDeviceContainer</span> <span class="n">devices</span> <span class="o">=</span> <span class="n">deviceHelper</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">nodes</span><span class="p">);</span>
+<span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">devices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deviceHelper</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">nodes</span><span class="p">);</span>
 <span class="p">...</span>
-<span class="n">Ipv4AddressHelper</span> <span class="n">ipv4</span><span class="p">;</span>
-<span class="n">ipv4</span><span class="p">.</span><span class="n">SetBase</span> <span class="p">(</span><span class="s">&quot;10.1.1.0&quot;</span><span class="p">,</span> <span class="s">&quot;255.255.255.0&quot;</span><span class="p">);</span>
-<span class="n">Ipv4InterfaceContainer</span> <span class="n">interfaces</span> <span class="o">=</span> <span class="n">ipv4</span><span class="p">.</span><span class="n">Assign</span> <span class="p">(</span><span class="n">devices</span><span class="p">);</span>
+<span class="n">Ipv4AddressHelper</span><span class="w"> </span><span class="n">ipv4</span><span class="p">;</span>
+<span class="n">ipv4</span><span class="p">.</span><span class="n">SetBase</span><span class="p">(</span><span class="s">&quot;10.1.1.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;255.255.255.0&quot;</span><span class="p">);</span>
+<span class="n">Ipv4InterfaceContainer</span><span class="w"> </span><span class="n">interfaces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ipv4</span><span class="p">.</span><span class="n">Assign</span><span class="p">(</span><span class="n">devices</span><span class="p">);</span>
 <span class="p">...</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="n">interfaces</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">interfaces</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This would result in a number of ASCII trace files being created, each of which
 follows the &lt;prefix&gt;-n&lt;node id&gt;-i&lt;interface&gt;.tr convention. Combining all of the
 traces into a single file is accomplished similarly to the examples above:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span> <span class="n">nodes</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">nodes</span><span class="p">;</span>
 <span class="p">...</span>
-<span class="n">NetDeviceContainer</span> <span class="n">devices</span> <span class="o">=</span> <span class="n">deviceHelper</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">nodes</span><span class="p">);</span>
+<span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">devices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deviceHelper</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">nodes</span><span class="p">);</span>
 <span class="p">...</span>
-<span class="n">Ipv4AddressHelper</span> <span class="n">ipv4</span><span class="p">;</span>
-<span class="n">ipv4</span><span class="p">.</span><span class="n">SetBase</span> <span class="p">(</span><span class="s">&quot;10.1.1.0&quot;</span><span class="p">,</span> <span class="s">&quot;255.255.255.0&quot;</span><span class="p">);</span>
-<span class="n">Ipv4InterfaceContainer</span> <span class="n">interfaces</span> <span class="o">=</span> <span class="n">ipv4</span><span class="p">.</span><span class="n">Assign</span> <span class="p">(</span><span class="n">devices</span><span class="p">);</span>
+<span class="n">Ipv4AddressHelper</span><span class="w"> </span><span class="n">ipv4</span><span class="p">;</span>
+<span class="n">ipv4</span><span class="p">.</span><span class="n">SetBase</span><span class="p">(</span><span class="s">&quot;10.1.1.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;255.255.255.0&quot;</span><span class="p">);</span>
+<span class="n">Ipv4InterfaceContainer</span><span class="w"> </span><span class="n">interfaces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ipv4</span><span class="p">.</span><span class="n">Assign</span><span class="p">(</span><span class="n">devices</span><span class="p">);</span>
 <span class="p">...</span>
-<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">asciiTraceHelper</span><span class="p">.</span><span class="n">CreateFileStream</span> <span class="p">(</span><span class="s">&quot;trace-file-name.tr&quot;</span><span class="p">);</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">OutputStreamWrapper</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asciiTraceHelper</span><span class="p">.</span><span class="n">CreateFileStream</span><span class="p">(</span><span class="s">&quot;trace-file-name.tr&quot;</span><span class="p">);</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span> <span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">interfaces</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">interfaces</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can enable ASCII tracing on a collection of protocol/interface pairs by
 providing a <code class="docutils literal notranslate"><span class="pre">NodeContainer</span></code>. For each <code class="docutils literal notranslate"><span class="pre">Node</span></code> in the <code class="docutils literal notranslate"><span class="pre">NodeContainer</span></code> the
 appropriate protocol is found.  For each protocol, its interfaces are enumerated
 and tracing is enabled on the resulting pairs. For example,:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span> <span class="n">n</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 <span class="p">...</span>
-<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+<span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This would result in a number of ASCII trace files being created, each of which
@@ -1101,13 +1118,13 @@ traces into a single file is accomplished similarly to the examples above:</p>
 this case, the node-id is translated to a <code class="docutils literal notranslate"><span class="pre">Ptr&lt;Node&gt;</span></code> and the appropriate
 protocol is looked up in the node.  The resulting protocol and interface are
 used to specify the resulting trace source.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Of course, the traces can be combined into a single file as shown above.</p>
 <p>Finally, you can enable ASCII tracing for all interfaces in the system, with
 associated protocol being the same type as that managed by the device helper.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4All</span> <span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">helper</span><span class="p">.</span><span class="n">EnableAsciiIpv4All</span><span class="p">(</span><span class="s">&quot;prefix&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This would result in a number of ASCII trace files being created, one for
@@ -1115,9 +1132,9 @@ every interface in the system related to a protocol of the type managed by the
 helper. All of these files will follow the &lt;prefix&gt;-n&lt;node id&gt;-i&lt;interface.tr
 convention. Combining all of the traces into a single file is accomplished
 similarly to the examples above.</p>
-</div>
-<div class="section" id="id2">
-<h4>Ascii Tracing Device Helper Filename Selection<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id2">
+<h4><span class="section-number">3.3.4.4.2. </span>Ascii Tracing Device Helper Filename Selection<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h4>
 <p>Implicit in the prefix-style method descriptions above is the construction of
 the complete filenames by the implementation method. By convention, ASCII traces
 in the <em>ns-3</em> system are of the form “&lt;prefix&gt;-&lt;node id&gt;-&lt;device id&gt;.tr.”</p>
@@ -1133,64 +1150,71 @@ per node.</p>
 For example, if you use the object name service to assign the name “serverIpv4”
 to the protocol on node 21, and also specify interface one, the resulting ASCII
 trace file name will automatically become, “prefix-nserverIpv4-1.tr”.</p>
-</div>
-</div>
-</div>
-<div class="section" id="tracing-implementation-details">
-<h2>Tracing implementation details<a class="headerlink" href="#tracing-implementation-details" title="Permalink to this headline">¶</a></h2>
-</div>
-</div>
+</section>
+</section>
+</section>
+<section id="tracing-implementation-details">
+<h2><span class="section-number">3.3.5. </span>Tracing implementation details<a class="headerlink" href="#tracing-implementation-details" title="Link to this heading">¶</a></h2>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Tracing</a><ul>
-<li><a class="reference internal" href="#tracing-motivation">Tracing Motivation</a></li>
-<li><a class="reference internal" href="#overview">Overview</a><ul>
-<li><a class="reference internal" href="#the-simplest-example">The Simplest Example</a></li>
-<li><a class="reference internal" href="#using-the-config-subsystem-to-connect-to-trace-sources">Using the Config Subsystem to Connect to Trace Sources</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">3.3. Tracing</a><ul>
+<li><a class="reference internal" href="#tracing-motivation">3.3.1. Tracing Motivation</a></li>
+<li><a class="reference internal" href="#overview">3.3.2. Overview</a><ul>
+<li><a class="reference internal" href="#the-simplest-example">3.3.2.1. The Simplest Example</a></li>
+<li><a class="reference internal" href="#using-the-config-subsystem-to-connect-to-trace-sources">3.3.2.2. Using the Config Subsystem to Connect to Trace Sources</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#using-the-tracing-api">Using the Tracing API</a></li>
-<li><a class="reference internal" href="#using-trace-helpers">Using Trace Helpers</a><ul>
-<li><a class="reference internal" href="#pcap-tracing-device-helpers">Pcap Tracing Device Helpers</a><ul>
-<li><a class="reference internal" href="#pcap-tracing-device-helper-methods">Pcap Tracing Device Helper Methods</a></li>
-<li><a class="reference internal" href="#pcap-tracing-device-helper-filename-selection">Pcap Tracing Device Helper Filename Selection</a></li>
+<li><a class="reference internal" href="#using-the-tracing-api">3.3.3. Using the Tracing API</a></li>
+<li><a class="reference internal" href="#using-trace-helpers">3.3.4. Using Trace Helpers</a><ul>
+<li><a class="reference internal" href="#pcap-tracing-device-helpers">3.3.4.1. Pcap Tracing Device Helpers</a><ul>
+<li><a class="reference internal" href="#pcap-tracing-device-helper-methods">3.3.4.1.1. Pcap Tracing Device Helper Methods</a></li>
+<li><a class="reference internal" href="#pcap-tracing-device-helper-filename-selection">3.3.4.1.2. Pcap Tracing Device Helper Filename Selection</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#ascii-tracing-device-helpers">Ascii Tracing Device Helpers</a><ul>
-<li><a class="reference internal" href="#ascii-tracing-device-helper-methods">Ascii Tracing Device Helper Methods</a></li>
-<li><a class="reference internal" href="#ascii-tracing-device-helper-filename-selection">Ascii Tracing Device Helper Filename Selection</a></li>
+<li><a class="reference internal" href="#ascii-tracing-device-helpers">3.3.4.2. Ascii Tracing Device Helpers</a><ul>
+<li><a class="reference internal" href="#ascii-tracing-device-helper-methods">3.3.4.2.1. Ascii Tracing Device Helper Methods</a></li>
+<li><a class="reference internal" href="#ascii-tracing-device-helper-filename-selection">3.3.4.2.2. Ascii Tracing Device Helper Filename Selection</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#pcap-tracing-protocol-helpers">Pcap Tracing Protocol Helpers</a><ul>
-<li><a class="reference internal" href="#pcap-tracing-protocol-helper-methods">Pcap Tracing Protocol Helper Methods</a></li>
-<li><a class="reference internal" href="#pcap-tracing-protocol-helper-filename-selection">Pcap Tracing Protocol Helper Filename Selection</a></li>
+<li><a class="reference internal" href="#pcap-tracing-protocol-helpers">3.3.4.3. Pcap Tracing Protocol Helpers</a><ul>
+<li><a class="reference internal" href="#pcap-tracing-protocol-helper-methods">3.3.4.3.1. Pcap Tracing Protocol Helper Methods</a></li>
+<li><a class="reference internal" href="#pcap-tracing-protocol-helper-filename-selection">3.3.4.3.2. Pcap Tracing Protocol Helper Filename Selection</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#ascii-tracing-protocol-helpers">Ascii Tracing Protocol Helpers</a><ul>
-<li><a class="reference internal" href="#id1">Ascii Tracing Device Helper Methods</a></li>
-<li><a class="reference internal" href="#id2">Ascii Tracing Device Helper Filename Selection</a></li>
+<li><a class="reference internal" href="#ascii-tracing-protocol-helpers">3.3.4.4. Ascii Tracing Protocol Helpers</a><ul>
+<li><a class="reference internal" href="#id1">3.3.4.4.1. Ascii Tracing Device Helper Methods</a></li>
+<li><a class="reference internal" href="#id2">3.3.4.4.2. Ascii Tracing Device Helper Filename Selection</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#tracing-implementation-details">Tracing implementation details</a></li>
+<li><a class="reference internal" href="#tracing-implementation-details">3.3.5. Tracing implementation details</a></li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="logging.html"
-                        title="previous chapter">Logging</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="data-collection.html"
-                        title="next chapter">Data Collection</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="hash-functions.html"
+                          title="previous chapter"><span class="section-number">3.2. </span>Hash Functions</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="data-collection.html"
+                          title="next chapter"><span class="section-number">3.4. </span>Data Collection</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -1202,12 +1226,12 @@ trace file name will automatically become, “prefix-nserverIpv4-1.tr”.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -1219,21 +1243,23 @@ trace file name will automatically become, “prefix-nserverIpv4-1.tr”.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="data-collection.html" title="Data Collection"
+          <a href="data-collection.html" title="3.4. Data Collection"
              >next</a> |</li>
         <li class="right" >
-          <a href="logging.html" title="Logging"
+          <a href="hash-functions.html" title="3.2. Hash Functions"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
- 
+
+          <li class="nav-item nav-item-1"><a href="features.html" ><span class="section-number">3. </span>Additional Tools</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">3.3. </span>Tracing</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 18:24.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:54.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>Tap NetDevice &#8212; Model Library</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>13.4. Tap NetDevice &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Topology Input Readers" href="topology.html" />
-    <link rel="prev" title="6LoWPAN: Transmission of IPv6 Packets over IEEE 802.15.4 Networks" href="sixlowpan.html" />
+    <link rel="next" title="14. Energy Framework" href="energy.html" />
+    <link rel="prev" title="13.3. DPDK NetDevice" href="dpdk-net-device.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Models</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,15 +126,17 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="topology.html" title="Topology Input Readers"
+          <a href="energy.html" title="14. Energy Framework"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="sixlowpan.html" title="6LoWPAN: Transmission of IPv6 Packets over IEEE 802.15.4 Networks"
+          <a href="dpdk-net-device.html" title="13.3. DPDK NetDevice"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+          <li class="nav-item nav-item-1"><a href="emulation-overview.html" accesskey="U"><span class="section-number">13. </span>Emulation Overview</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">13.4. </span>Tap NetDevice</a></li> 
       </ul>
     </div>  
 
@@ -129,12 +145,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="tap-netdevice">
-<h1>Tap NetDevice<a class="headerlink" href="#tap-netdevice" title="Permalink to this headline">¶</a></h1>
+  <section id="tap-netdevice">
+<h1><span class="section-number">13.4. </span>Tap NetDevice<a class="headerlink" href="#tap-netdevice" title="Link to this heading">¶</a></h1>
 <p>The Tap NetDevice can be used to allow a host system or virtual machines to
 interact with a simulation.</p>
-<div class="section" id="tapbridge-model-overview">
-<h2>TapBridge Model Overview<a class="headerlink" href="#tapbridge-model-overview" title="Permalink to this headline">¶</a></h2>
+<section id="tapbridge-model-overview">
+<h2><span class="section-number">13.4.1. </span>TapBridge Model Overview<a class="headerlink" href="#tapbridge-model-overview" title="Link to this heading">¶</a></h2>
 <p>The Tap Bridge is designed to integrate “real” internet hosts (or more
 precisely, hosts that support Tun/Tap devices) into ns-3 simulations.  The
 goal is to make it appear to a “real” host node in that it has an ns-3 net
@@ -159,8 +175,8 @@ UseBridge modes, the “Use” prefix indicates that the TapBridge is asked to
 for creating and configuring the TAP devices.  In UseBridge or UseLocal
 modes, the user provides a configuration and the TapBridge adapts to that
 configuration.</p>
-<div class="section" id="tapbridge-configurelocal-mode">
-<h3>TapBridge ConfigureLocal Mode<a class="headerlink" href="#tapbridge-configurelocal-mode" title="Permalink to this headline">¶</a></h3>
+<section id="tapbridge-configurelocal-mode">
+<h3><span class="section-number">13.4.1.1. </span>TapBridge ConfigureLocal Mode<a class="headerlink" href="#tapbridge-configurelocal-mode" title="Link to this heading">¶</a></h3>
 <p>In the ConfigureLocal mode, the configuration of the tap device is ns-3
 configuration-centric.  Configuration information is taken from a device
 in the ns-3 simulation and a tap device matching the ns-3 attributes is
@@ -205,9 +221,9 @@ by the underlying operating system according to its defaults.</p>
 may optionally provide a “DeviceName” attribute.  In this case, the created
 OS tap device will be named accordingly.</p>
 <p>The ConfigureLocal mode is the default operating mode of the Tap Bridge.</p>
-</div>
-<div class="section" id="tapbridge-uselocal-mode">
-<h3>TapBridge UseLocal Mode<a class="headerlink" href="#tapbridge-uselocal-mode" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="tapbridge-uselocal-mode">
+<h3><span class="section-number">13.4.1.2. </span>TapBridge UseLocal Mode<a class="headerlink" href="#tapbridge-uselocal-mode" title="Link to this heading">¶</a></h3>
 <p>The UseLocal mode is quite similar to the ConfigureLocal mode.  The
 significant difference is, as the mode name implies, the TapBridge is
 going to “Use” an existing tap device previously created and configured
@@ -253,9 +269,9 @@ This means that Linux bridges with more than one net device added are
 incompatible with UseLocal mode.</p>
 <p>In UseLocal mode, the user is expected to create and configure a tap device
 completely outside the scope of the ns-3 simulation using something like:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo tunctl -t tap0
-$ sudo ifconfig tap0 hw ether <span class="m">08</span>:00:2e:00:00:01
-$ sudo ifconfig tap0 <span class="m">10</span>.1.1.1 netmask <span class="m">255</span>.255.255.0 up
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>ip<span class="w"> </span>tuntap<span class="w"> </span>add<span class="w"> </span>mode<span class="w"> </span>tap<span class="w"> </span>tap0
+$<span class="w"> </span>sudo<span class="w"> </span>ip<span class="w"> </span>address<span class="w"> </span>add<span class="w"> </span><span class="m">10</span>.1.1.1/24<span class="w"> </span>dev<span class="w"> </span>tap0
+$<span class="w"> </span>sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>dev<span class="w"> </span>tap0<span class="w"> </span>address<span class="w"> </span><span class="m">08</span>:00:2e:00:00:01<span class="w"> </span>up
 </pre></div>
 </div>
 <p>To tell the TapBridge what is going on, the user will set either directly
@@ -266,9 +282,9 @@ set to “tap0” and the “Mode” attribute would be set to “UseLocal”.</
 is possible to create a Tap device on the “Hardware Node” and move it into a
 Virtual Private Server.  If the TapBridge is able to use an existing tap device
 it is then possible to avoid the overhead of an OS bridge in that environment.</p>
-</div>
-<div class="section" id="tapbridge-usebridge-mode">
-<h3>TapBridge UseBridge Mode<a class="headerlink" href="#tapbridge-usebridge-mode" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="tapbridge-usebridge-mode">
+<h3><span class="section-number">13.4.1.3. </span>TapBridge UseBridge Mode<a class="headerlink" href="#tapbridge-usebridge-mode" title="Link to this heading">¶</a></h3>
 <p>The simplest mode for those familiar with Linux networking is the UseBridge
 mode.  Again, the “Use” prefix indicates that the TapBridge is going to Use
 an existing configuration.  In this case, the TapBridge is going to logically
@@ -286,7 +302,7 @@ extend a Linux bridge into ns-3.</p>
 +---------+ +--------+                  |  bridge  |     |   stack  |
     ||          ||                      | -------- |     | -------- |
 +--------------------+                  |   ns-3   |     |   ns-3   |
-| OS (brctl) Bridge  |                  |   net    |     |   net    |
+|     OS Bridge      |                  |   net    |     |   net    |
 +--------------------+                  |  device  |     |  device  |
                                         +----------+     +----------+
                                              ||               ||
@@ -311,13 +327,13 @@ addresses.  Thus, ns-3 devices must support SendFrom()
 for use in UseBridge mode.</p>
 <p>It is expected that the user will do something like the following to
 configure the bridge and tap completely outside ns-3:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo brctl addbr mybridge
-$ sudo tunctl -t mytap
-$ sudo ifconfig mytap hw ether <span class="m">00</span>:00:00:00:00:01
-$ sudo ifconfig mytap <span class="m">0</span>.0.0.0 up
-$ sudo brctl addif mybridge mytap
-$ sudo brctl addif mybridge ...
-$ sudo ifconfig mybridge <span class="m">10</span>.1.1.1 netmask <span class="m">255</span>.255.255.0 up
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span>add<span class="w"> </span>mybridge<span class="w"> </span><span class="nb">type</span><span class="w"> </span>bridge
+$<span class="w"> </span>sudo<span class="w"> </span>ip<span class="w"> </span>address<span class="w"> </span>add<span class="w"> </span><span class="m">10</span>.1.1.1/24<span class="w"> </span>dev<span class="w"> </span>mybridge
+$<span class="w"> </span>sudo<span class="w"> </span>ip<span class="w"> </span>tuntap<span class="w"> </span>add<span class="w"> </span>mode<span class="w"> </span>tap<span class="w"> </span>mytap
+$<span class="w"> </span>sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>dev<span class="w"> </span>mytap<span class="w"> </span>address<span class="w"> </span><span class="m">00</span>:00:00:00:00:01<span class="w"> </span>up
+$<span class="w"> </span>sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>dev<span class="w"> </span>mytap<span class="w"> </span>master<span class="w"> </span>mybridge
+$<span class="w"> </span>sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>dev<span class="w"> </span>...<span class="w"> </span>master<span class="w"> </span>mybridge
+$<span class="w"> </span>sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>dev<span class="w"> </span>mybridge<span class="w"> </span>up
 </pre></div>
 </div>
 <p>To tell the TapBridge what is going on, the user will set either directly
@@ -329,12 +345,12 @@ configuration of the virtual hosts may be dictated by another system and
 not be changeable to suit ns-3.  For example, a particular VM scheme may create
 virtual “vethx” or “vmnetx” devices that appear local to virtual hosts.  In
 order to connect to such systems, one would need to manually create TAP devices
-on the host system and brigde these TAP devices to the existing (VM) virtual
+on the host system and bridge these TAP devices to the existing (VM) virtual
 devices.  The job of the Tap Bridge in this case is to extend the bridge to
 join a ns-3 net device.</p>
-</div>
-<div class="section" id="tapbridge-configurelocal-operation">
-<h3>TapBridge ConfigureLocal Operation<a class="headerlink" href="#tapbridge-configurelocal-operation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="tapbridge-configurelocal-operation">
+<h3><span class="section-number">13.4.1.4. </span>TapBridge ConfigureLocal Operation<a class="headerlink" href="#tapbridge-configurelocal-operation" title="Link to this heading">¶</a></h3>
 <p>In ConfigureLocal mode, the TapBridge and therefore its associated ns-3 net
 device appears to the Linux host computer as a network device just like any
 arbitrary “eth0” or “ath0” might appear.  The creation and configuration
@@ -427,9 +443,9 @@ and use them; or take advantage of the operational send side of the
 bridged devices to create traffic generators.  We generally recommend
 that you treat this node as a ghost of the Linux host and leave it to
 itself, though.</p>
-</div>
-<div class="section" id="tapbridge-uselocal-mode-operation">
-<h3>TapBridge UseLocal Mode Operation<a class="headerlink" href="#tapbridge-uselocal-mode-operation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="tapbridge-uselocal-mode-operation">
+<h3><span class="section-number">13.4.1.5. </span>TapBridge UseLocal Mode Operation<a class="headerlink" href="#tapbridge-uselocal-mode-operation" title="Link to this heading">¶</a></h3>
 <p>As described in above, the TapBridge acts like a bridge from the “real” world
 into the simulated ns-3 world.  In the case of the ConfigureLocal mode,
 life is easy since the IP address of the Tap device matches the IP address of
@@ -456,9 +472,9 @@ address.  This allows us to use Send() on the ns-3 device side which is
 available on all ns-3 net devices.</p>
 <p>UseLocal mode is identical to the ConfigureLocal mode except for the creation
 and configuration of the tap device and the MAC address spoofing.</p>
-</div>
-<div class="section" id="tapbridge-usebridge-operation">
-<h3>TapBridge UseBridge Operation<a class="headerlink" href="#tapbridge-usebridge-operation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="tapbridge-usebridge-operation">
+<h3><span class="section-number">13.4.1.6. </span>TapBridge UseBridge Operation<a class="headerlink" href="#tapbridge-usebridge-operation" title="Link to this heading">¶</a></h3>
 <p>As described in the ConfigureLocal mode section, when the Linux host writes to
 one of the /dev/tap devices, the write is redirected into the TapBridge
 that lives in the ns-3 world.  In the case of the UseBridge mode, these
@@ -468,65 +484,72 @@ SendFrom() method on the bridged device and providing the source MAC address
 found in the packet.</p>
 <p>In the other direction, a packet received by an ns-3 net device is hooked
 via callback to the TapBridge.  This must be done in promiscuous mode since
-the goal is to bridge the ns-3 net device onto the OS (brctl) bridge of
-which the TAP device is a part.</p>
+the goal is to bridge the ns-3 net device onto the OS bridge of which the
+TAP device is a part.</p>
 <p>For these reasons, only ns-3 net devices that support SendFrom() and have a
 hookable promiscuous receive callback are allowed to participate in UseBridge
 mode TapBridge configurations.</p>
-</div>
-</div>
-<div class="section" id="tap-bridge-channel-model">
-<h2>Tap Bridge Channel Model<a class="headerlink" href="#tap-bridge-channel-model" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="tap-bridge-channel-model">
+<h2><span class="section-number">13.4.2. </span>Tap Bridge Channel Model<a class="headerlink" href="#tap-bridge-channel-model" title="Link to this heading">¶</a></h2>
 <p>There is no channel model associated with the Tap Bridge.  In fact, the
 intention is make it appear that the real internet host is connected to
 the channel of the bridged net device.</p>
-</div>
-<div class="section" id="tap-bridge-tracing-model">
-<h2>Tap Bridge Tracing Model<a class="headerlink" href="#tap-bridge-tracing-model" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="tap-bridge-tracing-model">
+<h2><span class="section-number">13.4.3. </span>Tap Bridge Tracing Model<a class="headerlink" href="#tap-bridge-tracing-model" title="Link to this heading">¶</a></h2>
 <p>Unlike most ns-3 devices, the TapBridge does not provide any standard trace
 sources.  This is because the bridge is an intermediary that is essentially
 one function call away from the bridged device.  We expect that the trace
 hooks in the bridged device will be sufficient for most users,</p>
-</div>
-<div class="section" id="using-the-tapbridge">
-<h2>Using the TapBridge<a class="headerlink" href="#using-the-tapbridge" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="using-the-tapbridge">
+<h2><span class="section-number">13.4.4. </span>Using the TapBridge<a class="headerlink" href="#using-the-tapbridge" title="Link to this heading">¶</a></h2>
 <p>We expect that most users will interact with the TapBridge device through
 the TapBridgeHelper.  Users of other helper classes, such as CSMA or Wifi,
 should be comfortable with the idioms used there.</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Tap NetDevice</a><ul>
-<li><a class="reference internal" href="#tapbridge-model-overview">TapBridge Model Overview</a><ul>
-<li><a class="reference internal" href="#tapbridge-configurelocal-mode">TapBridge ConfigureLocal Mode</a></li>
-<li><a class="reference internal" href="#tapbridge-uselocal-mode">TapBridge UseLocal Mode</a></li>
-<li><a class="reference internal" href="#tapbridge-usebridge-mode">TapBridge UseBridge Mode</a></li>
-<li><a class="reference internal" href="#tapbridge-configurelocal-operation">TapBridge ConfigureLocal Operation</a></li>
-<li><a class="reference internal" href="#tapbridge-uselocal-mode-operation">TapBridge UseLocal Mode Operation</a></li>
-<li><a class="reference internal" href="#tapbridge-usebridge-operation">TapBridge UseBridge Operation</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">13.4. Tap NetDevice</a><ul>
+<li><a class="reference internal" href="#tapbridge-model-overview">13.4.1. TapBridge Model Overview</a><ul>
+<li><a class="reference internal" href="#tapbridge-configurelocal-mode">13.4.1.1. TapBridge ConfigureLocal Mode</a></li>
+<li><a class="reference internal" href="#tapbridge-uselocal-mode">13.4.1.2. TapBridge UseLocal Mode</a></li>
+<li><a class="reference internal" href="#tapbridge-usebridge-mode">13.4.1.3. TapBridge UseBridge Mode</a></li>
+<li><a class="reference internal" href="#tapbridge-configurelocal-operation">13.4.1.4. TapBridge ConfigureLocal Operation</a></li>
+<li><a class="reference internal" href="#tapbridge-uselocal-mode-operation">13.4.1.5. TapBridge UseLocal Mode Operation</a></li>
+<li><a class="reference internal" href="#tapbridge-usebridge-operation">13.4.1.6. TapBridge UseBridge Operation</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#tap-bridge-channel-model">Tap Bridge Channel Model</a></li>
-<li><a class="reference internal" href="#tap-bridge-tracing-model">Tap Bridge Tracing Model</a></li>
-<li><a class="reference internal" href="#using-the-tapbridge">Using the TapBridge</a></li>
+<li><a class="reference internal" href="#tap-bridge-channel-model">13.4.2. Tap Bridge Channel Model</a></li>
+<li><a class="reference internal" href="#tap-bridge-tracing-model">13.4.3. Tap Bridge Tracing Model</a></li>
+<li><a class="reference internal" href="#using-the-tapbridge">13.4.4. Using the TapBridge</a></li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="sixlowpan.html"
-                        title="previous chapter">6LoWPAN: Transmission of IPv6 Packets over IEEE 802.15.4 Networks</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="topology.html"
-                        title="next chapter">Topology Input Readers</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="dpdk-net-device.html"
+                          title="previous chapter"><span class="section-number">13.3. </span>DPDK NetDevice</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="energy.html"
+                          title="next chapter"><span class="section-number">14. </span>Energy Framework</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -538,12 +561,12 @@ should be comfortable with the idioms used there.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -555,21 +578,23 @@ should be comfortable with the idioms used there.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="topology.html" title="Topology Input Readers"
+          <a href="energy.html" title="14. Energy Framework"
              >next</a> |</li>
         <li class="right" >
-          <a href="sixlowpan.html" title="6LoWPAN: Transmission of IPv6 Packets over IEEE 802.15.4 Networks"
+          <a href="dpdk-net-device.html" title="13.3. DPDK NetDevice"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+          <li class="nav-item nav-item-1"><a href="emulation-overview.html" ><span class="section-number">13. </span>Emulation Overview</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">13.4. </span>Tap NetDevice</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 17:37.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:57.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

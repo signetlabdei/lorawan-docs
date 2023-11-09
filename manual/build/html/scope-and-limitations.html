@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>Scope/Limitations &#8212; Manual</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3.4.7. Scope/Limitations &#8212; Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Statistical Framework" href="statistics.html" />
-    <link rel="prev" title="Adaptors" href="adaptor.html" />
+    <link rel="next" title="3.5. Statistical Framework" href="statistics.html" />
+    <link rel="prev" title="3.4.6. Adaptors" href="adaptor.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Manual</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Manual</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,16 +126,18 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="statistics.html" title="Statistical Framework"
+          <a href="statistics.html" title="3.5. Statistical Framework"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="adaptor.html" title="Adaptors"
+          <a href="adaptor.html" title="3.4.6. Adaptors"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
 
-          <li class="nav-item nav-item-1"><a href="data-collection.html" accesskey="U">Data Collection</a><span class="navelem">&nbsp;</span></li> 
+          <li class="nav-item nav-item-1"><a href="features.html" ><span class="section-number">3. </span>Additional Tools</a><span class="navelem">&nbsp;</span></li>
+          <li class="nav-item nav-item-2"><a href="data-collection.html" accesskey="U"><span class="section-number">3.4. </span>Data Collection</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">3.4.7. </span>Scope/Limitations</a></li> 
       </ul>
     </div>  
 
@@ -130,8 +146,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="scope-limitations">
-<h1>Scope/Limitations<a class="headerlink" href="#scope-limitations" title="Permalink to this headline">¶</a></h1>
+  <section id="scope-limitations">
+<h1><span class="section-number">3.4.7. </span>Scope/Limitations<a class="headerlink" href="#scope-limitations" title="Link to this heading">¶</a></h1>
 <p>This section discusses the scope and limitations of the Data
 Collection Framework.</p>
 <p>Currently, only these Probes have been implemented in DCF:</p>
@@ -155,8 +171,8 @@ BasicStatsCollector is under development.</p>
 </ul>
 <p>Currently, only this Adaptor has been implemented in DCF:</p>
 <p>Time-Series Adaptor.</p>
-<div class="section" id="future-work">
-<h2>Future Work<a class="headerlink" href="#future-work" title="Permalink to this headline">¶</a></h2>
+<section id="future-work">
+<h2><span class="section-number">3.4.7.1. </span>Future Work<a class="headerlink" href="#future-work" title="Link to this heading">¶</a></h2>
 <p>This section discusses the future work to be done on the Data
 Collection Framework.</p>
 <p>Here are some things that still need to be done:</p>
@@ -167,29 +183,36 @@ Collection Framework.</p>
 <li><p>Implement more Aggregators.</p></li>
 <li><p>Implement more than just Adaptors.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Scope/Limitations</a><ul>
-<li><a class="reference internal" href="#future-work">Future Work</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">3.4.7. Scope/Limitations</a><ul>
+<li><a class="reference internal" href="#future-work">3.4.7.1. Future Work</a></li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="adaptor.html"
-                        title="previous chapter">Adaptors</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="statistics.html"
-                        title="next chapter">Statistical Framework</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="adaptor.html"
+                          title="previous chapter"><span class="section-number">3.4.6. </span>Adaptors</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="statistics.html"
+                          title="next chapter"><span class="section-number">3.5. </span>Statistical Framework</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -201,12 +224,12 @@ Collection Framework.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -218,22 +241,24 @@ Collection Framework.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="statistics.html" title="Statistical Framework"
+          <a href="statistics.html" title="3.5. Statistical Framework"
              >next</a> |</li>
         <li class="right" >
-          <a href="adaptor.html" title="Adaptors"
+          <a href="adaptor.html" title="3.4.6. Adaptors"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
 
-          <li class="nav-item nav-item-1"><a href="data-collection.html" >Data Collection</a><span class="navelem">&nbsp;</span></li> 
+          <li class="nav-item nav-item-1"><a href="features.html" ><span class="section-number">3. </span>Additional Tools</a><span class="navelem">&nbsp;</span></li>
+          <li class="nav-item nav-item-2"><a href="data-collection.html" ><span class="section-number">3.4. </span>Data Collection</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">3.4.7. </span>Scope/Limitations</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 18:24.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:54.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

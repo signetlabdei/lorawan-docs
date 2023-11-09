@@ -1,3 +1,989 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structns3_1_1_ff_mac_csched_sap_provider_1_1_csched_ue_config_req_parameters.html" title="Parameters of the CSCHED_UE_CONFIG_REQ primitive." alt="" coords="5,5,243,47"/>
+<area shape="rect" id="node1" href="$de/d04/classns3_1_1dsr_1_1_dsr_option_field.html" title="Option field for an DsrFsHeader Enables adding options to an DsrFsHeader." alt="" coords="667,589,830,614"/>
+<area shape="rect" id="node2" href="$db/da4/classns3_1_1dsr_1_1_dsr_routing_header.html" title="Header of Dsr Routing." alt="" coords="941,488,1126,513"/>
+<area shape="rect" id="node3" href="$df/d2f/classns3_1_1_gtpc_ies.html" title="GTP&#45;C Information Elements." alt="" coords="700,2155,797,2179"/>
+<area shape="rect" id="node4" href="$d4/d29/classns3_1_1_gtpc_create_session_request_message.html" title="GTP&#45;C Create Session Request Message." alt="" coords="927,2040,1140,2078"/>
+<area shape="rect" id="node5" href="$de/d34/classns3_1_1_gtpc_create_session_response_message.html" title="GTP&#45;C Create Session Response Message." alt="" coords="922,2102,1145,2141"/>
+<area shape="rect" id="node6" href="$d3/db9/classns3_1_1_gtpc_delete_bearer_command_message.html" title="GTP&#45;C Delete Bearer Command Message." alt="" coords="926,2165,1141,2204"/>
+<area shape="rect" id="node7" href="$d5/d60/classns3_1_1_gtpc_delete_bearer_request_message.html" title="GTP&#45;C Delete Bearer Request Message." alt="" coords="932,2228,1135,2266"/>
+<area shape="rect" id="node8" href="$d4/d20/classns3_1_1_gtpc_delete_bearer_response_message.html" title="GTP&#45;C Delete Bearer Response Message." alt="" coords="927,2290,1140,2329"/>
+<area shape="rect" id="node9" href="$d1/db6/classns3_1_1_gtpc_modify_bearer_request_message.html" title="GTP&#45;C Modify Bearer Request Message." alt="" coords="932,2353,1135,2392"/>
+<area shape="rect" id="node10" href="$d0/d54/classns3_1_1_gtpc_modify_bearer_response_message.html" title="GTP&#45;C Modify Bearer Response Message." alt="" coords="927,1977,1140,2016"/>
+<area shape="rect" id="node11" href="$d5/df3/classns3_1_1_object_base.html" title="Anchor the ns&#45;3 type and attribute system." alt="" coords="5,19376,124,19401"/>
+<area shape="rect" id="node12" href="$d8/d97/classns3_1_1_simple_ref_count.html" title=" " alt="" coords="172,19299,322,19352"/>
+<area shape="rect" id="node757" href="$dd/df8/classns3_1_1_chunk.html" title="abstract base class for ns3::Header and ns3::Trailer" alt="" coords="203,6409,291,6434"/>
+<area shape="rect" id="node942" href="$d1/db4/classns3_1_1_config_store.html" title=" " alt="" coords="187,19376,307,19401"/>
+<area shape="rect" id="node943" href="$d6/dcb/classns3_1_1_eps_bearer.html" title="This class contains the specification of EPS Bearers." alt="" coords="191,19425,303,19450"/>
+<area shape="rect" id="node944" href="$d1/d36/classns3_1_1_tag.html" title="tag a set of bytes in a packet" alt="" coords="211,24549,283,24574"/>
+<area shape="rect" id="node13" href="$d8/d9c/classns3_1_1_object.html" title="A base class which provides memory management and object aggregation." alt="" coords="433,19313,521,19338"/>
+<area shape="rect" id="node14" href="$d4/ddb/class_attribute_container_object.html" title="Attribute container object." alt="" coords="666,20096,831,20121"/>
+<area shape="rect" id="node15" href="$d6/d1e/class_attribute_object_test.html" title="Class used to check attributes." alt="" coords="682,20145,815,20170"/>
+<area shape="rect" id="node16" href="$d6/d8a/class_config_example.html" title="Example class to demonstrate use of the ns&#45;3 Config Store." alt="" coords="694,20195,803,20219"/>
+<area shape="rect" id="node17" href="$d9/d79/class_deprecated_attribute.html" title="Class used to test deprecated Attributes." alt="" coords="680,20244,817,20269"/>
+<area shape="rect" id="node18" href="$dd/d99/class_derived.html" title="Simple class derived from ns3::Object, used to check attribute constructors." alt="" coords="716,20293,781,20318"/>
+<area shape="rect" id="node19" href="$dd/d0b/class_emitter.html" title="This is our test object, an object that increments counters at various times and emits one of them as..." alt="" coords="717,20343,780,20367"/>
+<area shape="rect" id="node20" href="$de/d10/class_length_value_test_case_1_1_test_object.html" title="Class with Length attribute." alt="" coords="675,20392,822,20430"/>
+<area shape="rect" id="node21" href="$dd/d52/class_my_object.html" title="Tutorial 4 &#45; a simple Object to show how to hook a trace." alt="" coords="710,20455,787,20479"/>
+<area shape="rect" id="node22" href="$dd/dfe/class_pair_object.html" title="Object holding pairs of values." alt="" coords="707,20504,790,20529"/>
+<area shape="rect" id="node23" href="$dd/dab/class_ptr_example.html" title="Example class illustrating use of Ptr." alt="" coords="704,20553,793,20578"/>
+<area shape="rect" id="node24" href="$d9/dbd/class_sample_emitter.html" title="Simple data emitter to check that a probe receives data." alt="" coords="695,20603,802,20627"/>
+<area shape="rect" id="node25" href="$d0/dc7/class_traced_callback_typedef_test_case_1_1_checker.html" title="Callback checkers." alt="" coords="658,20652,839,20690"/>
+<area shape="rect" id="node26" href="$d2/dd1/class_traced_value_callback_test_case_1_1_check_tv_cb.html" title="A class to check that the callback function typedef will actually connect to the TracedValue." alt="" coords="650,20714,847,20753"/>
+<area shape="rect" id="node27" href="$d9/dd2/class_tuple_object.html" title="Object with attribute values storing tuples." alt="" coords="703,20777,794,20802"/>
+<area shape="rect" id="node28" href="$d4/de1/classanonymous__namespace_02log-example_8cc_03_1_1_my_event_object.html" title="Simple object to aggregate to a node." alt="" coords="641,20826,856,20865"/>
+<area shape="rect" id="node29" href="$df/d31/classanonymous__namespace_02object-test-suite_8cc_03_1_1_base_a.html" title="Base class A." alt="" coords="667,21142,830,21195"/>
+<area shape="rect" id="node31" href="$d1/dd0/classanonymous__namespace_02object-test-suite_8cc_03_1_1_base_b.html" title="Base class B." alt="" coords="667,21219,830,21272"/>
+<area shape="rect" id="node33" href="$d2/d64/classanonymous__namespace_02sequence-number-test-suite_8cc_03_1_1_sequence_number_test_obj.html" title="Test object using sequence numbers." alt="" coords="632,20987,865,21040"/>
+<area shape="rect" id="node34" href="$df/d2b/classanonymous__namespace_02test-string-value-formatting_8cc_03_1_1_formatting_test_object.html" title="StringValue formatting example test object." alt="" coords="648,21065,849,21117"/>
+<area shape="rect" id="node35" href="$dd/dd8/classns3_1_1_antenna_model.html" title="interface for antenna radiation pattern models" alt="" coords="682,21493,815,21518"/>
+<area shape="rect" id="node40" href="$de/d96/classns3_1_1_application.html" title="The base class for all ns3 applications." alt="" coords="691,22187,806,22211"/>
+<area shape="rect" id="node71" href="$d1/d70/classns3_1_1_arp_cache.html" title="An ARP cache." alt="" coords="694,21296,803,21321"/>
+<area shape="rect" id="node72" href="$df/d98/classns3_1_1_arp_l3_protocol.html" title="An implementation of the ARP protocol." alt="" coords="682,21345,815,21370"/>
+<area shape="rect" id="node73" href="$d8/da7/classns3_1_1_athstats_wifi_trace_sink.html" title="trace sink for wifi device that mimics madwifi&#39;s athstats tool." alt="" coords="658,21395,839,21419"/>
+<area shape="rect" id="node74" href="$d9/df8/classns3_1_1_b_s_link_manager.html" title="BaseStation Link Manager." alt="" coords="677,21444,820,21469"/>
+<area shape="rect" id="node75" href="$d6/d8d/classns3_1_1_b_s_scheduler.html" title="BaseStation Scheduler." alt="" coords="685,22605,812,22630"/>
+<area shape="rect" id="node78" href="$d0/d65/classns3_1_1_bandwidth_manager.html" title="This class manage the bandwidth request and grant mechanism." alt="" coords="668,21543,829,21567"/>
+<area shape="rect" id="node79" href="$d4/d45/classns3_1_1_block_ack_manager.html" title="Manages all block ack agreements for an originator station." alt="" coords="670,21592,827,21617"/>
+<area shape="rect" id="node80" href="$d9/de3/classns3_1_1_building.html" title="a 3d building block" alt="" coords="700,21641,797,21666"/>
+<area shape="rect" id="node81" href="$d6/dd8/classns3_1_1_building_list_priv.html" title="private implementation detail of the BuildingList API." alt="" coords="678,21691,819,21715"/>
+<area shape="rect" id="node82" href="$dd/dc4/classns3_1_1_burst_profile_manager.html" title="Profile manager for burst communications." alt="" coords="664,21740,833,21765"/>
+<area shape="rect" id="node83" href="$dc/dc8/classns3_1_1_cc_helper.html" title="Creation and configuration of Component Carrier entities." alt="" coords="696,21789,801,21814"/>
+<area shape="rect" id="node84" href="$d5/d61/classns3_1_1_channel.html" title="Abstract Channel Base Class." alt="" coords="699,23199,798,23223"/>
+<area shape="rect" id="node99" href="$d6/d99/classns3_1_1_channel_access_manager.html" title="Manage a set of ns3::Txop." alt="" coords="652,23297,845,23322"/>
+<area shape="rect" id="node101" href="$de/dd3/classns3_1_1_channel_condition.html" title="Carries information about the LOS/NLOS channel state." alt="" coords="672,22655,825,22679"/>
+<area shape="rect" id="node102" href="$d9/d17/classns3_1_1_channel_condition_model.html" title="Models the channel condition." alt="" coords="654,23637,843,23662"/>
+<area shape="rect" id="node117" href="$d5/dba/classns3_1_1_channel_list_priv.html" title="private implementation detail of the ChannelList API." alt="" coords="677,23248,820,23273"/>
+<area shape="rect" id="node118" href="$da/de8/classns3_1_1_component_carrier.html" title="ComponentCarrier Object, it defines a single Carrier This is the parent class for both ComponentCarri..." alt="" coords="671,23812,826,23837"/>
+<area shape="rect" id="node122" href="$d5/de1/classns3_1_1_connection_manager.html" title="The same connection manager class serves both for BS and SS though some functions are exclusive to on..." alt="" coords="665,23347,832,23371"/>
+<area shape="rect" id="node123" href="$dc/da5/classns3_1_1_data_calculator.html" title="Calculates data during a simulation." alt="" coords="681,19464,816,19489"/>
+<area shape="rect" id="node131" href="$d0/dba/classns3_1_1_data_collection_object.html" title="Base class for data collection framework objects." alt="" coords="662,24105,835,24130"/>
+<area shape="rect" id="node146" href="$d8/da9/classns3_1_1_data_collector.html" title="Collects data." alt="" coords="684,23911,813,23935"/>
+<area shape="rect" id="node147" href="$d1/db5/classns3_1_1_data_output_interface.html" title="Abstract Data Output Interface class s." alt="" coords="664,24253,833,24278"/>
+<area shape="rect" id="node150" href="$de/d1b/classns3_1_1_device_energy_model.html" title="Base class for device energy models." alt="" coords="665,24328,832,24353"/>
+<area shape="rect" id="node155" href="$dd/dcd/classns3_1_1_eht_configuration.html" title="EHT configuration." alt="" coords="675,24377,822,24402"/>
+<area shape="rect" id="node156" href="$d1/dc1/classns3_1_1_emlsr_manager.html" title="EmlsrManager is an abstract base class defining the API that EHT non&#45;AP MLDs with EMLSR activated can..." alt="" coords="681,24427,816,24451"/>
+<area shape="rect" id="node158" href="$d5/dda/classns3_1_1_energy_harvester.html" title="Energy harvester base class." alt="" coords="674,24476,823,24501"/>
+<area shape="rect" id="node160" href="$d7/d3a/classns3_1_1_energy_harvester_container.html" title="Holds a vector of ns3::EnergyHarvester pointers." alt="" coords="646,24525,851,24550"/>
+<area shape="rect" id="node161" href="$de/d6f/classns3_1_1_energy_source.html" title="Introspection did not find any typical Config paths." alt="" coords="682,24575,815,24599"/>
+<area shape="rect" id="node166" href="$d1/de0/classns3_1_1_energy_source_container.html" title="Holds a vector of ns3::EnergySource pointers." alt="" coords="654,24624,843,24649"/>
+<area shape="rect" id="node167" href="$d2/dd2/classns3_1_1_epc_helper.html" title="Base helper class to handle the creation of the EPC entities." alt="" coords="693,24673,804,24698"/>
+<area shape="rect" id="node171" href="$d8/dce/classns3_1_1_epc_test_rrc.html" title="RRC stub providing a testing S1 SAP user to be used with the EpcEnbApplication." alt="" coords="689,24723,808,24747"/>
+<area shape="rect" id="node172" href="$df/d6d/classns3_1_1_epc_ue_nas.html" title=" " alt="" coords="691,24772,806,24797"/>
+<area shape="rect" id="node173" href="$dd/dea/classns3_1_1_epc_x2.html" title="This entity is installed inside an eNB and provides the functionality for the X2 interface." alt="" coords="704,24821,793,24846"/>
+<area shape="rect" id="node174" href="$db/d1d/classns3_1_1_error_model.html" title="General error model that can be used to corrupt packets." alt="" coords="692,25020,805,25045"/>
+<area shape="rect" id="node184" href="$d2/df0/classns3_1_1_error_rate_model.html" title="the interface for Wifi&#39;s error models" alt="" coords="678,25241,819,25266"/>
+<area shape="rect" id="node188" href="$db/d6d/classns3_1_1_ff_mac_scheduler.html" title="This abstract base class identifies the interface by means of which the helper object can plug on the..." alt="" coords="676,25527,821,25551"/>
+<area shape="rect" id="node200" href="$d8/d12/classns3_1_1_flow_monitor.html" title="An object that monitors and reports back packet flows observed during a simulation." alt="" coords="688,25576,809,25601"/>
+<area shape="rect" id="node201" href="$d7/da2/classns3_1_1_flow_probe.html" title="The FlowProbe class is responsible for listening for packet events in a specific point of the simulat..." alt="" coords="692,25625,805,25650"/>
+<area shape="rect" id="node204" href="$de/d31/classns3_1_1_frame_capture_model.html" title="the interface for Wifi&#39;s frame capture models" alt="" coords="665,25675,832,25699"/>
+<area shape="rect" id="node206" href="$d4/d6e/classns3_1_1_frame_exchange_manager.html" title="FrameExchangeManager is a base class handling the basic frame exchange sequences for non&#45;QoS stations..." alt="" coords="651,25724,846,25749"/>
+<area shape="rect" id="node213" href="$d1/d75/classns3_1_1_global_router.html" title="An interface aggregated to a node to provide global routing info." alt="" coords="685,25773,812,25798"/>
+<area shape="rect" id="node214" href="$d3/d8b/classns3_1_1_granted_time_window_mpi_interface.html" title="Interface between ns&#45;3 and MPI." alt="" coords="652,6665,845,6704"/>
+<area shape="rect" id="node215" href="$d1/d96/classns3_1_1_grid_building_allocator.html" title="Allocate buildings on a rectangular 2d grid." alt="" coords="663,25823,834,25847"/>
+<area shape="rect" id="node216" href="$de/d8f/classns3_1_1_he_configuration.html" title="HE configuration." alt="" coords="676,25872,821,25897"/>
+<area shape="rect" id="node217" href="$d9/dbf/classns3_1_1_ht_configuration.html" title="HT configuration." alt="" coords="678,25921,819,25946"/>
+<area shape="rect" id="node218" href="$d6/d22/classns3_1_1_interference_helper.html" title="handles interference calculations" alt="" coords="669,26076,828,26101"/>
+<area shape="rect" id="node220" href="$d8/d70/classns3_1_1_ip_l4_protocol.html" title="L4 Protocol abstract base class." alt="" coords="687,26280,810,26305"/>
+<area shape="rect" id="node226" href="$d7/d0a/classns3_1_1_ipcs_classifier.html" title="IPCS classifier." alt="" coords="683,26329,814,26354"/>
+<area shape="rect" id="node227" href="$df/d23/classns3_1_1_ipv4.html" title="Access to the IPv4 forwarding table, interfaces, and configuration." alt="" coords="711,26428,786,26453"/>
+<area shape="rect" id="node230" href="$dc/da9/classns3_1_1_ipv4_interface.html" title="The IPv4 representation of a network interface." alt="" coords="685,26477,812,26502"/>
+<area shape="rect" id="node231" href="$d1/d9f/classns3_1_1_ipv4_routing_protocol.html" title="Abstract base class for IPv4 routing protocols." alt="" coords="664,26675,833,26699"/>
+<area shape="rect" id="node242" href="$d7/d30/classns3_1_1_ipv6.html" title="Access to the IPv6 forwarding table, interfaces, and configuration." alt="" coords="711,26724,786,26749"/>
+<area shape="rect" id="node244" href="$d7/d7a/classns3_1_1_ipv6_autoconfigured_prefix.html" title="Router prefix information." alt="" coords="650,26773,847,26798"/>
+<area shape="rect" id="node245" href="$d9/d93/classns3_1_1_ipv6_extension.html" title="IPv6 Extension base If you want to implement a new IPv6 extension, all you have to do is implement a ..." alt="" coords="682,26823,815,26847"/>
+<area shape="rect" id="node253" href="$da/d62/classns3_1_1_ipv6_extension_demux.html" title="Demultiplexes IPv6 extensions." alt="" coords="661,26872,836,26897"/>
+<area shape="rect" id="node254" href="$d4/d53/classns3_1_1_ipv6_extension_routing_demux.html" title="IPv6 Extension Routing Demux." alt="" coords="659,26921,838,26960"/>
+<area shape="rect" id="node255" href="$d5/de5/classns3_1_1_ipv6_interface.html" title="The IPv6 representation of a network interface." alt="" coords="685,26984,812,27009"/>
+<area shape="rect" id="node256" href="$de/d36/classns3_1_1_ipv6_option.html" title="IPv6 Option base." alt="" coords="692,27033,805,27058"/>
+<area shape="rect" id="node261" href="$d6/d13/classns3_1_1_ipv6_option_demux.html" title="IPv6 Option Demux." alt="" coords="671,27083,826,27107"/>
+<area shape="rect" id="node262" href="$d3/d61/classns3_1_1_ipv6_pmtu_cache.html" title="This class implements the Path MTU cache, as defined by RFC 1981." alt="" coords="677,27132,820,27157"/>
+<area shape="rect" id="node263" href="$da/de4/classns3_1_1_ipv6_routing_protocol.html" title="Abstract base class for IPv6 routing protocols." alt="" coords="664,27181,833,27206"/>
+<area shape="rect" id="node269" href="$d5/df7/classns3_1_1_jakes_process.html" title="Implementation for a single path Stationary Jakes propagation loss model." alt="" coords="682,27231,815,27255"/>
+<area shape="rect" id="node270" href="$d1/dc2/classns3_1_1_lr_wpan_csma_ca.html" title="This class is a helper for the LrWpanMac to manage the Csma/CA state machine according to IEEE 802...." alt="" coords="676,27280,821,27305"/>
+<area shape="rect" id="node271" href="$da/d32/classns3_1_1_lr_wpan_error_model.html" title="Model the error rate for IEEE 802.15.4 2.4 GHz AWGN channel for OQPSK the model description can be fo..." alt="" coords="669,27329,828,27354"/>
+<area shape="rect" id="node272" href="$d7/d60/classns3_1_1_lr_wpan_mac.html" title="Class that implements the LR&#45;WPAN MAC state machine." alt="" coords="688,27379,809,27403"/>
+<area shape="rect" id="node273" href="$d1/d54/classns3_1_1_lte_amc.html" title="Implements the Adaptive Modulation And Coding Scheme." alt="" coords="701,27428,796,27453"/>
+<area shape="rect" id="node274" href="$d0/d58/classns3_1_1_lte_anr.html" title="Automatic Neighbour Relation function." alt="" coords="704,27477,793,27502"/>
+<area shape="rect" id="node275" href="$d3/d15/classns3_1_1_lte_enb_component_carrier_manager.html" title="The class implements Component Carrier Manager (CCM) that operates using the Component Carrier Manage..." alt="" coords="650,27526,847,27565"/>
+<area shape="rect" id="node278" href="$d8/dc9/classns3_1_1_lte_enb_mac.html" title="This class implements the MAC layer of the eNodeB device." alt="" coords="690,27589,807,27614"/>
+<area shape="rect" id="node279" href="$d3/d62/classns3_1_1_lte_enb_rrc.html" title="The LTE Radio Resource Control entity at the eNB." alt="" coords="692,27639,805,27663"/>
+<area shape="rect" id="node280" href="$d0/d77/classns3_1_1_lte_enb_rrc_protocol_ideal.html" title="Models the transmission of RRC messages from the UE to the eNB in an ideal fashion,..." alt="" coords="654,27688,843,27713"/>
+<area shape="rect" id="node281" href="$d9/d77/classns3_1_1_lte_enb_rrc_protocol_real.html" title="Models the transmission of RRC messages from the UE to the eNB in a real fashion, by creating real RR..." alt="" coords="655,27737,842,27762"/>
+<area shape="rect" id="node282" href="$d7/dd2/classns3_1_1_lte_ffr_algorithm.html" title="The abstract base class of a Frequency Reuse algorithm." alt="" coords="679,28045,818,28070"/>
+<area shape="rect" id="node291" href="$d6/d63/classns3_1_1_lte_handover_algorithm.html" title="The abstract base class of a handover algorithm that operates using the Handover Management SAP inter..." alt="" coords="659,28095,838,28119"/>
+<area shape="rect" id="node295" href="$de/d68/classns3_1_1_lte_helper.html" title="Creation and configuration of LTE entities." alt="" coords="695,28144,802,28169"/>
+<area shape="rect" id="node296" href="$de/dce/classns3_1_1_lte_hex_grid_enb_topology_helper.html" title="This helper class allows to easily create a topology with eNBs grouped in three&#45;sector sites laid out..." alt="" coords="653,28193,844,28232"/>
+<area shape="rect" id="node297" href="$d8/dc8/classns3_1_1_lte_interference.html" title="This class implements a gaussian interference model, i.e., all incoming signals are added to the tota..." alt="" coords="679,6728,818,6753"/>
+<area shape="rect" id="node298" href="$d8/d16/classns3_1_1_lte_pdcp.html" title="LTE PDCP entity, see 3GPP TS 36.323." alt="" coords="699,6777,798,6802"/>
+<area shape="rect" id="node299" href="$de/d4c/classns3_1_1_lte_phy.html" title="The LtePhy models the physical layer of LTE." alt="" coords="703,6827,794,6851"/>
+<area shape="rect" id="node303" href="$d7/da8/classns3_1_1_lte_radio_bearer_info.html" title="store information on active radio bearer instance" alt="" coords="668,6876,829,6901"/>
+<area shape="rect" id="node306" href="$d3/d02/classns3_1_1_lte_rlc.html" title="This abstract base class defines the API to interact with the Radio Link Control (LTE_RLC) in LTE,..." alt="" coords="704,6925,793,6950"/>
+<area shape="rect" id="node311" href="$d5/d88/classns3_1_1_lte_simple_helper.html" title="A simplified version of LteHelper, that is used for creation and configuration of LTE entities for te..." alt="" coords="675,7092,822,7117"/>
+<area shape="rect" id="node312" href="$d6/df8/classns3_1_1_lte_stats_calculator.html" title="Base class for ***StatsCalculator classes." alt="" coords="670,7141,827,7166"/>
+<area shape="rect" id="node318" href="$d1/dba/classns3_1_1_lte_test_mac.html" title="This class implements a testing loopback MAC layer." alt="" coords="689,7452,808,7477"/>
+<area shape="rect" id="node319" href="$da/d7a/classns3_1_1_lte_test_pdcp.html" title="This class implements a testing PDCP entity." alt="" coords="687,7501,810,7526"/>
+<area shape="rect" id="node320" href="$db/dc2/classns3_1_1_lte_test_rrc.html" title="This class implements a testing RRC entity." alt="" coords="691,7551,806,7575"/>
+<area shape="rect" id="node321" href="$d5/d36/classns3_1_1_lte_ue_component_carrier_manager.html" title="The abstract base class of a Component Carrier Manager* for UE that operates using the component carr..." alt="" coords="653,7600,844,7638"/>
+<area shape="rect" id="node323" href="$dc/d86/classns3_1_1_lte_ue_mac.html" title=" " alt="" coords="693,7663,804,7687"/>
+<area shape="rect" id="node324" href="$d6/dc2/classns3_1_1_lte_ue_power_control.html" title="This class realizes Uplink Power Control functionality." alt="" coords="667,7712,830,7737"/>
+<area shape="rect" id="node325" href="$d3/d46/classns3_1_1_lte_ue_rrc.html" title=" " alt="" coords="695,7761,802,7786"/>
+<area shape="rect" id="node326" href="$df/d05/classns3_1_1_lte_ue_rrc_protocol_ideal.html" title="Models the transmission of RRC messages from the UE to the eNB in an ideal fashion,..." alt="" coords="657,7811,840,7835"/>
+<area shape="rect" id="node327" href="$da/db0/classns3_1_1_lte_ue_rrc_protocol_real.html" title="Models the transmission of RRC messages from the UE to the eNB in a real fashion, by creating real RR..." alt="" coords="658,7860,839,7885"/>
+<area shape="rect" id="node328" href="$d6/d71/classns3_1_1_matrix_based_channel_model.html" title="This is an interface for a channel model that can be described by a channel matrix,..." alt="" coords="645,7909,852,7934"/>
+<area shape="rect" id="node330" href="$dd/da3/classns3_1_1_mesh_l2_routing_protocol.html" title="Interface for L2 mesh routing protocol and mesh point communication." alt="" coords="654,7959,843,7983"/>
+<area shape="rect" id="node333" href="$d9/d5f/classns3_1_1_mesh_stack.html" title="Prototype for class, which helps to install MAC&#45;layer routing stack to ns3::MeshPointDevice." alt="" coords="690,8008,807,8033"/>
+<area shape="rect" id="node336" href="$db/de9/classns3_1_1_mobility_building_info.html" title="mobility buildings information (to be used by mobility models)" alt="" coords="667,8057,830,8082"/>
+<area shape="rect" id="node337" href="$db/ddb/classns3_1_1_mobility_model.html" title="Keep track of the current position and velocity of an object." alt="" coords="683,8107,814,8131"/>
+<area shape="rect" id="node349" href="$da/dc2/classns3_1_1_mpdu_aggregator.html" title="Aggregator used to construct A&#45;MPDUs." alt="" coords="676,8659,821,8683"/>
+<area shape="rect" id="node350" href="$d1/d1a/classns3_1_1_mpi_receiver.html" title="Class to aggregate to a NetDevice if it supports MPI capability." alt="" coords="688,8708,809,8733"/>
+<area shape="rect" id="node351" href="$d2/da5/classns3_1_1_msdu_aggregator.html" title="Aggregator used to construct A&#45;MSDUs." alt="" coords="676,8757,821,8782"/>
+<area shape="rect" id="node352" href="$d6/d07/classns3_1_1_multi_user_scheduler.html" title="MultiUserScheduler is an abstract base class defining the API that APs supporting at least VHT can us..." alt="" coords="666,8807,831,8831"/>
+<area shape="rect" id="node355" href="$db/d7f/classns3_1_1_ndisc_cache.html" title="IPv6 Neighbor Discovery cache." alt="" coords="688,8856,809,8881"/>
+<area shape="rect" id="node356" href="$d0/da3/classns3_1_1_net_device.html" title="Network layer to device interface." alt="" coords="692,8905,805,8930"/>
+<area shape="rect" id="node384" href="$d9/d6f/classns3_1_1_net_device_queue.html" title="Network device transmission queue." alt="" coords="673,9473,824,9498"/>
+<area shape="rect" id="node386" href="$dd/da5/classns3_1_1_net_device_queue_interface.html" title="Network device transmission queue interface." alt="" coords="647,9673,850,9698"/>
+<area shape="rect" id="node387" href="$d0/d3d/classns3_1_1_node.html" title="A network Node." alt="" coords="708,9723,789,9747"/>
+<area shape="rect" id="node388" href="$d8/d6a/classns3_1_1_node_list_priv.html" title="private implementation detail of the NodeList API." alt="" coords="686,9772,811,9797"/>
+<area shape="rect" id="node389" href="$d9/d58/classns3_1_1_null_message_mpi_interface.html" title="Interface between ns&#45;3 and MPI for the Null Message distributed simulation implementation." alt="" coords="649,6616,848,6641"/>
+<area shape="rect" id="node390" href="$d1/de4/classns3_1_1_obss_pd_algorithm.html" title="OBSS PD algorithm interface." alt="" coords="672,9821,825,9846"/>
+<area shape="rect" id="node392" href="$db/ddf/classns3_1_1_packet_burst.html" title="this class implement a burst as a list of packets" alt="" coords="687,9871,810,9895"/>
+<area shape="rect" id="node393" href="$d8/d88/classns3_1_1_packet_filter.html" title="PacketFilter is the abstract base class for filters used by queue discs to classify packets." alt="" coords="689,9920,808,9945"/>
+<area shape="rect" id="node400" href="$d1/d76/classns3_1_1_pcap_file_wrapper.html" title="A class that wraps a PcapFile as an ns3::Object and provides a higher&#45;layer ns&#45;3 interface to the low..." alt="" coords="674,9969,823,9994"/>
+<area shape="rect" id="node401" href="$d0/d28/classns3_1_1_phased_array_model.html" title="Class implementing the phased array model virtual base class." alt="" coords="668,10019,829,10043"/>
+<area shape="rect" id="node403" href="$dc/ddc/classns3_1_1_phased_array_spectrum_propagation_loss_model.html" title="spectrum&#45;aware propagation loss model that is compatible with PhasedArrayModel type of ns&#45;3 antenna" alt="" coords="658,10068,839,10106"/>
+<area shape="rect" id="node406" href="$df/d7b/classns3_1_1_position_allocator.html" title="Allocate a set of positions." alt="" coords="674,10131,823,10155"/>
+<area shape="rect" id="node419" href="$dd/dff/classns3_1_1_preamble_detection_model.html" title="the interface for Wifi&#39;s preamble detection models" alt="" coords="650,10421,847,10446"/>
+<area shape="rect" id="node421" href="$dd/d5f/classns3_1_1_priority_ul_job.html" title="PriorityUlJob class." alt="" coords="686,11181,811,11206"/>
+<area shape="rect" id="node422" href="$d2/d02/classns3_1_1_propagation_delay_model.html" title="calculate a propagation delay." alt="" coords="654,10509,843,10534"/>
+<area shape="rect" id="node425" href="$d6/d6e/classns3_1_1_propagation_loss_model.html" title="Models the propagation loss through a transmission medium." alt="" coords="657,11231,840,11255"/>
+<area shape="rect" id="node454" href="$d0/ddb/classns3_1_1_queue_base.html" title="Abstract base class for packet Queues." alt="" coords="689,11904,808,11929"/>
+<area shape="rect" id="node461" href="$d5/d52/classns3_1_1_queue_disc.html" title="QueueDisc is an abstract base class providing the interface and implementing the operations common to..." alt="" coords="691,12348,806,12373"/>
+<area shape="rect" id="node476" href="$df/d2e/classns3_1_1_queue_disc_class.html" title="QueueDiscClass is the base class for classes that are included in a queue disc." alt="" coords="674,12768,823,12793"/>
+<area shape="rect" id="node480" href="$d6/da3/classns3_1_1_queue_limits.html" title="Abstract base class for NetDevice queue length controller." alt="" coords="687,13015,810,13039"/>
+<area shape="rect" id="node482" href="$df/df9/classns3_1_1_radio_environment_map_helper.html" title="Generates a 2D map of the SINR from the strongest transmitter in the downlink of an LTE FDD system." alt="" coords="658,13705,839,13744"/>
+<area shape="rect" id="node483" href="$d3/de2/classns3_1_1_random_variable_stream.html" title="The basic uniform Random Number Generator (RNG)." alt="" coords="655,13261,842,13286"/>
+<area shape="rect" id="node499" href="$dd/d8e/classns3_1_1_remote_channel_bundle.html" title="Collection of ns&#45;3 channels between local and remote nodes." alt="" coords="657,13817,840,13842"/>
+<area shape="rect" id="node500" href="$db/d2e/classns3_1_1_rtt_estimator.html" title="Base class for all RTT Estimators." alt="" coords="686,13768,811,13793"/>
+<area shape="rect" id="node502" href="$d5/da1/classns3_1_1_s_s_link_manager.html" title="this class implements the link manager of subscriber station net device." alt="" coords="677,14015,820,14039"/>
+<area shape="rect" id="node503" href="$db/d89/classns3_1_1_s_s_manager.html" title="this class manages a list of SSrecords" alt="" coords="689,14064,808,14089"/>
+<area shape="rect" id="node504" href="$dc/d58/classns3_1_1_s_s_scheduler.html" title=" " alt="" coords="685,14113,812,14138"/>
+<area shape="rect" id="node505" href="$d6/d4d/classns3_1_1_scheduler.html" title="Maintain the event list." alt="" coords="694,13867,803,13891"/>
+<area shape="rect" id="node511" href="$d5/d7c/classns3_1_1_service_flow_manager.html" title="The same service flow manager class serves both for BS and SS though some functions are exclusive to ..." alt="" coords="662,14163,835,14187"/>
+<area shape="rect" id="node514" href="$d3/d7b/classns3_1_1_simulator_impl.html" title="The SimulatorImpl base class." alt="" coords="683,14212,814,14237"/>
+<area shape="rect" id="node520" href="$d8/db5/classns3_1_1_socket.html" title="A low&#45;level Socket API based loosely on the BSD Socket API." alt="" coords="703,14408,794,14433"/>
+<area shape="rect" id="node534" href="$d3/db9/classns3_1_1_socket_factory.html" title="Object to create transport layer instances that provide a socket API to applications." alt="" coords="681,14656,816,14681"/>
+<area shape="rect" id="node544" href="$d1/d03/classns3_1_1_spectrum_error_model.html" title=" " alt="" coords="664,14912,833,14937"/>
+<area shape="rect" id="node546" href="$de/dce/classns3_1_1_spectrum_interference.html" title="This class implements a gaussian interference model, i.e., all incoming signals are added to the tota..." alt="" coords="660,15348,837,15373"/>
+<area shape="rect" id="node547" href="$d6/d75/classns3_1_1_spectrum_phy.html" title="Abstract base class for Spectrum&#45;aware PHY layers." alt="" coords="684,15064,813,15089"/>
+<area shape="rect" id="node557" href="$d6/d82/classns3_1_1_spectrum_propagation_loss_model.html" title="spectrum&#45;aware propagation loss model" alt="" coords="661,15397,836,15436"/>
+<area shape="rect" id="node561" href="$d8/df6/classns3_1_1_spectrum_transmit_filter.html" title="spectrum&#45;aware transmit filter object" alt="" coords="656,15497,841,15522"/>
+<area shape="rect" id="node563" href="$db/dc0/classns3_1_1_synchronizer.html" title="Base class used for synchronizing the simulation events to some real time &quot;wall clock...." alt="" coords="686,15620,811,15645"/>
+<area shape="rect" id="node565" href="$dc/d64/classns3_1_1_tcp_congestion_ops.html" title="Congestion control abstract class." alt="" coords="668,15688,829,15713"/>
+<area shape="rect" id="node585" href="$da/de9/classns3_1_1_tcp_option.html" title="Base class for all kinds of TCP options." alt="" coords="694,16003,803,16027"/>
+<area shape="rect" id="node594" href="$d7/dc9/classns3_1_1_tcp_rate_ops.html" title="Interface for all operations that involve a Rate monitoring for TCP." alt="" coords="687,16200,810,16225"/>
+<area shape="rect" id="node596" href="$da/d04/classns3_1_1_tcp_recovery_ops.html" title="recovery abstract class" alt="" coords="673,16299,824,16323"/>
+<area shape="rect" id="node599" href="$df/db8/classns3_1_1_tcp_rx_buffer.html" title="Rx reordering buffer for TCP." alt="" coords="687,16496,810,16521"/>
+<area shape="rect" id="node600" href="$d4/d00/classns3_1_1_tcp_socket_state.html" title="Data structure that records the congestion state of a connection." alt="" coords="677,16545,820,16570"/>
+<area shape="rect" id="node601" href="$df/d67/classns3_1_1_tcp_tx_buffer.html" title="Tcp sender buffer." alt="" coords="688,16595,809,16619"/>
+<area shape="rect" id="node602" href="$d4/d82/classns3_1_1_three_gpp_http_variables.html" title="Container of various random variables to assist in generating web browsing traffic pattern." alt="" coords="656,16644,841,16669"/>
+<area shape="rect" id="node603" href="$d0/de8/classns3_1_1_topology_reader.html" title="Interface for input file readers management." alt="" coords="677,16373,820,16398"/>
+<area shape="rect" id="node607" href="$d9/dd6/classns3_1_1_traffic_control_layer.html" title="The Traffic Control layer aims at introducing an equivalent of the Linux Traffic Control infrastructu..." alt="" coords="669,16743,828,16767"/>
+<area shape="rect" id="node608" href="$de/dca/classns3_1_1_txop.html" title="Handle packet fragmentation and retransmissions for data and management frames." alt="" coords="709,16693,788,16718"/>
+<area shape="rect" id="node610" href="$d9/d9c/classns3_1_1_uan_mac.html" title="Virtual base class for all UAN MAC protocols." alt="" coords="699,16792,798,16817"/>
+<area shape="rect" id="node615" href="$d4/d31/classns3_1_1_uan_noise_model.html" title="UAN Noise Model base class." alt="" coords="677,16841,820,16866"/>
+<area shape="rect" id="node617" href="$dd/d42/classns3_1_1_uan_phy.html" title="Base class for UAN Phy models." alt="" coords="700,16891,797,16915"/>
+<area shape="rect" id="node620" href="$d0/dd0/classns3_1_1_uan_phy_calc_sinr.html" title="Class used for calculating SINR of packet in UanPhy." alt="" coords="675,16940,822,16965"/>
+<area shape="rect" id="node624" href="$d4/d7f/classns3_1_1_uan_phy_per.html" title="Calculate packet error probability, based on received SINR and modulation (mode)." alt="" coords="690,17064,807,17089"/>
+<area shape="rect" id="node628" href="$d2/d4c/classns3_1_1_uan_prop_model.html" title="Base class for implemented underwater propagation models." alt="" coords="680,17187,817,17211"/>
+<area shape="rect" id="node631" href="$d1/da2/classns3_1_1_uan_transducer.html" title="Virtual base for Transducer objects." alt="" coords="680,17285,817,17310"/>
+<area shape="rect" id="node633" href="$dc/dbb/classns3_1_1_ue_manager.html" title="Manages all the radio bearer information possessed by the ENB RRC for a single UE." alt="" coords="690,17483,807,17507"/>
+<area shape="rect" id="node634" href="$d7/d47/classns3_1_1_ul_job.html" title="this class implements a structure to compute the priority of service flows" alt="" coords="706,17532,791,17557"/>
+<area shape="rect" id="node635" href="$d1/d6d/classns3_1_1_uplink_scheduler.html" title="Virtual class for uplink scheduler." alt="" coords="676,17360,821,17385"/>
+<area shape="rect" id="node639" href="$df/d55/classns3_1_1_vht_configuration.html" title="VHT configuration." alt="" coords="675,17631,822,17655"/>
+<area shape="rect" id="node640" href="$d4/d97/classns3_1_1_wifi_ack_manager.html" title="WifiAckManager is an abstract base class." alt="" coords="675,17581,822,17606"/>
+<area shape="rect" id="node642" href="$dc/d63/classns3_1_1_wifi_assoc_manager.html" title="Abstract base class for the Association Manager, which manages scanning and association for single li..." alt="" coords="668,17680,829,17705"/>
+<area shape="rect" id="node644" href="$d3/d57/classns3_1_1_wifi_mac.html" title="base class for all MAC&#45;level wifi objects." alt="" coords="699,17729,798,17754"/>
+<area shape="rect" id="node650" href="$d0/d9d/classns3_1_1_wifi_mac_queue_scheduler.html" title="WifiMacQueueScheduler is an abstract base class defining the public interface for a wifi MAC queue sc..." alt="" coords="651,17848,846,17873"/>
+<area shape="rect" id="node654" href="$dc/d2d/classns3_1_1_wifi_phy.html" title="802.11 PHY layer model" alt="" coords="700,17953,797,17978"/>
+<area shape="rect" id="node661" href="$d5/dd8/classns3_1_1_wifi_phy_state_helper.html" title="This objects implements the PHY state machine of the Wifi device." alt="" coords="666,18263,831,18287"/>
+<area shape="rect" id="node662" href="$d7/dd6/classns3_1_1_wifi_protection_manager.html" title="WifiProtectionManager is an abstract base class." alt="" coords="657,18111,840,18135"/>
+<area shape="rect" id="node664" href="$d3/dcb/classns3_1_1_wifi_remote_station_manager.html" title="hold a list of per&#45;remote&#45;station state." alt="" coords="644,18312,853,18337"/>
+<area shape="rect" id="node680" href="$d6/d17/classns3_1_1_wifi_tx_current_model.html" title="Model the transmit current as a function of the transmit power and mode." alt="" coords="665,18361,832,18386"/>
+<area shape="rect" id="node682" href="$d7/dbb/classns3_1_1_wimax_connection.html" title="Class to represent WiMAX connections." alt="" coords="669,18460,828,18485"/>
+<area shape="rect" id="node683" href="$d5/dff/classns3_1_1_wimax_mac_queue.html" title="Class implementing the device packet queue." alt="" coords="671,18509,826,18534"/>
+<area shape="rect" id="node684" href="$d6/d1d/classns3_1_1_wimax_phy.html" title="WiMAX PHY entity." alt="" coords="691,18411,806,18435"/>
+<area shape="rect" id="node686" href="$da/dce/classns3_1_1dot11s_1_1_airtime_link_metric_calculator.html" title="Airtime link metric calculator." alt="" coords="667,18608,830,18646"/>
+<area shape="rect" id="node687" href="$d7/d0e/classns3_1_1dot11s_1_1_hwmp_rtable.html" title="Routing table for HWMP – 802.11s routing protocol." alt="" coords="662,18671,835,18695"/>
+<area shape="rect" id="node688" href="$db/d2e/classns3_1_1dot11s_1_1_peer_link.html" title="Peer link model for 802.11s Peer Management protocol." alt="" coords="675,18720,822,18745"/>
+<area shape="rect" id="node689" href="$d6/d84/classns3_1_1dot11s_1_1_peer_management_protocol.html" title="802.11s Peer Management Protocol model" alt="" coords="649,18769,848,18808"/>
+<area shape="rect" id="node690" href="$df/ded/classns3_1_1dsr_1_1_dsr_gra_reply.html" title="maintain the gratuitous reply" alt="" coords="673,18832,824,18857"/>
+<area shape="rect" id="node691" href="$d9/d8a/classns3_1_1dsr_1_1_dsr_network_queue.html" title=" " alt="" coords="656,18881,841,18906"/>
+<area shape="rect" id="node692" href="$df/dc2/classns3_1_1dsr_1_1_dsr_options.html" title=" " alt="" coords="677,19513,820,19538"/>
+<area shape="rect" id="node701" href="$d5/d13/classns3_1_1dsr_1_1_dsr_passive_buffer.html" title="DSR passive buffer." alt="" coords="660,18980,837,19005"/>
+<area shape="rect" id="node702" href="$d3/d18/classns3_1_1dsr_1_1_dsr_route_cache.html" title="DSR route request queue Since DSR is an on demand routing we queue requests while looking for route." alt="" coords="664,19029,833,19054"/>
+<area shape="rect" id="node703" href="$d2/d43/classns3_1_1dsr_1_1_dsr_rreq_table.html" title="maintain list of DsrRreqTable entry" alt="" coords="670,19079,827,19103"/>
+<area shape="rect" id="node704" href="$d8/d36/classns3_1_1flame_1_1_flame_rtable.html" title="Routing table for FLAME." alt="" coords="666,19128,831,19153"/>
+<area shape="rect" id="node705" href="$db/d6b/classns3_1_1lorawan_1_1_end_device_status.html" title="This class represents the Network Server&#39;s knowledge about an End Device in the LoRaWAN network it is..." alt="" coords="646,19177,851,19202"/>
+<area shape="rect" id="node706" href="$d9/de0/classns3_1_1lorawan_1_1_gateway_status.html" title=" " alt="" coords="653,19227,844,19251"/>
+<area shape="rect" id="node707" href="$d8/dcb/classns3_1_1lorawan_1_1_logical_lora_channel.html" title="This class represents a logical LoRaWAN channel." alt="" coords="664,19276,833,19314"/>
+<area shape="rect" id="node708" href="$da/d7f/classns3_1_1lorawan_1_1_logical_lora_channel_helper.html" title="This class supports LorawanMac instances by managing a list of the logical channels that the device i..." alt="" coords="664,19338,833,19377"/>
+<area shape="rect" id="node709" href="$d4/d1d/classns3_1_1lorawan_1_1_lora_device_address_generator.html" title="This class generates sequential LoraDeviceAddress instances." alt="" coords="664,19401,833,19440"/>
+<area shape="rect" id="node710" href="$dc/dd2/classns3_1_1lorawan_1_1_lora_phy.html" title="Base class for PHY layers implementing the LoRa modulation scheme." alt="" coords="673,19563,824,19587"/>
+<area shape="rect" id="node715" href="$d2/de4/classns3_1_1lorawan_1_1_lora_tx_current_model.html" title="Model the transmit current as a function of the transmit power and mode." alt="" coords="656,19612,841,19650"/>
+<area shape="rect" id="node718" href="$d9/d86/classns3_1_1lorawan_1_1_lorawan_mac.html" title="Class representing the LoRaWAN MAC layer." alt="" coords="661,19724,836,19749"/>
+<area shape="rect" id="node722" href="$db/d80/classns3_1_1lorawan_1_1_mac_command.html" title="This base class is used to represent a general MAC command." alt="" coords="655,19921,842,19946"/>
+<area shape="rect" id="node740" href="$d1/d33/classns3_1_1lorawan_1_1_network_controller.html" title="This class collects a series of components that deal with various aspects of managing the network,..." alt="" coords="645,19675,852,19699"/>
+<area shape="rect" id="node741" href="$de/d70/classns3_1_1lorawan_1_1_network_controller_component.html" title="Generic class describing a component of the NetworkController." alt="" coords="645,20033,852,20072"/>
+<area shape="rect" id="node745" href="$d3/dd8/classns3_1_1lorawan_1_1_network_scheduler.html" title=" " alt="" coords="644,19773,853,19798"/>
+<area shape="rect" id="node746" href="$db/d65/classns3_1_1lorawan_1_1_network_status.html" title="This class represents the knowledge about the state of the network that is available at the Network S..." alt="" coords="654,19823,843,19847"/>
+<area shape="rect" id="node747" href="$df/d23/classns3_1_1lorawan_1_1_sub_band.html" title="Class representing a SubBand, i.e., a frequency band subject to some regulations on duty cycle and tr..." alt="" coords="671,19872,826,19897"/>
+<area shape="rect" id="node748" href="$d8/de1/classns3_1_1ofi_1_1_controller.html" title="An interface for a Controller of OpenFlowSwitchNetDevices." alt="" coords="684,20889,813,20914"/>
+<area shape="rect" id="node751" href="$da/d97/classns3_1_1tests_1_1_alternate_test_object.html" title="Alternate test object for the Name service." alt="" coords="666,19970,831,20009"/>
+<area shape="rect" id="node752" href="$d3/d25/classns3_1_1tests_1_1_base_config_object.html" title="Base config object." alt="" coords="652,20939,845,20963"/>
+<area shape="rect" id="node754" href="$de/d52/classns3_1_1tests_1_1_config_test_object.html" title="An object with some attributes that we can play with using config." alt="" coords="654,23861,843,23886"/>
+<area shape="rect" id="node756" href="$db/df8/classns3_1_1tests_1_1_test_object.html" title="Simple test object to exercise the Name service." alt="" coords="673,23687,824,23711"/>
+<area shape="rect" id="node30" href="$d3/d19/classanonymous__namespace_02object-test-suite_8cc_03_1_1_derived_a.html" title="Derived class A." alt="" coords="952,21145,1115,21197"/>
+<area shape="rect" id="node32" href="$d8/d0f/classanonymous__namespace_02object-test-suite_8cc_03_1_1_derived_b.html" title="Derived class B." alt="" coords="952,21222,1115,21275"/>
+<area shape="rect" id="node36" href="$de/d17/classns3_1_1_cosine_antenna_model.html" title="Cosine Antenna Model." alt="" coords="946,21299,1121,21323"/>
+<area shape="rect" id="node37" href="$da/dba/classns3_1_1_isotropic_antenna_model.html" title="Isotropic antenna model." alt="" coords="942,21348,1125,21373"/>
+<area shape="rect" id="node38" href="$dc/d4b/classns3_1_1_parabolic_antenna_model.html" title="Antenna model based on a parabolic approximation of the main lobe radiation pattern." alt="" coords="940,21397,1127,21422"/>
+<area shape="rect" id="node39" href="$d1/d75/classns3_1_1_three_gpp_antenna_model.html" title="Antenna model based on a parabolic approximation of the main lobe radiation pattern." alt="" coords="938,21447,1129,21471"/>
+<area shape="rect" id="node41" href="$d6/d14/class_eps_bearer_tag_udp_client.html" title="A Udp client." alt="" coords="953,22285,1114,22310"/>
+<area shape="rect" id="node42" href="$dd/d23/class_receiver.html" title="Receiver application." alt="" coords="998,22335,1069,22359"/>
+<area shape="rect" id="node43" href="$d8/d7a/class_sender.html" title="Sender application." alt="" coords="1002,22384,1065,22409"/>
+<area shape="rect" id="node44" href="$d4/dd2/classns3_1_1_bulk_send_application.html" title="Send as much traffic as possible, trying to fill the bandwidth." alt="" coords="948,22433,1119,22458"/>
+<area shape="rect" id="node45" href="$d8/d07/classns3_1_1_dhcp_client.html" title="Implements the functionality of a DHCP client." alt="" coords="976,22483,1091,22507"/>
+<area shape="rect" id="node46" href="$d8/d34/classns3_1_1_dhcp_server.html" title="Implements the functionality of a DHCP server." alt="" coords="974,22532,1093,22557"/>
+<area shape="rect" id="node47" href="$d7/d11/classns3_1_1_epc_enb_application.html" title="This application is installed inside eNBs and provides the bridge functionality for user data plane p..." alt="" coords="953,22581,1114,22606"/>
+<area shape="rect" id="node48" href="$d0/ddf/classns3_1_1_epc_mme_application.html" title="This application implements the Mobility Management Entity (MME) according to the 3GPP TS 23...." alt="" coords="950,22631,1117,22655"/>
+<area shape="rect" id="node49" href="$dd/dbb/classns3_1_1_epc_pgw_application.html" title="This application implements the Packet Data Network (PDN) Gateway Entity (PGW) according to the 3GPP ..." alt="" coords="952,22680,1115,22705"/>
+<area shape="rect" id="node50" href="$d1/d14/classns3_1_1_epc_sgw_application.html" title="This application implements the Serving Gateway Entity (SGW) according to the 3GPP TS 23...." alt="" coords="952,22729,1115,22754"/>
+<area shape="rect" id="node51" href="$db/d5c/classns3_1_1_on_off_application.html" title="Generate traffic to a single destination according to an OnOff pattern." alt="" coords="959,22779,1108,22803"/>
+<area shape="rect" id="node52" href="$df/d95/classns3_1_1_packet_sink.html" title="Receive and consume traffic generated to an IP address and port." alt="" coords="975,22828,1092,22853"/>
+<area shape="rect" id="node53" href="$d6/df6/classns3_1_1_packet_socket_client.html" title="A simple client." alt="" coords="951,22877,1116,22902"/>
+<area shape="rect" id="node54" href="$d2/d40/classns3_1_1_packet_socket_server.html" title="A server using PacketSocket." alt="" coords="949,22927,1118,22951"/>
+<area shape="rect" id="node55" href="$d6/dbe/classns3_1_1_ping.html" title="This application behaves similarly to the Unix ping application, although with fewer options supporte..." alt="" coords="995,21496,1072,21521"/>
+<area shape="rect" id="node56" href="$d8/de5/classns3_1_1_radvd.html" title="Router advertisement daemon." alt="" coords="990,21545,1077,21570"/>
+<area shape="rect" id="node57" href="$d8/da7/classns3_1_1_socket_writer.html" title="Simple class to write data to sockets." alt="" coords="971,21595,1096,21619"/>
+<area shape="rect" id="node58" href="$d9/de0/classns3_1_1_three_gpp_http_client.html" title="Model application which simulates the traffic of a web browser." alt="" coords="950,21644,1117,21669"/>
+<area shape="rect" id="node59" href="$dc/db0/classns3_1_1_three_gpp_http_server.html" title="Model application which simulates the traffic of a web server." alt="" coords="948,21693,1119,21718"/>
+<area shape="rect" id="node60" href="$d0/d58/classns3_1_1_tutorial_app.html" title="Tutorial &#45; a simple Application sending packets." alt="" coords="976,21743,1091,21767"/>
+<area shape="rect" id="node61" href="$df/d70/classns3_1_1_udp_client.html" title="A Udp client." alt="" coords="979,21792,1088,21817"/>
+<area shape="rect" id="node62" href="$d4/d0c/classns3_1_1_udp_echo_client.html" title="A Udp Echo client." alt="" coords="964,21841,1103,21866"/>
+<area shape="rect" id="node63" href="$d3/d7c/classns3_1_1_udp_echo_server.html" title="A Udp Echo server." alt="" coords="962,21891,1105,21915"/>
+<area shape="rect" id="node64" href="$da/d50/classns3_1_1_udp_server.html" title="A UDP server, receives UDP packets from a remote host." alt="" coords="977,21940,1090,21965"/>
+<area shape="rect" id="node65" href="$d0/d4d/classns3_1_1_udp_trace_client.html" title="A trace based streamer." alt="" coords="963,21989,1104,22014"/>
+<area shape="rect" id="node66" href="$d0/d5f/classns3_1_1_v4_trace_route.html" title="Traceroute application sends one ICMP ECHO request with TTL=1, and after receiving an ICMP TIME EXCEE..." alt="" coords="967,22039,1100,22063"/>
+<area shape="rect" id="node67" href="$db/d6f/classns3_1_1lorawan_1_1_forwarder.html" title="This application forwards packets between NetDevices: LoraNetDevice &#45;&gt; PointToPointNetDevice and vice..." alt="" coords="953,22088,1114,22113"/>
+<area shape="rect" id="node68" href="$d0/d25/classns3_1_1lorawan_1_1_network_server.html" title="The NetworkServer is an application standing on top of a node equipped with links that connect it wit..." alt="" coords="939,22137,1128,22162"/>
+<area shape="rect" id="node69" href="$db/d83/classns3_1_1lorawan_1_1_one_shot_sender.html" title=" " alt="" coords="936,22187,1131,22211"/>
+<area shape="rect" id="node70" href="$d6/dbf/classns3_1_1lorawan_1_1_periodic_sender.html" title=" " alt="" coords="939,22236,1128,22261"/>
+<area shape="rect" id="node76" href="$d5/deb/classns3_1_1_b_s_scheduler_rtps.html" title="This class implements a simple downlink scheduler for rtPS flows." alt="" coords="956,22976,1111,23001"/>
+<area shape="rect" id="node77" href="$d5/d21/classns3_1_1_b_s_scheduler_simple.html" title="BaseStation Scheduler &#45; simplified." alt="" coords="950,23025,1117,23050"/>
+<area shape="rect" id="node85" href="$dd/d96/classns3_1_1_bridge_channel.html" title="Virtual channel implementation for bridges (BridgeNetDevice)." alt="" coords="966,23420,1101,23445"/>
+<area shape="rect" id="node86" href="$d0/d8f/classns3_1_1_csma_channel.html" title="Csma Channel." alt="" coords="967,23469,1100,23494"/>
+<area shape="rect" id="node87" href="$db/d4a/classns3_1_1_point_to_point_channel.html" title="Simple Point To Point Channel." alt="" coords="947,23075,1120,23099"/>
+<area shape="rect" id="node89" href="$dd/d00/classns3_1_1_simple_channel.html" title="A simple channel, for simple things and testing." alt="" coords="964,23124,1103,23149"/>
+<area shape="rect" id="node91" href="$d4/dfe/classns3_1_1_spectrum_channel.html" title="Defines the interface for spectrum&#45;aware channel implementations." alt="" coords="956,23173,1111,23198"/>
+<area shape="rect" id="node94" href="$db/de4/classns3_1_1_uan_channel.html" title="Channel class used by UAN devices." alt="" coords="972,23223,1095,23247"/>
+<area shape="rect" id="node95" href="$d5/dc1/classns3_1_1_wimax_channel.html" title="The channel object to attach Wimax NetDevices." alt="" coords="963,23272,1104,23297"/>
+<area shape="rect" id="node97" href="$df/d0a/classns3_1_1_yans_wifi_channel.html" title="a channel to interconnect ns3::YansWifiPhy objects." alt="" coords="958,23321,1109,23346"/>
+<area shape="rect" id="node98" href="$d7/d45/classns3_1_1lorawan_1_1_lora_channel.html" title="The class that delivers packets among PHY layers." alt="" coords="946,23371,1121,23395"/>
+<area shape="rect" id="node88" href="$db/df8/classns3_1_1_point_to_point_remote_channel.html" title="A Remote Point&#45;To&#45;Point Channel." alt="" coords="1213,23061,1430,23086"/>
+<area shape="rect" id="node90" href="$d5/d41/classns3_1_1_error_channel.html" title="A Error channel, introducing deterministic delays on even/odd packets." alt="" coords="1258,23111,1384,23135"/>
+<area shape="rect" id="node92" href="$d0/dca/classns3_1_1_multi_model_spectrum_channel.html" title="This SpectrumChannel implementation can handle the presence of SpectrumPhy instances which can use di..." alt="" coords="1213,23223,1430,23247"/>
+<area shape="rect" id="node93" href="$d5/dea/classns3_1_1_single_model_spectrum_channel.html" title="SpectrumChannel implementation which handles a single spectrum model." alt="" coords="1233,23160,1410,23198"/>
+<area shape="rect" id="node96" href="$da/d42/classns3_1_1_simple_ofdm_wimax_channel.html" title="SimpleOfdmWimaxChannel class." alt="" coords="1215,23272,1427,23297"/>
+<area shape="rect" id="node100" href="$d9/d3e/class_channel_access_manager_stub.html" title="ChannelAccessManager Stub." alt="" coords="938,23519,1129,23543"/>
+<area shape="rect" id="node103" href="$d9/d9c/classns3_1_1_always_los_channel_condition_model.html" title="Models an always in&#45;LoS condition model." alt="" coords="926,23630,1141,23669"/>
+<area shape="rect" id="node104" href="$da/dbf/classns3_1_1_buildings_channel_condition_model.html" title="Determines the channel condition based on the buildings deployed in the scenario." alt="" coords="930,23693,1137,23732"/>
+<area shape="rect" id="node105" href="$d8/d10/classns3_1_1_never_los_channel_condition_model.html" title="Models a never in&#45;LoS condition model." alt="" coords="929,23756,1138,23794"/>
+<area shape="rect" id="node106" href="$db/d7d/classns3_1_1_never_los_vehicle_channel_condition_model.html" title="Models a never in&#45;LoS condition model caused by a blocking vehicle." alt="" coords="936,23818,1131,23857"/>
+<area shape="rect" id="node107" href="$d8/ddc/classns3_1_1_three_gpp_channel_condition_model.html" title="Base class for the 3GPP channel condition models." alt="" coords="928,23568,1139,23606"/>
+<area shape="rect" id="node108" href="$de/d44/classns3_1_1_probabilistic_v2v_highway_channel_condition_model.html" title="Computes the channel condition for the V2V Highway scenario." alt="" coords="1224,23634,1418,23673"/>
+<area shape="rect" id="node109" href="$d3/d6a/classns3_1_1_probabilistic_v2v_urban_channel_condition_model.html" title="Computes the channel condition for the V2V Urban scenario." alt="" coords="1231,23697,1411,23736"/>
+<area shape="rect" id="node110" href="$d2/d39/classns3_1_1_three_gpp_indoor_mixed_office_channel_condition_model.html" title="Computes the channel condition for the Indoor Mixed Office scenario." alt="" coords="1225,23760,1418,23798"/>
+<area shape="rect" id="node111" href="$dd/dab/classns3_1_1_three_gpp_indoor_open_office_channel_condition_model.html" title="Computes the channel condition for the Indoor Open Office scenario." alt="" coords="1217,23822,1425,23861"/>
+<area shape="rect" id="node112" href="$d9/df1/classns3_1_1_three_gpp_rma_channel_condition_model.html" title="Computes the channel condition for the RMa scenario." alt="" coords="1202,23321,1440,23360"/>
+<area shape="rect" id="node113" href="$d8/db6/classns3_1_1_three_gpp_uma_channel_condition_model.html" title="Computes the channel condition for the UMa scenario." alt="" coords="1202,23384,1440,23422"/>
+<area shape="rect" id="node114" href="$db/db5/classns3_1_1_three_gpp_umi_street_canyon_channel_condition_model.html" title="Computes the channel condition for the UMi&#45;Street canyon scenario." alt="" coords="1217,23446,1426,23485"/>
+<area shape="rect" id="node115" href="$d0/dc5/classns3_1_1_three_gpp_v2v_highway_channel_condition_model.html" title="Computes the channel condition for the V2V Highway scenario." alt="" coords="1207,23509,1435,23548"/>
+<area shape="rect" id="node116" href="$dd/dce/classns3_1_1_three_gpp_v2v_urban_channel_condition_model.html" title="Computes the channel condition for the V2V Urban scenario." alt="" coords="1214,23572,1428,23610"/>
+<area shape="rect" id="node119" href="$d3/def/classns3_1_1_component_carrier_base_station.html" title="Defines a Base station, that is a ComponentCarrier but with a cell Id." alt="" coords="941,23881,1126,23920"/>
+<area shape="rect" id="node121" href="$d8/d55/classns3_1_1_component_carrier_ue.html" title="ComponentCarrierUe Object, it defines a single Carrier for the Ue." alt="" coords="947,23944,1120,23969"/>
+<area shape="rect" id="node120" href="$dd/d16/classns3_1_1_component_carrier_enb.html" title="Defines a single carrier for enb, and contains pointers to LteEnbPhy, LteEnbMac, LteFfrAlgorithm,..." alt="" coords="1232,23885,1410,23910"/>
+<area shape="rect" id="node124" href="$d3/df6/classns3_1_1_min_max_avg_total_calculator.html" title=" " alt="" coords="931,19042,1136,19081"/>
+<area shape="rect" id="node126" href="$d3/df6/classns3_1_1_min_max_avg_total_calculator.html" title=" " alt="" coords="931,18980,1136,19018"/>
+<area shape="rect" id="node127" href="$d3/df6/classns3_1_1_min_max_avg_total_calculator.html" title=" " alt="" coords="931,19105,1136,19144"/>
+<area shape="rect" id="node128" href="$d6/d8d/classns3_1_1_counter_calculator.html" title="Template class CounterCalculator." alt="" coords="940,19217,1127,19242"/>
+<area shape="rect" id="node129" href="$d3/df6/classns3_1_1_min_max_avg_total_calculator.html" title="Template class MinMaxAvgTotalCalculator." alt="" coords="915,18931,1152,18955"/>
+<area shape="rect" id="node130" href="$df/d3e/classns3_1_1_time_min_max_avg_total_calculator.html" title="Unfortunately, templating the base MinMaxAvgTotalCalculator to operate over Time values isn&#39;t straigh..." alt="" coords="917,19168,1150,19193"/>
+<area shape="rect" id="node125" href="$de/de9/classns3_1_1_packet_size_min_max_avg_total_calculator.html" title="A stat for collecting packet size statistics: min, max and average." alt="" coords="1230,19042,1413,19081"/>
+<area shape="rect" id="node132" href="$d0/d82/classns3_1_1_file_aggregator.html" title="This aggregator sends values it receives to a file." alt="" coords="966,24204,1101,24229"/>
+<area shape="rect" id="node133" href="$d0/d74/classns3_1_1_gnuplot_aggregator.html" title="This aggregator produces output used to make gnuplot plots." alt="" coords="954,24056,1113,24081"/>
+<area shape="rect" id="node134" href="$d7/de1/classns3_1_1_probe.html" title="Base class for probes." alt="" coords="991,24105,1076,24130"/>
+<area shape="rect" id="node145" href="$d6/dd1/classns3_1_1_time_series_adaptor.html" title="Takes probed values of different types and outputs the current time plus the value with both converte..." alt="" coords="953,24155,1114,24179"/>
+<area shape="rect" id="node135" href="$dc/d54/classns3_1_1_application_packet_probe.html" title="Probe to translate from a TraceSource to two more easily parsed TraceSources." alt="" coords="1227,24033,1415,24058"/>
+<area shape="rect" id="node136" href="$da/da8/classns3_1_1_boolean_probe.html" title="This class is designed to probe an underlying ns3 TraceSource exporting a bool." alt="" coords="1256,24083,1387,24107"/>
+<area shape="rect" id="node137" href="$d5/d28/classns3_1_1_double_probe.html" title="This class is designed to probe an underlying ns3 TraceSource exporting a double." alt="" coords="1259,24132,1384,24157"/>
+<area shape="rect" id="node138" href="$df/d8a/classns3_1_1_ipv4_packet_probe.html" title="This class is designed to probe an underlying ns3 TraceSource exporting a packet, an IPv4 object,..." alt="" coords="1247,24181,1396,24206"/>
+<area shape="rect" id="node139" href="$d2/da6/classns3_1_1_ipv6_packet_probe.html" title="This class is designed to probe an underlying ns3 TraceSource exporting a packet, an IPv6 object,..." alt="" coords="1247,24231,1396,24255"/>
+<area shape="rect" id="node140" href="$d5/dfa/classns3_1_1_packet_probe.html" title="This class is designed to probe an underlying ns3 TraceSource exporting a packet." alt="" coords="1259,24280,1383,24305"/>
+<area shape="rect" id="node141" href="$d0/de0/classns3_1_1_time_probe.html" title="This class is designed to probe an underlying ns3 TraceSource exporting an ns3::Time." alt="" coords="1265,24329,1378,24354"/>
+<area shape="rect" id="node142" href="$d1/db6/classns3_1_1_uinteger16_probe.html" title="This class is designed to probe an underlying ns3 TraceSource exporting an uint16_t." alt="" coords="1248,24379,1395,24403"/>
+<area shape="rect" id="node143" href="$d2/d12/classns3_1_1_uinteger32_probe.html" title="This class is designed to probe an underlying ns3 TraceSource exporting an uint32_t." alt="" coords="1248,23935,1395,23959"/>
+<area shape="rect" id="node144" href="$dc/d76/classns3_1_1_uinteger8_probe.html" title="This class is designed to probe an underlying ns3 TraceSource exporting an uint8_t." alt="" coords="1251,23984,1391,24009"/>
+<area shape="rect" id="node148" href="$d1/d9f/classns3_1_1_omnet_data_output.html" title="Outputs data in a format compatible with OMNeT library and framework." alt="" coords="956,24303,1111,24327"/>
+<area shape="rect" id="node149" href="$df/d32/classns3_1_1_sqlite_data_output.html" title="Outputs data in a format compatible with SQLite." alt="" coords="959,24253,1108,24278"/>
+<area shape="rect" id="node151" href="$db/d67/classns3_1_1_acoustic_modem_energy_model.html" title="WHOI micro&#45;modem energy model." alt="" coords="941,24513,1126,24552"/>
+<area shape="rect" id="node152" href="$db/d5e/classns3_1_1_simple_device_energy_model.html" title="A simple device energy model where current drain can be set by the user." alt="" coords="930,24352,1137,24377"/>
+<area shape="rect" id="node153" href="$d6/dd8/classns3_1_1_wifi_radio_energy_model.html" title="A WiFi radio energy model." alt="" coords="942,24401,1125,24426"/>
+<area shape="rect" id="node154" href="$d9/dd6/classns3_1_1lorawan_1_1_lora_radio_energy_model.html" title="A WiFi radio energy model." alt="" coords="933,24450,1134,24489"/>
+<area shape="rect" id="node157" href="$d2/dc1/classns3_1_1_default_emlsr_manager.html" title="DefaultEmlsrManager is the default EMLSR manager." alt="" coords="945,24576,1122,24601"/>
+<area shape="rect" id="node159" href="$d2/d16/classns3_1_1_basic_energy_harvester.html" title="BasicEnergyHarvester increases remaining energy stored in an associated Energy Source." alt="" coords="943,24625,1124,24650"/>
+<area shape="rect" id="node162" href="$d6/dbe/classns3_1_1_basic_energy_source.html" title="BasicEnergySource decreases/increases remaining energy stored in itself in linearly." alt="" coords="951,24823,1116,24847"/>
+<area shape="rect" id="node163" href="$dd/d73/classns3_1_1_generic_battery_model.html" title="A generic battery model for Li&#45;Ion, NiCd, NiMh and Lead acid batteries." alt="" coords="947,24675,1120,24699"/>
+<area shape="rect" id="node164" href="$d0/d77/classns3_1_1_li_ion_energy_source.html" title="Model a generic Lithium Ion Battery basing on [1][2]." alt="" coords="953,24724,1114,24749"/>
+<area shape="rect" id="node165" href="$de/db8/classns3_1_1_rv_battery_model.html" title="Rakhmatov Vrudhula non&#45;linear battery model." alt="" coords="961,24773,1106,24798"/>
+<area shape="rect" id="node168" href="$d2/d69/classns3_1_1_no_backhaul_epc_helper.html" title="Create an EPC network with PointToPoint links between the core network nodes." alt="" coords="942,24872,1125,24897"/>
+<area shape="rect" id="node169" href="$dd/d4d/classns3_1_1_emu_epc_helper.html" title="Create an EPC network using EmuFdNetDevice." alt="" coords="1252,24823,1390,24847"/>
+<area shape="rect" id="node170" href="$d5/db8/classns3_1_1_point_to_point_epc_helper.html" title="Create an EPC network with PointToPoint links in the backhaul network." alt="" coords="1229,24872,1414,24897"/>
+<area shape="rect" id="node175" href="$d1/d69/classns3_1_1_binary_error_model.html" title="The simplest error model, corrupts even packets and does not corrupt odd ones." alt="" coords="958,24971,1109,24995"/>
+<area shape="rect" id="node176" href="$d0/d11/classns3_1_1_burst_error_model.html" title="Determine which bursts of packets are errored corresponding to an underlying distribution,..." alt="" coords="961,25020,1106,25045"/>
+<area shape="rect" id="node177" href="$d1/df6/classns3_1_1_list_error_model.html" title="Provide a list of Packet uids to corrupt." alt="" coords="966,25069,1101,25094"/>
+<area shape="rect" id="node178" href="$d6/de9/classns3_1_1_rate_error_model.html" title="Determine which packets are errored corresponding to an underlying distribution, rate,..." alt="" coords="963,25119,1104,25143"/>
+<area shape="rect" id="node179" href="$d7/d14/classns3_1_1_receive_list_error_model.html" title="Provide a list of Packets to corrupt." alt="" coords="943,25168,1124,25193"/>
+<area shape="rect" id="node180" href="$d7/d12/classns3_1_1_tcp_general_error_model.html" title="A general (TCP&#45;aware) error model." alt="" coords="944,24921,1123,24946"/>
+<area shape="rect" id="node181" href="$df/deb/class_tcp_drop_ratio_error_model.html" title="An error model that randomly drops a given rátio of TCP segments." alt="" coords="1240,24921,1403,24946"/>
+<area shape="rect" id="node182" href="$d8/dcc/classns3_1_1_tcp_flag_error_model.html" title="Error model which drop packets with specified TCP flags." alt="" coords="1242,24971,1401,24995"/>
+<area shape="rect" id="node183" href="$d4/d5d/classns3_1_1_tcp_seq_error_model.html" title="An error model TCP aware: it drops the sequence number declared." alt="" coords="1243,25020,1400,25045"/>
+<area shape="rect" id="node185" href="$d6/d68/classns3_1_1_nist_error_rate_model.html" title="A model for the error rate for different modulations." alt="" coords="951,25267,1116,25291"/>
+<area shape="rect" id="node186" href="$d5/dca/classns3_1_1_table_based_error_rate_model.html" title=" " alt="" coords="947,25316,1120,25354"/>
+<area shape="rect" id="node187" href="$da/dae/classns3_1_1_yans_error_rate_model.html" title="Model the error rate for different modulations." alt="" coords="949,25217,1118,25242"/>
+<area shape="rect" id="node189" href="$d3/d69/classns3_1_1_cqa_ff_mac_scheduler.html" title="Implements the SCHED SAP and CSCHED SAP for the Channel and QoS Aware Scheduler." alt="" coords="949,25428,1118,25453"/>
+<area shape="rect" id="node190" href="$d2/d55/classns3_1_1_fd_bet_ff_mac_scheduler.html" title="Implements the SCHED SAP and CSCHED SAP for a Frequency Domain Blind Equal Throughput scheduler." alt="" coords="943,25477,1124,25502"/>
+<area shape="rect" id="node191" href="$d4/d76/classns3_1_1_fd_mt_ff_mac_scheduler.html" title="Implements the SCHED SAP and CSCHED SAP for a Frequency Domain Maximize Throughput scheduler." alt="" coords="946,25527,1121,25551"/>
+<area shape="rect" id="node192" href="$d3/d8e/classns3_1_1_fd_tbfq_ff_mac_scheduler.html" title="Implements the SCHED SAP and CSCHED SAP for a Frequency Domain Token Bank Fair Queue scheduler." alt="" coords="940,25576,1127,25601"/>
+<area shape="rect" id="node193" href="$d9/d8b/classns3_1_1_pf_ff_mac_scheduler.html" title="Implements the SCHED SAP and CSCHED SAP for a Proportional Fair scheduler." alt="" coords="954,25625,1113,25650"/>
+<area shape="rect" id="node194" href="$db/d8a/classns3_1_1_pss_ff_mac_scheduler.html" title="Implements the SCHED SAP and CSCHED SAP for a Priority Set scheduler." alt="" coords="949,25675,1118,25699"/>
+<area shape="rect" id="node195" href="$d5/d73/classns3_1_1_rr_ff_mac_scheduler.html" title="Implements the SCHED SAP and CSCHED SAP for a Round Robin scheduler." alt="" coords="954,25724,1113,25749"/>
+<area shape="rect" id="node196" href="$df/d3c/classns3_1_1_td_bet_ff_mac_scheduler.html" title="Implements the SCHED SAP and CSCHED SAP for a Time Domain Blind Equal Throughput scheduler." alt="" coords="943,25773,1124,25798"/>
+<area shape="rect" id="node197" href="$d1/df3/classns3_1_1_td_mt_ff_mac_scheduler.html" title="Implements the SCHED SAP and CSCHED SAP for a Time Domain Maximize Throughput scheduler." alt="" coords="946,25823,1121,25847"/>
+<area shape="rect" id="node198" href="$d7/d8f/classns3_1_1_td_tbfq_ff_mac_scheduler.html" title="Implements the SCHED SAP and CSCHED SAP for a Time Domain Token Bank Fair Queue scheduler." alt="" coords="940,25872,1127,25897"/>
+<area shape="rect" id="node199" href="$de/d10/classns3_1_1_tta_ff_mac_scheduler.html" title="Implements the SCHED SAP and CSCHED SAP for a Throughput to Average scheduler." alt="" coords="951,25379,1116,25403"/>
+<area shape="rect" id="node202" href="$de/d64/classns3_1_1_ipv4_flow_probe.html" title="Class that monitors flows at the IPv4 layer of a Node." alt="" coords="965,25971,1102,25995"/>
+<area shape="rect" id="node203" href="$d0/d44/classns3_1_1_ipv6_flow_probe.html" title="Class that monitors flows at the IPv6 layer of a Node." alt="" coords="965,25921,1102,25946"/>
+<area shape="rect" id="node205" href="$de/d51/classns3_1_1_simple_frame_capture_model.html" title="A simple threshold&#45;based model for frame capture effect." alt="" coords="930,26020,1137,26045"/>
+<area shape="rect" id="node207" href="$dd/d81/class_frame_exchange_manager_stub.html" title="Frame Exchange Manager Stub." alt="" coords="937,26118,1130,26157"/>
+<area shape="rect" id="node208" href="$d3/dfa/classns3_1_1_qos_frame_exchange_manager.html" title="QosFrameExchangeManager handles the frame exchange sequences for QoS stations." alt="" coords="924,26069,1143,26094"/>
+<area shape="rect" id="node209" href="$d7/d63/classns3_1_1_ht_frame_exchange_manager.html" title="HtFrameExchangeManager handles the frame exchange sequences for HT stations." alt="" coords="1217,26069,1425,26094"/>
+<area shape="rect" id="node210" href="$d2/dc4/classns3_1_1_vht_frame_exchange_manager.html" title="VhtFrameExchangeManager handles the frame exchange sequences for VHT stations." alt="" coords="1506,26069,1720,26094"/>
+<area shape="rect" id="node211" href="$d4/d06/classns3_1_1_he_frame_exchange_manager.html" title="HeFrameExchangeManager handles the frame exchange sequences for HE stations." alt="" coords="1787,26069,1998,26094"/>
+<area shape="rect" id="node212" href="$dc/d68/classns3_1_1_eht_frame_exchange_manager.html" title="EhtFrameExchangeManager handles the frame exchange sequences for EHT stations." alt="" coords="2047,26069,2261,26094"/>
+<area shape="rect" id="node219" href="$d5/da3/class_test_interference_helper.html" title=" " alt="" coords="956,26181,1111,26206"/>
+<area shape="rect" id="node221" href="$d8/d97/classns3_1_1_icmpv4_l4_protocol.html" title="This is the implementation of the ICMP protocol as described in RFC 792." alt="" coords="956,26428,1111,26453"/>
+<area shape="rect" id="node222" href="$df/de7/classns3_1_1_icmpv6_l4_protocol.html" title="An implementation of the ICMPv6 protocol." alt="" coords="956,26231,1111,26255"/>
+<area shape="rect" id="node223" href="$de/d62/classns3_1_1_tcp_l4_protocol.html" title="TCP socket creation and multiplexing/demultiplexing." alt="" coords="967,26280,1100,26305"/>
+<area shape="rect" id="node224" href="$d7/ddb/classns3_1_1_udp_l4_protocol.html" title="Implementation of the UDP protocol." alt="" coords="965,26329,1102,26354"/>
+<area shape="rect" id="node225" href="$de/deb/classns3_1_1dsr_1_1_dsr_routing.html" title="Dsr Routing base." alt="" coords="962,26379,1105,26403"/>
+<area shape="rect" id="node228" href="$d7/d52/classns3_1_1_ipv4_l3_click_protocol.html" title="Implement the Ipv4 layer specifically for Click nodes to allow a clean integration of Click." alt="" coords="950,26527,1117,26551"/>
+<area shape="rect" id="node229" href="$de/d62/classns3_1_1_ipv4_l3_protocol.html" title="Implement the IPv4 layer." alt="" coords="965,26477,1102,26502"/>
+<area shape="rect" id="node232" href="$d9/d98/classns3_1_1_ipv4_a_routing.html" title="IPv4 dummy routing class (A)" alt="" coords="969,27020,1098,27045"/>
+<area shape="rect" id="node233" href="$db/d4d/classns3_1_1_ipv4_b_routing.html" title="IPv4 dummy routing class (B)" alt="" coords="969,26576,1098,26601"/>
+<area shape="rect" id="node234" href="$dc/d86/classns3_1_1_ipv4_click_routing.html" title="Class to allow a node to use Click for external routing." alt="" coords="958,26625,1109,26650"/>
+<area shape="rect" id="node235" href="$dd/daa/classns3_1_1_ipv4_global_routing.html" title="Global routing protocol for IPv4 stacks." alt="" coords="955,26675,1112,26699"/>
+<area shape="rect" id="node236" href="$d0/d1a/classns3_1_1_ipv4_list_routing.html" title="IPv4 list routing." alt="" coords="963,26724,1104,26749"/>
+<area shape="rect" id="node237" href="$d6/d52/classns3_1_1_ipv4_static_routing.html" title="Static routing protocol for IP version 4 stacks." alt="" coords="956,26773,1111,26798"/>
+<area shape="rect" id="node238" href="$d2/d88/classns3_1_1_rip.html" title="RIP Routing Protocol, defined in RFC 2453." alt="" coords="998,26823,1069,26847"/>
+<area shape="rect" id="node239" href="$d0/dab/classns3_1_1aodv_1_1_routing_protocol.html" title="AODV routing protocol." alt="" coords="944,26872,1123,26897"/>
+<area shape="rect" id="node240" href="$d1/d15/classns3_1_1dsdv_1_1_routing_protocol.html" title="DSDV routing protocol." alt="" coords="944,26921,1123,26946"/>
+<area shape="rect" id="node241" href="$df/dd7/classns3_1_1olsr_1_1_routing_protocol.html" title="OLSR routing protocol for IPv4." alt="" coords="947,26971,1120,26995"/>
+<area shape="rect" id="node243" href="$db/d1c/classns3_1_1_ipv6_l3_protocol.html" title="IPv6 layer implementation." alt="" coords="965,27069,1102,27094"/>
+<area shape="rect" id="node246" href="$d2/d39/classns3_1_1_ipv6_extension_a_h.html" title="IPv6 Extension AH (Authentication Header)" alt="" coords="957,27168,1110,27193"/>
+<area shape="rect" id="node247" href="$db/da7/classns3_1_1_ipv6_extension_destination.html" title="IPv6 Extension Destination." alt="" coords="934,27217,1133,27242"/>
+<area shape="rect" id="node248" href="$d7/d9b/classns3_1_1_ipv6_extension_e_s_p.html" title="IPv6 Extension ESP (Encapsulating Security Payload)" alt="" coords="954,27267,1113,27291"/>
+<area shape="rect" id="node249" href="$de/dfe/classns3_1_1_ipv6_extension_fragment.html" title="IPv6 Extension Fragment." alt="" coords="939,27316,1128,27341"/>
+<area shape="rect" id="node250" href="$df/dca/classns3_1_1_ipv6_extension_hop_by_hop.html" title="IPv6 Extension &quot;Hop By Hop&quot;." alt="" coords="935,27365,1132,27390"/>
+<area shape="rect" id="node251" href="$d8/d50/classns3_1_1_ipv6_extension_routing.html" title="IPv6 Extension Routing." alt="" coords="944,27119,1123,27143"/>
+<area shape="rect" id="node252" href="$d4/dd5/classns3_1_1_ipv6_extension_loose_routing.html" title="IPv6 Extension Loose Routing." alt="" coords="1215,27119,1428,27143"/>
+<area shape="rect" id="node257" href="$d5/d9e/classns3_1_1_ipv6_option_jumbogram.html" title="IPv6 Option Jumbogram." alt="" coords="943,27563,1124,27587"/>
+<area shape="rect" id="node258" href="$d3/dad/classns3_1_1_ipv6_option_pad1.html" title="IPv6 Option Pad1." alt="" coords="962,27415,1105,27439"/>
+<area shape="rect" id="node259" href="$d2/d7e/classns3_1_1_ipv6_option_padn.html" title="IPv6 Option Padn." alt="" coords="962,27464,1105,27489"/>
+<area shape="rect" id="node260" href="$d6/d03/classns3_1_1_ipv6_option_router_alert.html" title="IPv6 Option Router Alert." alt="" coords="943,27513,1124,27538"/>
+<area shape="rect" id="node264" href="$de/de1/classns3_1_1_ipv6_a_routing.html" title="IPv6 dummy routing class (A)" alt="" coords="969,27809,1098,27834"/>
+<area shape="rect" id="node265" href="$de/d24/classns3_1_1_ipv6_b_routing.html" title="IPv6 dummy routing class (B)" alt="" coords="969,27612,1098,27637"/>
+<area shape="rect" id="node266" href="$d4/d7d/classns3_1_1_ipv6_list_routing.html" title="Hold list of Ipv6RoutingProtocol objects." alt="" coords="963,27661,1104,27686"/>
+<area shape="rect" id="node267" href="$d2/df6/classns3_1_1_ipv6_static_routing.html" title="Static routing protocol for IP version 6 stacks." alt="" coords="956,27711,1111,27735"/>
+<area shape="rect" id="node268" href="$da/d91/classns3_1_1_rip_ng.html" title="RIPng Routing Protocol, defined in RFC 2080." alt="" coords="990,27760,1077,27785"/>
+<area shape="rect" id="node276" href="$d2/d93/classns3_1_1_no_op_component_carrier_manager.html" title="The default component carrier manager that forwards all traffic, the uplink and the downlink,..." alt="" coords="939,27858,1128,27897"/>
+<area shape="rect" id="node277" href="$d3/da4/classns3_1_1_rr_component_carrier_manager.html" title="Component carrier manager implementation that splits traffic equally among carriers." alt="" coords="1212,27865,1431,27890"/>
+<area shape="rect" id="node283" href="$d4/d46/classns3_1_1_lte_ffr_distributed_algorithm.html" title="Distributed Fractional Frequency Reuse algorithm implementation." alt="" coords="932,28267,1135,28291"/>
+<area shape="rect" id="node284" href="$d8/d56/classns3_1_1_lte_ffr_enhanced_algorithm.html" title="Enhanced Fractional Frequency Reuse algorithm implementation." alt="" coords="935,27921,1132,27946"/>
+<area shape="rect" id="node285" href="$db/d54/classns3_1_1_lte_ffr_simple.html" title="Simple Frequency Reuse algorithm implementation which uses only 1 sub&#45;band." alt="" coords="971,27971,1096,27995"/>
+<area shape="rect" id="node286" href="$dd/d9f/classns3_1_1_lte_ffr_soft_algorithm.html" title="Soft Fractional Frequency Reuse algorithm implementation." alt="" coords="952,28020,1115,28045"/>
+<area shape="rect" id="node287" href="$d9/df4/classns3_1_1_lte_fr_hard_algorithm.html" title="Hard Frequency Reuse algorithm implementation which uses only 1 sub&#45;band." alt="" coords="952,28069,1115,28094"/>
+<area shape="rect" id="node288" href="$d1/d09/classns3_1_1_lte_fr_no_op_algorithm.html" title="FR algorithm implementation which simply does nothing." alt="" coords="949,28119,1118,28143"/>
+<area shape="rect" id="node289" href="$d4/d56/classns3_1_1_lte_fr_soft_algorithm.html" title="Soft Frequency Reuse algorithm implementation." alt="" coords="954,28168,1113,28193"/>
+<area shape="rect" id="node290" href="$d4/d15/classns3_1_1_lte_fr_strict_algorithm.html" title="Strict Frequency Reuse algorithm implementation." alt="" coords="950,28217,1117,28242"/>
+<area shape="rect" id="node292" href="$d9/d04/classns3_1_1_a2_a4_rsrq_handover_algorithm.html" title="Handover algorithm implementation based on RSRQ measurements, Event A2 and Event A4." alt="" coords="923,28365,1144,28390"/>
+<area shape="rect" id="node293" href="$d3/d97/classns3_1_1_a3_rsrp_handover_algorithm.html" title="Implementation of the strongest cell handover algorithm, based on RSRP measurements and Event A3." alt="" coords="931,28415,1136,28439"/>
+<area shape="rect" id="node294" href="$d0/d35/classns3_1_1_no_op_handover_algorithm.html" title="Handover algorithm implementation which simply does nothing." alt="" coords="936,28316,1131,28341"/>
+<area shape="rect" id="node300" href="$d2/d1e/classns3_1_1_lte_enb_phy.html" title="LteEnbPhy models the physical layer for the eNodeB." alt="" coords="976,6599,1091,6623"/>
+<area shape="rect" id="node301" href="$de/da6/classns3_1_1_lte_test_ue_phy.html" title="Defines a simplified LtePhy class that is used for testing purposes of downlink and uplink SINR gener..." alt="" coords="967,6648,1100,6673"/>
+<area shape="rect" id="node302" href="$da/d81/classns3_1_1_lte_ue_phy.html" title="The LteSpectrumPhy models the physical layer of LTE." alt="" coords="979,6549,1088,6574"/>
+<area shape="rect" id="node304" href="$d0/d9d/classns3_1_1_lte_data_radio_bearer_info.html" title="store information on active data radio bearer instance" alt="" coords="939,6747,1128,6771"/>
+<area shape="rect" id="node305" href="$da/d4e/classns3_1_1_lte_signaling_radio_bearer_info.html" title="store information on active signaling radio bearer instance" alt="" coords="926,6697,1141,6722"/>
+<area shape="rect" id="node307" href="$d3/def/classns3_1_1_lte_rlc_am.html" title="LTE RLC Acknowledged Mode (AM), see 3GPP TS 36.322." alt="" coords="979,6944,1088,6969"/>
+<area shape="rect" id="node308" href="$da/d39/classns3_1_1_lte_rlc_sm.html" title="LTE_RLC Saturation Mode (SM): simulation&#45;specific mode used for experiments that do not need to consi..." alt="" coords="979,6796,1088,6821"/>
+<area shape="rect" id="node309" href="$d0/d54/classns3_1_1_lte_rlc_tm.html" title="LTE RLC Transparent Mode (TM), see 3GPP TS 36.322." alt="" coords="980,6845,1087,6870"/>
+<area shape="rect" id="node310" href="$de/d36/classns3_1_1_lte_rlc_um.html" title="LTE RLC Unacknowledged Mode (UM), see 3GPP TS 36.322." alt="" coords="979,6895,1088,6919"/>
+<area shape="rect" id="node313" href="$d6/de1/classns3_1_1_mac_stats_calculator.html" title="Takes care of storing the information generated at MAC layer." alt="" coords="951,6993,1116,7018"/>
+<area shape="rect" id="node314" href="$d1/de8/classns3_1_1_phy_rx_stats_calculator.html" title="Takes care of storing the information generated at PHY layer regarding reception." alt="" coords="944,7043,1123,7067"/>
+<area shape="rect" id="node315" href="$d3/d1c/classns3_1_1_phy_stats_calculator.html" title="Takes care of storing the information generated at PHY layer." alt="" coords="952,7092,1115,7117"/>
+<area shape="rect" id="node316" href="$d3/db2/classns3_1_1_phy_tx_stats_calculator.html" title="Takes care of storing the information generated at PHY layer regarding transmission." alt="" coords="945,7141,1122,7166"/>
+<area shape="rect" id="node317" href="$d6/d93/classns3_1_1_radio_bearer_stats_calculator.html" title="This class is an ns&#45;3 trace sink that performs the calculation of PDU statistics for uplink and downl..." alt="" coords="928,7191,1139,7215"/>
+<area shape="rect" id="node322" href="$dc/d4f/classns3_1_1_simple_ue_component_carrier_manager.html" title="Component carrier manager implementation which simply does nothing." alt="" coords="927,7240,1140,7278"/>
+<area shape="rect" id="node329" href="$dc/d62/classns3_1_1_three_gpp_channel_model.html" title="Channel Matrix Generation following 3GPP TR 38.901." alt="" coords="938,7303,1129,7327"/>
+<area shape="rect" id="node331" href="$db/d73/classns3_1_1dot11s_1_1_hwmp_protocol.html" title="Hybrid wireless mesh protocol – a mesh routing protocol defined in IEEE 802.11&#45;2012 standard." alt="" coords="942,7401,1125,7426"/>
+<area shape="rect" id="node332" href="$de/db3/classns3_1_1flame_1_1_flame_protocol.html" title="FLAME routing protocol." alt="" coords="946,7352,1121,7377"/>
+<area shape="rect" id="node334" href="$da/dcb/classns3_1_1_dot11s_stack.html" title="Helper class to allow easy installation of 802.11s stack." alt="" coords="970,7500,1097,7525"/>
+<area shape="rect" id="node335" href="$dd/d22/classns3_1_1_flame_stack.html" title="Helper class used to install FLAME mesh stack (actually single protocol in this stack)" alt="" coords="973,7451,1094,7475"/>
+<area shape="rect" id="node338" href="$df/d94/classns3_1_1_constant_acceleration_mobility_model.html" title="Mobility model for which the current acceleration does not change once it has been set and until it i..." alt="" coords="946,7661,1121,7700"/>
+<area shape="rect" id="node339" href="$d2/d91/classns3_1_1_constant_position_mobility_model.html" title="Mobility model for which the current position does not change once it has been set and until it is se..." alt="" coords="936,7724,1131,7762"/>
+<area shape="rect" id="node340" href="$d8/dad/classns3_1_1_constant_velocity_mobility_model.html" title="Mobility model for which the current speed does not change once it has been set and until it is set a..." alt="" coords="936,7786,1131,7825"/>
+<area shape="rect" id="node341" href="$d4/d4d/classns3_1_1_gauss_markov_mobility_model.html" title="Gauss&#45;Markov mobility model." alt="" coords="945,7849,1122,7888"/>
+<area shape="rect" id="node342" href="$da/dd8/classns3_1_1_hierarchical_mobility_model.html" title="Hierarchical mobility model." alt="" coords="951,7912,1116,7950"/>
+<area shape="rect" id="node343" href="$d5/d68/classns3_1_1_random_direction2d_mobility_model.html" title="Random direction mobility model." alt="" coords="929,7974,1138,8013"/>
+<area shape="rect" id="node344" href="$d0/d59/classns3_1_1_random_walk2d_mobility_model.html" title="2D random walk mobility model." alt="" coords="940,8037,1127,8076"/>
+<area shape="rect" id="node345" href="$d4/d00/classns3_1_1_random_walk2d_outdoor_mobility_model.html" title="2D random walk mobility model which avoids buildings." alt="" coords="940,8100,1127,8138"/>
+<area shape="rect" id="node346" href="$d0/dae/classns3_1_1_random_waypoint_mobility_model.html" title="Random waypoint mobility model." alt="" coords="935,8162,1132,8201"/>
+<area shape="rect" id="node347" href="$d3/d1b/classns3_1_1_steady_state_random_waypoint_mobility_model.html" title="Steady&#45;state random waypoint mobility model." alt="" coords="921,7549,1146,7588"/>
+<area shape="rect" id="node348" href="$de/d24/classns3_1_1_waypoint_mobility_model.html" title="Waypoint&#45;based mobility model." alt="" coords="941,7612,1126,7637"/>
+<area shape="rect" id="node353" href="$de/d9a/class_test_multi_user_scheduler.html" title="Dummy Multi User Scheduler used to test OFDMA ack sequences." alt="" coords="953,8275,1114,8299"/>
+<area shape="rect" id="node354" href="$dc/d73/classns3_1_1_rr_multi_user_scheduler.html" title="RrMultiUserScheduler is a simple OFDMA scheduler that indicates to perform a DL OFDMA transmission if..." alt="" coords="944,8225,1123,8250"/>
+<area shape="rect" id="node357" href="$dc/d2b/classns3_1_1_aloha_noack_net_device.html" title="This devices implements the following features:" alt="" coords="942,9077,1125,9102"/>
+<area shape="rect" id="node358" href="$de/d78/classns3_1_1_bridge_net_device.html" title="a virtual net device that bridges multiple LAN segments" alt="" coords="959,9127,1108,9151"/>
+<area shape="rect" id="node359" href="$d3/d9d/classns3_1_1_csma_net_device.html" title="A Device for a Csma Network Link." alt="" coords="960,9176,1107,9201"/>
+<area shape="rect" id="node360" href="$dd/d53/classns3_1_1_fd_net_device.html" title="a NetDevice to read/write network traffic from/into a file descriptor." alt="" coords="970,9225,1097,9250"/>
+<area shape="rect" id="node363" href="$d5/d01/classns3_1_1_loopback_net_device.html" title="Virtual network interface that loops back any data sent to it to be immediately received on the same ..." alt="" coords="949,9275,1118,9299"/>
+<area shape="rect" id="node364" href="$d1/de9/classns3_1_1_lr_wpan_net_device.html" title="Network layer to device interface." alt="" coords="955,8324,1112,8349"/>
+<area shape="rect" id="node365" href="$d0/d92/classns3_1_1_lte_net_device.html" title="LteNetDevice provides basic implementation for all LTE network devices." alt="" coords="968,8373,1099,8398"/>
+<area shape="rect" id="node368" href="$d9/ded/classns3_1_1_mesh_point_device.html" title="Virtual net device modeling mesh point." alt="" coords="957,8423,1110,8447"/>
+<area shape="rect" id="node369" href="$de/d4d/classns3_1_1_mock_net_device.html" title="This device assumes 48&#45;bit mac addressing; there is also the possibility to add an ErrorModel if you ..." alt="" coords="961,8472,1106,8497"/>
+<area shape="rect" id="node370" href="$d9/de0/classns3_1_1_non_communicating_net_device.html" title="This class implements a device which does not communicate, in the sense that it does not interact wit..." alt="" coords="940,8521,1127,8560"/>
+<area shape="rect" id="node371" href="$dc/de5/classns3_1_1_open_flow_switch_net_device.html" title="A net device that switches multiple LAN segments via an OpenFlow&#45;compatible flow table." alt="" coords="928,8584,1139,8609"/>
+<area shape="rect" id="node372" href="$dc/d89/classns3_1_1_point_to_point_net_device.html" title="A Device for a Point to Point Network Link." alt="" coords="940,8633,1127,8658"/>
+<area shape="rect" id="node373" href="$d7/dae/classns3_1_1_simple_net_device.html" title="This device assumes 48&#45;bit mac addressing; there is also the possibility to add an ErrorModel if you ..." alt="" coords="957,8683,1110,8707"/>
+<area shape="rect" id="node375" href="$d2/dd3/classns3_1_1_six_low_pan_net_device.html" title="Shim performing 6LoWPAN compression, decompression and fragmentation." alt="" coords="944,8732,1123,8757"/>
+<area shape="rect" id="node376" href="$de/d7f/classns3_1_1_tap_bridge.html" title="A bridge to make it appear that a real host process is connected to an ns&#45;3 net device." alt="" coords="979,8781,1088,8806"/>
+<area shape="rect" id="node377" href="$d8/dd9/classns3_1_1_uan_net_device.html" title="Net device for UAN models." alt="" coords="965,8831,1102,8855"/>
+<area shape="rect" id="node378" href="$d4/daf/classns3_1_1_virtual_net_device.html" title="A virtual device, similar to Linux TUN/TAP interfaces." alt="" coords="958,8880,1109,8905"/>
+<area shape="rect" id="node379" href="$d3/d6d/classns3_1_1_wifi_net_device.html" title="Hold together all Wifi&#45;related objects." alt="" coords="966,8929,1101,8954"/>
+<area shape="rect" id="node380" href="$d6/dfd/classns3_1_1_wimax_net_device.html" title="Hold together all WiMAX&#45;related objects in a NetDevice." alt="" coords="956,8979,1111,9003"/>
+<area shape="rect" id="node383" href="$d8/df7/classns3_1_1lorawan_1_1_lora_net_device.html" title="Hold together all LoRa related objects." alt="" coords="939,9028,1128,9053"/>
+<area shape="rect" id="node361" href="$d8/d58/classns3_1_1_dpdk_net_device.html" title="a NetDevice to read/write network traffic from/into a Dpdk enabled port." alt="" coords="1250,9251,1393,9275"/>
+<area shape="rect" id="node362" href="$da/d4c/classns3_1_1_netmap_net_device.html" title="a NetDevice to read/write network traffic from/into a netmap file descriptor." alt="" coords="1242,9201,1400,9226"/>
+<area shape="rect" id="node366" href="$d3/d73/classns3_1_1_lte_enb_net_device.html" title="The eNodeB device implementation." alt="" coords="1245,8349,1398,8374"/>
+<area shape="rect" id="node367" href="$de/d53/classns3_1_1_lte_ue_net_device.html" title="The LteUeNetDevice class implements the UE net device." alt="" coords="1248,8399,1395,8423"/>
+<area shape="rect" id="node374" href="$d6/de9/classns3_1_1_lte_simple_net_device.html" title="The LteSimpleNetDevice class implements the LTE simple net device." alt="" coords="1236,8683,1406,8707"/>
+<area shape="rect" id="node381" href="$d4/dc6/classns3_1_1_base_station_net_device.html" title="BaseStation NetDevice." alt="" coords="1230,8951,1413,8975"/>
+<area shape="rect" id="node382" href="$db/da9/classns3_1_1_subscriber_station_net_device.html" title="SubscriberStationNetDevice subclass of WimaxNetDevice." alt="" coords="1234,9000,1408,9038"/>
+<area shape="rect" id="node385" href="$d7/dbe/classns3_1_1_net_device_queue_lock.html" title="Network device transmission queue with lock." alt="" coords="944,9324,1123,9349"/>
+<area shape="rect" id="node391" href="$d1/d9b/classns3_1_1_constant_obss_pd_algorithm.html" title="Constant OBSS PD algorithm." alt="" coords="931,9373,1136,9398"/>
+<area shape="rect" id="node394" href="$d2/dbf/class_prio_queue_disc_test_filter.html" title="Prio Queue Disc Test Packet Filter." alt="" coords="952,9472,1115,9497"/>
+<area shape="rect" id="node395" href="$d6/d4c/classns3_1_1_ipv4_packet_filter.html" title="Ipv4PacketFilter is the abstract base class for filters defined for IPv4 packets." alt="" coords="961,9521,1106,9546"/>
+<area shape="rect" id="node399" href="$d9/d63/classns3_1_1_ipv6_packet_filter.html" title="Ipv6PacketFilter is the abstract base class for filters defined for IPv6 packets." alt="" coords="961,9423,1106,9447"/>
+<area shape="rect" id="node396" href="$df/dee/class_ipv4_fq_cobalt_test_packet_filter.html" title="Simple test packet filter able to classify IPv4 packets." alt="" coords="1225,9472,1418,9497"/>
+<area shape="rect" id="node397" href="$d2/d34/class_ipv4_fq_pie_test_packet_filter.html" title="Simple test packet filter able to classify IPv4 packets." alt="" coords="1234,9521,1408,9546"/>
+<area shape="rect" id="node398" href="$d0/d9c/class_ipv4_test_packet_filter.html" title="Simple test packet filter able to classify IPv4 packets." alt="" coords="1251,9571,1391,9595"/>
+<area shape="rect" id="node402" href="$d6/d89/classns3_1_1_uniform_planar_array.html" title="Class implementing Uniform Planar Array (UPA) model." alt="" coords="951,9571,1116,9595"/>
+<area shape="rect" id="node404" href="$d1/d8d/classns3_1_1_three_gpp_spectrum_propagation_loss_model.html" title="3GPP Spectrum Propagation Loss Model" alt="" coords="917,9682,1150,9721"/>
+<area shape="rect" id="node405" href="$da/db7/classns3_1_1_two_ray_spectrum_propagation_loss_model.html" title="Two Ray Spectrum Propagation Loss Model." alt="" coords="923,9620,1144,9658"/>
+<area shape="rect" id="node407" href="$d9/d70/classns3_1_1_fixed_room_position_allocator.html" title="Generate a random position uniformly distributed in the volume of a chosen room inside a chosen build..." alt="" coords="926,10131,1141,10155"/>
+<area shape="rect" id="node408" href="$de/d2e/classns3_1_1_grid_position_allocator.html" title="Allocate positions on a rectangular 2d grid." alt="" coords="947,10180,1120,10205"/>
+<area shape="rect" id="node409" href="$d1/da8/classns3_1_1_hex_grid_position_allocator.html" title=" " alt="" coords="935,10229,1132,10254"/>
+<area shape="rect" id="node410" href="$d5/d90/classns3_1_1_list_position_allocator.html" title="Allocate positions from a deterministic list specified by the user." alt="" coords="949,10279,1118,10303"/>
+<area shape="rect" id="node411" href="$dd/d5a/classns3_1_1_outdoor_position_allocator.html" title="allocate outdoor positions" alt="" coords="936,10328,1131,10353"/>
+<area shape="rect" id="node412" href="$d4/d1b/classns3_1_1_random_box_position_allocator.html" title="Allocate random positions within a 3D box according to a set of three random variables." alt="" coords="924,9745,1143,9770"/>
+<area shape="rect" id="node413" href="$d7/d6b/classns3_1_1_random_building_position_allocator.html" title="Allocate each position by randomly choosing a building from the list of all buildings,..." alt="" coords="938,9794,1129,9833"/>
+<area shape="rect" id="node414" href="$dd/d67/classns3_1_1_random_disc_position_allocator.html" title="Allocate random positions within a disc according to a given distribution for the polar coordinates o..." alt="" coords="922,9857,1145,9882"/>
+<area shape="rect" id="node415" href="$dd/d5d/classns3_1_1_random_rectangle_position_allocator.html" title="Allocate random positions within a rectangle according to a pair of random variables." alt="" coords="932,9906,1135,9945"/>
+<area shape="rect" id="node416" href="$d5/de9/classns3_1_1_random_room_position_allocator.html" title="Allocate each position by randomly choosing a room from the list of all buildings,..." alt="" coords="918,9969,1149,9994"/>
+<area shape="rect" id="node417" href="$db/d70/classns3_1_1_same_room_position_allocator.html" title="Walks a given NodeContainer sequentially, and for each node allocate a new position randomly in the s..." alt="" coords="925,10019,1142,10043"/>
+<area shape="rect" id="node418" href="$d9/d97/classns3_1_1_uniform_disc_position_allocator.html" title="Allocate the positions uniformly (with constant density) randomly within a disc." alt="" coords="948,10068,1119,10106"/>
+<area shape="rect" id="node420" href="$dd/d89/classns3_1_1_threshold_preamble_detection_model.html" title="A threshold&#45;based model for detecting PHY preamble." alt="" coords="924,10377,1143,10416"/>
+<area shape="rect" id="node423" href="$dc/db7/classns3_1_1_constant_speed_propagation_delay_model.html" title="the propagation speed is constant" alt="" coords="929,10502,1138,10541"/>
+<area shape="rect" id="node424" href="$d4/d44/classns3_1_1_random_propagation_delay_model.html" title="the propagation delay is random" alt="" coords="933,10440,1134,10478"/>
+<area shape="rect" id="node426" href="$df/dc2/classns3_1_1_buildings_propagation_loss_model.html" title="This model provides means for simulating the following propagation phenomena in the presence of build..." alt="" coords="947,11492,1120,11530"/>
+<area shape="rect" id="node429" href="$da/d80/classns3_1_1_cost231_propagation_loss_model.html" title="The COST&#45;Hata&#45;Model is the most often cited of the COST 231 models." alt="" coords="935,11554,1132,11593"/>
+<area shape="rect" id="node430" href="$d0/d39/classns3_1_1_fixed_rss_loss_model.html" title="Return a constant received power level independent of the transmit power." alt="" coords="949,11617,1118,11642"/>
+<area shape="rect" id="node431" href="$d3/d41/classns3_1_1_friis_propagation_loss_model.html" title="a Friis propagation loss model" alt="" coords="947,11666,1120,11705"/>
+<area shape="rect" id="node432" href="$dd/d76/classns3_1_1_itu_r1238_propagation_loss_model.html" title="This class implements the ITU&#45;R 1238 propagation loss model." alt="" coords="947,11729,1120,11768"/>
+<area shape="rect" id="node433" href="$d1/d9b/classns3_1_1_itu_r1411_los_propagation_loss_model.html" title="the ITU&#45;R 1411 LOS propagation model" alt="" coords="937,10565,1130,10604"/>
+<area shape="rect" id="node434" href="$db/d40/classns3_1_1_itu_r1411_nlos_over_rooftop_propagation_loss_model.html" title="the ITU&#45;R 1411 NLOS over rooftop propagation model" alt="" coords="932,10628,1135,10666"/>
+<area shape="rect" id="node435" href="$d4/d77/classns3_1_1_jakes_propagation_loss_model.html" title="a Jakes narrowband propagation model." alt="" coords="943,10690,1124,10729"/>
+<area shape="rect" id="node436" href="$da/d52/classns3_1_1_kun2600_mhz_propagation_loss_model.html" title="Empirical propagation model for the 2.6 GHz frequency." alt="" coords="936,10753,1131,10792"/>
+<area shape="rect" id="node437" href="$d2/d84/classns3_1_1_log_distance_propagation_loss_model.html" title="a log distance propagation model." alt="" coords="937,10816,1130,10854"/>
+<area shape="rect" id="node438" href="$d5/d4d/classns3_1_1_matrix_propagation_loss_model.html" title="The propagation loss is fixed for each pair of nodes and doesn&#39;t depend on their actual positions." alt="" coords="942,10878,1125,10917"/>
+<area shape="rect" id="node439" href="$d8/da4/classns3_1_1_nakagami_propagation_loss_model.html" title="Nakagami&#45;m fast fading propagation loss model." alt="" coords="944,10941,1123,10980"/>
+<area shape="rect" id="node440" href="$d0/de8/classns3_1_1_okumura_hata_propagation_loss_model.html" title="this class implements the Okumura Hata propagation loss model" alt="" coords="933,11004,1134,11042"/>
+<area shape="rect" id="node441" href="$d1/dc1/classns3_1_1_random_propagation_loss_model.html" title="The propagation loss follows a random distribution." alt="" coords="936,11066,1131,11105"/>
+<area shape="rect" id="node442" href="$d3/d20/classns3_1_1_range_propagation_loss_model.html" title="The propagation loss depends only on the distance (range) between transmitter and receiver." alt="" coords="941,11129,1126,11168"/>
+<area shape="rect" id="node443" href="$d7/dbc/classns3_1_1_three_gpp_propagation_loss_model.html" title="Base class for the 3GPP propagation models." alt="" coords="945,11192,1122,11230"/>
+<area shape="rect" id="node450" href="$dd/dbe/classns3_1_1_three_log_distance_propagation_loss_model.html" title="A log distance path loss propagation model with three distance fields." alt="" coords="921,11254,1146,11293"/>
+<area shape="rect" id="node451" href="$d3/dd0/classns3_1_1_two_ray_ground_propagation_loss_model.html" title="a Two&#45;Ray Ground propagation loss model ported from NS2" alt="" coords="930,11317,1137,11356"/>
+<area shape="rect" id="node452" href="$d9/d98/classns3_1_1lorawan_1_1_building_penetration_loss.html" title="A class implementing the TR 45.820 model for building losses." alt="" coords="913,11380,1154,11405"/>
+<area shape="rect" id="node453" href="$d7/d91/classns3_1_1lorawan_1_1_correlated_shadowing_propagation_loss_model.html" title=" " alt="" coords="925,11429,1142,11468"/>
+<area shape="rect" id="node427" href="$de/dea/classns3_1_1_hybrid_buildings_propagation_loss_model.html" title="The HybridBuildingsPropagationModel is a compound of different models able to evaluate the pathloss f..." alt="" coords="1217,11522,1426,11561"/>
+<area shape="rect" id="node428" href="$d0/d33/classns3_1_1_oh_buildings_propagation_loss_model.html" title="this model combines the OkumuraHata model with the BuildingsPropagationLossModel" alt="" coords="1227,11460,1416,11498"/>
+<area shape="rect" id="node444" href="$d7/dc3/classns3_1_1_three_gpp_indoor_office_propagation_loss_model.html" title="Implements the pathloss model defined in 3GPP TR 38.901, Table 7.4.1&#45;1 for the Indoor Office scenario..." alt="" coords="1233,11066,1410,11105"/>
+<area shape="rect" id="node445" href="$d9/ded/classns3_1_1_three_gpp_rma_propagation_loss_model.html" title="Implements the pathloss model defined in 3GPP TR 38.901, Table 7.4.1&#45;1 for the RMa scenario." alt="" coords="1219,11129,1423,11168"/>
+<area shape="rect" id="node446" href="$d5/dd3/classns3_1_1_three_gpp_uma_propagation_loss_model.html" title="Implements the pathloss model defined in 3GPP TR 38.901, Table 7.4.1&#45;1 for the UMa scenario." alt="" coords="1219,11192,1423,11230"/>
+<area shape="rect" id="node447" href="$db/de1/classns3_1_1_three_gpp_umi_street_canyon_propagation_loss_model.html" title="Implements the pathloss model defined in 3GPP TR 38.901, Table 7.4.1&#45;1 for the UMi&#45;Street Canyon scen..." alt="" coords="1217,11254,1426,11293"/>
+<area shape="rect" id="node448" href="$d8/d0e/classns3_1_1_three_gpp_v2v_urban_propagation_loss_model.html" title="Implements the pathloss model defined in 3GPP TR 37.885, Table 6.2.1&#45;1 for the Urban scenario." alt="" coords="1204,11317,1439,11356"/>
+<area shape="rect" id="node449" href="$d8/d4e/classns3_1_1_three_gpp_v2v_highway_propagation_loss_model.html" title="Implements the pathloss model defined in 3GPP TR 37.885, Table 6.2.1&#45;1 for the Highway scenario." alt="" coords="1488,11317,1738,11356"/>
+<area shape="rect" id="node455" href="$db/da6/classns3_1_1_queue.html" title=" " alt="" coords="964,11953,1103,11978"/>
+<area shape="rect" id="node457" href="$db/da6/classns3_1_1_queue.html" title=" " alt="" coords="929,11792,1138,11830"/>
+<area shape="rect" id="node459" href="$db/da6/classns3_1_1_queue.html" title=" " alt="" coords="943,11855,1124,11879"/>
+<area shape="rect" id="node460" href="$db/da6/classns3_1_1_queue.html" title="Template class for packet Queues." alt="" coords="932,11904,1135,11929"/>
+<area shape="rect" id="node456" href="$dc/dc6/classns3_1_1_drop_tail_queue.html" title="A FIFO packet queue that drops tail&#45;end packets on overflow." alt="" coords="1253,11946,1389,11985"/>
+<area shape="rect" id="node458" href="$d5/db3/classns3_1_1_wifi_mac_queue.html" title="This queue implements the timeout procedure described in (Section 9.19.2.6 &quot;Retransmit procedures&quot; pa..." alt="" coords="1253,11799,1389,11823"/>
+<area shape="rect" id="node462" href="$da/d5b/class_test_child_queue_disc.html" title="Test Child Queue Disc that may drop packets before enqueue or after dequeue." alt="" coords="963,12644,1104,12669"/>
+<area shape="rect" id="node463" href="$d0/dba/class_test_parent_queue_disc.html" title="Test Parent Queue Disc having a child of type TestChildQueueDisc." alt="" coords="959,12003,1108,12027"/>
+<area shape="rect" id="node464" href="$d0/d7b/classns3_1_1_co_del_queue_disc.html" title="A CoDel packet queue disc." alt="" coords="957,12052,1110,12077"/>
+<area shape="rect" id="node465" href="$d1/d5f/classns3_1_1_cobalt_queue_disc.html" title="Cobalt packet queue disc." alt="" coords="957,12101,1110,12126"/>
+<area shape="rect" id="node466" href="$df/d82/classns3_1_1_fifo_queue_disc.html" title="Simple queue disc implementing the FIFO (First&#45;In First&#45;Out) policy." alt="" coords="965,12151,1102,12175"/>
+<area shape="rect" id="node467" href="$d0/dae/classns3_1_1_fq_co_del_queue_disc.html" title="A FqCoDel packet queue disc." alt="" coords="950,12200,1117,12225"/>
+<area shape="rect" id="node468" href="$d8/dc6/classns3_1_1_fq_cobalt_queue_disc.html" title="A FqCobalt packet queue disc." alt="" coords="949,12249,1118,12274"/>
+<area shape="rect" id="node469" href="$d9/d54/classns3_1_1_fq_pie_queue_disc.html" title="A FqPie packet queue disc." alt="" coords="959,12299,1108,12323"/>
+<area shape="rect" id="node470" href="$d9/ddc/classns3_1_1_mq_queue_disc.html" title="mq is a classful multi&#45;queue aware dummy scheduler." alt="" coords="967,12348,1100,12373"/>
+<area shape="rect" id="node471" href="$d7/d8d/classns3_1_1_pfifo_fast_queue_disc.html" title="Linux pfifo_fast is the default priority queue enabled on Linux systems." alt="" coords="949,12397,1118,12422"/>
+<area shape="rect" id="node472" href="$da/df4/classns3_1_1_pie_queue_disc.html" title="Implements PIE Active Queue Management discipline." alt="" coords="966,12447,1101,12471"/>
+<area shape="rect" id="node473" href="$d8/dca/classns3_1_1_prio_queue_disc.html" title="The Prio qdisc is a simple classful queueing discipline that contains an arbitrary number of classes ..." alt="" coords="964,12496,1103,12521"/>
+<area shape="rect" id="node474" href="$df/dae/classns3_1_1_red_queue_disc.html" title="A RED packet queue disc." alt="" coords="964,12545,1103,12570"/>
+<area shape="rect" id="node475" href="$d6/d76/classns3_1_1_tbf_queue_disc.html" title="A TBF packet queue disc." alt="" coords="966,12595,1101,12619"/>
+<area shape="rect" id="node477" href="$d1/de3/classns3_1_1_fq_co_del_flow.html" title="A flow queue used by the FqCoDel queue disc." alt="" coords="968,12743,1099,12767"/>
+<area shape="rect" id="node478" href="$d8/d19/classns3_1_1_fq_cobalt_flow.html" title="A flow queue used by the FqCobalt queue disc." alt="" coords="968,12792,1099,12817"/>
+<area shape="rect" id="node479" href="$d6/d7e/classns3_1_1_fq_pie_flow.html" title="A flow queue used by the FqPie queue disc." alt="" coords="977,12693,1090,12718"/>
+<area shape="rect" id="node481" href="$d8/dd2/classns3_1_1_dynamic_queue_limits.html" title="DynamicQueueLimits would be used in conjunction with a producer/consumer type queue (possibly a netde..." alt="" coords="946,12841,1121,12866"/>
+<area shape="rect" id="node484" href="$d4/dd7/classns3_1_1_constant_random_variable.html" title="The Random Number Generator (RNG) that returns a constant." alt="" coords="935,13384,1132,13409"/>
+<area shape="rect" id="node485" href="$d9/d77/classns3_1_1_deterministic_random_variable.html" title="The Random Number Generator (RNG) that returns a predetermined sequence." alt="" coords="946,13433,1121,13472"/>
+<area shape="rect" id="node486" href="$dc/d1c/classns3_1_1_empirical_random_variable.html" title="The Random Number Generator (RNG) that has a specified empirical distribution." alt="" coords="934,13496,1133,13521"/>
+<area shape="rect" id="node487" href="$d3/d6d/classns3_1_1_erlang_random_variable.html" title="The Erlang distribution Random Number Generator (RNG) that allows stream numbers to be set determinis..." alt="" coords="943,13545,1124,13570"/>
+<area shape="rect" id="node488" href="$da/d69/classns3_1_1_exponential_random_variable.html" title="The exponential distribution Random Number Generator (RNG)." alt="" coords="927,13595,1140,13619"/>
+<area shape="rect" id="node489" href="$d9/dcd/classns3_1_1_gamma_random_variable.html" title="The gamma distribution Random Number Generator (RNG) that allows stream numbers to be set determinist..." alt="" coords="938,12891,1129,12915"/>
+<area shape="rect" id="node490" href="$d1/d92/classns3_1_1_log_normal_random_variable.html" title="The log&#45;normal distribution Random Number Generator (RNG) that allows stream numbers to be set determ..." alt="" coords="930,12940,1137,12965"/>
+<area shape="rect" id="node491" href="$da/d67/classns3_1_1_normal_random_variable.html" title="The normal (Gaussian) distribution Random Number Generator (RNG) that allows stream numbers to be set..." alt="" coords="940,12989,1127,13014"/>
+<area shape="rect" id="node492" href="$d0/df0/classns3_1_1_pareto_random_variable.html" title="The Pareto distribution Random Number Generator (RNG)." alt="" coords="942,13039,1125,13063"/>
+<area shape="rect" id="node493" href="$df/d31/classns3_1_1_sequential_random_variable.html" title="The Random Number Generator (RNG) that returns a pattern of sequential values." alt="" coords="931,13088,1136,13113"/>
+<area shape="rect" id="node494" href="$d8/d9b/classns3_1_1_triangular_random_variable.html" title="The triangular distribution Random Number Generator (RNG) that allows stream numbers to be set determ..." alt="" coords="933,13137,1134,13162"/>
+<area shape="rect" id="node495" href="$d1/d20/classns3_1_1_uniform_random_variable.html" title="The uniform distribution Random Number Generator (RNG)." alt="" coords="938,13187,1129,13211"/>
+<area shape="rect" id="node496" href="$dd/d52/classns3_1_1_weibull_random_variable.html" title="The Weibull distribution Random Number Generator (RNG) which allows stream numbers to be set determin..." alt="" coords="940,13236,1127,13261"/>
+<area shape="rect" id="node497" href="$dd/d78/classns3_1_1_zeta_random_variable.html" title="The zeta distribution Random Number Generator (RNG) that allows stream numbers to be set deterministi..." alt="" coords="948,13285,1119,13310"/>
+<area shape="rect" id="node498" href="$db/d00/classns3_1_1_zipf_random_variable.html" title="The Zipf distribution Random Number Generator (RNG) that allows stream numbers to be set deterministi..." alt="" coords="950,13335,1117,13359"/>
+<area shape="rect" id="node501" href="$d9/d19/classns3_1_1_rtt_mean_deviation.html" title="The &quot;Mean&#45;&#45;Deviation&quot; RTT estimator, as discussed by Van Jacobson." alt="" coords="956,13644,1111,13669"/>
+<area shape="rect" id="node506" href="$d8/d3c/classns3_1_1_calendar_scheduler.html" title="a calendar queue event scheduler" alt="" coords="954,13693,1113,13718"/>
+<area shape="rect" id="node507" href="$d3/da7/classns3_1_1_heap_scheduler.html" title="a binary heap event scheduler" alt="" coords="964,13743,1103,13767"/>
+<area shape="rect" id="node508" href="$da/d2c/classns3_1_1_list_scheduler.html" title="a std::list event scheduler" alt="" coords="969,13792,1098,13817"/>
+<area shape="rect" id="node509" href="$db/d01/classns3_1_1_map_scheduler.html" title="a std::map event scheduler" alt="" coords="967,13841,1100,13866"/>
+<area shape="rect" id="node510" href="$db/d30/classns3_1_1_priority_queue_scheduler.html" title="a std::priority_queue event scheduler" alt="" coords="940,13891,1127,13915"/>
+<area shape="rect" id="node512" href="$dd/d5d/classns3_1_1_bs_service_flow_manager.html" title="BsServiceFlowManager." alt="" coords="939,13989,1128,14014"/>
+<area shape="rect" id="node513" href="$d2/d01/classns3_1_1_ss_service_flow_manager.html" title="SsServiceFlowManager class." alt="" coords="939,13940,1128,13965"/>
+<area shape="rect" id="node515" href="$d7/db9/classns3_1_1_default_simulator_impl.html" title="The default single process simulator implementation." alt="" coords="947,14039,1120,14063"/>
+<area shape="rect" id="node516" href="$d9/d05/classns3_1_1_distributed_simulator_impl.html" title="Distributed simulator implementation using lookahead." alt="" coords="937,14088,1130,14113"/>
+<area shape="rect" id="node517" href="$d4/d6f/classns3_1_1_null_message_simulator_impl.html" title="Simulator implementation using MPI and a Null Message algorithm." alt="" coords="930,14137,1137,14162"/>
+<area shape="rect" id="node518" href="$dc/d94/classns3_1_1_realtime_simulator_impl.html" title="Realtime version of SimulatorImpl." alt="" coords="943,14187,1124,14211"/>
+<area shape="rect" id="node519" href="$d5/d8e/classns3_1_1_visual_simulator_impl.html" title="A replacement simulator that starts the visualizer." alt="" coords="950,14236,1117,14261"/>
+<area shape="rect" id="node521" href="$d4/d65/classns3_1_1_ipv4_raw_socket_impl.html" title="IPv4 raw socket." alt="" coords="950,14285,1117,14310"/>
+<area shape="rect" id="node522" href="$d0/d05/classns3_1_1_ipv6_raw_socket_impl.html" title="IPv6 raw socket." alt="" coords="950,14335,1117,14359"/>
+<area shape="rect" id="node523" href="$d1/d96/classns3_1_1_packet_socket.html" title="A PacketSocket is a link between an application and a net device." alt="" coords="968,14384,1099,14409"/>
+<area shape="rect" id="node524" href="$d3/dea/classns3_1_1_tcp_socket.html" title="(abstract) base class of all TcpSockets" alt="" coords="978,14433,1089,14458"/>
+<area shape="rect" id="node532" href="$d3/dac/classns3_1_1_udp_socket.html" title="(abstract) base class of all UdpSockets" alt="" coords="976,14483,1091,14507"/>
+<area shape="rect" id="node525" href="$dc/d2a/classns3_1_1_tcp_socket_base.html" title="A base class for implementation of a stream socket using TCP." alt="" coords="1251,14433,1392,14458"/>
+<area shape="rect" id="node526" href="$dc/d45/classns3_1_1_tcp_socket_msg_base.html" title="Class for inserting callbacks special points of the flow of TCP sockets." alt="" coords="1530,14433,1696,14458"/>
+<area shape="rect" id="node527" href="$d3/ddd/class_tcp_dctcp_congested_router.html" title="A TCP socket which sends a data packet with CE flags set for test 3." alt="" coords="1803,14377,1982,14402"/>
+<area shape="rect" id="node528" href="$d9/d54/class_tcp_socket_advertised_window_proxy.html" title="Socket that wraps every call to AdvertisedWindowSize ()." alt="" coords="1797,14426,1988,14465"/>
+<area shape="rect" id="node529" href="$d3/d5b/class_tcp_socket_half_ack.html" title="Socket that the 50% of the times saves the entire packet in the buffer, while in the other 50% saves ..." alt="" coords="1828,14489,1957,14514"/>
+<area shape="rect" id="node530" href="$dd/dd9/classns3_1_1_tcp_socket_congested_router.html" title="A TCP socket which sends certain data packets with CE flags set for tests 5 and 6." alt="" coords="1786,14539,1999,14563"/>
+<area shape="rect" id="node531" href="$d2/d2e/classns3_1_1_tcp_socket_small_acks.html" title="A TCP socket which sends ACKs smaller than the segment received." alt="" coords="1805,14328,1980,14353"/>
+<area shape="rect" id="node533" href="$d7/df7/classns3_1_1_udp_socket_impl.html" title="A sockets interface to UDP." alt="" coords="1252,14483,1391,14507"/>
+<area shape="rect" id="node535" href="$da/d06/classns3_1_1_ipv4_raw_socket_factory.html" title="API to create RAW socket instances." alt="" coords="940,14532,1127,14557"/>
+<area shape="rect" id="node537" href="$dd/dae/classns3_1_1_ipv6_raw_socket_factory.html" title="API to create IPv6 RAW socket instances." alt="" coords="940,14581,1127,14606"/>
+<area shape="rect" id="node539" href="$d9/d3f/classns3_1_1_packet_socket_factory.html" title="This can be used as an interface in a node in order for the node to generate PacketSockets that can c..." alt="" coords="946,14631,1121,14655"/>
+<area shape="rect" id="node540" href="$dd/d8b/classns3_1_1_tcp_socket_factory.html" title="API to create TCP socket instances." alt="" coords="955,14680,1112,14705"/>
+<area shape="rect" id="node542" href="$de/d3e/classns3_1_1_udp_socket_factory.html" title="API to create UDP socket instances." alt="" coords="954,14729,1113,14754"/>
+<area shape="rect" id="node536" href="$d2/d56/classns3_1_1_ipv4_raw_socket_factory_impl.html" title="Implementation of IPv4 raw socket factory." alt="" coords="1216,14532,1427,14557"/>
+<area shape="rect" id="node538" href="$df/d1a/classns3_1_1_ipv6_raw_socket_factory_impl.html" title="Implementation of IPv6 raw socket factory." alt="" coords="1216,14581,1427,14606"/>
+<area shape="rect" id="node541" href="$d3/dfe/classns3_1_1_tcp_socket_factory_impl.html" title="socket factory implementation for native ns&#45;3 TCP" alt="" coords="1231,14680,1412,14705"/>
+<area shape="rect" id="node543" href="$d8/db3/classns3_1_1_udp_socket_factory_impl.html" title="Object to create UDP socket instances." alt="" coords="1229,14729,1413,14754"/>
+<area shape="rect" id="node545" href="$d1/dd8/classns3_1_1_shannon_spectrum_error_model.html" title="This class implements the error model described in this paper: N." alt="" coords="941,14778,1126,14817"/>
+<area shape="rect" id="node548" href="$d8/d1d/classns3_1_1_half_duplex_ideal_phy.html" title="This PHY layer implementation realizes an ideal OFDM PHY which transmits half&#45;duplex (i...." alt="" coords="950,15187,1117,15211"/>
+<area shape="rect" id="node549" href="$df/df1/classns3_1_1_lr_wpan_phy.html" title="Make LrWpanPhy a SpectrumPhy so we can enable the eventual modeling of device interference." alt="" coords="974,15236,1093,15261"/>
+<area shape="rect" id="node550" href="$d4/de9/classns3_1_1_lte_simple_spectrum_phy.html" title="The LteSimpleSpectrumPhy models the physical layer of LTE This class is used to test Frequency Reuse ..." alt="" coords="940,14841,1127,14866"/>
+<area shape="rect" id="node551" href="$dd/d03/classns3_1_1_lte_spectrum_phy.html" title="The LteSpectrumPhy models the physical layer of LTE." alt="" coords="960,14891,1107,14915"/>
+<area shape="rect" id="node552" href="$da/da3/classns3_1_1_rem_spectrum_phy.html" title="This minimal SpectrumPhy implementation calculates the SINR with respect to the strongest signal for ..." alt="" coords="955,14940,1112,14965"/>
+<area shape="rect" id="node553" href="$df/d60/classns3_1_1_spectrum_analyzer.html" title="Simple SpectrumPhy implementation that averages the spectrum power density of incoming transmissions ..." alt="" coords="955,14989,1112,15014"/>
+<area shape="rect" id="node554" href="$d6/de2/classns3_1_1_tv_spectrum_transmitter.html" title="SpectrumPhy implementation that creates a customizable TV transmitter which transmits a PSD spectrum ..." alt="" coords="941,15039,1126,15063"/>
+<area shape="rect" id="node555" href="$d9/d2a/classns3_1_1_waveform_generator.html" title="Simple SpectrumPhy implementation that sends customizable waveform." alt="" coords="951,15088,1116,15113"/>
+<area shape="rect" id="node556" href="$da/dbd/classns3_1_1_wifi_spectrum_phy_interface.html" title="This class is an adaptor between class SpectrumWifiPhy (which inherits from WifiPhy) and class Spectr..." alt="" coords="931,15137,1136,15162"/>
+<area shape="rect" id="node558" href="$d9/d62/classns3_1_1_constant_spectrum_propagation_loss_model.html" title="A Constant (fixed) propagation loss." alt="" coords="919,15334,1148,15373"/>
+<area shape="rect" id="node559" href="$d1/d82/classns3_1_1_friis_spectrum_propagation_loss_model.html" title="Friis spectrum propagation loss model." alt="" coords="933,15397,1134,15436"/>
+<area shape="rect" id="node560" href="$d6/dca/classns3_1_1_trace_fading_loss_model.html" title="fading loss model based on precalculated fading traces" alt="" coords="941,15285,1126,15310"/>
+<area shape="rect" id="node562" href="$dc/d58/classns3_1_1_wifi_bandwidth_filter.html" title=" " alt="" coords="952,15460,1115,15485"/>
+<area shape="rect" id="node564" href="$d3/db1/classns3_1_1_wall_clock_synchronizer.html" title="Class used for synchronizing the simulation events to a real&#45;time &quot;wall clock&quot; using Posix clock func..." alt="" coords="941,15509,1126,15534"/>
+<area shape="rect" id="node566" href="$d0/d4c/classns3_1_1_tcp_bbr.html" title="BBR congestion control algorithm." alt="" coords="988,15559,1079,15583"/>
+<area shape="rect" id="node567" href="$de/d1d/classns3_1_1_tcp_bic.html" title="BIC congestion control algorithm." alt="" coords="988,15608,1079,15633"/>
+<area shape="rect" id="node568" href="$d8/d93/classns3_1_1_tcp_cubic.html" title="The Cubic Congestion Control Algorithm." alt="" coords="981,15657,1086,15682"/>
+<area shape="rect" id="node569" href="$d4/d7e/classns3_1_1_tcp_linux_reno.html" title="Reno congestion control algorithm." alt="" coords="967,15707,1100,15731"/>
+<area shape="rect" id="node571" href="$d5/d53/classns3_1_1_tcp_new_reno.html" title="The NewReno implementation." alt="" coords="969,15756,1098,15781"/>
+<area shape="rect" id="node570" href="$d2/d15/classns3_1_1_tcp_dctcp.html" title="An implementation of DCTCP." alt="" coords="1268,15436,1374,15461"/>
+<area shape="rect" id="node572" href="$de/d49/class_dummy_cong_control.html" title="Behaves as NewReno, except that each time PktsAcked is called, a notification is sent to TcpPktsAcked..." alt="" coords="1251,16077,1391,16102"/>
+<area shape="rect" id="node573" href="$d4/ddc/class_mimic_cong_control.html" title="Behaves as NewReno except HasCongControl returns true." alt="" coords="1257,15485,1386,15510"/>
+<area shape="rect" id="node574" href="$df/d75/classns3_1_1_tcp_high_speed.html" title="An implementation of TCP HighSpeed." alt="" coords="1254,15535,1389,15559"/>
+<area shape="rect" id="node575" href="$d2/d42/classns3_1_1_tcp_htcp.html" title="An implementation of the H&#45;TCP variant of TCP." alt="" coords="1272,15584,1371,15609"/>
+<area shape="rect" id="node576" href="$d8/d68/classns3_1_1_tcp_hybla.html" title="Implementation of the TCP Hybla algorithm." alt="" coords="1269,15633,1373,15658"/>
+<area shape="rect" id="node577" href="$d2/d49/classns3_1_1_tcp_illinois.html" title="An implementation of TCP Illinois algorithm." alt="" coords="1267,15683,1375,15707"/>
+<area shape="rect" id="node578" href="$d1/d2b/classns3_1_1_tcp_ledbat.html" title="An implementation of LEDBAT." alt="" coords="1266,15732,1376,15757"/>
+<area shape="rect" id="node579" href="$dd/d01/classns3_1_1_tcp_lp.html" title="TCP&#45;LP (Low Priority) congestion control algorithm." alt="" coords="1279,15781,1364,15806"/>
+<area shape="rect" id="node580" href="$df/ddc/classns3_1_1_tcp_scalable.html" title="An implementation of TCP Scalable." alt="" coords="1261,15831,1382,15855"/>
+<area shape="rect" id="node581" href="$d6/de2/classns3_1_1_tcp_vegas.html" title="An implementation of TCP Vegas." alt="" coords="1268,15880,1375,15905"/>
+<area shape="rect" id="node582" href="$de/da0/classns3_1_1_tcp_veno.html" title="An implementation of TCP Veno." alt="" coords="1271,15929,1371,15954"/>
+<area shape="rect" id="node583" href="$df/d4c/classns3_1_1_tcp_westwood_plus.html" title="An implementation of TCP Westwood+." alt="" coords="1243,15979,1400,16003"/>
+<area shape="rect" id="node584" href="$d3/d87/classns3_1_1_tcp_yeah.html" title="An implementation of TCP YeAH." alt="" coords="1271,16028,1371,16053"/>
+<area shape="rect" id="node586" href="$de/d30/classns3_1_1_tcp_option_end.html" title="Defines the TCP option of kind 0 (end of option list) as in RFC 793" alt="" coords="967,15953,1100,15978"/>
+<area shape="rect" id="node587" href="$d6/d20/classns3_1_1_tcp_option_m_s_s.html" title="Defines the TCP option of kind 2 (maximum segment size) as in RFC 793" alt="" coords="964,16003,1103,16027"/>
+<area shape="rect" id="node588" href="$d4/d52/classns3_1_1_tcp_option_n_o_p.html" title="Defines the TCP option of kind 1 (no operation) as in RFC 793" alt="" coords="964,16052,1103,16077"/>
+<area shape="rect" id="node589" href="$db/d3f/classns3_1_1_tcp_option_sack.html" title="Defines the TCP option of kind 5 (selective acknowledgment option) as in RFC 2018" alt="" coords="964,16101,1103,16126"/>
+<area shape="rect" id="node590" href="$df/dbf/classns3_1_1_tcp_option_sack_permitted.html" title="Defines the TCP option of kind 4 (selective acknowledgment permitted option) as in RFC 2018" alt="" coords="936,16151,1131,16175"/>
+<area shape="rect" id="node591" href="$de/dd8/classns3_1_1_tcp_option_t_s.html" title="Defines the TCP option of kind 8 (timestamp option) as in RFC 1323" alt="" coords="971,15805,1096,15830"/>
+<area shape="rect" id="node592" href="$d5/d3e/classns3_1_1_tcp_option_unknown.html" title="An unknown TCP option." alt="" coords="951,15855,1116,15879"/>
+<area shape="rect" id="node593" href="$d0/d28/classns3_1_1_tcp_option_win_scale.html" title="Defines the TCP option of kind 3 (window scale option) as in RFC 1323" alt="" coords="951,15904,1116,15929"/>
+<area shape="rect" id="node595" href="$d3/d31/classns3_1_1_tcp_rate_linux.html" title="Linux management and generation of Rate information for TCP." alt="" coords="969,16200,1098,16225"/>
+<area shape="rect" id="node597" href="$dd/d9b/classns3_1_1_tcp_classic_recovery.html" title="The Classic recovery implementation." alt="" coords="948,16249,1119,16274"/>
+<area shape="rect" id="node598" href="$df/d07/classns3_1_1_tcp_prr_recovery.html" title="An implementation of PRR." alt="" coords="1250,16249,1393,16274"/>
+<area shape="rect" id="node604" href="$de/dbe/classns3_1_1_inet_topology_reader.html" title="Topology file reader (Inet&#45;format type)." alt="" coords="951,16348,1116,16373"/>
+<area shape="rect" id="node605" href="$df/d8d/classns3_1_1_orbis_topology_reader.html" title="Topology file reader (Orbis&#45;format type)." alt="" coords="946,16397,1121,16422"/>
+<area shape="rect" id="node606" href="$d0/d2e/classns3_1_1_rocketfuel_topology_reader.html" title="Topology file reader (Rocketfuel&#45;format type)." alt="" coords="931,16299,1136,16323"/>
+<area shape="rect" id="node609" href="$d9/d89/classns3_1_1_qos_txop.html" title="Handle packet fragmentation and retransmissions for QoS data frames as well as MSDU aggregation (A&#45;MS..." alt="" coords="982,16447,1085,16471"/>
+<area shape="rect" id="node611" href="$d4/d24/classns3_1_1_uan_mac_aloha.html" title="ALOHA MAC Protocol, the simplest MAC protocol for wireless networks." alt="" coords="967,16545,1100,16570"/>
+<area shape="rect" id="node612" href="$d4/d75/classns3_1_1_uan_mac_cw.html" title="CW&#45;MAC protocol, similar in idea to the 802.11 DCF with constant backoff window." alt="" coords="974,16693,1093,16718"/>
+<area shape="rect" id="node613" href="$db/dc8/classns3_1_1_uan_mac_rc.html" title="Non&#45;gateway node MAC for reservation channel MAC protocol." alt="" coords="975,16595,1092,16619"/>
+<area shape="rect" id="node614" href="$d8/d27/classns3_1_1_uan_mac_rc_gw.html" title="Gateway side of RC&#45;MAC." alt="" coords="965,16496,1102,16521"/>
+<area shape="rect" id="node616" href="$d3/d8d/classns3_1_1_uan_noise_model_default.html" title="Standard ambient acoustic noise model." alt="" coords="941,16644,1126,16669"/>
+<area shape="rect" id="node618" href="$dc/d70/classns3_1_1_uan_phy_dual.html" title="Two channel Phy." alt="" coords="971,16792,1096,16817"/>
+<area shape="rect" id="node619" href="$dc/d8c/classns3_1_1_uan_phy_gen.html" title="Generic PHY model." alt="" coords="973,16743,1094,16767"/>
+<area shape="rect" id="node621" href="$d6/d2c/classns3_1_1_uan_phy_calc_sinr_default.html" title="Default SINR calculator for UanPhyGen." alt="" coords="939,16891,1128,16915"/>
+<area shape="rect" id="node622" href="$df/df8/classns3_1_1_uan_phy_calc_sinr_dual.html" title="Default SINR model for UanPhyDual." alt="" coords="947,16940,1120,16965"/>
+<area shape="rect" id="node623" href="$d8/d8c/classns3_1_1_uan_phy_calc_sinr_fh_fsk.html" title="WHOI Micromodem like FH&#45;FSK model." alt="" coords="942,16841,1125,16866"/>
+<area shape="rect" id="node625" href="$d6/d67/classns3_1_1_uan_phy_per_common_modes.html" title="Packet error rate calculation for common tx modes based on UanPhyPerUmodem." alt="" coords="929,17039,1138,17063"/>
+<area shape="rect" id="node626" href="$d6/d80/classns3_1_1_uan_phy_per_gen_default.html" title="Default Packet Error Rate calculator for UanPhyGen." alt="" coords="942,17088,1125,17113"/>
+<area shape="rect" id="node627" href="$d4/de4/classns3_1_1_uan_phy_per_umodem.html" title="Packet error rate calculation assuming WHOI Micromodem&#45;like PHY (FH&#45;FSK)" alt="" coords="949,16989,1118,17014"/>
+<area shape="rect" id="node629" href="$d1/dd1/classns3_1_1_uan_prop_model_ideal.html" title="Ideal propagation model (no pathloss, impulse PDP)." alt="" coords="951,17187,1116,17211"/>
+<area shape="rect" id="node630" href="$d9/d91/classns3_1_1_uan_prop_model_thorp.html" title="Uses Thorp&#39;s approximation to compute pathloss." alt="" coords="948,17137,1119,17162"/>
+<area shape="rect" id="node632" href="$dc/da0/classns3_1_1_uan_transducer_hd.html" title="Half duplex implementation of transducer object." alt="" coords="956,17236,1111,17261"/>
+<area shape="rect" id="node636" href="$db/d79/classns3_1_1_uplink_scheduler_m_b_qo_s.html" title="This class implements a Migration&#45;based Quality of Service uplink scheduler(MBQoS)." alt="" coords="938,17335,1129,17359"/>
+<area shape="rect" id="node637" href="$d9/d63/classns3_1_1_uplink_scheduler_rtps.html" title="This class implements a simple uplink scheduler for rtPS flows." alt="" coords="947,17384,1120,17409"/>
+<area shape="rect" id="node638" href="$d5/dab/classns3_1_1_uplink_scheduler_simple.html" title="Uplink Scheduler &#45; simplified." alt="" coords="941,17285,1126,17310"/>
+<area shape="rect" id="node641" href="$d1/d8b/classns3_1_1_wifi_default_ack_manager.html" title="WifiDefaultAckManager is the default ack manager." alt="" coords="939,17433,1128,17458"/>
+<area shape="rect" id="node643" href="$dd/dc0/classns3_1_1_wifi_default_assoc_manager.html" title="Default wifi Association Manager." alt="" coords="932,17483,1135,17507"/>
+<area shape="rect" id="node645" href="$d3/d3e/class_mld_swap_links_test_1_1_test_wifi_mac.html" title="Test WifiMac subclass used to access the SwapLinks method." alt="" coords="928,17532,1139,17557"/>
+<area shape="rect" id="node646" href="$d4/df3/classns3_1_1_adhoc_wifi_mac.html" title="Wifi MAC high model for an ad&#45;hoc Wifi MAC." alt="" coords="966,17581,1101,17606"/>
+<area shape="rect" id="node647" href="$db/d72/classns3_1_1_ap_wifi_mac.html" title="Wi&#45;Fi AP state machine." alt="" coords="976,17631,1091,17655"/>
+<area shape="rect" id="node648" href="$dd/d10/classns3_1_1_mesh_wifi_interface_mac.html" title="Basic MAC of mesh point Wi&#45;Fi interface." alt="" coords="942,17680,1125,17705"/>
+<area shape="rect" id="node649" href="$d0/d97/classns3_1_1_sta_wifi_mac.html" title="The Wifi MAC high model for a non&#45;AP STA in a BSS." alt="" coords="974,17729,1093,17754"/>
+<area shape="rect" id="node651" href="$d2/d92/classns3_1_1_wifi_mac_queue_scheduler_impl.html" title=" " alt="" coords="936,17841,1131,17880"/>
+<area shape="rect" id="node653" href="$d2/d92/classns3_1_1_wifi_mac_queue_scheduler_impl.html" title="WifiMacQueueSchedulerImpl is a template class enabling the definition of different types of priority ..." alt="" coords="936,17778,1131,17817"/>
+<area shape="rect" id="node652" href="$d8/d28/classns3_1_1_fcfs_wifi_queue_scheduler.html" title="FcfsWifiQueueScheduler is a wifi queue scheduler that serves data frames in a first come first serve ..." alt="" coords="1224,17848,1419,17873"/>
+<area shape="rect" id="node655" href="$df/d91/classns3_1_1_spectrum_wifi_phy.html" title="802.11 PHY layer model" alt="" coords="957,17953,1110,17978"/>
+<area shape="rect" id="node660" href="$d6/db9/classns3_1_1_yans_wifi_phy.html" title="802.11 PHY layer model" alt="" coords="971,17904,1096,17929"/>
+<area shape="rect" id="node656" href="$da/d50/class_ext_spectrum_wifi_phy.html" title="Extended SpectrumWifiPhy class for the purpose of the tests." alt="" coords="1250,18000,1393,18025"/>
+<area shape="rect" id="node657" href="$d3/d95/class_mu_mimo_spectrum_wifi_phy.html" title="SpectrumWifiPhy used for testing MU&#45;MIMO." alt="" coords="1235,18049,1408,18074"/>
+<area shape="rect" id="node658" href="$d5/d79/class_mu_rts_cts_spectrum_wifi_phy.html" title="Spectrum PHY used for testing MU&#45;RTS/CTS." alt="" coords="1230,17901,1413,17926"/>
+<area shape="rect" id="node659" href="$dc/d89/class_ofdma_spectrum_wifi_phy.html" title="SpectrumWifiPhy used for testing OFDMA." alt="" coords="1240,17951,1402,17975"/>
+<area shape="rect" id="node663" href="$d7/dff/classns3_1_1_wifi_default_protection_manager.html" title="WifiDefaultProtectionManager is the default protection manager, which selects the protection method f..." alt="" coords="946,18002,1121,18041"/>
+<area shape="rect" id="node665" href="$d3/dd5/classns3_1_1_aarf_wifi_manager.html" title="AARF Rate control algorithm." alt="" coords="959,18572,1108,18597"/>
+<area shape="rect" id="node666" href="$d2/d73/classns3_1_1_aarfcd_wifi_manager.html" title="an implementation of the AARF&#45;CD algorithm" alt="" coords="952,18621,1115,18646"/>
+<area shape="rect" id="node667" href="$d0/d99/classns3_1_1_amrr_wifi_manager.html" title="AMRR Rate control algorithm." alt="" coords="958,18671,1109,18695"/>
+<area shape="rect" id="node668" href="$d2/dcd/classns3_1_1_aparf_wifi_manager.html" title="APARF Power and rate control algorithm." alt="" coords="956,18720,1111,18745"/>
+<area shape="rect" id="node669" href="$de/d45/classns3_1_1_arf_wifi_manager.html" title="ARF Rate control algorithm." alt="" coords="963,18769,1104,18794"/>
+<area shape="rect" id="node670" href="$d4/d2d/classns3_1_1_cara_wifi_manager.html" title="implement the CARA rate control algorithm" alt="" coords="958,18065,1109,18090"/>
+<area shape="rect" id="node671" href="$d3/df9/classns3_1_1_constant_rate_wifi_manager.html" title="use constant rates for data and RTS transmissions" alt="" coords="932,18115,1135,18139"/>
+<area shape="rect" id="node672" href="$d0/d50/classns3_1_1_ideal_wifi_manager.html" title="Ideal rate control algorithm." alt="" coords="958,18164,1109,18189"/>
+<area shape="rect" id="node673" href="$db/d29/classns3_1_1_minstrel_ht_wifi_manager.html" title="Implementation of Minstrel&#45;HT Rate Control Algorithm." alt="" coords="942,18213,1125,18238"/>
+<area shape="rect" id="node674" href="$d6/d9a/classns3_1_1_minstrel_wifi_manager.html" title="Implementation of Minstrel Rate Control Algorithm." alt="" coords="949,18263,1118,18287"/>
+<area shape="rect" id="node675" href="$d2/d60/classns3_1_1_onoe_wifi_manager.html" title="an implementation of the rate control algorithm developed by Atsushi Onoe" alt="" coords="956,18312,1111,18337"/>
+<area shape="rect" id="node676" href="$df/d79/classns3_1_1_parf_wifi_manager.html" title="PARF Rate control algorithm." alt="" coords="959,18361,1108,18386"/>
+<area shape="rect" id="node677" href="$d0/d22/classns3_1_1_rraa_wifi_manager.html" title="Robust Rate Adaptation Algorithm." alt="" coords="958,18411,1109,18435"/>
+<area shape="rect" id="node678" href="$d4/d1d/classns3_1_1_rrpaa_wifi_manager.html" title=" " alt="" coords="954,18460,1113,18485"/>
+<area shape="rect" id="node679" href="$d8/df5/classns3_1_1_thompson_sampling_wifi_manager.html" title="Thompson Sampling rate control algorithm." alt="" coords="939,18509,1128,18548"/>
+<area shape="rect" id="node681" href="$d1/df9/classns3_1_1_linear_wifi_tx_current_model.html" title="a linear model of the Wifi transmit current" alt="" coords="950,18818,1117,18857"/>
+<area shape="rect" id="node685" href="$d6/dbd/classns3_1_1_simple_ofdm_wimax_phy.html" title="SimpleOfdmWimaxPhy class." alt="" coords="940,18881,1127,18906"/>
+<area shape="rect" id="node693" href="$d0/db3/classns3_1_1dsr_1_1_dsr_option_ack.html" title="Dsr Option Ack." alt="" coords="954,19415,1113,19439"/>
+<area shape="rect" id="node694" href="$da/d1c/classns3_1_1dsr_1_1_dsr_option_ack_req.html" title="Dsr Option." alt="" coords="943,19464,1124,19489"/>
+<area shape="rect" id="node695" href="$d0/d43/classns3_1_1dsr_1_1_dsr_option_pad1.html" title="Dsr Option Pad1." alt="" coords="951,19513,1116,19538"/>
+<area shape="rect" id="node696" href="$de/db9/classns3_1_1dsr_1_1_dsr_option_padn.html" title="IPv4 Option Padn." alt="" coords="951,19563,1116,19587"/>
+<area shape="rect" id="node697" href="$d3/d5d/classns3_1_1dsr_1_1_dsr_option_rerr.html" title="Dsr Option Route Error." alt="" coords="954,19612,1113,19637"/>
+<area shape="rect" id="node698" href="$dc/d31/classns3_1_1dsr_1_1_dsr_option_rrep.html" title="Dsr Option Route Reply." alt="" coords="952,19267,1115,19291"/>
+<area shape="rect" id="node699" href="$d2/d04/classns3_1_1dsr_1_1_dsr_option_rreq.html" title="Dsr Option Rreq." alt="" coords="952,19316,1115,19341"/>
+<area shape="rect" id="node700" href="$d0/d3f/classns3_1_1dsr_1_1_dsr_option_s_r.html" title="Dsr Option Source Route." alt="" coords="956,19365,1111,19390"/>
+<area shape="rect" id="node711" href="$d7/d30/classns3_1_1lorawan_1_1_end_device_lora_phy.html" title="Class representing a LoRa transceiver." alt="" coords="926,19711,1141,19735"/>
+<area shape="rect" id="node713" href="$db/dcb/classns3_1_1lorawan_1_1_gateway_lora_phy.html" title="Class modeling a Lora SX1301 chip." alt="" coords="933,19661,1134,19686"/>
+<area shape="rect" id="node712" href="$d1/d39/classns3_1_1lorawan_1_1_simple_end_device_lora_phy.html" title="Class representing a simple LoRa transceiver, with an error model based on receiver sensitivity and a..." alt="" coords="1218,19710,1424,19749"/>
+<area shape="rect" id="node714" href="$d0/dcc/classns3_1_1lorawan_1_1_simple_gateway_lora_phy.html" title="Class modeling a Lora SX1301 chip." alt="" coords="1225,19648,1418,19686"/>
+<area shape="rect" id="node716" href="$d8/d25/classns3_1_1lorawan_1_1_constant_lora_tx_current_model.html" title=" " alt="" coords="943,19822,1124,19861"/>
+<area shape="rect" id="node717" href="$d6/d13/classns3_1_1lorawan_1_1_linear_lora_tx_current_model.html" title="A linear model of the transmission current for a LoRa device, based on the WiFi model." alt="" coords="952,19760,1115,19798"/>
+<area shape="rect" id="node719" href="$da/da8/classns3_1_1lorawan_1_1_end_device_lorawan_mac.html" title="Class representing the MAC layer of a LoRaWAN device." alt="" coords="914,19935,1153,19959"/>
+<area shape="rect" id="node721" href="$d7/d18/classns3_1_1lorawan_1_1_gateway_lorawan_mac.html" title=" " alt="" coords="920,19885,1147,19910"/>
+<area shape="rect" id="node720" href="$df/d88/classns3_1_1lorawan_1_1_class_a_end_device_lorawan_mac.html" title="Class representing the MAC layer of a Class A LoRaWAN device." alt="" coords="1217,19928,1426,19966"/>
+<area shape="rect" id="node723" href="$d0/d94/classns3_1_1lorawan_1_1_dev_status_ans.html" title="Implementation of the DevStatusAns LoRaWAN MAC command." alt="" coords="940,20773,1127,20798"/>
+<area shape="rect" id="node724" href="$d8/d8d/classns3_1_1lorawan_1_1_dev_status_req.html" title="Implementation of the DevStatusReq LoRaWAN MAC command." alt="" coords="940,19984,1127,20009"/>
+<area shape="rect" id="node725" href="$db/d8c/classns3_1_1lorawan_1_1_dl_channel_ans.html" title="Implementation of the DlChannelAns LoRaWAN MAC command." alt="" coords="940,20033,1127,20058"/>
+<area shape="rect" id="node726" href="$dd/d67/classns3_1_1lorawan_1_1_duty_cycle_ans.html" title="Implementation of the DutyCycleAns LoRaWAN MAC command." alt="" coords="940,20083,1127,20107"/>
+<area shape="rect" id="node727" href="$d5/d34/classns3_1_1lorawan_1_1_duty_cycle_req.html" title="Implementation of the DutyCycleReq LoRaWAN MAC command." alt="" coords="940,20132,1127,20157"/>
+<area shape="rect" id="node728" href="$d7/d03/classns3_1_1lorawan_1_1_link_adr_ans.html" title="Implementation of the LinkAdrAns LoRaWAN MAC command." alt="" coords="949,20181,1118,20206"/>
+<area shape="rect" id="node729" href="$d5/d5a/classns3_1_1lorawan_1_1_link_adr_req.html" title="Implementation of the LinkAdrReq LoRaWAN MAC command." alt="" coords="949,20231,1118,20255"/>
+<area shape="rect" id="node730" href="$df/dda/classns3_1_1lorawan_1_1_link_check_ans.html" title="Implementation of the LinkCheckAns LoRaWAN MAC command." alt="" coords="940,20280,1127,20305"/>
+<area shape="rect" id="node731" href="$df/d2a/classns3_1_1lorawan_1_1_link_check_req.html" title="Implementation of the LinkCheckReq LoRaWAN MAC command." alt="" coords="940,20329,1127,20354"/>
+<area shape="rect" id="node732" href="$d5/d51/classns3_1_1lorawan_1_1_new_channel_ans.html" title="Implementation of the NewChannelAns LoRaWAN MAC command." alt="" coords="933,20379,1134,20403"/>
+<area shape="rect" id="node733" href="$d5/dc4/classns3_1_1lorawan_1_1_new_channel_req.html" title="Implementation of the NewChannelReq LoRaWAN MAC command." alt="" coords="933,20428,1134,20453"/>
+<area shape="rect" id="node734" href="$d3/d71/classns3_1_1lorawan_1_1_rx_param_setup_ans.html" title="Implementation of the RxParamSetupAns LoRaWAN MAC command." alt="" coords="926,20477,1141,20502"/>
+<area shape="rect" id="node735" href="$dd/dff/classns3_1_1lorawan_1_1_rx_param_setup_req.html" title="Implementation of the RxParamSetupReq LoRaWAN MAC command." alt="" coords="926,20527,1141,20551"/>
+<area shape="rect" id="node736" href="$d4/d1f/classns3_1_1lorawan_1_1_rx_timing_setup_ans.html" title="Implementation of the RxTimingSetupAns LoRaWAN MAC command." alt="" coords="926,20576,1141,20601"/>
+<area shape="rect" id="node737" href="$da/d5c/classns3_1_1lorawan_1_1_rx_timing_setup_req.html" title="Implementation of the RxTimingSetupReq LoRaWAN MAC command." alt="" coords="926,20625,1141,20650"/>
+<area shape="rect" id="node738" href="$d2/d40/classns3_1_1lorawan_1_1_tx_param_setup_ans.html" title="Implementation of the TxParamSetupAns LoRaWAN MAC command." alt="" coords="927,20675,1140,20699"/>
+<area shape="rect" id="node739" href="$d1/dbc/classns3_1_1lorawan_1_1_tx_param_setup_req.html" title="Implementation of the TxParamSetupReq LoRaWAN MAC command." alt="" coords="927,20724,1140,20749"/>
+<area shape="rect" id="node742" href="$d1/d28/classns3_1_1lorawan_1_1_adr_component.html" title=" " alt="" coords="939,20872,1128,20897"/>
+<area shape="rect" id="node743" href="$d1/d25/classns3_1_1lorawan_1_1_confirmed_messages_component.html" title=" " alt="" coords="922,20921,1145,20960"/>
+<area shape="rect" id="node744" href="$d9/d73/classns3_1_1lorawan_1_1_link_check_component.html" title=" " alt="" coords="918,20823,1149,20847"/>
+<area shape="rect" id="node749" href="$d3/d75/classns3_1_1ofi_1_1_drop_controller.html" title="Demonstration of a Drop controller." alt="" coords="955,20984,1112,21009"/>
+<area shape="rect" id="node750" href="$d5/ddd/classns3_1_1ofi_1_1_learning_controller.html" title="Demonstration of a Learning controller." alt="" coords="945,21033,1122,21058"/>
+<area shape="rect" id="node753" href="$dd/da8/classns3_1_1tests_1_1_derived_config_object.html" title="Derived config object." alt="" coords="949,21082,1118,21121"/>
+<area shape="rect" id="node755" href="$d4/db6/classns3_1_1tests_1_1_derived_config_test_object.html" title="Derived test objects." alt="" coords="949,23993,1118,24032"/>
+<area shape="rect" id="node758" href="$d3/d20/classns3_1_1_header.html" title="Protocol header serialization and deserialization." alt="" coords="431,3381,523,3406"/>
+<area shape="rect" id="node934" href="$d0/db7/classns3_1_1_trailer.html" title="Protocol trailer serialization and deserialization." alt="" coords="435,6409,520,6434"/>
+<area shape="rect" id="node759" href="$d8/d97/classns3_1_1_simple_ref_count.html" title=" " alt="" coords="670,638,827,677"/>
+<area shape="rect" id="node761" href="$d1/de7/class_bench_header.html" title="BenchHeader class used for benchmarking packet serialization/deserialization." alt="" coords="681,701,816,726"/>
+<area shape="rect" id="node762" href="$db/d96/class_my_header.html" title="A simple example of an Header implementation." alt="" coords="708,751,789,775"/>
+<area shape="rect" id="node763" href="$d7/d61/classanonymous__namespace_02packet-metadata-test_8cc_03_1_1_history_header_base.html" title="Base header&#45;type class to check the proper header concatenation." alt="" coords="664,799,833,852"/>
+<area shape="rect" id="node765" href="$d7/d50/classanonymous__namespace_02packet-test-suite_8cc_03_1_1_a_test_header_base.html" title="Base class for Test headers." alt="" coords="667,877,830,929"/>
+<area shape="rect" id="node767" href="$dd/d20/classns3_1_1_aloha_noack_mac_header.html" title="Header for the AlohaNoack NetDevice." alt="" coords="654,953,843,978"/>
+<area shape="rect" id="node768" href="$d8/d5a/classns3_1_1_ampdu_subframe_header.html" title="Headers for A&#45;MPDU subframes." alt="" coords="654,1003,843,1027"/>
+<area shape="rect" id="node769" href="$de/dce/classns3_1_1_amsdu_subframe_header.html" title="Headers for A&#45;MSDU subframes." alt="" coords="654,1052,843,1077"/>
+<area shape="rect" id="node770" href="$d0/d72/classns3_1_1_arp_header.html" title="The packet header for an ARP packet." alt="" coords="692,1101,805,1126"/>
+<area shape="rect" id="node771" href="$dd/db1/classns3_1_1_asn1_header.html" title="This class has the purpose to encode Information Elements according to ASN.1 syntax,..." alt="" coords="687,1151,810,1175"/>
+<area shape="rect" id="node790" href="$d9/df9/classns3_1_1_bandwidth_request_header.html" title="This class implements the bandwidth&#45;request mac Header as described by IEEE Standard for Local and me..." alt="" coords="648,1200,849,1225"/>
+<area shape="rect" id="node791" href="$df/de1/classns3_1_1_beacon_payload_header.html" title="Implements the header for the MAC payload beacon frame according to the IEEE 802.15...." alt="" coords="657,1249,840,1274"/>
+<area shape="rect" id="node792" href="$dc/da6/classns3_1_1_command_payload_header.html" title="Implements the header for the MAC payload command frame according to the IEEE 802...." alt="" coords="649,1299,848,1323"/>
+<area shape="rect" id="node793" href="$df/dd2/classns3_1_1_ctrl_b_ack_request_header.html" title="Headers for BlockAckRequest." alt="" coords="652,1348,845,1373"/>
+<area shape="rect" id="node794" href="$d8/db8/classns3_1_1_ctrl_b_ack_response_header.html" title="Headers for BlockAck response." alt="" coords="647,1397,850,1422"/>
+<area shape="rect" id="node795" href="$d0/dcb/classns3_1_1_ctrl_trigger_header.html" title="Headers for Trigger frames." alt="" coords="672,1447,825,1471"/>
+<area shape="rect" id="node796" href="$d6/d65/classns3_1_1_dcd.html" title="This class implements Downlink channel descriptor as described by &quot;IEEE Standard for Local and metrop..." alt="" coords="711,1496,786,1521"/>
+<area shape="rect" id="node797" href="$dd/d72/classns3_1_1_dhcp_header.html" title="BOOTP header with DHCP messages supports the following options: Subnet Mask (1), Address Request (50)..." alt="" coords="687,1545,810,1570"/>
+<area shape="rect" id="node798" href="$d7/db5/classns3_1_1_dl_map.html" title="This class implements DL&#45;MAP as described by &quot;IEEE Standard for Local and metropolitan area networks ..." alt="" coords="704,1595,793,1619"/>
+<area shape="rect" id="node799" href="$d3/d46/classns3_1_1_dsa_ack.html" title="This class implements the DSA&#45;ACK message described by &quot;IEEE Standard for Local and metropolitan area..." alt="" coords="700,1644,797,1669"/>
+<area shape="rect" id="node800" href="$d4/df5/classns3_1_1_dsa_req.html" title="This class implements the DSA&#45;REQ message described by &quot;IEEE Standard for Local and metropolitan area..." alt="" coords="700,1693,797,1718"/>
+<area shape="rect" id="node801" href="$dd/ddd/classns3_1_1_dsa_rsp.html" title="This class implements the DSA&#45;RSP message described by &quot;IEEE Standard for &#160;&#160;Local and metropolitan ar..." alt="" coords="699,1743,798,1767"/>
+<area shape="rect" id="node802" href="$dc/d81/classns3_1_1_epc_x2_handover_cancel_header.html" title="EpcX2HandoverCancelHeader." alt="" coords="656,1792,841,1830"/>
+<area shape="rect" id="node803" href="$d9/d29/classns3_1_1_epc_x2_handover_preparation_failure_header.html" title="EpcX2HandoverPreparationFailureHeader." alt="" coords="643,1854,854,1893"/>
+<area shape="rect" id="node804" href="$d9/ddb/classns3_1_1_epc_x2_handover_request_ack_header.html" title="EpcX2HandoverRequestAckHeader." alt="" coords="652,1917,845,1956"/>
+<area shape="rect" id="node805" href="$d7/d5c/classns3_1_1_epc_x2_handover_request_header.html" title="EpcX2HandoverRequestHeader." alt="" coords="652,1980,845,2018"/>
+<area shape="rect" id="node806" href="$d0/d5d/classns3_1_1_epc_x2_header.html" title=" " alt="" coords="683,2043,814,2067"/>
+<area shape="rect" id="node807" href="$df/df6/classns3_1_1_epc_x2_load_information_header.html" title="EpcX2LoadInformationHeader." alt="" coords="657,2092,840,2130"/>
+<area shape="rect" id="node808" href="$d5/dad/classns3_1_1_epc_x2_resource_status_update_header.html" title="EpcX2ResourceStatusUpdateHeader." alt="" coords="657,2204,840,2242"/>
+<area shape="rect" id="node809" href="$d7/d60/classns3_1_1_epc_x2_sn_status_transfer_header.html" title="EpcX2SnStatusTransferHeader." alt="" coords="653,2266,844,2305"/>
+<area shape="rect" id="node810" href="$dd/db0/classns3_1_1_epc_x2_ue_context_release_header.html" title="EpcX2UeContextReleaseHeader." alt="" coords="649,2329,848,2368"/>
+<area shape="rect" id="node811" href="$de/d0b/classns3_1_1_ethernet_header.html" title="Packet header for Ethernet." alt="" coords="678,2392,819,2417"/>
+<area shape="rect" id="node812" href="$d8/dfe/classns3_1_1_fragmentation_subheader.html" title="This class implements the fragmentation sub&#45;header as described by IEEE Standard for Local and metrop..." alt="" coords="651,2441,846,2466"/>
+<area shape="rect" id="node813" href="$db/da7/classns3_1_1_generic_mac_header.html" title="This class implements the Generic mac Header as described by IEEE Standard for Local and metropolitan..." alt="" coords="667,2491,830,2515"/>
+<area shape="rect" id="node814" href="$d4/d7d/classns3_1_1_grant_management_subheader.html" title="This class implements the grant management sub&#45;header as described by IEEE Standard for Local and met..." alt="" coords="639,2540,858,2565"/>
+<area shape="rect" id="node815" href="$dd/df7/classns3_1_1_gtpc_header.html" title="Header of the GTPv2&#45;C protocol." alt="" coords="688,2589,809,2614"/>
+<area shape="rect" id="node816" href="$d1/d3d/classns3_1_1_gtpu_header.html" title="Implementation of the GPRS Tunnelling Protocol header according to GTPv1&#45;U Release 10 as per 3Gpp TS ..." alt="" coords="688,2639,809,2663"/>
+<area shape="rect" id="node817" href="$d1/d97/classns3_1_1_icmpv4_destination_unreachable.html" title="ICMP Destination Unreachable header." alt="" coords="632,2688,865,2713"/>
+<area shape="rect" id="node818" href="$d7/d82/classns3_1_1_icmpv4_echo.html" title="ICMP Echo header." alt="" coords="687,2737,810,2762"/>
+<area shape="rect" id="node819" href="$dc/d04/classns3_1_1_icmpv4_header.html" title="Base class for all the ICMP packet headers." alt="" coords="681,2836,816,2861"/>
+<area shape="rect" id="node820" href="$d8/d3b/classns3_1_1_icmpv4_time_exceeded.html" title="ICMP Time Exceeded header." alt="" coords="659,2885,838,2910"/>
+<area shape="rect" id="node821" href="$d7/d07/classns3_1_1_icmpv6_header.html" title="ICMPv6 header." alt="" coords="681,2787,816,2811"/>
+<area shape="rect" id="node832" href="$d0/ddf/classns3_1_1_icmpv6_option_header.html" title="ICMPv6 option header." alt="" coords="662,2935,835,2959"/>
+<area shape="rect" id="node837" href="$d8/d58/classns3_1_1_ideal_handover_command_header.html" title="This header encodes the map key discussed above." alt="" coords="652,3033,845,3072"/>
+<area shape="rect" id="node838" href="$d5/d7d/classns3_1_1_ideal_handover_preparation_info_header.html" title="This header encodes the map key discussed above." alt="" coords="649,3096,848,3134"/>
+<area shape="rect" id="node839" href="$de/de3/classns3_1_1_ipv4_header.html" title="Packet header for IPv4." alt="" coords="690,3159,807,3183"/>
+<area shape="rect" id="node840" href="$dc/dd2/classns3_1_1_ipv6_extension_header.html" title="Header for IPv6 Extension." alt="" coords="661,3208,836,3233"/>
+<area shape="rect" id="node848" href="$dd/d7a/classns3_1_1_ipv6_header.html" title="Packet header for IPv6." alt="" coords="690,3257,807,3282"/>
+<area shape="rect" id="node849" href="$d8/dbb/classns3_1_1_ipv6_option_header.html" title="Header for IPv6 Option." alt="" coords="671,3307,826,3331"/>
+<area shape="rect" id="node856" href="$db/d6c/classns3_1_1_llc_snap_header.html" title="Header for the LLC/SNAP encapsulation." alt="" coords="679,3356,818,3381"/>
+<area shape="rect" id="node857" href="$db/d95/classns3_1_1_lr_wpan_mac_header.html" title="Represent the Mac Header with the Frame Control and Sequence Number fields." alt="" coords="667,3405,830,3430"/>
+<area shape="rect" id="node858" href="$d1/d1c/classns3_1_1_lte_pdcp_header.html" title="The packet header for the Packet Data Convergence Protocol (PDCP) packets." alt="" coords="678,3455,819,3479"/>
+<area shape="rect" id="node859" href="$d3/de1/classns3_1_1_lte_rlc_am_header.html" title="The packet header for the AM Radio Link Control (RLC) protocol packets." alt="" coords="673,3504,824,3529"/>
+<area shape="rect" id="node860" href="$da/df4/classns3_1_1_lte_rlc_header.html" title="The packet header for the Radio Link Control (RLC) protocol packets." alt="" coords="683,3553,814,3578"/>
+<area shape="rect" id="node861" href="$db/d6e/classns3_1_1_mac_header_type.html" title="This class Represents the HT (Header Type) field of generic MAC and bandwidth request headers." alt="" coords="676,3603,821,3627"/>
+<area shape="rect" id="node862" href="$d3/d69/classns3_1_1_management_message_type.html" title="Mac Management messages Section 6.3.2.3 MAC Management messages page 42, Table 14 page 43." alt="" coords="645,3652,852,3677"/>
+<area shape="rect" id="node863" href="$d3/de3/classns3_1_1_mesh_information_element_vector.html" title="Information element vector." alt="" coords="651,3701,846,3740"/>
+<area shape="rect" id="node864" href="$d2/dfc/classns3_1_1_mgt_add_ba_request_header.html" title="Implement the header for management frames of type Add Block Ack request." alt="" coords="648,3764,849,3789"/>
+<area shape="rect" id="node865" href="$d2/dae/classns3_1_1_mgt_add_ba_response_header.html" title="Implement the header for management frames of type Add Block Ack response." alt="" coords="643,3813,854,3838"/>
+<area shape="rect" id="node866" href="$d6/dd5/classns3_1_1_mgt_del_ba_header.html" title="Implement the header for management frames of type Delete Block Ack." alt="" coords="673,3863,824,3887"/>
+<area shape="rect" id="node867" href="$d0/dae/classns3_1_1_mgt_eml_omn.html" title="Implement the header for Action frames of type EML Operating Mode Notification." alt="" coords="687,3912,810,3937"/>
+<area shape="rect" id="node868" href="$d3/de8/classns3_1_1_ofdm_downlink_frame_prefix.html" title="OfdmDownlinkFramePrefix." alt="" coords="645,3961,852,3986"/>
+<area shape="rect" id="node869" href="$db/dc0/classns3_1_1_ppp_header.html" title="Packet header for PPP." alt="" coords="691,4011,806,4035"/>
+<area shape="rect" id="node870" href="$dd/d84/classns3_1_1_radiotap_header.html" title="Radiotap header implementation." alt="" coords="677,4060,820,4085"/>
+<area shape="rect" id="node871" href="$db/d57/classns3_1_1_rip_header.html" title="RipHeader &#45; see RFC 2453" alt="" coords="692,4109,805,4134"/>
+<area shape="rect" id="node872" href="$d0/d2b/classns3_1_1_rip_ng_header.html" title="RipNgHeader &#45; see RFC 2080" alt="" coords="684,4159,813,4183"/>
+<area shape="rect" id="node873" href="$db/d83/classns3_1_1_rip_ng_rte.html" title="RipNg Routing Table Entry (RTE) &#45; see RFC 2080" alt="" coords="694,4208,803,4233"/>
+<area shape="rect" id="node874" href="$d2/d1e/classns3_1_1_rip_rte.html" title="Rip v2 Routing Table Entry (RTE) &#45; see RFC 2453." alt="" coords="703,4257,794,4282"/>
+<area shape="rect" id="node875" href="$d4/d43/classns3_1_1_rng_req.html" title="This class implements the ranging request message described by &quot;IEEE Standard for Local and metropoli..." alt="" coords="700,4307,797,4331"/>
+<area shape="rect" id="node876" href="$d1/ddc/classns3_1_1_rng_rsp.html" title="This class implements the ranging response message described by &quot;IEEE Standard for Local and metropol..." alt="" coords="699,4356,798,4381"/>
+<area shape="rect" id="node877" href="$d5/d32/classns3_1_1_seq_ts_echo_header.html" title="Packet header to carry sequence number and two timestamps." alt="" coords="669,4405,828,4430"/>
+<area shape="rect" id="node878" href="$dd/dec/classns3_1_1_seq_ts_header.html" title="Packet header to carry sequence number and timestamp." alt="" coords="684,4455,813,4479"/>
+<area shape="rect" id="node880" href="$d3/d1a/classns3_1_1_six_low_pan_bc0.html" title="6LoWPAN BC0 header &#45; see RFC 4944." alt="" coords="679,4504,818,4529"/>
+<area shape="rect" id="node881" href="$dc/d66/classns3_1_1_six_low_pan_frag1.html" title="6LoWPAN FRAG1 header &#45; see RFC 4944." alt="" coords="674,4553,823,4578"/>
+<area shape="rect" id="node882" href="$d5/d1c/classns3_1_1_six_low_pan_frag_n.html" title="6LoWPAN FRAGN header &#45; see RFC 4944." alt="" coords="672,4603,825,4627"/>
+<area shape="rect" id="node883" href="$de/d45/classns3_1_1_six_low_pan_hc1.html" title="6LoWPAN HC1 header &#45; see RFC 4944." alt="" coords="678,4652,819,4677"/>
+<area shape="rect" id="node884" href="$df/d41/classns3_1_1_six_low_pan_iphc.html" title="LOWPAN_IPHC base Encoding &#45; see RFC 6282." alt="" coords="678,4701,819,4726"/>
+<area shape="rect" id="node885" href="$dc/dd8/classns3_1_1_six_low_pan_ipv6.html" title="6LoWPAN IPv6 uncompressed header &#45; see RFC 4944." alt="" coords="678,4751,819,4775"/>
+<area shape="rect" id="node886" href="$d1/def/classns3_1_1_six_low_pan_mesh.html" title="6LoWPAN Mesh header &#45; see RFC 4944." alt="" coords="674,4800,823,4825"/>
+<area shape="rect" id="node887" href="$d8/d83/classns3_1_1_six_low_pan_nhc_extension.html" title="LOWPAN_NHC Extension Header Encoding &#45; see RFC 6282." alt="" coords="649,4849,848,4874"/>
+<area shape="rect" id="node888" href="$d8/d25/classns3_1_1_six_low_pan_udp_nhc_extension.html" title="UDP LOWPAN_NHC Extension Header Encoding &#45; see RFC 6282." alt="" coords="637,4899,860,4923"/>
+<area shape="rect" id="node889" href="$d8/dbf/classns3_1_1_sll_header.html" title="Protocol header serialization and deserialization." alt="" coords="695,4948,802,4973"/>
+<area shape="rect" id="node890" href="$d9/d7a/classns3_1_1_tcp_header.html" title="Header for the Transmission Control Protocol." alt="" coords="692,4997,805,5022"/>
+<area shape="rect" id="node891" href="$d1/db4/classns3_1_1_three_gpp_http_header.html" title="Header used by web browsing applications to transmit information about content type,..." alt="" coords="661,5047,836,5071"/>
+<area shape="rect" id="node892" href="$d8/d26/classns3_1_1_tlv.html" title="This class implements the Type&#45;Len&#45;Value structure channel encodings as described by &quot;IEEE Standard f..." alt="" coords="714,5096,783,5121"/>
+<area shape="rect" id="node893" href="$da/dde/classns3_1_1_uan_header_common.html" title="Common packet header fields." alt="" coords="664,5145,833,5170"/>
+<area shape="rect" id="node894" href="$de/dfe/classns3_1_1_uan_header_rc_ack.html" title="Header used for ACK packets by protocol UanMacRc." alt="" coords="670,5195,827,5219"/>
+<area shape="rect" id="node895" href="$db/d34/classns3_1_1_uan_header_rc_cts.html" title="CTS header." alt="" coords="671,5244,826,5269"/>
+<area shape="rect" id="node896" href="$df/d9a/classns3_1_1_uan_header_rc_cts_global.html" title="Cycle broadcast information." alt="" coords="653,5293,844,5318"/>
+<area shape="rect" id="node897" href="$d3/de9/classns3_1_1_uan_header_rc_data.html" title="Extra data header information." alt="" coords="668,5343,829,5367"/>
+<area shape="rect" id="node898" href="$dc/d5d/classns3_1_1_uan_header_rc_rts.html" title="RTS header." alt="" coords="671,5392,826,5417"/>
+<area shape="rect" id="node899" href="$d5/d92/classns3_1_1_ucd.html" title="This class implements the UCD message as described by &quot;IEEE Standard for Local and metropolitan area ..." alt="" coords="711,5441,786,5466"/>
+<area shape="rect" id="node900" href="$d3/d76/classns3_1_1_udp_header.html" title="Packet header for UDP packets." alt="" coords="690,5491,807,5515"/>
+<area shape="rect" id="node901" href="$d6/d22/classns3_1_1_ul_map.html" title="This class implements the UL&#45;MAP_IE message as described by &quot;IEEE Standard for Local and metropolitan..." alt="" coords="704,5540,793,5565"/>
+<area shape="rect" id="node902" href="$d0/dfc/classns3_1_1_wifi_action_header.html" title="See IEEE 802.11 chapter 7.3.1.11 Header format: | category: 1 | action value: 1 |." alt="" coords="672,5589,825,5614"/>
+<area shape="rect" id="node903" href="$dc/d27/classns3_1_1_wifi_mac_header.html" title="Implements the IEEE 802.11 MAC header." alt="" coords="678,5639,819,5663"/>
+<area shape="rect" id="node904" href="$d5/d84/classns3_1_1_wifi_mgt_header_3_01_derived_00_01std_1_1tuple_3_01_elems_8_8_8_01_4_01_4.html" title="Base class for implementing management frame headers." alt="" coords="679,5687,818,5740"/>
+<area shape="rect" id="node906" href="$dd/d34/classns3_1_1_wimax_mac_to_mac_header.html" title="this class implements the mac to mac header needed to dump a wimax pcap file The header format was re..." alt="" coords="649,5764,848,5789"/>
+<area shape="rect" id="node907" href="$de/de2/classns3_1_1aodv_1_1_rerr_header.html" title="Route Error (RERR) Message Format." alt="" coords="673,5813,824,5838"/>
+<area shape="rect" id="node908" href="$dc/d27/classns3_1_1aodv_1_1_rrep_ack_header.html" title="Route Reply Acknowledgment (RREP&#45;ACK) Message Format." alt="" coords="659,5863,838,5887"/>
+<area shape="rect" id="node909" href="$dd/d3f/classns3_1_1aodv_1_1_rrep_header.html" title="Route Reply (RREP) Message Format." alt="" coords="671,5912,826,5937"/>
+<area shape="rect" id="node910" href="$dc/d10/classns3_1_1aodv_1_1_rreq_header.html" title="Route Request (RREQ) Message Format." alt="" coords="671,5961,826,5986"/>
+<area shape="rect" id="node911" href="$d2/d61/classns3_1_1aodv_1_1_type_header.html" title="AODV types." alt="" coords="671,6011,826,6035"/>
+<area shape="rect" id="node912" href="$db/d40/classns3_1_1dot11s_1_1_mesh_header.html" title="Mesh Control field, see Section 8.2.4.7.3 IEEE 802.11&#45;2012." alt="" coords="663,6060,834,6085"/>
+<area shape="rect" id="node913" href="$d2/d11/classns3_1_1dot11s_1_1_peer_link_close_start.html" title="802.11s Peer link close management frame" alt="" coords="658,6109,839,6148"/>
+<area shape="rect" id="node914" href="$d3/d50/classns3_1_1dot11s_1_1_peer_link_confirm_start.html" title="802.11s Peer link confirm management frame" alt="" coords="652,6172,845,6210"/>
+<area shape="rect" id="node915" href="$d8/d20/classns3_1_1dot11s_1_1_peer_link_open_start.html" title="802.11s Peer link open management frame" alt="" coords="659,6234,838,6273"/>
+<area shape="rect" id="node916" href="$d7/d9f/classns3_1_1dsdv_1_1_dsdv_header.html" title="DSDV Update Packet Format." alt="" coords="669,231,828,255"/>
+<area shape="rect" id="node917" href="$d7/d44/classns3_1_1dsr_1_1_dsr_fs_header.html" title="Dsr fixed size header Format." alt="" coords="671,280,826,305"/>
+<area shape="rect" id="node918" href="$da/d87/classns3_1_1dsr_1_1_dsr_option_header.html" title="Header for Dsr Options." alt="" coords="660,181,837,206"/>
+<area shape="rect" id="node929" href="$d8/dad/classns3_1_1flame_1_1_flame_header.html" title="Flame header." alt="" coords="664,329,833,354"/>
+<area shape="rect" id="node930" href="$df/dce/classns3_1_1lorawan_1_1_lora_frame_header.html" title="This class represents the Frame header (FHDR) used in a LoraWAN network." alt="" coords="645,379,852,403"/>
+<area shape="rect" id="node931" href="$db/d7e/classns3_1_1lorawan_1_1_lorawan_mac_header.html" title="This class represents the Mac header of a LoRaWAN packet." alt="" coords="661,428,836,466"/>
+<area shape="rect" id="node932" href="$d3/d7a/classns3_1_1olsr_1_1_message_header.html" title="This header can store HELP, TC, MID and HNA messages." alt="" coords="661,491,836,515"/>
+<area shape="rect" id="node933" href="$db/d55/classns3_1_1olsr_1_1_packet_header.html" title="The basic layout of any packet in OLSR is as follows (omitting IP and UDP headers):" alt="" coords="668,540,829,565"/>
+<area shape="rect" id="node760" href="$d1/d46/classns3_1_1_pbb_packet.html" title="Main PacketBB Packet object." alt="" coords="977,645,1090,670"/>
+<area shape="rect" id="node764" href="$df/d02/classanonymous__namespace_02packet-metadata-test_8cc_03_1_1_history_header.html" title="Template header&#45;type class to check the proper header concatenation." alt="" coords="949,799,1118,852"/>
+<area shape="rect" id="node766" href="$d1/d3a/classanonymous__namespace_02packet-test-suite_8cc_03_1_1_a_test_header.html" title="Template class for Test headers." alt="" coords="952,877,1115,929"/>
+<area shape="rect" id="node772" href="$de/d8f/classns3_1_1_rrc_asn1_header.html" title="This class extends Asn1Header functions, adding serialization/deserialization of some Information ele..." alt="" coords="962,1151,1105,1175"/>
+<area shape="rect" id="node773" href="$d7/d3a/classns3_1_1_handover_preparation_info_header.html" title="This class manages the serialization/deserialization of HandoverPreparationInfo IE." alt="" coords="1236,1200,1407,1238"/>
+<area shape="rect" id="node774" href="$d6/d2f/classns3_1_1_rrc_dl_ccch_message.html" title="This class only serves to discriminate which message type has been received in downlink (eNb to ue) f..." alt="" coords="1237,1388,1405,1413"/>
+<area shape="rect" id="node779" href="$d2/da7/classns3_1_1_rrc_dl_dcch_message.html" title="This class only serves to discriminate which message type has been received in downlink (eNb to ue) f..." alt="" coords="1237,900,1405,925"/>
+<area shape="rect" id="node782" href="$d0/d95/classns3_1_1_rrc_ul_ccch_message.html" title="This class only serves to discriminate which message type has been received in uplink (ue to eNb) for..." alt="" coords="1237,1025,1405,1050"/>
+<area shape="rect" id="node785" href="$d5/d83/classns3_1_1_rrc_ul_dcch_message.html" title="This class only serves to discriminate which message type has been received in uplink (ue to eNb) for..." alt="" coords="1237,1151,1405,1175"/>
+<area shape="rect" id="node775" href="$dd/d12/classns3_1_1_rrc_connection_reestablishment_header.html" title="This class manages the serialization/deserialization of RrcConnectionReestablishment IE." alt="" coords="1496,1493,1730,1532"/>
+<area shape="rect" id="node776" href="$da/d60/classns3_1_1_rrc_connection_reestablishment_reject_header.html" title="This class manages the serialization/deserialization of RrcConnectionReestablishmentReject IE." alt="" coords="1496,1318,1730,1357"/>
+<area shape="rect" id="node777" href="$d7/d26/classns3_1_1_rrc_connection_reject_header.html" title="This class manages the serialization/deserialization of RrcConnectionReject IE." alt="" coords="1526,1381,1700,1420"/>
+<area shape="rect" id="node778" href="$d7/dd5/classns3_1_1_rrc_connection_setup_header.html" title="This class manages the serialization/deserialization of RrcConnectionSetup IE." alt="" coords="1506,1444,1720,1469"/>
+<area shape="rect" id="node780" href="$d5/dfa/classns3_1_1_rrc_connection_reconfiguration_header.html" title="This class manages the serialization/deserialization of RrcConnectionReconfiguration IE." alt="" coords="1499,893,1727,932"/>
+<area shape="rect" id="node781" href="$db/d68/classns3_1_1_rrc_connection_release_header.html" title="This class manages the serialization/deserialization of RrcConnectionRelease IE." alt="" coords="1521,830,1705,869"/>
+<area shape="rect" id="node783" href="$d7/d13/classns3_1_1_rrc_connection_reestablishment_request_header.html" title="This class manages the serialization/deserialization of RRCConnectionReestablishmentRequest IE." alt="" coords="1496,1018,1730,1057"/>
+<area shape="rect" id="node784" href="$df/d21/classns3_1_1_rrc_connection_request_header.html" title="This class manages the serialization/deserialization of RrcConnectionRequest IE." alt="" coords="1520,956,1706,994"/>
+<area shape="rect" id="node786" href="$d8/de5/classns3_1_1_measurement_report_header.html" title="This class manages the serialization/deserialization of MeasurementReport IE." alt="" coords="1508,1269,1718,1294"/>
+<area shape="rect" id="node787" href="$de/dcd/classns3_1_1_rrc_connection_reconfiguration_complete_header.html" title="This class manages the serialization/deserialization of RrcConnectionSetupComplete IE." alt="" coords="1499,1081,1727,1120"/>
+<area shape="rect" id="node788" href="$d7/dea/classns3_1_1_rrc_connection_reestablishment_complete_header.html" title="This class manages the serialization/deserialization of RrcConnectionReestablishmentComplete IE." alt="" coords="1496,1144,1730,1182"/>
+<area shape="rect" id="node789" href="$d9/d8a/classns3_1_1_rrc_connection_setup_complete_header.html" title="This class manages the serialization/deserialization of RrcConnectionSetupComplete IE." alt="" coords="1499,1206,1727,1245"/>
+<area shape="rect" id="node822" href="$db/df5/classns3_1_1_icmpv6_destination_unreachable.html" title="ICMPv6 Error Destination Unreachable header." alt="" coords="917,2761,1150,2786"/>
+<area shape="rect" id="node823" href="$df/d83/classns3_1_1_icmpv6_echo.html" title="ICMPv6 Echo message." alt="" coords="972,2811,1095,2835"/>
+<area shape="rect" id="node824" href="$d4/d80/classns3_1_1_icmpv6_n_a.html" title="ICMPv6 Neighbor Advertisement header." alt="" coords="978,2860,1089,2885"/>
+<area shape="rect" id="node825" href="$d3/d28/classns3_1_1_icmpv6_n_s.html" title="ICMPv6 Neighbor Solicitation header." alt="" coords="977,2416,1090,2441"/>
+<area shape="rect" id="node826" href="$df/d07/classns3_1_1_icmpv6_parameter_error.html" title="ICMPv6 Error Parameter Error header." alt="" coords="943,2465,1124,2490"/>
+<area shape="rect" id="node827" href="$d7/d99/classns3_1_1_icmpv6_r_a.html" title="ICMPv6 Router Advertisement header." alt="" coords="977,2515,1090,2539"/>
+<area shape="rect" id="node828" href="$d9/dda/classns3_1_1_icmpv6_r_s.html" title="ICMPv6 Router Solicitation header." alt="" coords="978,2564,1089,2589"/>
+<area shape="rect" id="node829" href="$d7/d40/classns3_1_1_icmpv6_redirection.html" title="ICMPv6 Redirection header." alt="" coords="954,2613,1113,2638"/>
+<area shape="rect" id="node830" href="$d8/d8f/classns3_1_1_icmpv6_time_exceeded.html" title="ICMPv6 Error Time Exceeded header." alt="" coords="944,2663,1123,2687"/>
+<area shape="rect" id="node831" href="$d5/d33/classns3_1_1_icmpv6_too_big.html" title="ICMPv6 Error Too Big header." alt="" coords="967,2712,1100,2737"/>
+<area shape="rect" id="node833" href="$d7/df0/classns3_1_1_icmpv6_option_link_layer_address.html" title="ICMPv6 link&#45;layer address option." alt="" coords="940,3057,1127,3096"/>
+<area shape="rect" id="node834" href="$d2/d54/classns3_1_1_icmpv6_option_mtu.html" title="ICMPv6 MTU option." alt="" coords="957,2909,1110,2934"/>
+<area shape="rect" id="node835" href="$da/d40/classns3_1_1_icmpv6_option_prefix_information.html" title="ICMPv6 Option Prefix Information." alt="" coords="918,2959,1149,2983"/>
+<area shape="rect" id="node836" href="$d7/d73/classns3_1_1_icmpv6_option_redirected.html" title="ICMPv6 redirected option." alt="" coords="937,3008,1130,3033"/>
+<area shape="rect" id="node841" href="$d7/d3e/classns3_1_1_ipv6_extension_a_h_header.html" title="Header of IPv6 Extension AH." alt="" coords="936,3420,1131,3445"/>
+<area shape="rect" id="node842" href="$df/d5e/classns3_1_1_ipv6_extension_destination_header.html" title="Header of IPv6 Extension Destination." alt="" coords="934,3182,1133,3221"/>
+<area shape="rect" id="node843" href="$de/d5c/classns3_1_1_ipv6_extension_e_s_p_header.html" title="Header of IPv6 Extension ESP." alt="" coords="933,3245,1134,3270"/>
+<area shape="rect" id="node844" href="$d8/db3/classns3_1_1_ipv6_extension_fragment_header.html" title="Header of IPv6 Extension Fragment." alt="" coords="939,3294,1128,3333"/>
+<area shape="rect" id="node845" href="$d2/d53/classns3_1_1_ipv6_extension_hop_by_hop_header.html" title="Header of IPv6 Extension &quot;Hop by Hop&quot;." alt="" coords="935,3120,1132,3158"/>
+<area shape="rect" id="node846" href="$df/d75/classns3_1_1_ipv6_extension_routing_header.html" title="Header of IPv6 Extension Routing." alt="" coords="944,3357,1123,3396"/>
+<area shape="rect" id="node847" href="$de/d1f/classns3_1_1_ipv6_extension_loose_routing_header.html" title="Header of IPv6 Extension Routing : Type 0 (Loose Routing)" alt="" coords="1215,3357,1428,3396"/>
+<area shape="rect" id="node850" href="$d0/ddd/class_option_with_alignment_header.html" title="IPv6 extensions Test: Option with alignment." alt="" coords="940,3743,1127,3767"/>
+<area shape="rect" id="node851" href="$d2/d3a/class_option_without_alignment_header.html" title="IPv6 extensions Test: Option without alignment." alt="" coords="931,3469,1136,3494"/>
+<area shape="rect" id="node852" href="$d7/d68/classns3_1_1_ipv6_option_jumbogram_header.html" title="Header of IPv6 Option Jumbogram." alt="" coords="943,3518,1124,3557"/>
+<area shape="rect" id="node853" href="$d8/dcf/classns3_1_1_ipv6_option_pad1_header.html" title="Header of IPv6 Option Pad1." alt="" coords="941,3581,1126,3606"/>
+<area shape="rect" id="node854" href="$d8/d72/classns3_1_1_ipv6_option_padn_header.html" title="Header of IPv6 Option Padn." alt="" coords="941,3631,1126,3655"/>
+<area shape="rect" id="node855" href="$d7/d0d/classns3_1_1_ipv6_option_router_alert_header.html" title="Header of IPv6 Option Router Alert." alt="" coords="943,3680,1124,3718"/>
+<area shape="rect" id="node879" href="$d5/dff/classns3_1_1_seq_ts_size_header.html" title="Header with a sequence, a timestamp, and a &quot;size&quot; attribute." alt="" coords="956,4455,1111,4479"/>
+<area shape="rect" id="node905" href="$df/d41/classns3_1_1_mgt_header_in_per_sta_profile_3_01_derived_00_01std_1_1tuple_3_01_elems_8_8_8_01_4_01_4.html" title="Add methods needed to serialize/deserialize a management header into a Per&#45;STA Profile subelement of ..." alt="" coords="921,5694,1146,5733"/>
+<area shape="rect" id="node919" href="$dd/d2c/classns3_1_1dsr_1_1_dsr_option_ack_header.html" title="Acknowledgement (ACK) Message Format." alt="" coords="933,153,1134,178"/>
+<area shape="rect" id="node920" href="$dc/d4e/classns3_1_1dsr_1_1_dsr_option_ack_req_header.html" title="Acknowledgement Request (ACK_RREQ) Message Format." alt="" coords="943,202,1124,241"/>
+<area shape="rect" id="node921" href="$d6/d0a/classns3_1_1dsr_1_1_dsr_option_pad1_header.html" title="Header of Dsr Option Pad1." alt="" coords="930,265,1137,290"/>
+<area shape="rect" id="node922" href="$d7/dfb/classns3_1_1dsr_1_1_dsr_option_padn_header.html" title="Header of Dsr Option Padn." alt="" coords="930,315,1137,339"/>
+<area shape="rect" id="node923" href="$d9/d9d/classns3_1_1dsr_1_1_dsr_option_rerr_header.html" title="Header of Dsr Option Route Error." alt="" coords="933,364,1134,389"/>
+<area shape="rect" id="node926" href="$d2/d5c/classns3_1_1dsr_1_1_dsr_option_rrep_header.html" title="Route Reply (RREP) Message Format." alt="" coords="931,5,1136,30"/>
+<area shape="rect" id="node927" href="$da/d12/classns3_1_1dsr_1_1_dsr_option_rreq_header.html" title="Route Request (RREQ) Message Format." alt="" coords="931,55,1136,79"/>
+<area shape="rect" id="node928" href="$d0/d14/classns3_1_1dsr_1_1_dsr_option_s_r_header.html" title="Source Route (SR) Message Format." alt="" coords="935,104,1132,129"/>
+<area shape="rect" id="node924" href="$dc/d4b/classns3_1_1dsr_1_1_dsr_option_rerr_unreach_header.html" title="Route Error (RERR) Unreachable node address option Message Format." alt="" coords="1217,326,1425,365"/>
+<area shape="rect" id="node925" href="$d3/d06/classns3_1_1dsr_1_1_dsr_option_rerr_unsupported_header.html" title="Route Error (RERR) Unsupported option Message Format." alt="" coords="1204,389,1438,428"/>
+<area shape="rect" id="node935" href="$dc/d13/classanonymous__namespace_02packet-metadata-test_8cc_03_1_1_history_trailer_base.html" title="Base trailer&#45;type class to check the proper trailer concatenation." alt="" coords="664,6395,833,6448"/>
+<area shape="rect" id="node937" href="$d3/d13/classanonymous__namespace_02packet-test-suite_8cc_03_1_1_a_test_trailer_base.html" title="Base class for Test trailers." alt="" coords="667,6473,830,6525"/>
+<area shape="rect" id="node939" href="$dd/dda/classns3_1_1_ethernet_trailer.html" title="Packet trailer for Ethernet." alt="" coords="682,6549,815,6574"/>
+<area shape="rect" id="node940" href="$d7/dc5/classns3_1_1_lr_wpan_mac_trailer.html" title="Represent the Mac Trailer with the Frame Check Sequence field." alt="" coords="671,6297,826,6322"/>
+<area shape="rect" id="node941" href="$d4/dcf/classns3_1_1_wifi_mac_trailer.html" title="Implements the IEEE 802.11 MAC trailer." alt="" coords="682,6347,815,6371"/>
+<area shape="rect" id="node936" href="$d9/d4d/classanonymous__namespace_02packet-metadata-test_8cc_03_1_1_history_trailer.html" title="Template trailer&#45;type class to check the proper trailer concatenation." alt="" coords="949,6395,1118,6448"/>
+<area shape="rect" id="node938" href="$d9/d1e/classanonymous__namespace_02packet-test-suite_8cc_03_1_1_a_test_trailer.html" title="Template class for Test trailers." alt="" coords="952,6473,1115,6525"/>
+<area shape="rect" id="node945" href="$d3/d67/class_bench_tag.html" title="BenchTag class used for benchmarking packet serialization/deserialization." alt="" coords="421,23804,534,23829"/>
+<area shape="rect" id="node946" href="$d8/ded/class_i_pv4_test_tag.html" title="Tag used in IPv4 Fragmentation Test." alt="" coords="430,23853,524,23878"/>
+<area shape="rect" id="node947" href="$d4/d9d/class_i_pv6_test_tag.html" title="Tag used in IPv6 Fragmentation Test." alt="" coords="430,23903,524,23927"/>
+<area shape="rect" id="node948" href="$d8/d14/class_my_tag.html" title="A simple example of an Tag implementation." alt="" coords="447,23952,507,23977"/>
+<area shape="rect" id="node949" href="$da/d8f/classanonymous__namespace_02packet-test-suite_8cc_03_1_1_a_large_test_tag.html" title="Template class for Large Test tags." alt="" coords="396,24001,558,24053"/>
+<area shape="rect" id="node950" href="$d9/dd5/classanonymous__namespace_02packet-test-suite_8cc_03_1_1_a_test_tag_base.html" title="Base class for Test tags." alt="" coords="396,24078,558,24131"/>
+<area shape="rect" id="node952" href="$dd/d75/classns3_1_1_ampdu_tag.html" title="The aim of the AmpduTag is to provide means for a MAC to specify that a packet includes A&#45;MPDU since ..." alt="" coords="421,24155,533,24179"/>
+<area shape="rect" id="node953" href="$db/d26/classns3_1_1_anim_byte_tag.html" title="Byte tag using by Anim to uniquely identify packets." alt="" coords="413,24204,541,24229"/>
+<area shape="rect" id="node954" href="$d1/d2f/classns3_1_1_device_name_tag.html" title="This class implements a tag that carries the ns3 device name from where a packet is coming." alt="" coords="404,24253,551,24278"/>
+<area shape="rect" id="node955" href="$de/d33/classns3_1_1_eps_bearer_tag.html" title="Tag used to define the RNTI and EPS bearer ID for packets interchanged between the EpcEnbApplication ..." alt="" coords="411,24303,543,24327"/>
+<area shape="rect" id="node956" href="$d1/d5f/classns3_1_1_flow_id_tag.html" title="Introspection did not find any typical Config paths." alt="" coords="422,24352,532,24377"/>
+<area shape="rect" id="node957" href="$da/d87/classns3_1_1_ipv4_flow_probe_tag.html" title="Tag used to allow a fast identification of the packet." alt="" coords="398,24401,556,24426"/>
+<area shape="rect" id="node958" href="$de/d40/classns3_1_1_ipv4_packet_info_tag.html" title="This class implements Linux struct pktinfo in order to deliver ancillary information to the socket in..." alt="" coords="399,24451,556,24475"/>
+<area shape="rect" id="node959" href="$de/d2a/classns3_1_1_ipv6_flow_probe_tag.html" title="Tag used to allow a fast identification of the packet." alt="" coords="398,24500,556,24525"/>
+<area shape="rect" id="node960" href="$d3/d58/classns3_1_1_ipv6_packet_info_tag.html" title="This class implements a tag that carries socket ancillary data to the socket interface." alt="" coords="399,24549,556,24574"/>
+<area shape="rect" id="node961" href="$de/d19/classns3_1_1_lr_wpan_lqi_tag.html" title="Represent the LQI (Link Quality Estination)." alt="" coords="411,24599,544,24623"/>
+<area shape="rect" id="node962" href="$d9/d72/classns3_1_1_lte_phy_tag.html" title="Tag used to define PHY parameters." alt="" coords="421,24648,533,24673"/>
+<area shape="rect" id="node963" href="$d7/d33/classns3_1_1_lte_radio_bearer_tag.html" title="Tag used to define the RNTI and LC id for each MAC packet trasmitted." alt="" coords="397,24697,557,24722"/>
+<area shape="rect" id="node964" href="$d4/df0/classns3_1_1_lte_rlc_sdu_status_tag.html" title="This class implements a tag that carries the status of a RLC SDU for the fragmentation process Status..." alt="" coords="392,24747,562,24771"/>
+<area shape="rect" id="node965" href="$dd/d6f/classns3_1_1_mu_snr_tag.html" title="A tag to be attached to a response to a multi&#45;user UL frame, that carries the SNR values with which t..." alt="" coords="423,24796,532,24821"/>
+<area shape="rect" id="node966" href="$d6/da6/classns3_1_1_packet_socket_tag.html" title="This class implements a tag that carries the dest address of a packet and the packet type." alt="" coords="402,24845,553,24870"/>
+<area shape="rect" id="node967" href="$dc/dd0/classns3_1_1_pdcp_tag.html" title="Tag to calculate the per&#45;PDU delay from eNb PDCP to UE PDCP." alt="" coords="427,24895,528,24919"/>
+<area shape="rect" id="node968" href="$d7/d1a/structns3_1_1_py_viz_packet_tag.html" title="PyVizPacketTag structure." alt="" coords="404,24944,550,24969"/>
+<area shape="rect" id="node969" href="$da/daf/classns3_1_1_rlc_tag.html" title="Tag to calculate the per&#45;PDU delay from eNb RLC to UE RLC." alt="" coords="432,24993,523,25018"/>
+<area shape="rect" id="node970" href="$dd/d1a/classns3_1_1_simple_tag.html" title="SimpleNetDevice tag to store source, destination and protocol of each packet." alt="" coords="422,25043,533,25067"/>
+<area shape="rect" id="node971" href="$d4/d9e/classns3_1_1_snr_tag.html" title=" " alt="" coords="432,25092,523,25117"/>
+<area shape="rect" id="node972" href="$d6/db2/classns3_1_1_socket_ip_tos_tag.html" title="indicates whether the socket has IP_TOS set." alt="" coords="406,25141,549,25166"/>
+<area shape="rect" id="node973" href="$de/df8/classns3_1_1_socket_ip_ttl_tag.html" title="This class implements a tag that carries the socket&#45;specific TTL of a packet to the IP layer." alt="" coords="409,25191,546,25215"/>
+<area shape="rect" id="node974" href="$de/d4d/classns3_1_1_socket_ipv6_hop_limit_tag.html" title="This class implements a tag that carries the socket&#45;specific HOPLIMIT of a packet to the IPv6 layer." alt="" coords="383,25240,571,25265"/>
+<area shape="rect" id="node975" href="$d7/ded/classns3_1_1_socket_ipv6_tclass_tag.html" title="indicates whether the socket has IPV6_TCLASS set." alt="" coords="390,25289,564,25314"/>
+<area shape="rect" id="node976" href="$d8/d6a/classns3_1_1_socket_priority_tag.html" title="indicates whether the socket has a priority set." alt="" coords="401,25339,553,25363"/>
+<area shape="rect" id="node977" href="$d2/d2f/classns3_1_1_socket_set_dont_fragment_tag.html" title="indicates whether packets should be sent out with the DF (Don&#39;t Fragment) flag set." alt="" coords="370,25388,584,25413"/>
+<area shape="rect" id="node978" href="$d9/d60/classns3_1_1_timestamp_tag.html" title="Timestamp tag for associating a timestamp with a packet." alt="" coords="409,25437,545,25462"/>
+<area shape="rect" id="node979" href="$de/d4c/classns3_1_1aodv_1_1_deferred_route_output_tag.html" title="Tag used by AODV implementation." alt="" coords="392,25486,562,25525"/>
+<area shape="rect" id="node980" href="$d9/de3/classns3_1_1dot11s_1_1_hwmp_tag.html" title="Hwmp tag implements interaction between HWMP protocol and MeshWifiMac." alt="" coords="399,23593,555,23618"/>
+<area shape="rect" id="node981" href="$d2/d90/structns3_1_1dsdv_1_1_deferred_route_output_tag.html" title="Tag used by DSDV implementation." alt="" coords="392,23642,562,23681"/>
+<area shape="rect" id="node982" href="$d2/d82/classns3_1_1flame_1_1_flame_tag.html" title="Transmitter and receiver addresses." alt="" coords="404,23705,551,23730"/>
+<area shape="rect" id="node983" href="$d2/da6/classns3_1_1lorawan_1_1_lora_tag.html" title="Tag used to save various data about a packet, like its Spreading Factor and data about interference." alt="" coords="403,23755,551,23779"/>
+<area shape="rect" id="node951" href="$dc/dcb/classanonymous__namespace_02packet-test-suite_8cc_03_1_1_a_test_tag.html" title="Template class for Test tags." alt="" coords="667,28255,830,28308"/>
+<area shape="rect" id="node984" href="$d9/d2a/classns3_1_1_option_field.html" title="Option field for an IPv6ExtensionHeader." alt="" coords="690,2984,807,3009"/>
+<area shape="rect" id="node985" href="$d2/d27/classns3_1_1_parallel_communication_interface.html" title="Pure virtual base class for the interface between ns&#45;3 and the parallel communication layer being use..." alt="" coords="385,6637,569,6676"/>
+<area shape="rect" id="node986" href="$d7/da9/classns3_1_1_statistical_summary.html" title="Abstract class for calculating statistical data." alt="" coords="666,18931,831,18955"/>
+<area shape="rect" id="node987" href="$de/d97/classns3_1_1_uan_phy_listener.html" title="Interface for PHY event listener." alt="" coords="677,18559,820,18583"/>
 </map>

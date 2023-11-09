@@ -1,9 +1,0 @@
-<map id="ns3::CobaltQueueDisc::Time2CoDel" name="ns3::CobaltQueueDisc::Time2CoDel">
-<area shape="rect" id="node1" title="Return the unsigned 32&#45;bit integer representation of the input Time object." alt="" coords="645,93,811,135"/>
-<area shape="rect" id="node2" href="$classns3_1_1_cobalt_queue_disc.html#af6fcb03f19db1c3db8fd731efb53d23f" title="Called when the queue becomes empty to alter the drop probabilities of Blue." alt="" coords="219,93,384,135"/>
-<area shape="rect" id="node4" href="$classns3_1_1_cobalt_queue_disc.html#a54da4c60c57f726e0bdd82b02af44176" title="Called when the queue becomes full to alter the drop probabilities of Blue." alt="" coords="432,5,597,47"/>
-<area shape="rect" id="node6" href="$classns3_1_1_cobalt_queue_disc.html#a59935fe3ec6a23ff7b55cd298fc4cc80" title="Called to decide whether the current packet should be dropped based on decisions taken by Blue and Co..." alt="" coords="219,159,384,200"/>
-<area shape="rect" id="node7" href="$classns3_1_1_cobalt_queue_disc.html#a93e3a247541e77d0841eeae88fb4e339" title="Determine the time for next drop CoDel control law is t + m_interval/sqrt(m_count)." alt="" coords="432,123,597,164"/>
-<area shape="rect" id="node3" href="$classns3_1_1_cobalt_queue_disc.html#a1c62d3ba0ac9ff28b4779337ef0c36f7" title="This function actually extracts a packet from the queue disc." alt="" coords="5,127,171,168"/>
-<area shape="rect" id="node5" href="$classns3_1_1_cobalt_queue_disc.html#a3df648f96b1bcd613b9171a0950dcf25" title="This function actually enqueues a packet into the queue disc." alt="" coords="219,5,384,47"/>
-</map>

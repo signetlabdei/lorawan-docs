@@ -1,108 +1,122 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>ns-3 Manual &#8212; Manual</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Organization" href="organization.html" />
+    <link rel="next" title="1. Organization" href="organization.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Manual</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Manual</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -111,12 +125,13 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="organization.html" title="Organization"
+          <a href="organization.html" title="1. Organization"
              accesskey="N">next</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="#">Manual</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href="">ns-3 Manual</a></li> 
       </ul>
     </div>  
 
@@ -125,189 +140,91 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="ns-3-manual">
-<h1>ns-3 Manual<a class="headerlink" href="#ns-3-manual" title="Permalink to this headline">¶</a></h1>
-<p>This is the <em>ns-3 Manual</em>. Primary documentation for the ns-3 project is
-available in five forms:</p>
+  <section id="ns-3-manual">
+<h1>ns-3 Manual<a class="headerlink" href="#ns-3-manual" title="Link to this heading">¶</a></h1>
+<p>This is the <em>ns-3 Manual</em>. Primary documentation for the ns-3 project is organized as
+follows:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.nsnam.org/doxygen/index.html">ns-3 Doxygen</a>: Documentation of the public APIs of the simulator</p></li>
-<li><p>Tutorial, Manual <em>(this document)</em>, and Model Library for the <a class="reference external" href="https://www.nsnam.org/documentation/latest/">latest release</a> and <a class="reference external" href="https://www.nsnam.org/documentation/development-tree/">development tree</a></p></li>
-<li><p><a class="reference external" href="https://www.nsnam.org/wiki">ns-3 wiki</a></p></li>
+<li><p>Several guides that are version controlled for each release (the
+<a class="reference external" href="https://www.nsnam.org/documentation/latest/">latest release</a>) and
+<a class="reference external" href="https://www.nsnam.org/ns-3-dev/documentation/">development tree</a>:</p>
+<ul>
+<li><p>Tutorial</p></li>
+<li><p>Installation Guide</p></li>
+<li><p>Manual <em>(this document)</em></p></li>
+<li><p>Model Library</p></li>
+<li><p>Contributing Guide</p></li>
 </ul>
-<p>This document is written in <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> for <a class="reference external" href="http://sphinx.pocoo.org/">Sphinx</a> and is maintained in the
-<code class="docutils literal notranslate"><span class="pre">doc/manual</span></code> directory of ns-3’s source code.</p>
+</li>
+<li><p><a class="reference external" href="https://www.nsnam.org/docs/doxygen/index.html">ns-3 Doxygen</a>: Documentation of the public APIs of
+the simulator</p></li>
+<li><p><a class="reference external" href="https://www.nsnam.org/wiki/Main_Page">ns-3 wiki</a></p></li>
+</ul>
+<p>This document is written in <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> for <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> and is maintained in the
+<code class="docutils literal notranslate"><span class="pre">doc/manual</span></code> directory of ns-3’s source code.  Source file column width is 100 columns.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="organization.html">Organization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="working-with-git.html">Working with git as a user</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="working-with-git.html#ns-3-s-git-workflow-in-a-nutshell">ns-3’s Git workflow in a nutshell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working-with-git.html#setup-of-a-personal-repository">Setup of a personal repository</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working-with-git.html#add-the-official-ns-3-repository-as-remote-upstream">Add the official ns-3 repository as remote upstream</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working-with-git.html#add-your-forked-repository-as-remote">Add your forked repository as remote</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working-with-git.html#keep-in-sync-your-repository-with-latest-ns-3-dev-updates">Keep in sync your repository with latest ns-3-dev updates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working-with-git.html#start-a-new-branch-to-do-some-work">Start a new branch to do some work</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working-with-git.html#edit-and-commit-the-modifications">Edit and commit the modifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working-with-git.html#rebase-your-branch-on-top-of-master">Rebase your branch on top of master</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working-with-git.html#pushing-your-changes-to-origin">Pushing your changes to origin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working-with-git.html#submit-work-for-review">Submit work for review</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working-with-git.html#porting-patches-from-mercurial-repositories-to-git">Porting patches from mercurial repositories to git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="organization.html">1. Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulator.html">2. Simulator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="events.html">2.1. Events and Simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="callbacks.html">2.2. Callbacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-model.html">2.3. Object model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attributes.html">2.4. Configuration and Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-names.html">2.5. Object names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="realtime.html">2.6. RealTime</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="working-with-git.html#working-with-git-as-a-maintainer">Working with git as a maintainer</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="working-with-git.html#pushing-your-own-work">Pushing your own work</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working-with-git.html#review-and-merge-someone-else-s-work">Review and merge someone else’s work</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working-with-git.html#making-a-release">Making a release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">3. Additional Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="random-variables.html">3.1. Random Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hash-functions.html">3.2. Hash Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tracing.html">3.3. Tracing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-collection.html">3.4. Data Collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="statistics.html">3.5. Statistical Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.html">3.6. Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnuplot.html">3.7. Making Plots using the Gnuplot Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">3.8. Using Python to Run <em>ns-3</em></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="random-variables.html">Random Variables</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="random-variables.html#quick-overview">Quick Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="random-variables.html#background">Background</a></li>
-<li class="toctree-l2"><a class="reference internal" href="random-variables.html#creating-random-variables">Creating random variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="random-variables.html#id1">Seeding and independent replications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="random-variables.html#class-randomvariablestream">Class RandomVariableStream</a></li>
-<li class="toctree-l2"><a class="reference internal" href="random-variables.html#base-class-public-api">Base class public API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="random-variables.html#types-of-randomvariables">Types of RandomVariables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="random-variables.html#semantics-of-randomvariablestream-objects">Semantics of RandomVariableStream objects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="random-variables.html#using-other-prng">Using other PRNG</a></li>
-<li class="toctree-l2"><a class="reference internal" href="random-variables.html#setting-the-stream-number">Setting the stream number</a></li>
-<li class="toctree-l2"><a class="reference internal" href="random-variables.html#publishing-your-results">Publishing your results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="random-variables.html#summary">Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="develop.html">4. Developer Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="working-with-git.html">4.1. Working with Git as a user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-git.html#working-with-git-as-a-maintainer">4.2. Working with Git as a maintainer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-cmake.html">4.3. Working with CMake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging-asserts.html">4.4. Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">4.5. Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new-models.html">4.6. Creating a new <em>ns-3</em> model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new-modules.html">4.7. Adding a New Module to <em>ns-3</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">4.8. Creating Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiling.html">4.9. Profiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-gitlab-ci-local.html">4.10. Working with gitlab-ci-local</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hash-functions.html">Hash Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hash-functions.html#basic-usage">Basic Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hash-functions.html#incremental-hashing">Incremental Hashing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hash-functions.html#using-an-alternative-hash-function">Using an Alternative Hash Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hash-functions.html#adding-new-hash-function-implementations">Adding New Hash Function Implementations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hash-functions.html#sources-for-hash-functions">Sources for Hash Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">5. Utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html#print-introspected-doxygen">5.1. Print-introspected-doxygen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html#bench-scheduler">5.2. bench-scheduler</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="events.html">Events and Simulator</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="events.html#event">Event</a></li>
-<li class="toctree-l2"><a class="reference internal" href="events.html#simulator">Simulator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="events.html#time">Time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="events.html#scheduler">Scheduler</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="callbacks.html">Callbacks</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="callbacks.html#callbacks-motivation">Callbacks Motivation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="callbacks.html#callbacks-background">Callbacks Background</a></li>
-<li class="toctree-l2"><a class="reference internal" href="callbacks.html#using-the-callback-api">Using the Callback API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="callbacks.html#bound-callbacks">Bound Callbacks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="callbacks.html#traced-callbacks">Traced Callbacks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="callbacks.html#callback-locations-in-ns-3">Callback locations in ns-3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="callbacks.html#implementation-details">Implementation details</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="object-model.html">Object model</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="object-model.html#object-oriented-behavior">Object-oriented behavior</a></li>
-<li class="toctree-l2"><a class="reference internal" href="object-model.html#object-base-classes">Object base classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="object-model.html#memory-management-and-class-ptr">Memory management and class Ptr</a></li>
-<li class="toctree-l2"><a class="reference internal" href="object-model.html#createobject-and-create">CreateObject and Create</a></li>
-<li class="toctree-l2"><a class="reference internal" href="object-model.html#aggregation">Aggregation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="object-model.html#examples">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="object-model.html#object-factories">Object factories</a></li>
-<li class="toctree-l2"><a class="reference internal" href="object-model.html#downcasting">Downcasting</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="attributes.html">Configuration and Attributes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="attributes.html#object-overview">Object Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="attributes.html#id1">Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="attributes.html#implementation-details">Implementation Details</a></li>
-<li class="toctree-l2"><a class="reference internal" href="attributes.html#configstore">ConfigStore</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="object-names.html">Object names</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="logging.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="logging.html#how-to-add-logging-to-your-code">How to add logging to your code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="logging.html#controlling-timestamp-precision">Controlling timestamp precision</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="tracing.html">Tracing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tracing.html#tracing-motivation">Tracing Motivation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tracing.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tracing.html#using-the-tracing-api">Using the Tracing API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tracing.html#using-trace-helpers">Using Trace Helpers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tracing.html#tracing-implementation-details">Tracing implementation details</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="data-collection.html">Data Collection</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="data-collection-overview.html">Design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data-collection-helpers.html">Data Collection Helpers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="probe.html">Probes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="collector.html">Collectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="aggregator.html">Aggregators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="adaptor.html">Adaptors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scope-and-limitations.html">Scope/Limitations</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="statistics.html">Statistical Framework</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="statistics.html#goals">Goals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="statistics.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="statistics.html#to-do">To-Do</a></li>
-<li class="toctree-l2"><a class="reference internal" href="statistics.html#approach">Approach</a></li>
-<li class="toctree-l2"><a class="reference internal" href="statistics.html#example">Example</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="realtime.html">RealTime</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="realtime.html#behavior">Behavior</a></li>
-<li class="toctree-l2"><a class="reference internal" href="realtime.html#usage">Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="realtime.html#implementation">Implementation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="helpers.html">Helpers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="utilities.html#print-introspected-doxygen">Print-introspected-doxygen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utilities.html#bench-simulator">Bench-simulator</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="gnuplot.html">Making Plots using the Gnuplot Class</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="gnuplot.html#creating-plots-using-the-gnuplot-class">Creating Plots Using the Gnuplot Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gnuplot.html#an-example-program-that-uses-the-gnuplot-class">An Example Program that Uses the Gnuplot Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gnuplot.html#an-example-2-dimensional-plot">An Example 2-Dimensional Plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gnuplot.html#an-example-2-dimensional-plot-with-error-bars">An Example 2-Dimensional Plot with Error Bars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gnuplot.html#an-example-3-dimensional-plot">An Example 3-Dimensional Plot</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="python.html">Using Python to Run <em>ns-3</em></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#an-example-python-script-that-runs-ns3">An Example Python Script that Runs <em>ns-3</em></a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#running-python-scripts">Running Python Scripts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#caveats">Caveats</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#working-with-python-bindings">Working with Python Bindings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#more-information-for-developers">More Information for Developers</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="tests.html">Tests</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="test-overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="test-background.html">Background</a></li>
-<li class="toctree-l2"><a class="reference internal" href="test-framework.html">Testing framework</a></li>
-<li class="toctree-l2"><a class="reference internal" href="how-to-write-tests.html">How to write tests</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="support.html">Support</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="new-models.html">Creating a new <em>ns-3</em> model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="new-modules.html">Adding a New Module to <em>ns-3</em></a></li>
-<li class="toctree-l2"><a class="reference internal" href="documentation.html">Creating Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="enable-modules.html">Enabling Subsets of <em>ns-3</em> Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="enable-tests.html">Enabling/disabling <em>ns-3</em> Tests and Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="troubleshoot.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">6. Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enable-modules.html">6.1. Enabling Subsets of <em>ns-3</em> Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enable-tests.html">6.2. Enabling/disabling <em>ns-3</em> Tests and Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshoot.html">6.3. Troubleshooting</a></li>
 </ul>
 </li>
 </ul>
 </div>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>Next topic</h4>
-  <p class="topless"><a href="organization.html"
-                        title="next chapter">Organization</a></p>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="organization.html"
+                          title="next chapter"><span class="section-number">1. </span>Organization</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -319,12 +236,12 @@ available in five forms:</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -336,18 +253,19 @@ available in five forms:</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="organization.html" title="Organization"
+          <a href="organization.html" title="1. Organization"
              >next</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="#">Manual</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href="">ns-3 Manual</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 18:24.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:54.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

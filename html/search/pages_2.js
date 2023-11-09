@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ns_2d3_20documentation_60739',['ns-3 Documentation',['../index.html',1,'']]]
+  ['deprecated_20list_0',['Deprecated List',['../da/d58/deprecated.html',1,'']]]
 ];

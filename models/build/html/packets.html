@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>Packets &#8212; Model Library</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>24.1. Packets &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Error Model" href="error-model.html" />
-    <link rel="prev" title="Network Module" href="network.html" />
+    <link rel="next" title="24.2. Error Model" href="error-model.html" />
+    <link rel="prev" title="24. Network Module" href="network.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Models</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,16 +126,17 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="error-model.html" title="Error Model"
+          <a href="error-model.html" title="24.2. Error Model"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="network.html" title="Network Module"
+          <a href="network.html" title="24. Network Module"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
 
-          <li class="nav-item nav-item-1"><a href="network.html" accesskey="U">Network Module</a><span class="navelem">&nbsp;</span></li> 
+          <li class="nav-item nav-item-1"><a href="network.html" accesskey="U"><span class="section-number">24. </span>Network Module</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">24.1. </span>Packets</a></li> 
       </ul>
     </div>  
 
@@ -130,8 +145,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="packets">
-<h1>Packets<a class="headerlink" href="#packets" title="Permalink to this headline">¶</a></h1>
+  <section id="packets">
+<h1><span class="section-number">24.1. </span>Packets<a class="headerlink" href="#packets" title="Link to this heading">¶</a></h1>
 <p>The design of the Packet framework of <em>ns</em> was heavily guided by a few
 important use-cases:</p>
 <ul class="simple">
@@ -191,8 +206,8 @@ their design is important from a performance and resource management
 perspective. There are various ways to design the simulation packet, and
 tradeoffs among the different approaches. In particular, there is a tension
 between ease-of-use, performance, and safe interface design.</p>
-<div class="section" id="packet-design-overview">
-<h2>Packet design overview<a class="headerlink" href="#packet-design-overview" title="Permalink to this headline">¶</a></h2>
+<section id="packet-design-overview">
+<h2><span class="section-number">24.1.1. </span>Packet design overview<a class="headerlink" href="#packet-design-overview" title="Link to this heading">¶</a></h2>
 <p>Unlike <em>ns-2</em>, in which Packet objects contain a buffer of C++
 structures corresponding to protocol headers, each network packet in
 <em>ns-3</em> contains a byte Buffer, a list of byte Tags, a list of
@@ -210,10 +225,12 @@ only one instance of each type of data structure is allowed in a list of tags.
 These tags typically contain per-packet cross-layer information or flow
 identifiers (i.e., things that you wouldn’t find in the bits on the wire).</p></li>
 </ul>
-<div class="figure align-default" id="id2">
+<figure class="align-default" id="id2">
 <span id="id1"></span><img alt="_images/packet.png" src="_images/packet.png" />
-<p class="caption"><span class="caption-text">Implementation overview of Packet class.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Implementation overview of Packet class.</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>Figure <a class="reference internal" href="#id1"><span class="std std-ref">Implementation overview of Packet class.</span></a> is a high-level overview of the Packet implementation;
 more detail on the byte Buffer implementation is provided later in Figure
 <a class="reference internal" href="#buffer"><span class="std std-ref">Implementation overview of a packet’s byte Buffer.</span></a>. In <em>ns-3</em>, the Packet byte buffer is analogous to a Linux skbuff
@@ -263,19 +280,19 @@ output stream.</p>
 Tags are not serialized into a contiguous buffer but are stored in lists. Tags
 can be flexibly defined to be any type, but there can only be one instance of
 any particular object type in the Tags buffer at any time.</p>
-</div>
-<div class="section" id="using-the-packet-interface">
-<h2>Using the packet interface<a class="headerlink" href="#using-the-packet-interface" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="using-the-packet-interface">
+<h2><span class="section-number">24.1.2. </span>Using the packet interface<a class="headerlink" href="#using-the-packet-interface" title="Link to this heading">¶</a></h2>
 <p>This section describes how to create and use the <code class="docutils literal notranslate"><span class="pre">ns3::Packet</span></code> object.</p>
-<div class="section" id="creating-a-new-packet">
-<h3>Creating a new packet<a class="headerlink" href="#creating-a-new-packet" title="Permalink to this headline">¶</a></h3>
+<section id="creating-a-new-packet">
+<h3><span class="section-number">24.1.2.1. </span>Creating a new packet<a class="headerlink" href="#creating-a-new-packet" title="Link to this heading">¶</a></h3>
 <p>The following command will create a new packet with a new unique Id.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">pkt</span> <span class="o">=</span> <span class="n">Create</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="p">();</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pkt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Create</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>What is the Uid (unique Id)?  It is an internal id that the system uses to
 identify packets.  It can be fetched via the following method:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint32_t</span> <span class="n">uid</span> <span class="o">=</span> <span class="n">pkt</span><span class="o">-&gt;</span><span class="n">GetUid</span> <span class="p">();</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">uid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pkt</span><span class="o">-&gt;</span><span class="n">GetUid</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>But please note the following. This uid is an internal uid and cannot be counted
@@ -292,7 +309,7 @@ behave, when delays such as serialization or transmission delays are computed,
 to have a certain number of payload bytes, but the bytes will only be allocated
 on-demand when needed).  The command to do this is, when the packet is
 created:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">pkt</span> <span class="o">=</span> <span class="n">Create</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">N</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pkt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Create</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span><span class="p">(</span><span class="n">N</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>where N is a positive integer.</p>
@@ -302,24 +319,24 @@ method:</p>
 <span class="cm"> * \returns the size in bytes of the packet (including the zero-filled</span>
 <span class="cm"> *          initial payload)</span>
 <span class="cm"> */</span>
-<span class="kt">uint32_t</span> <span class="nf">GetSize</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="nf">GetSize</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>You can also initialize a packet with a character buffer. The input
 data is copied and the input buffer is untouched. The constructor
 applied is:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Packet</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="k">const</span> <span class="o">*</span><span class="n">buffer</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">size</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Packet</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Here is an example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">pkt1</span> <span class="o">=</span> <span class="n">Create</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="p">(</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">const</span> <span class="kt">uint8_t</span><span class="o">*&gt;</span> <span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">),</span> <span class="mi">5</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pkt1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Create</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span><span class="p">(</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="o">*&gt;</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">),</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Packets are freed when there are no more references to them, as with all <em>ns-3</em>
 objects referenced by the Ptr class.</p>
-</div>
-<div class="section" id="adding-and-removing-buffer-data">
-<h3>Adding and removing Buffer data<a class="headerlink" href="#adding-and-removing-buffer-data" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="adding-and-removing-buffer-data">
+<h3><span class="section-number">24.1.2.2. </span>Adding and removing Buffer data<a class="headerlink" href="#adding-and-removing-buffer-data" title="Link to this heading">¶</a></h3>
 <p>After the initial packet creation (which may possibly create some fake initial
 bytes of payload), all subsequent buffer data is added by adding objects of
 class Header or class Trailer. Note that, even if you are in the application
@@ -350,17 +367,17 @@ Packet API can be used to add or remove such headers.:</p>
 <span class="cm"> *</span>
 <span class="cm"> * \param header a reference to the header to add to this packet.</span>
 <span class="cm"> */</span>
-<span class="kt">void</span> <span class="nf">AddHeader</span> <span class="p">(</span><span class="k">const</span> <span class="n">Header</span> <span class="o">&amp;</span> <span class="n">header</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">AddHeader</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Header</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">header</span><span class="p">);</span>
 <span class="cm">/**</span>
 <span class="cm"> * Deserialize and remove the header from the internal buffer.</span>
 <span class="cm"> *</span>
-<span class="cm"> * This method invokes Header::Deserialize (begin) and should be used for</span>
+<span class="cm"> * This method invokes Header::Deserialize(begin) and should be used for</span>
 <span class="cm"> * fixed-length headers.</span>
 <span class="cm"> *</span>
 <span class="cm"> * \param header a reference to the header to remove from the internal buffer.</span>
 <span class="cm"> * \returns the number of bytes removed from the packet.</span>
 <span class="cm"> */</span>
-<span class="kt">uint32_t</span> <span class="nf">RemoveHeader</span> <span class="p">(</span><span class="n">Header</span> <span class="o">&amp;</span><span class="n">header</span><span class="p">);</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="nf">RemoveHeader</span><span class="p">(</span><span class="n">Header</span><span class="w"> </span><span class="o">&amp;</span><span class="n">header</span><span class="p">);</span>
 <span class="cm">/**</span>
 <span class="cm"> * Deserialize but does _not_ remove the header from the internal buffer.</span>
 <span class="cm"> * This method invokes Header::Deserialize.</span>
@@ -368,19 +385,19 @@ Packet API can be used to add or remove such headers.:</p>
 <span class="cm"> * \param header a reference to the header to read from the internal buffer.</span>
 <span class="cm"> * \returns the number of bytes read from the packet.</span>
 <span class="cm"> */</span>
-<span class="kt">uint32_t</span> <span class="nf">PeekHeader</span> <span class="p">(</span><span class="n">Header</span> <span class="o">&amp;</span><span class="n">header</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="nf">PeekHeader</span><span class="p">(</span><span class="n">Header</span><span class="w"> </span><span class="o">&amp;</span><span class="n">header</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>For instance, here are the typical operations to add and remove a UDP header.:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// add header</span>
-<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">packet</span> <span class="o">=</span> <span class="n">Create</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="p">();</span>
-<span class="n">UdpHeader</span> <span class="n">udpHeader</span><span class="p">;</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">packet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Create</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">UdpHeader</span><span class="w"> </span><span class="n">udpHeader</span><span class="p">;</span>
 <span class="c1">// Fill out udpHeader fields appropriately</span>
-<span class="n">packet</span><span class="o">-&gt;</span><span class="n">AddHeader</span> <span class="p">(</span><span class="n">udpHeader</span><span class="p">);</span>
+<span class="n">packet</span><span class="o">-&gt;</span><span class="n">AddHeader</span><span class="p">(</span><span class="n">udpHeader</span><span class="p">);</span>
 <span class="p">...</span>
 <span class="c1">// remove header</span>
-<span class="n">UdpHeader</span> <span class="n">udpHeader</span><span class="p">;</span>
-<span class="n">packet</span><span class="o">-&gt;</span><span class="n">RemoveHeader</span> <span class="p">(</span><span class="n">udpHeader</span><span class="p">);</span>
+<span class="n">UdpHeader</span><span class="w"> </span><span class="n">udpHeader</span><span class="p">;</span>
+<span class="n">packet</span><span class="o">-&gt;</span><span class="n">RemoveHeader</span><span class="p">(</span><span class="n">udpHeader</span><span class="p">);</span>
 <span class="c1">// Read udpHeader fields as needed</span>
 </pre></div>
 </div>
@@ -389,7 +406,7 @@ needed:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * \brief Deserialize and remove the header from the internal buffer.</span>
 <span class="cm"> *</span>
-<span class="cm"> * This method invokes Header::Deserialize (begin, end) and should be</span>
+<span class="cm"> * This method invokes Header::Deserialize(begin, end) and should be</span>
 <span class="cm"> * used for variable-length headers (where the size is determined somehow</span>
 <span class="cm"> * by the caller).</span>
 <span class="cm"> *</span>
@@ -397,7 +414,7 @@ needed:</p>
 <span class="cm"> * \param size number of bytes to deserialize</span>
 <span class="cm"> * \returns the number of bytes removed from the packet.</span>
 <span class="cm"> */</span>
-<span class="kt">uint32_t</span> <span class="nf">RemoveHeader</span> <span class="p">(</span><span class="n">Header</span> <span class="o">&amp;</span><span class="n">header</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">size</span><span class="p">);</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="nf">RemoveHeader</span><span class="p">(</span><span class="n">Header</span><span class="w"> </span><span class="o">&amp;</span><span class="n">header</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>In this case, the caller must figure out and provide the right ‘size’ as
@@ -405,9 +422,9 @@ an argument (the Deserialization routine may not know when to stop).  An
 example of this type of header would be a series of Type-Length-Value (TLV)
 information elements, where the ending point of the series of TLVs can
 be deduced from the packet length.</p>
-</div>
-<div class="section" id="adding-and-removing-tags">
-<h3>Adding and removing Tags<a class="headerlink" href="#adding-and-removing-tags" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="adding-and-removing-tags">
+<h3><span class="section-number">24.1.2.3. </span>Adding and removing Tags<a class="headerlink" href="#adding-and-removing-tags" title="Link to this heading">¶</a></h3>
 <p>There is a single base class of Tag that all packet tags must derive from. They
 are used in two different tag lists in the packet; the lists have different
 semantics and different expected use cases.</p>
@@ -419,8 +436,6 @@ and applies a ByteTag to the segment, each byte of the TCP segment will be
 tagged. However, if the next layer down inserts an IPv4 header, this ByteTag
 will not cover those bytes.  The converse is true for the PacketTag; it covers a
 packet despite the operations on it.</p>
-<p>PacketTags are limited in size to 20 bytes. This is a modifiable compile-time
-constant in <code class="docutils literal notranslate"><span class="pre">src/network/model/packet-tag-list.h</span></code>. ByteTags have no such restriction.</p>
 <p>Each tag type must subclass <code class="docutils literal notranslate"><span class="pre">ns3::Tag</span></code>, and only one instance of
 each Tag type may be in each tag list. Here are a few differences in the
 behavior of packet tags and byte tags.</p>
@@ -437,14 +452,11 @@ the merge.</p></li>
 <li><p><strong>Finding and Printing:</strong> Both classes allow you to iterate over all of the
 tags and print them.</p></li>
 <li><p><strong>Removal:</strong> Users can add and remove the same packet tag multiple times on a
-single packet (AddPacketTag () and RemovePacketTag ()). The packet However,
+single packet (AddPacketTag() and RemovePacketTag()). The packet However,
 once a byte tag is added, it can only be removed by stripping all byte tags
 from the packet. Removing one of possibly multiple byte tags is not supported
 by the current API.</p></li>
 </ul>
-<p>As of <em>ns-3.5</em> and later, Tags are not serialized and deserialized to a buffer when
-<code class="docutils literal notranslate"><span class="pre">Packet::Serialize</span> <span class="pre">()</span></code> and <code class="docutils literal notranslate"><span class="pre">Packet::Deserialize</span> <span class="pre">()</span></code> are called; this is an
-open bug.</p>
 <p>If a user wants to take an existing packet object and reuse it as a new packet,
 he or she should remove all byte tags and packet tags before doing so. An
 example is the UdpEchoServer class, which takes the received packet and “turns
@@ -467,11 +479,11 @@ it around” to send back to the echo client.</p>
 <span class="cm"> * totally evil to allow a trace sink to modify the content of a</span>
 <span class="cm"> * packet).</span>
 <span class="cm"> */</span>
-<span class="kt">void</span> <span class="nf">AddByteTag</span> <span class="p">(</span><span class="k">const</span> <span class="n">Tag</span> <span class="o">&amp;</span><span class="n">tag</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">AddByteTag</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Tag</span><span class="w"> </span><span class="o">&amp;</span><span class="n">tag</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 <span class="cm">/**</span>
 <span class="cm"> * \returns an iterator over the set of byte tags included in this packet.</span>
 <span class="cm"> */</span>
-<span class="n">ByteTagIterator</span> <span class="nf">GetByteTagIterator</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="n">ByteTagIterator</span><span class="w"> </span><span class="nf">GetByteTagIterator</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 <span class="cm">/**</span>
 <span class="cm"> * \param tag the tag to search in this packet</span>
 <span class="cm"> * \returns true if the requested tag type was found, false otherwise.</span>
@@ -479,12 +491,12 @@ it around” to send back to the echo client.</p>
 <span class="cm"> * If the requested tag type is found, it is copied in the user&#39;s</span>
 <span class="cm"> * provided tag instance.</span>
 <span class="cm"> */</span>
-<span class="kt">bool</span> <span class="nf">FindFirstMatchingByteTag</span> <span class="p">(</span><span class="n">Tag</span> <span class="o">&amp;</span><span class="n">tag</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="kt">bool</span><span class="w"> </span><span class="nf">FindFirstMatchingByteTag</span><span class="p">(</span><span class="n">Tag</span><span class="w"> </span><span class="o">&amp;</span><span class="n">tag</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
 <span class="cm">/**</span>
 <span class="cm"> * Remove all the tags stored in this packet.</span>
 <span class="cm"> */</span>
-<span class="kt">void</span> <span class="nf">RemoveAllByteTags</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">RemoveAllByteTags</span><span class="p">();</span>
 
 <span class="cm">/**</span>
 <span class="cm"> * \param os output stream in which the data should be printed.</span>
@@ -492,7 +504,7 @@ it around” to send back to the echo client.</p>
 <span class="cm"> * Iterate over the tags present in this packet, and</span>
 <span class="cm"> * invoke the Print method of each tag stored in the packet.</span>
 <span class="cm"> */</span>
-<span class="kt">void</span> <span class="nf">PrintByteTags</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">os</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">PrintByteTags</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="n">os</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>The Packet API for packet tags is given below.:</p>
@@ -506,7 +518,7 @@ it around” to send back to the echo client.</p>
 <span class="cm"> * modify the state of this packet, which is fairly</span>
 <span class="cm"> * un-intuitive.</span>
 <span class="cm"> */</span>
-<span class="kt">void</span> <span class="nf">AddPacketTag</span> <span class="p">(</span><span class="k">const</span> <span class="n">Tag</span> <span class="o">&amp;</span><span class="n">tag</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">AddPacketTag</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Tag</span><span class="w"> </span><span class="o">&amp;</span><span class="n">tag</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 <span class="cm">/**</span>
 <span class="cm"> * \param tag the tag to remove from this packet</span>
 <span class="cm"> * \returns true if the requested tag is found, false</span>
@@ -515,7 +527,7 @@ it around” to send back to the echo client.</p>
 <span class="cm"> * Remove a tag from this packet. This method calls</span>
 <span class="cm"> * Tag::Deserialize if the tag is found.</span>
 <span class="cm"> */</span>
-<span class="kt">bool</span> <span class="nf">RemovePacketTag</span> <span class="p">(</span><span class="n">Tag</span> <span class="o">&amp;</span><span class="n">tag</span><span class="p">);</span>
+<span class="kt">bool</span><span class="w"> </span><span class="nf">RemovePacketTag</span><span class="p">(</span><span class="n">Tag</span><span class="w"> </span><span class="o">&amp;</span><span class="n">tag</span><span class="p">);</span>
 <span class="cm">/**</span>
 <span class="cm"> * \param tag the tag to search in this packet</span>
 <span class="cm"> * \returns true if the requested tag is found, false</span>
@@ -523,11 +535,11 @@ it around” to send back to the echo client.</p>
 <span class="cm"> *</span>
 <span class="cm"> * Search a matching tag and call Tag::Deserialize if it is found.</span>
 <span class="cm"> */</span>
-<span class="kt">bool</span> <span class="nf">PeekPacketTag</span> <span class="p">(</span><span class="n">Tag</span> <span class="o">&amp;</span><span class="n">tag</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="kt">bool</span><span class="w"> </span><span class="nf">PeekPacketTag</span><span class="p">(</span><span class="n">Tag</span><span class="w"> </span><span class="o">&amp;</span><span class="n">tag</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 <span class="cm">/**</span>
 <span class="cm"> * Remove all packet tags.</span>
 <span class="cm"> */</span>
-<span class="kt">void</span> <span class="nf">RemoveAllPacketTags</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">RemoveAllPacketTags</span><span class="p">();</span>
 
 <span class="cm">/**</span>
 <span class="cm"> * \param os the stream in which we want to print data.</span>
@@ -537,55 +549,55 @@ it around” to send back to the echo client.</p>
 <span class="cm"> * \sa Packet::AddPacketTag, Packet::RemovePacketTag, Packet::PeekPacketTag,</span>
 <span class="cm"> *  Packet::RemoveAllPacketTags</span>
 <span class="cm"> */</span>
-<span class="kt">void</span> <span class="nf">PrintPacketTags</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">os</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">PrintPacketTags</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="n">os</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
 <span class="cm">/**</span>
 <span class="cm"> * \returns an object which can be used to iterate over the list of</span>
 <span class="cm"> *  packet tags.</span>
 <span class="cm"> */</span>
-<span class="n">PacketTagIterator</span> <span class="nf">GetPacketTagIterator</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="n">PacketTagIterator</span><span class="w"> </span><span class="nf">GetPacketTagIterator</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Here is a simple example illustrating the use of tags from the
 code in <code class="docutils literal notranslate"><span class="pre">src/internet/model/udp-socket-impl.cc</span></code>:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">p</span><span class="p">;</span>  <span class="c1">// pointer to a pre-existing packet</span>
-<span class="n">SocketIpTtlTag</span> <span class="n">tag</span>
-<span class="n">tag</span><span class="p">.</span><span class="n">SetTtl</span> <span class="p">(</span><span class="n">m_ipMulticastTtl</span><span class="p">);</span> <span class="c1">// Convey the TTL from UDP layer to IP layer</span>
-<span class="n">p</span><span class="o">-&gt;</span><span class="n">AddPacketTag</span> <span class="p">(</span><span class="n">tag</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w">  </span><span class="c1">// pointer to a pre-existing packet</span>
+<span class="n">SocketIpTtlTag</span><span class="w"> </span><span class="n">tag</span>
+<span class="n">tag</span><span class="p">.</span><span class="n">SetTtl</span><span class="p">(</span><span class="n">m_ipMulticastTtl</span><span class="p">);</span><span class="w"> </span><span class="c1">// Convey the TTL from UDP layer to IP layer</span>
+<span class="n">p</span><span class="o">-&gt;</span><span class="n">AddPacketTag</span><span class="p">(</span><span class="n">tag</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This tag is read at the IP layer, then stripped (<code class="docutils literal notranslate"><span class="pre">src/internet/model/ipv4-l3-protocol.cc</span></code>):</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span> <span class="n">ttl</span> <span class="o">=</span> <span class="n">m_defaultTtl</span><span class="p">;</span>
-<span class="n">SocketIpTtlTag</span> <span class="n">tag</span><span class="p">;</span>
-<span class="kt">bool</span> <span class="n">found</span> <span class="o">=</span> <span class="n">packet</span><span class="o">-&gt;</span><span class="n">RemovePacketTag</span> <span class="p">(</span><span class="n">tag</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">found</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">ttl</span> <span class="o">=</span> <span class="n">tag</span><span class="p">.</span><span class="n">GetTtl</span> <span class="p">();</span>
-  <span class="p">}</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">ttl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_defaultTtl</span><span class="p">;</span>
+<span class="n">SocketIpTtlTag</span><span class="w"> </span><span class="n">tag</span><span class="p">;</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">packet</span><span class="o">-&gt;</span><span class="n">RemovePacketTag</span><span class="p">(</span><span class="n">tag</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">found</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ttl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tag</span><span class="p">.</span><span class="n">GetTtl</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="fragmentation-and-concatenation">
-<h3>Fragmentation and concatenation<a class="headerlink" href="#fragmentation-and-concatenation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="fragmentation-and-concatenation">
+<h3><span class="section-number">24.1.2.4. </span>Fragmentation and concatenation<a class="headerlink" href="#fragmentation-and-concatenation" title="Link to this heading">¶</a></h3>
 <p>Packets may be fragmented or merged together.  For example, to fragment a packet
 <code class="docutils literal notranslate"><span class="pre">p</span></code> of 90 bytes into two packets, one containing the first 10 bytes and the
 other containing the remaining 80, one may call the following code:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">frag0</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">CreateFragment</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
-<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span> <span class="n">frag1</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">CreateFragment</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">90</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">frag0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">CreateFragment</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Packet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">frag1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">CreateFragment</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>As discussed above, the packet tags from <code class="docutils literal notranslate"><span class="pre">p</span></code> will follow to both packet
 fragments, and the byte tags will follow the byte ranges as needed.</p>
 <p>Now, to put them back together:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">frag0</span><span class="o">-&gt;</span><span class="n">AddAtEnd</span> <span class="p">(</span><span class="n">frag1</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">frag0</span><span class="o">-&gt;</span><span class="n">AddAtEnd</span><span class="p">(</span><span class="n">frag1</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Now frag0 should be equivalent to the original packet <code class="docutils literal notranslate"><span class="pre">p</span></code>.  If, however, there
 were operations on the fragments before being reassembled (such as tag
 operations or header operations), the new packet will not be the same.</p>
-</div>
-<div class="section" id="enabling-metadata">
-<h3>Enabling metadata<a class="headerlink" href="#enabling-metadata" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="enabling-metadata">
+<h3><span class="section-number">24.1.2.5. </span>Enabling metadata<a class="headerlink" href="#enabling-metadata" title="Link to this heading">¶</a></h3>
 <p>We mentioned above that packets, being on-the-wire representations of byte
 buffers, present a problem to print out in a structured way unless the printing
 function has access to the context of the header.  For instance, consider a
@@ -602,27 +614,27 @@ present at the front of the packet. These errors will be detected and will abort
 the program.</p>
 <p>To enable this operation, users will typically insert one or both of these
 statements at the beginning of their programs:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Packet</span><span class="o">::</span><span class="n">EnablePrinting</span> <span class="p">();</span>
-<span class="n">Packet</span><span class="o">::</span><span class="n">EnableChecking</span> <span class="p">();</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Packet</span><span class="o">::</span><span class="n">EnablePrinting</span><span class="p">();</span>
+<span class="n">Packet</span><span class="o">::</span><span class="n">EnableChecking</span><span class="p">();</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="sample-programs">
-<h2>Sample programs<a class="headerlink" href="#sample-programs" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="sample-programs">
+<h2><span class="section-number">24.1.3. </span>Sample programs<a class="headerlink" href="#sample-programs" title="Link to this heading">¶</a></h2>
 <p>See <code class="docutils literal notranslate"><span class="pre">src/network/examples/main-packet-header.cc</span></code> and <code class="docutils literal notranslate"><span class="pre">src/network/examples/main-packet-tag.cc</span></code>.</p>
-</div>
-<div class="section" id="implementation-details">
-<h2>Implementation details<a class="headerlink" href="#implementation-details" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="private-member-variables">
-<h3>Private member variables<a class="headerlink" href="#private-member-variables" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="implementation-details">
+<h2><span class="section-number">24.1.4. </span>Implementation details<a class="headerlink" href="#implementation-details" title="Link to this heading">¶</a></h2>
+<section id="private-member-variables">
+<h3><span class="section-number">24.1.4.1. </span>Private member variables<a class="headerlink" href="#private-member-variables" title="Link to this heading">¶</a></h3>
 <p>A Packet object’s interface provides access to some private data:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Buffer</span> <span class="n">m_buffer</span><span class="p">;</span>
-<span class="n">ByteTagList</span> <span class="n">m_byteTagList</span><span class="p">;</span>
-<span class="n">PacketTagList</span> <span class="n">m_packetTagList</span><span class="p">;</span>
-<span class="n">PacketMetadata</span> <span class="n">m_metadata</span><span class="p">;</span>
-<span class="k">mutable</span> <span class="kt">uint32_t</span> <span class="n">m_refCount</span><span class="p">;</span>
-<span class="k">static</span> <span class="kt">uint32_t</span> <span class="n">m_globalUid</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Buffer</span><span class="w"> </span><span class="n">m_buffer</span><span class="p">;</span>
+<span class="n">ByteTagList</span><span class="w"> </span><span class="n">m_byteTagList</span><span class="p">;</span>
+<span class="n">PacketTagList</span><span class="w"> </span><span class="n">m_packetTagList</span><span class="p">;</span>
+<span class="n">PacketMetadata</span><span class="w"> </span><span class="n">m_metadata</span><span class="p">;</span>
+<span class="k">mutable</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">m_refCount</span><span class="p">;</span>
+<span class="k">static</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">m_globalUid</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Each Packet has a Buffer and two Tags lists, a PacketMetadata object, and a ref
@@ -633,9 +645,9 @@ that real network packets do not have a UID; the UID is therefore an instance of
 data that normally would be stored as a Tag in the packet. However, it was felt
 that a UID is a special case that is so often used in simulations that it would
 be more convenient to store it in a member variable.</p>
-</div>
-<div class="section" id="buffer-implementation">
-<h3>Buffer implementation<a class="headerlink" href="#buffer-implementation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="buffer-implementation">
+<h3><span class="section-number">24.1.4.2. </span>Buffer implementation<a class="headerlink" href="#buffer-implementation" title="Link to this heading">¶</a></h3>
 <p>Class Buffer represents a buffer of bytes. Its size is automatically adjusted to
 hold any data prepended or appended by the user. Its implementation is optimized
 to ensure that the number of buffer resizes is minimized, by creating new
@@ -644,18 +656,18 @@ runtime during use by recording the maximum size of each packet.</p>
 <p>Authors of new Header or Trailer classes need to know the public API of the
 Buffer class.  (add summary here)</p>
 <p>The byte buffer is implemented as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">BufferData</span> <span class="p">{</span>
-    <span class="kt">uint32_t</span> <span class="n">m_count</span><span class="p">;</span>
-    <span class="kt">uint32_t</span> <span class="n">m_size</span><span class="p">;</span>
-    <span class="kt">uint32_t</span> <span class="n">m_initialStart</span><span class="p">;</span>
-    <span class="kt">uint32_t</span> <span class="n">m_dirtyStart</span><span class="p">;</span>
-    <span class="kt">uint32_t</span> <span class="n">m_dirtySize</span><span class="p">;</span>
-    <span class="kt">uint8_t</span> <span class="n">m_data</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">BufferData</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">m_count</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">m_size</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">m_initialStart</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">m_dirtyStart</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">m_dirtySize</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">m_data</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
 <span class="p">};</span>
-<span class="k">struct</span> <span class="n">BufferData</span> <span class="o">*</span><span class="n">m_data</span><span class="p">;</span>
-<span class="kt">uint32_t</span> <span class="n">m_zeroAreaSize</span><span class="p">;</span>
-<span class="kt">uint32_t</span> <span class="n">m_start</span><span class="p">;</span>
-<span class="kt">uint32_t</span> <span class="n">m_size</span><span class="p">;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">BufferData</span><span class="w"> </span><span class="o">*</span><span class="n">m_data</span><span class="p">;</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">m_zeroAreaSize</span><span class="p">;</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">m_start</span><span class="p">;</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">m_size</span><span class="p">;</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -673,33 +685,35 @@ which holds a reference to this BufferData instance have written data so far</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">Buffer::m_size</span></code>: size of area used by this Buffer in its BufferData
 structure</p></li>
 </ul>
-<div class="figure align-default" id="id3">
+<figure class="align-default" id="id3">
 <span id="buffer"></span><img alt="_images/buffer.png" src="_images/buffer.png" />
-<p class="caption"><span class="caption-text">Implementation overview of a packet’s byte Buffer.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Implementation overview of a packet’s byte Buffer.</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>This data structure is summarized in Figure <a class="reference internal" href="#buffer"><span class="std std-ref">Implementation overview of a packet’s byte Buffer.</span></a>. Each Buffer holds a
 pointer to an instance of a BufferData. Most Buffers should be able to share the
 same underlying BufferData and thus simply increase the BufferData’s reference
 count. If they have to change the content of a BufferData inside the Dirty Area,
 and if the reference count is not one, they first create a copy of the
 BufferData and then complete their state-changing operation.</p>
-</div>
-<div class="section" id="tags-implementation">
-<h3>Tags implementation<a class="headerlink" href="#tags-implementation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="tags-implementation">
+<h3><span class="section-number">24.1.4.3. </span>Tags implementation<a class="headerlink" href="#tags-implementation" title="Link to this heading">¶</a></h3>
 <p>(XXX revise me)</p>
 <p>Tags are implemented by a single pointer which points to the start of a
 linked list ofTagData data structures. Each TagData structure points
 to the next TagData in the list (its next pointer contains zero to
 indicate the end of the linked list). Each TagData contains an integer
 unique id which identifies the type of the tag stored in the TagData.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">TagData</span> <span class="p">{</span>
-    <span class="k">struct</span> <span class="n">TagData</span> <span class="o">*</span><span class="n">m_next</span><span class="p">;</span>
-    <span class="kt">uint32_t</span> <span class="n">m_id</span><span class="p">;</span>
-    <span class="kt">uint32_t</span> <span class="n">m_count</span><span class="p">;</span>
-    <span class="kt">uint8_t</span> <span class="n">m_data</span><span class="p">[</span><span class="n">Tags</span><span class="o">::</span><span class="n">SIZE</span><span class="p">];</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">TagData</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">TagData</span><span class="w"> </span><span class="o">*</span><span class="n">m_next</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">m_id</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">m_count</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">m_data</span><span class="p">[</span><span class="n">Tags</span><span class="o">::</span><span class="n">SIZE</span><span class="p">];</span>
 <span class="p">};</span>
-<span class="k">class</span> <span class="nc">Tags</span> <span class="p">{</span>
-    <span class="k">struct</span> <span class="n">TagData</span> <span class="o">*</span><span class="n">m_next</span><span class="p">;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Tags</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">TagData</span><span class="w"> </span><span class="o">*</span><span class="n">m_next</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -715,18 +729,18 @@ can be stored in a packet. The mapping between Tag type and
 underlying id is performed by a registration as follows:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/* A sample Tag implementation</span>
 <span class="cm"> */</span>
-<span class="k">struct</span> <span class="n">MyTag</span> <span class="p">{</span>
-    <span class="kt">uint16_t</span> <span class="n">m_streamId</span><span class="p">;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">MyTag</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">m_streamId</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="memory-management">
-<h3>Memory management<a class="headerlink" href="#memory-management" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="memory-management">
+<h3><span class="section-number">24.1.4.4. </span>Memory management<a class="headerlink" href="#memory-management" title="Link to this heading">¶</a></h3>
 <p><em>Describe dataless vs. data-full packets.</em></p>
-</div>
-<div class="section" id="copy-on-write-semantics">
-<h3>Copy-on-write semantics<a class="headerlink" href="#copy-on-write-semantics" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="copy-on-write-semantics">
+<h3><span class="section-number">24.1.4.5. </span>Copy-on-write semantics<a class="headerlink" href="#copy-on-write-semantics" title="Link to this heading">¶</a></h3>
 <p>The current implementation of the byte buffers and tag list is based on COW
 (Copy On Write). An introduction to COW can be found in Scott Meyer’s “More
 Effective C++”, items 17 and 29). This design feature and aspects of the public
@@ -765,47 +779,54 @@ must therefore invoke a true copy.</p>
 several orders of magnitude. However, even the dirty operations have been
 optimized for common use-cases which means that most of the time, these
 operations will not trigger data copies and will thus be still very fast.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Packets</a><ul>
-<li><a class="reference internal" href="#packet-design-overview">Packet design overview</a></li>
-<li><a class="reference internal" href="#using-the-packet-interface">Using the packet interface</a><ul>
-<li><a class="reference internal" href="#creating-a-new-packet">Creating a new packet</a></li>
-<li><a class="reference internal" href="#adding-and-removing-buffer-data">Adding and removing Buffer data</a></li>
-<li><a class="reference internal" href="#adding-and-removing-tags">Adding and removing Tags</a></li>
-<li><a class="reference internal" href="#fragmentation-and-concatenation">Fragmentation and concatenation</a></li>
-<li><a class="reference internal" href="#enabling-metadata">Enabling metadata</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">24.1. Packets</a><ul>
+<li><a class="reference internal" href="#packet-design-overview">24.1.1. Packet design overview</a></li>
+<li><a class="reference internal" href="#using-the-packet-interface">24.1.2. Using the packet interface</a><ul>
+<li><a class="reference internal" href="#creating-a-new-packet">24.1.2.1. Creating a new packet</a></li>
+<li><a class="reference internal" href="#adding-and-removing-buffer-data">24.1.2.2. Adding and removing Buffer data</a></li>
+<li><a class="reference internal" href="#adding-and-removing-tags">24.1.2.3. Adding and removing Tags</a></li>
+<li><a class="reference internal" href="#fragmentation-and-concatenation">24.1.2.4. Fragmentation and concatenation</a></li>
+<li><a class="reference internal" href="#enabling-metadata">24.1.2.5. Enabling metadata</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#sample-programs">Sample programs</a></li>
-<li><a class="reference internal" href="#implementation-details">Implementation details</a><ul>
-<li><a class="reference internal" href="#private-member-variables">Private member variables</a></li>
-<li><a class="reference internal" href="#buffer-implementation">Buffer implementation</a></li>
-<li><a class="reference internal" href="#tags-implementation">Tags implementation</a></li>
-<li><a class="reference internal" href="#memory-management">Memory management</a></li>
-<li><a class="reference internal" href="#copy-on-write-semantics">Copy-on-write semantics</a></li>
+<li><a class="reference internal" href="#sample-programs">24.1.3. Sample programs</a></li>
+<li><a class="reference internal" href="#implementation-details">24.1.4. Implementation details</a><ul>
+<li><a class="reference internal" href="#private-member-variables">24.1.4.1. Private member variables</a></li>
+<li><a class="reference internal" href="#buffer-implementation">24.1.4.2. Buffer implementation</a></li>
+<li><a class="reference internal" href="#tags-implementation">24.1.4.3. Tags implementation</a></li>
+<li><a class="reference internal" href="#memory-management">24.1.4.4. Memory management</a></li>
+<li><a class="reference internal" href="#copy-on-write-semantics">24.1.4.5. Copy-on-write semantics</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="network.html"
-                        title="previous chapter">Network Module</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="error-model.html"
-                        title="next chapter">Error Model</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="network.html"
+                          title="previous chapter"><span class="section-number">24. </span>Network Module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="error-model.html"
+                          title="next chapter"><span class="section-number">24.2. </span>Error Model</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -817,12 +838,12 @@ operations will not trigger data copies and will thus be still very fast.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -834,22 +855,23 @@ operations will not trigger data copies and will thus be still very fast.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="error-model.html" title="Error Model"
+          <a href="error-model.html" title="24.2. Error Model"
              >next</a> |</li>
         <li class="right" >
-          <a href="network.html" title="Network Module"
+          <a href="network.html" title="24. Network Module"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
 
-          <li class="nav-item nav-item-1"><a href="network.html" >Network Module</a><span class="navelem">&nbsp;</span></li> 
+          <li class="nav-item nav-item-1"><a href="network.html" ><span class="section-number">24. </span>Network Module</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">24.1. </span>Packets</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 17:37.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:57.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

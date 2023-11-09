@@ -1,9 +1,0 @@
-<map id="ns3::BlockAckWindow::GetWinSize" name="ns3::BlockAckWindow::GetWinSize">
-<area shape="rect" id="node1" title="Get the window size." alt="" coords="1148,92,1313,133"/>
-<area shape="rect" id="node2" href="$class_originator_block_ack_window_test.html#afa79ee872643cc855c1003121f9c564e" title="Implementation to actually run this TestCase." alt="" coords="5,76,204,117"/>
-<area shape="rect" id="node3" href="$classns3_1_1_originator_block_ack_agreement.html#a71138fdae2b41a8a99f62195d9167975" title="Return the starting sequence number of the transmit window, if a transmit window has been initialized..." alt="" coords="849,92,1100,133"/>
-<area shape="rect" id="node7" href="$classns3_1_1_originator_block_ack_agreement.html#a46f9e62120edd34a3b9ead56379d784a" title="Advance the transmit window so as to include the transmitted MPDU, if the latter is not an old packet..." alt="" coords="252,206,503,248"/>
-<area shape="rect" id="node4" href="$classns3_1_1_originator_block_ack_agreement.html#ab33cb13eaeac16e18a84fff27b1e0dbb" title="Get the distance between the current starting sequence number and the given sequence number." alt="" coords="551,105,801,146"/>
-<area shape="rect" id="node5" href="$classns3_1_1_originator_block_ack_agreement.html#a40efbd2ca6815ab1c3924b83a8f3d197" title="Record that the given MPDU has been acknowledged and advance the transmit window if possible." alt="" coords="252,76,503,117"/>
-<area shape="rect" id="node6" href="$classns3_1_1_originator_block_ack_agreement.html#ab31ce9c21ae434370f824685676fc60c" title="Advance the transmit window beyond the MPDU that has been reported to be discarded." alt="" coords="252,141,503,182"/>
-</map>

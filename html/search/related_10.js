@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['simpleueccmmacsapprovider_60029',['SimpleUeCcmMacSapProvider',['../classns3_1_1_simple_ue_component_carrier_manager.html#a3738b0b525d348a29c66af86019a4666',1,'ns3::SimpleUeComponentCarrierManager']]],
-  ['simpleueccmmacsapuser_60030',['SimpleUeCcmMacSapUser',['../classns3_1_1_simple_ue_component_carrier_manager.html#a50b0be4139d63c96ca60500da94dc811',1,'ns3::SimpleUeComponentCarrierManager']]],
-  ['simulator_60031',['Simulator',['../classns3_1_1_time.html#a4ba4278eee9a6776d60f4aa6b42c3a76',1,'ns3::Time']]],
-  ['sum_60032',['Sum',['../classns3_1_1_spectrum_value.html#addd3e18d3b8e0a66ab2c33b44e490aeb',1,'ns3::SpectrumValue']]]
+  ['realprotocolrlcsapuser_0',['RealProtocolRlcSapUser',['../d9/d77/classns3_1_1_lte_enb_rrc_protocol_real.html#ad32067090770e9969dfb7368b27d0cf7',1,'ns3::LteEnbRrcProtocolReal']]],
+  ['rem_1',['Rem',['../df/d50/classns3_1_1_time.html#aa3cf0acb36b404966ff1916cd7a6473d',1,'ns3::Time']]],
+  ['remotechannelbundlemanager_2',['RemoteChannelBundleManager',['../d4/d6f/classns3_1_1_null_message_simulator_impl.html#ad4b9415eadfbbaf9cf4c18eb7b6b7eb8',1,'ns3::NullMessageSimulatorImpl']]]
 ];

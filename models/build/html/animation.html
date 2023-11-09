@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>Animation &#8212; Model Library</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2. Animation &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Antenna Module" href="antenna.html" />
-    <link rel="prev" title="Organization" href="organization.html" />
+    <link rel="next" title="3. Antenna Module" href="antenna.html" />
+    <link rel="prev" title="1. Organization" href="organization.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Models</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,15 +126,16 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="antenna.html" title="Antenna Module"
+          <a href="antenna.html" title="3. Antenna Module"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="organization.html" title="Organization"
+          <a href="organization.html" title="1. Organization"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">2. </span>Animation</a></li> 
       </ul>
     </div>  
 
@@ -131,48 +146,54 @@
             
   <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="animation">
-<h1>Animation<a class="headerlink" href="#animation" title="Permalink to this headline">¶</a></h1>
+<section id="animation">
+<h1><span class="section-number">2. </span>Animation<a class="headerlink" href="#animation" title="Link to this heading">¶</a></h1>
 <p>Animation is an important tool for network simulation. While <em>ns-3</em> does not
 contain a default graphical animation tool, we currently have two ways to provide
 animation, namely using the PyViz method or the NetAnim method.
 The PyViz method is described in <a class="reference external" href="http://www.nsnam.org/wiki/PyViz">http://www.nsnam.org/wiki/PyViz</a>.</p>
 <p>We will describe the NetAnim method briefly here.</p>
-<div class="section" id="netanim">
-<h2>NetAnim<a class="headerlink" href="#netanim" title="Permalink to this headline">¶</a></h2>
-<p>NetAnim is a standalone, Qt4-based software executable that uses a trace file generated during
+<section id="netanim">
+<h2><span class="section-number">2.1. </span>NetAnim<a class="headerlink" href="#netanim" title="Link to this heading">¶</a></h2>
+<p>NetAnim is a standalone, Qt5-based software executable that uses a trace file generated during
 an <em>ns-3</em> simulation to display the topology and animate the packet flow between nodes.</p>
-<div class="figure align-center" id="id1">
+<figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="_images/NetAnim_3_105.png"><img alt="_images/NetAnim_3_105.png" src="_images/NetAnim_3_105.png" style="width: 500px; height: 400px;" /></a>
-<p class="caption"><span class="caption-text">An example of packet animation on wired-links</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">An example of packet animation on wired-links</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>In addition, NetAnim also provides useful features such as tables to display meta-data of packets like the image below</p>
-<div class="figure align-center" id="id2">
+<figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="_images/PacketStatistics.png"><img alt="_images/PacketStatistics.png" src="_images/PacketStatistics.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-text">An example of tables for packet meta-data with protocol filters</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">An example of tables for packet meta-data with protocol filters</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>A way to visualize the trajectory of a mobile node</p>
-<div class="figure align-center" id="id3">
+<figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="_images/Trajectory.png"><img alt="_images/Trajectory.png" src="_images/Trajectory.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-text">An example of the trajectory of a mobile node</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">An example of the trajectory of a mobile node</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>A way to display the routing-tables of multiple nodes at various points in time</p>
-<div class="figure align-center">
+<figure class="align-center">
 <a class="reference internal image-reference" href="_images/RoutingTables.png"><img alt="_images/RoutingTables.png" src="_images/RoutingTables.png" style="width: 500px;" /></a>
-</div>
+</figure>
 <p>A way to display counters associated with multiple nodes as a chart or a table</p>
-<div class="figure align-center">
+<figure class="align-center">
 <a class="reference internal image-reference" href="_images/NodeCountersChart.png"><img alt="_images/NodeCountersChart.png" src="_images/NodeCountersChart.png" style="width: 500px;" /></a>
-</div>
-<div class="figure align-center">
+</figure>
+<figure class="align-center">
 <a class="reference internal image-reference" href="_images/NodeCountersTable.png"><img alt="_images/NodeCountersTable.png" src="_images/NodeCountersTable.png" style="width: 500px;" /></a>
-</div>
+</figure>
 <p>A way to view the timeline of packet transmit and receive events</p>
-<div class="figure align-center">
+<figure class="align-center">
 <a class="reference internal image-reference" href="_images/PacketTimeline.png"><img alt="_images/PacketTimeline.png" src="_images/PacketTimeline.png" style="width: 500px;" /></a>
-</div>
-<div class="section" id="methodology">
-<h3>Methodology<a class="headerlink" href="#methodology" title="Permalink to this headline">¶</a></h3>
+</figure>
+<section id="methodology">
+<h3><span class="section-number">2.1.1. </span>Methodology<a class="headerlink" href="#methodology" title="Link to this heading">¶</a></h3>
 <p>The class ns3::AnimationInterface is responsible for the creation the trace XML file.
 AnimationInterface uses the tracing infrastructure to track packet flows between nodes.
 AnimationInterface registers itself as a trace hook for tx and rx events before the simulation
@@ -181,99 +202,93 @@ trace hooks in AnimationInterface are called. When the rx hooks are called, Anim
 to the trace file, in XML format along with the corresponding tx and rx timestamps. The XML format
 will be discussed in a later section. It is important to note that AnimationInterface records a
 packet only if the rx trace hooks are called. Every tx event must be matched by an rx event.</p>
-</div>
-<div class="section" id="downloading-netanim">
-<h3>Downloading NetAnim<a class="headerlink" href="#downloading-netanim" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="downloading-netanim">
+<h3><span class="section-number">2.1.2. </span>Downloading NetAnim<a class="headerlink" href="#downloading-netanim" title="Link to this heading">¶</a></h3>
 <p>If NetAnim is not already available in the <em>ns-3</em> package you downloaded, you can do the following:</p>
-<p>Please ensure that you have installed mercurial.
-The latest version of NetAnim can be downloaded using mercurial with the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ hg clone http://code.nsnam.org/netanim
+<p>The latest version of NetAnim can be downloaded using git with the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://gitlab.com/nsnam/netanim.git
 </pre></div>
 </div>
-</div>
-<div class="section" id="building-netanim">
-<h3>Building NetAnim<a class="headerlink" href="#building-netanim" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="prerequisites">
-<h4>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h4>
-<p>Qt5 (5.4 and over) is required to build NetAnim. This can be obtained using the following ways:</p>
-<p>For Ubuntu Linux distributions:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ apt-get install qt5-default
-</pre></div>
-</div>
-<p>For Red Hat/Fedora based distribution:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ yum install qt5
-$ yum install qt5-devel
-</pre></div>
-</div>
-<p>For Mac/OSX, see <a class="reference external" href="http://qt.nokia.com/downloads/">http://qt.nokia.com/downloads/</a></p>
-</div>
-<div class="section" id="build-steps">
-<h4>Build steps<a class="headerlink" href="#build-steps" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="building-netanim">
+<h3><span class="section-number">2.1.3. </span>Building NetAnim<a class="headerlink" href="#building-netanim" title="Link to this heading">¶</a></h3>
+<section id="prerequisites">
+<h4><span class="section-number">2.1.3.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">¶</a></h4>
+<p>Qt5 (5.4 and over) is required to build NetAnim. The ns-3 Installation Guide
+lists some packages to install for some
+<a class="reference external" href="https://www.nsnam.org/docs/installation/html/linux.html#optional">Linux</a> systems,
+for <cite>macOS &lt;https://www.nsnam.org/docs/installation/html/macos.html#optional&gt;</cite>, and
+for <a class="reference external" href="https://www.nsnam.org/docs/installation/html/windows.html">Windows</a>.</p>
+<p>The <a class="reference external" href="https://www.qt.io/download">Qt site</a> also provides download options.</p>
+</section>
+<section id="build-steps">
+<h4><span class="section-number">2.1.3.2. </span>Build steps<a class="headerlink" href="#build-steps" title="Link to this heading">¶</a></h4>
 <p>To build NetAnim use the following commands:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> netanim
-$ make clean
-$ qmake NetAnim.pro
-$ make
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>netanim
+$<span class="w"> </span>make<span class="w"> </span>clean
+$<span class="w"> </span>qmake<span class="w"> </span>NetAnim.pro
+$<span class="w"> </span>make
 </pre></div>
 </div>
 <p>Note: qmake could be “qmake-qt5” in some systems</p>
 <p>This should create an executable named “NetAnim” in the same directory:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> $ ls -l NetAnim
--rwxr-xr-x <span class="m">1</span> john john <span class="m">390395</span> <span class="m">2012</span>-05-22 <span class="m">08</span>:32 NetAnim
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>$<span class="w"> </span>ls<span class="w"> </span>-l<span class="w"> </span>NetAnim
+-rwxr-xr-x<span class="w"> </span><span class="m">1</span><span class="w"> </span>john<span class="w"> </span>john<span class="w"> </span><span class="m">390395</span><span class="w"> </span><span class="m">2012</span>-05-22<span class="w"> </span><span class="m">08</span>:32<span class="w"> </span>NetAnim
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="usage">
-<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="usage">
+<h3><span class="section-number">2.1.4. </span>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h3>
 <p>Using NetAnim is a two-step process</p>
 <p>Step 1:Generate the animation XML trace file during simulation using “ns3::AnimationInterface” in the <em>ns-3</em> code base.</p>
 <p>Step 2:Load the XML trace file generated in Step 1 with the offline Qt4-based animator named NetAnim.</p>
-<div class="section" id="step-1-generate-xml-animation-trace-file">
-<h4>Step 1: Generate XML animation trace file<a class="headerlink" href="#step-1-generate-xml-animation-trace-file" title="Permalink to this headline">¶</a></h4>
+<section id="step-1-generate-xml-animation-trace-file">
+<h4><span class="section-number">2.1.4.1. </span>Step 1: Generate XML animation trace file<a class="headerlink" href="#step-1-generate-xml-animation-trace-file" title="Link to this heading">¶</a></h4>
 <p>The class “AnimationInterface” under “src/netanim” uses underlying <em>ns-3</em> trace sources
 to construct a timestamped ASCII file in XML format.</p>
 <p>Examples are found under src/netanim/examples
 Example:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf -d debug configure --enable-examples
-$ ./waf --run <span class="s2">&quot;dumbbell-animation&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>configure<span class="w"> </span>-d<span class="w"> </span>debug<span class="w"> </span>--enable-examples
+$<span class="w"> </span>./ns3<span class="w"> </span>run<span class="w"> </span><span class="s2">&quot;dumbbell-animation&quot;</span>
 </pre></div>
 </div>
 <p>The above will create an XML file dumbbell-animation.xml</p>
-<div class="section" id="mandatory">
-<h5>Mandatory<a class="headerlink" href="#mandatory" title="Permalink to this headline">¶</a></h5>
+<section id="mandatory">
+<h5><span class="section-number">2.1.4.1.1. </span>Mandatory<a class="headerlink" href="#mandatory" title="Link to this heading">¶</a></h5>
 <ol class="arabic simple">
-<li><p>Ensure that your program’s wscript includes the “netanim” module. An example of such a wscript is at src/netanim/examples/wscript.</p></li>
+<li><p>Ensure that your program’s CMakeLists.txt includes the “netanim” module. An example of such a CMakeLists.txt is at src/netanim/examples/CMakeLists.txt.</p></li>
 <li><p>Include the header [#include “ns3/netanim-module.h”] in your test program</p></li>
 <li><p>Add the statement</p></li>
 </ol>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AnimationInterface</span> <span class="nf">anim</span> <span class="p">(</span><span class="s">&quot;animation.xml&quot;</span><span class="p">);</span>  <span class="c1">// where &quot;animation.xml&quot; is any arbitrary filename</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AnimationInterface</span><span class="w"> </span><span class="n">anim</span><span class="p">(</span><span class="s">&quot;animation.xml&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// where &quot;animation.xml&quot; is any arbitrary filename</span>
 </pre></div>
 </div>
 <p>[for versions before ns-3.13 you also have to use the line “anim.SetXMLOutput() to set the XML mode and also use anim.StartAnimation();]</p>
-</div>
-<div class="section" id="optional">
-<h5>Optional<a class="headerlink" href="#optional" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="optional">
+<h5><span class="section-number">2.1.4.1.2. </span>Optional<a class="headerlink" href="#optional" title="Link to this heading">¶</a></h5>
 <p>The following are optional but useful steps:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Step 1</span>
-<span class="n">anim</span><span class="p">.</span><span class="n">SetMobilityPollInterval</span> <span class="p">(</span><span class="n">Seconds</span> <span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">anim</span><span class="p">.</span><span class="n">SetMobilityPollInterval</span><span class="p">(</span><span class="n">Seconds</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>AnimationInterface records the position of all nodes every 250 ms by default. The statement above sets
 the periodic interval at which AnimationInterface records the position of all nodes. If the nodes are
 expected to move very little, it is useful to set a high mobility poll interval to avoid large XML files.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Step 2</span>
-<span class="n">anim</span><span class="p">.</span><span class="n">SetConstantPosition</span> <span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span> <span class="n">Node</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">,</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+<span class="n">anim</span><span class="p">.</span><span class="n">SetConstantPosition</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>AnimationInterface requires that the position of all nodes be set. In <em>ns-3</em> this is done by setting an associated MobilityModel. “SetConstantPosition” is a quick way to set the x-y coordinates of a node which is stationary.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Step 3</span>
-<span class="n">anim</span><span class="p">.</span><span class="n">SetStartTime</span> <span class="p">(</span><span class="n">Seconds</span><span class="p">(</span><span class="mi">150</span><span class="p">));</span> <span class="n">and</span> <span class="n">anim</span><span class="p">.</span><span class="n">SetStopTime</span> <span class="p">(</span><span class="n">Seconds</span><span class="p">(</span><span class="mi">150</span><span class="p">));</span>
+<span class="n">anim</span><span class="p">.</span><span class="n">SetStartTime</span><span class="p">(</span><span class="n">Seconds</span><span class="p">(</span><span class="mi">150</span><span class="p">));</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">anim</span><span class="p">.</span><span class="n">SetStopTime</span><span class="p">(</span><span class="n">Seconds</span><span class="p">(</span><span class="mi">150</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>AnimationInterface can generate large XML files. The above statements restricts the window between which AnimationInterface does tracing. Restricting the window serves to focus only on relevant portions of the simulation and creating manageably small XML files</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Step 4</span>
-<span class="n">AnimationInterface</span> <span class="nf">anim</span> <span class="p">(</span><span class="s">&quot;animation.xml&quot;</span><span class="p">,</span> <span class="mi">50000</span><span class="p">);</span>
+<span class="n">AnimationInterface</span><span class="w"> </span><span class="n">anim</span><span class="p">(</span><span class="s">&quot;animation.xml&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">50000</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Using the above constructor ensures that each animation XML trace file has only 50000 packets. For example, if AnimationInterface captures 150000 packets, using the above constructor splits the capture into 3 files</p>
@@ -283,32 +298,32 @@ expected to move very little, it is useful to set a high mobility poll interval 
 <li><p>animation.xml-2 - containing the packet range 100001-150000</p></li>
 </ul>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Step 5</span>
-<span class="n">anim</span><span class="p">.</span><span class="n">EnablePacketMetadata</span> <span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="n">anim</span><span class="p">.</span><span class="n">EnablePacketMetadata</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>With the above statement, AnimationInterface records the meta-data of each packet in the xml trace file. Metadata can be used by NetAnim to provide better statistics and filter, along with providing some brief information about the packet such as TCP sequence number or source &amp; destination IP address during packet animation.</p>
 <p>CAUTION: Enabling this feature will result in larger XML trace files.
 Please do NOT enable this feature when using Wimax links.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Step 6</span>
-<span class="n">anim</span><span class="p">.</span><span class="n">UpdateNodeDescription</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s">&quot;Access-point&quot;</span><span class="p">);</span>
+<span class="n">anim</span><span class="p">.</span><span class="n">UpdateNodeDescription</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Access-point&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>With the above statement, AnimationInterface assigns the text “Access-point” to node 5.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Step 7</span>
-<span class="n">anim</span><span class="p">.</span><span class="n">UpdateNodeSize</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">);</span>
+<span class="n">anim</span><span class="p">.</span><span class="n">UpdateNodeSize</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>With the above statement, AnimationInterface sets the node size to scale by 1.5. NetAnim automatically scales the graphics view to fit the oboundaries of the topology. This means that NetAnim, can abnormally scale a node’s size too high or too low. Using AnimationInterface::UpdateNodeSize allows you to overwrite the default scaling in NetAnim and use your own custom scale.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Step 8</span>
-<span class="n">anim</span><span class="p">.</span><span class="n">UpdateNodeCounter</span> <span class="p">(</span><span class="mi">89</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">);</span>
+<span class="n">anim</span><span class="p">.</span><span class="n">UpdateNodeCounter</span><span class="p">(</span><span class="mi">89</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mf">3.4</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>With the above statement, AnimationInterface sets the counter with Id == 89, associated with Node 7 with the value 3.4.
 The counter with Id 89 is obtained using AnimationInterface::AddNodeCounter. An example usage for this is in src/netanim/examples/resource-counters.cc.</p>
-</div>
-</div>
-<div class="section" id="step-2-loading-the-xml-in-netanim">
-<h4>Step 2: Loading the XML in NetAnim<a class="headerlink" href="#step-2-loading-the-xml-in-netanim" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="step-2-loading-the-xml-in-netanim">
+<h4><span class="section-number">2.1.4.2. </span>Step 2: Loading the XML in NetAnim<a class="headerlink" href="#step-2-loading-the-xml-in-netanim" title="Link to this heading">¶</a></h4>
 <ol class="arabic simple">
 <li><p>Assuming NetAnim was built, use the command “./NetAnim” to launch NetAnim. Please review the section “Building NetAnim” if NetAnim is not available.</p></li>
 <li><p>When NetAnim is opened, click on the File open button at the top-left corner, select the XML file generated during Step 1.</p></li>
@@ -316,56 +331,63 @@ The counter with Id 89 is obtained using AnimationInterface::AddNodeCounter. An 
 </ol>
 <p>Here is a video illustrating this
 <a class="reference external" href="http://www.youtube.com/watch?v=tz_hUuNwFDs">http://www.youtube.com/watch?v=tz_hUuNwFDs</a></p>
-</div>
-</div>
-<div class="section" id="wiki">
-<h3>Wiki<a class="headerlink" href="#wiki" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="wiki">
+<h3><span class="section-number">2.1.5. </span>Wiki<a class="headerlink" href="#wiki" title="Link to this heading">¶</a></h3>
 <p>For detailed instructions on installing “NetAnim”, F.A.Qs and loading the XML trace file
 (mentioned earlier) using NetAnim please refer:
 <a class="reference external" href="http://www.nsnam.org/wiki/NetAnim">http://www.nsnam.org/wiki/NetAnim</a></p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Animation</a><ul>
-<li><a class="reference internal" href="#netanim">NetAnim</a><ul>
-<li><a class="reference internal" href="#methodology">Methodology</a></li>
-<li><a class="reference internal" href="#downloading-netanim">Downloading NetAnim</a></li>
-<li><a class="reference internal" href="#building-netanim">Building NetAnim</a><ul>
-<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
-<li><a class="reference internal" href="#build-steps">Build steps</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">2. Animation</a><ul>
+<li><a class="reference internal" href="#netanim">2.1. NetAnim</a><ul>
+<li><a class="reference internal" href="#methodology">2.1.1. Methodology</a></li>
+<li><a class="reference internal" href="#downloading-netanim">2.1.2. Downloading NetAnim</a></li>
+<li><a class="reference internal" href="#building-netanim">2.1.3. Building NetAnim</a><ul>
+<li><a class="reference internal" href="#prerequisites">2.1.3.1. Prerequisites</a></li>
+<li><a class="reference internal" href="#build-steps">2.1.3.2. Build steps</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#usage">Usage</a><ul>
-<li><a class="reference internal" href="#step-1-generate-xml-animation-trace-file">Step 1: Generate XML animation trace file</a><ul>
-<li><a class="reference internal" href="#mandatory">Mandatory</a></li>
-<li><a class="reference internal" href="#optional">Optional</a></li>
+<li><a class="reference internal" href="#usage">2.1.4. Usage</a><ul>
+<li><a class="reference internal" href="#step-1-generate-xml-animation-trace-file">2.1.4.1. Step 1: Generate XML animation trace file</a><ul>
+<li><a class="reference internal" href="#mandatory">2.1.4.1.1. Mandatory</a></li>
+<li><a class="reference internal" href="#optional">2.1.4.1.2. Optional</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#step-2-loading-the-xml-in-netanim">Step 2: Loading the XML in NetAnim</a></li>
+<li><a class="reference internal" href="#step-2-loading-the-xml-in-netanim">2.1.4.2. Step 2: Loading the XML in NetAnim</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#wiki">Wiki</a></li>
+<li><a class="reference internal" href="#wiki">2.1.5. Wiki</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="organization.html"
-                        title="previous chapter">Organization</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="antenna.html"
-                        title="next chapter">Antenna Module</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="organization.html"
+                          title="previous chapter"><span class="section-number">1. </span>Organization</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="antenna.html"
+                          title="next chapter"><span class="section-number">3. </span>Antenna Module</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -377,12 +399,12 @@ The counter with Id 89 is obtained using AnimationInterface::AddNodeCounter. An 
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -394,21 +416,22 @@ The counter with Id 89 is obtained using AnimationInterface::AddNodeCounter. An 
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="antenna.html" title="Antenna Module"
+          <a href="antenna.html" title="3. Antenna Module"
              >next</a> |</li>
         <li class="right" >
-          <a href="organization.html" title="Organization"
+          <a href="organization.html" title="1. Organization"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">2. </span>Animation</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 17:37.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:57.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

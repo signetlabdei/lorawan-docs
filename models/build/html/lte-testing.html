@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>Testing Documentation &#8212; Model Library</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>20.3. Testing Documentation &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Profiling Documentation" href="lte-profiling.html" />
-    <link rel="prev" title="User Documentation" href="lte-user.html" />
+    <link rel="next" title="20.4. Profiling Documentation" href="lte-profiling.html" />
+    <link rel="prev" title="20.2. User Documentation" href="lte-user.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Models</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,16 +126,17 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="lte-profiling.html" title="Profiling Documentation"
+          <a href="lte-profiling.html" title="20.4. Profiling Documentation"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="lte-user.html" title="User Documentation"
+          <a href="lte-user.html" title="20.2. User Documentation"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
 
-          <li class="nav-item nav-item-1"><a href="lte.html" accesskey="U">LTE Module</a><span class="navelem">&nbsp;</span></li> 
+          <li class="nav-item nav-item-1"><a href="lte.html" accesskey="U"><span class="section-number">20. </span>LTE Module</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">20.3. </span>Testing Documentation</a></li> 
       </ul>
     </div>  
 
@@ -130,34 +145,34 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="testing-documentation">
-<h1>Testing Documentation<a class="headerlink" href="#testing-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+  <section id="testing-documentation">
+<h1><span class="section-number">20.3. </span>Testing Documentation<a class="headerlink" href="#testing-documentation" title="Link to this heading">¶</a></h1>
+<section id="overview">
+<h2><span class="section-number">20.3.1. </span>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
 <p>To test and validate the ns-3 LTE module, several test suites are provided which are integrated with the ns-3 test framework.
 To run them, you need to have configured the build of the simulator in this way:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf configure --enable-tests --enable-modules<span class="o">=</span>lte --enable-examples
-$ ./test.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>configure<span class="w"> </span>--enable-tests<span class="w"> </span>--enable-modules<span class="o">=</span>lte<span class="w"> </span>--enable-examples
+$<span class="w"> </span>./test.py
 </pre></div>
 </div>
 <p>The above will run not only the test suites belonging to the LTE module, but also those belonging to all the other ns-3 modules on which the LTE module depends. See the ns-3 manual for generic information on the testing framework.</p>
 <p>You can get a more detailed report in HTML format in this way:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./test.py -w results.html
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./test.py<span class="w"> </span>-w<span class="w"> </span>results.html
 </pre></div>
 </div>
 <p>After the above command has run, you can view the detailed result for each test by opening the file <code class="docutils literal notranslate"><span class="pre">results.html</span></code> with a web browser.</p>
 <p>You can run each test suite separately using this command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./test.py -s test-suite-name
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./test.py<span class="w"> </span>-s<span class="w"> </span>test-suite-name
 </pre></div>
 </div>
 <p>For more details about <code class="docutils literal notranslate"><span class="pre">test.py</span></code> and the ns-3 testing framework, please refer to the ns-3 manual.</p>
-</div>
-<div class="section" id="description-of-the-test-suites">
-<h2>Description of the test suites<a class="headerlink" href="#description-of-the-test-suites" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="unit-tests">
-<h3>Unit Tests<a class="headerlink" href="#unit-tests" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="sinr-calculation-in-the-downlink">
-<h4>SINR calculation in the Downlink<a class="headerlink" href="#sinr-calculation-in-the-downlink" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="description-of-the-test-suites">
+<h2><span class="section-number">20.3.2. </span>Description of the test suites<a class="headerlink" href="#description-of-the-test-suites" title="Link to this heading">¶</a></h2>
+<section id="unit-tests">
+<h3><span class="section-number">20.3.2.1. </span>Unit Tests<a class="headerlink" href="#unit-tests" title="Link to this heading">¶</a></h3>
+<section id="sinr-calculation-in-the-downlink">
+<h4><span class="section-number">20.3.2.1.1. </span>SINR calculation in the Downlink<a class="headerlink" href="#sinr-calculation-in-the-downlink" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-downlink-sinr</span></code>
 checks that the SINR calculation in
 downlink is performed correctly. The SINR in the downlink is calculated for each
@@ -187,9 +202,9 @@ from an eNB while facing interference from other eNBs. The test passes
 if the calculated values are equal to the test vector within a
 tolerance of <img class="math" src="_images/math/df048aa37b785a8082d34feb1e133dd438e73fa3.png" alt="10^{-7}"/>. The tolerance is meant to account for
 the approximation errors typical of floating point arithmetic.</p>
-</div>
-<div class="section" id="sinr-calculation-in-the-uplink">
-<h4>SINR calculation in the Uplink<a class="headerlink" href="#sinr-calculation-in-the-uplink" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="sinr-calculation-in-the-uplink">
+<h4><span class="section-number">20.3.2.1.2. </span>SINR calculation in the Uplink<a class="headerlink" href="#sinr-calculation-in-the-uplink" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-uplink-sinr</span></code> checks that the SINR calculation in
 uplink is performed correctly. This test suite is identical to
 <code class="docutils literal notranslate"><span class="pre">lte-downlink-sinr</span></code> described in the previous section, with the
@@ -204,9 +219,9 @@ belonging to other cells).</p>
 passes if the calculated values are equal to the test vector within a
 tolerance of <img class="math" src="_images/math/df048aa37b785a8082d34feb1e133dd438e73fa3.png" alt="10^{-7}"/> which, as for the downlink SINR test,
 deals with floating point arithmetic approximation issues.</p>
-</div>
-<div class="section" id="e-utra-absolute-radio-frequency-channel-number-earfcn">
-<h4>E-UTRA Absolute Radio Frequency Channel Number (EARFCN)<a class="headerlink" href="#e-utra-absolute-radio-frequency-channel-number-earfcn" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="e-utra-absolute-radio-frequency-channel-number-earfcn">
+<h4><span class="section-number">20.3.2.1.3. </span>E-UTRA Absolute Radio Frequency Channel Number (EARFCN)<a class="headerlink" href="#e-utra-absolute-radio-frequency-channel-number-earfcn" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-earfcn</span></code> checks that the carrier frequency used
 by the LteSpectrumValueHelper class (which implements the LTE spectrum
 model) is done in compliance with <a class="reference internal" href="lte-references.html#ts36101" id="id1"><span>[TS36101]</span></a>, where the E-UTRA
@@ -216,12 +231,12 @@ corresponding carrier frequency calculated by hand following the
 specification of <a class="reference internal" href="lte-references.html#ts36101" id="id2"><span>[TS36101]</span></a>. The test passes if the carrier frequency
 returned by LteSpectrumValueHelper is the same as the known value for
 each element in the test vector.</p>
-</div>
-</div>
-<div class="section" id="system-tests">
-<h3>System Tests<a class="headerlink" href="#system-tests" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="dedicated-bearer-deactivation-tests">
-<h4>Dedicated Bearer Deactivation Tests<a class="headerlink" href="#dedicated-bearer-deactivation-tests" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="system-tests">
+<h3><span class="section-number">20.3.2.2. </span>System Tests<a class="headerlink" href="#system-tests" title="Link to this heading">¶</a></h3>
+<section id="dedicated-bearer-deactivation-tests">
+<h4><span class="section-number">20.3.2.2.1. </span>Dedicated Bearer Deactivation Tests<a class="headerlink" href="#dedicated-bearer-deactivation-tests" title="Link to this heading">¶</a></h4>
 <p>The test suite ‘lte-test-deactivate-bearer’ creates test case with single EnodeB and Three UE’s.
 Each UE consists of one Default and one Dedicated EPS bearer with same bearer specification but with different ARP.
 Test Case Flow is as follows:
@@ -229,7 +244,7 @@ Attach UE -&gt; Create Default+Dedicated Bearer -&gt; Deactivate one of the Dedi
 <p>Test case further deactivates dedicated bearer having bearer ID 2(LCID=BearerId+2) of First UE (UE_ID=1)
 User can schedule bearer deactivation after specific time delay using Simulator::Schedule () method.</p>
 <p>Once the test case execution ends it will create <code class="docutils literal notranslate"><span class="pre">DlRlcStats.txt</span></code> and <code class="docutils literal notranslate"><span class="pre">UlRlcStats.txt</span></code>. Key fields that need to be checked in statistics are:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="p">|</span>Start <span class="p">|</span> end <span class="p">|</span> Cell ID <span class="p">|</span> IMSI <span class="p">|</span> RNTI <span class="p">|</span> LCID <span class="p">|</span> TxBytes <span class="p">|</span> RxBytes <span class="p">|</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="p">|</span>Start<span class="w"> </span><span class="p">|</span><span class="w"> </span>end<span class="w"> </span><span class="p">|</span><span class="w"> </span>Cell<span class="w"> </span>ID<span class="w"> </span><span class="p">|</span><span class="w"> </span>IMSI<span class="w"> </span><span class="p">|</span><span class="w"> </span>RNTI<span class="w"> </span><span class="p">|</span><span class="w"> </span>LCID<span class="w"> </span><span class="p">|</span><span class="w"> </span>TxBytes<span class="w"> </span><span class="p">|</span><span class="w"> </span>RxBytes<span class="w"> </span><span class="p">|</span>
 </pre></div>
 </div>
 <p>Test case executes in three epochs:</p>
@@ -248,9 +263,9 @@ User can schedule bearer deactivation after specific time delay using Simulator:
 </ol>
 </div></blockquote>
 <p>If above criteria do not match, the test case is considered to be failed</p>
-</div>
-<div class="section" id="adaptive-modulation-and-coding-tests">
-<span id="sec-lte-amc-tests"></span><h4>Adaptive Modulation and Coding Tests<a class="headerlink" href="#adaptive-modulation-and-coding-tests" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="adaptive-modulation-and-coding-tests">
+<span id="sec-lte-amc-tests"></span><h4><span class="section-number">20.3.2.2.2. </span>Adaptive Modulation and Coding Tests<a class="headerlink" href="#adaptive-modulation-and-coding-tests" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-link-adaptation</span></code> provides system tests recreating a
 scenario with a single eNB and a single UE. Different test cases are created
 corresponding to different SNR values perceived by the UE. The aim of the test
@@ -275,13 +290,15 @@ of the test vector within an absolute tolerance of <img class="math" src="_image
 the one in the test vector.</p></li>
 </ol>
 </div></blockquote>
-<div class="figure align-center" id="id12">
+<figure class="align-center" id="id12">
 <span id="fig-lte-mcs-index"></span><img alt="_images/lte-mcs-index.png" src="_images/lte-mcs-index.png" />
-<p class="caption"><span class="caption-text">Test vector for Adaptive Modulation and Coding</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="inter-cell-interference-tests">
-<h4>Inter-cell Interference Tests<a class="headerlink" href="#inter-cell-interference-tests" title="Permalink to this headline">¶</a></h4>
+<figcaption>
+<p><span class="caption-text">Test vector for Adaptive Modulation and Coding</span><a class="headerlink" href="#id12" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="inter-cell-interference-tests">
+<h4><span class="section-number">20.3.2.2.3. </span>Inter-cell Interference Tests<a class="headerlink" href="#inter-cell-interference-tests" title="Link to this heading">¶</a></h4>
 <p>The test suite <cite>lte-interference</cite> provides system tests recreating an
 inter-cell interference scenario with two eNBs, each having a single
 UE attached to it and employing Adaptive Modulation and Coding both in
@@ -295,10 +312,12 @@ the actual interference power perceived will be different, because of
 the different propagation loss in the uplink and downlink
 bands. Different test cases are obtained by varying the <img class="math" src="_images/math/3ae609da43d4b08e38f5d39c0e6b1334d3c6bbd9.png" alt="d_1"/>
 and <img class="math" src="_images/math/cc01b82d36d02dbb2f81204ce239408227e1f242.png" alt="d_2"/> parameters.</p>
-<div class="figure align-center" id="id13">
+<figure class="align-center" id="id13">
 <span id="fig-lte-interference-test-scenario"></span><img alt="_images/lte-interference-test-scenario.png" src="_images/lte-interference-test-scenario.png" />
-<p class="caption"><span class="caption-text">Topology for the inter-cell interference test</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Topology for the inter-cell interference test</span><a class="headerlink" href="#id13" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>The test vectors are obtained by use of a dedicated octave script
 (available in
 <cite>src/lte/test/reference/lte_link_budget_interference.m</cite>), which does
@@ -307,9 +326,9 @@ test case, and outputs the resulting SINR and spectral efficiency. The
 latter is then used to determine (using the same procedure adopted for
 <a class="reference internal" href="#sec-lte-amc-tests"><span class="std std-ref">Adaptive Modulation and Coding Tests</span></a>. We note that the test vector
 contains separate values for uplink and downlink.</p>
-</div>
-<div class="section" id="ue-measurements-tests">
-<h4>UE Measurements Tests<a class="headerlink" href="#ue-measurements-tests" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="ue-measurements-tests">
+<h4><span class="section-number">20.3.2.2.4. </span>UE Measurements Tests<a class="headerlink" href="#ue-measurements-tests" title="Link to this heading">¶</a></h4>
 <p>The test suite <cite>lte-ue-measurements</cite> provides system tests recreating an
 inter-cell interference scenario identical of the one defined for
 <cite>lte-interference</cite> test-suite. However, in this test the quantities to be
@@ -323,9 +342,9 @@ test case, and outputs the resulting RSRP and RSRQ. The obtained values are then
 used for checking the correctness of the UE Measurements at PHY layer. After
 that, they have to be converted according to 3GPP formatting for the purpose of
 checking their correctness at eNB RRC level.</p>
-</div>
-<div class="section" id="ue-measurement-configuration-tests">
-<h4>UE measurement configuration tests<a class="headerlink" href="#ue-measurement-configuration-tests" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="ue-measurement-configuration-tests">
+<h4><span class="section-number">20.3.2.2.5. </span>UE measurement configuration tests<a class="headerlink" href="#ue-measurement-configuration-tests" title="Link to this heading">¶</a></h4>
 <p>Besides the previously mentioned test suite, there are 3 other test suites for
 testing UE measurements: <cite>lte-ue-measurements-piecewise-1</cite>,
 <cite>lte-ue-measurements-piecewise-2</cite>, and <cite>lte-ue-measurements-handover</cite>. These
@@ -337,8 +356,8 @@ measurement reports received by eNodeB. Each test case is an stand-alone LTE
 simulation and the test case will pass if measurement report(s) only occurs at
 the prescribed time and shows the correct level of RSRP (RSRQ is not verified at
 the moment).</p>
-<div class="section" id="piecewise-configuration">
-<h5>Piecewise configuration<a class="headerlink" href="#piecewise-configuration" title="Permalink to this headline">¶</a></h5>
+<section id="piecewise-configuration">
+<h5><span class="section-number">20.3.2.2.5.1. </span>Piecewise configuration<a class="headerlink" href="#piecewise-configuration" title="Link to this heading">¶</a></h5>
 <p>The piecewise configuration aims to test a particular UE measurements
 configuration. The simulation script will setup the corresponding measurements
 configuration to the UE, which will be active throughout the simulation.</p>
@@ -349,10 +368,12 @@ is used, and layer 3 filtering is disabled. Finally, the UE moves in a
 predefined motion pattern between 4 distinct spots, as depicted in Figure
 <a class="reference internal" href="#fig-ue-meas-piecewise-motion"><span class="std std-ref">UE movement trace throughout the simulation in piecewise configuration</span></a> below. Therefore the fluctuation of the
 measured RSRP can be determined more easily.</p>
-<div class="figure align-center" id="id14">
-<span id="fig-ue-meas-piecewise-motion"></span><a class="reference internal image-reference" href="_images/ue-meas-piecewise-motion.png"><img alt="_images/ue-meas-piecewise-motion.png" src="_images/ue-meas-piecewise-motion.png" style="width: 841.6px; height: 299.2px;" /></a>
-<p class="caption"><span class="caption-text">UE movement trace throughout the simulation in piecewise configuration</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id14">
+<span id="fig-ue-meas-piecewise-motion"></span><a class="reference internal image-reference" href="_images/ue-meas-piecewise-motion.png"><img alt="_images/ue-meas-piecewise-motion.png" src="_images/ue-meas-piecewise-motion.png" style="width: 832.8000000000001px; height: 297.6px;" /></a>
+<figcaption>
+<p><span class="caption-text">UE movement trace throughout the simulation in piecewise configuration</span><a class="headerlink" href="#id14" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>The motivation behind the <em>“teleport”</em> between the predefined spots is to
 introduce drastic change of RSRP level, which will guarantee the triggering of
 entering or leaving condition of the tested event. By performing drastic
@@ -366,21 +387,25 @@ the values are refreshed every 200 ms, which is the default filtering period of
 PHY layer measurements report. The figure also shows the time when entering and
 leaving conditions of an example instance of Event A1 (serving cell becomes
 better than threshold) occur during the simulation.</p>
-<div class="figure align-center" id="id15">
-<span id="fig-ue-meas-piecewise-a1"></span><a class="reference internal image-reference" href="_images/ue-meas-piecewise-a1.png"><img alt="_images/ue-meas-piecewise-a1.png" src="_images/ue-meas-piecewise-a1.png" style="width: 832.8000000000001px; height: 331.20000000000005px;" /></a>
-<p class="caption"><span class="caption-text">Measured RSRP trace of an example Event A1 test case in piecewise
-configuration</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id15">
+<span id="fig-ue-meas-piecewise-a1"></span><a class="reference internal image-reference" href="_images/ue-meas-piecewise-a1.png"><img alt="_images/ue-meas-piecewise-a1.png" src="_images/ue-meas-piecewise-a1.png" style="width: 823.2px; height: 329.6px;" /></a>
+<figcaption>
+<p><span class="caption-text">Measured RSRP trace of an example Event A1 test case in piecewise
+configuration</span><a class="headerlink" href="#id15" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>Each reporting criterion is tested several times with different threshold/offset
 parameters. Some test scenarios also take hysteresis and time-to-trigger into
 account. Figure <a class="reference internal" href="#fig-ue-meas-piecewise-a1-hys"><span class="std std-ref">Measured RSRP trace of an example Event A1 with hysteresis test case in
 piecewise configuration</span></a> depicts the effect of
 hysteresis in another example of Event A1 test.</p>
-<div class="figure align-center" id="id16">
-<span id="fig-ue-meas-piecewise-a1-hys"></span><a class="reference internal image-reference" href="_images/ue-meas-piecewise-a1-hys.png"><img alt="_images/ue-meas-piecewise-a1-hys.png" src="_images/ue-meas-piecewise-a1-hys.png" style="width: 864.8000000000001px; height: 331.20000000000005px;" /></a>
-<p class="caption"><span class="caption-text">Measured RSRP trace of an example Event A1 with hysteresis test case in
-piecewise configuration</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id16">
+<span id="fig-ue-meas-piecewise-a1-hys"></span><a class="reference internal image-reference" href="_images/ue-meas-piecewise-a1-hys.png"><img alt="_images/ue-meas-piecewise-a1-hys.png" src="_images/ue-meas-piecewise-a1-hys.png" style="width: 855.2px; height: 329.6px;" /></a>
+<figcaption>
+<p><span class="caption-text">Measured RSRP trace of an example Event A1 with hysteresis test case in
+piecewise configuration</span><a class="headerlink" href="#id16" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>Piecewise configuration is used in two test suites of UE measurements. The first
 one is <cite>lte-ue-measurements-piecewise-1</cite>, henceforth Piecewise test #1, which
 simulates 1 UE and 1 eNodeB. The other one is <cite>lte-ue-measurements-piecewise-2</cite>,
@@ -392,14 +417,7 @@ still working correctly (albeit not reporting anything) in the absence of any
 neighboring cell. Table <a class="reference internal" href="#tab-ue-meas-piecewise-1"><span class="std std-ref">UE measurements test scenarios using piecewise configuration #1</span></a> below lists the
 scenarios tested in piecewise test #1.</p>
 <span id="tab-ue-meas-piecewise-1"></span><table class="docutils align-default" id="id17">
-<caption><span class="caption-text">UE measurements test scenarios using piecewise configuration #1</span><a class="headerlink" href="#id17" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 28%" />
-<col style="width: 25%" />
-<col style="width: 15%" />
-<col style="width: 23%" />
-</colgroup>
+<caption><span class="caption-text">UE measurements test scenarios using piecewise configuration #1</span><a class="headerlink" href="#id17" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Test #</p></th>
 <th class="head"><p>Reporting Criteria</p></th>
@@ -521,14 +539,7 @@ role of serving and neighbouring cells do not switch during the simulation.
 Table <a class="reference internal" href="#tab-ue-meas-piecewise-2"><span class="std std-ref">UE measurements test scenarios using piecewise configuration #2</span></a> below lists the scenarios tested in
 Piecewise test #2.</p>
 <span id="tab-ue-meas-piecewise-2"></span><table class="docutils align-default" id="id18">
-<caption><span class="caption-text">UE measurements test scenarios using piecewise configuration #2</span><a class="headerlink" href="#id18" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 28%" />
-<col style="width: 25%" />
-<col style="width: 15%" />
-<col style="width: 23%" />
-</colgroup>
+<caption><span class="caption-text">UE measurements test scenarios using piecewise configuration #2</span><a class="headerlink" href="#id18" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Test #</p></th>
 <th class="head"><p>Reporting Criteria</p></th>
@@ -740,9 +751,9 @@ latest measurement reports received from PHY layer. While the last one is
 responsible for verifying time-to-trigger cancellation, for example when a
 measurement report from PHY shows that the entering/leaving condition is no
 longer true before the first trigger is fired.</p>
-</div>
-<div class="section" id="handover-configuration">
-<h5>Handover configuration<a class="headerlink" href="#handover-configuration" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="handover-configuration">
+<h5><span class="section-number">20.3.2.2.5.2. </span>Handover configuration<a class="headerlink" href="#handover-configuration" title="Link to this heading">¶</a></h5>
 <p>The purpose of the handover configuration is to verify whether UE measurement
 configuration is updated properly after a successful handover takes place. For
 this purpose, the simulation will construct 2 eNodeBs with different UE
@@ -762,13 +773,7 @@ report received by the eNodeB will be verified.</p>
 and differences in threshold/offset. Table <a class="reference internal" href="#tab-ue-meas-handover"><span class="std std-ref">UE measurements test scenarios using handover configuration</span></a> below
 lists the tested scenarios.</p>
 <span id="tab-ue-meas-handover"></span><table class="docutils align-default" id="id19">
-<caption><span class="caption-text">UE measurements test scenarios using handover configuration</span><a class="headerlink" href="#id19" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 21%" />
-<col style="width: 36%" />
-<col style="width: 36%" />
-</colgroup>
+<caption><span class="caption-text">UE measurements test scenarios using handover configuration</span><a class="headerlink" href="#id19" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Test #</p></th>
 <th class="head"><p>Test Subject</p></th>
@@ -864,10 +869,10 @@ lists the tested scenarios.</p>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="round-robin-scheduler-performance">
-<h4>Round Robin scheduler performance<a class="headerlink" href="#round-robin-scheduler-performance" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="round-robin-scheduler-performance">
+<h4><span class="section-number">20.3.2.2.6. </span>Round Robin scheduler performance<a class="headerlink" href="#round-robin-scheduler-performance" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-rr-ff-mac-scheduler</span></code> creates different test cases with
 a single eNB and several UEs, all having the same Radio Bearer specification. In
 each test case, the UEs see the same SINR from the eNB; different test cases are
@@ -904,14 +909,16 @@ run.</p>
 <p>In Figure <a class="reference internal" href="#fig-lenathrtestcase1">fig-lenaThrTestCase1</a>, the curves labeled “RR” represent the test values
 calculated for the RR scheduler test, as a function of the number of UEs and of
 the MCS index being used in each test case.</p>
-<div class="figure align-center" id="id20">
+<figure class="align-center" id="id20">
 <span id="fig-lenathrtestcase1"></span><img alt="_images/lenaThrTestCase1.png" src="_images/lenaThrTestCase1.png" />
-<p class="caption"><span class="caption-text">Test vectors for the RR and PF Scheduler in the downlink in a
-scenario where all UEs use the same MCS.</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="proportional-fair-scheduler-performance">
-<h4>Proportional Fair scheduler performance<a class="headerlink" href="#proportional-fair-scheduler-performance" title="Permalink to this headline">¶</a></h4>
+<figcaption>
+<p><span class="caption-text">Test vectors for the RR and PF Scheduler in the downlink in a
+scenario where all UEs use the same MCS.</span><a class="headerlink" href="#id20" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="proportional-fair-scheduler-performance">
+<h4><span class="section-number">20.3.2.2.7. </span>Proportional Fair scheduler performance<a class="headerlink" href="#proportional-fair-scheduler-performance" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-pf-ff-mac-scheduler</span></code> creates different test cases with
 a single eNB, using the Proportional Fair (PF) scheduler, and several UEs, all
 having the same Radio Bearer specification. The test cases are grouped in two
@@ -978,14 +985,16 @@ station such that they will use respectively the MCS index <img class="math" src
 6"/>. From the figure, we note that, as expected, the obtained throughput is
 proportional to the achievable rate. In other words, the PF scheduler assign
 more resources to the users that use a higher MCS index.</p>
-<div class="figure align-center" id="id21">
+<figure class="align-center" id="id21">
 <span id="fig-lenathrtestcase2"></span><img alt="_images/lenaThrTestCase2.png" src="_images/lenaThrTestCase2.png" />
-<p class="caption"><span class="caption-text">Throughput ratio evaluation for the PF scheduler in a scenario
-where the UEs have MCS index <img class="math" src="_images/math/84dfd90bb41131bbdbd7500ddcae02261bd5eae1.png" alt="28, 24, 16, 12, 6"/></span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="maximum-throughput-scheduler-performance">
-<h4>Maximum Throughput scheduler performance<a class="headerlink" href="#maximum-throughput-scheduler-performance" title="Permalink to this headline">¶</a></h4>
+<figcaption>
+<p><span class="caption-text">Throughput ratio evaluation for the PF scheduler in a scenario
+where the UEs have MCS index <img class="math" src="_images/math/84dfd90bb41131bbdbd7500ddcae02261bd5eae1.png" alt="28, 24, 16, 12, 6"/></span><a class="headerlink" href="#id21" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="maximum-throughput-scheduler-performance">
+<h4><span class="section-number">20.3.2.2.8. </span>Maximum Throughput scheduler performance<a class="headerlink" href="#maximum-throughput-scheduler-performance" title="Link to this heading">¶</a></h4>
 <p>Test suites <code class="docutils literal notranslate"><span class="pre">lte-fdmt-ff-mac-scheduler</span></code> and <code class="docutils literal notranslate"><span class="pre">lte-tdmt-ff-mac-scheduler</span></code>
 create different test cases with a single eNB and several UEs, all having the same
 Radio Bearer specification, using the Frequency Domain Maximum Throughput (FDMT)
@@ -1009,17 +1018,17 @@ transport block size as defined in <a class="reference internal" href="lte-refer
 throughput <img class="math" src="_images/math/e8dea8254118f111b5fb20895b03528c17566f06.png" alt="T"/> in bit/s achieved by each UE is calculated as</p>
 <div class="math">
 <p><img src="_images/math/c65898d0b1958e128c90e2502a0b08c4bb9fb438.png" alt="T = \frac{S(M,B)}{\tau}"/></p>
-</div></div>
-<div class="section" id="throughput-to-average-scheduler-performance">
-<h4>Throughput to Average scheduler performance<a class="headerlink" href="#throughput-to-average-scheduler-performance" title="Permalink to this headline">¶</a></h4>
+</div></section>
+<section id="throughput-to-average-scheduler-performance">
+<h4><span class="section-number">20.3.2.2.9. </span>Throughput to Average scheduler performance<a class="headerlink" href="#throughput-to-average-scheduler-performance" title="Link to this heading">¶</a></h4>
 <p>Test suites <code class="docutils literal notranslate"><span class="pre">lte-tta-ff-mac-scheduler</span></code>
 create different test cases with a single eNB and several UEs, all having the same
 Radio Bearer specification using TTA scheduler. Network topology and configurations in
 TTA test case are as the same as the test for MT scheduler. More complex test case needs to be
 developed to show the fairness feature of TTA scheduler.</p>
-</div>
-<div class="section" id="blind-average-throughput-scheduler-performance">
-<h4>Blind Average Throughput scheduler performance<a class="headerlink" href="#blind-average-throughput-scheduler-performance" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="blind-average-throughput-scheduler-performance">
+<h4><span class="section-number">20.3.2.2.10. </span>Blind Average Throughput scheduler performance<a class="headerlink" href="#blind-average-throughput-scheduler-performance" title="Link to this heading">¶</a></h4>
 <p>Test suites <code class="docutils literal notranslate"><span class="pre">lte-tdbet-ff-mac-scheduler</span></code> and <code class="docutils literal notranslate"><span class="pre">lte-fdbet-ff-mac-scheduler</span></code> create different
 test cases with a single eNB and several UEs, all having the same Radio Bearer specification.</p>
 <p>In the first test case of <code class="docutils literal notranslate"><span class="pre">lte-tdbet-ff-mac-scheduler</span></code> and <code class="docutils literal notranslate"><span class="pre">lte-fdbet-ff-mac-scheduler</span></code>,
@@ -1050,9 +1059,9 @@ user i. Then we have:</p>
 <img class="math" src="_images/math/db063ac3b718da47702b1dbb3c52d3feac13333b.png" alt="T_i"/> by <img class="math" src="_images/math/e8dea8254118f111b5fb20895b03528c17566f06.png" alt="T"/>.  Then we have:</p>
 <div class="math">
 <p><img src="_images/math/29e4997814a9d43d0eddaefc5056750ad45d2de7.png" alt="T = \frac{1}{ \sum_{i=1}^{N} \frac{1}{R^{fb}_i} }"/></p>
-</div></div>
-<div class="section" id="token-band-fair-queue-scheduler-performance">
-<h4>Token Band Fair Queue scheduler performance<a class="headerlink" href="#token-band-fair-queue-scheduler-performance" title="Permalink to this headline">¶</a></h4>
+</div></section>
+<section id="token-band-fair-queue-scheduler-performance">
+<h4><span class="section-number">20.3.2.2.11. </span>Token Band Fair Queue scheduler performance<a class="headerlink" href="#token-band-fair-queue-scheduler-performance" title="Link to this heading">¶</a></h4>
 <p>Test suites <code class="docutils literal notranslate"><span class="pre">lte-fdtbfq-ff-mac-scheduler</span></code> and <code class="docutils literal notranslate"><span class="pre">lte-tdtbfq-ff-mac-scheduler</span></code> create different
 test cases for testing three key features of TBFQ scheduler: traffic policing, fairness and traffic
 balance. Constant Bit Rate UDP traffic is used in both downlink and uplink in all test cases.
@@ -1117,9 +1126,9 @@ traffic. This is not accorded with our parameter setting rules. Actually, the tr
 is used in VBR traffic. Because different UE’s peak rate may occur in different time, TBFQ use shared
 token bank to balance the traffic among those VBR traffics. Test case 3 use CBR traffic to verify this
 feature. But in the real simulation, it is recommended to set token generation rate to MBR.</p>
-</div>
-<div class="section" id="priority-set-scheduler-performance">
-<h4>Priority Set scheduler performance<a class="headerlink" href="#priority-set-scheduler-performance" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="priority-set-scheduler-performance">
+<h4><span class="section-number">20.3.2.2.12. </span>Priority Set scheduler performance<a class="headerlink" href="#priority-set-scheduler-performance" title="Link to this heading">¶</a></h4>
 <p>Test suites <code class="docutils literal notranslate"><span class="pre">lte-pss-ff-mac-scheduler</span></code> create different test cases with a single eNB and several UEs.
 In all test cases, we select PFsch in FD scheduler. Same testing results can also be obtained by using CoItA
 scheduler. In addition, all test cases do not define nMux so that TD scheduler in PSS will always select half
@@ -1148,17 +1157,17 @@ maximum throughput case, PSS performs like a TD-BET. Then we have:</p>
 <p><img src="_images/math/2a210b2b968096a6e23c9dc4cc5674f38eb383a5.png" alt="T = \frac{N}{ \sum_{i=1}^N \frac{1}{R^{fb}_i} }"/></p>
 </div><p>Here, <img class="math" src="_images/math/e8dea8254118f111b5fb20895b03528c17566f06.png" alt="T"/> is the maximum throughput. <img class="math" src="_images/math/6e52cf2780073e8abb171a8c34b93990892fcf45.png" alt="R^{fb}_i"/> be the full bandwidth achievable rate
 for user i. <img class="math" src="_images/math/3bfb3a64189a14b2704f4610827762d5e3145114.png" alt="N"/> is the number of UE.</p>
-</div>
-<div class="section" id="channel-and-qos-aware-scheduler-performance">
-<h4>Channel and QoS aware scheduler performance<a class="headerlink" href="#channel-and-qos-aware-scheduler-performance" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="channel-and-qos-aware-scheduler-performance">
+<h4><span class="section-number">20.3.2.2.13. </span>Channel and QoS aware scheduler performance<a class="headerlink" href="#channel-and-qos-aware-scheduler-performance" title="Link to this heading">¶</a></h4>
 <p>The performance of the Channel and QoS aware scheduler can be tested in the similar way to performance of
 Priority Set scheduler when GBR flows are not delay sensitive by measuring if the achieved throughput at
 RLC layer is close to the TBR. Having this in mind, the performance of the CQA scheduler is tested by using
 the same test cases as the <code class="docutils literal notranslate"><span class="pre">lte-pss-ff-mac-scheduler</span></code>. Additionally, in <a class="reference internal" href="lte-references.html#bbojovic2014" id="id10"><span>[Bbojovic2014]</span></a> can be found performance
 evaluation of CQA scheduler when the GBR flows are delay sensitive by considering different QoE metrics.</p>
-</div>
-<div class="section" id="building-propagation-loss-model">
-<h4>Building Propagation Loss Model<a class="headerlink" href="#building-propagation-loss-model" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="building-propagation-loss-model">
+<h4><span class="section-number">20.3.2.2.14. </span>Building Propagation Loss Model<a class="headerlink" href="#building-propagation-loss-model" title="Link to this heading">¶</a></h4>
 <p>The aim of the system test is to verify the integration of the
 BuildingPathlossModel with the lte module. The test exploits a set of
 three pre calculated losses for generating the expected SINR at the
@@ -1170,9 +1179,9 @@ calculated off-line with an Octave script
 reference loss value is equal to the value calculated by the simulator
 within a tolerance of <img class="math" src="_images/math/ee3f80b4ad23c990072c3a64d1fd4e264c2b4a10.png" alt="0.001"/> dB, which accounts for numerical
 errors in the calculations.</p>
-</div>
-<div class="section" id="physical-error-model">
-<h4>Physical Error Model<a class="headerlink" href="#physical-error-model" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="physical-error-model">
+<h4><span class="section-number">20.3.2.2.15. </span>Physical Error Model<a class="headerlink" href="#physical-error-model" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-phy-error-model</span></code> generates different test cases for
 evaluating both data and control error models. For what concern the data, the
 test consists of six test cases with single eNB and a various number of UEs,
@@ -1213,18 +1222,24 @@ the reception of a TB is in general different.</p>
 bits), that in turns produce a BLER of 0.14, since each CB has CBLER equal to
 0.075 (see point F in figure <a class="reference internal" href="#fig-mcs-14-test"><span class="std std-ref">BLER for test 6.</span></a>).</p></li>
 </ol>
-<div class="figure align-center" id="id22">
+<figure class="align-center" id="id22">
 <span id="fig-mcs-2-test"></span><img alt="_images/MCS_2_test.png" src="_images/MCS_2_test.png" />
-<p class="caption"><span class="caption-text">BLER for tests 1, 2, 3.</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-center" id="id23">
+<figcaption>
+<p><span class="caption-text">BLER for tests 1, 2, 3.</span><a class="headerlink" href="#id22" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id23">
 <span id="fig-mcs-12-test"></span><img alt="_images/MCS_12_test.png" src="_images/MCS_12_test.png" />
-<p class="caption"><span class="caption-text">BLER for tests 4, 5.</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-center" id="id24">
+<figcaption>
+<p><span class="caption-text">BLER for tests 4, 5.</span><a class="headerlink" href="#id23" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id24">
 <span id="fig-mcs-14-test"></span><img alt="_images/MCS_16_test.png" src="_images/MCS_16_test.png" />
-<p class="caption"><span class="caption-text">BLER for test 6.</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">BLER for test 6.</span><a class="headerlink" href="#id24" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>The test condition verifies that in each test case the expected number of
 packets received correctly corresponds to a Bernoulli distribution with a
 confidence interval of 99%, where the probability of success in each trail is
@@ -1252,9 +1267,9 @@ with a confidence interval of 99.8%, where the probability of success
 in each trail is <img class="math" src="_images/math/d36478bf1526dbe2e253374dcdbd0b8bda2b1f59.png" alt="p=1-BER"/> and <img class="math" src="_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.png" alt="n"/> is the total number of
 packet sent. The larger confidence interval is due to the errors that
 might be produced in quantizing the MI and the error curve.</p>
-</div>
-<div class="section" id="harq-model">
-<h4>HARQ Model<a class="headerlink" href="#harq-model" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="harq-model">
+<h4><span class="section-number">20.3.2.2.16. </span>HARQ Model<a class="headerlink" href="#harq-model" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-harq</span></code> includes two tests for evaluating the HARQ model and the related extension in the error model. The test consists on checking whether the amount of bytes received during the simulation corresponds to the expected ones according to the values of transport block and the HARQ dynamics. In detail, the test checks whether the throughput obtained after one HARQ retransmission is the expected one. For evaluating the expected throughput the expected TB delivering time has been evaluated according to the following formula:</p>
 <div class="math">
 <p><img src="_images/math/723de0915c5c2f50cd30f32c77b25c20d20c7d40.png" alt="\mathrm{T} = P_s^1 \times 1 + P_s^2 \times 2 + (1-P_s^2) \times 3"/></p>
@@ -1268,16 +1283,16 @@ might be produced in quantizing the MI and the error curve.</p>
 <p><img src="_images/math/11f9e6395cfe5617fdbfc408385dac4c6f708303.png" alt="\mathrm{Thr_{test-i}} = \frac{TTI_{NUM}}{T_{test-i}} TB_{size} = \left\{ \begin{array}{lll} \dfrac{1000}{2.074}66 = 31822\mbox{ bps} &amp; \mbox{ for test-1} \\ &amp; \\ \dfrac{1000}{2.248}472 = 209964\mbox{ bps} &amp; \mbox{ for test-2}\end{array} \right."/></p>
 </div><p>where <img class="math" src="_images/math/f07c5faf5141b9ac4231d7169a7a41724a9c17ce.png" alt="TTI_{NUM}"/> is the total number of TTIs in 1 second.
 The test is performed both for Round Robin scheduler. The test passes if the measured throughput matches with the reference throughput within a relative tolerance of 0.1. This tolerance is needed to account for the transient behavior at the beginning of the simulation and the on-fly blocks at the end of the simulation.</p>
-</div>
-<div class="section" id="mimo-model">
-<h4>MIMO Model<a class="headerlink" href="#mimo-model" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="mimo-model">
+<h4><span class="section-number">20.3.2.2.17. </span>MIMO Model<a class="headerlink" href="#mimo-model" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-mimo</span></code> aims at verifying both the effect of the gain considered for each Transmission Mode on the system performance and the Transmission Mode switching through the scheduler interface. The test consists on checking whether the amount of bytes received during a certain window of time (0.1 seconds in our case) corresponds to the expected ones according to the values of transport block
 size reported in table 7.1.7.2.1-1 of <a class="reference internal" href="lte-references.html#ts36213" id="id11"><span>[TS36213]</span></a>, similarly to what done for the tests of the schedulers.</p>
 <p>The test is performed both for Round Robin and Proportional Fair schedulers. The test passes if the measured throughput matches with the reference throughput within a relative tolerance of 0.1. This tolerance is needed to account for the
 transient behavior at the beginning of the simulation and the transition phase between the Transmission Modes.</p>
-</div>
-<div class="section" id="antenna-model-integration">
-<h4>Antenna Model integration<a class="headerlink" href="#antenna-model-integration" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="antenna-model-integration">
+<h4><span class="section-number">20.3.2.2.18. </span>Antenna Model integration<a class="headerlink" href="#antenna-model-integration" title="Link to this heading">¶</a></h4>
 <p>The test suite <cite>lte-antenna</cite> checks that the AntennaModel integrated
 with the LTE model works correctly. This test suite recreates a
 simulation scenario with one eNB node at coordinates (0,0,0) and one
@@ -1292,9 +1307,9 @@ tolerance of <img class="math" src="_images/math/7e21945d9e6e712189e545e21440223
 Different test cases are provided by varying the x and y coordinates
 of the UE,  and the beamwidth and the orientation of the antenna of
 the eNB.</p>
-</div>
-<div class="section" id="rlc">
-<h4>RLC<a class="headerlink" href="#rlc" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="rlc">
+<h4><span class="section-number">20.3.2.2.19. </span>RLC<a class="headerlink" href="#rlc" title="Link to this heading">¶</a></h4>
 <p>Two test suites <code class="docutils literal notranslate"><span class="pre">lte-rlc-um-transmitter</span></code> and
 <code class="docutils literal notranslate"><span class="pre">lte-rlc-am-transmitter</span></code> check that the UM RLC and the AM RLC
 implementation work correctly. Both these suites work by testing RLC
@@ -1335,9 +1350,9 @@ cases are instantiated using different <code class="docutils literal notranslate
 loss probability values. Each test case passes if at the end of the
 simulation all SDUs are correctly delivered to the upper layers of the
 receiving RLC AM entity.</p>
-</div>
-<div class="section" id="rrc">
-<h4>RRC<a class="headerlink" href="#rrc" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="rrc">
+<h4><span class="section-number">20.3.2.2.20. </span>RRC<a class="headerlink" href="#rrc" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-rrc</span></code> tests the correct functionality of the following aspects:</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -1436,9 +1451,9 @@ the original location:</p>
 <li><p>the RRC state of the UE Context at the eNB is CONNECTED_NORMALLY</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="initial-cell-selection">
-<h4>Initial cell selection<a class="headerlink" href="#initial-cell-selection" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="initial-cell-selection">
+<h4><span class="section-number">20.3.2.2.21. </span>Initial cell selection<a class="headerlink" href="#initial-cell-selection" title="Link to this heading">¶</a></h4>
 <p>The test suite <cite>lte-cell-selection</cite> is responsible for verifying the
 <a class="reference internal" href="lte-design.html#sec-initial-cell-selection"><span class="std std-ref">Initial Cell Selection</span></a> procedure. The test is a simulation of a small
 network of 2 non-CSG cells and 2 non-CSG cells. Several static UEs are then
@@ -1451,10 +1466,12 @@ UE is properly connected, i.e., its final state is <cite>CONNECTED_NORMALLY</cit
 <a class="reference internal" href="#fig-lte-cell-selection-scenario"><span class="std std-ref">Sample result of cell selection test</span></a> depicts the network layout and the
 expected result. When a UE is depicted as having 2 successful cell selections
 (e.g., UE #3 and #4), any of them is accepted by the test case.</p>
-<div class="figure align-center" id="id25">
-<span id="fig-lte-cell-selection-scenario"></span><a class="reference internal image-reference" href="_images/lte-cell-selection-scenario.png"><img alt="_images/lte-cell-selection-scenario.png" src="_images/lte-cell-selection-scenario.png" style="width: 636.8000000000001px; height: 345.6px;" /></a>
-<p class="caption"><span class="caption-text">Sample result of cell selection test</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id25">
+<span id="fig-lte-cell-selection-scenario"></span><a class="reference internal image-reference" href="_images/lte-cell-selection-scenario.png"><img alt="_images/lte-cell-selection-scenario.png" src="_images/lte-cell-selection-scenario.png" style="width: 624.0px; height: 345.6px;" /></a>
+<figcaption>
+<p><span class="caption-text">Sample result of cell selection test</span><a class="headerlink" href="#id25" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>The figure shows that CSG members may attach to either CSG or non-CSG cells, and
 simply choose the stronger one. On the other hand, non-members can only attach
 to non-CSG cells, even when they are actually receiving stronger signal from a
@@ -1464,11 +1481,7 @@ error rate of each UE when receiving transmission from the control channel.
 Based on this information, the check point time for UE #3 is done at a later
 time than the others to compensate for its higher risk of failure.</p>
 <span id="tab-cell-selection-error-rate"></span><table class="docutils align-default" id="id26">
-<caption><span class="caption-text">UE error rate in Initial Cell Selection test</span><a class="headerlink" href="#id26" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 29%" />
-<col style="width: 71%" />
-</colgroup>
+<caption><span class="caption-text">UE error rate in Initial Cell Selection test</span><a class="headerlink" href="#id26" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>UE #</p></th>
 <th class="head"><p>Error rate</p></th>
@@ -1497,18 +1510,36 @@ time than the others to compensate for its higher risk of failure.</p>
 </table>
 <p>The test uses the default Friis path loss model and without any channel fading
 model.</p>
-</div>
-<div class="section" id="gtp-u-protocol">
-<h4>GTP-U protocol<a class="headerlink" href="#gtp-u-protocol" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="secondary-cell-selection">
+<h4><span class="section-number">20.3.2.2.22. </span>Secondary cell selection<a class="headerlink" href="#secondary-cell-selection" title="Link to this heading">¶</a></h4>
+<p>The unit test <code class="docutils literal notranslate"><span class="pre">lte-secondary-cell-selection`</span></code> tests that a UE can attach to
+any component carrier (not just the 0-th one) during initial cell selection.</p>
+</section>
+<section id="handover-with-multiple-component-carriers">
+<h4><span class="section-number">20.3.2.2.23. </span>Handover with multiple component carriers<a class="headerlink" href="#handover-with-multiple-component-carriers" title="Link to this heading">¶</a></h4>
+<p>The unit test suite <code class="docutils literal notranslate"><span class="pre">lte-primary-cell-change</span></code> tests a number of handover
+cases between different component carriers, for both the Ideal RRC and the
+Real RRC.  The following handover cases are tested:</p>
+<ul class="simple">
+<li><p>(inter-eNB) eNB to eNB with one component carrier</p></li>
+<li><p>(inter-eNB) handover between the first carrier of two eNBs</p></li>
+<li><p>(inter-eNB) handover between the second carrier of one eNB to the first carrier of another eNB</p></li>
+<li><p>(inter-eNB) handover between the second carrier of one eNB to the second carrier of another eNB</p></li>
+<li><p>(intra-eNB) three handover cases between component carriers of the same eNB</p></li>
+</ul>
+</section>
+<section id="gtp-u-protocol">
+<h4><span class="section-number">20.3.2.2.24. </span>GTP-U protocol<a class="headerlink" href="#gtp-u-protocol" title="Link to this heading">¶</a></h4>
 <p>The unit test suite <code class="docutils literal notranslate"><span class="pre">epc-gtpu</span></code> checks that the encoding and decoding of the GTP-U
 header is done correctly. The test fills in a header with a set of
 known values, adds the header to a packet, and then removes the header
 from the packet. The test fails if, upon removing, any of the fields
 in the GTP-U header is not decoded correctly. This is detected by
 comparing the decoded value from the known value.</p>
-</div>
-<div class="section" id="s1-u-interface">
-<h4>S1-U interface<a class="headerlink" href="#s1-u-interface" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="s1-u-interface">
+<h4><span class="section-number">20.3.2.2.25. </span>S1-U interface<a class="headerlink" href="#s1-u-interface" title="Link to this heading">¶</a></h4>
 <p>Two test suites (<code class="docutils literal notranslate"><span class="pre">epc-s1u-uplink</span></code> and <code class="docutils literal notranslate"><span class="pre">epc-s1u-downlink</span></code>) make
 sure that the S1-U interface implementation works correctly in
 isolation. This is achieved by creating a set of simulation scenarios
@@ -1526,9 +1557,9 @@ downlink test suite respectively) and checking that at the receiver
 (the remote host or each  considered UE, respectively) that exactly the same
 traffic patterns is received. If any mismatch in the transmitted and
 received traffic pattern is detected for any UE, the test fails.</p>
-</div>
-<div class="section" id="tft-classifier">
-<h4>TFT classifier<a class="headerlink" href="#tft-classifier" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="tft-classifier">
+<h4><span class="section-number">20.3.2.2.26. </span>TFT classifier<a class="headerlink" href="#tft-classifier" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">epc-tft-classifier</span></code> checks in isolation that the
 behavior of the EpcTftClassifier class is correct. This is performed
 by creating different classifier instances where different TFT
@@ -1540,9 +1571,9 @@ downlink traffic.  Each test case corresponds to a specific packet and
 a specific classifier instance with a given set of TFTs. The test case
 passes if the bearer identifier returned by the classifier exactly
 matches with the one that is expected for the considered packet.</p>
-</div>
-<div class="section" id="end-to-end-lte-epc-data-plane-functionality">
-<h4>End-to-end LTE-EPC data plane functionality<a class="headerlink" href="#end-to-end-lte-epc-data-plane-functionality" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="end-to-end-lte-epc-data-plane-functionality">
+<h4><span class="section-number">20.3.2.2.27. </span>End-to-end LTE-EPC data plane functionality<a class="headerlink" href="#end-to-end-lte-epc-data-plane-functionality" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-epc-e2e-data</span></code> ensures the correct end-to-end
 functionality of the LTE-EPC data plane. For each test case in this
 suite, a complete LTE-EPC simulation
@@ -1569,9 +1600,9 @@ exactly the expected number of packet flows over the corresponding
 RadioBearer instance</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="x2-handover">
-<h4>X2 handover<a class="headerlink" href="#x2-handover" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="x2-handover">
+<h4><span class="section-number">20.3.2.2.28. </span>X2 handover<a class="headerlink" href="#x2-handover" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-x2-handover</span></code> checks the correct functionality of the X2 handover procedure. The scenario being tested is a topology with two eNBs connected by an X2 interface. Each test case is a particular instance of this scenario defined by the following parameters:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1616,9 +1647,9 @@ at the eNB and at the UE</p></li>
 the UE and the eNB: EPS bearer id, DRB id, LCID</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="automatic-x2-handover">
-<h4>Automatic X2 handover<a class="headerlink" href="#automatic-x2-handover" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="automatic-x2-handover">
+<h4><span class="section-number">20.3.2.2.29. </span>Automatic X2 handover<a class="headerlink" href="#automatic-x2-handover" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-x2-handover-measures</span></code> checks the correct functionality of the handover
 algorithm. The scenario being tested is a topology with two, three or four eNBs connected by
 an X2 interface. The eNBs are located in a straight line in the X-axes. A UE moves along the
@@ -1685,9 +1716,9 @@ at the eNB and at the UE</p></li>
 the UE and the eNB: EPS bearer id, DRB id, LCID</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="handover-delays">
-<h4>Handover delays<a class="headerlink" href="#handover-delays" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="handover-delays">
+<h4><span class="section-number">20.3.2.2.30. </span>Handover delays<a class="headerlink" href="#handover-delays" title="Link to this heading">¶</a></h4>
 <p>Handover procedure consists of several message exchanges between UE, source
 eNodeB, and target eNodeB over both RRC protocol and X2 interface. Test suite
 <code class="docutils literal notranslate"><span class="pre">lte-handover-delay</span></code> verifies that this procedure consistently spends the
@@ -1729,9 +1760,26 @@ by Random Access during the handover procedure. The test cases verify this
 computation, utilizing the fact that the handover will be delayed when this
 computation is broken. In the default simulation configuration, the handover
 delay observed because of a broken RA-RNTI computation is typically 6 ms.</p>
-</div>
-<div class="section" id="selection-of-target-cell-in-handover-algorithm">
-<h4>Selection of target cell in handover algorithm<a class="headerlink" href="#selection-of-target-cell-in-handover-algorithm" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="handover-failure">
+<h4><span class="section-number">20.3.2.2.31. </span>Handover failure<a class="headerlink" href="#handover-failure" title="Link to this heading">¶</a></h4>
+<p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-handover-failure</span></code> tests the proper operation of a number
+of handover failure cases by inducing the conditions leading to the following
+eight failure modes:</p>
+<ol class="arabic simple">
+<li><p>Maximum number of RACH transmissions exceeded from UE to target eNB</p></li>
+<li><p>Non-allocation of non-contention-based preamble at the target eNB, due to the maximum number reached</p></li>
+<li><p>HANDOVER JOINING timeout before reception of RRC CONNECTION RECONFIGURATION at source eNB</p></li>
+<li><p>HANDOVER JOINING timeout before completion of non-contention RACH process to target eNB</p></li>
+<li><p>HANDOVER JOINING timeout before reception of RRC CONNECTION RECONFIGURATION COMPLETE at target eNB</p></li>
+<li><p>HANDOVER LEAVING timeout before reception of RRC CONNECTION RECONFIGURATION at source eNB</p></li>
+<li><p>HANDOVER LEAVING timeout before completion of non-contention RACH process to target eNB</p></li>
+<li><p>HANDOVER LEAVING timeout before reception of RRC CONNECTION RECONFIGURATION COMPLETE attarget eNB</p></li>
+</ol>
+<p>Both Ideal and Real RRC models are checked by this test suite.</p>
+</section>
+<section id="selection-of-target-cell-in-handover-algorithm">
+<h4><span class="section-number">20.3.2.2.32. </span>Selection of target cell in handover algorithm<a class="headerlink" href="#selection-of-target-cell-in-handover-algorithm" title="Link to this heading">¶</a></h4>
 <p>eNodeB may utilize <a class="reference internal" href="lte-design.html#sec-handover-algorithm"><span class="std std-ref">Handover algorithm</span></a> to automatically create
 handover decisions during simulation. The decision includes the UE which should
 do the handover and the target cell where the UE should perform handover to.</p>
@@ -1761,15 +1809,17 @@ illustrates the process. This is done by setting the source cell’s Tx power to
 a very low value. As a result, the handover algorithm notices that the UE
 deserves a handover and several neighboring cells become candidates of target
 cell at the same time.</p>
-<div class="figure align-center" id="id27">
-<span id="fig-lte-handover-target-scenario"></span><a class="reference internal image-reference" href="_images/lte-handover-target-scenario.png"><img alt="_images/lte-handover-target-scenario.png" src="_images/lte-handover-target-scenario.png" style="width: 871.2px; height: 319.20000000000005px;" /></a>
-<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">lte-handover-target</span></code> test scenario in a 2×2 grid</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id27">
+<span id="fig-lte-handover-target-scenario"></span><a class="reference internal image-reference" href="_images/lte-handover-target-scenario.png"><img alt="_images/lte-handover-target-scenario.png" src="_images/lte-handover-target-scenario.png" style="width: 871.2px; height: 316.8px;" /></a>
+<figcaption>
+<p><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">lte-handover-target</span></code> test scenario in a 2×2 grid</span><a class="headerlink" href="#id27" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>The test case then verifies that the handover algorithm, when faced with more
 than one options of target cells, is able to choose the right one.</p>
-</div>
-<div class="section" id="downlink-power-control">
-<h4>Downlink Power Control<a class="headerlink" href="#downlink-power-control" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="downlink-power-control">
+<h4><span class="section-number">20.3.2.2.33. </span>Downlink Power Control<a class="headerlink" href="#downlink-power-control" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-downlink-power-control</span></code> checks correctness of Downlink
 Power Control in three different ways:</p>
 <blockquote>
@@ -1798,9 +1848,9 @@ The test passes if all event have occurred. The test is performed two times, wit
 IdealRrcProtocol and with RealRrcProtocol.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="uplink-power-control-tests">
-<h4>Uplink Power Control Tests<a class="headerlink" href="#uplink-power-control-tests" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="uplink-power-control-tests">
+<h4><span class="section-number">20.3.2.2.34. </span>Uplink Power Control Tests<a class="headerlink" href="#uplink-power-control-tests" title="Link to this heading">¶</a></h4>
 <p>UE uses Uplink Power Control to automatically change Tx Power level for Uplink
 Physical Channels. Tx Power is computed based on path-loss, number of RB used for transmission,
 some configurable parameters and TPC command from eNB.</p>
@@ -1839,9 +1889,9 @@ Tx Power levels for PUSCH, PUCCH and SRS are traced and test passes if they are 
 expected values.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="frequency-reuse-algorithms">
-<h4>Frequency Reuse Algorithms<a class="headerlink" href="#frequency-reuse-algorithms" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="frequency-reuse-algorithms">
+<h4><span class="section-number">20.3.2.2.35. </span>Frequency Reuse Algorithms<a class="headerlink" href="#frequency-reuse-algorithms" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-frequency-reuse</span></code> contain two types of test cases.</p>
 <p>First type of test cases check if RBGs are used correctly according to FR algorithm
 policy. We are testing if scheduler use only RBGs allowed by FR configuration. To
@@ -1882,9 +1932,9 @@ Test passes if UE served by eNB in cell 2, is served in DL and UL with expected 
 and with expected power level. Test vector comprise a configuration for Distributed FFR.
 Test is performed with all schedulers, which support FR (i.e. PF, PSS, CQA,
 TD-TBFQ, FD-TBFQ).</p>
-</div>
-<div class="section" id="inter-cell-interference-with-fr-algorithms-tests">
-<h4>Inter-cell Interference with FR algorithms Tests<a class="headerlink" href="#inter-cell-interference-with-fr-algorithms-tests" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="inter-cell-interference-with-fr-algorithms-tests">
+<h4><span class="section-number">20.3.2.2.36. </span>Inter-cell Interference with FR algorithms Tests<a class="headerlink" href="#inter-cell-interference-with-fr-algorithms-tests" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-interference-fr</span></code> is very similar to <code class="docutils literal notranslate"><span class="pre">lte-interference</span></code>.
 Topology (Figure <a class="reference internal" href="#fig-lte-interference-test-scenario"><span class="std std-ref">Topology for the inter-cell interference test</span></a>) is the same and test checks
 interference level. The difference is that, in this test case Frequency Reuse algorithms
@@ -1894,9 +1944,9 @@ is assigned to one eNb, and second half to second eNb, interference level should
 lower compared to legacy scenario. The test vector comprise a set of configuration for
 all available Frequency Reuse Algorithms. Test passes if calculated SINR on specific
 RBs is equal to these obtained by Octave script.</p>
-</div>
-<div class="section" id="carrier-aggregation-test">
-<h4>Carrier aggregation test<a class="headerlink" href="#carrier-aggregation-test" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="carrier-aggregation-test">
+<h4><span class="section-number">20.3.2.2.37. </span>Carrier aggregation test<a class="headerlink" href="#carrier-aggregation-test" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-carrier-aggregation</span></code> is a system test program that creates different test
 cases with a single eNB and several UEs, all having the same radio bearer specification. Different
 test cases are implemented by using different SINR values and different numbers of UEs. eNBs and UEs
@@ -1904,9 +1954,9 @@ are configured to use the secondary carrier and the component carrier manager is
 split the data uniformly between primary and secondary carrier. The test consists of checking that
 the throughput obtained over the different carriers are equal considering a given tolerance. For more
 details about this test, see the section Carrier aggregation usage example.</p>
-</div>
-<div class="section" id="carrier-aggregation-test-for-enb-and-ue-configuration">
-<h4>Carrier aggregation test for eNB and UE configuration<a class="headerlink" href="#carrier-aggregation-test-for-enb-and-ue-configuration" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="carrier-aggregation-test-for-enb-and-ue-configuration">
+<h4><span class="section-number">20.3.2.2.38. </span>Carrier aggregation test for eNB and UE configuration<a class="headerlink" href="#carrier-aggregation-test-for-enb-and-ue-configuration" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">carrier-aggregation-config-test</span></code> is a system test program, which verifies the
 following two cases:</p>
 <blockquote>
@@ -1928,9 +1978,9 @@ simulation scenario can be configured with different EARFCNs and Bandwidths. For
 the number of times the hooked trace source <code class="docutils literal notranslate"><span class="pre">SCarrierConfigured</span></code> get triggered. As, it reflects how many UEs
 got attached to their respective eNB. If the count is not equal to the number of UEs in the scenario, the test fails,
 which could be the result of improper UE configuration.</p>
-</div>
-<div class="section" id="radio-link-failure-test">
-<h4>Radio link failure Test<a class="headerlink" href="#radio-link-failure-test" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="radio-link-failure-test">
+<h4><span class="section-number">20.3.2.2.39. </span>Radio link failure Test<a class="headerlink" href="#radio-link-failure-test" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">lte-radio-link-failure</span></code> is a system test, which tests the
 radio link failure functionality using Ideal and Real RRC protocols.
 In particular, it tests the following to verify the Radio link
@@ -1946,12 +1996,14 @@ Failure (RLF) implementation.</p>
 </div></blockquote>
 <p>This test simulates only one static UE with EPC performing downlink and uplink
 communication in the following two scenarios:</p>
-<div class="section" id="one-enb-using-ideal-and-real-rrc">
-<h5>One eNB using Ideal and Real RRC<a class="headerlink" href="#one-enb-using-ideal-and-real-rrc" title="Permalink to this headline">¶</a></h5>
-<div class="figure align-center" id="id28">
+<section id="one-enb-using-ideal-and-real-rrc">
+<h5><span class="section-number">20.3.2.2.39.1. </span>One eNB using Ideal and Real RRC<a class="headerlink" href="#one-enb-using-ideal-and-real-rrc" title="Link to this heading">¶</a></h5>
+<figure class="align-center" id="id28">
 <span id="fig-lte-test-rlf-one-enb"></span><img alt="_images/lte-test-rlf-one-enb.png" src="_images/lte-test-rlf-one-enb.png" />
-<p class="caption"><span class="caption-text">RLF scenario with one eNB</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">RLF scenario with one eNB</span><a class="headerlink" href="#id28" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>In this scenario, the UE is initially placed near to the eNB, and on the
 following instances above conditions are verified against the expected outcome.</p>
 <p><strong>At 0.3 sec:</strong>  It verifies that the UE is well connected, i.e., it is in
@@ -1972,13 +2024,15 @@ receive no in-sync indication since the UE stays at far away position.</p>
 <p><strong>Before the end of simulation:</strong>  The expected behavior is that the UE state
 will be in “IDLE_CELL_SEARCH” since there is no eNB available where it has jumped.
 Moreover, the deletion of the UE context from the eNB is also verified.</p>
-</div>
-<div class="section" id="two-enbs-using-ideal-and-real-rrc">
-<h5>Two eNBs using Ideal and Real RRC<a class="headerlink" href="#two-enbs-using-ideal-and-real-rrc" title="Permalink to this headline">¶</a></h5>
-<div class="figure align-center" id="id29">
+</section>
+<section id="two-enbs-using-ideal-and-real-rrc">
+<h5><span class="section-number">20.3.2.2.39.2. </span>Two eNBs using Ideal and Real RRC<a class="headerlink" href="#two-enbs-using-ideal-and-real-rrc" title="Link to this heading">¶</a></h5>
+<figure class="align-center" id="id29">
 <span id="fig-lte-test-rlf-two-enb"></span><img alt="_images/lte-test-rlf-two-enb.png" src="_images/lte-test-rlf-two-enb.png" />
-<p class="caption"><span class="caption-text">RLF scenario with two eNBs</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">RLF scenario with two eNBs</span><a class="headerlink" href="#id29" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>In this scenario, the only difference is the addition of a second eNB near the
 position where the UE jumps away. Therefore, except the outcome before the end
 of the simulation, all the outcomes are similar to that we expected in the first
@@ -1986,72 +2040,77 @@ scenario.</p>
 <p><strong>Before the end of simulation:</strong>  It is expected that the UE after the RLF will
 connect to the second eNB, i.e., it will be in “CONNECTED_NORMALLY” state, and
 its context exists in the second eNB.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Testing Documentation</a><ul>
-<li><a class="reference internal" href="#overview">Overview</a></li>
-<li><a class="reference internal" href="#description-of-the-test-suites">Description of the test suites</a><ul>
-<li><a class="reference internal" href="#unit-tests">Unit Tests</a><ul>
-<li><a class="reference internal" href="#sinr-calculation-in-the-downlink">SINR calculation in the Downlink</a></li>
-<li><a class="reference internal" href="#sinr-calculation-in-the-uplink">SINR calculation in the Uplink</a></li>
-<li><a class="reference internal" href="#e-utra-absolute-radio-frequency-channel-number-earfcn">E-UTRA Absolute Radio Frequency Channel Number (EARFCN)</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">20.3. Testing Documentation</a><ul>
+<li><a class="reference internal" href="#overview">20.3.1. Overview</a></li>
+<li><a class="reference internal" href="#description-of-the-test-suites">20.3.2. Description of the test suites</a><ul>
+<li><a class="reference internal" href="#unit-tests">20.3.2.1. Unit Tests</a><ul>
+<li><a class="reference internal" href="#sinr-calculation-in-the-downlink">20.3.2.1.1. SINR calculation in the Downlink</a></li>
+<li><a class="reference internal" href="#sinr-calculation-in-the-uplink">20.3.2.1.2. SINR calculation in the Uplink</a></li>
+<li><a class="reference internal" href="#e-utra-absolute-radio-frequency-channel-number-earfcn">20.3.2.1.3. E-UTRA Absolute Radio Frequency Channel Number (EARFCN)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#system-tests">System Tests</a><ul>
-<li><a class="reference internal" href="#dedicated-bearer-deactivation-tests">Dedicated Bearer Deactivation Tests</a></li>
-<li><a class="reference internal" href="#adaptive-modulation-and-coding-tests">Adaptive Modulation and Coding Tests</a></li>
-<li><a class="reference internal" href="#inter-cell-interference-tests">Inter-cell Interference Tests</a></li>
-<li><a class="reference internal" href="#ue-measurements-tests">UE Measurements Tests</a></li>
-<li><a class="reference internal" href="#ue-measurement-configuration-tests">UE measurement configuration tests</a><ul>
-<li><a class="reference internal" href="#piecewise-configuration">Piecewise configuration</a></li>
-<li><a class="reference internal" href="#handover-configuration">Handover configuration</a></li>
+<li><a class="reference internal" href="#system-tests">20.3.2.2. System Tests</a><ul>
+<li><a class="reference internal" href="#dedicated-bearer-deactivation-tests">20.3.2.2.1. Dedicated Bearer Deactivation Tests</a></li>
+<li><a class="reference internal" href="#adaptive-modulation-and-coding-tests">20.3.2.2.2. Adaptive Modulation and Coding Tests</a></li>
+<li><a class="reference internal" href="#inter-cell-interference-tests">20.3.2.2.3. Inter-cell Interference Tests</a></li>
+<li><a class="reference internal" href="#ue-measurements-tests">20.3.2.2.4. UE Measurements Tests</a></li>
+<li><a class="reference internal" href="#ue-measurement-configuration-tests">20.3.2.2.5. UE measurement configuration tests</a><ul>
+<li><a class="reference internal" href="#piecewise-configuration">20.3.2.2.5.1. Piecewise configuration</a></li>
+<li><a class="reference internal" href="#handover-configuration">20.3.2.2.5.2. Handover configuration</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#round-robin-scheduler-performance">Round Robin scheduler performance</a></li>
-<li><a class="reference internal" href="#proportional-fair-scheduler-performance">Proportional Fair scheduler performance</a></li>
-<li><a class="reference internal" href="#maximum-throughput-scheduler-performance">Maximum Throughput scheduler performance</a></li>
-<li><a class="reference internal" href="#throughput-to-average-scheduler-performance">Throughput to Average scheduler performance</a></li>
-<li><a class="reference internal" href="#blind-average-throughput-scheduler-performance">Blind Average Throughput scheduler performance</a></li>
-<li><a class="reference internal" href="#token-band-fair-queue-scheduler-performance">Token Band Fair Queue scheduler performance</a></li>
-<li><a class="reference internal" href="#priority-set-scheduler-performance">Priority Set scheduler performance</a></li>
-<li><a class="reference internal" href="#channel-and-qos-aware-scheduler-performance">Channel and QoS aware scheduler performance</a></li>
-<li><a class="reference internal" href="#building-propagation-loss-model">Building Propagation Loss Model</a></li>
-<li><a class="reference internal" href="#physical-error-model">Physical Error Model</a></li>
-<li><a class="reference internal" href="#harq-model">HARQ Model</a></li>
-<li><a class="reference internal" href="#mimo-model">MIMO Model</a></li>
-<li><a class="reference internal" href="#antenna-model-integration">Antenna Model integration</a></li>
-<li><a class="reference internal" href="#rlc">RLC</a></li>
-<li><a class="reference internal" href="#rrc">RRC</a></li>
-<li><a class="reference internal" href="#initial-cell-selection">Initial cell selection</a></li>
-<li><a class="reference internal" href="#gtp-u-protocol">GTP-U protocol</a></li>
-<li><a class="reference internal" href="#s1-u-interface">S1-U interface</a></li>
-<li><a class="reference internal" href="#tft-classifier">TFT classifier</a></li>
-<li><a class="reference internal" href="#end-to-end-lte-epc-data-plane-functionality">End-to-end LTE-EPC data plane functionality</a></li>
-<li><a class="reference internal" href="#x2-handover">X2 handover</a></li>
-<li><a class="reference internal" href="#automatic-x2-handover">Automatic X2 handover</a></li>
-<li><a class="reference internal" href="#handover-delays">Handover delays</a></li>
-<li><a class="reference internal" href="#selection-of-target-cell-in-handover-algorithm">Selection of target cell in handover algorithm</a></li>
-<li><a class="reference internal" href="#downlink-power-control">Downlink Power Control</a></li>
-<li><a class="reference internal" href="#uplink-power-control-tests">Uplink Power Control Tests</a></li>
-<li><a class="reference internal" href="#frequency-reuse-algorithms">Frequency Reuse Algorithms</a></li>
-<li><a class="reference internal" href="#inter-cell-interference-with-fr-algorithms-tests">Inter-cell Interference with FR algorithms Tests</a></li>
-<li><a class="reference internal" href="#carrier-aggregation-test">Carrier aggregation test</a></li>
-<li><a class="reference internal" href="#carrier-aggregation-test-for-enb-and-ue-configuration">Carrier aggregation test for eNB and UE configuration</a></li>
-<li><a class="reference internal" href="#radio-link-failure-test">Radio link failure Test</a><ul>
-<li><a class="reference internal" href="#one-enb-using-ideal-and-real-rrc">One eNB using Ideal and Real RRC</a></li>
-<li><a class="reference internal" href="#two-enbs-using-ideal-and-real-rrc">Two eNBs using Ideal and Real RRC</a></li>
+<li><a class="reference internal" href="#round-robin-scheduler-performance">20.3.2.2.6. Round Robin scheduler performance</a></li>
+<li><a class="reference internal" href="#proportional-fair-scheduler-performance">20.3.2.2.7. Proportional Fair scheduler performance</a></li>
+<li><a class="reference internal" href="#maximum-throughput-scheduler-performance">20.3.2.2.8. Maximum Throughput scheduler performance</a></li>
+<li><a class="reference internal" href="#throughput-to-average-scheduler-performance">20.3.2.2.9. Throughput to Average scheduler performance</a></li>
+<li><a class="reference internal" href="#blind-average-throughput-scheduler-performance">20.3.2.2.10. Blind Average Throughput scheduler performance</a></li>
+<li><a class="reference internal" href="#token-band-fair-queue-scheduler-performance">20.3.2.2.11. Token Band Fair Queue scheduler performance</a></li>
+<li><a class="reference internal" href="#priority-set-scheduler-performance">20.3.2.2.12. Priority Set scheduler performance</a></li>
+<li><a class="reference internal" href="#channel-and-qos-aware-scheduler-performance">20.3.2.2.13. Channel and QoS aware scheduler performance</a></li>
+<li><a class="reference internal" href="#building-propagation-loss-model">20.3.2.2.14. Building Propagation Loss Model</a></li>
+<li><a class="reference internal" href="#physical-error-model">20.3.2.2.15. Physical Error Model</a></li>
+<li><a class="reference internal" href="#harq-model">20.3.2.2.16. HARQ Model</a></li>
+<li><a class="reference internal" href="#mimo-model">20.3.2.2.17. MIMO Model</a></li>
+<li><a class="reference internal" href="#antenna-model-integration">20.3.2.2.18. Antenna Model integration</a></li>
+<li><a class="reference internal" href="#rlc">20.3.2.2.19. RLC</a></li>
+<li><a class="reference internal" href="#rrc">20.3.2.2.20. RRC</a></li>
+<li><a class="reference internal" href="#initial-cell-selection">20.3.2.2.21. Initial cell selection</a></li>
+<li><a class="reference internal" href="#secondary-cell-selection">20.3.2.2.22. Secondary cell selection</a></li>
+<li><a class="reference internal" href="#handover-with-multiple-component-carriers">20.3.2.2.23. Handover with multiple component carriers</a></li>
+<li><a class="reference internal" href="#gtp-u-protocol">20.3.2.2.24. GTP-U protocol</a></li>
+<li><a class="reference internal" href="#s1-u-interface">20.3.2.2.25. S1-U interface</a></li>
+<li><a class="reference internal" href="#tft-classifier">20.3.2.2.26. TFT classifier</a></li>
+<li><a class="reference internal" href="#end-to-end-lte-epc-data-plane-functionality">20.3.2.2.27. End-to-end LTE-EPC data plane functionality</a></li>
+<li><a class="reference internal" href="#x2-handover">20.3.2.2.28. X2 handover</a></li>
+<li><a class="reference internal" href="#automatic-x2-handover">20.3.2.2.29. Automatic X2 handover</a></li>
+<li><a class="reference internal" href="#handover-delays">20.3.2.2.30. Handover delays</a></li>
+<li><a class="reference internal" href="#handover-failure">20.3.2.2.31. Handover failure</a></li>
+<li><a class="reference internal" href="#selection-of-target-cell-in-handover-algorithm">20.3.2.2.32. Selection of target cell in handover algorithm</a></li>
+<li><a class="reference internal" href="#downlink-power-control">20.3.2.2.33. Downlink Power Control</a></li>
+<li><a class="reference internal" href="#uplink-power-control-tests">20.3.2.2.34. Uplink Power Control Tests</a></li>
+<li><a class="reference internal" href="#frequency-reuse-algorithms">20.3.2.2.35. Frequency Reuse Algorithms</a></li>
+<li><a class="reference internal" href="#inter-cell-interference-with-fr-algorithms-tests">20.3.2.2.36. Inter-cell Interference with FR algorithms Tests</a></li>
+<li><a class="reference internal" href="#carrier-aggregation-test">20.3.2.2.37. Carrier aggregation test</a></li>
+<li><a class="reference internal" href="#carrier-aggregation-test-for-enb-and-ue-configuration">20.3.2.2.38. Carrier aggregation test for eNB and UE configuration</a></li>
+<li><a class="reference internal" href="#radio-link-failure-test">20.3.2.2.39. Radio link failure Test</a><ul>
+<li><a class="reference internal" href="#one-enb-using-ideal-and-real-rrc">20.3.2.2.39.1. One eNB using Ideal and Real RRC</a></li>
+<li><a class="reference internal" href="#two-enbs-using-ideal-and-real-rrc">20.3.2.2.39.2. Two eNBs using Ideal and Real RRC</a></li>
 </ul>
 </li>
 </ul>
@@ -2062,12 +2121,17 @@ its context exists in the second eNB.</p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="lte-user.html"
-                        title="previous chapter">User Documentation</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="lte-profiling.html"
-                        title="next chapter">Profiling Documentation</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="lte-user.html"
+                          title="previous chapter"><span class="section-number">20.2. </span>User Documentation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="lte-profiling.html"
+                          title="next chapter"><span class="section-number">20.4. </span>Profiling Documentation</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -2079,12 +2143,12 @@ its context exists in the second eNB.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -2096,22 +2160,23 @@ its context exists in the second eNB.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="lte-profiling.html" title="Profiling Documentation"
+          <a href="lte-profiling.html" title="20.4. Profiling Documentation"
              >next</a> |</li>
         <li class="right" >
-          <a href="lte-user.html" title="User Documentation"
+          <a href="lte-user.html" title="20.2. User Documentation"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
 
-          <li class="nav-item nav-item-1"><a href="lte.html" >LTE Module</a><span class="navelem">&nbsp;</span></li> 
+          <li class="nav-item nav-item-1"><a href="lte.html" ><span class="section-number">20. </span>LTE Module</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">20.3. </span>Testing Documentation</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 17:37.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:57.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

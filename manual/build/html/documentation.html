@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>Creating Documentation &#8212; Manual</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4.8. Creating Documentation &#8212; Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Enabling Subsets of ns-3 Modules" href="enable-modules.html" />
-    <link rel="prev" title="Adding a New Module to ns-3" href="new-modules.html" />
+    <link rel="next" title="4.9. Profiling" href="profiling.html" />
+    <link rel="prev" title="4.7. Adding a New Module to ns-3" href="new-modules.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Manual</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Manual</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,16 +126,17 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="enable-modules.html" title="Enabling Subsets of ns-3 Modules"
+          <a href="profiling.html" title="4.9. Profiling"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="new-modules.html" title="Adding a New Module to ns-3"
+          <a href="new-modules.html" title="4.7. Adding a New Module to ns-3"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
 
-          <li class="nav-item nav-item-1"><a href="support.html" accesskey="U">Support</a><span class="navelem">&nbsp;</span></li> 
+          <li class="nav-item nav-item-1"><a href="develop.html" accesskey="U"><span class="section-number">4. </span>Developer Tools</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">4.8. </span>Creating Documentation</a></li> 
       </ul>
     </div>  
 
@@ -130,8 +145,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="creating-documentation">
-<h1>Creating Documentation<a class="headerlink" href="#creating-documentation" title="Permalink to this headline">¶</a></h1>
+  <section id="creating-documentation">
+<h1><span class="section-number">4.8. </span>Creating Documentation<a class="headerlink" href="#creating-documentation" title="Link to this heading">¶</a></h1>
 <p><em>ns-3</em> supplies two kinds of documentation:  expository “user-guide”-style
 chapters, and source code API documentation.</p>
 <p>The “user-guide” chapters are written by hand in <a class="reference external" href="http://sphinx-doc.org/rest.html">reStructuredText</a>
@@ -145,31 +160,31 @@ and overview of using a model; the API documentation explains the
 <p>This chapter gives a quick overview of these
 tools, emphasizing preferred usage and customizations for <em>ns-3</em>.</p>
 <p>To build all the standard documentation:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf docs
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>docs
 </pre></div>
 </div>
 <p>For more specialized options, read on.</p>
-<div class="section" id="documenting-with-sphinx">
-<h2>Documenting with Sphinx<a class="headerlink" href="#documenting-with-sphinx" title="Permalink to this headline">¶</a></h2>
+<section id="documenting-with-sphinx">
+<h2><span class="section-number">4.8.1. </span>Documenting with Sphinx<a class="headerlink" href="#documenting-with-sphinx" title="Link to this heading">¶</a></h2>
 <p>We use <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> to generate expository chapters describing
 the design and usage of each module.  Right now you are reading the
 <a class="reference internal" href="#"><span class="doc">Documentation</span></a> Chapter.
 If you are reading the html version, the
 <a class="reference external" href="_sources/documentation.txt">Show Source</a> link in the sidebar
 will show you the reStructuredText source for this chapter.</p>
-<div class="section" id="adding-new-chapters">
-<h3>Adding New Chapters<a class="headerlink" href="#adding-new-chapters" title="Permalink to this headline">¶</a></h3>
+<section id="adding-new-chapters">
+<h3><span class="section-number">4.8.1.1. </span>Adding New Chapters<a class="headerlink" href="#adding-new-chapters" title="Link to this heading">¶</a></h3>
 <p>Adding a new chapter takes three steps (described in more detail below):</p>
 <ol class="arabic simple">
 <li><p>Choose <a class="reference internal" href="#where">Where?</a> the documentation file(s) will live.</p></li>
 <li><p><a class="reference internal" href="#link">Link</a> from an existing page to the new documentation.</p></li>
 <li><p>Add the new file to the <a class="reference internal" href="#makefile">Makefile</a>.</p></li>
 </ol>
-<div class="section" id="where">
-<h4>Where?<a class="headerlink" href="#where" title="Permalink to this headline">¶</a></h4>
+<section id="where">
+<h4><span class="section-number">4.8.1.1.1. </span>Where?<a class="headerlink" href="#where" title="Link to this heading">¶</a></h4>
 <p>Documentation for a specific module, <code class="docutils literal notranslate"><span class="pre">foo</span></code>, should normally go in
 <code class="docutils literal notranslate"><span class="pre">src/foo/doc/</span></code>.  For example <code class="docutils literal notranslate"><span class="pre">src/foo/doc/foo.rst</span></code> would be the
-top-level document for the module.  The <code class="docutils literal notranslate"><span class="pre">src/create-module.py</span></code> script
+top-level document for the module.  The <code class="docutils literal notranslate"><span class="pre">utils/create-module.py</span></code> script
 will create this file for you.</p>
 <p>Some models require several <code class="docutils literal notranslate"><span class="pre">.rst</span></code> files, and figures; these should
 all go in the <code class="docutils literal notranslate"><span class="pre">src/foo/doc/</span></code> directory.  The docs are actually built
@@ -183,9 +198,9 @@ is not particularly hard, but is beyond the scope of this chapter.</p>
 <a class="reference external" href="http://www.nsnam.org/docs/models/html/network.html">Network</a> chapter is an example.  In these cases
 adding the <code class="docutils literal notranslate"><span class="pre">.rst</span></code> files directly to <code class="docutils literal notranslate"><span class="pre">doc/models/source/</span></code> might
 be appropriate.</p>
-</div>
-<div class="section" id="link">
-<h4>Link<a class="headerlink" href="#link" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="link">
+<h4><span class="section-number">4.8.1.1.2. </span>Link<a class="headerlink" href="#link" title="Link to this heading">¶</a></h4>
 <p>Sphinx has to know <em>where</em> your new chapter should appear.  In most
 cases, a new model chapter should appear the in <cite>Models</cite> book.
 To add your chapter there, edit <code class="docutils literal notranslate"><span class="pre">doc/models/source/index.rst</span></code></p>
@@ -203,39 +218,39 @@ To add your chapter there, edit <code class="docutils literal notranslate"><span
 <p>Add the name of your document (without the <code class="docutils literal notranslate"><span class="pre">.rst</span></code> extension) to
 this list.  Please keep the Model chapters in alphabetical order,
 to ease visual scanning for specific chapters.</p>
-</div>
-<div class="section" id="makefile">
-<h4>Makefile<a class="headerlink" href="#makefile" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="makefile">
+<h4><span class="section-number">4.8.1.1.3. </span>Makefile<a class="headerlink" href="#makefile" title="Link to this heading">¶</a></h4>
 <p>You also have to add your document to the appropriate <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>,
 so <code class="docutils literal notranslate"><span class="pre">make</span></code> knows to check it for updates.  The Models book Makefile
 is <code class="docutils literal notranslate"><span class="pre">doc/models/Makefile</span></code>, the Manual book Makefile is
 <code class="docutils literal notranslate"><span class="pre">doc/manual/Makefile</span></code>.</p>
 <div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="c"># list all model library .rst files that need to be copied to $SOURCETEMP</span>
-<span class="nv">SOURCES</span> <span class="o">=</span> <span class="se">\</span>
-        source/conf.py <span class="se">\</span>
-        source/_static <span class="se">\</span>
-        source/index.rst <span class="se">\</span>
-        source/replace.txt <span class="se">\</span>
-        source/organization.rst <span class="se">\</span>
-        ...
-        <span class="k">$(</span>SRC<span class="k">)</span>/antenna/doc/source/antenna.rst <span class="se">\</span>
-        ...
+<span class="nv">SOURCES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>source/conf.py<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>source/_static<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>source/index.rst<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>source/replace.txt<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>source/organization.rst<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>...
+<span class="w">        </span><span class="k">$(</span>SRC<span class="k">)</span>/antenna/doc/source/antenna.rst<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>...
 </pre></div>
 </div>
 <p>You add your <code class="docutils literal notranslate"><span class="pre">.rst</span></code> files to the <code class="docutils literal notranslate"><span class="pre">SOURCES</span></code> variable.  To add figures,
 read the comments in the <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> to see which variable should contain
 your image files.  Again, please keep these in alphabetical order.</p>
-</div>
-</div>
-<div class="section" id="building-sphinx-docs">
-<h3>Building Sphinx Docs<a class="headerlink" href="#building-sphinx-docs" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="building-sphinx-docs">
+<h3><span class="section-number">4.8.1.2. </span>Building Sphinx Docs<a class="headerlink" href="#building-sphinx-docs" title="Link to this heading">¶</a></h3>
 <p>Building the Sphinx documentation is pretty simple.
 To build all the Sphinx documentation:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf sphinx
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>sphinx
 </pre></div>
 </div>
 <p>To build just the Models documentation:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ make -C doc/models html
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>make<span class="w"> </span>-C<span class="w"> </span>doc/models<span class="w"> </span>html
 </pre></div>
 </div>
 <p>To see the generated documentation point your browser at
@@ -244,7 +259,7 @@ To build all the Sphinx documentation:</p>
 The default target builds all enabled output forms, which in
 <em>ns-3</em> are the multi-page <code class="docutils literal notranslate"><span class="pre">html</span></code>, single-page <code class="docutils literal notranslate"><span class="pre">singlehtml</span></code>, and pdf
 (<code class="docutils literal notranslate"><span class="pre">latex</span></code>).  To build just the multi-page html, you add the <code class="docutils literal notranslate"><span class="pre">html</span></code> target:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ make -C doc/models html
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>make<span class="w"> </span>-C<span class="w"> </span>doc/models<span class="w"> </span>html
 </pre></div>
 </div>
 <p>This can be helpful to reduce the build time (and the size of the
@@ -256,9 +271,9 @@ which can make it difficult to see if there are any Sphinx
 warnings or errors.  To find important warnings and errors
 build just the <code class="docutils literal notranslate"><span class="pre">html</span></code> version, then search the build log
 for <code class="docutils literal notranslate"><span class="pre">warning</span></code> or <code class="docutils literal notranslate"><span class="pre">error</span></code>.</p>
-</div>
-<div class="section" id="ns3-specifics">
-<h3><em>ns-3</em> Specifics<a class="headerlink" href="#ns3-specifics" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ns3-specifics">
+<h3><span class="section-number">4.8.1.3. </span><em>ns-3</em> Specifics<a class="headerlink" href="#ns3-specifics" title="Link to this heading">¶</a></h3>
 <p>The Sphinx <a class="reference external" href="http://sphinx-doc.org/contents.html">documentation</a> and <a class="reference external" href="http://sphinx-doc.org/tutorial.html">tutorial</a> are pretty good.  We won’t duplicate
 the basics here, instead focusing on preferred usage for <em>ns-3</em>.</p>
 <ul>
@@ -288,10 +303,6 @@ we prefer this hierarchy:</p>
 <li><p>Syntax Highlighting:</p>
 <p>To use the default syntax highlighter, simply start a sourcecode block:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 51%" />
-<col style="width: 49%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Sphinx Source</p></th>
 <th class="head"><p>Rendered Output</p></th>
@@ -301,13 +312,13 @@ we prefer this hierarchy:</p>
 <tr class="row-even"><td><div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>The <span class="s">``Frobnitz``</span> is accessed by<span class="se">::</span>
 
 <span class="s">  Foo::Frobnitz frob;</span>
-<span class="s">  frob.Set (...);</span>
+<span class="s">  frob.Set(...);</span>
 </pre></div>
 </div>
 </td>
 <td><p>The <code class="docutils literal notranslate"><span class="pre">Frobnitz</span></code> is accessed by:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Foo</span><span class="o">::</span><span class="n">Frobnitz</span> <span class="n">frob</span><span class="p">;</span>
-<span class="n">frob</span><span class="p">.</span><span class="n">Set</span> <span class="p">(...);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Foo</span><span class="o">::</span><span class="n">Frobnitz</span><span class="w"> </span><span class="n">frob</span><span class="p">;</span>
+<span class="n">frob</span><span class="p">.</span><span class="n">Set</span><span class="p">(...);</span>
 </pre></div>
 </div>
 </td>
@@ -316,10 +327,6 @@ we prefer this hierarchy:</p>
 </table>
 <p>To use a specific syntax highlighter, for example, <code class="docutils literal notranslate"><span class="pre">bash</span></code> shell commands:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 51%" />
-<col style="width: 49%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Sphinx Source</p></th>
 <th class="head"><p>Rendered Output</p></th>
@@ -332,7 +339,7 @@ we prefer this hierarchy:</p>
 </pre></div>
 </div>
 </td>
-<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ls
+<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ls
 </pre></div>
 </div>
 </td>
@@ -343,10 +350,6 @@ we prefer this hierarchy:</p>
 <li><p>Shorthand Notations:</p>
 <p>These shorthands are defined:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 51%" />
-<col style="width: 49%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Sphinx Source</p></th>
 <th class="head"><p>Rendered Output</p></th>
@@ -375,16 +378,16 @@ we prefer this hierarchy:</p>
 </pre></div>
 </div>
 </td>
-<td><p><span class="target" id="index-0"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc6282.html"><strong>RFC 6282</strong></a></p></td>
+<td><p><span class="target" id="index-0"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6282.html"><strong>RFC 6282</strong></a></p></td>
 </tr>
 </tbody>
 </table>
 </li>
 </ul>
-</div>
-</div>
-<div class="section" id="documenting-with-doxygen">
-<h2>Documenting with Doxygen<a class="headerlink" href="#documenting-with-doxygen" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="documenting-with-doxygen">
+<h2><span class="section-number">4.8.2. </span>Documenting with Doxygen<a class="headerlink" href="#documenting-with-doxygen" title="Link to this heading">¶</a></h2>
 <p>We use <a class="reference external" href="http://www.doxygen.org/">Doxygen</a> to generate <a class="reference external" href="https://www.nsnam.org/docs/doxygen">browsable</a> API documentation.  Doxygen
 provides a number of useful features:</p>
 <ul class="simple">
@@ -408,8 +411,8 @@ defined in parent classes.</p></li>
 <p>Doxygen operates by scanning the source code, looking for
 specially marked comments.  It also creates a cross reference,
 indicating <em>where</em> each file, class, method, and variable is used.</p>
-<div class="section" id="preferred-style">
-<h3>Preferred Style<a class="headerlink" href="#preferred-style" title="Permalink to this headline">¶</a></h3>
+<section id="preferred-style">
+<h3><span class="section-number">4.8.2.1. </span>Preferred Style<a class="headerlink" href="#preferred-style" title="Link to this heading">¶</a></h3>
 <p>The preferred style for Doxygen comments is the JavaDoc style:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> *  Brief description of this class or method.</span>
@@ -438,7 +441,7 @@ indicating <em>where</em> each file, class, method, and variable is used.</p>
 <span class="cm"> *  Understanding this material shouldn&#39;t be necessary to using</span>
 <span class="cm"> *  the class or method.</span>
 <span class="cm"> */</span>
- <span class="kt">void</span> <span class="nf">ExampleFunction</span> <span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">foo</span><span class="p">,</span> <span class="kt">double</span> <span class="o">&amp;</span> <span class="n">bar</span><span class="p">,</span> <span class="k">const</span> <span class="kt">bool</span> <span class="n">baz</span><span class="p">);</span>
+<span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ExampleFunction</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">foo</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">bar</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">baz</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>In this style the Doxygen comment block begins with two `*’ characters:
@@ -446,9 +449,9 @@ indicating <em>where</em> each file, class, method, and variable is used.</p>
 <p>For items needing only a brief description, either of these short forms
 is appropriate:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/** Destructor implementation. */</span>
-<span class="kt">void</span> <span class="nf">DoDispose</span> <span class="p">();</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">DoDispose</span><span class="p">();</span>
 
-<span class="kt">int</span> <span class="n">m_count</span><span class="p">;</span>  <span class="c1">//!&lt; Count of ...</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">m_count</span><span class="p">;</span><span class="w">  </span><span class="c1">//!&lt; Count of ...</span>
 </pre></div>
 </div>
 <p>Note the special form of the end of line comment, <code class="docutils literal notranslate"><span class="pre">//!&lt;</span></code>, indicating
@@ -469,9 +472,9 @@ which form the formal API and implementation for <em>ns-3</em>, such as
 <code class="docutils literal notranslate"><span class="pre">src/&lt;module&gt;/model/*</span></code>, <code class="docutils literal notranslate"><span class="pre">src/&lt;module&gt;/helper/*</span></code> and
 <code class="docutils literal notranslate"><span class="pre">src/&lt;module&gt;/utils/*</span></code>.  Documentation for items in <code class="docutils literal notranslate"><span class="pre">src/&lt;module&gt;/test/*</span></code>
 and <code class="docutils literal notranslate"><span class="pre">src/&lt;module&gt;/examples/*</span></code> is preferred, but not required.</p>
-</div>
-<div class="section" id="useful-features">
-<h3>Useful Features<a class="headerlink" href="#useful-features" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="useful-features">
+<h3><span class="section-number">4.8.2.2. </span>Useful Features<a class="headerlink" href="#useful-features" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>Inherited members will automatically inherit docs from the parent,
 (but can be replaced by local documentation).</p>
@@ -479,23 +482,21 @@ and <code class="docutils literal notranslate"><span class="pre">src/&lt;module&
 <li><p>Document the base class.</p></li>
 <li><p>In the sub class mark inherited functions with an ordinary comment:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Inherited methods</span>
-<span class="k">virtual</span> <span class="kt">void</span> <span class="nf">FooBar</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
-<span class="k">virtual</span> <span class="kt">int</span> <span class="nf">BarFoo</span> <span class="p">(</span><span class="kt">double</span> <span class="n">baz</span><span class="p">);</span>
+<span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">FooBar</span><span class="p">();</span>
+<span class="k">virtual</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">BarFoo</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">baz</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Note that the signatures have to match exactly, so include the formal
-argument <code class="docutils literal notranslate"><span class="pre">(void)</span></code></p>
 <p>This doesn’t work for static functions; see <code class="docutils literal notranslate"><span class="pre">GetTypeId</span></code>, below, for an
 example.</p>
 </li>
 </ol>
 </li>
 </ul>
-</div>
-<div class="section" id="building-doxygen-docs">
-<h3>Building Doxygen Docs<a class="headerlink" href="#building-doxygen-docs" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="building-doxygen-docs">
+<h3><span class="section-number">4.8.2.3. </span>Building Doxygen Docs<a class="headerlink" href="#building-doxygen-docs" title="Link to this heading">¶</a></h3>
 <p>Building the Doxygen documentation is pretty simple:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf doxygen
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>doxygen
 </pre></div>
 </div>
 <p>This builds using the default configuration, which generates
@@ -510,64 +511,64 @@ available in <em>ns-3</em>.</p>
 are generating warnings, typically about missing documentation.  To
 see the full warnings list, use the <code class="docutils literal notranslate"><span class="pre">doc/doxygen.warnings.report.sh</span></code>
 script:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ doc/doxygen.warnings.report.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>doc/doxygen.warnings.report.sh
 
 doxygen.warnings.report.sh:
-Building and running print-introspected-doxygen...done.
-Rebuilding doxygen <span class="o">(</span>v1.8.10<span class="o">)</span> docs with full errors...done.
+Building<span class="w"> </span>and<span class="w"> </span>running<span class="w"> </span>print-introspected-doxygen...done.
+Rebuilding<span class="w"> </span>doxygen<span class="w"> </span><span class="o">(</span>v1.8.10<span class="o">)</span><span class="w"> </span>docs<span class="w"> </span>with<span class="w"> </span>full<span class="w"> </span>errors...done.
 
 
-Report of Doxygen warnings
+Report<span class="w"> </span>of<span class="w"> </span>Doxygen<span class="w"> </span>warnings
 ----------------------------------------
 
-<span class="o">(</span>All counts are lower bounds.<span class="o">)</span>
+<span class="o">(</span>All<span class="w"> </span>counts<span class="w"> </span>are<span class="w"> </span>lower<span class="w"> </span>bounds.<span class="o">)</span>
 
-Warnings by module/directory:
+Warnings<span class="w"> </span>by<span class="w"> </span>module/directory:
 
-Count Directory
------ ----------------------------------
-<span class="m">3414</span> src/lte/model
-<span class="m">1532</span> src/wimax/model
- <span class="m">825</span> src/lte/test
+Count<span class="w"> </span>Directory
+-----<span class="w"> </span>----------------------------------
+<span class="m">3414</span><span class="w"> </span>src/lte/model
+<span class="m">1532</span><span class="w"> </span>src/wimax/model
+<span class="w"> </span><span class="m">825</span><span class="w"> </span>src/lte/test
 ....
-   <span class="m">1</span> src/applications/test
- <span class="m">97</span> additional undocumented parameters.
+<span class="w">   </span><span class="m">1</span><span class="w"> </span>src/applications/test
+<span class="w"> </span><span class="m">97</span><span class="w"> </span>additional<span class="w"> </span>undocumented<span class="w"> </span>parameters.
 ----------------------------------------
- <span class="m">12460</span> total warnings
-   <span class="m">100</span> directories with warnings
+<span class="w"> </span><span class="m">12460</span><span class="w"> </span>total<span class="w"> </span>warnings
+<span class="w">   </span><span class="m">100</span><span class="w"> </span>directories<span class="w"> </span>with<span class="w"> </span>warnings
 
 
-Warnings by file <span class="o">(</span>alphabetical<span class="o">)</span>
+Warnings<span class="w"> </span>by<span class="w"> </span>file<span class="w"> </span><span class="o">(</span>alphabetical<span class="o">)</span>
 
-Count File
------ ----------------------------------
-  <span class="m">15</span> examples/routing/manet-routing-compare.cc
-  <span class="m">26</span> examples/stats/wifi-example-apps.h
-  <span class="m">12</span> examples/tutorial/fifth.cc
+Count<span class="w"> </span>File
+-----<span class="w"> </span>----------------------------------
+<span class="w">  </span><span class="m">15</span><span class="w"> </span>examples/routing/manet-routing-compare.cc
+<span class="w">  </span><span class="m">26</span><span class="w"> </span>examples/stats/wifi-example-apps.h
+<span class="w">  </span><span class="m">12</span><span class="w"> </span>examples/tutorial/fifth.cc
 ....
-  <span class="m">17</span> utils/python-unit-tests.py
+<span class="w">  </span><span class="m">17</span><span class="w"> </span>utils/python-unit-tests.py
 ----------------------------------------
-   <span class="m">771</span> files with warnings
+<span class="w">   </span><span class="m">771</span><span class="w"> </span>files<span class="w"> </span>with<span class="w"> </span>warnings
 
 
-Warnings by file <span class="o">(</span>numerical<span class="o">)</span>
+Warnings<span class="w"> </span>by<span class="w"> </span>file<span class="w"> </span><span class="o">(</span>numerical<span class="o">)</span>
 
-Count File
------ ----------------------------------
- <span class="m">273</span> src/lte/model/lte-rrc-sap.h
- <span class="m">272</span> src/core/model/simulator.h
- <span class="m">221</span> src/netanim/model/animation-interface.h
+Count<span class="w"> </span>File
+-----<span class="w"> </span>----------------------------------
+<span class="w"> </span><span class="m">273</span><span class="w"> </span>src/lte/model/lte-rrc-sap.h
+<span class="w"> </span><span class="m">272</span><span class="w"> </span>src/core/model/simulator.h
+<span class="w"> </span><span class="m">221</span><span class="w"> </span>src/netanim/model/animation-interface.h
 ....
-   <span class="m">1</span> src/wimax/model/ul-job.cc
+<span class="w">   </span><span class="m">1</span><span class="w"> </span>src/wimax/model/ul-job.cc
 ----------------------------------------
-   <span class="m">771</span> files with warnings
+<span class="w">   </span><span class="m">771</span><span class="w"> </span>files<span class="w"> </span>with<span class="w"> </span>warnings
 
 
-Doxygen Warnings Summary
+Doxygen<span class="w"> </span>Warnings<span class="w"> </span>Summary
 ----------------------------------------
-   <span class="m">100</span> directories
-   <span class="m">771</span> files
- <span class="m">12460</span> warnings
+<span class="w">   </span><span class="m">100</span><span class="w"> </span>directories
+<span class="w">   </span><span class="m">771</span><span class="w"> </span>files
+<span class="w"> </span><span class="m">12460</span><span class="w"> </span>warnings
 </pre></div>
 </div>
 <p>(This snippet has <em>a lot</em> of lines suppressed!)</p>
@@ -592,28 +593,28 @@ is <code class="docutils literal notranslate"><span class="pre">-m</span> <span 
 <code class="docutils literal notranslate"><span class="pre">src/&lt;module&gt;/*</span></code>, and follow the report with the actual warning lines.
 Combine with <code class="docutils literal notranslate"><span class="pre">-et</span></code> and you can focus on the warnings that are most
 urgent in a single module:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ doc/doxygen.warnings.report.sh -m mesh/helper
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>doc/doxygen.warnings.report.sh<span class="w"> </span>-m<span class="w"> </span>mesh/helper
 ...
-Doxygen Warnings Summary
+Doxygen<span class="w"> </span>Warnings<span class="w"> </span>Summary
 ----------------------------------------
-  <span class="m">1</span> directories
-  <span class="m">3</span> files
-<span class="m">149</span> warnings
+<span class="w">  </span><span class="m">1</span><span class="w"> </span>directories
+<span class="w">  </span><span class="m">3</span><span class="w"> </span>files
+<span class="m">149</span><span class="w"> </span>warnings
 
 
-Filtered <span class="nv">Warnings</span>
+Filtered<span class="w"> </span><span class="nv">Warnings</span>
 <span class="o">========================================</span>
-src/mesh/helper/dot11s/dot11s-installer.h:72: warning: Member m_root <span class="o">(</span>variable<span class="o">)</span> of class ns3::Dot11sStack is not documented.
-src/mesh/helper/dot11s/dot11s-installer.h:35: warning: <span class="k">return</span> <span class="nb">type</span> of member ns3::Dot11sStack::GetTypeId is not documented
-src/mesh/helper/dot11s/dot11s-installer.h:56: warning: <span class="k">return</span> <span class="nb">type</span> of member ns3::Dot11sStack::InstallStack is not documented
-src/mesh/helper/flame/lfame-installer.h:40: warning: Member GetTypeId<span class="o">()</span> <span class="o">(</span><span class="k">function</span><span class="o">)</span> of class ns3::FlameStack is not documented.
-src/mesh/helper/flame/flame-installer.h:60: warning: <span class="k">return</span> <span class="nb">type</span> of member ns3::FlameStack::InstallStack is not documented
-src/mesh/helper/mesh-helper.h:213: warning: Member m_nInterfaces <span class="o">(</span>variable<span class="o">)</span> of class ns3::MeshHelper is not documented.
-src/mesh/helper/mesh-helper.h:214: warning: Member m_spreadChannelPolicy <span class="o">(</span>variable<span class="o">)</span> of class ns3::MeshHelper is not documented.
-src/mesh/helper/mesh-helper.h:215: warning: Member m_stack <span class="o">(</span>variable<span class="o">)</span> of class ns3::MeshHelper is not documented.
-src/mesh/helper/mesh-helper.h:216: warning: Member m_stackFactory <span class="o">(</span>variable<span class="o">)</span> of class ns3::MeshHelper is not documented.
-src/mesh/helper/mesh-helper.h:209: warning: parameters of member ns3::MeshHelper::CreateInterface are not <span class="o">(</span>all<span class="o">)</span> documented
-src/mesh/helper/mesh-helper.h:119: warning: parameters of member ns3::MeshHelper::SetStandard are not <span class="o">(</span>all<span class="o">)</span> documented
+src/mesh/helper/dot11s/dot11s-installer.h:72:<span class="w"> </span>warning:<span class="w"> </span>Member<span class="w"> </span>m_root<span class="w"> </span><span class="o">(</span>variable<span class="o">)</span><span class="w"> </span>of<span class="w"> </span>class<span class="w"> </span>ns3::Dot11sStack<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>documented.
+src/mesh/helper/dot11s/dot11s-installer.h:35:<span class="w"> </span>warning:<span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span>of<span class="w"> </span>member<span class="w"> </span>ns3::Dot11sStack::GetTypeId<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>documented
+src/mesh/helper/dot11s/dot11s-installer.h:56:<span class="w"> </span>warning:<span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span>of<span class="w"> </span>member<span class="w"> </span>ns3::Dot11sStack::InstallStack<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>documented
+src/mesh/helper/flame/lfame-installer.h:40:<span class="w"> </span>warning:<span class="w"> </span>Member<span class="w"> </span>GetTypeId<span class="o">()</span><span class="w"> </span><span class="o">(</span><span class="k">function</span><span class="o">)</span><span class="w"> </span>of<span class="w"> </span>class<span class="w"> </span>ns3::FlameStack<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>documented.
+src/mesh/helper/flame/flame-installer.h:60:<span class="w"> </span>warning:<span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span>of<span class="w"> </span>member<span class="w"> </span>ns3::FlameStack::InstallStack<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>documented
+src/mesh/helper/mesh-helper.h:213:<span class="w"> </span>warning:<span class="w"> </span>Member<span class="w"> </span>m_nInterfaces<span class="w"> </span><span class="o">(</span>variable<span class="o">)</span><span class="w"> </span>of<span class="w"> </span>class<span class="w"> </span>ns3::MeshHelper<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>documented.
+src/mesh/helper/mesh-helper.h:214:<span class="w"> </span>warning:<span class="w"> </span>Member<span class="w"> </span>m_spreadChannelPolicy<span class="w"> </span><span class="o">(</span>variable<span class="o">)</span><span class="w"> </span>of<span class="w"> </span>class<span class="w"> </span>ns3::MeshHelper<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>documented.
+src/mesh/helper/mesh-helper.h:215:<span class="w"> </span>warning:<span class="w"> </span>Member<span class="w"> </span>m_stack<span class="w"> </span><span class="o">(</span>variable<span class="o">)</span><span class="w"> </span>of<span class="w"> </span>class<span class="w"> </span>ns3::MeshHelper<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>documented.
+src/mesh/helper/mesh-helper.h:216:<span class="w"> </span>warning:<span class="w"> </span>Member<span class="w"> </span>m_stackFactory<span class="w"> </span><span class="o">(</span>variable<span class="o">)</span><span class="w"> </span>of<span class="w"> </span>class<span class="w"> </span>ns3::MeshHelper<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>documented.
+src/mesh/helper/mesh-helper.h:209:<span class="w"> </span>warning:<span class="w"> </span>parameters<span class="w"> </span>of<span class="w"> </span>member<span class="w"> </span>ns3::MeshHelper::CreateInterface<span class="w"> </span>are<span class="w"> </span>not<span class="w"> </span><span class="o">(</span>all<span class="o">)</span><span class="w"> </span>documented
+src/mesh/helper/mesh-helper.h:119:<span class="w"> </span>warning:<span class="w"> </span>parameters<span class="w"> </span>of<span class="w"> </span>member<span class="w"> </span>ns3::MeshHelper::SetStandard<span class="w"> </span>are<span class="w"> </span>not<span class="w"> </span><span class="o">(</span>all<span class="o">)</span><span class="w"> </span>documented
 </pre></div>
 </div>
 <p>Finally, note that undocumented items (classes, methods, functions,
@@ -624,10 +625,10 @@ for a class method in the generated documentation, the class itself
 probably needs documentation.</p>
 <p>Now it’s just a matter of understanding the code, and writing some
 docs!</p>
-</div>
-<div class="section" id="id1">
-<h3><em>ns-3</em> Specifics<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>As for Sphinx, the Doxygen <a class="reference external" href="http://www.stack.nl/~dimitri/doxygen/index.html">docs</a> and <a class="reference external" href="http://www.stack.nl/~dimitri/doxygen/manual/commands.html">reference</a> are pretty good.
+</section>
+<section id="id1">
+<h3><span class="section-number">4.8.2.4. </span><em>ns-3</em> Specifics<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p>As for Sphinx, the Doxygen <a class="reference external" href="https://www.doxygen.nl/index.html">docs</a> and <a class="reference external" href="https://www.doxygen.nl/manual/commands.html">reference</a> are pretty good.
 We won’t duplicate the basics here, instead focusing on preferred
 usage for <em>ns-3</em>.</p>
 <ul>
@@ -666,7 +667,7 @@ text will be the detailed description for the group page.</p>
 <span class="cm"> *</span>
 <span class="cm"> *  FooBar packet type.</span>
 <span class="cm">*/</span>
-<span class="k">class</span> <span class="nc">FooBar</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">FooBar</span>
 </pre></div>
 </div>
 </li>
@@ -677,7 +678,7 @@ documentation of function pointer signatures:</p>
 <span class="cm"> *</span>
 <span class="cm"> *  \param ale The size of a pint of ale, in Imperial ounces.</span>
 <span class="cm"> */</span>
-<span class="k">typedef</span> <span class="nf">void</span> <span class="p">(</span><span class="o">*</span> <span class="n">BarCallback</span><span class="p">)(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">ale</span><span class="p">);</span>
+<span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">BarCallback</span><span class="p">)(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ale</span><span class="p">);</span>
 </pre></div>
 </div>
 </li>
@@ -702,7 +703,7 @@ explicitly:</p>
 <span class="cm"> * \tparam U \deduced The argument type.</span>
 <span class="cm"> * \param [in] a The argument.</span>
 <span class="cm"> */</span>
-<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">U</span><span class="o">&gt;</span> <span class="n">T</span> <span class="n">Function</span> <span class="p">(</span><span class="n">U</span> <span class="n">a</span><span class="p">);</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">U</span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">Function</span><span class="p">(</span><span class="n">U</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -711,7 +712,7 @@ the site where the template is invoked.  Basically deduction can only
 be done for function arguments.</p></li>
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">\tparam</span> <span class="pre">T</span> <span class="pre">\explicit</span></code> because the type <code class="docutils literal notranslate"><span class="pre">T</span></code> can’t be deduced;
 it must be given explicitly at the invocation site, as in
-<code class="docutils literal notranslate"><span class="pre">Create&lt;MyObject&gt;</span> <span class="pre">(...)</span></code></p></li>
+<code class="docutils literal notranslate"><span class="pre">Create&lt;MyObject&gt;(...)</span></code></p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">\internal</span></code> should be used only to set off a discussion of implementation
@@ -727,17 +728,17 @@ functions ubiquitously; the suggested documentation block for these
 cases is:</p>
 <ul>
 <li><p>Default constructor/destructor:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MyClass</span> <span class="p">();</span>   <span class="c1">//!&lt; Default constructor</span>
-<span class="o">~</span><span class="n">MyClass</span> <span class="p">();</span>  <span class="c1">//!&lt; Destructor</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MyClass</span><span class="p">();</span><span class="w">   </span><span class="c1">//!&lt; Default constructor</span>
+<span class="o">~</span><span class="n">MyClass</span><span class="p">();</span><span class="w">  </span><span class="c1">//!&lt; Destructor</span>
 </pre></div>
 </div>
 </li>
 <li><p>Dummy destructor and DoDispose:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/** Dummy destructor, see DoDispose. */</span>
-<span class="o">~</span><span class="n">MyClass</span> <span class="p">();</span>
+<span class="o">~</span><span class="n">MyClass</span><span class="p">();</span>
 
 <span class="cm">/** Destructor implementation */</span>
-<span class="k">virtual</span> <span class="kt">void</span> <span class="nf">DoDispose</span> <span class="p">();</span>
+<span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">DoDispose</span><span class="p">();</span>
 </pre></div>
 </div>
 </li>
@@ -746,52 +747,59 @@ cases is:</p>
 <span class="cm"> *  Register this type.</span>
 <span class="cm"> *  \return The object TypeId.</span>
 <span class="cm"> */</span>
-<span class="k">static</span> <span class="n">TypeId</span> <span class="nf">GetTypeId</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="k">static</span><span class="w"> </span><span class="n">TypeId</span><span class="w"> </span><span class="nf">GetTypeId</span><span class="p">();</span>
 </pre></div>
 </div>
 </li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Creating Documentation</a><ul>
-<li><a class="reference internal" href="#documenting-with-sphinx">Documenting with Sphinx</a><ul>
-<li><a class="reference internal" href="#adding-new-chapters">Adding New Chapters</a><ul>
-<li><a class="reference internal" href="#where">Where?</a></li>
-<li><a class="reference internal" href="#link">Link</a></li>
-<li><a class="reference internal" href="#makefile">Makefile</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">4.8. Creating Documentation</a><ul>
+<li><a class="reference internal" href="#documenting-with-sphinx">4.8.1. Documenting with Sphinx</a><ul>
+<li><a class="reference internal" href="#adding-new-chapters">4.8.1.1. Adding New Chapters</a><ul>
+<li><a class="reference internal" href="#where">4.8.1.1.1. Where?</a></li>
+<li><a class="reference internal" href="#link">4.8.1.1.2. Link</a></li>
+<li><a class="reference internal" href="#makefile">4.8.1.1.3. Makefile</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#building-sphinx-docs">Building Sphinx Docs</a></li>
-<li><a class="reference internal" href="#ns3-specifics"><em>ns-3</em> Specifics</a></li>
+<li><a class="reference internal" href="#building-sphinx-docs">4.8.1.2. Building Sphinx Docs</a></li>
+<li><a class="reference internal" href="#ns3-specifics">4.8.1.3. <em>ns-3</em> Specifics</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#documenting-with-doxygen">Documenting with Doxygen</a><ul>
-<li><a class="reference internal" href="#preferred-style">Preferred Style</a></li>
-<li><a class="reference internal" href="#useful-features">Useful Features</a></li>
-<li><a class="reference internal" href="#building-doxygen-docs">Building Doxygen Docs</a></li>
-<li><a class="reference internal" href="#id1"><em>ns-3</em> Specifics</a></li>
+<li><a class="reference internal" href="#documenting-with-doxygen">4.8.2. Documenting with Doxygen</a><ul>
+<li><a class="reference internal" href="#preferred-style">4.8.2.1. Preferred Style</a></li>
+<li><a class="reference internal" href="#useful-features">4.8.2.2. Useful Features</a></li>
+<li><a class="reference internal" href="#building-doxygen-docs">4.8.2.3. Building Doxygen Docs</a></li>
+<li><a class="reference internal" href="#id1">4.8.2.4. <em>ns-3</em> Specifics</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="new-modules.html"
-                        title="previous chapter">Adding a New Module to <em>ns-3</em></a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="enable-modules.html"
-                        title="next chapter">Enabling Subsets of <em>ns-3</em> Modules</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="new-modules.html"
+                          title="previous chapter"><span class="section-number">4.7. </span>Adding a New Module to <em>ns-3</em></a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="profiling.html"
+                          title="next chapter"><span class="section-number">4.9. </span>Profiling</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -803,12 +811,12 @@ cases is:</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -820,22 +828,23 @@ cases is:</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="enable-modules.html" title="Enabling Subsets of ns-3 Modules"
+          <a href="profiling.html" title="4.9. Profiling"
              >next</a> |</li>
         <li class="right" >
-          <a href="new-modules.html" title="Adding a New Module to ns-3"
+          <a href="new-modules.html" title="4.7. Adding a New Module to ns-3"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
 
-          <li class="nav-item nav-item-1"><a href="support.html" >Support</a><span class="navelem">&nbsp;</span></li> 
+          <li class="nav-item nav-item-1"><a href="develop.html" ><span class="section-number">4. </span>Developer Tools</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">4.8. </span>Creating Documentation</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 18:24.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:54.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

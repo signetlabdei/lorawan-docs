@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>LoRaWAN Module &#8212; Model Library</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>18. LoRaWAN Module &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Low-Rate Wireless Personal Area Network (LR-WPAN)" href="lr-wpan.html" />
-    <link rel="prev" title="Internet Applications Module Documentation" href="internet-apps.html" />
+    <link rel="next" title="19. Low-Rate Wireless Personal Area Network (LR-WPAN)" href="lr-wpan.html" />
+    <link rel="prev" title="17. Internet Applications Module Documentation" href="internet-apps.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Models</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,15 +126,16 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="lr-wpan.html" title="Low-Rate Wireless Personal Area Network (LR-WPAN)"
+          <a href="lr-wpan.html" title="19. Low-Rate Wireless Personal Area Network (LR-WPAN)"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="internet-apps.html" title="Internet Applications Module Documentation"
+          <a href="internet-apps.html" title="17. Internet Applications Module Documentation"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">18. </span>LoRaWAN Module</a></li> 
       </ul>
     </div>  
 
@@ -129,8 +144,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="lorawan-module">
-<h1>LoRaWAN Module<a class="headerlink" href="#lorawan-module" title="Permalink to this headline">¶</a></h1>
+  <section id="lorawan-module">
+<h1><span class="section-number">18. </span>LoRaWAN Module<a class="headerlink" href="#lorawan-module" title="Link to this heading">¶</a></h1>
 <p>This module contains a series of classes and examples aimed at modeling the
 modulation and medium access technology of a LoRaWAN network. Thanks to a simple
 underlying physical layer model and to the regulations imposed on traffic in the
@@ -140,8 +155,8 @@ infrequently.</p>
 <p>The following parts of this documentation first outline how the technology works
 and then describe how it was translated into a system of classes in order to
 simulate a LoRaWAN system.</p>
-<div class="section" id="technology">
-<h2>Technology<a class="headerlink" href="#technology" title="Permalink to this headline">¶</a></h2>
+<section id="technology">
+<h2><span class="section-number">18.1. </span>Technology<a class="headerlink" href="#technology" title="Link to this heading">¶</a></h2>
 <p>LoRaWAN is a Low Power Wide Area Network (LPWAN) technology built on the LoRa
 modulation. This technology allows a large number of devices to communicate
 wirelessly over long distances (in the order of 5-15 km, depending on the
@@ -149,8 +164,8 @@ propagation environment) at low data rates. The typical scenario in which this
 technology is expected to be employed is that of an IoT network, where devices
 need to communicate sparsely and only need short payloads to transmit
 some information coming from, typically, a sensor.</p>
-<div class="section" id="lora">
-<h3>LoRa<a class="headerlink" href="#lora" title="Permalink to this headline">¶</a></h3>
+<section id="lora">
+<h3><span class="section-number">18.1.1. </span>LoRa<a class="headerlink" href="#lora" title="Link to this heading">¶</a></h3>
 <p>The basis of LoRaWAN is the proprietary Long Range (LoRa) modulation, owned by
 Semtech. This modulation, based on Chirp Spread Spectrum (CSS), spreads a signal
 over a certain band by leveraging a chirp signal that scans the available
@@ -170,9 +185,9 @@ different SF and that some restrictions on their reciprocal power are respected.
 <p>More details on how the modulation works can be found in
 <a class="reference internal" href="#semtech2015modulation" id="id1"><span>[semtech2015modulation]</span></a> (an official document explaining the modulation) and in
 <a class="reference internal" href="#knight2016reversing" id="id2"><span>[knight2016reversing]</span></a> (a reverse engineering of the modulation by Matt Knight).</p>
-</div>
-<div class="section" id="lorawan">
-<h3>LoRaWAN<a class="headerlink" href="#lorawan" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="lorawan">
+<h3><span class="section-number">18.1.2. </span>LoRaWAN<a class="headerlink" href="#lorawan" title="Link to this heading">¶</a></h3>
 <p>The LoRa Alliance first defined the LoRaWAN standard in <a class="reference internal" href="#lorawanstandard" id="id3"><span>[lorawanstandard]</span></a>,
 with the objective of creating a medium access scheme and a set of network
 management policies that leverage the properties of the modulation to achieve
@@ -199,14 +214,16 @@ transmit acknowledgments or MAC commands.</p>
 on unlicensed bands in various regions, which usually subject transmitters to
 regulations on duty cycle. This fact will be explained in greater detail in the
 MAC layer model section of this document.</p>
-<div class="figure align-default" id="id8">
+<figure class="align-default" id="id8">
 <span id="lorawan-topology"></span><img alt="figures/LoRaWANTopology.*" src="figures/LoRaWANTopology.*" />
-<p class="caption"><span class="caption-text">Topology of the LoRaWAN architecture.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-<div class="section" id="module-design">
-<h2>Module design<a class="headerlink" href="#module-design" title="Permalink to this headline">¶</a></h2>
+<figcaption>
+<p><span class="caption-text">Topology of the LoRaWAN architecture.</span><a class="headerlink" href="#id8" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="module-design">
+<h2><span class="section-number">18.2. </span>Module design<a class="headerlink" href="#module-design" title="Link to this heading">¶</a></h2>
 <p>This module comprises two main models: one for the LoRa PHY layer that needs to
 represent LoRa chips and the behavior of LoRa transmissions, and one for the
 LoRaWAN MAC layer, that needs to behave according to the official
@@ -222,14 +239,14 @@ installed on a node that will then administer the wireless network through the
 GW’s forwarding application, <code class="docutils literal notranslate"><span class="pre">Forwarder</span></code>, which leverages the gateway’s LoRa
 communication capabilities to forward to End Devices the Network Server’s
 packets.</p>
-<div class="section" id="phy-layer-model">
-<h3>PHY layer model<a class="headerlink" href="#phy-layer-model" title="Permalink to this headline">¶</a></h3>
+<section id="phy-layer-model">
+<h3><span class="section-number">18.2.1. </span>PHY layer model<a class="headerlink" href="#phy-layer-model" title="Link to this heading">¶</a></h3>
 <p>The model for the PHY layer needs to take into account the two key factors of
 LoRa, sensitivity and orthogonality, to decide whether a transmission is
 received correctly or not. Besides, it also needs to be aware of how the chips
 implementing the modulation work, and of their architecture.</p>
-<div class="section" id="link-model">
-<h4>Link model<a class="headerlink" href="#link-model" title="Permalink to this headline">¶</a></h4>
+<section id="link-model">
+<h4><span class="section-number">18.2.1.1. </span>Link model<a class="headerlink" href="#link-model" title="Link to this heading">¶</a></h4>
 <p>The link model takes into account three main components to determine the
 performance of a LoRa transmission:</p>
 <ul class="simple">
@@ -286,20 +303,20 @@ while columns represent the interfering SF that is currently being considered.
 If the SIR is above the tabulated threshold, the packet is received correctly
 and forwarded to the MAC layer.</p>
 <div class="math">
-<p><img src="_images/math/c9a59ca0e1e5f7e0eb210b4798155419ffe71cb9.png" alt="\begin{matrix}
+<p><img src="_images/math/4e4fd11ad062170342cef13aa8f35f72e9b9362d.png" alt="\begin{matrix}
  &amp; \scriptstyle{\rm SF7 } &amp; \scriptstyle{\rm SF8 }&amp; \scriptstyle{\rm SF9 }&amp; \scriptstyle{\rm SF10} &amp; \scriptstyle{\rm SF11} &amp; \scriptstyle{\rm SF12}\\
 \scriptstyle{\rm SF7 }&amp; 6    &amp;-16    &amp;-18    &amp;-19    &amp;-19    &amp;-20\\
-\scriptstyle{\rm SF8 }&amp; -24  &amp;6      &amp;-20    &amp;-22    &amp;-22    &amp;-22\\
-\scriptstyle{\rm SF9 }&amp; -27  &amp;-27    &amp;6      &amp;-23    &amp;-25    &amp;-25\\
-\scriptstyle{\rm SF10} &amp; -30 &amp;-30    &amp;-30    &amp;6      &amp;-26    &amp;-28\\
-\scriptstyle{\rm SF11} &amp; -33 &amp;-33    &amp;-33    &amp;-33    &amp;6      &amp;-29\\
+\scriptstyle{\rm SF8 }&amp; -24  &amp;6  &amp;-20    &amp;-22    &amp;-22    &amp;-22\\
+\scriptstyle{\rm SF9 }&amp; -27  &amp;-27    &amp;6  &amp;-23    &amp;-25    &amp;-25\\
+\scriptstyle{\rm SF10} &amp; -30 &amp;-30    &amp;-30    &amp;6  &amp;-26    &amp;-28\\
+\scriptstyle{\rm SF11} &amp; -33 &amp;-33    &amp;-33    &amp;-33    &amp;6  &amp;-29\\
 \scriptstyle{\rm SF12} &amp; -36 &amp;-36    &amp;-36    &amp;-36    &amp;-36    &amp;6\\
 \end{matrix}"/></p>
 </div><p>A full description of the link layer model can also be found in
 <a class="reference internal" href="#magrin2017performance" id="id5"><span>[magrin2017performance]</span></a> and in <a class="reference internal" href="#magrin2017thesis" id="id6"><span>[magrin2017thesis]</span></a>.</p>
-</div>
-<div class="section" id="gateway-model">
-<h4>Gateway model<a class="headerlink" href="#gateway-model" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="gateway-model">
+<h4><span class="section-number">18.2.1.2. </span>Gateway model<a class="headerlink" href="#gateway-model" title="Link to this heading">¶</a></h4>
 <p>The chip installed on LoRa GWs needs special attention because of its
 architecture: since it is characterized by the presence of 8 parallel <em>receive
 paths</em>, it can receive multiple packets in parallel <a class="reference internal" href="#sx1301" id="id7"><span>[sx1301]</span></a>. This
@@ -330,10 +347,10 @@ channel, only one locks into the incoming packet;</p></li>
 packet and another packet arrives, the new packet is immediately marked as
 lost.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="mac-layer-model">
-<h3>MAC layer model<a class="headerlink" href="#mac-layer-model" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="mac-layer-model">
+<h3><span class="section-number">18.2.2. </span>MAC layer model<a class="headerlink" href="#mac-layer-model" title="Link to this heading">¶</a></h3>
 <p>The MAC models contained in this module aim at implementing the LoRaWAN
 standard. To facilitate this task, a series of side classes were created to
 handle headers, MAC commands, logical channels and duty cycle computations.
@@ -341,8 +358,8 @@ Furthermore, a simplified version of a Network Server (NS) is also provided in
 the form of an application that can be installed on a <em>ns-3</em> <code class="docutils literal notranslate"><span class="pre">Node</span></code> and
 connected to the GWs via a <code class="docutils literal notranslate"><span class="pre">PointToPoint</span></code> link to also simulate a backbone
 channel.</p>
-<div class="section" id="headers-mac-commands-and-addressing-system">
-<h4>Headers, MAC commands and addressing system<a class="headerlink" href="#headers-mac-commands-and-addressing-system" title="Permalink to this headline">¶</a></h4>
+<section id="headers-mac-commands-and-addressing-system">
+<h4><span class="section-number">18.2.2.1. </span>Headers, MAC commands and addressing system<a class="headerlink" href="#headers-mac-commands-and-addressing-system" title="Link to this heading">¶</a></h4>
 <p>The packet structure defined by the LoRaWAN standard is implemented through two
 classes that extend the <code class="docutils literal notranslate"><span class="pre">Header</span></code> class: <code class="docutils literal notranslate"><span class="pre">LorawanMacHeader</span></code> and
 <code class="docutils literal notranslate"><span class="pre">LoraFrameHeader</span></code>. In particular, <code class="docutils literal notranslate"><span class="pre">LoraFrameHeader</span></code> can include MAC commands
@@ -356,9 +373,9 @@ layer to perform actions. This structure can facilitate the implementation and
 testing of custom MAC commands, as allowed by the specification.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">LoraDeviceAddress</span></code> class is used to represent the address of a LoRaWAN
 ED, and to handle serialization and deserialization.</p>
-</div>
-<div class="section" id="logical-channels-and-duty-cycle">
-<h4>Logical channels and duty cycle<a class="headerlink" href="#logical-channels-and-duty-cycle" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="logical-channels-and-duty-cycle">
+<h4><span class="section-number">18.2.2.2. </span>Logical channels and duty cycle<a class="headerlink" href="#logical-channels-and-duty-cycle" title="Link to this heading">¶</a></h4>
 <p>Since LoRaWAN operates in unlicensed bands that are subject to restrictions on
 duty cycle, a series of objects were created to keep track of available
 transmission time and limit transmission at the MAC layer in case the layers
@@ -379,10 +396,10 @@ stay off is computed according to the following formula:</p>
 </div><p>This time is kept track of on a sub band basis, so that if two channels are
 under the same regulation, a transmission on one of them will also block the
 other one.</p>
-</div>
-</div>
-<div class="section" id="the-network-server">
-<h3>The Network Server<a class="headerlink" href="#the-network-server" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="the-network-server">
+<h3><span class="section-number">18.2.3. </span>The Network Server<a class="headerlink" href="#the-network-server" title="Link to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">NetworkServer</span></code> is an application which is running on a node that is
 connected to the simulation GWs. The GWs forward incoming LoRa packets to the
 NS, and expect to be given packets to transmit in the downlink to EDs by the NS.
@@ -401,28 +418,28 @@ possible, and the second receive window is used only when no more resources are
 available to leverage the first chance to respond to the device. More complex
 and realistic NS behaviors are definitely possible, however they also come at a
 complexity cost that is non-negligible.</p>
-</div>
-</div>
-<div class="section" id="scope-and-limitations">
-<h2>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="scope-and-limitations">
+<h2><span class="section-number">18.3. </span>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Link to this heading">¶</a></h2>
 <p>Since this is still a first version of the module, a few caveats are listed
 below.</p>
-<div class="section" id="inter-protocol-interference">
-<h3>Inter-protocol interference<a class="headerlink" href="#inter-protocol-interference" title="Permalink to this headline">¶</a></h3>
+<section id="inter-protocol-interference">
+<h3><span class="section-number">18.3.1. </span>Inter-protocol interference<a class="headerlink" href="#inter-protocol-interference" title="Link to this heading">¶</a></h3>
 <p>Since the <code class="docutils literal notranslate"><span class="pre">LoraChannel</span></code> class can only be connected to LoRa PHY layers, the
 model is currently unable to account for interference by other technologies.</p>
 <p>It’s expected that it will become possible, in the future, to handle
 inter-protocol interference by leveraging the <code class="docutils literal notranslate"><span class="pre">SpectrumChannel</span></code> class, once
 more accurate models of how interference affects LoRa signals become available.</p>
-</div>
-<div class="section" id="inter-channel-interference">
-<h3>Inter-channel interference<a class="headerlink" href="#inter-channel-interference" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="inter-channel-interference">
+<h3><span class="section-number">18.3.2. </span>Inter-channel interference<a class="headerlink" href="#inter-channel-interference" title="Link to this heading">¶</a></h3>
 <p>Interference between partially overlapping channels is not checked for.
 Furthermore, there currently is no model to account for interference between
 signals using different bandwidths.</p>
-</div>
-<div class="section" id="network-server">
-<h3>Network Server<a class="headerlink" href="#network-server" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="network-server">
+<h3><span class="section-number">18.3.3. </span>Network Server<a class="headerlink" href="#network-server" title="Link to this heading">¶</a></h3>
 <p>The current implementation of the Network Server tries to provide a general
 structure to handle EDs and GWs in a network, but still lacks some possibly
 complex code to simulate advanced features like different Adaptive Data Rate
@@ -434,22 +451,22 @@ send (in other words, no “booking” of the gateway resource is done in advanc
 and downlink packets take priority over incoming packets at the gateway).</p>
 <p>As of now, the Network Server implementation should be considered as an
 experimental feature, prone to yet undiscovered bugs.</p>
-</div>
-<div class="section" id="device-classes">
-<h3>Device Classes<a class="headerlink" href="#device-classes" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="device-classes">
+<h3><span class="section-number">18.3.4. </span>Device Classes<a class="headerlink" href="#device-classes" title="Link to this heading">¶</a></h3>
 <p>Currently, only Class A End Devices are supported.</p>
-</div>
-<div class="section" id="regional-parameters">
-<h3>Regional parameters<a class="headerlink" href="#regional-parameters" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="regional-parameters">
+<h3><span class="section-number">18.3.5. </span>Regional parameters<a class="headerlink" href="#regional-parameters" title="Link to this heading">¶</a></h3>
 <p>Since LoRaWAN parameters like default channel lineup and MAC command
 interpretations vary based on the operational region of the network,
 <code class="docutils literal notranslate"><span class="pre">LorawanMacHelper</span></code> includes methods to specify the region. While the current
 implementation is predisposed to support different configurations of the network
 based on the region it’s meant to be operating in, currently only the EU region
 using the 868 MHz sub band is supported.</p>
-</div>
-<div class="section" id="mac-layer-details">
-<h3>MAC layer details<a class="headerlink" href="#mac-layer-details" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="mac-layer-details">
+<h3><span class="section-number">18.3.6. </span>MAC layer details<a class="headerlink" href="#mac-layer-details" title="Link to this heading">¶</a></h3>
 <p>Some details that are not crucial for the evaluation of the system performance
 of a network still need to be implemented. These include:</p>
 <ul class="simple">
@@ -458,17 +475,17 @@ DeviceStatus</p></li>
 <li><p>Proper setting of ADR flags (no ADR mechanism is implemented still)</p></li>
 <li><p>Join procedure management (both at the NS and at the EDs)</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="usage">
+<h2><span class="section-number">18.4. </span>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
 <p>A typical usage of the model follows some typical <em>ns-3</em> paradigms, like the
 usage of helpers to configure a complex network. This section illustrates the
 setup of a LoRaWAN network using the module and some other side classes that
 weren’t described in the previous sections because they are mainly used to
 configure the network.</p>
-<div class="section" id="helpers">
-<h3>Helpers<a class="headerlink" href="#helpers" title="Permalink to this headline">¶</a></h3>
+<section id="helpers">
+<h3><span class="section-number">18.4.1. </span>Helpers<a class="headerlink" href="#helpers" title="Link to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">lorawan</span></code> module features helpers to configure the PHY and MAC layers on a
 large number of devices. The two layers are split in two different classes,
 <code class="docutils literal notranslate"><span class="pre">LorawanMacHelper</span></code> and <code class="docutils literal notranslate"><span class="pre">LoraPhyHelper</span></code>, which can be leveraged by a
@@ -486,18 +503,18 @@ It should be noted that this is an heuristic, and that it doesn’t guarantee th
 the SF distribution is optimal for the best possible operation of the network.
 In fact, finding such a distribution based on the network scenario is still an
 open challenge.</p>
-</div>
-<div class="section" id="attributes">
-<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="attributes">
+<h3><span class="section-number">18.4.2. </span>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h3>
 <p>Currently, the following attributes are available:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Interval</span></code> and <code class="docutils literal notranslate"><span class="pre">PacketSize</span></code> in <code class="docutils literal notranslate"><span class="pre">PeriodicSender</span></code> determine the interval
 between packet sends of the application, and the size of the packets that are
 generated by the application.</p></li>
 </ul>
-</div>
-<div class="section" id="trace-sources">
-<h3>Trace Sources<a class="headerlink" href="#trace-sources" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="trace-sources">
+<h3><span class="section-number">18.4.3. </span>Trace Sources<a class="headerlink" href="#trace-sources" title="Link to this heading">¶</a></h3>
 <p>Various trace sources can be used to keep track of events throughout the
 simulation, mainly regarding the lifetime of a packet. At the PHY layer, the
 following trace sources are exposed:</p>
@@ -554,26 +571,26 @@ cycle limitations;</p></li>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">PacketSent</span></code> in <code class="docutils literal notranslate"><span class="pre">LoraChannel</span></code> is fired when a packet is sent on the channel;</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="simple-lorawan-network-example">
-<h3>simple-lorawan-network-example<a class="headerlink" href="#simple-lorawan-network-example" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="examples">
+<h2><span class="section-number">18.5. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
+<section id="simple-lorawan-network-example">
+<h3><span class="section-number">18.5.1. </span>simple-lorawan-network-example<a class="headerlink" href="#simple-lorawan-network-example" title="Link to this heading">¶</a></h3>
 <p>This example is used to showcase how wireless communication between a device and
 a gateway happens: one LoRa ED is configured to send a packet, and a GW receives
 it. When logging is enabled, the various steps that are needed to send a packet
 from the APP layer of an ED to the MAC layer of a GW can be observed.</p>
-</div>
-<div class="section" id="network-server-example">
-<h3>network-server-example<a class="headerlink" href="#network-server-example" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="network-server-example">
+<h3><span class="section-number">18.5.2. </span>network-server-example<a class="headerlink" href="#network-server-example" title="Link to this heading">¶</a></h3>
 <p>This example builds on the <code class="docutils literal notranslate"><span class="pre">simple-lorawan-network-example</span></code> to add a Network
 Server and multiple EDs and GWs to the scenario. This example works as a
 showcase for how communication between the End Devices and the Network Server
 happens.</p>
-</div>
-<div class="section" id="complete-lorawan-network-example">
-<h3>complete-lorawan-network-example<a class="headerlink" href="#complete-lorawan-network-example" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="complete-lorawan-network-example">
+<h3><span class="section-number">18.5.3. </span>complete-lorawan-network-example<a class="headerlink" href="#complete-lorawan-network-example" title="Link to this heading">¶</a></h3>
 <p>This example shows how to configure a whole LoRaWAN network using the <em>ns-3</em>
 <code class="docutils literal notranslate"><span class="pre">lorawan</span></code> module. A big network featuring several thousand devices and tens of
 gateways is built, and each device is equipped with a <code class="docutils literal notranslate"><span class="pre">PeriodicSender</span></code>
@@ -582,10 +599,10 @@ Gateways. The example keeps track of the sent and received packets, and computes
 some statistics at the end of the simulation. No Network Server is used in this
 simulation, since performance metrics are collected through the GW trace sources
 and packets don’t require an acknowledgment.</p>
-</div>
-</div>
-<div class="section" id="tests">
-<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="tests">
+<h2><span class="section-number">18.6. </span>Tests<a class="headerlink" href="#tests" title="Link to this heading">¶</a></h2>
 <p>Tests are contained in the <code class="docutils literal notranslate"><span class="pre">lorawan-test-suite.cc</span></code> file. The tests currently
 cover the following classes:</p>
 <ul class="simple">
@@ -597,107 +614,121 @@ cover the following classes:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">LoraPhy</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">EndDeviceLoraPhy</span></code> and <code class="docutils literal notranslate"><span class="pre">LoraChannel</span></code></p></li>
 </ul>
-</div>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<dl class="citation">
-<dt class="label" id="magrin2017performance"><span class="brackets"><a class="fn-backref" href="#id5">magrin2017performance</a></span></dt>
-<dd><p>D. Magrin, M. Centenaro and L. Vangelista,
+</section>
+<section id="references">
+<h2><span class="section-number">18.7. </span>References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h2>
+<div role="list" class="citation-list">
+<div class="citation" id="magrin2017performance" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">magrin2017performance</a><span class="fn-bracket">]</span></span>
+<p>D. Magrin, M. Centenaro and L. Vangelista,
 <em>Performance Evaluation of LoRa Networks in a Smart
 City Scenario</em>, in Proc. of the IEEE International
 Conference on Communications, May 2017.</p>
-</dd>
-<dt class="label" id="magrin2017thesis"><span class="brackets"><a class="fn-backref" href="#id6">magrin2017thesis</a></span></dt>
-<dd><p>D. Magrin, <em>Network level performances of a LoRa system</em>,
+</div>
+<div class="citation" id="magrin2017thesis" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">magrin2017thesis</a><span class="fn-bracket">]</span></span>
+<p>D. Magrin, <em>Network level performances of a LoRa system</em>,
 December 2016. Available:
 <a class="reference external" href="http://tesi.cab.unipd.it/53740/">http://tesi.cab.unipd.it/53740/</a></p>
-</dd>
-<dt class="label" id="sx1301"><span class="brackets"><a class="fn-backref" href="#id7">sx1301</a></span></dt>
-<dd><p>Semtech, SX1301 Datasheet.</p>
-</dd>
-<dt class="label" id="goursaud2015dedicated"><span class="brackets"><a class="fn-backref" href="#id4">goursaud2015dedicated</a></span></dt>
-<dd><p>C. Goursaud, J. M. Gorce, <em>Dedicated networks for
+</div>
+<div class="citation" id="sx1301" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">sx1301</a><span class="fn-bracket">]</span></span>
+<p>Semtech, SX1301 Datasheet.</p>
+</div>
+<div class="citation" id="goursaud2015dedicated" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">goursaud2015dedicated</a><span class="fn-bracket">]</span></span>
+<p>C. Goursaud, J. M. Gorce, <em>Dedicated networks for
 IoT: PHY/MAC state of the art and challenges</em>, EAI
 endorsed transactions on Internet of Things, 2015.</p>
-</dd>
-<dt class="label" id="semtech2015modulation"><span class="brackets"><a class="fn-backref" href="#id1">semtech2015modulation</a></span></dt>
-<dd><p>Semtech Corporation, <em>AN1200.22 LoRa Modulation
+</div>
+<div class="citation" id="semtech2015modulation" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">semtech2015modulation</a><span class="fn-bracket">]</span></span>
+<p>Semtech Corporation, <em>AN1200.22 LoRa Modulation
 Basics</em>, May 2015, Online. Available:
 <a class="reference external" href="http://www.semtech.com/images/datasheet/an1200.22.pdf">http://www.semtech.com/images/datasheet/an1200.22.pdf</a></p>
-</dd>
-<dt class="label" id="knight2016reversing"><span class="brackets"><a class="fn-backref" href="#id2">knight2016reversing</a></span></dt>
-<dd><p>M. Knight, <em>Reversing LoRa</em>, Online. Available:
+</div>
+<div class="citation" id="knight2016reversing" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">knight2016reversing</a><span class="fn-bracket">]</span></span>
+<p>M. Knight, <em>Reversing LoRa</em>, Online. Available:
 <a class="reference external" href="https://github.com/matt-knight/research">https://github.com/matt-knight/research</a></p>
-</dd>
-<dt class="label" id="lorawanstandard"><span class="brackets"><a class="fn-backref" href="#id3">lorawanstandard</a></span></dt>
-<dd><p>N. Sornin, M. Luis, T. Eirich, T. Kramp, and O. Hersent,
+</div>
+<div class="citation" id="lorawanstandard" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">lorawanstandard</a><span class="fn-bracket">]</span></span>
+<p>N. Sornin, M. Luis, T. Eirich, T. Kramp, and O. Hersent,
 <em>LoRaWAN Specifications</em>, LoRa Alliance, Tech. Rep., 2015.</p>
-</dd>
-</dl>
 </div>
 </div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">LoRaWAN Module</a><ul>
-<li><a class="reference internal" href="#technology">Technology</a><ul>
-<li><a class="reference internal" href="#lora">LoRa</a></li>
-<li><a class="reference internal" href="#lorawan">LoRaWAN</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">18. LoRaWAN Module</a><ul>
+<li><a class="reference internal" href="#technology">18.1. Technology</a><ul>
+<li><a class="reference internal" href="#lora">18.1.1. LoRa</a></li>
+<li><a class="reference internal" href="#lorawan">18.1.2. LoRaWAN</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-design">Module design</a><ul>
-<li><a class="reference internal" href="#phy-layer-model">PHY layer model</a><ul>
-<li><a class="reference internal" href="#link-model">Link model</a></li>
-<li><a class="reference internal" href="#gateway-model">Gateway model</a></li>
+<li><a class="reference internal" href="#module-design">18.2. Module design</a><ul>
+<li><a class="reference internal" href="#phy-layer-model">18.2.1. PHY layer model</a><ul>
+<li><a class="reference internal" href="#link-model">18.2.1.1. Link model</a></li>
+<li><a class="reference internal" href="#gateway-model">18.2.1.2. Gateway model</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#mac-layer-model">MAC layer model</a><ul>
-<li><a class="reference internal" href="#headers-mac-commands-and-addressing-system">Headers, MAC commands and addressing system</a></li>
-<li><a class="reference internal" href="#logical-channels-and-duty-cycle">Logical channels and duty cycle</a></li>
+<li><a class="reference internal" href="#mac-layer-model">18.2.2. MAC layer model</a><ul>
+<li><a class="reference internal" href="#headers-mac-commands-and-addressing-system">18.2.2.1. Headers, MAC commands and addressing system</a></li>
+<li><a class="reference internal" href="#logical-channels-and-duty-cycle">18.2.2.2. Logical channels and duty cycle</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#the-network-server">The Network Server</a></li>
+<li><a class="reference internal" href="#the-network-server">18.2.3. The Network Server</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#scope-and-limitations">Scope and Limitations</a><ul>
-<li><a class="reference internal" href="#inter-protocol-interference">Inter-protocol interference</a></li>
-<li><a class="reference internal" href="#inter-channel-interference">Inter-channel interference</a></li>
-<li><a class="reference internal" href="#network-server">Network Server</a></li>
-<li><a class="reference internal" href="#device-classes">Device Classes</a></li>
-<li><a class="reference internal" href="#regional-parameters">Regional parameters</a></li>
-<li><a class="reference internal" href="#mac-layer-details">MAC layer details</a></li>
+<li><a class="reference internal" href="#scope-and-limitations">18.3. Scope and Limitations</a><ul>
+<li><a class="reference internal" href="#inter-protocol-interference">18.3.1. Inter-protocol interference</a></li>
+<li><a class="reference internal" href="#inter-channel-interference">18.3.2. Inter-channel interference</a></li>
+<li><a class="reference internal" href="#network-server">18.3.3. Network Server</a></li>
+<li><a class="reference internal" href="#device-classes">18.3.4. Device Classes</a></li>
+<li><a class="reference internal" href="#regional-parameters">18.3.5. Regional parameters</a></li>
+<li><a class="reference internal" href="#mac-layer-details">18.3.6. MAC layer details</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#usage">Usage</a><ul>
-<li><a class="reference internal" href="#helpers">Helpers</a></li>
-<li><a class="reference internal" href="#attributes">Attributes</a></li>
-<li><a class="reference internal" href="#trace-sources">Trace Sources</a></li>
+<li><a class="reference internal" href="#usage">18.4. Usage</a><ul>
+<li><a class="reference internal" href="#helpers">18.4.1. Helpers</a></li>
+<li><a class="reference internal" href="#attributes">18.4.2. Attributes</a></li>
+<li><a class="reference internal" href="#trace-sources">18.4.3. Trace Sources</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#examples">Examples</a><ul>
-<li><a class="reference internal" href="#simple-lorawan-network-example">simple-lorawan-network-example</a></li>
-<li><a class="reference internal" href="#network-server-example">network-server-example</a></li>
-<li><a class="reference internal" href="#complete-lorawan-network-example">complete-lorawan-network-example</a></li>
+<li><a class="reference internal" href="#examples">18.5. Examples</a><ul>
+<li><a class="reference internal" href="#simple-lorawan-network-example">18.5.1. simple-lorawan-network-example</a></li>
+<li><a class="reference internal" href="#network-server-example">18.5.2. network-server-example</a></li>
+<li><a class="reference internal" href="#complete-lorawan-network-example">18.5.3. complete-lorawan-network-example</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#tests">Tests</a></li>
-<li><a class="reference internal" href="#references">References</a></li>
+<li><a class="reference internal" href="#tests">18.6. Tests</a></li>
+<li><a class="reference internal" href="#references">18.7. References</a></li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="internet-apps.html"
-                        title="previous chapter">Internet Applications Module Documentation</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="lr-wpan.html"
-                        title="next chapter">Low-Rate Wireless Personal Area Network (LR-WPAN)</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="internet-apps.html"
+                          title="previous chapter"><span class="section-number">17. </span>Internet Applications Module Documentation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="lr-wpan.html"
+                          title="next chapter"><span class="section-number">19. </span>Low-Rate Wireless Personal Area Network (LR-WPAN)</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -709,12 +740,12 @@ Basics</em>, May 2015, Online. Available:
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -726,21 +757,22 @@ Basics</em>, May 2015, Online. Available:
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="lr-wpan.html" title="Low-Rate Wireless Personal Area Network (LR-WPAN)"
+          <a href="lr-wpan.html" title="19. Low-Rate Wireless Personal Area Network (LR-WPAN)"
              >next</a> |</li>
         <li class="right" >
-          <a href="internet-apps.html" title="Internet Applications Module Documentation"
+          <a href="internet-apps.html" title="17. Internet Applications Module Documentation"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">18. </span>LoRaWAN Module</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 18:24.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:57.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

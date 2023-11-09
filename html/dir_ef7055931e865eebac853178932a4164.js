@@ -1,25 +1,19 @@
 var dir_ef7055931e865eebac853178932a4164 =
 [
-    [ "angles.cc", "angles_8cc.html", "angles_8cc" ],
-    [ "angles.h", "angles_8h.html", "angles_8h" ],
-    [ "antenna-model.cc", "antenna-model_8cc.html", null ],
-    [ "antenna-model.h", "antenna-model_8h.html", [
-      [ "AntennaModel", "classns3_1_1_antenna_model.html", "classns3_1_1_antenna_model" ]
-    ] ],
-    [ "cosine-antenna-model.cc", "cosine-antenna-model_8cc.html", null ],
-    [ "cosine-antenna-model.h", "cosine-antenna-model_8h.html", [
-      [ "CosineAntennaModel", "classns3_1_1_cosine_antenna_model.html", "classns3_1_1_cosine_antenna_model" ]
-    ] ],
-    [ "isotropic-antenna-model.cc", "isotropic-antenna-model_8cc.html", null ],
-    [ "isotropic-antenna-model.h", "isotropic-antenna-model_8h.html", [
-      [ "IsotropicAntennaModel", "classns3_1_1_isotropic_antenna_model.html", "classns3_1_1_isotropic_antenna_model" ]
-    ] ],
-    [ "parabolic-antenna-model.cc", "parabolic-antenna-model_8cc.html", null ],
-    [ "parabolic-antenna-model.h", "parabolic-antenna-model_8h.html", [
-      [ "ParabolicAntennaModel", "classns3_1_1_parabolic_antenna_model.html", "classns3_1_1_parabolic_antenna_model" ]
-    ] ],
-    [ "three-gpp-antenna-array-model.cc", "three-gpp-antenna-array-model_8cc.html", null ],
-    [ "three-gpp-antenna-array-model.h", "three-gpp-antenna-array-model_8h.html", [
-      [ "ThreeGppAntennaArrayModel", "classns3_1_1_three_gpp_antenna_array_model.html", "classns3_1_1_three_gpp_antenna_array_model" ]
-    ] ]
+    [ "angles.cc", "db/d7b/angles_8cc.html", "db/d7b/angles_8cc" ],
+    [ "angles.h", "d7/d06/angles_8h.html", "d7/d06/angles_8h" ],
+    [ "antenna-model.cc", "d9/d69/antenna-model_8cc.html", null ],
+    [ "antenna-model.h", "d9/df0/antenna-model_8h.html", null ],
+    [ "cosine-antenna-model.cc", "d9/dec/cosine-antenna-model_8cc.html", null ],
+    [ "cosine-antenna-model.h", "d7/db3/cosine-antenna-model_8h.html", null ],
+    [ "isotropic-antenna-model.cc", "db/d07/isotropic-antenna-model_8cc.html", null ],
+    [ "isotropic-antenna-model.h", "d6/d62/isotropic-antenna-model_8h.html", null ],
+    [ "parabolic-antenna-model.cc", "d8/ddb/parabolic-antenna-model_8cc.html", null ],
+    [ "parabolic-antenna-model.h", "da/ddd/parabolic-antenna-model_8h.html", null ],
+    [ "phased-array-model.cc", "d0/dc9/phased-array-model_8cc.html", "d0/dc9/phased-array-model_8cc" ],
+    [ "phased-array-model.h", "db/d63/phased-array-model_8h.html", "db/d63/phased-array-model_8h" ],
+    [ "three-gpp-antenna-model.cc", "dc/de2/three-gpp-antenna-model_8cc.html", null ],
+    [ "three-gpp-antenna-model.h", "d5/dfb/three-gpp-antenna-model_8h.html", "d5/dfb/three-gpp-antenna-model_8h" ],
+    [ "uniform-planar-array.cc", "d7/d25/uniform-planar-array_8cc.html", null ],
+    [ "uniform-planar-array.h", "d6/d1d/uniform-planar-array_8h.html", null ]
 ];

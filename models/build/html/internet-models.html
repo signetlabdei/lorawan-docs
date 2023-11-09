@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>Internet Models (IP, TCP, Routing, UDP, Internet Applications) &#8212; Model Library</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>16. Internet Models (IP, TCP, Routing, UDP) &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Internet Stack" href="internet-stack.html" />
-    <link rel="prev" title="Flow Monitor" href="flow-monitor.html" />
+    <link rel="next" title="16.1. Internet Stack" href="internet-stack.html" />
+    <link rel="prev" title="15. Flow Monitor" href="flow-monitor.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Models</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,15 +126,16 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="internet-stack.html" title="Internet Stack"
+          <a href="internet-stack.html" title="16.1. Internet Stack"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="flow-monitor.html" title="Flow Monitor"
+          <a href="flow-monitor.html" title="15. Flow Monitor"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">16. </span>Internet Models (IP, TCP, Routing, UDP)</a></li> 
       </ul>
     </div>  
 
@@ -129,204 +144,198 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="internet-models-ip-tcp-routing-udp-internet-applications">
-<h1>Internet Models (IP, TCP, Routing, UDP, Internet Applications)<a class="headerlink" href="#internet-models-ip-tcp-routing-udp-internet-applications" title="Permalink to this headline">¶</a></h1>
+  <section id="internet-models-ip-tcp-routing-udp">
+<h1><span class="section-number">16. </span>Internet Models (IP, TCP, Routing, UDP)<a class="headerlink" href="#internet-models-ip-tcp-routing-udp" title="Link to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="internet-stack.html">Internet Stack</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="internet-stack.html#internet-stack-aggregation">Internet stack aggregation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="internet-stack.html#internet-node-structure">Internet Node structure</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="internet-stack.html#layer-3-protocols">Layer-3 protocols</a></li>
-<li class="toctree-l4"><a class="reference internal" href="internet-stack.html#layer-4-protocols-and-sockets">Layer-4 protocols and sockets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internet-stack.html">16.1. Internet Stack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="internet-stack.html#internet-stack-aggregation">16.1.1. Internet stack aggregation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="internet-stack.html#internet-node-structure">16.1.1.1. Internet Node structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="internet-stack.html#layer-3-protocols">16.1.1.1.1. Layer-3 protocols</a></li>
+<li class="toctree-l4"><a class="reference internal" href="internet-stack.html#layer-4-protocols-and-sockets">16.1.1.1.2. Layer-4 protocols and sockets</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="internet-stack.html#ip-capable-node-interfaces">IP-capable node interfaces</a></li>
-<li class="toctree-l3"><a class="reference internal" href="internet-stack.html#example-path-of-a-packet">Example path of a packet</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ipv4.html">IPv4</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ipv4.html#ipv4-addresses-assignment">IPv4 addresses assignment</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ipv4.html#manually-assigned-ipv4-addresses">Manually assigned IPv4 addresses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipv4.html#dhcp-assigned-ipv4-addresses">DHCP assigned IPv4 addresses</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ipv4.html#tracing-in-the-ipv4-stack">Tracing in the IPv4 Stack</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ipv4.html#tracing-in-arp">Tracing in ARP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipv4.html#tracing-in-ipv4">Tracing in IPv4</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ipv4.html#explicit-congestion-notification-ecn-bits">Explicit Congestion Notification (ECN) bits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ipv4.html#ipv4queuediscitem">Ipv4QueueDiscItem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ipv4.html#rfc-6621-duplicate-packet-detection">RFC 6621 duplicate packet detection</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ipv6.html">IPv6</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ipv6.html#ipv6-model-description">IPv6 model description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ipv6.html#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ipv6.html#ipv6-addresses-assignment">IPv6 addresses assignment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="ipv6.html#manually-assigned-ipv6-addresses">Manually assigned IPv6 addresses</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="ipv6.html#auto-generated-ipv6-addresses">Auto-generated IPv6 addresses</a></li>
-<li class="toctree-l5"><a class="reference internal" href="ipv6.html#random-generated-ipv6-addresses">Random-generated IPv6 addresses</a></li>
-<li class="toctree-l5"><a class="reference internal" href="ipv6.html#duplicate-address-detection-dad">Duplicate Address Detection (DAD)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="internet-stack.html#ip-capable-node-interfaces">16.1.1.2. IP-capable node interfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="internet-stack.html#example-path-of-a-packet">16.1.1.3. Example path of a packet</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="ipv6.html#explicit-congestion-notification-ecn-bits-in-ipv6">Explicit Congestion Notification (ECN) bits in IPv6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ipv4.html">16.2. IPv4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ipv4.html#ipv4-addresses-assignment">16.2.1. IPv4 addresses assignment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ipv4.html#manually-assigned-ipv4-addresses">16.2.1.1. Manually assigned IPv4 addresses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipv4.html#dhcp-assigned-ipv4-addresses">16.2.1.2. DHCP assigned IPv4 addresses</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ipv6.html#ipv6queuediscitem">Ipv6QueueDiscItem</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ipv6.html#host-and-router-behaviour-in-ipv6-and-ns3">Host and Router behaviour in IPv6 and <em>ns-3</em></a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipv6.html#helpers">Helpers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipv6.html#attributes">Attributes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipv6.html#output">Output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipv6.html#advanced-usage">Advanced Usage</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="ipv6.html#ipv6-maximum-transmission-unit-mtu-and-fragmentation">IPv6 maximum transmission unit (MTU) and fragmentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv4.html#tracing-in-the-ipv4-stack">16.2.2. Tracing in the IPv4 Stack</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ipv4.html#tracing-in-arp">16.2.2.1. Tracing in ARP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipv4.html#tracing-in-ipv4">16.2.2.2. Tracing in IPv4</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="ipv6.html#examples">Examples</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipv6.html#troubleshooting">Troubleshooting</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="ipv6.html#routing-loops">Routing loops</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ipv6.html#global-address-leakage">Global address leakage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ipv6.html#db8-32-addresses">2001:DB8::/32 addresses</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ipv6.html#validation">Validation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="routing-overview.html">Routing overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="routing-overview.html#routing-architecture">Routing architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routing-overview.html#unicast-routing">Unicast routing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="routing-overview.html#ipv-4-6-listrouting">Ipv[4,6]ListRouting</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#ipv-4-6-listrouting-addroutingprotocol">Ipv[4,6]ListRouting::AddRoutingProtocol</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="routing-overview.html#global-centralized-routing">Global centralized routing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#global-unicast-routing-api">Global Unicast Routing API</a></li>
-<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#global-routing-implementation">Global Routing Implementation</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="routing-overview.html#rip-and-ripng">RIP and RIPng</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#routing-convergence">Routing convergence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#split-horizoning">Split Horizoning</a></li>
-<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#default-routes">Default routes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#protocol-parameters-and-options">Protocol parameters and options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#limitations">Limitations</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="routing-overview.html#other-routing-protocols">Other routing protocols</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="routing-overview.html#multicast-routing">Multicast routing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="tcp.html">TCP models in ns-3</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tcp.html#overview-of-support-for-tcp">Overview of support for TCP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tcp.html#ns-3-tcp">ns-3 TCP</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#model-history">Model history</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#acknowledgments">Acknowledgments</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#usage">Usage</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#tcp-socket-interaction-and-interface-with-application-layer">TCP Socket interaction and interface with Application layer</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#congestion-control-algorithms">Congestion Control Algorithms</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#newreno">NewReno</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#highspeed">HighSpeed</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#hybla">Hybla</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#westwood">Westwood</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#vegas">Vegas</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#scalable">Scalable</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#veno">Veno</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#bic">BIC</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#yeah">YeAH</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#illinois">Illinois</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#h-tcp">H-TCP</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#ledbat">LEDBAT</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#tcp-lp">TCP-LP</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#data-center-tcp-dctcp">Data Center TCP (DCTCP)</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#support-for-explicit-congestion-notification-ecn">Support for Explicit Congestion Notification (ECN)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#enabling-ecn">Enabling ECN</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#ecn-negotiation">ECN negotiation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#ecn-state-transitions">ECN State Transitions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#rfc-3168-compliance">RFC 3168 compliance</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#open-issues">Open issues</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#validation">Validation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#writing-a-new-congestion-control-algorithm">Writing a new congestion control algorithm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#tcp-sack-and-non-sack">TCP SACK and non-SACK</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#loss-recovery-algorithms">Loss Recovery Algorithms</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#classic-recovery">Classic Recovery</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tcp.html#proportional-rate-reduction">Proportional Rate Reduction</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#adding-a-new-loss-recovery-algorithm-in-ns-3">Adding a new loss recovery algorithm in ns-3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#delivery-rate-estimation">Delivery Rate Estimation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#current-limitations">Current limitations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#writing-tcp-tests">Writing TCP tests</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="tcp.html#network-simulation-cradle">Network Simulation Cradle</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#prerequisites">Prerequisites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#configuring-and-downloading">Configuring and Downloading</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#building-and-validating">Building and validating</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#id5">Usage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#stack-configuration">Stack configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#nsc-api">NSC API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#ns-3-implementation">ns-3 implementation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tcp.html#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv4.html#explicit-congestion-notification-ecn-bits">16.2.3. Explicit Congestion Notification (ECN) bits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv4.html#ipv4queuediscitem">16.2.4. Ipv4QueueDiscItem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv4.html#rfc-6621-duplicate-packet-detection">16.2.5. RFC 6621 duplicate packet detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv4.html#neighborcache">16.2.6. NeighborCache</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ipv4.html#usage">16.2.6.1. Usage</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="udp.html">UDP model in ns-3</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="udp.html#generic-support-for-udp">Generic support for UDP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="udp.html#ns-3-udp">ns-3 UDP</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="udp.html#usage">Usage</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="udp.html#udp-socket-interaction-and-interface-with-application-layer">UDP Socket interaction and interface with Application layer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ipv6.html">16.3. IPv6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ipv6.html#ipv6-model-description">16.3.1. IPv6 model description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6.html#usage">16.3.2. Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ipv6.html#ipv6-addresses-assignment">16.3.2.1. IPv6 addresses assignment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ipv6.html#manually-assigned-ipv6-addresses">16.3.2.1.1. Manually assigned IPv6 addresses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipv6.html#auto-generated-ipv6-addresses">16.3.2.1.2. Auto-generated IPv6 addresses</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="ipv6.html#random-generated-ipv6-addresses">16.3.2.1.2.1. Random-generated IPv6 addresses</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="udp.html#validation">Validation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="udp.html#limitations">Limitations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipv6.html#networks-with-and-without-the-onlink-property">16.3.2.1.3. Networks with and without the onlink property</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipv6.html#duplicate-address-detection-dad">16.3.2.1.4. Duplicate Address Detection (DAD)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ipv6.html#explicit-congestion-notification-ecn-bits-in-ipv6">16.3.2.2. Explicit Congestion Notification (ECN) bits in IPv6</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6.html#ipv6queuediscitem">16.3.3. Ipv6QueueDiscItem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ipv6.html#host-and-router-behaviour-in-ipv6-and-ns3">16.3.3.1. Host and Router behaviour in IPv6 and <em>ns-3</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipv6.html#helpers">16.3.3.2. Helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipv6.html#attributes">16.3.3.3. Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipv6.html#output">16.3.3.4. Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipv6.html#advanced-usage">16.3.3.5. Advanced Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ipv6.html#ipv6-maximum-transmission-unit-mtu-and-fragmentation">16.3.3.5.1. IPv6 maximum transmission unit (MTU) and fragmentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ipv6.html#examples">16.3.3.6. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipv6.html#troubleshooting">16.3.3.7. Troubleshooting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ipv6.html#routing-loops">16.3.3.7.1. Routing loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipv6.html#global-address-leakage">16.3.3.7.2. Global address leakage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipv6.html#db8-32-addresses">16.3.3.7.3. 2001:DB8::/32 addresses</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="internet-apps.html">Internet Applications Module Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="internet-apps.html#v4ping">V4Ping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="internet-apps.html#ping6">Ping6</a></li>
-<li class="toctree-l2"><a class="reference internal" href="internet-apps.html#radvd">Radvd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="internet-apps.html#dhcpv4">DHCPv4</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="internet-apps.html#helpers">Helpers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="internet-apps.html#tests">Tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="internet-apps.html#examples">Examples</a></li>
-<li class="toctree-l3"><a class="reference internal" href="internet-apps.html#scope-and-limitations">Scope and Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6.html#validation">16.3.4. Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6.html#neighborcache">16.3.5. NeighborCache</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ipv6.html#id1">16.3.5.1. Usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="routing-overview.html">16.4. Routing overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="routing-overview.html#routing-architecture">16.4.1. Routing architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing-overview.html#unicast-routing">16.4.2. Unicast routing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="routing-overview.html#ipv-4-6-listrouting">16.4.2.1. Ipv[4,6]ListRouting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#ipv-4-6-listrouting-addroutingprotocol">16.4.2.1.1. Ipv[4,6]ListRouting::AddRoutingProtocol</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="routing-overview.html#global-centralized-routing">16.4.2.2. Global centralized routing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#global-unicast-routing-api">16.4.2.2.1. Global Unicast Routing API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#global-routing-implementation">16.4.2.2.2. Global Routing Implementation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="routing-overview.html#rip-and-ripng">16.4.2.3. RIP and RIPng</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#routing-convergence">16.4.2.3.1. Routing convergence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#split-horizoning">16.4.2.3.2. Split Horizoning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#default-routes">16.4.2.3.3. Default routes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#protocol-parameters-and-options">16.4.2.3.4. Protocol parameters and options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="routing-overview.html#limitations">16.4.2.3.5. Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="routing-overview.html#other-routing-protocols">16.4.2.4. Other routing protocols</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="routing-overview.html#multicast-routing">16.4.3. Multicast routing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tcp.html">16.5. TCP models in ns-3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tcp.html#overview-of-support-for-tcp">16.5.1. Overview of support for TCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tcp.html#ns-3-tcp">16.5.2. ns-3 TCP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tcp.html#model-history">16.5.2.1. Model history</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tcp.html#acknowledgments">16.5.2.2. Acknowledgments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tcp.html#usage">16.5.2.3. Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#tcp-socket-interaction-and-interface-with-application-layer">16.5.2.3.1. TCP Socket interaction and interface with Application layer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tcp.html#congestion-control-algorithms">16.5.2.4. Congestion Control Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#newreno">16.5.2.4.1. NewReno</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#cubic">16.5.2.4.2. CUBIC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#linux-reno">16.5.2.4.3. Linux Reno</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#highspeed">16.5.2.4.4. HighSpeed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#hybla">16.5.2.4.5. Hybla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#westwood">16.5.2.4.6. Westwood</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#vegas">16.5.2.4.7. Vegas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#scalable">16.5.2.4.8. Scalable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#veno">16.5.2.4.9. Veno</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#bic">16.5.2.4.10. BIC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#yeah">16.5.2.4.11. YeAH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#illinois">16.5.2.4.12. Illinois</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#h-tcp">16.5.2.4.13. H-TCP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#ledbat">16.5.2.4.14. LEDBAT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#tcp-lp">16.5.2.4.15. TCP-LP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#data-center-tcp-dctcp">16.5.2.4.16. Data Center TCP (DCTCP)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#bbr">16.5.2.4.17. BBR</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tcp.html#support-for-explicit-congestion-notification-ecn">16.5.2.5. Support for Explicit Congestion Notification (ECN)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#enabling-ecn">16.5.2.5.1. Enabling ECN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#ecn-negotiation">16.5.2.5.2. ECN negotiation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#ecn-state-transitions">16.5.2.5.3. ECN State Transitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#rfc-3168-compliance">16.5.2.5.4. RFC 3168 compliance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#open-issues">16.5.2.5.5. Open issues</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tcp.html#support-for-dynamic-pacing">16.5.2.6. Support for Dynamic Pacing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tcp.html#validation">16.5.2.7. Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tcp.html#writing-a-new-congestion-control-algorithm">16.5.2.8. Writing a new congestion control algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tcp.html#tcp-sack-and-non-sack">16.5.2.9. TCP SACK and non-SACK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tcp.html#loss-recovery-algorithms">16.5.2.10. Loss Recovery Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#classic-recovery">16.5.2.10.1. Classic Recovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tcp.html#proportional-rate-reduction">16.5.2.10.2. Proportional Rate Reduction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tcp.html#adding-a-new-loss-recovery-algorithm-in-ns-3">16.5.2.11. Adding a new loss recovery algorithm in ns-3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tcp.html#delivery-rate-estimation">16.5.2.12. Delivery Rate Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tcp.html#current-limitations">16.5.2.13. Current limitations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tcp.html#writing-tcp-tests">16.5.2.14. Writing TCP tests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="udp.html">16.6. UDP model in ns-3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="udp.html#generic-support-for-udp">16.6.1. Generic support for UDP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp.html#ns-3-udp">16.6.2. ns-3 UDP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="udp.html#usage">16.6.2.1. Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="udp.html#udp-socket-interaction-and-interface-with-application-layer">16.6.2.1.1. UDP Socket interaction and interface with Application layer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="udp.html#validation">16.6.2.2. Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="udp.html#limitations">16.6.2.3. Limitations</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </div>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="flow-monitor.html"
-                        title="previous chapter">Flow Monitor</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="internet-stack.html"
-                        title="next chapter">Internet Stack</a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="flow-monitor.html"
+                          title="previous chapter"><span class="section-number">15. </span>Flow Monitor</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="internet-stack.html"
+                          title="next chapter"><span class="section-number">16.1. </span>Internet Stack</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -338,12 +347,12 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -355,21 +364,22 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="internet-stack.html" title="Internet Stack"
+          <a href="internet-stack.html" title="16.1. Internet Stack"
              >next</a> |</li>
         <li class="right" >
-          <a href="flow-monitor.html" title="Flow Monitor"
+          <a href="flow-monitor.html" title="15. Flow Monitor"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">16. </span>Internet Models (IP, TCP, Routing, UDP)</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 17:37.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:57.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

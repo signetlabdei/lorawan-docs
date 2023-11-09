@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>Utilities &#8212; Manual</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>5. Utilities &#8212; Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Making Plots using the Gnuplot Class" href="gnuplot.html" />
-    <link rel="prev" title="Helpers" href="helpers.html" />
+    <link rel="next" title="6. Support" href="support.html" />
+    <link rel="prev" title="4.10. Working with gitlab-ci-local" href="working-with-gitlab-ci-local.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Manual</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Manual</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,15 +126,16 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="gnuplot.html" title="Making Plots using the Gnuplot Class"
+          <a href="support.html" title="6. Support"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="helpers.html" title="Helpers"
+          <a href="working-with-gitlab-ci-local.html" title="4.10. Working with gitlab-ci-local"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">5. </span>Utilities</a></li> 
       </ul>
     </div>  
 
@@ -129,75 +144,91 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="utilities">
-<span id="id1"></span><h1>Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="print-introspected-doxygen">
-<h2>Print-introspected-doxygen<a class="headerlink" href="#print-introspected-doxygen" title="Permalink to this headline">¶</a></h2>
+  <section id="utilities">
+<span id="id1"></span><h1><span class="section-number">5. </span>Utilities<a class="headerlink" href="#utilities" title="Link to this heading">¶</a></h1>
+<section id="print-introspected-doxygen">
+<h2><span class="section-number">5.1. </span>Print-introspected-doxygen<a class="headerlink" href="#print-introspected-doxygen" title="Link to this heading">¶</a></h2>
 <p><cite>print-introspected-doxygen</cite> is used to generate doxygen documentation
 using various TypeIds defined throughout the <em>ns-3</em> source code.
 The tool returns the various config paths, attributes, trace sources,
 etc. for the various files in <em>ns-3</em>.</p>
-<div class="section" id="invocation">
-<h3>Invocation<a class="headerlink" href="#invocation" title="Permalink to this headline">¶</a></h3>
+<section id="invocation">
+<h3><span class="section-number">5.1.1. </span>Invocation<a class="headerlink" href="#invocation" title="Link to this heading">¶</a></h3>
 <p>This tool is run automatically by the build system when generating
 the Doxygen API docs, so you don’t normally have to run it by hand.</p>
 <p>However, since it does give a fair bit of information about TypeIds
 it can be useful to run from the command line and
 search for specific information.</p>
 <p>To run it, simply open terminal and type</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf --run print-introspected-doxygen
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>run<span class="w"> </span>print-introspected-doxygen
 </pre></div>
 </div>
 <p>This will give all the output, formatted for Doxygen, which can be viewed
 in a text editor.</p>
 <p>One way to use this is to capture it to a file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf --run print-introspected-doxygen &gt; doc.html
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>run<span class="w"> </span>print-introspected-doxygen<span class="w"> </span>&gt;<span class="w"> </span>doc.html
 </pre></div>
 </div>
 <p>Some users might prefer to use tools like grep
 to locate the required piece of information from the documentation
 instead of using an editor. For such uses-cases and more,
 <cite>print-introspected-doxygen</cite> can return plain text:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf --run <span class="s2">&quot;print-introspected-doxygen --output-text&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>run<span class="w"> </span><span class="s2">&quot;print-introspected-doxygen --output-text&quot;</span>
 </pre></div>
 </div>
 <p>(Note the quotes around the inner command and options.)</p>
 <blockquote>
-<div><p>$ ./waf –run “print-introspected-doxygen –output-text” | grep “hello”</p>
+<div><p>$ ./ns3 run “print-introspected-doxygen –output-text” | grep “hello”</p>
 </div></blockquote>
 <p>This will output the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>* HelloInterval: HELLO messages emission interval.
-* DeletePeriod: DeletePeriod is intended to provide an upper bound on the <span class="nb">time</span> <span class="k">for</span> which an upstream node A can have a neighbor B as an active next hop <span class="k">for</span> destination D, <span class="k">while</span> B has invalidated the route to D. <span class="o">=</span> <span class="m">5</span> * max <span class="o">(</span>HelloInterval, ActiveRouteTimeout<span class="o">)</span>
-* AllowedHelloLoss: Number of hello messages which may be loss <span class="k">for</span> valid link.
-* EnableHello: Indicates whether a hello messages enable.
-* HelloInterval: HELLO messages emission interval.
-* HelloInterval: HELLO messages emission interval.
-* DeletePeriod: DeletePeriod is intended to provide an upper bound on the <span class="nb">time</span> <span class="k">for</span> which an upstream node A can have a neighbor B as an active next hop <span class="k">for</span> destination D, <span class="k">while</span> B has invalidated the route to D. <span class="o">=</span> <span class="m">5</span> * max <span class="o">(</span>HelloInterval, ActiveRouteTimeout<span class="o">)</span>
-* AllowedHelloLoss: Number of hello messages which may be loss <span class="k">for</span> valid link.
-* EnableHello: Indicates whether a hello messages enable.
-* HelloInterval: HELLO messages emission interval.
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>*<span class="w"> </span>HelloInterval:<span class="w"> </span>HELLO<span class="w"> </span>messages<span class="w"> </span>emission<span class="w"> </span>interval.
+*<span class="w"> </span>DeletePeriod:<span class="w"> </span>DeletePeriod<span class="w"> </span>is<span class="w"> </span>intended<span class="w"> </span>to<span class="w"> </span>provide<span class="w"> </span>an<span class="w"> </span>upper<span class="w"> </span>bound<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>which<span class="w"> </span>an<span class="w"> </span>upstream<span class="w"> </span>node<span class="w"> </span>A<span class="w"> </span>can<span class="w"> </span>have<span class="w"> </span>a<span class="w"> </span>neighbor<span class="w"> </span>B<span class="w"> </span>as<span class="w"> </span>an<span class="w"> </span>active<span class="w"> </span>next<span class="w"> </span>hop<span class="w"> </span><span class="k">for</span><span class="w"> </span>destination<span class="w"> </span>D,<span class="w"> </span><span class="k">while</span><span class="w"> </span>B<span class="w"> </span>has<span class="w"> </span>invalidated<span class="w"> </span>the<span class="w"> </span>route<span class="w"> </span>to<span class="w"> </span>D.<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w"> </span>*<span class="w"> </span>max<span class="w"> </span><span class="o">(</span>HelloInterval,<span class="w"> </span>ActiveRouteTimeout<span class="o">)</span>
+*<span class="w"> </span>AllowedHelloLoss:<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>hello<span class="w"> </span>messages<span class="w"> </span>which<span class="w"> </span>may<span class="w"> </span>be<span class="w"> </span>loss<span class="w"> </span><span class="k">for</span><span class="w"> </span>valid<span class="w"> </span>link.
+*<span class="w"> </span>EnableHello:<span class="w"> </span>Indicates<span class="w"> </span>whether<span class="w"> </span>a<span class="w"> </span>hello<span class="w"> </span>messages<span class="w"> </span>enable.
+*<span class="w"> </span>HelloInterval:<span class="w"> </span>HELLO<span class="w"> </span>messages<span class="w"> </span>emission<span class="w"> </span>interval.
+*<span class="w"> </span>HelloInterval:<span class="w"> </span>HELLO<span class="w"> </span>messages<span class="w"> </span>emission<span class="w"> </span>interval.
+*<span class="w"> </span>DeletePeriod:<span class="w"> </span>DeletePeriod<span class="w"> </span>is<span class="w"> </span>intended<span class="w"> </span>to<span class="w"> </span>provide<span class="w"> </span>an<span class="w"> </span>upper<span class="w"> </span>bound<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>which<span class="w"> </span>an<span class="w"> </span>upstream<span class="w"> </span>node<span class="w"> </span>A<span class="w"> </span>can<span class="w"> </span>have<span class="w"> </span>a<span class="w"> </span>neighbor<span class="w"> </span>B<span class="w"> </span>as<span class="w"> </span>an<span class="w"> </span>active<span class="w"> </span>next<span class="w"> </span>hop<span class="w"> </span><span class="k">for</span><span class="w"> </span>destination<span class="w"> </span>D,<span class="w"> </span><span class="k">while</span><span class="w"> </span>B<span class="w"> </span>has<span class="w"> </span>invalidated<span class="w"> </span>the<span class="w"> </span>route<span class="w"> </span>to<span class="w"> </span>D.<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w"> </span>*<span class="w"> </span>max<span class="w"> </span><span class="o">(</span>HelloInterval,<span class="w"> </span>ActiveRouteTimeout<span class="o">)</span>
+*<span class="w"> </span>AllowedHelloLoss:<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>hello<span class="w"> </span>messages<span class="w"> </span>which<span class="w"> </span>may<span class="w"> </span>be<span class="w"> </span>loss<span class="w"> </span><span class="k">for</span><span class="w"> </span>valid<span class="w"> </span>link.
+*<span class="w"> </span>EnableHello:<span class="w"> </span>Indicates<span class="w"> </span>whether<span class="w"> </span>a<span class="w"> </span>hello<span class="w"> </span>messages<span class="w"> </span>enable.
+*<span class="w"> </span>HelloInterval:<span class="w"> </span>HELLO<span class="w"> </span>messages<span class="w"> </span>emission<span class="w"> </span>interval.
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="bench-simulator">
-<h2>Bench-simulator<a class="headerlink" href="#bench-simulator" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="bench-scheduler">
+<h2><span class="section-number">5.2. </span>bench-scheduler<a class="headerlink" href="#bench-scheduler" title="Link to this heading">¶</a></h2>
 <p>This tool is used to benchmark the scheduler algorithms used in <em>ns-3</em>.</p>
-<div class="section" id="command-line-arguments">
-<h3>Command-line Arguments<a class="headerlink" href="#command-line-arguments" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf --run <span class="s2">&quot;bench-simulator --help&quot;</span>
+<section id="command-line-arguments">
+<h3><span class="section-number">5.2.1. </span>Command-line Arguments<a class="headerlink" href="#command-line-arguments" title="Link to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>run<span class="w"> </span><span class="s2">&quot;bench-scheduler --help&quot;</span>
+bench-scheduler<span class="w"> </span><span class="o">[</span>Program<span class="w"> </span>Options<span class="o">]</span><span class="w"> </span><span class="o">[</span>General<span class="w"> </span>Arguments<span class="o">]</span>
 
-Program Options:
-    --cal:    use CalendarSheduler <span class="o">[</span>false<span class="o">]</span>
-    --heap:   use HeapScheduler <span class="o">[</span>false<span class="o">]</span>
-    --list:   use ListSheduler <span class="o">[</span>false<span class="o">]</span>
-    --map:    use MapScheduler <span class="o">(</span>default<span class="o">)</span> <span class="o">[</span>true<span class="o">]</span>
-    --debug:  <span class="nb">enable</span> debugging output <span class="o">[</span>false<span class="o">]</span>
-    --pop:    event population size <span class="o">(</span>default 1E5<span class="o">)</span> <span class="o">[</span><span class="m">100000</span><span class="o">]</span>
-    --total:  total number of events to run <span class="o">(</span>default 1E6<span class="o">)</span> <span class="o">[</span><span class="m">1000000</span><span class="o">]</span>
-    --runs:   number of runs <span class="o">(</span>default <span class="m">1</span><span class="o">)</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>
-    --file:   file of relative event <span class="nb">times</span> <span class="o">[]</span>
-    --prec:   printed output precision <span class="o">[</span><span class="m">6</span><span class="o">]</span>
+Benchmark<span class="w"> </span>the<span class="w"> </span>simulator<span class="w"> </span>scheduler.
+
+Event<span class="w"> </span>intervals<span class="w"> </span>are<span class="w"> </span>taken<span class="w"> </span>from<span class="w"> </span>one<span class="w"> </span>of:
+<span class="w">  </span>an<span class="w"> </span>exponential<span class="w"> </span>distribution,<span class="w"> </span>with<span class="w"> </span>mean<span class="w"> </span><span class="m">100</span><span class="w"> </span>ns,
+<span class="w">  </span>an<span class="w"> </span>ascii<span class="w"> </span>file,<span class="w"> </span>given<span class="w"> </span>by<span class="w"> </span>the<span class="w"> </span>--file<span class="o">=</span><span class="s2">&quot;&lt;filename&gt;&quot;</span><span class="w"> </span>argument,
+<span class="w">  </span>or<span class="w"> </span>standard<span class="w"> </span>input,<span class="w"> </span>by<span class="w"> </span>the<span class="w"> </span>argument<span class="w"> </span>--file<span class="o">=</span><span class="s2">&quot;-&quot;</span>
+In<span class="w"> </span>the<span class="w"> </span><span class="k">case</span><span class="w"> </span>of<span class="w"> </span>either<span class="w"> </span>--file<span class="w"> </span>form,<span class="w"> </span>the<span class="w"> </span>input<span class="w"> </span>is<span class="w"> </span>expected
+to<span class="w"> </span>be<span class="w"> </span>ascii,<span class="w"> </span>giving<span class="w"> </span>the<span class="w"> </span>relative<span class="w"> </span>event<span class="w"> </span><span class="nb">times</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>ns.
+
+Program<span class="w"> </span>Options:
+--all:<span class="w">     </span>use<span class="w"> </span>all<span class="w"> </span>schedulers<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
+--cal:<span class="w">     </span>use<span class="w"> </span>CalendarSheduler<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
+--calrev:<span class="w">  </span>reverse<span class="w"> </span>ordering<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>CalendarScheduler<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
+--heap:<span class="w">    </span>use<span class="w"> </span>HeapScheduler<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
+--list:<span class="w">    </span>use<span class="w"> </span>ListSheduler<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
+--map:<span class="w">     </span>use<span class="w"> </span>MapScheduler<span class="w"> </span><span class="o">(</span>default<span class="o">)</span><span class="w"> </span><span class="o">[</span>true<span class="o">]</span>
+--pri:<span class="w">     </span>use<span class="w"> </span>PriorityQueue<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
+--debug:<span class="w">   </span><span class="nb">enable</span><span class="w"> </span>debugging<span class="w"> </span>output<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
+--pop:<span class="w">     </span>event<span class="w"> </span>population<span class="w"> </span>size<span class="w"> </span><span class="o">(</span>default<span class="w"> </span>1E5<span class="o">)</span><span class="w"> </span><span class="o">[</span><span class="m">100000</span><span class="o">]</span>
+--total:<span class="w">   </span>total<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>events<span class="w"> </span>to<span class="w"> </span>run<span class="w"> </span><span class="o">(</span>default<span class="w"> </span>1E6<span class="o">)</span><span class="w"> </span><span class="o">[</span><span class="m">1000000</span><span class="o">]</span>
+--runs:<span class="w">    </span>number<span class="w"> </span>of<span class="w"> </span>runs<span class="w"> </span><span class="o">(</span>default<span class="w"> </span><span class="m">1</span><span class="o">)</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>
+--file:<span class="w">    </span>file<span class="w"> </span>of<span class="w"> </span>relative<span class="w"> </span>event<span class="w"> </span><span class="nb">times</span>
+--prec:<span class="w">    </span>printed<span class="w"> </span>output<span class="w"> </span>precision<span class="w"> </span><span class="o">[</span><span class="m">6</span><span class="o">]</span>
+
+General<span class="w"> </span>Arguments:
+...
 </pre></div>
 </div>
 <p>You can change the Scheduler being benchmarked by passing
@@ -206,84 +237,102 @@ benchmark the CalendarScheduler pass <cite>–cal</cite> to the program.</p>
 <p>The default total number of events, runs or population size
 can be overridden by passing <cite>–total=value</cite>, <cite>–runs=value</cite>
 and <cite>–pop=value</cite> respectively.</p>
-<p>If you want to use event distribution which is stored in a file,
+<p>If you want to use an event distribution which is stored in a file,
 you can pass the file option by <cite>–file=FILE_NAME</cite>.</p>
 <p><cite>–prec</cite> can be used to change the output precision value and
 <cite>–debug</cite> as the name suggests enables debugging.</p>
-</div>
-<div class="section" id="id2">
-<h3>Invocation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id2">
+<h3><span class="section-number">5.2.2. </span>Invocation<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
 <p>To run it, simply open the terminal and type</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf --run bench-simulator
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>run<span class="w"> </span>bench-scheduler<span class="w"> </span>--<span class="w"> </span>--runs<span class="o">=</span><span class="m">5</span>
 </pre></div>
 </div>
 <p>It will show something like this depending upon the scheduler being benchmarked:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ns3-dev-bench-simulator-debug:
-ns3-dev-bench-simulator-debug: scheduler: ns3::MapScheduler
-ns3-dev-bench-simulator-debug: population: <span class="m">100000</span>
-ns3-dev-bench-simulator-debug: total events: <span class="m">1000000</span>
-ns3-dev-bench-simulator-debug: runs: <span class="m">1</span>
-ns3-dev-bench-simulator-debug: using default exponential distribution
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bench-scheduler:<span class="w">  </span>Benchmark<span class="w"> </span>the<span class="w"> </span>simulator<span class="w"> </span>scheduler
+<span class="w">  </span>Event<span class="w"> </span>population<span class="w"> </span>size:<span class="w">        </span><span class="m">100000</span>
+<span class="w">  </span>Total<span class="w"> </span>events<span class="w"> </span>per<span class="w"> </span>run:<span class="w">         </span><span class="m">1000000</span>
+<span class="w">  </span>Number<span class="w"> </span>of<span class="w"> </span>runs<span class="w"> </span>per<span class="w"> </span>scheduler:<span class="w"> </span><span class="m">5</span>
+<span class="w">  </span>Event<span class="w"> </span><span class="nb">time</span><span class="w"> </span>distribution:<span class="w">      </span>default<span class="w"> </span>exponential
 
-Run        Inititialization:                   Simulation:
-            Time <span class="o">(</span>s<span class="o">)</span>    Rate <span class="o">(</span>ev/s<span class="o">)</span> Per <span class="o">(</span>s/ev<span class="o">)</span>  Time <span class="o">(</span>s<span class="o">)</span>    Rate <span class="o">(</span>ev/s<span class="o">)</span> Per <span class="o">(</span>s/ev<span class="o">)</span>
------------ ----------- ----------- ----------- ----------- ----------- -----------
-<span class="o">(</span>prime<span class="o">)</span>     <span class="m">0</span>.4         <span class="m">250000</span>      4e-06       <span class="m">1</span>.84        <span class="m">543478</span>      <span class="m">1</span>.84e-06
-<span class="m">0</span>           <span class="m">0</span>.15        <span class="m">666667</span>      <span class="m">1</span>.5e-06     <span class="m">1</span>.86        <span class="m">537634</span>      <span class="m">1</span>.86e-06
+ns3::MapScheduler<span class="w"> </span><span class="o">(</span>default<span class="o">)</span>
+Run<span class="w"> </span><span class="c1">#       Initialization:                     Simulation:</span>
+Time<span class="w"> </span><span class="o">(</span>s<span class="o">)</span><span class="w">    </span>Rate<span class="w"> </span><span class="o">(</span>ev/s<span class="o">)</span><span class="w"> </span>Per<span class="w"> </span><span class="o">(</span>s/ev<span class="o">)</span><span class="w">  </span>Time<span class="w"> </span><span class="o">(</span>s<span class="o">)</span><span class="w">    </span>Rate<span class="w"> </span><span class="o">(</span>ev/s<span class="o">)</span><span class="w"> </span>Per<span class="w"> </span><span class="o">(</span>s/ev<span class="o">)</span>
+-----------<span class="w"> </span>-----------<span class="w"> </span>-----------<span class="w"> </span>-----------<span class="w"> </span>-----------<span class="w"> </span>-----------<span class="w"> </span>-----------
+prime<span class="w">       </span><span class="m">0</span>.01<span class="w">        </span>1e+06<span class="w">       </span>1e-06<span class="w">       </span><span class="m">5</span>.51<span class="w">        </span><span class="m">1</span>.81488e+06<span class="w"> </span><span class="m">5</span>.51e-07
+<span class="m">0</span><span class="w">           </span><span class="m">0</span><span class="w">           </span>inf<span class="w">         </span><span class="m">0</span><span class="w">           </span><span class="m">6</span>.25<span class="w">        </span><span class="m">1</span>.6e+06<span class="w">     </span><span class="m">6</span>.25e-07
+<span class="m">1</span><span class="w">           </span><span class="m">0</span><span class="w">           </span>inf<span class="w">         </span><span class="m">0</span><span class="w">           </span><span class="m">6</span>.52<span class="w">        </span><span class="m">1</span>.53374e+06<span class="w"> </span><span class="m">6</span>.52e-07
+<span class="m">2</span><span class="w">           </span><span class="m">0</span>.01<span class="w">        </span>1e+06<span class="w">       </span>1e-06<span class="w">       </span><span class="m">7</span>.28<span class="w">        </span><span class="m">1</span>.37363e+06<span class="w"> </span><span class="m">7</span>.28e-07
+<span class="m">3</span><span class="w">           </span><span class="m">0</span><span class="w">           </span>inf<span class="w">         </span><span class="m">0</span><span class="w">           </span><span class="m">7</span>.72<span class="w">        </span><span class="m">1</span>.29534e+06<span class="w"> </span><span class="m">7</span>.72e-07
+<span class="m">4</span><span class="w">           </span><span class="m">0</span>.01<span class="w">        </span>1e+06<span class="w">       </span>1e-06<span class="w">       </span><span class="m">8</span>.16<span class="w">        </span><span class="m">1</span>.22549e+06<span class="w"> </span><span class="m">8</span>.16e-07
+average<span class="w">     </span><span class="m">0</span>.004<span class="w">       </span>nan<span class="w">         </span>4e-07<span class="w">       </span><span class="m">7</span>.186<span class="w">       </span><span class="m">1</span>.40564e+06<span class="w"> </span><span class="m">7</span>.186e-07
+stdev<span class="w">       </span><span class="m">0</span>.00489898<span class="w">  </span>nan<span class="w">         </span><span class="m">4</span>.89898e-07<span class="w"> </span><span class="m">0</span>.715866<span class="w">    </span><span class="m">141302</span><span class="w">      </span><span class="m">7</span>.15866e-08
 </pre></div>
 </div>
 <p>Suppose we had to benchmark <cite>CalendarScheduler</cite> instead, we would have written</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./waf --run <span class="s2">&quot;bench-simulator --cal&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>run<span class="w"> </span>bench-scheduler<span class="w"> </span>--<span class="w"> </span>--runs<span class="o">=</span><span class="m">5</span><span class="w"> </span>--cal<span class="s2">&quot;</span>
 </pre></div>
 </div>
 <p>And the output would look something like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ns3-dev-bench-simulator-debug:
-ns3-dev-bench-simulator-debug: scheduler: ns3::CalendarScheduler
-ns3-dev-bench-simulator-debug: population: <span class="m">100000</span>
-ns3-dev-bench-simulator-debug: total events: <span class="m">1000000</span>
-ns3-dev-bench-simulator-debug: runs: <span class="m">1</span>
-ns3-dev-bench-simulator-debug: using default exponential distribution
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bench-scheduler:<span class="w">  </span>Benchmark<span class="w"> </span>the<span class="w"> </span>simulator<span class="w"> </span>scheduler
+<span class="w">  </span>Event<span class="w"> </span>population<span class="w"> </span>size:<span class="w">        </span><span class="m">10000</span>
+<span class="w">  </span>Total<span class="w"> </span>events<span class="w"> </span>per<span class="w"> </span>run:<span class="w">         </span><span class="m">10000000</span>
+<span class="w">  </span>Number<span class="w"> </span>of<span class="w"> </span>runs<span class="w"> </span>per<span class="w"> </span>scheduler:<span class="w"> </span><span class="m">5</span>
+<span class="w">  </span>Event<span class="w"> </span><span class="nb">time</span><span class="w"> </span>distribution:<span class="w">      </span>default<span class="w"> </span>exponential
 
-Run        Inititialization:                   Simulation:
-            Time <span class="o">(</span>s<span class="o">)</span>    Rate <span class="o">(</span>ev/s<span class="o">)</span> Per <span class="o">(</span>s/ev<span class="o">)</span>  Time <span class="o">(</span>s<span class="o">)</span>    Rate <span class="o">(</span>ev/s<span class="o">)</span> Per <span class="o">(</span>s/ev<span class="o">)</span>
------------ ----------- ----------- ----------- ----------- ----------- -----------
-<span class="o">(</span>prime<span class="o">)</span>     <span class="m">1</span>.19        <span class="m">84033</span>.6     <span class="m">1</span>.19e-05    <span class="m">32</span>.03       <span class="m">31220</span>.7     <span class="m">3</span>.203e-05
-<span class="m">0</span>           <span class="m">0</span>.99        <span class="m">101010</span>      <span class="m">9</span>.9e-06     <span class="m">31</span>.22       <span class="m">32030</span>.7     <span class="m">3</span>.122e-05
-<span class="sb">```</span>
+ns3::CalendarScheduler:<span class="w"> </span>insertion<span class="w"> </span>order:<span class="w"> </span>normal
+Run<span class="w"> </span><span class="c1">#       Initialization:                     Simulation:</span>
+Time<span class="w"> </span><span class="o">(</span>s<span class="o">)</span><span class="w">    </span>Rate<span class="w"> </span><span class="o">(</span>ev/s<span class="o">)</span><span class="w"> </span>Per<span class="w"> </span><span class="o">(</span>s/ev<span class="o">)</span><span class="w">  </span>Time<span class="w"> </span><span class="o">(</span>s<span class="o">)</span><span class="w">    </span>Rate<span class="w"> </span><span class="o">(</span>ev/s<span class="o">)</span><span class="w"> </span>Per<span class="w"> </span><span class="o">(</span>s/ev<span class="o">)</span>
+-----------<span class="w"> </span>-----------<span class="w"> </span>-----------<span class="w"> </span>-----------<span class="w"> </span>-----------<span class="w"> </span>-----------<span class="w"> </span>-----------
+prime<span class="w">       </span><span class="m">0</span>.01<span class="w">        </span>1e+06<span class="w">       </span>1e-06<span class="w">       </span><span class="m">8</span>.14<span class="w">        </span><span class="m">1</span>.2285e+06<span class="w">  </span><span class="m">8</span>.14e-07
+<span class="m">0</span><span class="w">           </span><span class="m">0</span>.01<span class="w">        </span>1e+06<span class="w">       </span>1e-06<span class="w">       </span><span class="m">17</span>.14<span class="w">       </span><span class="m">583431</span><span class="w">      </span><span class="m">1</span>.714e-06
+<span class="m">1</span><span class="w">           </span><span class="m">0</span>.02<span class="w">        </span><span class="m">500000</span><span class="w">      </span>2e-06<span class="w">       </span><span class="m">23</span>.33<span class="w">       </span><span class="m">428633</span><span class="w">      </span><span class="m">2</span>.333e-06
+<span class="m">2</span><span class="w">           </span><span class="m">0</span>.02<span class="w">        </span><span class="m">500000</span><span class="w">      </span>2e-06<span class="w">       </span><span class="m">33</span>.2<span class="w">        </span><span class="m">301205</span><span class="w">      </span><span class="m">3</span>.32e-06
+<span class="m">3</span><span class="w">           </span><span class="m">0</span>.03<span class="w">        </span><span class="m">333333</span><span class="w">      </span>3e-06<span class="w">       </span><span class="m">42</span>.98<span class="w">       </span><span class="m">232666</span><span class="w">      </span><span class="m">4</span>.298e-06
+<span class="m">4</span><span class="w">           </span><span class="m">0</span>.05<span class="w">        </span><span class="m">200000</span><span class="w">      </span>5e-06<span class="w">       </span><span class="m">57</span>.1<span class="w">        </span><span class="m">175131</span><span class="w">      </span><span class="m">5</span>.71e-06
+average<span class="w">     </span><span class="m">0</span>.026<span class="w">       </span><span class="m">506667</span><span class="w">      </span><span class="m">2</span>.6e-06<span class="w">     </span><span class="m">34</span>.75<span class="w">       </span><span class="m">344213</span><span class="w">      </span><span class="m">3</span>.475e-06
+stdev<span class="w">       </span><span class="m">0</span>.0135647<span class="w">   </span><span class="m">271129</span><span class="w">      </span><span class="m">1</span>.35647e-06<span class="w"> </span><span class="m">14</span>.214<span class="w">      </span><span class="m">146446</span><span class="w">      </span><span class="m">1</span>.4214e-06
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Utilities</a><ul>
-<li><a class="reference internal" href="#print-introspected-doxygen">Print-introspected-doxygen</a><ul>
-<li><a class="reference internal" href="#invocation">Invocation</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">5. Utilities</a><ul>
+<li><a class="reference internal" href="#print-introspected-doxygen">5.1. Print-introspected-doxygen</a><ul>
+<li><a class="reference internal" href="#invocation">5.1.1. Invocation</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#bench-simulator">Bench-simulator</a><ul>
-<li><a class="reference internal" href="#command-line-arguments">Command-line Arguments</a></li>
-<li><a class="reference internal" href="#id2">Invocation</a></li>
+<li><a class="reference internal" href="#bench-scheduler">5.2. bench-scheduler</a><ul>
+<li><a class="reference internal" href="#command-line-arguments">5.2.1. Command-line Arguments</a></li>
+<li><a class="reference internal" href="#id2">5.2.2. Invocation</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="helpers.html"
-                        title="previous chapter">Helpers</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="gnuplot.html"
-                        title="next chapter">Making Plots using the Gnuplot Class</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="working-with-gitlab-ci-local.html"
+                          title="previous chapter"><span class="section-number">4.10. </span>Working with gitlab-ci-local</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="support.html"
+                          title="next chapter"><span class="section-number">6. </span>Support</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -295,12 +344,12 @@ Run        Inititialization:                   Simulation:
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -312,21 +361,22 @@ Run        Inititialization:                   Simulation:
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="gnuplot.html" title="Making Plots using the Gnuplot Class"
+          <a href="support.html" title="6. Support"
              >next</a> |</li>
         <li class="right" >
-          <a href="helpers.html" title="Helpers"
+          <a href="working-with-gitlab-ci-local.html" title="4.10. Working with gitlab-ci-local"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">5. </span>Utilities</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 18:24.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:54.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

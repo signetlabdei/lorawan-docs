@@ -1,108 +1,122 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>Wimax NetDevice &#8212; Model Library</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>36. Wimax NetDevice &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="References" href="wifi-references.html" />
+    <link rel="prev" title="35.5. References" href="wifi-references.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Models</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -111,12 +125,13 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="wifi-references.html" title="References"
+          <a href="wifi-references.html" title="35.5. References"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">36. </span>Wimax NetDevice</a></li> 
       </ul>
     </div>  
 
@@ -125,8 +140,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="wimax-netdevice">
-<h1>Wimax NetDevice<a class="headerlink" href="#wimax-netdevice" title="Permalink to this headline">¶</a></h1>
+  <section id="wimax-netdevice">
+<h1><span class="section-number">36. </span>Wimax NetDevice<a class="headerlink" href="#wimax-netdevice" title="Link to this heading">¶</a></h1>
 <p>This chapter describes the <em>ns-3</em> WimaxNetDevice and related models. By
 adding WimaxNetDevice objects to <em>ns-3</em> nodes, one can create models of
 802.16-based networks. Below, we list some more details about what
@@ -148,8 +163,8 @@ WiMAX Module for the NS-3 Simulator”, SIMUTools 2010 Conference, March 2010.</
 <li><p>J. Farooq and T. Turletti, “An IEEE 802.16 WiMAX module for the NS-3
 Simulator,” SIMUTools 2009 Conference, March 2009.</p></li>
 </ul>
-<div class="section" id="scope-of-the-model">
-<h2>Scope of the model<a class="headerlink" href="#scope-of-the-model" title="Permalink to this headline">¶</a></h2>
+<section id="scope-of-the-model">
+<h2><span class="section-number">36.1. </span>Scope of the model<a class="headerlink" href="#scope-of-the-model" title="Link to this heading">¶</a></h2>
 <p>From a MAC perspective, there are two basic modes of operation, that of a
 Subscriber Station (SS) or a Base Station (BS). These are implemented as two
 subclasses of the base class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::NetDevice</span></code>, class
@@ -188,45 +203,45 @@ future extensions:</p>
 <li><p>ertPS connection</p></li>
 <li><p>packet header suppression</p></li>
 </ul>
-</div>
-<div class="section" id="using-the-wimax-models">
-<h2>Using the Wimax models<a class="headerlink" href="#using-the-wimax-models" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="using-the-wimax-models">
+<h2><span class="section-number">36.2. </span>Using the Wimax models<a class="headerlink" href="#using-the-wimax-models" title="Link to this heading">¶</a></h2>
 <p>The main way that users who write simulation scripts will typically interact
 with the Wimax models is through the helper API and through the publicly visible
 attributes of the model.</p>
 <p>The helper API is defined in <code class="docutils literal notranslate"><span class="pre">src/wimax/helper/wimax-helper.{cc,h}</span></code>.</p>
 <p>The example <code class="docutils literal notranslate"><span class="pre">src/wimax/examples/wimax-simple.cc</span></code> contains some basic code that
 shows how to set up the model:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">switch</span> <span class="p">(</span><span class="n">schedType</span><span class="p">)</span>
-  <span class="p">{</span>
-  <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
-    <span class="n">scheduler</span> <span class="o">=</span> <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SCHED_TYPE_SIMPLE</span><span class="p">;</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
-    <span class="n">scheduler</span> <span class="o">=</span> <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SCHED_TYPE_MBQOS</span><span class="p">;</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
-    <span class="n">scheduler</span> <span class="o">=</span> <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SCHED_TYPE_RTPS</span><span class="p">;</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">default</span><span class="o">:</span>
-    <span class="n">scheduler</span> <span class="o">=</span> <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SCHED_TYPE_SIMPLE</span><span class="p">;</span>
-  <span class="p">}</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">schedType</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span>
+<span class="w">    </span><span class="n">scheduler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SCHED_TYPE_SIMPLE</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<span class="w">    </span><span class="n">scheduler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SCHED_TYPE_MBQOS</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<span class="w">    </span><span class="n">scheduler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SCHED_TYPE_RTPS</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">default</span><span class="o">:</span>
+<span class="w">    </span><span class="n">scheduler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SCHED_TYPE_SIMPLE</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 
-<span class="n">NodeContainer</span> <span class="n">ssNodes</span><span class="p">;</span>
-<span class="n">NodeContainer</span> <span class="n">bsNodes</span><span class="p">;</span>
+<span class="n">NodeContainer</span><span class="w"> </span><span class="n">ssNodes</span><span class="p">;</span>
+<span class="n">NodeContainer</span><span class="w"> </span><span class="n">bsNodes</span><span class="p">;</span>
 
-<span class="n">ssNodes</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-<span class="n">bsNodes</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">ssNodes</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">bsNodes</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 
-<span class="n">WimaxHelper</span> <span class="n">wimax</span><span class="p">;</span>
+<span class="n">WimaxHelper</span><span class="w"> </span><span class="n">wimax</span><span class="p">;</span>
 
-<span class="n">NetDeviceContainer</span> <span class="n">ssDevs</span><span class="p">,</span> <span class="n">bsDevs</span><span class="p">;</span>
+<span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">ssDevs</span><span class="p">,</span><span class="w"> </span><span class="n">bsDevs</span><span class="p">;</span>
 
-<span class="n">ssDevs</span> <span class="o">=</span> <span class="n">wimax</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">ssNodes</span><span class="p">,</span>
-                        <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">DEVICE_TYPE_SUBSCRIBER_STATION</span><span class="p">,</span>
-                        <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SIMPLE_PHY_TYPE_OFDM</span><span class="p">,</span>
-                        <span class="n">scheduler</span><span class="p">);</span>
-<span class="n">bsDevs</span> <span class="o">=</span> <span class="n">wimax</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">bsNodes</span><span class="p">,</span> <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">DEVICE_TYPE_BASE_STATION</span><span class="p">,</span> <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SIMPLE_PHY_TYPE_OFDM</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">);</span>
+<span class="n">ssDevs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wimax</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">ssNodes</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">WimaxHelper</span><span class="o">::</span><span class="n">DEVICE_TYPE_SUBSCRIBER_STATION</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SIMPLE_PHY_TYPE_OFDM</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">scheduler</span><span class="p">);</span>
+<span class="n">bsDevs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wimax</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">bsNodes</span><span class="p">,</span><span class="w"> </span><span class="n">WimaxHelper</span><span class="o">::</span><span class="n">DEVICE_TYPE_BASE_STATION</span><span class="p">,</span><span class="w"> </span><span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SIMPLE_PHY_TYPE_OFDM</span><span class="p">,</span><span class="w"> </span><span class="n">scheduler</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This example shows that there are two subscriber stations and one base station
@@ -235,18 +250,18 @@ type, the physical layer type, and the device type.</p>
 <p>Different variants of <code class="docutils literal notranslate"><span class="pre">Install</span></code> are available; for instance, the example
 <code class="docutils literal notranslate"><span class="pre">src/wimax/examples/wimax-multicast.cc</span></code> shows how to specify a non-default channel
 or propagation model:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">channel</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">SimpleOfdmWimaxChannel</span><span class="o">&gt;</span> <span class="p">();</span>
-<span class="n">channel</span><span class="o">-&gt;</span><span class="n">SetPropagationModel</span> <span class="p">(</span><span class="n">SimpleOfdmWimaxChannel</span><span class="o">::</span><span class="n">COST231_PROPAGATION</span><span class="p">);</span>
-<span class="n">ssDevs</span> <span class="o">=</span> <span class="n">wimax</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">ssNodes</span><span class="p">,</span>
-                        <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">DEVICE_TYPE_SUBSCRIBER_STATION</span><span class="p">,</span>
-                        <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SIMPLE_PHY_TYPE_OFDM</span><span class="p">,</span>
-                        <span class="n">channel</span><span class="p">,</span>
-                        <span class="n">scheduler</span><span class="p">);</span>
-<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">WimaxNetDevice</span><span class="o">&gt;</span> <span class="n">dev</span> <span class="o">=</span> <span class="n">wimax</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">bsNodes</span><span class="p">.</span><span class="n">Get</span> <span class="p">(</span><span class="mi">0</span><span class="p">),</span>
-                                         <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">DEVICE_TYPE_BASE_STATION</span><span class="p">,</span>
-                                         <span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SIMPLE_PHY_TYPE_OFDM</span><span class="p">,</span>
-                                         <span class="n">channel</span><span class="p">,</span>
-                                         <span class="n">scheduler</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">channel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">SimpleOfdmWimaxChannel</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">channel</span><span class="o">-&gt;</span><span class="n">SetPropagationModel</span><span class="p">(</span><span class="n">SimpleOfdmWimaxChannel</span><span class="o">::</span><span class="n">COST231_PROPAGATION</span><span class="p">);</span>
+<span class="n">ssDevs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wimax</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">ssNodes</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">WimaxHelper</span><span class="o">::</span><span class="n">DEVICE_TYPE_SUBSCRIBER_STATION</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SIMPLE_PHY_TYPE_OFDM</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">channel</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">scheduler</span><span class="p">);</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">WimaxNetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wimax</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">bsNodes</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+<span class="w">                                        </span><span class="n">WimaxHelper</span><span class="o">::</span><span class="n">DEVICE_TYPE_BASE_STATION</span><span class="p">,</span>
+<span class="w">                                        </span><span class="n">WimaxHelper</span><span class="o">::</span><span class="n">SIMPLE_PHY_TYPE_OFDM</span><span class="p">,</span>
+<span class="w">                                        </span><span class="n">channel</span><span class="p">,</span>
+<span class="w">                                        </span><span class="n">scheduler</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Mobility is also supported in the same way as in Wifi models; see the
@@ -257,16 +272,16 @@ priority, rate, scheduling type, etc. The base station is responsible for
 issuing service flow identifiers and mapping them to WiMAX connections. The
 following code from <code class="docutils literal notranslate"><span class="pre">src/wimax/examples/wimax-multicast.cc</span></code> shows how this is
 configured from a helper level:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ServiceFlow</span> <span class="n">MulticastServiceFlow</span> <span class="o">=</span> <span class="n">wimax</span><span class="p">.</span><span class="n">CreateServiceFlow</span> <span class="p">(</span><span class="n">ServiceFlow</span><span class="o">::</span><span class="n">SF_DIRECTION_DOWN</span><span class="p">,</span>
-                                                            <span class="n">ServiceFlow</span><span class="o">::</span><span class="n">SF_TYPE_UGS</span><span class="p">,</span>
-                                                            <span class="n">MulticastClassifier</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ServiceFlow</span><span class="w"> </span><span class="n">MulticastServiceFlow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wimax</span><span class="p">.</span><span class="n">CreateServiceFlow</span><span class="p">(</span><span class="n">ServiceFlow</span><span class="o">::</span><span class="n">SF_DIRECTION_DOWN</span><span class="p">,</span>
+<span class="w">                                                           </span><span class="n">ServiceFlow</span><span class="o">::</span><span class="n">SF_TYPE_UGS</span><span class="p">,</span>
+<span class="w">                                                           </span><span class="n">MulticastClassifier</span><span class="p">);</span>
 
- <span class="n">bs</span><span class="o">-&gt;</span><span class="n">GetServiceFlowManager</span> <span class="p">()</span><span class="o">-&gt;</span><span class="n">AddMulticastServiceFlow</span> <span class="p">(</span><span class="n">MulticastServiceFlow</span><span class="p">,</span> <span class="n">WimaxPhy</span><span class="o">::</span><span class="n">MODULATION_TYPE_QPSK_12</span><span class="p">);</span>
+<span class="w"> </span><span class="n">bs</span><span class="o">-&gt;</span><span class="n">GetServiceFlowManager</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">AddMulticastServiceFlow</span><span class="p">(</span><span class="n">MulticastServiceFlow</span><span class="p">,</span><span class="w"> </span><span class="n">WimaxPhy</span><span class="o">::</span><span class="n">MODULATION_TYPE_QPSK_12</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="wimax-attributes">
-<h2>Wimax Attributes<a class="headerlink" href="#wimax-attributes" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="wimax-attributes">
+<h2><span class="section-number">36.3. </span>Wimax Attributes<a class="headerlink" href="#wimax-attributes" title="Link to this heading">¶</a></h2>
 <p>The WimaxNetDevice makes heavy use of the <em>ns-3</em> attributes subsystem for
 configuration and default value management.  Presently, approximately 60 values
 are stored in this system.</p>
@@ -283,17 +298,17 @@ attributes:</p>
 </ul>
 <p>For a full list of attributes in these models, consult the Doxygen page that
 lists all attributes for <em>ns-3</em>.</p>
-</div>
-<div class="section" id="wimax-tracing">
-<h2>Wimax Tracing<a class="headerlink" href="#wimax-tracing" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="wimax-tracing">
+<h2><span class="section-number">36.4. </span>Wimax Tracing<a class="headerlink" href="#wimax-tracing" title="Link to this heading">¶</a></h2>
 <p><em>ns-3</em> has a sophisticated tracing infrastructure that allows users to hook into
 existing trace sources, or to define and export new ones.</p>
 <p>Many <em>ns-3</em> users use the built-in Pcap or Ascii tracing, and the
 WimaxHelper has similar APIs:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AsciiTraceHelper</span> <span class="n">ascii</span><span class="p">;</span>
-<span class="n">WimaxHelper</span> <span class="n">wimax</span><span class="p">;</span>
-<span class="n">wimax</span><span class="p">.</span><span class="n">EnablePcap</span> <span class="p">(</span><span class="s">&quot;wimax-program&quot;</span><span class="p">,</span> <span class="nb">false</span><span class="p">);</span>
-<span class="n">wimax</span><span class="p">.</span><span class="n">EnableAsciiAll</span> <span class="p">(</span><span class="n">ascii</span><span class="p">.</span><span class="n">CreateFileStream</span> <span class="p">(</span><span class="s">&quot;wimax-program.tr&quot;</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AsciiTraceHelper</span><span class="w"> </span><span class="n">ascii</span><span class="p">;</span>
+<span class="n">WimaxHelper</span><span class="w"> </span><span class="n">wimax</span><span class="p">;</span>
+<span class="n">wimax</span><span class="p">.</span><span class="n">EnablePcap</span><span class="p">(</span><span class="s">&quot;wimax-program&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="n">wimax</span><span class="p">.</span><span class="n">EnableAsciiAll</span><span class="p">(</span><span class="n">ascii</span><span class="p">.</span><span class="n">CreateFileStream</span><span class="p">(</span><span class="s">&quot;wimax-program.tr&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Unlike other helpers, there is also a special <code class="docutils literal notranslate"><span class="pre">EnableAsciiForConnection()</span></code>
@@ -303,9 +318,9 @@ physical layer, net device, and queue models. Like other <em>ns-3</em> trace sou
 users may hook their own functions to these trace sources if they want to do
 customized things based on the packet events. See the Doxygen List of trace
 sources for a complete list of these sources.</p>
-</div>
-<div class="section" id="wimax-mac-model">
-<h2>Wimax MAC model<a class="headerlink" href="#wimax-mac-model" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="wimax-mac-model">
+<h2><span class="section-number">36.5. </span>Wimax MAC model<a class="headerlink" href="#wimax-mac-model" title="Link to this heading">¶</a></h2>
 <p>The 802.16 model provided in <em>ns-3</em> attempts to provide an accurate MAC and PHY
 level implementation of the 802.16 specification with the Point-to-Multipoint
 (PMP) mode and the WirelessMAN-OFDM PHY layer. The model is mainly composed of
@@ -317,12 +332,14 @@ three layers:</p>
 </ul>
 <p>The following figure <a class="reference internal" href="#wimax-architecture"><span class="std std-ref">WiMAX architecture</span></a> shows the relationships of these
 models.</p>
-<div class="figure align-default" id="id1">
+<figure class="align-default" id="id1">
 <span id="wimax-architecture"></span><img alt="_images/WimaxArchitecture.png" src="_images/WimaxArchitecture.png" />
-<p class="caption"><span class="caption-text">WiMAX architecture</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="convergence-sublayer">
-<h3>Convergence Sublayer<a class="headerlink" href="#convergence-sublayer" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-text">WiMAX architecture</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="convergence-sublayer">
+<h3><span class="section-number">36.5.1. </span>Convergence Sublayer<a class="headerlink" href="#convergence-sublayer" title="Link to this heading">¶</a></h3>
 <p>The Convergence sublayer (CS) provided with this module implements the Packet
 CS, designed to work with the packet-based protocols at higher layers. The CS is
 responsible of receiving packet from the higher layer and from peer stations,
@@ -331,9 +348,9 @@ packets. It keeps a mapping of transport connections to service flows. This
 enables the MAC CPS identifying the Quality of Service (QoS) parameters
 associated to a transport connection and ensuring the QoS requirements. The CS
 currently employs an IP classifier.</p>
-</div>
-<div class="section" id="ip-packet-classifier">
-<h3>IP Packet Classifier<a class="headerlink" href="#ip-packet-classifier" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ip-packet-classifier">
+<h3><span class="section-number">36.5.2. </span>IP Packet Classifier<a class="headerlink" href="#ip-packet-classifier" title="Link to this heading">¶</a></h3>
 <p>An IP packet classifier is used to map incoming packets to appropriate
 connections based on a set of criteria. The classifier maintains a list of
 mapping rules which associate an IP flow (src IP address and mask, dst IP
@@ -343,9 +360,9 @@ append the incoming packet (from the upper layer) to the queue of the
 appropriate WiMAX connection. Class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">IpcsClassifier</span></code> and class
 <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">IpcsClassifierRecord</span></code> implement the classifier module for both SS
 and BS</p>
-</div>
-<div class="section" id="mac-common-part-sublayer">
-<h3>MAC Common Part Sublayer<a class="headerlink" href="#mac-common-part-sublayer" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="mac-common-part-sublayer">
+<h3><span class="section-number">36.5.3. </span>MAC Common Part Sublayer<a class="headerlink" href="#mac-common-part-sublayer" title="Link to this heading">¶</a></h3>
 <p>The MAC Common Part Sublayer (CPS) is the main sublayer of the IEEE 802.16 MAC
 and performs the fundamental functions of the MAC. The module implements the
 Point-Multi-Point (PMP) mode. In PMP mode BS is responsible of managing
@@ -360,9 +377,9 @@ API that provides abstraction of a network device. Class
 <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SubscriberStationNetDevice</span></code>, defining MAC layers of BS and SS,
 respectively.  Besides these main classes, the key functions of MAC are
 distributed to several other classes.</p>
-</div>
-<div class="section" id="framing-and-management-messages">
-<h3>Framing and Management Messages<a class="headerlink" href="#framing-and-management-messages" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="framing-and-management-messages">
+<h3><span class="section-number">36.5.4. </span>Framing and Management Messages<a class="headerlink" href="#framing-and-management-messages" title="Link to this heading">¶</a></h3>
 <p>The module implements a frame as a fixed duration of time, i.e., frame
 boundaries are defined with respect to time. Each frame is further subdivided
 into downlink (DL) and uplink (UL) subframes. The module implements the Time
@@ -382,9 +399,9 @@ frame is divided into integer number of symbols and Physical Slots (PS) which
 helps in managing bandwidth more effectively. The number of symbols per frame
 depends on the  underlying implementation of the PHY layer. The size of a DL or
 UL burst is specified in units of symbols.</p>
-</div>
-<div class="section" id="network-entry-and-initialization">
-<h3>Network Entry and Initialization<a class="headerlink" href="#network-entry-and-initialization" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="network-entry-and-initialization">
+<h3><span class="section-number">36.5.5. </span>Network Entry and Initialization<a class="headerlink" href="#network-entry-and-initialization" title="Link to this heading">¶</a></h3>
 <p>The network entry and initialization phase is basically divided into two
 sub-phases, (1) scanning and synchronization and (2) initial ranging. The entire
 phase is performed by the LinkManager component of SS and BS. Once an SS wants
@@ -401,9 +418,9 @@ UL-MAP message to locate a special grant, called initial ranging interval, in
 the UL subframe. This grant is allocated by the BS Uplink Scheduler at regular
 intervals. Currently this interval is set to 0.5 ms, however the user is enabled
 to modify its value from the simulation script.</p>
-</div>
-<div class="section" id="connections-and-addressing">
-<h3>Connections and Addressing<a class="headerlink" href="#connections-and-addressing" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="connections-and-addressing">
+<h3><span class="section-number">36.5.6. </span>Connections and Addressing<a class="headerlink" href="#connections-and-addressing" title="Link to this heading">¶</a></h3>
 <p>All communication at the MAC layer is carried in terms of connections. The
 standard defines a connection as a unidirectional mapping between the SS and
 BS’s MAC entities for the transmission of traffic. The standard defines two
@@ -426,9 +443,9 @@ uplink connections is represented by the same CID. This feature is implemented
 in a way that one connection (in DL direction) is created by the BS and upon
 receiving the CID the SS then creates an identical connection (in UL direction)
 with the same CID.</p>
-</div>
-<div class="section" id="scheduling-services">
-<h3>Scheduling Services<a class="headerlink" href="#scheduling-services" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="scheduling-services">
+<h3><span class="section-number">36.5.7. </span>Scheduling Services<a class="headerlink" href="#scheduling-services" title="Link to this heading">¶</a></h3>
 <p>The module supports the four scheduling services defined by the 802.16-2004
 standard:</p>
 <ul class="simple">
@@ -443,9 +460,9 @@ exactly one scheduling service, and the QoS parameter set associated to a
 service flow actually defines the scheduling service it belongs to. When a
 service flow is created the UplinkScheduler calculates necessary parameters such
 as grant size and grant interval based on QoS parameters associated to it.</p>
-</div>
-<div class="section" id="wimax-uplink-scheduler-model">
-<h3>WiMAX Uplink Scheduler Model<a class="headerlink" href="#wimax-uplink-scheduler-model" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="wimax-uplink-scheduler-model">
+<h3><span class="section-number">36.5.8. </span>WiMAX Uplink Scheduler Model<a class="headerlink" href="#wimax-uplink-scheduler-model" title="Link to this heading">¶</a></h3>
 <p>Uplink Scheduler at the BS decides which of the SSs will be assigned uplink
 allocations based on the QoS parameters associated to a service flow (or
 scheduling service) and bandwidth requests from the SSs. Uplink scheduler
@@ -497,9 +514,9 @@ bandwidth requirement of both rtPS and nrtPS connections is guaranteed over a
 window of duration T. This scheduler is implemented by class
 <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">UplinkSchedulerMBQoS</span></code>.</p></li>
 </ul>
-</div>
-<div class="section" id="wimax-outbound-schedulers-model">
-<h3>WiMAX Outbound Schedulers Model<a class="headerlink" href="#wimax-outbound-schedulers-model" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="wimax-outbound-schedulers-model">
+<h3><span class="section-number">36.5.9. </span>WiMAX Outbound Schedulers Model<a class="headerlink" href="#wimax-outbound-schedulers-model" title="Link to this heading">¶</a></h3>
 <p>Besides the uplink scheduler these are the outbound schedulers at BS and SS side
 (BSScheduler and SSScheduler). The outbound schedulers decide which of the
 packets from the outbound queues will be transmitted in a given allocation. The
@@ -512,10 +529,10 @@ from highest priority scheduling service to the lower priority one (UGS&gt; rtPS
 nrtPS&gt; BE). The standard does not suggest any scheduling algorithm and instead
 leaves this decision up to the manufacturers. Of course more sophisticated
 algorithms can be added later if required.</p>
-</div>
-</div>
-<div class="section" id="wimaxchannel-and-wimaxphy-models">
-<h2>WimaxChannel and WimaxPhy models<a class="headerlink" href="#wimaxchannel-and-wimaxphy-models" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="wimaxchannel-and-wimaxphy-models">
+<h2><span class="section-number">36.6. </span>WimaxChannel and WimaxPhy models<a class="headerlink" href="#wimaxchannel-and-wimaxphy-models" title="Link to this heading">¶</a></h2>
 <p>The module implements the Wireless MAN OFDM PHY specifications as the more
 relevant for implementation as it is the schema chosen by the WiMAX Forum. This
 specification is designed for non-light-of-sight (NLOS) including fixed and
@@ -523,9 +540,9 @@ mobile broadband wireless access. The proposed model uses a 256 FFT processor,
 with 192 data subcarriers. It supports all the seven modulation and coding
 schemes specified by Wireless MAN-OFDM. It is composed of two parts: the channel
 model and the physical model.</p>
-</div>
-<div class="section" id="channel-model">
-<h2>Channel model<a class="headerlink" href="#channel-model" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="channel-model">
+<h2><span class="section-number">36.7. </span>Channel model<a class="headerlink" href="#channel-model" title="Link to this heading">¶</a></h2>
 <p>The channel model we propose is implemented by the class
 <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SimpleOFDMWimaxChannel</span></code> which extends the class
 <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wimaxchannel</span></code>. The channel entity has a private structure named
@@ -537,9 +554,9 @@ eventually forwards the packet to the receiver device.  The channel class uses
 the method <cite>GetDistanceFrom()</cite> to calculate the distance between two physical
 entities according to their 3D coordinates. The delay is
 computed as <cite>delay = distance/C</cite>, where <cite>C</cite> is the speed of the light.</p>
-</div>
-<div class="section" id="physical-model">
-<h2>Physical model<a class="headerlink" href="#physical-model" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="physical-model">
+<h2><span class="section-number">36.8. </span>Physical model<a class="headerlink" href="#physical-model" title="Link to this heading">¶</a></h2>
 <p>The physical layer performs two main operations: (i) It receives a burst from a
 channel and forwards it to the MAC layer, (ii) it receives a burst from the MAC
 layer and transmits it on the channel. In order to reduce the simulation
@@ -597,44 +614,49 @@ SNR_value2   BER  Blc_ER  STANDARD_DEVIATION  CONFIDENCE_INTERVAL1  CONFIDENCE_I
  ...          ...  ...     ...                 ...                   ...
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Wimax NetDevice</a><ul>
-<li><a class="reference internal" href="#scope-of-the-model">Scope of the model</a></li>
-<li><a class="reference internal" href="#using-the-wimax-models">Using the Wimax models</a></li>
-<li><a class="reference internal" href="#wimax-attributes">Wimax Attributes</a></li>
-<li><a class="reference internal" href="#wimax-tracing">Wimax Tracing</a></li>
-<li><a class="reference internal" href="#wimax-mac-model">Wimax MAC model</a><ul>
-<li><a class="reference internal" href="#convergence-sublayer">Convergence Sublayer</a></li>
-<li><a class="reference internal" href="#ip-packet-classifier">IP Packet Classifier</a></li>
-<li><a class="reference internal" href="#mac-common-part-sublayer">MAC Common Part Sublayer</a></li>
-<li><a class="reference internal" href="#framing-and-management-messages">Framing and Management Messages</a></li>
-<li><a class="reference internal" href="#network-entry-and-initialization">Network Entry and Initialization</a></li>
-<li><a class="reference internal" href="#connections-and-addressing">Connections and Addressing</a></li>
-<li><a class="reference internal" href="#scheduling-services">Scheduling Services</a></li>
-<li><a class="reference internal" href="#wimax-uplink-scheduler-model">WiMAX Uplink Scheduler Model</a></li>
-<li><a class="reference internal" href="#wimax-outbound-schedulers-model">WiMAX Outbound Schedulers Model</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">36. Wimax NetDevice</a><ul>
+<li><a class="reference internal" href="#scope-of-the-model">36.1. Scope of the model</a></li>
+<li><a class="reference internal" href="#using-the-wimax-models">36.2. Using the Wimax models</a></li>
+<li><a class="reference internal" href="#wimax-attributes">36.3. Wimax Attributes</a></li>
+<li><a class="reference internal" href="#wimax-tracing">36.4. Wimax Tracing</a></li>
+<li><a class="reference internal" href="#wimax-mac-model">36.5. Wimax MAC model</a><ul>
+<li><a class="reference internal" href="#convergence-sublayer">36.5.1. Convergence Sublayer</a></li>
+<li><a class="reference internal" href="#ip-packet-classifier">36.5.2. IP Packet Classifier</a></li>
+<li><a class="reference internal" href="#mac-common-part-sublayer">36.5.3. MAC Common Part Sublayer</a></li>
+<li><a class="reference internal" href="#framing-and-management-messages">36.5.4. Framing and Management Messages</a></li>
+<li><a class="reference internal" href="#network-entry-and-initialization">36.5.5. Network Entry and Initialization</a></li>
+<li><a class="reference internal" href="#connections-and-addressing">36.5.6. Connections and Addressing</a></li>
+<li><a class="reference internal" href="#scheduling-services">36.5.7. Scheduling Services</a></li>
+<li><a class="reference internal" href="#wimax-uplink-scheduler-model">36.5.8. WiMAX Uplink Scheduler Model</a></li>
+<li><a class="reference internal" href="#wimax-outbound-schedulers-model">36.5.9. WiMAX Outbound Schedulers Model</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#wimaxchannel-and-wimaxphy-models">WimaxChannel and WimaxPhy models</a></li>
-<li><a class="reference internal" href="#channel-model">Channel model</a></li>
-<li><a class="reference internal" href="#physical-model">Physical model</a></li>
+<li><a class="reference internal" href="#wimaxchannel-and-wimaxphy-models">36.6. WimaxChannel and WimaxPhy models</a></li>
+<li><a class="reference internal" href="#channel-model">36.7. Channel model</a></li>
+<li><a class="reference internal" href="#physical-model">36.8. Physical model</a></li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="wifi-references.html"
-                        title="previous chapter">References</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="wifi-references.html"
+                          title="previous chapter"><span class="section-number">35.5. </span>References</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -646,12 +668,12 @@ SNR_value2   BER  Blc_ER  STANDARD_DEVIATION  CONFIDENCE_INTERVAL1  CONFIDENCE_I
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -663,18 +685,19 @@ SNR_value2   BER  Blc_ER  STANDARD_DEVIATION  CONFIDENCE_INTERVAL1  CONFIDENCE_I
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="wifi-references.html" title="References"
+          <a href="wifi-references.html" title="35.5. References"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">36. </span>Wimax NetDevice</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 17:37.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:57.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

@@ -1,6 +1,0 @@
-<map id="ns3::Ipv6::Send" name="ns3::Ipv6::Send">
-<area shape="rect" id="node1" title="Higher&#45;level layers call this method to send a packet down the stack to the MAC and PHY layers." alt="" coords="223,78,344,105"/>
-<area shape="rect" id="node2" href="$classns3_1_1_icmpv6_l4_protocol.html#a5b150b21ea7d5337ec2021092fcf972b" title="This method is called by AggregateObject and completes the aggregation by setting the node in the ICM..." alt="" coords="5,5,175,47"/>
-<area shape="rect" id="node3" href="$classns3_1_1_tcp_l4_protocol.html#ace34214dade5d0c0c2220ad01866111c" title="Setup socket factory and callbacks when aggregated to a node." alt="" coords="7,71,173,112"/>
-<area shape="rect" id="node4" href="$classns3_1_1_udp_l4_protocol.html#aab4a2c28a2caeb37eaec4a23a920b339" title="Notify all Objects aggregated to this one of a new Object being aggregated." alt="" coords="7,136,173,177"/>
-</map>

@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>IPv6 &#8212; Model Library</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>16.3. IPv6 &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Routing overview" href="routing-overview.html" />
-    <link rel="prev" title="IPv4" href="ipv4.html" />
+    <link rel="next" title="16.4. Routing overview" href="routing-overview.html" />
+    <link rel="prev" title="16.2. IPv4" href="ipv4.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Models</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,16 +126,17 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="routing-overview.html" title="Routing overview"
+          <a href="routing-overview.html" title="16.4. Routing overview"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="ipv4.html" title="IPv4"
+          <a href="ipv4.html" title="16.2. IPv4"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
 
-          <li class="nav-item nav-item-1"><a href="internet-models.html" accesskey="U">Internet Models (IP, TCP, Routing, UDP, Internet Applications)</a><span class="navelem">&nbsp;</span></li> 
+          <li class="nav-item nav-item-1"><a href="internet-models.html" accesskey="U"><span class="section-number">16. </span>Internet Models (IP, TCP, Routing, UDP)</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">16.3. </span>IPv6</a></li> 
       </ul>
     </div>  
 
@@ -130,12 +145,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="ipv6">
-<h1>IPv6<a class="headerlink" href="#ipv6" title="Permalink to this headline">¶</a></h1>
+  <section id="ipv6">
+<h1><span class="section-number">16.3. </span>IPv6<a class="headerlink" href="#ipv6" title="Link to this heading">¶</a></h1>
 <p>This chapter describes the <em>ns-3</em> IPv6 model capabilities and limitations along with its
 usage and examples.</p>
-<div class="section" id="ipv6-model-description">
-<h2>IPv6 model description<a class="headerlink" href="#ipv6-model-description" title="Permalink to this headline">¶</a></h2>
+<section id="ipv6-model-description">
+<h2><span class="section-number">16.3.1. </span>IPv6 model description<a class="headerlink" href="#ipv6-model-description" title="Link to this heading">¶</a></h2>
 <p>The IPv6 model is loosely patterned after the Linux implementation;
 the implementation is not complete as some features of IPv6 are not of
 much interest to simulation studies, and some features of IPv6 are simply
@@ -195,9 +210,9 @@ src/internet/helper/ipv6-static-routing-helper.{cc,h}
 <li><p>headers, option headers, extension headers, etc.</p></li>
 <li><p>accessory classes (e.g., ndisc-cache)</p></li>
 </ul>
-</div>
-<div class="section" id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="usage">
+<h2><span class="section-number">16.3.2. </span>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
 <p>The following description is based on using the typical helpers found in the example code.</p>
 <p>IPv6 does not need to be activated in a node. it is automatically added to the
 available protocols once the Internet Stack is installed.</p>
@@ -209,23 +224,23 @@ one should use <code class="xref cpp cpp-class docutils literal notranslate"><sp
 before the stack installation.</p>
 <p>As an example, in the following code node 0 will have both IPv4 and IPv6, node 1 only
 only IPv6 and node 2 only IPv4:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span> <span class="n">n</span><span class="p">;</span>
-<span class="n">n</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="n">n</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 
-<span class="n">InternetStackHelper</span> <span class="n">internet</span><span class="p">;</span>
-<span class="n">InternetStackHelper</span> <span class="n">internetV4only</span><span class="p">;</span>
-<span class="n">InternetStackHelper</span> <span class="n">internetV6only</span><span class="p">;</span>
+<span class="n">InternetStackHelper</span><span class="w"> </span><span class="n">internet</span><span class="p">;</span>
+<span class="n">InternetStackHelper</span><span class="w"> </span><span class="n">internetV4only</span><span class="p">;</span>
+<span class="n">InternetStackHelper</span><span class="w"> </span><span class="n">internetV6only</span><span class="p">;</span>
 
-<span class="n">internetV4only</span><span class="p">.</span><span class="n">SetIpv6StackInstall</span> <span class="p">(</span><span class="nb">false</span><span class="p">);</span>
-<span class="n">internetV6only</span><span class="p">.</span><span class="n">SetIpv4StackInstall</span> <span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+<span class="n">internetV4only</span><span class="p">.</span><span class="n">SetIpv6StackInstall</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+<span class="n">internetV6only</span><span class="p">.</span><span class="n">SetIpv4StackInstall</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
 
-<span class="n">internet</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">n</span><span class="p">.</span><span class="n">Get</span> <span class="p">(</span><span class="mi">0</span><span class="p">));</span>
-<span class="n">internetV6only</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">n</span><span class="p">.</span><span class="n">Get</span> <span class="p">(</span><span class="mi">1</span><span class="p">));</span>
-<span class="n">internetV4only</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">n</span><span class="p">.</span><span class="n">Get</span> <span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+<span class="n">internet</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">n</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<span class="n">internetV6only</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">n</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">internetV4only</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">n</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
 </pre></div>
 </div>
-<div class="section" id="ipv6-addresses-assignment">
-<h3>IPv6 addresses assignment<a class="headerlink" href="#ipv6-addresses-assignment" title="Permalink to this headline">¶</a></h3>
+<section id="ipv6-addresses-assignment">
+<h3><span class="section-number">16.3.2.1. </span>IPv6 addresses assignment<a class="headerlink" href="#ipv6-addresses-assignment" title="Link to this heading">¶</a></h3>
 <p>In order to use IPv6 on a network, the first thing to do is assigning IPv6 addresses.</p>
 <p>Any IPv6-enabled <em>ns-3</em> node will have at least one NetDevice: the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::LoopbackNetDevice</span></code>.
 The loopback device address is <code class="docutils literal notranslate"><span class="pre">::1</span></code>.
@@ -242,19 +257,19 @@ address(es) being the following ones.</p>
 <li><p>auto-generated</p></li>
 </ul>
 <p><em>ns-3</em> can use both methods, and it’s quite important to understand the implications of both.</p>
-<div class="section" id="manually-assigned-ipv6-addresses">
-<h4>Manually assigned IPv6 addresses<a class="headerlink" href="#manually-assigned-ipv6-addresses" title="Permalink to this headline">¶</a></h4>
+<section id="manually-assigned-ipv6-addresses">
+<h4><span class="section-number">16.3.2.1.1. </span>Manually assigned IPv6 addresses<a class="headerlink" href="#manually-assigned-ipv6-addresses" title="Link to this heading">¶</a></h4>
 <p>This is probably the easiest and most used method. As an example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">n0</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="p">();</span>
-<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="p">();</span>
-<span class="n">NodeContainer</span> <span class="nf">net</span> <span class="p">(</span><span class="n">n0</span><span class="p">,</span> <span class="n">n1</span><span class="p">);</span>
-<span class="n">CsmaHelper</span> <span class="n">csma</span><span class="p">;</span>
-<span class="n">NetDeviceContainer</span> <span class="n">ndc</span> <span class="o">=</span> <span class="n">csma</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">net</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">n0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">NodeContainer</span><span class="w"> </span><span class="nf">net</span><span class="p">(</span><span class="n">n0</span><span class="p">,</span><span class="w"> </span><span class="n">n1</span><span class="p">);</span>
+<span class="n">CsmaHelper</span><span class="w"> </span><span class="n">csma</span><span class="p">;</span>
+<span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">ndc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">csma</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">net</span><span class="p">);</span>
 
-<span class="n">NS_LOG_INFO</span> <span class="p">(</span><span class="s">&quot;Assign IPv6 Addresses.&quot;</span><span class="p">);</span>
-<span class="n">Ipv6AddressHelper</span> <span class="n">ipv6</span><span class="p">;</span>
-<span class="n">ipv6</span><span class="p">.</span><span class="n">SetBase</span> <span class="p">(</span><span class="n">Ipv6Address</span> <span class="p">(</span><span class="s">&quot;2001:db8::&quot;</span><span class="p">),</span> <span class="n">Ipv6Prefix</span> <span class="p">(</span><span class="mi">64</span><span class="p">));</span>
-<span class="n">Ipv6InterfaceContainer</span> <span class="n">ic</span> <span class="o">=</span> <span class="n">ipv6</span><span class="p">.</span><span class="n">Assign</span> <span class="p">(</span><span class="n">ndc</span><span class="p">);</span>
+<span class="n">NS_LOG_INFO</span><span class="p">(</span><span class="s">&quot;Assign IPv6 Addresses.&quot;</span><span class="p">);</span>
+<span class="n">Ipv6AddressHelper</span><span class="w"> </span><span class="n">ipv6</span><span class="p">;</span>
+<span class="n">ipv6</span><span class="p">.</span><span class="n">SetBase</span><span class="p">(</span><span class="n">Ipv6Address</span><span class="p">(</span><span class="s">&quot;2001:db8::&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">Ipv6Prefix</span><span class="p">(</span><span class="mi">64</span><span class="p">));</span>
+<span class="n">Ipv6InterfaceContainer</span><span class="w"> </span><span class="n">ic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ipv6</span><span class="p">.</span><span class="n">Assign</span><span class="p">(</span><span class="n">ndc</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This method will add two global IPv6 addresses to the nodes. Note that, as usual for IPv6,
@@ -266,24 +281,25 @@ to have addresses similar to <code class="docutils literal notranslate"><span cl
 However, due to the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Ipv6AddressHelper</span></code> singleton nature, one should first assign all the
 addresses of a network, then change the network base (<code class="docutils literal notranslate"><span class="pre">SetBase</span></code>), then do a new assignment.</p>
 <p>Alternatively, it is possible to assign a specific address to a node:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">n0</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="p">();</span>
-<span class="n">NodeContainer</span> <span class="nf">net</span> <span class="p">(</span><span class="n">n0</span><span class="p">);</span>
-<span class="n">CsmaHelper</span> <span class="n">csma</span><span class="p">;</span>
-<span class="n">NetDeviceContainer</span> <span class="n">ndc</span> <span class="o">=</span> <span class="n">csma</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">net</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">n0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">NodeContainer</span><span class="w"> </span><span class="nf">net</span><span class="p">(</span><span class="n">n0</span><span class="p">);</span>
+<span class="n">CsmaHelper</span><span class="w"> </span><span class="n">csma</span><span class="p">;</span>
+<span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">ndc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">csma</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">net</span><span class="p">);</span>
 
-<span class="n">NS_LOG_INFO</span> <span class="p">(</span><span class="s">&quot;Specifically Assign an IPv6 Address.&quot;</span><span class="p">);</span>
-<span class="n">Ipv6AddressHelper</span> <span class="n">ipv6</span><span class="p">;</span>
-<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span> <span class="n">device</span> <span class="o">=</span> <span class="n">ndc</span><span class="p">.</span><span class="n">Get</span> <span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">node</span> <span class="o">=</span> <span class="n">device</span><span class="o">-&gt;</span><span class="n">GetNode</span> <span class="p">();</span>
-<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv6</span><span class="o">&gt;</span> <span class="n">ipv6proto</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">GetObject</span><span class="o">&lt;</span><span class="n">Ipv6</span><span class="o">&gt;</span> <span class="p">();</span>
-<span class="kt">int32_t</span> <span class="n">ifIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="n">ifIndex</span> <span class="o">=</span> <span class="n">ipv6proto</span><span class="o">-&gt;</span><span class="n">GetInterfaceForDevice</span> <span class="p">(</span><span class="n">device</span><span class="p">);</span>
-<span class="n">Ipv6InterfaceAddress</span> <span class="n">ipv6Addr</span> <span class="o">=</span> <span class="n">Ipv6InterfaceAddress</span> <span class="p">(</span><span class="n">Ipv6Address</span> <span class="p">(</span><span class="s">&quot;2001:db8:f00d:cafe::42&quot;</span><span class="p">),</span> <span class="n">Ipv6Prefix</span> <span class="p">(</span><span class="mi">64</span><span class="p">));</span>
-<span class="n">ipv6proto</span><span class="o">-&gt;</span><span class="n">AddAddress</span> <span class="p">(</span><span class="n">ifIndex</span><span class="p">,</span> <span class="n">ipv6Addr</span><span class="p">);</span>
+<span class="n">NS_LOG_INFO</span><span class="p">(</span><span class="s">&quot;Specifically Assign an IPv6 Address.&quot;</span><span class="p">);</span>
+<span class="n">Ipv6AddressHelper</span><span class="w"> </span><span class="n">ipv6</span><span class="p">;</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">NetDevice</span><span class="o">&gt;</span><span class="w"> </span><span class="n">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ndc</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">device</span><span class="o">-&gt;</span><span class="n">GetNode</span><span class="p">();</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv6</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ipv6proto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node</span><span class="o">-&gt;</span><span class="n">GetObject</span><span class="o">&lt;</span><span class="n">Ipv6</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="kt">int32_t</span><span class="w"> </span><span class="n">ifIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">ifIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ipv6proto</span><span class="o">-&gt;</span><span class="n">GetInterfaceForDevice</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+<span class="n">Ipv6InterfaceAddress</span><span class="w"> </span><span class="n">ipv6Addr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ipv6InterfaceAddress</span><span class="p">(</span><span class="n">Ipv6Address</span><span class="p">(</span><span class="s">&quot;2001:db8:f00d:cafe::42&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">Ipv6Prefix</span><span class="p">(</span><span class="mi">64</span><span class="p">));</span>
+<span class="n">ipv6proto</span><span class="o">-&gt;</span><span class="n">AddAddress</span><span class="p">(</span><span class="n">ifIndex</span><span class="p">,</span><span class="w"> </span><span class="n">ipv6Addr</span><span class="p">);</span>
 </pre></div>
 </div>
-<div class="section" id="auto-generated-ipv6-addresses">
-<h5>Auto-generated IPv6 addresses<a class="headerlink" href="#auto-generated-ipv6-addresses" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="auto-generated-ipv6-addresses">
+<h4><span class="section-number">16.3.2.1.2. </span>Auto-generated IPv6 addresses<a class="headerlink" href="#auto-generated-ipv6-addresses" title="Link to this heading">¶</a></h4>
 <p>This is accomplished by relying on the RADVD protocol, implemented by the class
 <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Radvd</span></code>. A helper class is available, which can be used to ease the most
 common tasks, e.g., setting up a prefix on an interface, if it is announced periodically,
@@ -297,15 +313,35 @@ one (or more) global address(es) according to the RADVD configuration.
 These addresses will be bases on the RADVD announced prefix and the node’s EUI-64.</p>
 <p>Examples of RADVD use are shown in <code class="docutils literal notranslate"><span class="pre">examples/ipv6/radvd.cc</span></code>
 and <code class="docutils literal notranslate"><span class="pre">examples/ipv6/radvd-two-prefix.cc</span></code>.</p>
+<p>Note that the router (i.e., the node with <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Radvd</span></code>) will have to have a global address,
+while the nodes using the auto-generated addresses (SLAAC) will have to have a link-local address.
+This is accomplished using <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Ipv6AddressHelper::AssignWithoutAddress</span></code>, e.g.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ipv6AddressHelper</span><span class="w"> </span><span class="n">ipv6</span><span class="p">;</span>
+<span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">tmp</span><span class="p">;</span>
+<span class="n">tmp</span><span class="p">.</span><span class="n">Add</span><span class="w"> </span><span class="p">(</span><span class="n">d1</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span><span class="w"> </span><span class="cm">/* n0 */</span>
+<span class="n">Ipv6InterfaceContainer</span><span class="w"> </span><span class="n">iic1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ipv6</span><span class="p">.</span><span class="n">AssignWithoutAddress</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="w"> </span><span class="cm">/* n0 interface */</span>
+</pre></div>
 </div>
-<div class="section" id="random-generated-ipv6-addresses">
-<h5>Random-generated IPv6 addresses<a class="headerlink" href="#random-generated-ipv6-addresses" title="Permalink to this headline">¶</a></h5>
+<section id="random-generated-ipv6-addresses">
+<h5><span class="section-number">16.3.2.1.2.1. </span>Random-generated IPv6 addresses<a class="headerlink" href="#random-generated-ipv6-addresses" title="Link to this heading">¶</a></h5>
 <p>While IPv6 real nodes will use randomly generated addresses to protect privacy, <em>ns-3</em>
 does NOT have this capability. This feature haven’t been so far considered as interesting
 for simulation.</p>
-</div>
-<div class="section" id="duplicate-address-detection-dad">
-<h5>Duplicate Address Detection (DAD)<a class="headerlink" href="#duplicate-address-detection-dad" title="Permalink to this headline">¶</a></h5>
+</section>
+</section>
+<section id="networks-with-and-without-the-onlink-property">
+<h4><span class="section-number">16.3.2.1.3. </span>Networks with and without the onlink property<a class="headerlink" href="#networks-with-and-without-the-onlink-property" title="Link to this heading">¶</a></h4>
+<p>IPv6 adds the concept of “on-link” for addresses and prefixes. Simplifying the concept, a
+network with the on-link property behaves roughly as IPv4: a node will assume that any address
+belonging to the on-link prefix is reachable on the link, so it uses Neighbor Discovery Protocol (NDP)
+to find the MAC address corresponding to the IPv6 address.
+If the prefix is not marked as “on-link”, then any packet is sent to the default router.</p>
+<p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Radvd</span></code> can announce prefixes that have the on-link flag not set. Moreover, it is possible
+to add an address to a node without setting the on-link property for the prefix used in the address.
+The function to use is <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Ipv6AddressHelper::AssignWithoutOnLink</span></code>.</p>
+</section>
+<section id="duplicate-address-detection-dad">
+<h4><span class="section-number">16.3.2.1.4. </span>Duplicate Address Detection (DAD)<a class="headerlink" href="#duplicate-address-detection-dad" title="Link to this heading">¶</a></h4>
 <p>Nodes will perform DAD (it can be disabled using an <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Icmpv6L4Protocol</span></code> attribute).
 Upon receiving a DAD, however, nodes will not react to it. As is: DAD reaction is
 incomplete so far.
@@ -313,11 +349,10 @@ The main reason relies on the missing random-generated address capability. Moreo
 since <em>ns-3</em> nodes will usually be well-behaving, there shouldn’t be any Duplicate Address.
 This might be changed in the future, so as to avoid issues with real-world
 integrated simulations.</p>
-</div>
-</div>
-</div>
-<div class="section" id="explicit-congestion-notification-ecn-bits-in-ipv6">
-<h3>Explicit Congestion Notification (ECN) bits in IPv6<a class="headerlink" href="#explicit-congestion-notification-ecn-bits-in-ipv6" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="explicit-congestion-notification-ecn-bits-in-ipv6">
+<h3><span class="section-number">16.3.2.2. </span>Explicit Congestion Notification (ECN) bits in IPv6<a class="headerlink" href="#explicit-congestion-notification-ecn-bits-in-ipv6" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>In IPv6, ECN bits are the last 2 bits of the Traffic class and occupy 10th and 11th bit
 in the header.</p></li>
@@ -326,10 +361,10 @@ in the header.</p></li>
 in RFC 3168, and also a setter and getter method to handle ECN values in
 the Traffic Class field.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="ipv6queuediscitem">
-<h2>Ipv6QueueDiscItem<a class="headerlink" href="#ipv6queuediscitem" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="ipv6queuediscitem">
+<h2><span class="section-number">16.3.3. </span>Ipv6QueueDiscItem<a class="headerlink" href="#ipv6queuediscitem" title="Link to this heading">¶</a></h2>
 <p>The traffic control sublayer in <em>ns-3</em> handles objects of class
 <code class="docutils literal notranslate"><span class="pre">QueueDiscItem</span></code> which are used to hold an ns3::Packet and an ns3::Header.
 This is done to facilitate the marking of packets for Explicit
@@ -338,8 +373,8 @@ Ipv6QueueDiscItem. It returns true if marking the packet is successful, i.e.,
 it successfully sets the CE bit in the IPv6 header. The <code class="docutils literal notranslate"><span class="pre">Mark</span> <span class="pre">()</span></code> method
 will return false, however, if the IPv6 header indicates the <code class="docutils literal notranslate"><span class="pre">ECN_NotECT</span></code>
 codepoint.</p>
-<div class="section" id="host-and-router-behaviour-in-ipv6-and-ns3">
-<h3>Host and Router behaviour in IPv6 and <em>ns-3</em><a class="headerlink" href="#host-and-router-behaviour-in-ipv6-and-ns3" title="Permalink to this headline">¶</a></h3>
+<section id="host-and-router-behaviour-in-ipv6-and-ns3">
+<h3><span class="section-number">16.3.3.1. </span>Host and Router behaviour in IPv6 and <em>ns-3</em><a class="headerlink" href="#host-and-router-behaviour-in-ipv6-and-ns3" title="Link to this heading">¶</a></h3>
 <p>In IPv6 there is a clear distinction between <em>routers</em> and <em>hosts</em>. As one might expect,
 routers can forward packets from an interface to another interface, while hosts drop
 packets not directed to them.</p>
@@ -389,9 +424,9 @@ forwarding=2).</p>
 <p>Consider carefully the implications of packet forwarding. As an example, a node will NOT send
 ICMPv6 PACKET_TOO_BIG messages from an interface with forwarding off. This is completely normal,
 as the Routing protocol will drop the packet before attempting to forward it.</p>
-</div>
-<div class="section" id="helpers">
-<h3>Helpers<a class="headerlink" href="#helpers" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="helpers">
+<h3><span class="section-number">16.3.3.2. </span>Helpers<a class="headerlink" href="#helpers" title="Link to this heading">¶</a></h3>
 <p>Typically the helpers used in IPv6 setup are:</p>
 <ul class="simple">
 <li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::InternetStackHelper</span></code></p></li>
@@ -399,27 +434,27 @@ as the Routing protocol will drop the packet before attempting to forward it.</p
 <li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::Ipv6InterfaceContainer</span></code></p></li>
 </ul>
 <p>The use is almost identical to the corresponding IPv4 case, e.g.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span> <span class="n">n</span><span class="p">;</span>
-<span class="n">n</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="n">n</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
 
-<span class="n">NS_LOG_INFO</span> <span class="p">(</span><span class="s">&quot;Create IPv6 Internet Stack&quot;</span><span class="p">);</span>
-<span class="n">InternetStackHelper</span> <span class="n">internetv6</span><span class="p">;</span>
-<span class="n">internetv6</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="n">NS_LOG_INFO</span><span class="p">(</span><span class="s">&quot;Create IPv6 Internet Stack&quot;</span><span class="p">);</span>
+<span class="n">InternetStackHelper</span><span class="w"> </span><span class="n">internetv6</span><span class="p">;</span>
+<span class="n">internetv6</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
 
-<span class="n">NS_LOG_INFO</span> <span class="p">(</span><span class="s">&quot;Create channels.&quot;</span><span class="p">);</span>
-<span class="n">CsmaHelper</span> <span class="n">csma</span><span class="p">;</span>
-<span class="n">NetDeviceContainer</span> <span class="n">d</span> <span class="o">=</span> <span class="n">csma</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="n">NS_LOG_INFO</span><span class="p">(</span><span class="s">&quot;Create channels.&quot;</span><span class="p">);</span>
+<span class="n">CsmaHelper</span><span class="w"> </span><span class="n">csma</span><span class="p">;</span>
+<span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">csma</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
 
-<span class="n">NS_LOG_INFO</span> <span class="p">(</span><span class="s">&quot;Create networks and assign IPv6 Addresses.&quot;</span><span class="p">);</span>
-<span class="n">Ipv6AddressHelper</span> <span class="n">ipv6</span><span class="p">;</span>
-<span class="n">ipv6</span><span class="p">.</span><span class="n">SetBase</span> <span class="p">(</span><span class="n">Ipv6Address</span> <span class="p">(</span><span class="s">&quot;2001:db8::&quot;</span><span class="p">),</span> <span class="n">Ipv6Prefix</span> <span class="p">(</span><span class="mi">64</span><span class="p">));</span>
-<span class="n">Ipv6InterfaceContainer</span> <span class="n">iic</span> <span class="o">=</span> <span class="n">ipv6</span><span class="p">.</span><span class="n">Assign</span> <span class="p">(</span><span class="n">d</span><span class="p">);</span>
+<span class="n">NS_LOG_INFO</span><span class="p">(</span><span class="s">&quot;Create networks and assign IPv6 Addresses.&quot;</span><span class="p">);</span>
+<span class="n">Ipv6AddressHelper</span><span class="w"> </span><span class="n">ipv6</span><span class="p">;</span>
+<span class="n">ipv6</span><span class="p">.</span><span class="n">SetBase</span><span class="p">(</span><span class="n">Ipv6Address</span><span class="p">(</span><span class="s">&quot;2001:db8::&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">Ipv6Prefix</span><span class="p">(</span><span class="mi">64</span><span class="p">));</span>
+<span class="n">Ipv6InterfaceContainer</span><span class="w"> </span><span class="n">iic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ipv6</span><span class="p">.</span><span class="n">Assign</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Additionally, a common task is to enable forwarding on one of the nodes and to
 setup a default route toward it in the other nodes, e.g.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">iic</span><span class="p">.</span><span class="n">SetForwarding</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
-<span class="n">iic</span><span class="p">.</span><span class="n">SetDefaultRouteInAllNodes</span> <span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">iic</span><span class="p">.</span><span class="n">SetForwarding</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+<span class="n">iic</span><span class="p">.</span><span class="n">SetDefaultRouteInAllNodes</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This will enable forwarding on the node <em>0</em> and will setup a default route in
@@ -427,9 +462,9 @@ setup a default route toward it in the other nodes, e.g.:</p>
 requires that Ipv6StaticRouting is present in the nodes.</p>
 <p>The IPv6 routing helpers enable the user to perform specific tasks on the
 particular routing algorithm and to print the routing tables.</p>
-</div>
-<div class="section" id="attributes">
-<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="attributes">
+<h3><span class="section-number">16.3.3.3. </span>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h3>
 <p>Many classes in the <em>ns-3</em> IPv6 implementation contain attributes. The most
 useful ones are:</p>
 <ul class="simple">
@@ -466,9 +501,9 @@ useful ones are:</p>
 <li><p><cite>UnresolvedQueueSize</cite>, uint32_t, default 3. Size of the queue for packets pending an NA reply.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="output">
-<h3>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="output">
+<h3><span class="section-number">16.3.3.4. </span>Output<a class="headerlink" href="#output" title="Link to this heading">¶</a></h3>
 <p>The IPv6 stack provides some useful trace sources:</p>
 <ul class="simple">
 <li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::Ipv6L3Protocol</span></code></p></li>
@@ -491,11 +526,11 @@ useful ones are:</p>
 <p>The latest trace source is generated when a packet contains an unknown option blocking its processing.</p>
 <p>Mind that <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::NdiscCache</span></code> could drop packets as well, and they are not logged
 in a trace source (yet). This might generate some confusion in the sent/received packets counters.</p>
-</div>
-<div class="section" id="advanced-usage">
-<h3>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="ipv6-maximum-transmission-unit-mtu-and-fragmentation">
-<h4>IPv6 maximum transmission unit (MTU) and fragmentation<a class="headerlink" href="#ipv6-maximum-transmission-unit-mtu-and-fragmentation" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="advanced-usage">
+<h3><span class="section-number">16.3.3.5. </span>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Link to this heading">¶</a></h3>
+<section id="ipv6-maximum-transmission-unit-mtu-and-fragmentation">
+<h4><span class="section-number">16.3.3.5.1. </span>IPv6 maximum transmission unit (MTU) and fragmentation<a class="headerlink" href="#ipv6-maximum-transmission-unit-mtu-and-fragmentation" title="Link to this heading">¶</a></h4>
 <p><em>ns-3</em> NetDevices define the MTU according to the L2 simulated Device. IPv6 requires
 that the minimum MTU is 1280 bytes, so all NetDevices are required to support at least
 this MTU. This is the link-MTU.</p>
@@ -516,101 +551,143 @@ Path-MTU information is removed and the next packet will (eventually) trigger a 
 PACKET_TOO_BIG message.
 Note that 1) this is consistent with the RFC specification and 2) L4 protocols are
 responsible for retransmitting the packets.</p>
-</div>
-</div>
-<div class="section" id="examples">
-<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="examples">
+<h3><span class="section-number">16.3.3.6. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h3>
 <p>The examples for IPv6 are in the directory <code class="docutils literal notranslate"><span class="pre">examples/ipv6</span></code>. These examples focus on
 the most interesting IPv6 peculiarities, such as fragmentation, redirect and so on.</p>
 <p>Moreover, most TCP and UDP examples located in <code class="docutils literal notranslate"><span class="pre">examples/udp</span></code>, <code class="docutils literal notranslate"><span class="pre">examples/tcp</span></code>, etc.
 have a command-line option to use IPv6 instead of IPv4.</p>
-</div>
-<div class="section" id="troubleshooting">
-<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="troubleshooting">
+<h3><span class="section-number">16.3.3.7. </span>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">¶</a></h3>
 <p>There are just a few pitfalls to avoid while using <em>ns-3</em> IPv6.</p>
-<div class="section" id="routing-loops">
-<h4>Routing loops<a class="headerlink" href="#routing-loops" title="Permalink to this headline">¶</a></h4>
+<section id="routing-loops">
+<h4><span class="section-number">16.3.3.7.1. </span>Routing loops<a class="headerlink" href="#routing-loops" title="Link to this heading">¶</a></h4>
 <p>Since the only (so far) routing scheme available for IPv6 is <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ns3::Ipv6StaticRouting</span></code>,
 default router have to be setup manually. When there are two or more routers in a network
 (e.g., node A and node B), avoid using the helper function <cite>SetDefaultRouteInAllNodes</cite>
 for more than one router.</p>
 <p>The consequence would be to install a default route to B in A and a default route pointing to
 A in B, generating a loop.</p>
-</div>
-<div class="section" id="global-address-leakage">
-<h4>Global address leakage<a class="headerlink" href="#global-address-leakage" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="global-address-leakage">
+<h4><span class="section-number">16.3.3.7.2. </span>Global address leakage<a class="headerlink" href="#global-address-leakage" title="Link to this heading">¶</a></h4>
 <p>Remember that addresses in IPv6 are <em>global</em> by definition. When using IPv6 with an emulation
 <em>ns-3</em> capability, avoid at all costs address leakage toward the global Internet.
 It is advisable to setup an external firewall to prevent leakage.</p>
-</div>
-<div class="section" id="db8-32-addresses">
-<h4>2001:DB8::/32 addresses<a class="headerlink" href="#db8-32-addresses" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="db8-32-addresses">
+<h4><span class="section-number">16.3.3.7.3. </span>2001:DB8::/32 addresses<a class="headerlink" href="#db8-32-addresses" title="Link to this heading">¶</a></h4>
 <p>IPv6 standard (RFC 3849) defines the <code class="docutils literal notranslate"><span class="pre">2001:DB8::/32</span></code> address class for the <em>documentation</em>.
 This manual uses this convention. The addresses in this class are, however, only usable in
 a document, and routers should discard them.</p>
-</div>
-</div>
-</div>
-<div class="section" id="validation">
-<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="validation">
+<h2><span class="section-number">16.3.4. </span>Validation<a class="headerlink" href="#validation" title="Link to this heading">¶</a></h2>
 <p>The IPv6 protocols has not yet been extensively validated against real implementations.
 The actual tests involve mainly performing checks of the .pcap trace files with Wireshark,
 and the results are positive.</p>
+</section>
+<section id="neighborcache">
+<h2><span class="section-number">16.3.5. </span>NeighborCache<a class="headerlink" href="#neighborcache" title="Link to this heading">¶</a></h2>
+<p>NeighborCacheHelper provides a way to generate NDISC cache automatically. It generates
+needed NDISC cache before simulation start to avoid the delay and message overhead of
+neighbor discovery in simulations that are focused on other performance aspects.
+The state of entries generate by NeighborCacheHelper is <code class="docutils literal notranslate"><span class="pre">STATIC_AUTOGENERATED</span></code>,
+which is similar to <code class="docutils literal notranslate"><span class="pre">PERMANENT</span></code>, but they are not manually added or removed by user, they
+will be managed by NeighborCacheHelper when user need pre-generate cache.
+When user is generating neighbor caches globally, neighbor caches will update dynamically when
+IPv6 addresses are removed or added; when user is generating neighbor caches partially,
+NeighborCacheHelper will take care of address removal, for adding address user may rerun a
+reduced-scope PopulateNeighbor() again to pick up the new IP address or manually
+add an entry to keep the neighbor cache up-to-date, the reason is that: when PopulateNeighborCache()
+has previously been run with a scope less than global, the code does not know whether it was previously
+run with a scope of Channel, NetDeviceContainer, or Ip interface container.
+The source code for NeighborCache is located in <code class="docutils literal notranslate"><span class="pre">src/internet/helper/neighbor-cache-helper</span></code>
+A complete example is in <code class="docutils literal notranslate"><span class="pre">src/internet/examples/neighbor-cache-example.cc</span></code>.</p>
+<section id="id1">
+<h3><span class="section-number">16.3.5.1. </span>Usage<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p>The usages for generating NDISC cache is almost the same as generating ARP cache, see
+<code class="docutils literal notranslate"><span class="pre">src/internet/doc/ipv4.rst</span></code></p>
+<ul class="simple">
+<li><p>Populate neighbor ARP caches for a given Ipv6InterfaceContainer:</p></li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">NeighborCacheHelper</span><span class="w"> </span><span class="n">neighborCache</span><span class="p">;</span>
+<span class="n">neighborCache</span><span class="p">.</span><span class="n">PopulateNeighborCache</span><span class="p">(</span><span class="n">interfaces</span><span class="p">);</span><span class="w">    </span><span class="c1">// interfaces is the Ipv6InterfaceContainer want to generate ARP caches</span>
+</pre></div>
 </div>
-</div>
+</section>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">IPv6</a><ul>
-<li><a class="reference internal" href="#ipv6-model-description">IPv6 model description</a></li>
-<li><a class="reference internal" href="#usage">Usage</a><ul>
-<li><a class="reference internal" href="#ipv6-addresses-assignment">IPv6 addresses assignment</a><ul>
-<li><a class="reference internal" href="#manually-assigned-ipv6-addresses">Manually assigned IPv6 addresses</a><ul>
-<li><a class="reference internal" href="#auto-generated-ipv6-addresses">Auto-generated IPv6 addresses</a></li>
-<li><a class="reference internal" href="#random-generated-ipv6-addresses">Random-generated IPv6 addresses</a></li>
-<li><a class="reference internal" href="#duplicate-address-detection-dad">Duplicate Address Detection (DAD)</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">16.3. IPv6</a><ul>
+<li><a class="reference internal" href="#ipv6-model-description">16.3.1. IPv6 model description</a></li>
+<li><a class="reference internal" href="#usage">16.3.2. Usage</a><ul>
+<li><a class="reference internal" href="#ipv6-addresses-assignment">16.3.2.1. IPv6 addresses assignment</a><ul>
+<li><a class="reference internal" href="#manually-assigned-ipv6-addresses">16.3.2.1.1. Manually assigned IPv6 addresses</a></li>
+<li><a class="reference internal" href="#auto-generated-ipv6-addresses">16.3.2.1.2. Auto-generated IPv6 addresses</a><ul>
+<li><a class="reference internal" href="#random-generated-ipv6-addresses">16.3.2.1.2.1. Random-generated IPv6 addresses</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#networks-with-and-without-the-onlink-property">16.3.2.1.3. Networks with and without the onlink property</a></li>
+<li><a class="reference internal" href="#duplicate-address-detection-dad">16.3.2.1.4. Duplicate Address Detection (DAD)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#explicit-congestion-notification-ecn-bits-in-ipv6">16.3.2.2. Explicit Congestion Notification (ECN) bits in IPv6</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ipv6queuediscitem">16.3.3. Ipv6QueueDiscItem</a><ul>
+<li><a class="reference internal" href="#host-and-router-behaviour-in-ipv6-and-ns3">16.3.3.1. Host and Router behaviour in IPv6 and <em>ns-3</em></a></li>
+<li><a class="reference internal" href="#helpers">16.3.3.2. Helpers</a></li>
+<li><a class="reference internal" href="#attributes">16.3.3.3. Attributes</a></li>
+<li><a class="reference internal" href="#output">16.3.3.4. Output</a></li>
+<li><a class="reference internal" href="#advanced-usage">16.3.3.5. Advanced Usage</a><ul>
+<li><a class="reference internal" href="#ipv6-maximum-transmission-unit-mtu-and-fragmentation">16.3.3.5.1. IPv6 maximum transmission unit (MTU) and fragmentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#examples">16.3.3.6. Examples</a></li>
+<li><a class="reference internal" href="#troubleshooting">16.3.3.7. Troubleshooting</a><ul>
+<li><a class="reference internal" href="#routing-loops">16.3.3.7.1. Routing loops</a></li>
+<li><a class="reference internal" href="#global-address-leakage">16.3.3.7.2. Global address leakage</a></li>
+<li><a class="reference internal" href="#db8-32-addresses">16.3.3.7.3. 2001:DB8::/32 addresses</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#explicit-congestion-notification-ecn-bits-in-ipv6">Explicit Congestion Notification (ECN) bits in IPv6</a></li>
+<li><a class="reference internal" href="#validation">16.3.4. Validation</a></li>
+<li><a class="reference internal" href="#neighborcache">16.3.5. NeighborCache</a><ul>
+<li><a class="reference internal" href="#id1">16.3.5.1. Usage</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#ipv6queuediscitem">Ipv6QueueDiscItem</a><ul>
-<li><a class="reference internal" href="#host-and-router-behaviour-in-ipv6-and-ns3">Host and Router behaviour in IPv6 and <em>ns-3</em></a></li>
-<li><a class="reference internal" href="#helpers">Helpers</a></li>
-<li><a class="reference internal" href="#attributes">Attributes</a></li>
-<li><a class="reference internal" href="#output">Output</a></li>
-<li><a class="reference internal" href="#advanced-usage">Advanced Usage</a><ul>
-<li><a class="reference internal" href="#ipv6-maximum-transmission-unit-mtu-and-fragmentation">IPv6 maximum transmission unit (MTU) and fragmentation</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#examples">Examples</a></li>
-<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
-<li><a class="reference internal" href="#routing-loops">Routing loops</a></li>
-<li><a class="reference internal" href="#global-address-leakage">Global address leakage</a></li>
-<li><a class="reference internal" href="#db8-32-addresses">2001:DB8::/32 addresses</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#validation">Validation</a></li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="ipv4.html"
-                        title="previous chapter">IPv4</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="routing-overview.html"
-                        title="next chapter">Routing overview</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="ipv4.html"
+                          title="previous chapter"><span class="section-number">16.2. </span>IPv4</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="routing-overview.html"
+                          title="next chapter"><span class="section-number">16.4. </span>Routing overview</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -622,12 +699,12 @@ and the results are positive.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -639,22 +716,23 @@ and the results are positive.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="routing-overview.html" title="Routing overview"
+          <a href="routing-overview.html" title="16.4. Routing overview"
              >next</a> |</li>
         <li class="right" >
-          <a href="ipv4.html" title="IPv4"
+          <a href="ipv4.html" title="16.2. IPv4"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
 
-          <li class="nav-item nav-item-1"><a href="internet-models.html" >Internet Models (IP, TCP, Routing, UDP, Internet Applications)</a><span class="navelem">&nbsp;</span></li> 
+          <li class="nav-item nav-item-1"><a href="internet-models.html" ><span class="section-number">16. </span>Internet Models (IP, TCP, Routing, UDP)</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">16.3. </span>IPv6</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 17:37.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:57.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>CSMA NetDevice &#8212; Model Library</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>10. CSMA NetDevice &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="DSDV Routing" href="dsdv.html" />
-    <link rel="prev" title="Click Modular Router Integration" href="click.html" />
+    <link rel="next" title="11. DSDV Routing" href="dsdv.html" />
+    <link rel="prev" title="9. Click Modular Router Integration" href="click.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Models</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,15 +126,16 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="dsdv.html" title="DSDV Routing"
+          <a href="dsdv.html" title="11. DSDV Routing"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="click.html" title="Click Modular Router Integration"
+          <a href="click.html" title="9. Click Modular Router Integration"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">10. </span>CSMA NetDevice</a></li> 
       </ul>
     </div>  
 
@@ -129,12 +144,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="csma-netdevice">
-<h1>CSMA NetDevice<a class="headerlink" href="#csma-netdevice" title="Permalink to this headline">¶</a></h1>
+  <section id="csma-netdevice">
+<h1><span class="section-number">10. </span>CSMA NetDevice<a class="headerlink" href="#csma-netdevice" title="Link to this heading">¶</a></h1>
 <p>This is the introduction to CSMA NetDevice chapter, to complement the CSMA model
 doxygen.</p>
-<div class="section" id="overview-of-the-csma-model">
-<h2>Overview of the CSMA model<a class="headerlink" href="#overview-of-the-csma-model" title="Permalink to this headline">¶</a></h2>
+<section id="overview-of-the-csma-model">
+<h2><span class="section-number">10.1. </span>Overview of the CSMA model<a class="headerlink" href="#overview-of-the-csma-model" title="Link to this heading">¶</a></h2>
 <p>The <em>ns-3</em> CSMA device models a simple bus network in the spirit of Ethernet.
 Although it does not model any real physical network you could ever build or
 buy, it does provide some very useful functionality.</p>
@@ -146,8 +161,8 @@ nature of the globally available channel to provide instantaneous (faster than
 light) carrier sense and priority-based collision “avoidance.” Collisions in the
 sense of Ethernet never happen and so the <em>ns-3</em> CSMA device does not model
 collision detection, nor will any transmission in progress be “jammed.”</p>
-<div class="section" id="csma-layer-model">
-<h3>CSMA Layer Model<a class="headerlink" href="#csma-layer-model" title="Permalink to this headline">¶</a></h3>
+<section id="csma-layer-model">
+<h3><span class="section-number">10.1.1. </span>CSMA Layer Model<a class="headerlink" href="#csma-layer-model" title="Link to this heading">¶</a></h3>
 <p>There are a number of conventions in use for describing layered communications
 architectures in the literature and in textbooks. The most common layering model
 is the ISO seven layer reference model. In this view the CsmaNetDevice and
@@ -195,10 +210,10 @@ the higher layer (when the net device is attached) using
 CsmaNetDevice::SetReceiveCallback and is invoked upon “proper” reception of a
 packet by the net device in order to forward the packet up
 the protocol stack.</p>
-</div>
-</div>
-<div class="section" id="csma-channel-model">
-<h2>CSMA Channel Model<a class="headerlink" href="#csma-channel-model" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="csma-channel-model">
+<h2><span class="section-number">10.2. </span>CSMA Channel Model<a class="headerlink" href="#csma-channel-model" title="Link to this heading">¶</a></h2>
 <p>The class CsmaChannel models the actual transmission medium. There is no fixed
 limit for the number of devices connected to the channel. The CsmaChannel models
 a data rate and a speed-of-light delay which can be accessed via the attributes
@@ -224,7 +239,7 @@ serialized by the simulator. This provides a deterministic mechanism for
 contending for the channel. The channel is allocated (transitioned from state
 <code class="docutils literal notranslate"><span class="pre">IDLE</span></code> to state <code class="docutils literal notranslate"><span class="pre">TRANSMITTING</span></code>) on a first-come first-served basis.
 The channel always goes through a three state process:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">IDLE</span> <span class="o">-&gt;</span> <span class="n">TRANSMITTING</span> <span class="o">-&gt;</span> <span class="n">PROPAGATING</span> <span class="o">-&gt;</span> <span class="n">IDLE</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">IDLE</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">TRANSMITTING</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">PROPAGATING</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">IDLE</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">TRANSMITTING</span></code> state models the time during which the source net device is
@@ -254,9 +269,9 @@ it receives a packet broadcast over the channel.</p>
 <li><p>DataRate:  The bitrate for packet transmission on connected devices;</p></li>
 <li><p>Delay: The speed of light transmission delay for the channel.</p></li>
 </ul>
-</div>
-<div class="section" id="csma-net-device-model">
-<h2>CSMA Net Device Model<a class="headerlink" href="#csma-net-device-model" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="csma-net-device-model">
+<h2><span class="section-number">10.3. </span>CSMA Net Device Model<a class="headerlink" href="#csma-net-device-model" title="Link to this heading">¶</a></h2>
 <p>The CSMA network device appears somewhat like an Ethernet device. The
 CsmaNetDevice provides following Attributes:</p>
 <ul class="simple">
@@ -300,9 +315,9 @@ executed if the channel is determined to be busy (<code class="docutils literal 
 <code class="docutils literal notranslate"><span class="pre">PPROPAGATING</span></code>) when the device wants to start propagating. This results in a
 random delay of up to pow (2, retries) - 1 microseconds before a retry is
 attempted. The default maximum number of retries is 1000.</p>
-</div>
-<div class="section" id="using-the-csmanetdevice">
-<h2>Using the CsmaNetDevice<a class="headerlink" href="#using-the-csmanetdevice" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="using-the-csmanetdevice">
+<h2><span class="section-number">10.4. </span>Using the CsmaNetDevice<a class="headerlink" href="#using-the-csmanetdevice" title="Link to this heading">¶</a></h2>
 <p>The CSMA net devices and channels are typically created and configured using the
 associated <code class="docutils literal notranslate"><span class="pre">CsmaHelper</span></code> object.  The various <em>ns-3</em> device helpers generally
 work in a similar way, and their use is seen in many of our example programs.</p>
@@ -310,25 +325,25 @@ work in a similar way, and their use is seen in many of our example programs.</p
 you plug net devices. The bare computers are created using a <code class="docutils literal notranslate"><span class="pre">NodeContainer</span></code>
 helper. You just ask this helper to create as many computers (we call them
 <code class="docutils literal notranslate"><span class="pre">Nodes</span></code>) as you need on your network:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span> <span class="n">csmaNodes</span><span class="p">;</span>
-<span class="n">csmaNodes</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="n">nCsmaNodes</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">csmaNodes</span><span class="p">;</span>
+<span class="n">csmaNodes</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">nCsmaNodes</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Once you have your nodes, you need to instantiate a <code class="docutils literal notranslate"><span class="pre">CsmaHelper</span></code> and set any
 attributes you may want to change.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CsmaHelper</span> <span class="n">csma</span><span class="p">;</span>
-<span class="n">csma</span><span class="p">.</span><span class="n">SetChannelAttribute</span> <span class="p">(</span><span class="s">&quot;DataRate&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;100Mbps&quot;</span><span class="p">));</span>
-<span class="n">csma</span><span class="p">.</span><span class="n">SetChannelAttribute</span> <span class="p">(</span><span class="s">&quot;Delay&quot;</span><span class="p">,</span> <span class="n">TimeValue</span> <span class="p">(</span><span class="n">NanoSeconds</span> <span class="p">(</span><span class="mi">6560</span><span class="p">)));</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CsmaHelper</span><span class="w"> </span><span class="n">csma</span><span class="p">;</span>
+<span class="n">csma</span><span class="p">.</span><span class="n">SetChannelAttribute</span><span class="p">(</span><span class="s">&quot;DataRate&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">StringValue</span><span class="p">(</span><span class="s">&quot;100Mbps&quot;</span><span class="p">));</span>
+<span class="n">csma</span><span class="p">.</span><span class="n">SetChannelAttribute</span><span class="p">(</span><span class="s">&quot;Delay&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TimeValue</span><span class="p">(</span><span class="n">NanoSeconds</span><span class="p">(</span><span class="mi">6560</span><span class="p">)));</span>
 
-<span class="n">csma</span><span class="p">.</span><span class="n">SetDeviceAttribute</span> <span class="p">(</span><span class="s">&quot;EncapsulationMode&quot;</span><span class="p">,</span> <span class="n">StringValue</span> <span class="p">(</span><span class="s">&quot;Dix&quot;</span><span class="p">));</span>
-<span class="n">csma</span><span class="p">.</span><span class="n">SetDeviceAttribute</span> <span class="p">(</span><span class="s">&quot;FrameSize&quot;</span><span class="p">,</span> <span class="n">UintegerValue</span> <span class="p">(</span><span class="mi">2000</span><span class="p">));</span>
+<span class="n">csma</span><span class="p">.</span><span class="n">SetDeviceAttribute</span><span class="p">(</span><span class="s">&quot;EncapsulationMode&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">StringValue</span><span class="p">(</span><span class="s">&quot;Dix&quot;</span><span class="p">));</span>
+<span class="n">csma</span><span class="p">.</span><span class="n">SetDeviceAttribute</span><span class="p">(</span><span class="s">&quot;FrameSize&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">UintegerValue</span><span class="p">(</span><span class="mi">2000</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>Once the attributes are set, all that remains is to create the devices and
 install them on the required nodes, and to connect the devices together using a
 CSMA channel. When we create the net devices, we add them to a container to
 allow you to use them in the future. This all takes just one line of code.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NetDeviceContainer</span> <span class="n">csmaDevices</span> <span class="o">=</span> <span class="n">csma</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">csmaNodes</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">csmaDevices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">csma</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">csmaNodes</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>We recommend thinking carefully about changing these Attributes, since
@@ -367,15 +382,15 @@ however it is quite easy for you to configure.</p>
 <p>Be careful about assumptions regarding what CSMA is actually modelling and
 how configuration (Attributes) may allow you to swerve considerably away
 from reality.</p>
-</div>
-<div class="section" id="csma-tracing">
-<h2>CSMA Tracing<a class="headerlink" href="#csma-tracing" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="csma-tracing">
+<h2><span class="section-number">10.5. </span>CSMA Tracing<a class="headerlink" href="#csma-tracing" title="Link to this heading">¶</a></h2>
 <p>Like all <em>ns-3</em> devices, the CSMA Model provides a number of trace sources.
 These trace sources can be hooked using your own custom trace code, or you can
 use our helper functions to arrange for tracing to be enabled on devices you
 specify.</p>
-<div class="section" id="upper-level-mac-hooks">
-<h3>Upper-Level (MAC) Hooks<a class="headerlink" href="#upper-level-mac-hooks" title="Permalink to this headline">¶</a></h3>
+<section id="upper-level-mac-hooks">
+<h3><span class="section-number">10.5.1. </span>Upper-Level (MAC) Hooks<a class="headerlink" href="#upper-level-mac-hooks" title="Link to this heading">¶</a></h3>
 <p>From the point of view of tracing in the net device, there are several
 interesting points to insert trace hooks. A convention inherited from other
 simulators is that packets destined for transmission onto attached networks pass
@@ -415,9 +430,9 @@ event. The m_traceDrop event is, by definition, fired when a packet cannot be
 enqueued on the transmit queue because it is full. This event only fires if the
 queue is full and we do not overload this event to indicate that the CsmaChannel
 is “full.”</p>
-</div>
-<div class="section" id="lower-level-phy-hooks">
-<h3>Lower-Level (PHY) Hooks<a class="headerlink" href="#lower-level-phy-hooks" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="lower-level-phy-hooks">
+<h3><span class="section-number">10.5.2. </span>Lower-Level (PHY) Hooks<a class="headerlink" href="#lower-level-phy-hooks" title="Link to this heading">¶</a></h3>
 <p>Similar to the upper level trace hooks, there are trace hooks available at the
 lower levels of the net device. We call these the PHY hooks. These events fire
 from the device methods that talk directly to the CsmaChannel.</p>
@@ -432,10 +447,10 @@ associated attribute “ReceiveErrorModel”).</p>
 CsmaNetDevice::m_rxTrace). A packet is accepted if it is destined for the
 broadcast address, a multicast address, or to the MAC address assigned to the
 net device.</p>
-</div>
-</div>
-<div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="summary">
+<h2><span class="section-number">10.6. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading">¶</a></h2>
 <p>The ns3 CSMA model is a simplistic model of an Ethernet-like network.  It
 supports a Carrier-Sense function and allows for Multiple Access to a
 shared medium.  It is not physical in the sense that the state of the
@@ -455,41 +470,48 @@ tracing; and also a set of lower level hooks used in pcap tracing.</p>
 network you could build or buy, it does provide us with some useful
 functionality.  You should, however, understand that it is explicitly not
 Ethernet or any flavor of IEEE 802.3 but an interesting subset.</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">CSMA NetDevice</a><ul>
-<li><a class="reference internal" href="#overview-of-the-csma-model">Overview of the CSMA model</a><ul>
-<li><a class="reference internal" href="#csma-layer-model">CSMA Layer Model</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">10. CSMA NetDevice</a><ul>
+<li><a class="reference internal" href="#overview-of-the-csma-model">10.1. Overview of the CSMA model</a><ul>
+<li><a class="reference internal" href="#csma-layer-model">10.1.1. CSMA Layer Model</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#csma-channel-model">CSMA Channel Model</a></li>
-<li><a class="reference internal" href="#csma-net-device-model">CSMA Net Device Model</a></li>
-<li><a class="reference internal" href="#using-the-csmanetdevice">Using the CsmaNetDevice</a></li>
-<li><a class="reference internal" href="#csma-tracing">CSMA Tracing</a><ul>
-<li><a class="reference internal" href="#upper-level-mac-hooks">Upper-Level (MAC) Hooks</a></li>
-<li><a class="reference internal" href="#lower-level-phy-hooks">Lower-Level (PHY) Hooks</a></li>
+<li><a class="reference internal" href="#csma-channel-model">10.2. CSMA Channel Model</a></li>
+<li><a class="reference internal" href="#csma-net-device-model">10.3. CSMA Net Device Model</a></li>
+<li><a class="reference internal" href="#using-the-csmanetdevice">10.4. Using the CsmaNetDevice</a></li>
+<li><a class="reference internal" href="#csma-tracing">10.5. CSMA Tracing</a><ul>
+<li><a class="reference internal" href="#upper-level-mac-hooks">10.5.1. Upper-Level (MAC) Hooks</a></li>
+<li><a class="reference internal" href="#lower-level-phy-hooks">10.5.2. Lower-Level (PHY) Hooks</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#summary">Summary</a></li>
+<li><a class="reference internal" href="#summary">10.6. Summary</a></li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="click.html"
-                        title="previous chapter">Click Modular Router Integration</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="dsdv.html"
-                        title="next chapter">DSDV Routing</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="click.html"
+                          title="previous chapter"><span class="section-number">9. </span>Click Modular Router Integration</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="dsdv.html"
+                          title="next chapter"><span class="section-number">11. </span>DSDV Routing</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -501,12 +523,12 @@ Ethernet or any flavor of IEEE 802.3 but an interesting subset.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -518,21 +540,22 @@ Ethernet or any flavor of IEEE 802.3 but an interesting subset.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="dsdv.html" title="DSDV Routing"
+          <a href="dsdv.html" title="11. DSDV Routing"
              >next</a> |</li>
         <li class="right" >
-          <a href="click.html" title="Click Modular Router Integration"
+          <a href="click.html" title="9. Click Modular Router Integration"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">10. </span>CSMA NetDevice</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 17:37.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:57.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

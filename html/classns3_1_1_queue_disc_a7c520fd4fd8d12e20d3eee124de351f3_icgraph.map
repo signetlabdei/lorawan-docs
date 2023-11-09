@@ -1,9 +1,0 @@
-<map id="ns3::QueueDisc::DropAfterDequeue" name="ns3::QueueDisc::DropAfterDequeue">
-<area shape="rect" id="node1" title="Perform the actions required when the queue disc is notified of a packet dropped after dequeue." alt="" coords="481,122,675,163"/>
-<area shape="rect" id="node2" href="$classns3_1_1_queue_disc.html#a37a858c1d430e3b11cf289c493426d11" title="Constructor." alt="" coords="232,5,433,32"/>
-<area shape="rect" id="node3" href="$classns3_1_1_cobalt_queue_disc.html#a1c62d3ba0ac9ff28b4779337ef0c36f7" title="This function actually extracts a packet from the queue disc." alt="" coords="250,57,415,98"/>
-<area shape="rect" id="node4" href="$classns3_1_1_co_del_queue_disc.html#a6128cb8655b87b67f04424c68058e751" title="Remove a packet from queue based on the current state If we are in dropping state,..." alt="" coords="251,122,414,163"/>
-<area shape="rect" id="node5" href="$class_test_child_queue_disc.html#ae498d799c4ead8dd870d589d0ac04544" title="This function actually extracts a packet from the queue disc." alt="" coords="257,187,408,229"/>
-<area shape="rect" id="node6" href="$classns3_1_1_fq_co_del_queue_disc.html#a81c4f704aadd923d9ca96c5224d10f6d" title="Drop a packet from the head of the queue with the largest current byte count." alt="" coords="243,253,422,294"/>
-<area shape="rect" id="node7" href="$classns3_1_1_fq_co_del_queue_disc.html#a9763ff304b86d8c3d2f951d20e102d0a" title="This function actually enqueues a packet into the queue disc." alt="" coords="5,253,184,294"/>
-</map>

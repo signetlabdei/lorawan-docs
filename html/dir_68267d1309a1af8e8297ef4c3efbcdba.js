@@ -42,8 +42,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "uan", "dir_d0a70199355efd62843e48a9530b6bf9.html", "dir_d0a70199355efd62843e48a9530b6bf9" ],
     [ "virtual-net-device", "dir_7f27883ca3c26b5e5833ae5c82fc255e.html", "dir_7f27883ca3c26b5e5833ae5c82fc255e" ],
     [ "visualizer", "dir_ba77f8dab2f3b5b8a1cbb129ed9c63cb.html", "dir_ba77f8dab2f3b5b8a1cbb129ed9c63cb" ],
-    [ "wave", "dir_b33674de6843d4cf63b42f6a7e6012fb.html", "dir_b33674de6843d4cf63b42f6a7e6012fb" ],
     [ "wifi", "dir_9bb89822448514d94fe3e213d3ac83be.html", "dir_9bb89822448514d94fe3e213d3ac83be" ],
-    [ "wimax", "dir_81cc003b30758dae13caa0a9a27e4771.html", "dir_81cc003b30758dae13caa0a9a27e4771" ],
-    [ "create-module.py", "create-module_8py.html", "create-module_8py" ]
+    [ "wimax", "dir_81cc003b30758dae13caa0a9a27e4771.html", "dir_81cc003b30758dae13caa0a9a27e4771" ]
 ];

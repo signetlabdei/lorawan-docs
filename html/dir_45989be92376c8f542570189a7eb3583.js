@@ -1,28 +1,15 @@
 var dir_45989be92376c8f542570189a7eb3583 =
 [
-    [ "athstats-helper.cc", "athstats-helper_8cc.html", null ],
-    [ "athstats-helper.h", "athstats-helper_8h.html", [
-      [ "AthstatsHelper", "classns3_1_1_athstats_helper.html", "classns3_1_1_athstats_helper" ],
-      [ "AthstatsWifiTraceSink", "classns3_1_1_athstats_wifi_trace_sink.html", "classns3_1_1_athstats_wifi_trace_sink" ]
-    ] ],
-    [ "spectrum-wifi-helper.cc", "spectrum-wifi-helper_8cc.html", null ],
-    [ "spectrum-wifi-helper.h", "spectrum-wifi-helper_8h.html", [
-      [ "SpectrumWifiPhyHelper", "classns3_1_1_spectrum_wifi_phy_helper.html", "classns3_1_1_spectrum_wifi_phy_helper" ]
-    ] ],
-    [ "wifi-helper.cc", "wifi-helper_8cc.html", "wifi-helper_8cc" ],
-    [ "wifi-helper.h", "wifi-helper_8h.html", [
-      [ "WifiHelper", "classns3_1_1_wifi_helper.html", "classns3_1_1_wifi_helper" ],
-      [ "WifiPhyHelper", "classns3_1_1_wifi_phy_helper.html", "classns3_1_1_wifi_phy_helper" ]
-    ] ],
-    [ "wifi-mac-helper.cc", "wifi-mac-helper_8cc.html", null ],
-    [ "wifi-mac-helper.h", "wifi-mac-helper_8h.html", [
-      [ "WifiMacHelper", "classns3_1_1_wifi_mac_helper.html", "classns3_1_1_wifi_mac_helper" ]
-    ] ],
-    [ "wifi-radio-energy-model-helper.cc", "wifi-radio-energy-model-helper_8cc.html", null ],
-    [ "wifi-radio-energy-model-helper.h", "wifi-radio-energy-model-helper_8h.html", null ],
-    [ "yans-wifi-helper.cc", "yans-wifi-helper_8cc.html", null ],
-    [ "yans-wifi-helper.h", "yans-wifi-helper_8h.html", [
-      [ "YansWifiChannelHelper", "classns3_1_1_yans_wifi_channel_helper.html", "classns3_1_1_yans_wifi_channel_helper" ],
-      [ "YansWifiPhyHelper", "classns3_1_1_yans_wifi_phy_helper.html", "classns3_1_1_yans_wifi_phy_helper" ]
-    ] ]
+    [ "athstats-helper.cc", "de/d5f/athstats-helper_8cc.html", null ],
+    [ "athstats-helper.h", "d3/ddc/athstats-helper_8h.html", "d3/ddc/athstats-helper_8h" ],
+    [ "spectrum-wifi-helper.cc", "dd/d68/spectrum-wifi-helper_8cc.html", null ],
+    [ "spectrum-wifi-helper.h", "d2/d26/spectrum-wifi-helper_8h.html", "d2/d26/spectrum-wifi-helper_8h" ],
+    [ "wifi-helper.cc", "d9/d6b/wifi-helper_8cc.html", "d9/d6b/wifi-helper_8cc" ],
+    [ "wifi-helper.h", "d5/da8/wifi-helper_8h.html", "d5/da8/wifi-helper_8h" ],
+    [ "wifi-mac-helper.cc", "d8/da4/wifi-mac-helper_8cc.html", null ],
+    [ "wifi-mac-helper.h", "d2/dc7/wifi-mac-helper_8h.html", "d2/dc7/wifi-mac-helper_8h" ],
+    [ "wifi-radio-energy-model-helper.cc", "d8/d5c/wifi-radio-energy-model-helper_8cc.html", null ],
+    [ "wifi-radio-energy-model-helper.h", "d0/d3e/wifi-radio-energy-model-helper_8h.html", null ],
+    [ "yans-wifi-helper.cc", "d8/ddb/yans-wifi-helper_8cc.html", null ],
+    [ "yans-wifi-helper.h", "d2/dd5/yans-wifi-helper_8h.html", "d2/dd5/yans-wifi-helper_8h" ]
 ];

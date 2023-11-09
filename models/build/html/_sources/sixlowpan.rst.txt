@@ -7,7 +7,8 @@
 
 This chapter describes the implementation of |ns3| model for the
 compression of IPv6 packets over IEEE 802.15.4-Based Networks
-as specified by :rfc:`4944` ([RFC4944]_) and :rfc:`6282` ([RFC6282]_).
+as specified by :rfc:`4944` ("Transmission of IPv6 Packets over IEEE 802.15.4 Networks")
+and :rfc:`6282` ("Compression Format for IPv6 Datagrams over IEEE 802.15.4-Based Networks").
 
 Model Description
 *****************
@@ -22,16 +23,15 @@ standpoint, as it does extend it beyond the original scope by supporting also
 other kinds of networks.
 
 Other than that, the module strictly follows :rfc:`4944` and :rfc:`6282`, with the
-following exceptions:
-
-* HC2 encoding is not supported
-* IPHC's SAC and DAC are not supported
-
-The HC2 encoding is not supported, as it has been superseded by IPHC and NHC
+exception that HC2 encoding is not supported, as it has been superseded by IPHC and NHC
 compression type (\ :rfc:`6282`).
 
-IPHC SAC and DAC are not yet supported, as they do require :rfc:`6775` ([RFC6775]_) for full
-compliance. It is planned to support them in the future.
+IPHC sateful (context-based) compression is supported but, since :rfc:`6775`
+("Neighbor Discovery Optimization for IPv6 over Low-Power Wireless Personal Area Networks (6LoWPANs)")
+is not yet implemented, it is necessary to add the context to the nodes manually.
+
+This is possible though the ``SixLowPanHelper::AddContext`` function.
+Mind that installing different contexts in different nodes will lead to decompression failures.
 
 NetDevice
 #########
@@ -47,7 +47,7 @@ GetMtu behaviour. It will always return *at least* 1280 bytes, as is the minimum
 The module does provide some attributes and some tracesources.
 The attributes are:
 
-* :rfc:`6282` (boolean, default true), used to activate HC1 (:rfc:`4944`) or IPHC (:rfc:`6282`) compression.
+* Rfc6282 (boolean, default true), used to activate HC1 (:rfc:`4944`) or IPHC (:rfc:`6282`) compression.
 * OmitUdpChecksum (boolean, default true), used to activate UDP checksum compression in IPHC.
 * FragmentReassemblyListSize (integer, default 0), indicating the number of packets that can be reassembled at the same time. If the limit is reached, the oldest packet is discarded. Zero means infinite.
 * FragmentExpirationTimeout (Time, default 60 seconds), being the timeout to wait for further fragments before discarding a partial packet.
@@ -112,13 +112,40 @@ attribute.
 Scope and Limitations
 =====================
 
+Context-based compression
+#########################
+
+IPHC sateful (context-based) compression is supported but, since :rfc:`6775`
+("Neighbor Discovery Optimization for IPv6 over Low-Power Wireless Personal Area Networks (6LoWPANs)")
+is not yet implemented, it is necessary to add the context to the nodes manually.
+
+6LoWPAM-ND
+##########
+
 Future versions of this module will support :rfc:`6775`, however no timeframe is guaranteed.
+
+Mesh-under routing
+##################
 
 It would be a good idea to improve the mesh-under flooding by providing the following:
 
 * Adaptive hop-limit calculation,
 * Adaptive forwarding jitter,
 * Use of direct (non mesh) transmission for packets directed to 1-hop neighbors.
+
+Mixing compression types in a PAN
+#################################
+
+The IPv6/MAC addressing scheme defined in :rfc:`6282` and :rfc:`4944` is different.
+One adds the PanId in the pseudo-MAC address (4944) and the other doesn't (6282).
+
+The expected use cases (confirmed by the RFC editor) is to *never* have a mixed environment
+where part of the nodes are using HC1 and part IPHC because this would lead to confusion on
+what the IPv6 address of a node is.
+
+Due to this, the nodes configured to use IPHC will drop the packets compressed with HC1
+and vice-versa. The drop is logged in the drop trace as ``DROP_DISALLOWED_COMPRESSION``.
+
 
 Using 6LoWPAN with IPv4 (or other L3 protocols)
 ###############################################
@@ -138,9 +165,6 @@ not been tested.
 References
 ==========
 
-.. [RFC4944] :rfc:`4944`, "Transmission of IPv6 Packets over IEEE 802.15.4 Networks"
-.. [RFC6282] :rfc:`6282`, "Compression Format for IPv6 Datagrams over IEEE 802.15.4-Based Networks"
-.. [RFC6775] :rfc:`6775`, "Neighbor Discovery Optimization for IPv6 over Low-Power Wireless Personal Area Networks (6LoWPANs)"
 .. [IANA802] IANA, assigned IEEE 802 numbers: http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xml
 .. [Ethertype] IEEE Ethertype numbers: http://standards.ieee.org/develop/regauth/ethertype/eth.txt
 .. [Shelby] Z. Shelby and C. Bormann, 6LoWPAN: The Wireless Embedded Internet. Wiley, 2011. [Online]. Available: https://books.google.it/books?id=3Nm7ZCxscMQC

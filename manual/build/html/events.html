@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>Events and Simulator &#8212; Manual</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2.1. Events and Simulator &#8212; Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Callbacks" href="callbacks.html" />
-    <link rel="prev" title="Hash Functions" href="hash-functions.html" />
+    <link rel="next" title="2.2. Callbacks" href="callbacks.html" />
+    <link rel="prev" title="2. Simulator" href="simulator.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Manual</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Manual</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,15 +126,17 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="callbacks.html" title="Callbacks"
+          <a href="callbacks.html" title="2.2. Callbacks"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="hash-functions.html" title="Hash Functions"
+          <a href="simulator.html" title="2. Simulator"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
- 
+
+          <li class="nav-item nav-item-1"><a href="simulator.html" accesskey="U"><span class="section-number">2. </span>Simulator</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">2.1. </span>Events and Simulator</a></li> 
       </ul>
     </div>  
 
@@ -129,8 +145,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="events-and-simulator">
-<h1>Events and Simulator<a class="headerlink" href="#events-and-simulator" title="Permalink to this headline">¶</a></h1>
+  <section id="events-and-simulator">
+<h1><span class="section-number">2.1. </span>Events and Simulator<a class="headerlink" href="#events-and-simulator" title="Link to this heading">¶</a></h1>
 <p><em>ns-3</em> is a discrete-event network simulator.  Conceptually, the simulator
 keeps track of a number of events that are scheduled to execute at a
 specified simulation time.  The job of the simulator is to execute the
@@ -151,12 +167,12 @@ stored and that can manage the execution of events</p></li>
 </ol>
 <p>This chapter of the manual describes these fundamental objects
 (simulator, scheduler, time, event) and how they are used.</p>
-<div class="section" id="event">
-<h2>Event<a class="headerlink" href="#event" title="Permalink to this headline">¶</a></h2>
+<section id="event">
+<h2><span class="section-number">2.1.1. </span>Event<a class="headerlink" href="#event" title="Link to this heading">¶</a></h2>
 <p><em>To be completed</em></p>
-</div>
-<div class="section" id="simulator">
-<h2>Simulator<a class="headerlink" href="#simulator" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="simulator">
+<h2><span class="section-number">2.1.2. </span>Simulator<a class="headerlink" href="#simulator" title="Link to this heading">¶</a></h2>
 <p>The Simulator class is the public entry point to access event scheduling
 facilities. Once a couple of events have been scheduled to start the
 simulation, the user can start to execute them by entering the simulator
@@ -174,13 +190,13 @@ automatically the wide variety of C++ event handler signatures used in
 the wild. For example, to schedule an event to execute 10 seconds in the
 future, and invoke a C++ method or function with specific arguments, you
 might write this:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">handler</span> <span class="p">(</span><span class="kt">int</span> <span class="n">arg0</span><span class="p">,</span> <span class="kt">int</span> <span class="n">arg1</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">handler</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">arg0</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">arg1</span><span class="p">)</span>
 <span class="p">{</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;handler called with argument arg0=&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">arg0</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; and</span>
-     <span class="n">arg1</span><span class="o">=</span><span class="s">&quot; &lt;&lt; arg1 &lt;&lt; std::endl;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;handler called with argument arg0=&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">arg0</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; and</span>
+<span class="w">     </span><span class="n">arg1</span><span class="o">=</span><span class="s">&quot; &lt;&lt; arg1 &lt;&lt; std::endl;</span>
 <span class="p">}</span>
 
-<span class="n">Simulator</span><span class="o">::</span><span class="n">Schedule</span><span class="p">(</span><span class="n">Seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">handler</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+<span class="n">Simulator</span><span class="o">::</span><span class="n">Schedule</span><span class="p">(</span><span class="n">Seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span><span class="w"> </span><span class="o">&amp;</span><span class="n">handler</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Which will output:</p>
@@ -192,7 +208,7 @@ methods on C++ objects:</p>
 <p><em>To be completed:  member method example</em></p>
 <p>Notes:</p>
 <ul class="simple">
-<li><p>the ns-3 Schedule methods recognize automatically functions and
+<li><p>the <em>ns-3</em> Schedule methods recognize automatically functions and
 methods only if they take less than 5 arguments. If you need them to
 support more arguments, please, file a bug report.</p></li>
 <li><p>Readers familiar with the term ‘fully-bound functors’ will recognize
@@ -223,15 +239,15 @@ method.</p></li>
 </ol>
 <p>There are two basic ways to schedule events, with and without <em>context</em>.
 What does this mean?</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Simulator</span><span class="o">::</span><span class="n">Schedule</span> <span class="p">(</span><span class="n">Time</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">time</span><span class="p">,</span> <span class="n">MEM</span> <span class="n">mem_ptr</span><span class="p">,</span> <span class="n">OBJ</span> <span class="n">obj</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Simulator</span><span class="o">::</span><span class="n">Schedule</span><span class="p">(</span><span class="n">Time</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">MEM</span><span class="w"> </span><span class="n">mem_ptr</span><span class="p">,</span><span class="w"> </span><span class="n">OBJ</span><span class="w"> </span><span class="n">obj</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>vs.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Simulator</span><span class="o">::</span><span class="n">ScheduleWithContext</span> <span class="p">(</span><span class="kt">uint32_t</span> <span class="n">context</span><span class="p">,</span> <span class="n">Time</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">time</span><span class="p">,</span> <span class="n">MEM</span> <span class="n">mem_ptr</span><span class="p">,</span> <span class="n">OBJ</span> <span class="n">obj</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Simulator</span><span class="o">::</span><span class="n">ScheduleWithContext</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">Time</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">MEM</span><span class="w"> </span><span class="n">mem_ptr</span><span class="p">,</span><span class="w"> </span><span class="n">OBJ</span><span class="w"> </span><span class="n">obj</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Readers who invest time and effort in developing or using a non-trivial
-simulation model will know the value of the ns-3 logging framework to
+simulation model will know the value of the <em>ns-3</em> logging framework to
 debug simple and complex simulations alike. One of the important
 features that is provided by this logging framework is the automatic
 display of the network node id associated with the ‘currently’ running
@@ -271,7 +287,7 @@ network-level events.</p>
 <li><p>Users need to be careful to propagate DoInitialize methods across objects
 by calling Initialize explicitly on their member objects</p></li>
 <li><p>The context id associated with each ScheduleWithContext method has
-other uses beyond logging: it is used by an experimental branch of ns-3
+other uses beyond logging: it is used by an experimental branch of <em>ns-3</em>
 to perform parallel simulation on multicore systems using
 multithreading.</p></li>
 </ul>
@@ -280,46 +296,226 @@ merely make sure that whatever context you specify with
 ScheduleWithContext is available when the corresponding event executes
 with ::GetContext.</p>
 <p>It is up to the models implemented on top of Simulator::* to interpret
-the context value. In ns-3, the network models interpret the context
+the context value. In <em>ns-3</em>, the network models interpret the context
 as the node id of the node which generated an event. This is why it is
 important to call ScheduleWithContext in ns3::Channel subclasses
 because we are generating an event from node i to node j and we want
 to make sure that the event which will run on node j has the right
 context.</p>
+<section id="available-simulator-engines">
+<h3><span class="section-number">2.1.2.1. </span>Available Simulator Engines<a class="headerlink" href="#available-simulator-engines" title="Link to this heading">¶</a></h3>
+<p><em>ns-3</em> supplies two different types of basic simulator engine to manage
+event execution.  These are derived from the abstract base class <cite>SimulatorImpl</cite>:</p>
+<ul class="simple">
+<li><p><cite>DefaultSimulatorImpl</cite>  This is a classic sequential discrete event
+simulator engine which uses a single thread of execution.  This engine
+executes events as fast as possible.</p></li>
+<li><p><cite>DistributedSimulatorImpl</cite> This is a classic YAWNS distributed (“parallel”)
+simulator engine. By labeling and instantiating your model components
+appropriately this engine will execute the model in parallel across many
+compute processes, yet in a time-synchronized way, as if the model had
+executed sequentially. The two advantages are to execute models faster
+and to execute models too large to fit in one compute node.  This engine also
+attempts to execute as fast as possible.</p></li>
+<li><p><cite>NullMessageSimulatorImpl</cite>  This implements a variant of the Chandy-
+Misra-Bryant (CMB) null message algorithm for parallel simulation.
+Like <cite>DistributedSimulatorImpl</cite> this requires appropriate labeling and
+instantiation of model components. This engine attempts to execute
+events as fast as possible.</p></li>
+</ul>
+<p>You can choose which simulator engine to use by setting a global variable,
+for example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">GlobalValue</span><span class="o">::</span><span class="n">Bind</span><span class="p">(</span><span class="s">&quot;SimulatorImplementationType&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="n">StringValue</span><span class="p">(</span><span class="s">&quot;ns3::DistributedSimulatorImpl&quot;</span><span class="p">));</span>
+</pre></div>
 </div>
-<div class="section" id="time">
-<h2>Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h2>
-<p><em>To be completed</em></p>
+<p>or by using a command line argument</p>
+<div class="highlight-terminal notranslate"><div class="highlight"><pre><span></span>$ ./ns3 run &quot;...  -–SimulatorImplementationType=ns3::DistributedSimulatorImpl&quot;
+</pre></div>
 </div>
-<div class="section" id="scheduler">
-<h2>Scheduler<a class="headerlink" href="#scheduler" title="Permalink to this headline">¶</a></h2>
-<p><em>To be completed</em></p>
+<p>In addition to the basic simulator engines there is a general facility used
+to build “adapters” which provide small behavior modifications to one of
+the core <cite>SimulatorImpl</cite> engines.  The adapter base class is
+<cite>SimulatorAdapter</cite>, itself derived from <cite>SimulatorImpl</cite>.  <cite>SimluatorAdapter</cite>
+uses the <a class="reference external" href="https://en.cppreference.com/w/cpp/language/pimpl">PIMPL (pointer to implementation)</a>
+idiom to forward all calls to the configured base simulator engine.
+This makes it easy to provide small customizations
+just by overriding the specific Simulator calls needed, and allowing
+<cite>SimulatorAdapter</cite> to handle the rest.</p>
+<p>There are few places where adapters are used currently:</p>
+<ul class="simple">
+<li><p><cite>ReadltimeSimulatorImpl</cite>  This adapter attempts to execute in real time
+by pacing the wall clock evolution.  This pacing is “best effort”,
+meaning actual event execution may not occur exactly in sync, but
+close to it. This engine is normally only used with the
+<cite>DefaultSimulatorImpl</cite>, but it can be used to keep a distributed
+simulation synchronized with real time.  See the <a class="reference internal" href="realtime.html"><span class="doc">RealTime</span></a> chapter.</p></li>
+<li><p><cite>VisualSimulatorImpl</cite>  This adapter starts a live visualization of the
+running simulation, showing the network graph and each packet traversing
+the links.</p></li>
+<li><p><cite>LocalTimeSimulatorImpl</cite>  This adapter enables attaching noisy local clocks
+to <cite>Nodes</cite>, then scheduling events with respect to the local noisy clock,
+instead of relative to the true simulator time.</p></li>
+</ul>
+<p>In addition to the PIMPL idiom of <cite>SimulatorAdapter</cite> there is a special
+per-event customization hook:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SimulatorImpl</span><span class="o">::</span><span class="n">PreEventHook</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">EventId</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">id</span><span class="p">)</span>
+</pre></div>
 </div>
+<p>One can use this to perform any housekeeping actions before the next event
+actually executes.</p>
+<p>The distinction between a core engine and an adapter is the following: there
+can only ever be one core engine running, while there can be several adapters
+chained up each providing a variation on the base engine execution.
+For example one can use noisy local clocks with the real time adapter.</p>
+<p>A single adapter can be added on top of the <cite>DefaultSimulatorImpl</cite> by the same
+two methods above: binding the <cite>“SimulatorImplementationType”</cite> global value or
+using the command line argument.  To chain multiple adapters a different
+approach must be used; see the <cite>SimulatorAdapter::AddAdapter()</cite>
+API documentation.</p>
+<p>The simulator engine type can be set once, but must be set before the
+first call to the <cite>Simulator()</cite> API.  In practice, since some models have
+to schedule their start up events when they are constructed, this means
+generally you should set the engine type before instantiating any other
+model components.</p>
+<p>The engine type can be changed after <cite>Simulator::Destroy()</cite> but before
+any additional calls to the Simulator API, for instance when executing
+multiple runs in a single <em>ns-3</em> invocation.</p>
+</section>
+</section>
+<section id="time">
+<h2><span class="section-number">2.1.3. </span>Time<a class="headerlink" href="#time" title="Link to this heading">¶</a></h2>
+<p><em>ns-3</em> internally represents simulation times and durations as
+64-bit signed integers (with the sign bit used for negative durations).
+The time values are interpreted with respect to a “resolution” unit in the
+customary SI units: fs, ps, ns, us, ms, s, min, h, d, y.
+The unit defines the minimum Time value.
+It can be changed once before any calls to <cite>Simulator::Run()</cite>.
+It is not stored with the 64-bit time value itself.</p>
+<p>Times can be constructed from all standard numeric types
+(using the configured default unit)
+or with explicit units (as in <cite>Time MicroSeconds (uint64_t value)</cite>).
+Times can be compared, tested for sign or equality to zero, rounded to
+a given unit, converted to standard numeric types in specific units.
+All basic arithmetic operations are supported
+(addition, subtraction, multiplication or division
+by a scalar (numeric value)). Times can be written to/read from IO streams.
+In the case of writing it is easy to choose the output unit, different
+from the resolution unit.</p>
+</section>
+<section id="scheduler">
+<h2><span class="section-number">2.1.4. </span>Scheduler<a class="headerlink" href="#scheduler" title="Link to this heading">¶</a></h2>
+<p>The main job of the <cite>Scheduler</cite> classes is to maintain the priority queue of
+future events.  The scheduler can be set with a global variable,
+similar to choosing the <cite>SimulatorImpl</cite>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">GlobalValue</span><span class="o">::</span><span class="n">Bind</span><span class="p">(</span><span class="s">&quot;SchedulerType&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="n">StringValue</span><span class="p">(</span><span class="s">&quot;ns3::DistributedSimulatorImpl&quot;</span><span class="p">));</span>
+</pre></div>
 </div>
+<p>The scheduler can be changed at any time via <cite>Simulator::SetScheduler()</cite>.
+The default scheduler is <cite>MapScheduler</cite> which uses a <cite>std::map&lt;&gt;</cite> to
+store events in time order.</p>
+<p>Because event distributions vary by model there is no one
+best strategy for the priority queue, so <em>ns-3</em> has several options with
+differing tradeoffs.  The example <cite>utils/bench-scheduler.c</cite> can be used
+to test the performance for a user-supplied event distribution.
+For modest execution times (less than an hour, say) the choice of priority
+queue is usually not significant; configuring the build type to optimized
+is much more important in reducing execution times.</p>
+<p>The available scheduler types, and a summary of their time and space
+complexity on <cite>Insert()</cite> and <cite>RemoveNext()</cite>, are listed in the
+following table.  See the individual Scheduler API pages for details on the
+complexity of the other API calls.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Scheduler Type</p></th>
+<th class="head" colspan="4"><p>Complexity</p></th>
+</tr>
+<tr class="row-even"><th class="head" rowspan="2"><p><cite>SchedulerImpl</cite> Type</p></th>
+<th class="head" rowspan="2"><p>Method</p></th>
+<th class="head" colspan="2"><p>Time</p></th>
+<th class="head" colspan="2"><p>Space</p></th>
+</tr>
+<tr class="row-odd"><th class="head"><p>Insert()</p></th>
+<th class="head"><p>RemoveNext()</p></th>
+<th class="head"><p>Overhead</p></th>
+<th class="head"><p>Per Event</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CalendarScheduler</p></td>
+<td><p><cite>&lt;std::list&gt; []</cite></p></td>
+<td><p>Constant</p></td>
+<td><p>Constant</p></td>
+<td><p>24 bytes</p></td>
+<td><p>16 bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>HeapScheduler</p></td>
+<td><p>Heap on <cite>std::vector</cite></p></td>
+<td><p>Logarithmic</p></td>
+<td><p>Logarithmic</p></td>
+<td><p>24 bytes</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>ListScheduler</p></td>
+<td><p><cite>std::list</cite></p></td>
+<td><p>Linear</p></td>
+<td><p>Constant</p></td>
+<td><p>24 bytes</p></td>
+<td><p>16 bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>MapScheduler</p></td>
+<td><p><cite>st::map</cite></p></td>
+<td><p>Logarithmic</p></td>
+<td><p>Constant</p></td>
+<td><p>40 bytes</p></td>
+<td><p>32 bytes</p></td>
+</tr>
+<tr class="row-even"><td><p>PriorityQueueScheduler</p></td>
+<td><p><cite>std::priority_queue&lt;,std::vector&gt;</cite></p></td>
+<td><p>Logarithimc</p></td>
+<td><p>Logarithims</p></td>
+<td><p>24 bytes</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Events and Simulator</a><ul>
-<li><a class="reference internal" href="#event">Event</a></li>
-<li><a class="reference internal" href="#simulator">Simulator</a></li>
-<li><a class="reference internal" href="#time">Time</a></li>
-<li><a class="reference internal" href="#scheduler">Scheduler</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">2.1. Events and Simulator</a><ul>
+<li><a class="reference internal" href="#event">2.1.1. Event</a></li>
+<li><a class="reference internal" href="#simulator">2.1.2. Simulator</a><ul>
+<li><a class="reference internal" href="#available-simulator-engines">2.1.2.1. Available Simulator Engines</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#time">2.1.3. Time</a></li>
+<li><a class="reference internal" href="#scheduler">2.1.4. Scheduler</a></li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="hash-functions.html"
-                        title="previous chapter">Hash Functions</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="callbacks.html"
-                        title="next chapter">Callbacks</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="simulator.html"
+                          title="previous chapter"><span class="section-number">2. </span>Simulator</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="callbacks.html"
+                          title="next chapter"><span class="section-number">2.2. </span>Callbacks</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -331,12 +527,12 @@ context.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -348,21 +544,23 @@ context.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="callbacks.html" title="Callbacks"
+          <a href="callbacks.html" title="2.2. Callbacks"
              >next</a> |</li>
         <li class="right" >
-          <a href="hash-functions.html" title="Hash Functions"
+          <a href="simulator.html" title="2. Simulator"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Manual</a><span class="navelem">&nbsp;</span></li>
- 
+
+          <li class="nav-item nav-item-1"><a href="simulator.html" ><span class="section-number">2. </span>Simulator</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">2.1. </span>Events and Simulator</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 18:24.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:54.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

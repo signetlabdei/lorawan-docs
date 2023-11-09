@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>Nix-Vector Routing Documentation &#8212; Model Library</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>25. Nix-Vector Routing Documentation &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Optimized Link State Routing (OLSR)" href="olsr.html" />
-    <link rel="prev" title="Queue limits" href="queue-limits.html" />
+    <link rel="next" title="26. Optimized Link State Routing (OLSR)" href="olsr.html" />
+    <link rel="prev" title="24.7. Queue limits" href="queue-limits.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Models</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,15 +126,16 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="olsr.html" title="Optimized Link State Routing (OLSR)"
+          <a href="olsr.html" title="26. Optimized Link State Routing (OLSR)"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="queue-limits.html" title="Queue limits"
+          <a href="queue-limits.html" title="24.7. Queue limits"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">25. </span>Nix-Vector Routing Documentation</a></li> 
       </ul>
     </div>  
 
@@ -129,78 +144,268 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="nix-vector-routing-documentation">
-<h1>Nix-Vector Routing Documentation<a class="headerlink" href="#nix-vector-routing-documentation" title="Permalink to this headline">¶</a></h1>
+  <section id="nix-vector-routing-documentation">
+<h1><span class="section-number">25. </span>Nix-Vector Routing Documentation<a class="headerlink" href="#nix-vector-routing-documentation" title="Link to this heading">¶</a></h1>
 <p>Nix-vector routing is a simulation specific routing protocol and is
 intended for large network topologies.  The on-demand nature of this
 protocol as well as the low-memory footprint of the nix-vector provides
 improved performance in terms of memory usage and simulation run time
 when dealing with a large number of nodes.</p>
-<div class="section" id="model-description">
-<h2>Model Description<a class="headerlink" href="#model-description" title="Permalink to this headline">¶</a></h2>
+<section id="model-description">
+<h2><span class="section-number">25.1. </span>Model Description<a class="headerlink" href="#model-description" title="Link to this heading">¶</a></h2>
 <p>The source code for the NixVectorRouting module lives in
 the directory <code class="docutils literal notranslate"><span class="pre">src/nix-vector-routing</span></code>.</p>
 <p><em>ns-3</em> nix-vector-routing performs on-demand route computation using
 a breadth-first search and an efficient route-storage data structure
 known as a nix-vector.</p>
 <p>When a packet is generated at a node for transmission, the route is
-calculated, and the nix-vector is built.
+calculated, and the nix-vector is built.</p>
+<p><strong>How is the Nix-Vector calculated?</strong>
 The nix-vector stores an index for each hop along the path, which
 corresponds to the neighbor-index.  This index is used to determine
-which net-device and gateway should be used.  To route a packet, the
-nix-vector must be transmitted with the packet. At each hop, the
-current node extracts the appropriate neighbor-index from the
-nix-vector and transmits the packet through the corresponding
-net-device.  This continues until the packet reaches the destination.</p>
-<div class="section" id="scope-and-limitations">
-<h3>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Permalink to this headline">¶</a></h3>
-<p>Currently, the ns-3 model of nix-vector routing supports IPv4 p2p links
-as well as CSMA links.  It does not (yet) provide support for
-efficient adaptation to link failures.  It simply flushes all nix-vector
-routing caches. Finally, IPv6 is not supported.</p>
+which net-device and gateway should be used.</p>
+<p><strong>How does the routing take place?</strong>
+To route a packet, the nix-vector must be transmitted with the packet.
+At each hop, the current node extracts the appropriate neighbor-index
+from the nix-vector and transmits the packet through the corresponding
+net-device. This continues until the packet reaches the destination.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Nix-Vector routing does not use any routing metrics (interface metrics)
+during the calculation of nix-vector. It is only based on the shortest
+path calculated according to BFS.</p>
 </div>
-</div>
-<div class="section" id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p><strong>How does Nix decide between two equally short path from source to
+destination?</strong>
+It depends on how the topology is constructed i.e., the order in which the
+net-devices are added on a node and net-devices added on the channels
+associated with current node’s net-devices. Please check the <code class="docutils literal notranslate"><span class="pre">nix-simple.cc</span></code>
+example below to understand how nix-vectors are calculated.</p>
+<p><strong>How does Nix reacts to topology changes?</strong>
+Routes in Nix are specific to a given network topology, and are cached by
+the sender node. Nix monitors the following events: Interface up/down,
+Route add/removal, Address add/removal to understand if the cached routes
+are valid or if they have to be purged.</p>
+<p>If the topology changes while the packet is “in flight”, the associated
+NixVector is invalid, and have to be rebuilt by an intermediate node.
+This is possible because the NixVecor carries an “Epoch”, i.e., a counter
+indicating when the NixVector has been created. If the topology changes,
+the Epoch is globally updated, and any outdated NixVector is rebuilt.</p>
+<p><em>ns-3</em> supports IPv4 as well as IPv6 Nix-Vector routing.</p>
+<section id="scope-and-limitations">
+<h3><span class="section-number">25.1.1. </span>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Link to this heading">¶</a></h3>
+<p>Currently, the <em>ns-3</em> model of nix-vector routing supports IPv4 and IPv6
+p2p links, CSMA links and multiple WiFi networks with the same channel object.
+It does not (yet) provide support for efficient adaptation to link failures.
+It simply flushes all nix-vector routing caches.</p>
+<p>NixVectorRouting performs a subnet matching check, but it does <strong>not</strong> check
+entirely if the addresses have been appropriately assigned. In other terms,
+using Nix-Vector routing, it is possible to have a working network that
+violates some good practices in IP address assignments.</p>
+<p>In case of IPv6, Nix assumes the link-local addresses assigned are <strong>unique</strong>.
+When using the IPv6 stack, the link-local address allocation is unique by
+default over the entire topology. However, if the link-local addresses are
+assigned manually, the user must ensure uniqueness of link-local addresses.</p>
+<p>NixVectorRouting supports routes to IPv4 and IPv6 loopback addresses on localhost.
+Although it is not really intended to route to these addresses, it can do so.</p>
+</section>
+</section>
+<section id="usage">
+<h2><span class="section-number">25.2. </span>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
 <p>The usage pattern is the one of all the Internet routing protocols.
 Since NixVectorRouting is not installed by default in the
 Internet stack, it is necessary to set it in the Internet Stack
-helper by using <code class="docutils literal notranslate"><span class="pre">InternetStackHelper::SetRoutingHelper</span></code></p>
-<div class="section" id="examples">
-<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+helper by using <code class="docutils literal notranslate"><span class="pre">InternetStackHelper::SetRoutingHelper</span></code>.</p>
+<p>Remember to include the header file <code class="docutils literal notranslate"><span class="pre">ns3/nix-vector-routing-module.h</span></code> to
+use IPv4 or IPv6 Nix-Vector routing.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The previous header files <code class="docutils literal notranslate"><span class="pre">ns3/ipv4-nix-vector-helper.h</span></code> and
+<code class="docutils literal notranslate"><span class="pre">ns3/ipv4-nix-vector-routing.h</span></code> are deprecated and will be removed in
+the future. These files are replaced with more generic (having IPv6
+capabilities) <code class="docutils literal notranslate"><span class="pre">ns3/nix-vector-helper.h</span></code> and <code class="docutils literal notranslate"><span class="pre">ns3/nix-vector-routing.h</span></code>
+respectively.</p>
+</div>
+<ul class="simple">
+<li><p>Using IPv4 Nix-Vector Routing:</p></li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Ipv4NixVectorHelper</span><span class="w"> </span><span class="n">nixRouting</span><span class="p">;</span>
+<span class="n">InternetStackHelper</span><span class="w"> </span><span class="n">stack</span><span class="p">;</span>
+<span class="n">stack</span><span class="p">.</span><span class="n">SetRoutingHelper</span><span class="p">(</span><span class="n">nixRouting</span><span class="p">);</span><span class="w">  </span><span class="c1">// has effect on the next Install()</span>
+<span class="n">stack</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">allNodes</span><span class="p">);</span><span class="w">             </span><span class="c1">// allNodes is the NodeContainer</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Using IPv6 Nix-Vector Routing:</p></li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Ipv6NixVectorHelper</span><span class="w"> </span><span class="n">nixRouting</span><span class="p">;</span>
+<span class="n">InternetStackHelper</span><span class="w"> </span><span class="n">stack</span><span class="p">;</span>
+<span class="n">stack</span><span class="p">.</span><span class="n">SetRoutingHelper</span><span class="p">(</span><span class="n">nixRouting</span><span class="p">);</span><span class="w">  </span><span class="c1">// has effect on the next Install()</span>
+<span class="n">stack</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">allNodes</span><span class="p">);</span><span class="w">             </span><span class="c1">// allNodes is the NodeContainer</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The NixVectorHelper helper class helps to use NixVectorRouting functionality.
+The NixVectorRouting model class can also be used directly to use Nix-Vector routing.
+<code class="docutils literal notranslate"><span class="pre">ns3/nix-vector-routing-module.h</span></code> contains the header files for both the classes.</p>
+</div>
+<section id="examples">
+<h3><span class="section-number">25.2.1. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h3>
 <p>The examples for the NixVectorRouting module lives in
 the directory <code class="docutils literal notranslate"><span class="pre">src/nix-vector-routing/examples</span></code>.</p>
+<p>There are examples which use both IPv4 and IPv6 networking.</p>
+<ol class="arabic simple">
+<li><p>nix-simple.cc</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> *    ________</span>
+<span class="cm"> *   /        \</span>
+<span class="cm"> * n0 -- n1 -- n2 -- n3</span>
+<span class="cm"> *</span>
+<span class="cm"> * n0 IP: 10.1.1.1, 10.1.4.1</span>
+<span class="cm"> * n1 IP: 10.1.1.2, 10.1.2.1</span>
+<span class="cm"> * n2 IP: 10.1.2.2, 10.1.3.1, 10.1.4.2</span>
+<span class="cm"> * n3 IP: 10.1.3.2</span>
+<span class="cm"> */</span>
+</pre></div>
 </div>
+<p>In this topology, we install Nix-Vector routing between source
+n0 and destination n3. The shortest possible route will be
+n0 -&gt; n2 -&gt; n3.</p>
+<p>Let’s see how the nix-vector will be generated for this path:</p>
+<p>n0 has 2 neighbors i.e. n1 and n3. n0 is connected to both using
+separate net-devices. But the net-device for n0 – n1 p2p link was
+created before the netdevice for n0 – n2 p2p link. Thus, n2 has
+neighbor-index of 1 (n1 has 0) with respect to n0.</p>
+<p>n2 has 3 neighbors i.e. n1, n3 and n0. The n2 net-device for n1 – n2
+p2p link was created before the n2 net-device for n2 – n3 p2p link
+which was before the n2 netdevice for n0 – n2 p2p link. This, n3
+has neighbor-index of 01 (n1 has 00 and n0 has 10) with respect to n2.</p>
+<p>Thus, the nix-vector for the path from n0 to n3 is 101.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This neighbor-index or nix-index has total number of bits equal to
+minimum number of bits required to represent all the neighbors in
+their binary form.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If there are multiple netdevices connected to the current netdevice
+on the channel then it depends on which order netdevices were added
+to the channel.</p>
 </div>
+<ol class="loweralpha">
+<li><p>Using IPv4:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># By default IPv4 network is selected</span>
+./ns3<span class="w"> </span>run<span class="w"> </span>nix-simple
+</pre></div>
+</div>
+</li>
+<li><p>Using IPv6:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the --useIPv6 flag</span>
+./ns3<span class="w"> </span>run<span class="w"> </span><span class="s2">&quot;nix-simple --useIPv6&quot;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p>nms-p2p-nix.cc</p>
+<p>This example demonstrates the advantage of Nix-Vector routing as Nix
+performs source-based routing (BFS) to have faster routing.</p>
+<img alt="NMS P2P Network Diagram" src="_images/nms.png" />
+<ol class="loweralpha">
+<li><p>Using IPv4:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># By default IPv4 network is selected</span>
+./ns3<span class="w"> </span>run<span class="w"> </span>nms-p2p-nix
+</pre></div>
+</div>
+</li>
+<li><p>Using IPv6:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the --useIPv6 flag</span>
+./ns3<span class="w"> </span>run<span class="w"> </span><span class="s2">&quot;nms-p2p-nix --useIPv6&quot;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p>nix-simple-multi-address.cc</p></li>
+</ol>
+<blockquote>
+<div><p>This is an IPv4 example demonstrating multiple interface addresses. This
+example also shows how address assignment in between the simulation causes
+the all the route caches and Nix caches to flush.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># By default IPv4 network is selected</span>
+./ns3<span class="w"> </span>run<span class="w"> </span>nix-simple-multi-address
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>nix-double-wifi.cc</p></li>
+</ol>
+<blockquote>
+<div><p>This example demonstrates the working of Nix with two Wifi networks
+operating on the same Wifi channel object. The example uses <code class="docutils literal notranslate"><span class="pre">ns3::YansWifiChannel</span></code>
+for both the wifi networks.</p>
+<ol class="loweralpha">
+<li><p>Using IPv4:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># By default IPv4 network is selected</span>
+./ns3<span class="w"> </span>run<span class="w"> </span>nix-double-wifi
+<span class="c1"># Use the --enableNixLog to enable NixVectorRouting logging.</span>
+./ns3<span class="w"> </span>run<span class="w"> </span><span class="s2">&quot;nix-double-wifi --enableNixLog&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Using IPv6:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the --useIPv6 flag</span>
+./ns3<span class="w"> </span>run<span class="w"> </span><span class="s2">&quot;nix-double-wifi --useIPv6&quot;</span>
+<span class="c1"># Use the --enableNixLog to enable NixVectorRouting logging.</span>
+./ns3<span class="w"> </span>run<span class="w"> </span><span class="s2">&quot;nix-double-wifi --useIPv6 --enableNixLog&quot;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Nix-Vector Routing Documentation</a><ul>
-<li><a class="reference internal" href="#model-description">Model Description</a><ul>
-<li><a class="reference internal" href="#scope-and-limitations">Scope and Limitations</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">25. Nix-Vector Routing Documentation</a><ul>
+<li><a class="reference internal" href="#model-description">25.1. Model Description</a><ul>
+<li><a class="reference internal" href="#scope-and-limitations">25.1.1. Scope and Limitations</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#usage">Usage</a><ul>
-<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#usage">25.2. Usage</a><ul>
+<li><a class="reference internal" href="#examples">25.2.1. Examples</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="queue-limits.html"
-                        title="previous chapter">Queue limits</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="olsr.html"
-                        title="next chapter">Optimized Link State Routing (OLSR)</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="queue-limits.html"
+                          title="previous chapter"><span class="section-number">24.7. </span>Queue limits</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="olsr.html"
+                          title="next chapter"><span class="section-number">26. </span>Optimized Link State Routing (OLSR)</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -212,12 +417,12 @@ the directory <code class="docutils literal notranslate"><span class="pre">src/n
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -229,21 +434,22 @@ the directory <code class="docutils literal notranslate"><span class="pre">src/n
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="olsr.html" title="Optimized Link State Routing (OLSR)"
+          <a href="olsr.html" title="26. Optimized Link State Routing (OLSR)"
              >next</a> |</li>
         <li class="right" >
-          <a href="queue-limits.html" title="Queue limits"
+          <a href="queue-limits.html" title="24.7. Queue limits"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">25. </span>Nix-Vector Routing Documentation</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 17:37.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:57.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

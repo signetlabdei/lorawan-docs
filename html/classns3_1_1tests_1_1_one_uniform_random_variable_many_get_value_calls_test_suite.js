@@ -1,4 +1,0 @@
-var classns3_1_1tests_1_1_one_uniform_random_variable_many_get_value_calls_test_suite =
-[
-    [ "OneUniformRandomVariableManyGetValueCallsTestSuite", "classns3_1_1tests_1_1_one_uniform_random_variable_many_get_value_calls_test_suite.html#a4000e52f5c44cd0847d3921c9d50343b", null ]
-];

@@ -1,109 +1,123 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <title>DSR Routing &#8212; Model Library</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>12. DSR Routing &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Emulation Overview" href="emulation-overview.html" />
-    <link rel="prev" title="DSDV Routing" href="dsdv.html" />
+    <link rel="next" title="13. Emulation Overview" href="emulation-overview.html" />
+    <link rel="prev" title="11. DSDV Routing" href="dsdv.html" />
   <link rel="stylesheet" type="text/css"
     href="_static/ns3_stylesheet.css" />
-    <link rel="icon" type="image/ico" 
+    <link rel="icon" type="image/ico"
       href="_static/favicon.ico" />
 
   <script type="text/javascript" src="_static/drop-down-menu.js"></script>
   <script type="text/javascript" src="_static/ns3_version.js"></script>
   <script type="text/javascript">var ns3_builder="html";</script>
   <script type="text/javascript" src="_static/ns3_links.js"></script>
-      
+
 
   </head><body>
-  <div id="titlearea">
-    <table cellspacing="0" cellpadding="0" width="100%">
-      <tbody>
-	<tr style="height: 56px;">
-	  <td id="projectlogo">
-	    <a id="ns3_home1"
-	       href="http://www.nsnam.org/">
-	       <img alt="ns-3 Logo"
-		    src="_static/ns-3-inverted-notext-small.png"/>
-	    </a>
-	  </td>
-	  <td id="projecttext">
-	    <div id="projectbrief">A Discrete-Event Network Simulator</div>
-	      <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
-	  </td>
-	      
-	  <td id="ns3-menu">
-	    <div class="menu">
-	      <ul >
-	        <li><a id="ns3_home2"
-		       href="http://www.nsnam.org/"
-		       >&nbsp;&nbsp;Home</a>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mTuts')" 
-		      onmouseout="mclosetime()"
-			>Tutorials &nbsp;&#x25BC;</span>
-		    <div id="mTuts" 
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_tut"
-			 href="/docs/tutorial/html/index.html"
-			  >English</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDocs')" 
-		      onmouseout="mclosetime()"
-			>Docs &nbsp;&nbsp;&nbsp;&#x25BC;</span>
-		    <div id="mDocs"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_wiki"
-			 href="http://www.nsnam.org/wiki"
-			 >Wiki</a><br/>
-		      <a id="ns3_man"
-			 href="/docs/manual/html/index.html"
-			 >Manual</a><br/>
-		      <a id="ns3_mod"
-			 href="/docs/models/html/index.html"
-			 >Models</a><br/>
-	        </li>
-	        <li><span
-		      onmouseover="mopen('mDev')" 
-		      onmouseout="mclosetime()"
-			>Develop &#x25BC;</span>
-		    <div id="mDev"
-		        onmouseover="mcancelclosetime()" 
-		        onmouseout="mclosetime()">
-		      <a id="ns3_api"
-			 href="/docs/doxygen/html/index.html"
-			 >API</a><br/>
-		      <a id="ns3_bugs"
-		       href="http://www.nsnam.org/bugzilla/">Bugs</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </td>
-	  <td id="projectsection">
-	    <span style="margin-right:10px">Models</span>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <script  type="text/javascript">ns3_write_links()</script>
-  </div>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -112,15 +126,16 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="emulation-overview.html" title="Emulation Overview"
+          <a href="emulation-overview.html" title="13. Emulation Overview"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="dsdv.html" title="DSDV Routing"
+          <a href="dsdv.html" title="11. DSDV Routing"
              accesskey="P">previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">12. </span>DSR Routing</a></li> 
       </ul>
     </div>  
 
@@ -129,17 +144,17 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="dsr-routing">
-<h1>DSR Routing<a class="headerlink" href="#dsr-routing" title="Permalink to this headline">¶</a></h1>
+  <section id="dsr-routing">
+<h1><span class="section-number">12. </span>DSR Routing<a class="headerlink" href="#dsr-routing" title="Link to this heading">¶</a></h1>
 <p>Dynamic Source Routing (DSR) protocol is a reactive routing protocol designed specifically
 for use in multi-hop wireless ad hoc networks of mobile nodes.</p>
 <p>This model was developed by
-<a class="reference external" href="http://www.ittc.ku.edu/resilinets">the ResiliNets research group</a>
+<a class="reference external" href="https://resilinets.org/">the ResiliNets research group</a>
 at the University of Kansas.</p>
-<div class="section" id="dsr-routing-overview">
-<h2>DSR Routing Overview<a class="headerlink" href="#dsr-routing-overview" title="Permalink to this headline">¶</a></h2>
+<section id="dsr-routing-overview">
+<h2><span class="section-number">12.1. </span>DSR Routing Overview<a class="headerlink" href="#dsr-routing-overview" title="Link to this heading">¶</a></h2>
 <p>This model implements the base specification of the Dynamic Source Routing
-(DSR) protocol. Implementation is based on <span class="target" id="index-0"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc4728.html"><strong>RFC 4728</strong></a>, with some extensions
+(DSR) protocol. Implementation is based on <span class="target" id="index-0"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc4728.html"><strong>RFC 4728</strong></a>, with some extensions
 and modifications to the RFC specifications.</p>
 <p>DSR operates on a on-demand behavior. Therefore, our DSR model buffers all
 packets while a route request packet (RREQ) is disseminated. We implement
@@ -195,8 +210,8 @@ Song Luan &lt;<a class="reference external" href="mailto:lsuper&#37;&#52;&#48;ma
 </dl>
 </li>
 </ul>
-<div class="section" id="dsr-update-in-ns-3-17">
-<h3>DSR update in ns-3.17<a class="headerlink" href="#dsr-update-in-ns-3-17" title="Permalink to this headline">¶</a></h3>
+<section id="dsr-update-in-ns-3-17">
+<h3><span class="section-number">12.1.1. </span>DSR update in ns-3.17<a class="headerlink" href="#dsr-update-in-ns-3-17" title="Link to this heading">¶</a></h3>
 <p>We originally used “TxErrHeader” in Ptr&lt;WifiMac&gt; to indicate the transmission
 error of a specific packet in link layer, however, it was not working
 quite correctly since even when the packet was dropped, this header was
@@ -204,9 +219,9 @@ not recorded in the trace file.  We used to a different path on implementing
 the link layer notification mechanism.  We look into the trace file by
 finding packet receive event.  If we find one receive event for the
 data packet, we count that as the indicator for successful data delivery.</p>
-</div>
-<div class="section" id="useful-parameters">
-<h3>Useful parameters<a class="headerlink" href="#useful-parameters" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="useful-parameters">
+<h3><span class="section-number">12.1.2. </span>Useful parameters<a class="headerlink" href="#useful-parameters" title="Link to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-------------------------</span> <span class="o">+------------------------------------+-------------+</span>
 <span class="o">|</span> <span class="n">Parameter</span>                <span class="o">|</span> <span class="n">Description</span>                        <span class="o">|</span> <span class="n">Default</span>     <span class="o">|</span>
 <span class="o">+==========================+====================================+=============+</span>
@@ -239,25 +254,20 @@ data packet, we count that as the indicator for successful data delivery.</p>
 <span class="o">+-------------------------</span> <span class="o">+------------------------------------+-------------+</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="implementation-modification">
-<h3>Implementation modification<a class="headerlink" href="#implementation-modification" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="implementation-modification">
+<h3><span class="section-number">12.1.3. </span>Implementation modification<a class="headerlink" href="#implementation-modification" title="Link to this heading">¶</a></h3>
 <ul class="simple">
-<li><dl class="simple">
-<dt>The DsrFsHeader has added 3 fields: message type, source id, destination id, and these changes only for post-processing</dt><dd><ol class="arabic simple">
-<li><p>Message type is used to identify the data packet from control packet</p></li>
-<li><p>source id is used to identify the real source of the data packet since we have to deliver the packet hop-by-hop and the Ipv4Header is not carrying the real source and destination ip address as needed</p></li>
-<li><p>destination id is for same reason of above</p></li>
-</ol>
-</dd>
-</dl>
-</li>
+<li><p>The DsrFsHeader has added 3 fields: message type, source id, destination id, and these changes only for post-processing
+1. Message type is used to identify the data packet from control packet
+2. source id is used to identify the real source of the data packet since we have to deliver the packet hop-by-hop and the Ipv4Header is not carrying the real source and destination ip address as needed
+3. destination id is for same reason of above</p></li>
 <li><p>Route Reply header is not word-aligned in DSR RFC, change it to word-aligned in implementation</p></li>
 <li><p>DSR works as a shim header between transport and network protocol, it needs its own forwarding mechanism, we are changing the packet transmission to hop-by-hop delivery, so we added two fields in dsr fixed header to notify packet delivery</p></li>
 </ul>
-</div>
-<div class="section" id="current-route-cache-implementation">
-<h3>Current Route Cache implementation<a class="headerlink" href="#current-route-cache-implementation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="current-route-cache-implementation">
+<h3><span class="section-number">12.1.4. </span>Current Route Cache implementation<a class="headerlink" href="#current-route-cache-implementation" title="Link to this heading">¶</a></h3>
 <p>This implementation used “path cache”, which is simple to implement and ensures loop-free paths:</p>
 <ul class="simple">
 <li><p>the path cache has automatic expire policy</p></li>
@@ -266,32 +276,32 @@ data packet, we count that as the indicator for successful data delivery.</p>
 <li><p>when adding multiple routes for one destination, the route is compared based on hop-count and expire time, the one with less hop count or relatively new route is favored</p></li>
 <li><p>Future implementation may include “link cache” as another possibility</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="dsr-instructions">
-<h2>DSR Instructions<a class="headerlink" href="#dsr-instructions" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="dsr-instructions">
+<h2><span class="section-number">12.2. </span>DSR Instructions<a class="headerlink" href="#dsr-instructions" title="Link to this heading">¶</a></h2>
 <p>The following should be kept in mind when running DSR as routing protocol:</p>
 <ul class="simple">
 <li><p>NodeTraversalTime is the time it takes to traverse two neighboring nodes and should be chosen to fit the transmission range</p></li>
 <li><p>PassiveAckTimeout is the time a packet in maintenance buffer wait for passive acknowledgment, normally set as two times of NodeTraversalTime</p></li>
 <li><p>RouteCacheTimeout should be set smaller value when the nodes’ velocity become higher. The default value is 300s.</p></li>
 </ul>
-</div>
-<div class="section" id="helper">
-<h2>Helper<a class="headerlink" href="#helper" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="helper">
+<h2><span class="section-number">12.3. </span>Helper<a class="headerlink" href="#helper" title="Link to this heading">¶</a></h2>
 <p>To have a node run DSR, the easiest way would be to use the DsrHelper
 and DsrMainHelpers in your simulation script. For instance:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DsrHelper</span> <span class="n">dsr</span><span class="p">;</span>
-<span class="n">DsrMainHelper</span> <span class="n">dsrMain</span><span class="p">;</span>
-<span class="n">dsrMain</span><span class="p">.</span><span class="n">Install</span> <span class="p">(</span><span class="n">dsr</span><span class="p">,</span> <span class="n">adhocNodes</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DsrHelper</span><span class="w"> </span><span class="n">dsr</span><span class="p">;</span>
+<span class="n">DsrMainHelper</span><span class="w"> </span><span class="n">dsrMain</span><span class="p">;</span>
+<span class="n">dsrMain</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">dsr</span><span class="p">,</span><span class="w"> </span><span class="n">adhocNodes</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The example scripts inside <code class="docutils literal notranslate"><span class="pre">src/dsr/examples/</span></code> demonstrate the use of DSR based nodes in different scenarios.
 The helper source can be found inside <code class="docutils literal notranslate"><span class="pre">src/dsr/helper/dsr-main-helper.{h,cc}</span></code>
 and <code class="docutils literal notranslate"><span class="pre">src/dsr/helper/dsr-helper.{h,cc}</span></code></p>
-</div>
-<div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="examples">
+<h2><span class="section-number">12.4. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
 <p>The example can be found in <code class="docutils literal notranslate"><span class="pre">src/dsr/examples/</span></code>:</p>
 <ul class="simple">
 <li><p>dsr.cc use DSR as routing protocol within a traditional MANETs environment[3].</p></li>
@@ -300,9 +310,9 @@ and <code class="docutils literal notranslate"><span class="pre">src/dsr/helper/
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">manet-routing-compare.cc</span></code> is a comparison case with built in MANET routing protocols and can generate its own results.</p></li>
 </ul>
-</div>
-<div class="section" id="validation">
-<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="validation">
+<h2><span class="section-number">12.5. </span>Validation<a class="headerlink" href="#validation" title="Link to this heading">¶</a></h2>
 <p>This model has been tested as follows:</p>
 <ul class="simple">
 <li><p>Unit tests have been written to verify the internals of DSR. This can be found in <code class="docutils literal notranslate"><span class="pre">src/dsr/test/dsr-test-suite.cc</span></code>. These tests verify whether the methods inside DSR module which deal with packet buffer, headers work correctly.</p></li>
@@ -310,54 +320,61 @@ and <code class="docutils literal notranslate"><span class="pre">src/dsr/helper/
 <li><p>manet-routing-compare.cc has been used to compare DSR with three of other routing protocols.</p></li>
 </ul>
 <p>A paper was presented on these results at the Workshop on ns-3 in 2011.</p>
-</div>
-<div class="section" id="limitations">
-<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
-<p>The model is not fully compliant with <span class="target" id="index-1"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc4728.html"><strong>RFC 4728</strong></a>. As an example, Dsr fixed size header
+</section>
+<section id="limitations">
+<h2><span class="section-number">12.6. </span>Limitations<a class="headerlink" href="#limitations" title="Link to this heading">¶</a></h2>
+<p>The model is not fully compliant with <span class="target" id="index-1"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc4728.html"><strong>RFC 4728</strong></a>. As an example, Dsr fixed size header
 has been extended and it is four octets longer then the RFC specification.
 As a consequence, the DSR headers can not be correctly decoded by Wireshark.</p>
 <p>The model full compliance with the RFC is planned for the future.</p>
-</div>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<p>[1] Original paper: <a class="reference external" href="http://www.monarch.cs.rice.edu/monarch-papers/dsr-chapter00.pdf">http://www.monarch.cs.rice.edu/monarch-papers/dsr-chapter00.pdf</a></p>
-<p>[2] RFC 4728 <a class="reference external" href="http://www6.ietf.org/rfc/rfc4728.txt">http://www6.ietf.org/rfc/rfc4728.txt</a></p>
-<p>[3] Broch’s comparison paper: <a class="reference external" href="http://www.monarch.cs.rice.edu/monarch-papers/mobicom98.ps">http://www.monarch.cs.rice.edu/monarch-papers/mobicom98.ps</a></p>
-</div>
-</div>
+</section>
+<section id="references">
+<h2><span class="section-number">12.7. </span>References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h2>
+<p>[1] Original paper: <a class="reference external" href="https://web.archive.org/web/20150430233910/http://www.monarch.cs.rice.edu/monarch-papers/dsr-chapter00.pdf">https://web.archive.org/web/20150430233910/http://www.monarch.cs.rice.edu/monarch-papers/dsr-chapter00.pdf</a></p>
+<p>[2] RFC 4728 <a class="reference external" href="https://datatracker.ietf.org/doc/html/rfc4728">https://datatracker.ietf.org/doc/html/rfc4728</a></p>
+<p>[3] Broch’s comparison paper: <a class="reference external" href="https://web.archive.org/web/20150725135435/http://www.monarch.cs.rice.edu/monarch-papers/mobicom98.ps">https://web.archive.org/web/20150725135435/http://www.monarch.cs.rice.edu/monarch-papers/mobicom98.ps</a></p>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">DSR Routing</a><ul>
-<li><a class="reference internal" href="#dsr-routing-overview">DSR Routing Overview</a><ul>
-<li><a class="reference internal" href="#dsr-update-in-ns-3-17">DSR update in ns-3.17</a></li>
-<li><a class="reference internal" href="#useful-parameters">Useful parameters</a></li>
-<li><a class="reference internal" href="#implementation-modification">Implementation modification</a></li>
-<li><a class="reference internal" href="#current-route-cache-implementation">Current Route Cache implementation</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">12. DSR Routing</a><ul>
+<li><a class="reference internal" href="#dsr-routing-overview">12.1. DSR Routing Overview</a><ul>
+<li><a class="reference internal" href="#dsr-update-in-ns-3-17">12.1.1. DSR update in ns-3.17</a></li>
+<li><a class="reference internal" href="#useful-parameters">12.1.2. Useful parameters</a></li>
+<li><a class="reference internal" href="#implementation-modification">12.1.3. Implementation modification</a></li>
+<li><a class="reference internal" href="#current-route-cache-implementation">12.1.4. Current Route Cache implementation</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#dsr-instructions">DSR Instructions</a></li>
-<li><a class="reference internal" href="#helper">Helper</a></li>
-<li><a class="reference internal" href="#examples">Examples</a></li>
-<li><a class="reference internal" href="#validation">Validation</a></li>
-<li><a class="reference internal" href="#limitations">Limitations</a></li>
-<li><a class="reference internal" href="#references">References</a></li>
+<li><a class="reference internal" href="#dsr-instructions">12.2. DSR Instructions</a></li>
+<li><a class="reference internal" href="#helper">12.3. Helper</a></li>
+<li><a class="reference internal" href="#examples">12.4. Examples</a></li>
+<li><a class="reference internal" href="#validation">12.5. Validation</a></li>
+<li><a class="reference internal" href="#limitations">12.6. Limitations</a></li>
+<li><a class="reference internal" href="#references">12.7. References</a></li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="dsdv.html"
-                        title="previous chapter">DSDV Routing</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="emulation-overview.html"
-                        title="next chapter">Emulation Overview</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="dsdv.html"
+                          title="previous chapter"><span class="section-number">11. </span>DSDV Routing</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="emulation-overview.html"
+                          title="next chapter"><span class="section-number">13. </span>Emulation Overview</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -369,12 +386,12 @@ As a consequence, the DSR headers can not be correctly decoded by Wireshark.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -386,21 +403,22 @@ As a consequence, the DSR headers can not be correctly decoded by Wireshark.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="emulation-overview.html" title="Emulation Overview"
+          <a href="emulation-overview.html" title="13. Emulation Overview"
              >next</a> |</li>
         <li class="right" >
-          <a href="dsdv.html" title="DSDV Routing"
+          <a href="dsdv.html" title="11. DSDV Routing"
              >previous</a> |</li>
     <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
     
         <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">12. </span>DSR Routing</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2006-2019.
-      Last updated on Apr 29, 2020 17:37.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    &#169; Copyright 2006-2019.
+      Last updated on Nov 09, 2023 12:57.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

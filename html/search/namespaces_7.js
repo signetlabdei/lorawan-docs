@@ -1,31 +1,5 @@
 var searchData=
 [
-  ['addressutils_33060',['addressUtils',['../namespacens3_1_1address_utils.html',1,'ns3']]],
-  ['anonymous_5fnamespace_7bfatal_2dimpl_2ecc_7d_33061',['anonymous_namespace{fatal-impl.cc}',['../namespacens3_1_1_fatal_impl_1_1anonymous__namespace_02fatal-impl_8cc_03.html',1,'ns3::FatalImpl']]],
-  ['anonymous_5fnamespace_7bolsr_2drouting_2dprotocol_2ecc_7d_33062',['anonymous_namespace{olsr-routing-protocol.cc}',['../namespacens3_1_1olsr_1_1anonymous__namespace_02olsr-routing-protocol_8cc_03.html',1,'ns3::olsr']]],
-  ['anonymous_5fnamespace_7bpyviz_2ecc_7d_33063',['anonymous_namespace{pyviz.cc}',['../namespacens3_1_1anonymous__namespace_02pyviz_8cc_03.html',1,'ns3']]],
-  ['anonymous_5fnamespace_7bvisual_2dsimulator_2dimpl_2ecc_7d_33064',['anonymous_namespace{visual-simulator-impl.cc}',['../namespacens3_1_1anonymous__namespace_02visual-simulator-impl_8cc_03.html',1,'ns3']]],
-  ['aodv_33065',['aodv',['../namespacens3_1_1aodv.html',1,'ns3']]],
-  ['commandlinehelper_33066',['CommandLineHelper',['../namespacens3_1_1_command_line_helper.html',1,'ns3']]],
-  ['config_33067',['Config',['../namespacens3_1_1_config.html',1,'ns3']]],
-  ['dot11s_33068',['dot11s',['../namespacens3_1_1dot11s.html',1,'ns3']]],
-  ['dsdv_33069',['dsdv',['../namespacens3_1_1dsdv.html',1,'ns3']]],
-  ['dsr_33070',['dsr',['../namespacens3_1_1dsr.html',1,'ns3']]],
-  ['example_33071',['Example',['../namespacens3_1_1_hash_1_1_example.html',1,'ns3::Hash']]],
-  ['fatalimpl_33072',['FatalImpl',['../namespacens3_1_1_fatal_impl.html',1,'ns3']]],
-  ['flame_33073',['flame',['../namespacens3_1_1flame.html',1,'ns3']]],
-  ['fnv1aimplementation_33074',['Fnv1aImplementation',['../namespacens3_1_1_hash_1_1_function_1_1_fnv1a_implementation.html',1,'ns3::Hash::Function']]],
-  ['function_33075',['Function',['../namespacens3_1_1_hash_1_1_function.html',1,'ns3::Hash']]],
-  ['hash_33076',['Hash',['../namespacens3_1_1_hash.html',1,'ns3']]],
-  ['int64x64_33077',['int64x64',['../namespacens3_1_1int64x64.html',1,'ns3']]],
-  ['internal_33078',['internal',['../namespacens3_1_1internal.html',1,'ns3']]],
-  ['lorawan_33079',['lorawan',['../namespacens3_1_1lorawan.html',1,'ns3']]],
-  ['murmur3implementation_33080',['Murmur3Implementation',['../namespacens3_1_1_hash_1_1_function_1_1_murmur3_implementation.html',1,'ns3::Hash::Function']]],
-  ['ns3_33081',['ns3',['../namespacens3.html',1,'']]],
-  ['ofi_33082',['ofi',['../namespacens3_1_1ofi.html',1,'ns3']]],
-  ['olsr_33083',['olsr',['../namespacens3_1_1olsr.html',1,'ns3']]],
-  ['systempath_33084',['SystemPath',['../namespacens3_1_1_system_path.html',1,'ns3']]],
-  ['test_33085',['test',['../namespacens3_1_1int64x64_1_1test.html',1,'ns3::int64x64']]],
-  ['tests_33086',['tests',['../namespacens3_1_1tests.html',1,'ns3']]],
-  ['tracedvaluecallback_33087',['TracedValueCallback',['../namespacens3_1_1_traced_value_callback.html',1,'ns3']]]
+  ['interface_5fstatistics_0',['interface_statistics',['../d8/d66/namespaceinterface__statistics.html',1,'']]],
+  ['ipv4_5frouting_5ftable_1',['ipv4_routing_table',['../d0/d5b/namespaceipv4__routing__table.html',1,'']]]
 ];
