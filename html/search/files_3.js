@@ -24,7 +24,7 @@ var searchData=
   ['bit_2ddeserializer_2ecc_21',['bit-deserializer.cc',['../df/dc2/bit-deserializer_8cc.html',1,'']]],
   ['bit_2ddeserializer_2eh_22',['bit-deserializer.h',['../de/d52/bit-deserializer_8h.html',1,'']]],
   ['bit_2dserializer_2dtest_2ecc_23',['bit-serializer-test.cc',['../db/d51/bit-serializer-test_8cc.html',1,'']]],
-  ['bit_2dserializer_2ecc_24',['bit-serializer.cc',['../da/d07/examples_2bit-serializer_8cc.html',1,'(Global Namespace)'],['../df/d0f/utils_2bit-serializer_8cc.html',1,'(Global Namespace)']]],
+  ['bit_2dserializer_2ecc_24',['bit-serializer.cc',['../df/d0f/utils_2bit-serializer_8cc.html',1,'(Global Namespace)'],['../da/d07/examples_2bit-serializer_8cc.html',1,'(Global Namespace)']]],
   ['bit_2dserializer_2eh_25',['bit-serializer.h',['../de/d89/bit-serializer_8h.html',1,'']]],
   ['block_2dack_2dagreement_2ecc_26',['block-ack-agreement.cc',['../d6/de3/block-ack-agreement_8cc.html',1,'']]],
   ['block_2dack_2dagreement_2eh_27',['block-ack-agreement.h',['../dd/d5a/block-ack-agreement_8h.html',1,'']]],
