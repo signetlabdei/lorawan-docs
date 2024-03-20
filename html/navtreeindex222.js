@@ -1,7 +1,5 @@
 var NAVTREEINDEX222 =
 {
-"db/d28/classns3_1_1_ofdm_dcd_channel_encodings.html#a9236e86e5650198c2514902d7ffa1a65":[12,0,23,947,4],
-"db/d28/classns3_1_1_ofdm_dcd_channel_encodings.html#a92732c4ea414fcb30505153a119c0f88":[11,0,51,956,3],
 "db/d28/classns3_1_1_ofdm_dcd_channel_encodings.html#a92732c4ea414fcb30505153a119c0f88":[12,0,23,947,3],
 "db/d28/classns3_1_1_ofdm_dcd_channel_encodings.html#aa0149a49b5de7796808bc89a1602342f":[11,0,51,956,20],
 "db/d28/classns3_1_1_ofdm_dcd_channel_encodings.html#aa0149a49b5de7796808bc89a1602342f":[12,0,23,947,20],
@@ -9,8 +7,8 @@ var NAVTREEINDEX222 =
 "db/d28/classns3_1_1_ofdm_dcd_channel_encodings.html#aa16e6ff9f933c7a245cb7dbe4bb7ed52":[12,0,23,947,15],
 "db/d28/classns3_1_1_ofdm_dcd_channel_encodings.html#aa9d4e4da0c45006c879615575330780c":[11,0,51,956,22],
 "db/d28/classns3_1_1_ofdm_dcd_channel_encodings.html#aa9d4e4da0c45006c879615575330780c":[12,0,23,947,22],
-"db/d28/classns3_1_1_ofdm_dcd_channel_encodings.html#aab1f965e351d4226c2b273341e0c0c57":[12,0,23,947,14],
 "db/d28/classns3_1_1_ofdm_dcd_channel_encodings.html#aab1f965e351d4226c2b273341e0c0c57":[11,0,51,956,14],
+"db/d28/classns3_1_1_ofdm_dcd_channel_encodings.html#aab1f965e351d4226c2b273341e0c0c57":[12,0,23,947,14],
 "db/d28/classns3_1_1_ofdm_dcd_channel_encodings.html#abf382f537e8c43b75989587dc623d64e":[12,0,23,947,17],
 "db/d28/classns3_1_1_ofdm_dcd_channel_encodings.html#abf382f537e8c43b75989587dc623d64e":[11,0,51,956,17],
 "db/d28/classns3_1_1_ofdm_dcd_channel_encodings.html#ae04d77c5bcdfce2990f9bb24f0b41866":[11,0,51,956,8],
@@ -249,5 +247,7 @@ var NAVTREEINDEX222 =
 "db/d2e/classns3_1_1dot11s_1_1_peer_link.html#af3f06e1ce00ae15507c365d4e03a6df8":[10,23,1,18,60],
 "db/d2e/classns3_1_1dot11s_1_1_peer_link.html#af4188ec2a13f883469fed39a90df77c0":[10,23,1,18,5],
 "db/d2e/classns3_1_1dot11s_1_1_peer_link.html#af620e2d2607904bc9b5d107aa1524038":[10,23,1,18,74],
-"db/d2e/classns3_1_1dot11s_1_1_peer_link.html#afafae6769dc62ce78485bca6d4cc4531":[10,23,1,18,58]
+"db/d2e/classns3_1_1dot11s_1_1_peer_link.html#afafae6769dc62ce78485bca6d4cc4531":[10,23,1,18,58],
+"db/d2f/spectrum-value_8cc.html":[13,0,2,33,2,50],
+"db/d2f/spectrum-value_8cc.html#a05ef9bc111855912424c328b054191a5":[13,0,2,33,2,50,9]
 };
