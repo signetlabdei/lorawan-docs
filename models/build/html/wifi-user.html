@@ -9,7 +9,7 @@
     <title>35.2. User Documentation &#8212; Model Library</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
-    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -1001,11 +1001,12 @@ attributes for 802.11ax devices.</p>
 <span class="n">heConfiguration</span><span class="o">-&gt;</span><span class="n">SetGuardInterval</span><span class="p">(</span><span class="n">NanoSeconds</span><span class="p">(</span><span class="mi">1600</span><span class="p">));</span>
 </pre></div>
 </div>
-<p>802.11ax allows extended compressed Block ACKs containing a 256-bits bitmap, making
+<p>802.11ax allows compressed Block ACKs containing a 256-bits bitmap, making
 possible transmissions of A-MPDUs containing up to 256 MPDUs, depending on the
 negotiated buffer size. In order to configure the buffer size of an 802.11ax device,
 the following line of code could be used:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">heConfiguration</span><span class="o">-&gt;</span><span class="n">SetMpduBufferSize</span><span class="p">(</span><span class="mi">256</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">WifiMacHelper</span><span class="w"> </span><span class="n">mac</span><span class="p">;</span>
+<span class="n">mac</span><span class="p">.</span><span class="n">SetType</span><span class="p">(</span><span class="s">&quot;ns3::StaWifiMac&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MpduBufferSize&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">UintegerValue</span><span class="p">(</span><span class="mi">256</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>For transmitting large MPDUs, it might also be needed to increase the maximum
@@ -1216,6 +1217,66 @@ Each node is equipped with 802.11b Wi-Fi device:</p>
 </pre></div>
 </div>
 </section>
+<section id="emlsr-configuration">
+<h4><span class="section-number">35.2.1.11.4. </span>EMLSR configuration<a class="headerlink" href="#emlsr-configuration" title="Link to this heading">¶</a></h4>
+<p><strong>DISCLAIMER</strong> EMLSR support is still experimental. Simulations with EMLSR activated may crash unexpectedly.</p>
+<p>Proper EMLSR operations require the configuration of multiple RF interfaces, as illustrated above.
+Therefore, in order to configure EMLSR operations, we can start from the configuration shown above
+and apply the changes described in the following. Firstly, we need to activate EMLSR on both the
+AP MLD and the EMLSR client. This can be done by configuring the appropriate <code class="docutils literal notranslate"><span class="pre">EhtConfiguration</span></code>
+attribute through the wifi helper:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">WifiHelper</span><span class="w"> </span><span class="n">wifi</span><span class="p">;</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">SetStandard</span><span class="p">(</span><span class="n">WIFI_STANDARD_80211be</span><span class="p">);</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">ConfigEhtOptions</span><span class="p">(</span><span class="s">&quot;EmlsrActivated&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">BooleanValue</span><span class="p">(</span><span class="nb">true</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">EhtConfiguration</span></code> class also provides attributes for the various EMLSR parameters that an
+AP MLD that supports EMLSR has to advertise. Given that these attributes are simply ignored by
+non-AP MLDs, we can use the same wifi helper to configure such parameters:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">WifiHelper</span><span class="w"> </span><span class="n">wifi</span><span class="p">;</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">SetStandard</span><span class="p">(</span><span class="n">WIFI_STANDARD_80211be</span><span class="p">);</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">ConfigEhtOptions</span><span class="p">(</span><span class="s">&quot;EmlsrActivated&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">BooleanValue</span><span class="p">(</span><span class="nb">true</span><span class="p">));</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">ConfigEhtOptions</span><span class="p">(</span><span class="s">&quot;TransitionTimeout&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TimeValue</span><span class="p">(</span><span class="n">MicroSeconds</span><span class="p">(</span><span class="mi">1024</span><span class="p">)));</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">ConfigEhtOptions</span><span class="p">(</span><span class="s">&quot;MediumSyncDuration&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TimeValue</span><span class="p">(</span><span class="n">MicroSeconds</span><span class="p">(</span><span class="mi">3200</span><span class="p">)));</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">ConfigEhtOptions</span><span class="p">(</span><span class="s">&quot;MsdOfdmEdThreshold&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">IntegerValue</span><span class="p">(</span><span class="mi">-72</span><span class="p">);</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">ConfigEhtOptions</span><span class="p">(</span><span class="s">&quot;MsdMaxNTxops&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">UintegerValue</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span><span class="w"> </span><span class="c1">// unlimited attempts</span>
+</pre></div>
+</div>
+<p>EMLSR parameters that are client specific can be configured through the attributes of the EMLSR
+Manager class and subclass. The <code class="docutils literal notranslate"><span class="pre">WifiMacHelper</span></code> class provides the <code class="docutils literal notranslate"><span class="pre">SetEmlsrManager</span></code>
+method to conveniently set the type of EMLSR Manager and its attributes:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// setup STA.</span>
+<span class="n">wifiMac</span><span class="p">.</span><span class="n">SetType</span><span class="p">(</span><span class="s">&quot;ns3::StaWifiMac&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;Ssid&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SsidValue</span><span class="p">(</span><span class="n">ssid</span><span class="p">),</span>
+<span class="w">                </span><span class="s">&quot;ActiveProbing&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">BooleanValue</span><span class="p">(</span><span class="nb">false</span><span class="p">));</span>
+<span class="n">wifiMac</span><span class="p">.</span><span class="n">SetEmlsrManager</span><span class="p">(</span><span class="s">&quot;ns3::DefaultEmlsrManager&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="s">&quot;EmlsrLinkSet&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">StringValue</span><span class="p">(</span><span class="s">&quot;0,1,2&quot;</span><span class="p">),</span><span class="w">  </span><span class="c1">// enable EMLSR on all EMLSR links</span>
+<span class="w">                        </span><span class="s">&quot;MainPhyId&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">UintegerValue</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+<span class="w">                        </span><span class="s">&quot;EmlsrPaddingDelay&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">TimeValue</span><span class="p">(</span><span class="n">MicroSeconds</span><span class="p">(</span><span class="mi">32</span><span class="p">)),</span>
+<span class="w">                        </span><span class="s">&quot;EmlsrTransitionDelay&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">TimeValue</span><span class="p">(</span><span class="n">MicroSeconds</span><span class="p">(</span><span class="mi">128</span><span class="p">)),</span>
+<span class="w">                        </span><span class="s">&quot;SwitchAuxPhy&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">BooleanValue</span><span class="p">(</span><span class="nb">false</span><span class="p">),</span>
+<span class="w">                        </span><span class="s">&quot;AuxPhyChannelWidth&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">UintegerValue</span><span class="p">(</span><span class="mi">40</span><span class="p">));</span>
+<span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">staDevice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wifi</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">wifiPhy</span><span class="p">,</span><span class="w"> </span><span class="n">wifiMac</span><span class="p">,</span><span class="w"> </span><span class="n">sta</span><span class="p">);</span>
+<span class="n">devices</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">staDevice</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Note that the channel switch delay should be less than the transition delay:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// SpectrumWifiPhyHelper (3 links)</span>
+<span class="n">SpectrumWifiPhyHelper</span><span class="w"> </span><span class="nf">phy</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">phy</span><span class="p">.</span><span class="n">SetPcapDataLinkType</span><span class="p">(</span><span class="n">WifiPhyHelper</span><span class="o">::</span><span class="n">DLT_IEEE802_11_RADIO</span><span class="p">);</span>
+<span class="n">phy</span><span class="p">.</span><span class="n">AddChannel</span><span class="p">(</span><span class="n">spectrumChannel2_4Ghz</span><span class="p">,</span><span class="w"> </span><span class="n">WIFI_SPECTRUM_2_4_GHZ</span><span class="p">);</span>
+<span class="n">phy</span><span class="p">.</span><span class="n">AddChannel</span><span class="p">(</span><span class="n">spectrumChannel5Ghz</span><span class="p">,</span><span class="w"> </span><span class="n">WIFI_SPECTRUM_5_GHZ</span><span class="p">);</span>
+<span class="n">phy</span><span class="p">.</span><span class="n">AddChannel</span><span class="p">(</span><span class="n">spectrumChannel6Ghz</span><span class="p">,</span><span class="w"> </span><span class="n">WIFI_SPECTRUM_6_GHZ</span><span class="p">);</span>
+<span class="n">phy</span><span class="p">.</span><span class="n">Set</span><span class="p">(</span><span class="s">&quot;ChannelSwitchDelay&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TimeValue</span><span class="p">(</span><span class="n">MicroSeconds</span><span class="p">(</span><span class="mi">100</span><span class="p">)));</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 </section>
@@ -1258,6 +1319,7 @@ Each node is equipped with 802.11b Wi-Fi device:</p>
 <li><a class="reference internal" href="#adhoc-wifinetdevice-configuration">35.2.1.11.1. AdHoc WifiNetDevice configuration</a></li>
 <li><a class="reference internal" href="#infrastructure-access-point-and-clients-wifinetdevice-configuration">35.2.1.11.2. Infrastructure (access point and clients) WifiNetDevice configuration</a></li>
 <li><a class="reference internal" href="#multiple-rf-interfaces-configuration">35.2.1.11.3. Multiple RF interfaces configuration</a></li>
+<li><a class="reference internal" href="#emlsr-configuration">35.2.1.11.4. EMLSR configuration</a></li>
 </ul>
 </li>
 </ul>
@@ -1319,8 +1381,8 @@ Each node is equipped with 802.11b Wi-Fi device:</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2006-2019.
-      Last updated on Mar 08, 2024 13:56.
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Mar 20, 2024 11:48.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>

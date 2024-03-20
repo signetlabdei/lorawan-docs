@@ -9,7 +9,7 @@
     <title>30. Spectrum Module &#8212; Model Library</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
-    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -150,12 +150,12 @@
 aspects of communications in <em>ns-3</em>.
 The model was first introduced in
 <a class="reference internal" href="#baldo2009spectrum" id="id1"><span>[Baldo2009Spectrum]</span></a>, and has been enhanced and refined over the years.</p>
-<figure class="align-center" id="id39">
+<figure class="align-center" id="id40">
 <span id="fig-spectrum-analyzer-example"></span><img alt="_images/spectrum-analyzer-example.png" src="_images/spectrum-analyzer-example.png" />
 <figcaption>
 <p><span class="caption-text">Spectrogram produced by a spectrum analyzer in a scenario
 involving wifi signals interfered by a microwave oven, as simulated
-by the example <code class="docutils literal notranslate"><span class="pre">adhoc-aloha-ideal-phy-with-microwave-oven</span></code>.</span><a class="headerlink" href="#id39" title="Link to this image">¶</a></p>
+by the example <code class="docutils literal notranslate"><span class="pre">adhoc-aloha-ideal-phy-with-microwave-oven</span></code>.</span><a class="headerlink" href="#id40" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <section id="model-description">
@@ -181,8 +181,12 @@ information for a signal being transmitted/received by PHY devices:</p>
 <li><p>a reference to the antenna model used by the transmitting PHY device
 to transmit this signal</p></li>
 <li><p>the duration of the signal</p></li>
-<li><p>its Power Spectral Density (PSD) of the signal, which is assumed to be constant for
-the duration of the signal.</p></li>
+<li><p>the Power Spectral Density (PSD) of the signal, which is assumed to be constant for
+the duration of the signal</p></li>
+<li><p>the frequency domain 3D spectrum channel matrix that is needed for MIMO computations
+when multiple streams are transmitted</p></li>
+<li><p>the 3D precoding matrix that is needed for MIMO computations when multiple
+streams are transmitted.</p></li>
 </ul>
 <p>The PSD is represented as a set of discrete scalar values each
 corresponding to a certain subband in frequency. The set of frequency subbands
@@ -194,6 +198,15 @@ class provides several arithmetic operators to allow to perform calculations
 with PSD instances. Additionally, the <code class="docutils literal notranslate"><span class="pre">SpectrumConverter</span></code> class
 provides means for the conversion of <code class="docutils literal notranslate"><span class="pre">SpectrumValue</span></code> instances from
 one <code class="docutils literal notranslate"><span class="pre">SpectrumModel</span></code> to another.</p>
+<p>The frequency domain 3D channel matrix is needed in MIMO systems in which
+multiple transmit and receive antenna ports can exist, hence the PSD is multidimensional.
+The dimensions are: the number of receive antenna ports, the number of
+transmit antenna ports, and the number of subbands in frequency (or
+resource blocks).</p>
+<p>The 3D precoding matrix is also needed in MIMO systems to be able to correctly
+perform the calculations of the received signal and interference. The dimensions are:
+the number of transmit antenna ports, the number of transmit
+streams, and the number of subbands (or resource blocks).</p>
 <p>For a more formal mathematical description of the signal model just
 described, the reader is referred to <a class="reference internal" href="#baldo2009spectrum" id="id2"><span>[Baldo2009Spectrum]</span></a>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">SpectrumSignalParameters</span></code> class is meant to include only
@@ -212,10 +225,10 @@ received over the air.</p>
 <p>The spectrum Channel/PHY interface is defined by the base classes <code class="docutils literal notranslate"><span class="pre">SpectrumChannel</span></code>
 and <code class="docutils literal notranslate"><span class="pre">SpectrumPhy</span></code>. Their interaction simulates the transmission and
 reception of signals over the medium. The way this interaction works is depicted in <a class="reference internal" href="#fig-spectrum-channel-phy-interface"><span class="std std-ref">Sequence diagram showing the interaction between SpectrumPhy and SpectrumChannel</span></a>:</p>
-<figure class="align-center" id="id40">
+<figure class="align-center" id="id41">
 <span id="fig-spectrum-channel-phy-interface"></span><img alt="_images/spectrum-channel-phy-interface.png" src="_images/spectrum-channel-phy-interface.png" />
 <figcaption>
-<p><span class="caption-text">Sequence diagram showing the interaction between SpectrumPhy and SpectrumChannel</span><a class="headerlink" href="#id40" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Sequence diagram showing the interaction between SpectrumPhy and SpectrumChannel</span><a class="headerlink" href="#id41" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -365,6 +378,13 @@ type it can attempt to receive. If not, the signal is normally
 expected to be considered as interference.</p></li>
 </ul>
 </div></blockquote>
+<ul class="simple">
+<li><p>Many propagation loss and delay models can be added to these channels.
+The base class <code class="docutils literal notranslate"><span class="pre">SpectrumChannel</span></code> provides an <code class="docutils literal notranslate"><span class="pre">AssignStreams()</span></code> method
+to allow the deterministic configuration of random variable stream numbers
+with a single API call.  See the ns-3 Manual chapter on random variables
+for more information.</p></li>
+</ul>
 <section id="helpers">
 <h3><span class="section-number">30.2.1. </span>Helpers<a class="headerlink" href="#helpers" title="Link to this heading">¶</a></h3>
 <p>The helpers provided in <code class="docutils literal notranslate"><span class="pre">src/spectrum/helpers</span></code> are mainly intended
@@ -528,11 +548,11 @@ setting up simulations.</p>
 user-configurable PSD model that can be transmitted on the <code class="docutils literal notranslate"><span class="pre">SpectrumChannel</span></code>.
 It inherits from <code class="docutils literal notranslate"><span class="pre">SpectrumPhy</span></code> and is comprised of attributes and methods to
 create and transmit the signal on the channel.</p>
-<figure class="align-center" id="id41">
+<figure class="align-center" id="id42">
 <span id="spectrum-tv-cofdm"></span><img alt="_images/spectrum-tv-cofdm.png" src="_images/spectrum-tv-cofdm.png" />
 <figcaption>
 <p><span class="caption-text">8K COFDM signal spectrum generated from <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitter</span></code> (Left) and
-theoretical COFDM signal spectrum <a class="reference internal" href="#koppcofdm" id="id4"><span>[KoppCOFDM]</span></a> (Right)</span><a class="headerlink" href="#id41" title="Link to this image">¶</a></p>
+theoretical COFDM signal spectrum <a class="reference internal" href="#koppcofdm" id="id4"><span>[KoppCOFDM]</span></a> (Right)</span><a class="headerlink" href="#id42" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>One of the user-configurable attributes is the type of modulation for the TV
@@ -567,13 +587,13 @@ be created and transmitted on the channel.</p>
 <p>The helper class, <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitterHelper</span></code>, consists of features to
 assist users in setting up TV transmitters for their simulations. Functionality
 is also provided to easily simulate real-world scenarios.</p>
-<figure class="align-center" id="id42">
+<figure class="align-center" id="id43">
 <span id="spectrum-tv-8vsb"></span><img alt="_images/spectrum-tv-8vsb.png" src="_images/spectrum-tv-8vsb.png" />
 <figcaption>
 <p><span class="caption-text">North America ATSC channel 19 &amp; 20 signals generated using
 <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitterHelper</span></code> (Left) and theoretical 8-VSB signal
 <a class="reference internal" href="#baron8vsb" id="id8"><span>[Baron8VSB]</span></a> (Right). Note that the theoretical signal is not shown in dB
-while the ns-3 generated signals are.</span><a class="headerlink" href="#id42" title="Link to this image">¶</a></p>
+while the ns-3 generated signals are.</span><a class="headerlink" href="#id43" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Using this helper class, users can easily set up TV transmitters right after
@@ -582,13 +602,13 @@ included are real characteristics of specific geographic regions that can be
 used to run realistic simulations. The regions currently included are
 North America, Europe, and Japan. The frequencies and bandwidth of each TV
 channel for each these regions are provided.</p>
-<figure class="align-center" id="id43">
+<figure class="align-center" id="id44">
 <span id="spectrum-tv-rand-geo-points"></span><img alt="_images/spectrum-tv-rand-geo-points.png" src="_images/spectrum-tv-rand-geo-points.png" />
 <figcaption>
 <p><span class="caption-text">Plot from MATLAB implementation of CreateRegionalTvTransmitters method in
 <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitterHelper</span></code>. Shows 100 random points on Earth’s surface
 (with altitude 0) corresponding to TV transmitter locations within a 2000 km
-radius of 35° latitude and -100° longitude.</span><a class="headerlink" href="#id43" title="Link to this image">¶</a></p>
+radius of 35° latitude and -100° longitude.</span><a class="headerlink" href="#id44" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>A method (CreateRegionalTvTransmitters) is provided that enables users to
@@ -652,7 +672,7 @@ antenna. H <sub>u,s</sub> <img class="math" src="_images/math/b45fb41b4735b72ad3
 components, called clusters, each of which composed of M different rays.
 The channel matrix generation procedure accounts for large and small scale
 propagation phenomena. The classes ThreeGppSpectrumPropagationLossModel and
-ThreeGppChannelModel included in the spectrum module takes care of the generation
+ThreeGppChannelModel included in the spectrum module take care of the generation
 of the channel coefficients and the computation of the frequency-dependent
 propagation loss.</p>
 <section id="implementation">
@@ -695,17 +715,26 @@ self-blockage.</p>
 PhasedArraySpectrumPropagationLossModel interface and enables the modeling of frequency
 dependent propagation phenomena while taking into account the specific pair of the
 phased antenna array at the transmitter and the receiver. The main method is
-DoCalcRxPowerSpectralDensity, which takes as input the power spectral density (PSD)
-of the transmitted signal, the mobility models of the transmitting node and receiving node,
-and the phased antenna array of the transmitting node, and of the receiving node.
-Finally, it returns the PSD of the received signal.</p>
-<p>Procedure used to compute the PSD of to compute the PSD of the received signal:</p>
+DoCalcRxPowerSpectralDensity, which takes as input the SpectrumSignalParameters
+structure, which contains, among others, the power spectral density (PSD) of the
+transmitted signal, and the precoding matrix of the transmitter which is needed
+for MIMO computations. Other input parameters are the mobility models of the
+transmitting and receiving node, and the phased antenna array of the
+transmitting and receiving node.
+DoCalcRxPowerSpectralDensity computes the PSD of the received signal
+(used in case of single stream transmission), and the frequency domain 3D
+channel matrix between receive and transmit antenna ports (needed for MIMO
+computations when multiple streams are transmitted).
+Finally, it returns the SpectrumSignalParameters which contains the
+received PSD and the frequency domain 3D spectrum channel matrix.</p>
+<p>Procedure used to compute the PSD of the received signal and the frequency domain 3D
+spectrum channel matrix:</p>
 <p>1. Retrieve the beamforming vectors
 To account for the beamforming, ThreeGppSpectrumPropagationLossModel has to
 retrieve the beamforming vectors of the transmitting and receiving antennas.
 The method DoCalcRxPowerSpectralDensity uses the antenna objects
 that are passed as parameters for both the transmitting and receiving devices,
-and calls the method GetCurrentBeamformingVector to retrieve the beamforming vectors
+and calls the method GetBeamformingVector to retrieve the beamforming vectors
 of these antenna objects.</p>
 <p>2. Retrieve the channel matrix and the channel params
 The ThreeGppSpectrumPropagationLossModel relies on the ThreeGppChannelModel class
@@ -714,12 +743,12 @@ In particular, it makes use of the method GetChannel,
 which returns a ChannelMatrix object containing the channel
 matrix, the generation time, the node pair, and the phased antenna array pair among
 which is created this channel matrix.
-Apart from the function GetChannel, there is a function called GetParams which
+Additionally, it makes use of the method GetParams which
 returns a ChannelParams object containing the channel parameters.
 Notice that the channel information is split into these two structures
-(ChannelMatrix and ChannelParams) to support multiple collocate phased antenna arrays at
+(ChannelMatrix and ChannelParams) to support multiple collocated phased antenna arrays at
 TX/RX node. ChannelParams (also its specialization ThreeGppChannelParams structure)
-contains parameters which are common for all channels among
+contains parameters which are common for all the channels among
 the same RX/TX node pair, while ChannelMatrix contains the channel matrix for the specific pair
 of the phased antenna arrays of TX/RX nodes.
 For example, if the TX and the RX node have multiple collocated antenna arrays,
@@ -730,24 +759,32 @@ i.e., they share the same channel condition, cluster powers, cluster delays,
 AoD, AoA, ZoD, ZoA, K_factor, delay spread, etc.
 On the other hand, each pair of TX and RX antenna arrays has a specific channel matrix
 and fading, which depends on the actual antenna element positions and field patterns of
-each pair of antennas array subpartitions.
+each pair of antenna array subpartitions.
 The ThreeGppChannelModel instance is automatically
-created in the the ThreeGppSpectrumPropagationLossModel constructor and it can
-be configured using the method SetChannelModelAttribute ().</p>
-<p>Notice that in MultiModelSpectrumChannel in StartTx function we added a
-condition that checks whether the TX/RX SpectrumPhy instances belong to different
-TX/RX nodes. This is needed to avoid pathloss models calculations among
+created in the ThreeGppSpectrumPropagationLossModel constructor and it can
+be configured by using the method SetChannelModelAttribute.</p>
+<p>Notice that in MultiModelSpectrumChannel it is checked whether the TX/RX
+SpectrumPhy instances belong to different TX/RX nodes.
+This is needed to avoid pathloss models calculations among
 the phased antenna arrays of the same node, because there are no models yet
 in ns-3 that support the calculation of this kind of interference.</p>
 <p>4. Compute the long term component
 The method GetLongTerm returns the long term component obtained by multiplying
-the channel matrix and the beamforming vectors. To reduce the computational
-load, the long term components associated to the different channels are
-stored in the m_longTermMap and recomputed only if the associated channel
-matrix is updated or if the transmitting and/or receiving beamforming vectors
-have changed. Given the channel reciprocity assumption, for each node pair a
-single long term component is saved in the map.</p>
-<p>5. Apply the small scale fading and compute the channel gain
+the channel matrix and the beamforming vectors. The function CalculateLongTermComponent
+calculates the long term component per RX and TX port pair. Finally, GetLongTerm
+returns a 3D long term channel matrix whose dimensions are the number of the
+receive antenna ports, the number transmit antenna ports, and
+the number of clusters. When multiple ports are being configured note that
+the sub-array partition model is adopted for TXRU virtualization, as described
+in Section 5.2.2 of 3GPP TR 36.897[TR36897]_, and so equal beam weights are used for all the ports.
+Support of the full-connection model for TXRU virtualization would need extensions.
+To reduce the computational load, the long term
+components associated to the different channels are stored in the m_longTermMap
+and recomputed only if the associated channel matrix is updated or if the
+transmitting and/or receiving beamforming vectors have changed. Given the channel
+reciprocity assumption, for each node pair a single long term component is saved in the map.</p>
+<p>5. Apply the small scale fading, calculate the channel gain, generate the
+frequency domain 3D spectrum channel matrix, and finally compute the received PSD
 The method CalcBeamformingGain computes the channel gain in each sub-band and
 applies it to the PSD of the transmitted signal to obtain the received PSD.
 To compute the sub-band gain, it accounts for the Doppler phenomenon and the
@@ -760,7 +797,15 @@ of 3GPP TR 37.885.
 This is done by deviating the Doppler frequency by a random value, whose
 distribution depends on the parameter <img class="math" src="_images/math/44218e075ff340d5528d65b5bc8562c93aa700e3.png" alt="v_{scatt}"/>.
 The value of <img class="math" src="_images/math/44218e075ff340d5528d65b5bc8562c93aa700e3.png" alt="v_{scatt}"/> can be configured using the attribute “vScatt”
-(by default it is set to 0, so that the scattering effect is not considered).</p>
+(by default it is set to 0, so that the scattering effect is not considered).
+Function GenSpectrumChannelMatrix generates the received PSD for each pair of
+the transmit and receive antenna ports. It creates a frequency domain 3D spectrum
+channel matrix whose dimensions are the number of receive antena ports,
+the number of transmit antenna ports, and the number of resource blocks.
+Finally, the frequency domain 3D spectrum channel matrix is used to obtain the
+received PSD. In case of multiple ports at the transmitter the PSD is calculated
+by summing per each RB the real parts of the diagonal elements of the (H*P)^h * (H*P),
+where H is the frequency domain spectrum channel matrix and P is the precoding matrix.</p>
 </section>
 <section id="threegppchannelmodel">
 <h4><span class="section-number">30.4.2.3. </span>ThreeGppChannelModel<a class="headerlink" href="#threegppchannelmodel" title="Link to this heading">¶</a></h4>
@@ -777,8 +822,7 @@ and returns a ChannelMatrix object containing:</p>
 <li><p>the node IDs</p></li>
 <li><p>other channel parameters</p></li>
 </ul>
-<p>The ChannelMatrix objects are saved
-in the map m_channelMap and updated when the coherence time
+<p>The ChannelMatrix objects are saved in the map m_channelMap and updated when the coherence time
 expires, or in case the LOS/NLOS channel condition changes.
 The coherence time can be configured through
 the attribute “UpdatePeriod”, and should be chosen by taking into account all the
@@ -805,7 +849,7 @@ to configure the model.</p>
 </section>
 <section id="id19">
 <h4><span class="section-number">30.4.2.4. </span>Testing<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h4>
-<p>The test suite ThreeGppChannelTestSuite includes three test cases:</p>
+<p>The test suite ThreeGppChannelTestSuite includes five test cases:</p>
 <ul>
 <li><p>ThreeGppChannelMatrixComputationTest checks if the channel matrix has the
 correct dimensions and if it correctly normalized</p></li>
@@ -825,6 +869,10 @@ the beamforming vectors,</p></li>
 </ol>
 </div></blockquote>
 </li>
+<li><p>ThreeGppCalcLongTermMultiPortTest, which tests that the channel matrices are
+correctly generated when multiple transmit and receive antenna ports are used.</p></li>
+<li><p>ThreeGppMimoPolarizationTest, which tests that the channel matrices are
+correctly generated when dual-polarized antennas are being used.</p></li>
 </ul>
 <p><strong>Note:</strong> TR 38.901 includes a calibration procedure that can be used to validate
 the model, but it requires some additional features which are not currently
@@ -860,7 +908,7 @@ Qualcomm Incorporated.</p>
 </div>
 <div class="citation" id="tr38901" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>TR38901<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id12">1</a>,<a role="doc-backlink" href="#id15">2</a>,<a role="doc-backlink" href="#id16">3</a>,<a role="doc-backlink" href="#id17">4</a>,<a role="doc-backlink" href="#id21">5</a>,<a role="doc-backlink" href="#id24">6</a>,<a role="doc-backlink" href="#id29">7</a>,<a role="doc-backlink" href="#id32">8</a>,<a role="doc-backlink" href="#id33">9</a>,<a role="doc-backlink" href="#id34">10</a>,<a role="doc-backlink" href="#id35">11</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id12">1</a>,<a role="doc-backlink" href="#id15">2</a>,<a role="doc-backlink" href="#id16">3</a>,<a role="doc-backlink" href="#id17">4</a>,<a role="doc-backlink" href="#id21">5</a>,<a role="doc-backlink" href="#id25">6</a>,<a role="doc-backlink" href="#id30">7</a>,<a role="doc-backlink" href="#id33">8</a>,<a role="doc-backlink" href="#id34">9</a>,<a role="doc-backlink" href="#id35">10</a>,<a role="doc-backlink" href="#id36">11</a>)</span>
 <p>3GPP. 2018. TR 38.901. Study on channel for frequencies from 0.5 to
 100 GHz. V.15.0.0. (2018-06).</p>
 </div>
@@ -879,6 +927,11 @@ Sandra Lagen, Michele Zorzi. “Implementation of a Spatial Channel Model for
 ns-3”. Submitted to the Workshop on ns-3 (WNS3 ‘20). 2020.
 Available: <a class="reference external" href="https://arxiv.org/abs/2002.09341">https://arxiv.org/abs/2002.09341</a></p>
 </div>
+<div class="citation" id="tr36897" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>TR36897<span class="fn-bracket">]</span></span>
+<p>3GPP. 2015. TR 36.897. Study on elevation beamforming / Full-Dimension (FD)
+Multiple Input Multiple Output (MIMO) for LTE. V13.0.0. (2015-06)</p>
+</div>
 </div>
 </section>
 </section>
@@ -887,10 +940,10 @@ Available: <a class="reference external" href="https://arxiv.org/abs/2002.09341"
 <p>The model aims to provide a performance-oriented alternative to the 3GPP TR 38.901
 framework <a class="reference internal" href="#tr38901" id="id21"><span>[TR38901]</span></a> which is implemented in the <code class="docutils literal notranslate"><span class="pre">ThreeGppSpectrumPropagationLossModel</span></code> and
 <code class="docutils literal notranslate"><span class="pre">ThreeGppChannelModel</span></code> classes and whose implementation is described in <a class="reference internal" href="#zugno2020" id="id22"><span>[Zugno2020]</span></a>.
-The overall design follows the general approach of <a class="reference internal" href="#polese2018" id="id23"><span>[Polese2018]</span></a>, with aim of providing
+The overall design described in <a class="reference internal" href="#pagin2023" id="id23"><span>[Pagin2023]</span></a> follows the general approach of <a class="reference internal" href="#polese2018" id="id24"><span>[Polese2018]</span></a>, with aim of providing
 the means for computing a 3GPP TR 38.901-like end-to-end channel gain by combining
 several statistical terms. The frequency range of applicability is the same as
-that of <a class="reference internal" href="#tr38901" id="id24"><span>[TR38901]</span></a>, i.e., 0.5 - 100 GHz.</p>
+that of <a class="reference internal" href="#tr38901" id="id25"><span>[TR38901]</span></a>, i.e., 0.5 - 100 GHz.</p>
 <section id="use-cases">
 <h4><span class="section-number">30.4.3.1. </span>Use-cases<a class="headerlink" href="#use-cases" title="Link to this heading">¶</a></h4>
 <p>The use-cases for this channel model comprise large-scale MIMO simulations involving a high
@@ -902,7 +955,7 @@ the full 3GPP TR 38.901 does not represent a viable option.</p>
 <p>The computation of the channel gain is taken care of by the <code class="docutils literal notranslate"><span class="pre">TwoRaySpectrumPropagationLossModel</span></code>
 class. In particular, the latter samples a statistical term which combines:</p>
 <ul class="simple">
-<li><p>The array and beamforming gain, computed as outlined in <a class="reference internal" href="#rebato2018" id="id25"><span>[Rebato2018]</span></a> using the
+<li><p>The array and beamforming gain, computed as outlined in <a class="reference internal" href="#rebato2018" id="id26"><span>[Rebato2018]</span></a> using the
 <code class="docutils literal notranslate"><span class="pre">CalcBeamformingGain</span></code> function. This term supports the presence of multiple
 antenna elements both at the transmitter and at the receiver and arbitrary antenna
 radiation patterns. Specifically, the array gain is compute as:</p></li>
@@ -926,27 +979,27 @@ horizontal and vertical direction respectively. The figures below depict the res
 array radiation pattern versus the relative azimuth of transmitter and receiver, for antenna
 arrays featuring 3GPP TR 38.901 (<code class="docutils literal notranslate"><span class="pre">ThreeGppAntennaModel</span></code>, top) and isotropic
 (<code class="docutils literal notranslate"><span class="pre">IsotropicAntennaModel</span></code>, bottom) antenna elements, respectively.
-These figures match the corresponding plots of <a class="reference internal" href="#asplund" id="id26"><span>[Asplund]</span></a>.</p>
-<figure class="align-center" id="id44">
+These figures match the corresponding plots of <a class="reference internal" href="#asplund" id="id27"><span>[Asplund]</span></a>.</p>
+<figure class="align-center" id="id45">
 <span id="fig-two-ray-spectrum-loss-model-3gpp-radiation-pattern"></span><a class="reference internal image-reference" href="_images/two-ray-spectrum-loss-model-3gpp-radiation-pattern.png"><img alt="_images/two-ray-spectrum-loss-model-3gpp-radiation-pattern.png" src="_images/two-ray-spectrum-loss-model-3gpp-radiation-pattern.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-text">Radiation pattern produced by the <code class="docutils literal notranslate"><span class="pre">CalcBeamformingGain</span></code> method when using
 antenna arrays featuring <code class="docutils literal notranslate"><span class="pre">ThreeGppAntennaModel</span></code> antenna elements, for various
-Uniform Planar Array (UPA) configurations.</span><a class="headerlink" href="#id44" title="Link to this image">¶</a></p>
+Uniform Planar Array (UPA) configurations.</span><a class="headerlink" href="#id45" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
-<figure class="align-center" id="id45">
+<figure class="align-center" id="id46">
 <span id="fig-two-ray-spectrum-loss-model-iso-radiation-pattern"></span><a class="reference internal image-reference" href="_images/two-ray-spectrum-loss-model-iso-radiation-pattern.png"><img alt="_images/two-ray-spectrum-loss-model-iso-radiation-pattern.png" src="_images/two-ray-spectrum-loss-model-iso-radiation-pattern.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-text">Radiation pattern produced by the <code class="docutils literal notranslate"><span class="pre">CalcBeamformingGain</span></code> method when using
 antenna arrays featuring <code class="docutils literal notranslate"><span class="pre">IsotropicAntennaModel</span></code> antenna elements, for various
-Uniform Planar Array (UPA) configurations.</span><a class="headerlink" href="#id45" title="Link to this image">¶</a></p>
+Uniform Planar Array (UPA) configurations.</span><a class="headerlink" href="#id46" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Whenever the link is in NLOS, a penalty factor is introduced, to account for beam
-misalignment due to the lack of a dominant multipath component <a class="reference internal" href="#kulkarni" id="id27"><span>[Kulkarni]</span></a>.</p>
+misalignment due to the lack of a dominant multipath component <a class="reference internal" href="#kulkarni" id="id28"><span>[Kulkarni]</span></a>.</p>
 <ul class="simple">
-<li><p>A fast fading term, sampled using the Fluctuating Two Ray (FTR) model distribution <a class="reference internal" href="#romero" id="id28"><span>[Romero]</span></a>.
+<li><p>A fast fading term, sampled using the Fluctuating Two Ray (FTR) model distribution <a class="reference internal" href="#romero" id="id29"><span>[Romero]</span></a>.
 The latter is a fading model which is more general than typical ones, taking into account two
 dominant specular components and a mixture of scattered paths. As, a consequence it has
 been shown to provide a better fit to fading phenomena at mmWaves. The model parameters
@@ -969,11 +1022,11 @@ has been used as a reference to estimate the FTR parameters yielding the closest
 used in conjunction of the path loss and shadowing capability provided by the
 <code class="docutils literal notranslate"><span class="pre">ThreeGppPropagationLossModel</span></code> class.
 Indeed, the goal of this model is to provide channel realizations which are as close
-as possible to ones of <a class="reference internal" href="#tr38901" id="id29"><span>[TR38901]</span></a>, but at a fraction of the complexity. Since the
+as possible to ones of <a class="reference internal" href="#tr38901" id="id30"><span>[TR38901]</span></a>, but at a fraction of the complexity. Since the
 path loss and shadowing terms are not computationally demanding anyway, the ones of
-<a class="reference internal" href="#zugno2020" id="id30"><span>[Zugno2020]</span></a> have been kept;</p></li>
+<a class="reference internal" href="#zugno2020" id="id31"><span>[Zugno2020]</span></a> have been kept;</p></li>
 <li><p>Currently, the value of NLoS beamforming factor penalty factor is taken from
-the preliminary work of <a class="reference internal" href="#kulkarni" id="id31"><span>[Kulkarni]</span></a> and it is scenario-independent; As future
+the preliminary work of <a class="reference internal" href="#kulkarni" id="id32"><span>[Kulkarni]</span></a> and it is scenario-independent; As future
 work, the possibility of using scenario-dependent penalty factors will be
 investigated.</p></li>
 </ul>
@@ -983,7 +1036,7 @@ investigated.</p></li>
 <h4><span class="section-number">30.4.3.3. </span>Calibration<a class="headerlink" href="#calibration" title="Link to this heading">¶</a></h4>
 <p>The purpose of the calibration procedures is to compute offline a look-up table which
 associates the FTR fading model parameters with the simulation parameters.
-In particular, the <a class="reference internal" href="#tr38901" id="id32"><span>[TR38901]</span></a> fading distributions depend on:</p>
+In particular, the <a class="reference internal" href="#tr38901" id="id33"><span>[TR38901]</span></a> fading distributions depend on:</p>
 <ul class="simple">
 <li><p>The scenario (RMa, UMa, UMi-StreetCanyon, InH-OfficeOpen, InH-OfficeMixed);</p></li>
 <li><p>The LOS condition (LoS/NLoS); and</p></li>
@@ -991,7 +1044,7 @@ In particular, the <a class="reference internal" href="#tr38901" id="id32"><span
 </ul>
 <p>As a consequence, the calibration output is a map which associates LoS condition and
 scenario to a list of carrier frequency-FTR parameters values. The latter represent the
-FTR parameters yielding channel realizations which exhibit the closest statistics to <a class="reference internal" href="#tr38901" id="id33"><span>[TR38901]</span></a>.</p>
+FTR parameters yielding channel realizations which exhibit the closest statistics to <a class="reference internal" href="#tr38901" id="id34"><span>[TR38901]</span></a>.</p>
 <p>The actual calibration is a two-step procedure which:</p>
 <p>1. First generates reference channel gain curves using the
 <code class="docutils literal notranslate"><span class="pre">src/spectrum/examples/three-gpp-two-ray-channel-calibration.cc</span></code> simulation script.
@@ -1000,20 +1053,20 @@ the end-to-end channel gain by setting the speed of the TX and RX pair to <img c
 and fixing the LOS condition. In such a way, any variation around the mean is due to the small-scale fading only.
 The channel gain samples are produced, and returned on output conditioned on the value of
 <code class="docutils literal notranslate"><span class="pre">enableOutput</span></code>, for each combination of LoS condition, channel model scenario and carrier frequency. The
-latter cover the whole <a class="reference internal" href="#tr38901" id="id34"><span>[TR38901]</span></a> frequency range of 0.5 - 100 GHz with a relatively sparse resolution
+latter cover the whole <a class="reference internal" href="#tr38901" id="id35"><span>[TR38901]</span></a> frequency range of 0.5 - 100 GHz with a relatively sparse resolution
 (500 MHz), since the dependency of the fading distribution with respect to the carrier frequency is actually
 relatively weak.</p>
-<figure class="align-center" id="id46">
+<figure class="align-center" id="id47">
 <span id="fig-three-gpp-gain-reference-gain-vs-fc"></span><a class="reference internal image-reference" href="_images/three-gpp-gain-reference-gain-vs-fc.png"><img alt="_images/three-gpp-gain-reference-gain-vs-fc.png" src="_images/three-gpp-gain-reference-gain-vs-fc.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-text">Empirical CDF of the reference channel gains obtained using the  <code class="docutils literal notranslate"><span class="pre">three-gpp-two-ray-channel-calibration</span></code>
 simulation script when keeping a fixed LoS condition and channel scenario and varying the carrier
-frequency only.</span><a class="headerlink" href="#id46" title="Link to this image">¶</a></p>
+frequency only.</span><a class="headerlink" href="#id47" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>2. Then, the output of the above script is parsed by the <code class="docutils literal notranslate"><span class="pre">two-ray-to-three-gpp-ch-calibration.py</span></code>
 Python companion script. In particular, reference ECDFs are obtained from the channel gains sampled using the
-model of <a class="reference internal" href="#tr38901" id="id35"><span>[TR38901]</span></a>. In turn, the reference ECDFs (one for each LoS condition, channel model scenario
+model of <a class="reference internal" href="#tr38901" id="id36"><span>[TR38901]</span></a>. In turn, the reference ECDFs (one for each LoS condition, channel model scenario
 and carrier frequency combination) are compared to FTR distributions ECDFs obtained using different values
 of the parameters. Finally, the parameters which provide the best fit (in a goodness-of-fit sense) for
 the specific scenario, LOS condition and carrier frequency are found. The parameters to test are picked initially
@@ -1022,12 +1075,12 @@ the previous search runs by scanning the neighborhood of the most recent identif
 In such regard, the Anderson-Darling statistical test is used to rank the various FTR distributions
 and eventually pick the one providing the closest approximation to the reference statistics.</p>
 </section>
-<section id="id36">
-<h4><span class="section-number">30.4.3.4. </span>Testing<a class="headerlink" href="#id36" title="Link to this heading">¶</a></h4>
+<section id="id37">
+<h4><span class="section-number">30.4.3.4. </span>Testing<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h4>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">TwoRaySplmTestSuite</span></code> includes three test cases:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">FtrFadingModelAverageTest</span></code>, which checks that the average of the Fluctuating Two Ray (FTR)
-fading model realizations is consistent with the theoretical value provided in <a class="reference internal" href="#romero" id="id37"><span>[Romero]</span></a>.</p></li>
+fading model realizations is consistent with the theoretical value provided in <a class="reference internal" href="#romero" id="id38"><span>[Romero]</span></a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ArrayResponseTest</span></code>, which checks that the overall array response at boresight computed by the ù
 <code class="docutils literal notranslate"><span class="pre">CalcBeamformingGain</span></code> function coincides with the expected theoretical values.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">OverallGainAverageTest</span></code>, which checks that the average overall channel gain obtained using the
@@ -1036,32 +1089,38 @@ fading model realizations is consistent with the theoretical value provided in <
 the <code class="docutils literal notranslate"><span class="pre">ThreeGppSpectrumPropagationLossModel</span></code> and <code class="docutils literal notranslate"><span class="pre">ThreeGppChannelModel</span></code> classes.</p></li>
 </ul>
 </section>
-<section id="id38">
-<h4><span class="section-number">30.4.3.5. </span>References<a class="headerlink" href="#id38" title="Link to this heading">¶</a></h4>
+<section id="id39">
+<h4><span class="section-number">30.4.3.5. </span>References<a class="headerlink" href="#id39" title="Link to this heading">¶</a></h4>
 <div role="list" class="citation-list">
+<div class="citation" id="pagin2023" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id23">Pagin2023</a><span class="fn-bracket">]</span></span>
+<p>Pagin, Matteo, Sandra Lagen, Biljana Bojovic, Michele Polese,
+Michele Zorzi. 2023. “Improving the Efficiency of MIMO Simulations in ns-3”
+In Proceedings of the 2023 Workshop on ns-3, pp. 1–9. 2023</p>
+</div>
 <div class="citation" id="zugno2020" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Zugno2020<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id22">1</a>,<a role="doc-backlink" href="#id30">2</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id22">1</a>,<a role="doc-backlink" href="#id31">2</a>)</span>
 <p>Zugno, Tommaso, Michele Polese, Natale Patriciello, Biljana Bojović,
 Sandra Lagen, Michele Zorzi. “Implementation of a spatial channel model for ns-3.”
 In Proceedings of the 2020 Workshop on ns-3, pp. 49-56. 2020.</p>
 </div>
 <div class="citation" id="polese2018" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id23">Polese2018</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id24">Polese2018</a><span class="fn-bracket">]</span></span>
 <p>Michele Polese, Michele Zorzi. “Impact of channel models on
 the end-to-end performance of mmwave cellular networks”. In: 2018 IEEE 19th
 International Workshop on Signal Processing Advances in Wireless Communications
 (SPAWC).</p>
 </div>
 <div class="citation" id="rebato2018" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id25">Rebato2018</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id26">Rebato2018</a><span class="fn-bracket">]</span></span>
 <p>Rebato, Mattia, Laura Resteghini, Christian Mazzucco, Michele Zorzi.
 “Study of realistic antenna patterns in 5G mmWave cellular scenarios”. In: 2018
 IEEE International Conference on Communications (ICC).</p>
 </div>
 <div class="citation" id="romero" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Romero<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id28">1</a>,<a role="doc-backlink" href="#id37">2</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id29">1</a>,<a role="doc-backlink" href="#id38">2</a>)</span>
 <p>Romero-Jerez, Juan M., F. Javier Lopez-Martinez, José F. Paris,
 Andrea J. Goldsmith. “The fluctuating two-ray fading model: Statistical
 characterization and performance analysis”. In: IEEE Transactions on Wireless
@@ -1069,13 +1128,13 @@ Communications 16.7 (2017).</p>
 </div>
 <div class="citation" id="kulkarni" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Kulkarni<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id27">1</a>,<a role="doc-backlink" href="#id31">2</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id28">1</a>,<a role="doc-backlink" href="#id32">2</a>)</span>
 <p>Kulkarni, Mandar N., Eugene Visotsky, Jeffrey G. Andrews. “Correction
 factor for analysis of MIMO wireless networks with highly directional beamforming.”,
 IEEE Wireless Communications Letters, 2018</p>
 </div>
 <div class="citation" id="asplund" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id26">Asplund</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id27">Asplund</a><span class="fn-bracket">]</span></span>
 <p>Asplund, Henrik, David Astely, Peter von Butovitsch, Thomas Chapman,
 Mattias Frenne, Farshid Ghasemzadeh, Måns Hagström et al. Advanced Antenna Systems
 for 5G Network Deployments: Bridging the Gap Between Theory and Practice.
@@ -1144,8 +1203,8 @@ Academic Press, 2020.</p>
 <li><a class="reference internal" href="#use-cases">30.4.3.1. Use-cases</a></li>
 <li><a class="reference internal" href="#implementation-tworayspectrumpropagationlossmodel">30.4.3.2. Implementation - <code class="docutils literal notranslate"><span class="pre">TwoRaySpectrumPropagationLossModel</span></code></a></li>
 <li><a class="reference internal" href="#calibration">30.4.3.3. Calibration</a></li>
-<li><a class="reference internal" href="#id36">30.4.3.4. Testing</a></li>
-<li><a class="reference internal" href="#id38">30.4.3.5. References</a></li>
+<li><a class="reference internal" href="#id37">30.4.3.4. Testing</a></li>
+<li><a class="reference internal" href="#id39">30.4.3.5. References</a></li>
 </ul>
 </li>
 </ul>
@@ -1206,8 +1265,8 @@ Academic Press, 2020.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2006-2019.
-      Last updated on Mar 08, 2024 13:56.
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Mar 20, 2024 11:48.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>

@@ -7,6 +7,6 @@ var searchData=
   ['ulcqifilter_5ft_4',['UlCqiFilter_t',['../db/d6d/classns3_1_1_ff_mac_scheduler.html#aa47a9eb25f2c558c825b0be645304a52',1,'ns3::FfMacScheduler']]],
   ['ulinterferenceoverloadindicationitem_5',['UlInterferenceOverloadIndicationItem',['../d6/d39/classns3_1_1_epc_x2_sap.html#a4b1ca2b446488bf6f640c6cdce42aaf9',1,'ns3::EpcX2Sap']]],
   ['unit_6',['Unit',['../d5/da3/classns3_1_1_length.html#aba64e3b044624037c0262bf54b6e3bb5',1,'ns3::Length::Unit()'],['../df/d50/classns3_1_1_time.html#a87a7f4d29c68b047a72d291ad660295a',1,'ns3::Time::Unit()']]],
-  ['unprotecteddmgactionvalue_7',['UnprotectedDmgActionValue',['../d0/dfc/classns3_1_1_wifi_action_header.html#a5aae98c5fff76a37fd7044574b15760e',1,'ns3::WifiActionHeader']]],
+  ['unprotecteddmgactionvalue_7',['UnprotectedDmgActionValue',['../d0/dfc/classns3_1_1_wifi_action_header.html#a5d221c3b64fd5469748bd7bd4be2853b',1,'ns3::WifiActionHeader']]],
   ['useecn_5ft_8',['UseEcn_t',['../d4/d00/classns3_1_1_tcp_socket_state.html#a3db3f2ac3e727308f297d14d76841e21',1,'ns3::TcpSocketState']]]
 ];

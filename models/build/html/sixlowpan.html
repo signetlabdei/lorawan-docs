@@ -9,7 +9,7 @@
     <title>31. 6LoWPAN: Transmission of IPv6 Packets over IEEE 802.15.4 Networks &#8212; Model Library</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
-    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -182,8 +182,6 @@ The attributes are:</p>
 <li><p>FragmentReassemblyListSize (integer, default 0), indicating the number of packets that can be reassembled at the same time. If the limit is reached, the oldest packet is discarded. Zero means infinite.</p></li>
 <li><p>FragmentExpirationTimeout (Time, default 60 seconds), being the timeout to wait for further fragments before discarding a partial packet.</p></li>
 <li><p>CompressionThreshold (unsigned 32 bits integer, default 0), minimum compressed payload size.</p></li>
-<li><p>ForceEtherType (boolean, default false).</p></li>
-<li><p>EtherType (unsigned 16 bits integer, default 0xFFFF), to force a particular L2 EtherType.</p></li>
 <li><p>UseMeshUnder (boolean, default false), it enables mesh-under flood routing.</p></li>
 <li><p>MeshUnderRadius (unsigned 8 bits integer, default 10), the maximum number of hops that a packet will be forwarded.</p></li>
 <li><p>MeshCacheLength (unsigned 16 bits integer, default 10), the length of the cache for each source.</p></li>
@@ -194,21 +192,8 @@ option. If a compressed packet size is less than the threshold, the uncompressed
 used (plus one byte for the correct dispatch header).
 This option is useful when a MAC requires a minimum frame size (e.g., ContikiMAC) and the
 compression would violate the requirement.</p>
-<p>The last two attributes are needed to use the module with a NetDevice other than 802.15.4, as
-neither IANA or IEEE did reserve an EtherType for 6LoWPAN. As a consequence there might be a
-conflict with the L2 multiplexer/demultiplexer which is based on EtherType. The default
-value is 0xFFFF, which is reserved by IEEE (see <a class="reference internal" href="#iana802" id="id1"><span>[IANA802]</span></a> and <a class="reference internal" href="#ethertype" id="id2"><span>[Ethertype]</span></a>).
-The default module behaviour is to not change the EtherType, however this would not work with
-any NetDevice actually understanding and using the EtherType.</p>
-<p>Note that the <cite>ForceEtherType</cite> parameter have also a direct effect on the MAC address kind the
-module is expecting to handle:
-* ForceEtherType true: Mac48Address (Ethernet, WiFi, etc.).
-* ForceEtherType false: Mac16Address or Mac64Address (IEEE 802.15.4).</p>
-<p>Note that using 6LoWPAN over any NetDevice other than 802.15.4 will produce valid .pcap files,
-but they will not be correctly dissected by Wireshark.
-The reason lies on the fact that 6LoWPAN was really meant to be used only over 802.15.4, so
-Wireshark dissectors will not even try to decode 6LoWPAN headers on top of protocols other than
-802.15.4.</p>
+<p>Note that 6LoWPAN will use an EtherType equal to 0xA0ED, as mandated by <span class="target" id="index-8"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc7973.html"><strong>RFC 7973</strong></a>.
+If the device does not support EtherTypes (e.g., 802.15.4), this value is discarded.</p>
 <p>The Trace sources are:</p>
 <ul class="simple">
 <li><p>Tx - exposing packet (including 6LoWPAN header), SixLoWPanNetDevice Ptr, interface index.</p></li>
@@ -220,7 +205,7 @@ invoked when a packet (or a fragment) is discarded.</p>
 </section>
 <section id="mesh-under-routing">
 <h4><span class="section-number">31.1.1.2. </span>Mesh-Under routing<a class="headerlink" href="#mesh-under-routing" title="Link to this heading">¶</a></h4>
-<p>The module provides a very simple mesh-under routing <a class="reference internal" href="#shelby" id="id3"><span>[Shelby]</span></a>, implemented as a flooding
+<p>The module provides a very simple mesh-under routing <a class="reference internal" href="#shelby" id="id1"><span>[Shelby]</span></a>, implemented as a flooding
 (a mesh-under routing protocol is a routing system implemented below IP).</p>
 <p>This functionality can be activated through the UseMeshUnder attribute and fine-tuned using
 the MeshUnderRadius and MeshUnderJitter attributes.</p>
@@ -236,16 +221,16 @@ attribute.</p>
 <h3><span class="section-number">31.1.2. </span>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Link to this heading">¶</a></h3>
 <section id="context-based-compression">
 <h4><span class="section-number">31.1.2.1. </span>Context-based compression<a class="headerlink" href="#context-based-compression" title="Link to this heading">¶</a></h4>
-<p>IPHC sateful (context-based) compression is supported but, since <span class="target" id="index-8"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6775.html"><strong>RFC 6775</strong></a>
+<p>IPHC sateful (context-based) compression is supported but, since <span class="target" id="index-9"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6775.html"><strong>RFC 6775</strong></a>
 (“Neighbor Discovery Optimization for IPv6 over Low-Power Wireless Personal Area Networks (6LoWPANs)”)
 is not yet implemented, it is necessary to add the context to the nodes manually.</p>
 </section>
 <section id="lowpam-nd">
 <h4><span class="section-number">31.1.2.2. </span>6LoWPAM-ND<a class="headerlink" href="#lowpam-nd" title="Link to this heading">¶</a></h4>
-<p>Future versions of this module will support <span class="target" id="index-9"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6775.html"><strong>RFC 6775</strong></a>, however no timeframe is guaranteed.</p>
+<p>Future versions of this module will support <span class="target" id="index-10"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6775.html"><strong>RFC 6775</strong></a>, however no timeframe is guaranteed.</p>
 </section>
-<section id="id4">
-<h4><span class="section-number">31.1.2.3. </span>Mesh-under routing<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h4>
+<section id="id2">
+<h4><span class="section-number">31.1.2.3. </span>Mesh-under routing<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h4>
 <p>It would be a good idea to improve the mesh-under flooding by providing the following:</p>
 <ul class="simple">
 <li><p>Adaptive hop-limit calculation,</p></li>
@@ -255,7 +240,7 @@ is not yet implemented, it is necessary to add the context to the nodes manually
 </section>
 <section id="mixing-compression-types-in-a-pan">
 <h4><span class="section-number">31.1.2.4. </span>Mixing compression types in a PAN<a class="headerlink" href="#mixing-compression-types-in-a-pan" title="Link to this heading">¶</a></h4>
-<p>The IPv6/MAC addressing scheme defined in <span class="target" id="index-10"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6282.html"><strong>RFC 6282</strong></a> and <span class="target" id="index-11"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc4944.html"><strong>RFC 4944</strong></a> is different.
+<p>The IPv6/MAC addressing scheme defined in <span class="target" id="index-11"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6282.html"><strong>RFC 6282</strong></a> and <span class="target" id="index-12"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc4944.html"><strong>RFC 4944</strong></a> is different.
 One adds the PanId in the pseudo-MAC address (4944) and the other doesn’t (6282).</p>
 <p>The expected use cases (confirmed by the RFC editor) is to <em>never</em> have a mixed environment
 where part of the nodes are using HC1 and part IPHC because this would lead to confusion on
@@ -281,15 +266,15 @@ not been tested.</p>
 <h3><span class="section-number">31.1.3. </span>References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h3>
 <div role="list" class="citation-list">
 <div class="citation" id="iana802" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">IANA802</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span>IANA802<span class="fn-bracket">]</span></span>
 <p>IANA, assigned IEEE 802 numbers: <a class="reference external" href="http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xml">http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xml</a></p>
 </div>
 <div class="citation" id="ethertype" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Ethertype</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span>Ethertype<span class="fn-bracket">]</span></span>
 <p>IEEE Ethertype numbers: <a class="reference external" href="http://standards.ieee.org/develop/regauth/ethertype/eth.txt">http://standards.ieee.org/develop/regauth/ethertype/eth.txt</a></p>
 </div>
 <div class="citation" id="shelby" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">Shelby</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Shelby</a><span class="fn-bracket">]</span></span>
 <ol class="upperalpha simple" start="26">
 <li><p>Shelby and C. Bormann, 6LoWPAN: The Wireless Embedded Internet. Wiley, 2011. [Online]. Available: <a class="reference external" href="https://books.google.it/books?id=3Nm7ZCxscMQC">https://books.google.it/books?id=3Nm7ZCxscMQC</a></p></li>
 </ol>
@@ -348,7 +333,7 @@ interpreted and validated.</p>
 <li><a class="reference internal" href="#scope-and-limitations">31.1.2. Scope and Limitations</a><ul>
 <li><a class="reference internal" href="#context-based-compression">31.1.2.1. Context-based compression</a></li>
 <li><a class="reference internal" href="#lowpam-nd">31.1.2.2. 6LoWPAM-ND</a></li>
-<li><a class="reference internal" href="#id4">31.1.2.3. Mesh-under routing</a></li>
+<li><a class="reference internal" href="#id2">31.1.2.3. Mesh-under routing</a></li>
 <li><a class="reference internal" href="#mixing-compression-types-in-a-pan">31.1.2.4. Mixing compression types in a PAN</a></li>
 <li><a class="reference internal" href="#using-6lowpan-with-ipv4-or-other-l3-protocols">31.1.2.5. Using 6LoWPAN with IPv4 (or other L3 protocols)</a></li>
 </ul>
@@ -420,8 +405,8 @@ interpreted and validated.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2006-2019.
-      Last updated on Mar 08, 2024 13:56.
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Mar 20, 2024 11:48.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>

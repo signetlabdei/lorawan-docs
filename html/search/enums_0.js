@@ -8,6 +8,5 @@ var searchData=
   ['ampduflags_5',['AmpduFlags',['../dd/d84/classns3_1_1_radiotap_header.html#a9f8333ba19c8dc9ae63e7e03af87a557',1,'ns3::RadiotapHeader']]],
   ['arpcacheentrystate_5fe_6',['ArpCacheEntryState_e',['../d1/d85/classns3_1_1_arp_cache_1_1_entry.html#a95a2d5d357f7306cf73e9efe4758a2ea',1,'ns3::ArpCache::Entry']]],
   ['arptype_5fe_7',['ArpType_e',['../d0/d72/classns3_1_1_arp_header.html#a8e24939c2a622b1332b033804a8102a1',1,'ns3::ArpHeader']]],
-  ['assocstatus_8',['AssocStatus',['../dc/da6/classns3_1_1_command_payload_header.html#a0906f7ed6340630fae7706272bce6146',1,'ns3::CommandPayloadHeader']]],
-  ['attributeflag_9',['AttributeFlag',['../db/d68/classns3_1_1_type_id.html#a3ab7b43b95f96391c514d609ca60e542',1,'ns3::TypeId']]]
+  ['attributeflag_8',['AttributeFlag',['../db/d68/classns3_1_1_type_id.html#a3ab7b43b95f96391c514d609ca60e542',1,'ns3::TypeId']]]
 ];

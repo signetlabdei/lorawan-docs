@@ -13,6 +13,6 @@ var dir_bf4acba0978a6ff47849a8bb9b32f932 =
     [ "simple-global-routing.cc", "d5/d01/simple-global-routing_8cc.html", null ],
     [ "simple-multicast-flooding.cc", "d9/ddf/simple-multicast-flooding_8cc.html", null ],
     [ "simple-routing-ping6.cc", "db/d9b/simple-routing-ping6_8cc.html", "db/d9b/simple-routing-ping6_8cc" ],
-    [ "simple-routing-ping6.py", "d2/d35/simple-routing-ping6_8py.html", null ],
+    [ "simple-routing-ping6.py", "d2/d35/simple-routing-ping6_8py.html", "d2/d35/simple-routing-ping6_8py" ],
     [ "static-routing-slash32.cc", "d9/d1c/static-routing-slash32_8cc.html", null ]
 ];

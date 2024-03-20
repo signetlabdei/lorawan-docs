@@ -140,7 +140,7 @@ follows:</p>
 <ul class="simple">
 <li><p>Several guides that are version controlled for each release (the
 <a class="reference external" href="https://www.nsnam.org/documentation/latest/">latest release</a>) and
-<a class="reference external" href="https://www.nsnam.org/ns-3-dev/documentation/">development tree</a>:</p>
+<a class="reference external" href="https://www.nsnam.org/documentation/development-tree/">development tree</a>:</p>
 <ul>
 <li><p>Tutorial</p></li>
 <li><p>Installation Guide</p></li>
@@ -234,7 +234,68 @@ stored and that can manage the execution of events</p></li>
 (simulator, scheduler, time, event) and how they are used.</p>
 <section id="event">
 <h4><span class="section-number">2.1.1. </span>Event<a class="headerlink" href="#event" title="Link to this heading">¶</a></h4>
-<p><em>To be completed</em></p>
+<p>An event represents something that changes the simulation status, i.e.,
+between two events the simulation status does not change, and the event
+will likely change it (it could also not change anything).</p>
+<p>Note that another way to understand an event is to consider it as a delayed
+function call. With the due differences, a discrete event simulation is not
+much different from a “normal” program where the functions are not called
+immediately, but are marked with a “time”, and the time is used to decide
+the order of the functions execution.</p>
+<p>The time, of course, is a simulated time, and is quite different from the
+“real” time. Depending on the simulation complexity the simulated time
+can advance faster or slower then the “real” time, but like a “real” time
+can only go forward.</p>
+<p>An example of an event is the reception of a packet, or the expiration
+of a timer.</p>
+<p>An event is represented by:</p>
+<ul class="simple">
+<li><p>The time at which the event will happen</p></li>
+<li><p>A pointer to the function that will “handle” the event,</p></li>
+<li><p>The parameters of the function that will handle the event (if any),</p></li>
+<li><p>Other internal structures.</p></li>
+</ul>
+<p>An event is scheduled through a call to <code class="docutils literal notranslate"><span class="pre">Simulator::Schedule</span></code>, and once
+scheduled, it can be canceled or removed.
+Removal implies removal from the scheduler data structure, while cancel
+keeps them in the data structure but sets a boolean flag that suppresses
+calling the bound event function at the scheduled time.  When an event is
+scheduled by the Simulator, an <code class="docutils literal notranslate"><span class="pre">EventId</span></code> is returned.  The client may use
+this event ID to later cancel or remove the event; see the example program
+<code class="docutils literal notranslate"><span class="pre">src/core/examples/sample-simulator.{cc,py}</span></code> for example usage.
+Cancelling an event is typically less computationally expensive than
+removing it, but cancelled events consumes more memory in the scheduler
+data structure, which might impact its performances.</p>
+<p>Events are stored by the simulator in a scheduler data
+structure.  Events are handled in increasing order of
+simulator time, and in the case of two events with the same
+scheduled time, the event with the lowest unique ID (a
+monotonically increasing counter) will be handled first.
+In other words tied events are handled in FIFO order.</p>
+<p>Note that concurrent events (events that happen at the very same time)
+are unlikely in a real system - not to say impossible. In <a href="#id1"><span class="problematic" id="id2">|ns-3|</span></a>
+concurrent events are common for a number of reasons, one of them
+being the time representation. While developing a model this must
+be carefully taken into account.</p>
+<p>During the event execution, the simulation time will not advance, i.e., each
+event is executed in zero time. This is a common assumption in
+discrete event simulations, and holds when the computational complexity of
+the operations executed in the event is negligible.
+When this assumption does not hold, it is necessary to schedule a second event
+to mimic the end of the computationally intensive task.</p>
+<p>As an example, suppose to have a device that receives a packet and has to
+perform a complex analysis on it (e.g., an image processing task). The
+sequence of events will be:</p>
+<ul class="simple">
+<li><p>T(t) - Packet reception and processing, save the result somewhere, and
+schedule an event in (t+d) marking the end of the data processing.</p></li>
+<li><p>T(t+d) - Retrieve the data, and do other stuff based them.</p></li>
+</ul>
+<p>So, even if the data processing actually did return a result in the
+execution of the first event, the data is considered valid only after
+the second event.</p>
+<p>The image below can be useful to clarify the idea.</p>
+<img alt="_images/time-consuming-event-handling.png" src="_images/time-consuming-event-handling.png" />
 </section>
 <section id="simulator">
 <h4><span class="section-number">2.1.2. </span>Simulator<a class="headerlink" href="#simulator" title="Link to this heading">¶</a></h4>
@@ -395,7 +456,7 @@ for example:</p>
 </pre></div>
 </div>
 <p>or by using a command line argument</p>
-<div class="highlight-terminal notranslate"><div class="highlight"><pre><span></span>$ ./ns3 run &quot;...  -–SimulatorImplementationType=ns3::DistributedSimulatorImpl&quot;
+<div class="highlight-terminal notranslate"><div class="highlight"><pre><span></span>$ ./ns3 run &quot;...  --SimulatorImplementationType=ns3::DistributedSimulatorImpl&quot;
 </pre></div>
 </div>
 <p>In addition to the basic simulator engines there is a general facility used
@@ -1010,8 +1071,8 @@ bound arguments.  Conceptually, it extends the specific functor described above
 with one or more bound arguments:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">ARG</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">BOUND_ARG</span><span class="o">&gt;</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">SpecificFunctor</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Functor</span>
-<span class="w"> </span><span class="p">{</span>
-<span class="w"> </span><span class="k">public</span><span class="o">:</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="k">public</span><span class="o">:</span>
 <span class="w">    </span><span class="n">SpecificFunctor</span><span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="o">::*</span><span class="n">_pmi</span><span class="p">)(</span><span class="n">ARG</span><span class="w"> </span><span class="n">arg</span><span class="p">),</span><span class="w"> </span><span class="n">BOUND_ARG</span><span class="w"> </span><span class="n">boundArg</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="n">m_p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
@@ -1023,11 +1084,11 @@ with one or more bound arguments:</p>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="p">(</span><span class="o">*</span><span class="n">m_p</span><span class="p">.</span><span class="o">*</span><span class="n">m_pmi</span><span class="p">)(</span><span class="n">m_boundArg</span><span class="p">,</span><span class="w"> </span><span class="n">arg</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="k">private</span><span class="o">:</span>
+<span class="w">  </span><span class="k">private</span><span class="o">:</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="o">::*</span><span class="n">m_pmi</span><span class="p">)(</span><span class="n">ARG</span><span class="w"> </span><span class="n">arg</span><span class="p">);</span>
 <span class="w">    </span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="n">m_p</span><span class="p">;</span>
 <span class="w">    </span><span class="n">BOUND_ARG</span><span class="w"> </span><span class="n">m_boundArg</span><span class="p">;</span>
-<span class="w"> </span><span class="p">};</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 <p>You can see that when the specific functor is created, the bound argument is saved
@@ -2888,6 +2949,8 @@ can also create their own custom random variables by deriving from class
 <li><p>class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ZetaRandomVariable</span></code></p></li>
 <li><p>class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">DeterministicRandomVariable</span></code></p></li>
 <li><p>class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">EmpiricalRandomVariable</span></code></p></li>
+<li><p>class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">BinomialRandomVariable</span></code></p></li>
+<li><p>class <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">BernoulliRandomVariable</span></code></p></li>
 </ul>
 </section>
 <section id="semantics-of-randomvariablestream-objects">
@@ -6781,7 +6844,7 @@ ns-3 (e.g. libxml2, gsl, sqlite, gtk, etc) and for the bindings and packaging
 <p>The project is then configured loading the configuration settings defined
 in the <code class="docutils literal notranslate"><span class="pre">ns-3-dev/setup.py</span></code> file.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Configure and build wheel</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$PYTHON setup.py bdist_wheel build_ext &quot;-DNS3_USE_LIB64=TRUE&quot;</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$PYTHON setup.py bdist_wheel build_ext</span>
 </pre></div>
 </div>
 <p>At this point, we have a wheel that only works in the current system,
@@ -7193,15 +7256,16 @@ $<span class="w"> </span>cat<span class="w"> </span>VERSION
 <span class="m">3</span>.34
 </pre></div>
 </div>
-<p>We next change the file conf.py in the contributing, tutorial, manual, and models directories
+<p>We next change the file conf.py in the contributing, installation, tutorial, manual, and models directories
 to change the strings ‘ns-3-dev’ to ns-3.34.</p>
 <p>When you are done, the ‘git diff –stat’ command should show:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>VERSION<span class="w">                         </span><span class="p">|</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>+-
 doc/contributing/source/conf.py<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>++--
+doc/installation/source/conf.py<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>++--
 doc/manual/source/conf.py<span class="w">       </span><span class="p">|</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>++--
 doc/models/source/conf.py<span class="w">       </span><span class="p">|</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>++--
 doc/tutorial/source/conf.py<span class="w">     </span><span class="p">|</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>++--
-<span class="m">5</span><span class="w"> </span>files<span class="w"> </span>changed,<span class="w"> </span><span class="m">9</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>,<span class="w"> </span><span class="m">9</span><span class="w"> </span>deletions<span class="o">(</span>-<span class="o">)</span>
+<span class="m">6</span><span class="w"> </span>files<span class="w"> </span>changed,<span class="w"> </span><span class="m">11</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>,<span class="w"> </span><span class="m">11</span><span class="w"> </span>deletions<span class="o">(</span>-<span class="o">)</span>
 </pre></div>
 </div>
 <p>Make a commit of these files:</p>
@@ -7221,9 +7285,9 @@ doc/tutorial/source/conf.py<span class="w">     </span><span class="p">|</span><
 </pre></div>
 </div>
 <p>Commit this change:</p>
-<blockquote>
-<div><p>$ git commit -m”Update availability in RELEASE_NOTES.md” RELEASE_NOTES.md</p>
-</div></blockquote>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="s2">&quot;Update availability in RELEASE_NOTES.md&quot;</span><span class="w"> </span>RELEASE_NOTES.md
+</pre></div>
+</div>
 <p>Finally, add a Git annotated tag:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span><span class="s1">&#39;ns-3.34&#39;</span><span class="w"> </span>-m<span class="s2">&quot;ns-3.34 release&quot;</span>
 </pre></div>
@@ -7437,13 +7501,13 @@ print the configuration options:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">~$ cd ns-3-dev</span>
 <span class="go">~/ns-3-dev$ ./ns3 configure --help</span>
 <span class="go">usage: ns3 configure [-h] [-d {debug,release,optimized}] [-G G]</span>
-<span class="go">                   [--cxx-standard CXX_STANDARD] [--enable-asserts]</span>
-<span class="go">                   [--disable-asserts] [--enable-examples]</span>
-<span class="go">                   [--disable-examples] [--enable-logs]</span>
-<span class="go">                   [--disable-logs] [--enable-tests]</span>
-<span class="go">                   [--disable-tests] [--enable-verbose]</span>
-<span class="go">                   [--disable-verbose]</span>
-<span class="go">                   ...</span>
+<span class="go">                     [--cxx-standard CXX_STANDARD] [--enable-asserts]</span>
+<span class="go">                     [--disable-asserts] [--enable-examples]</span>
+<span class="go">                     [--disable-examples] [--enable-logs]</span>
+<span class="go">                     [--disable-logs] [--enable-tests]</span>
+<span class="go">                     [--disable-tests] [--enable-verbose]</span>
+<span class="go">                     [--disable-verbose]</span>
+<span class="go">                     ...</span>
 
 <span class="go">positional arguments:</span>
 <span class="go">  configure</span>
@@ -9444,7 +9508,7 @@ listed by <code class="docutils literal notranslate"><span class="pre">./ns3</sp
 <span class="w">      </span><span class="s">EXECNAME</span><span class="w"> </span><span class="o">${</span><span class="nv">EXAMPLE_NAME</span><span class="o">}</span>
 <span class="w">      </span><span class="s">SOURCE_FILES</span><span class="w"> </span><span class="o">${</span><span class="nv">EXAMPLE_SOURCE_FILES</span><span class="o">}</span>
 <span class="w">      </span><span class="s">HEADER_FILES</span><span class="w"> </span><span class="o">${</span><span class="nv">EXAMPLE_HEADER_FILES</span><span class="o">}</span>
-<span class="w">      </span><span class="s">LIBRARIES_TO_LINK</span><span class="w"> </span><span class="o">${</span><span class="nv">EXAMPLE_LIBRARIES_TO_LINK</span><span class="o">}</span><span class="w"> </span><span class="o">${</span><span class="nv">optional_visualizer_lib</span><span class="o">}</span>
+<span class="w">      </span><span class="s">LIBRARIES_TO_LINK</span><span class="w"> </span><span class="o">${</span><span class="nv">EXAMPLE_LIBRARIES_TO_LINK</span><span class="o">}</span><span class="w"> </span><span class="o">${</span><span class="nv">ns3-optional-visualizer-lib</span><span class="o">}</span>
 <span class="w">      </span><span class="s">EXECUTABLE_DIRECTORY_PATH</span>
 <span class="w">        </span><span class="o">${</span><span class="nv">CMAKE_RUNTIME_OUTPUT_DIRECTORY</span><span class="o">}</span><span class="s">/examples/</span><span class="o">${</span><span class="nv">examplefolder</span><span class="o">}</span><span class="s">/</span>
 <span class="w">      </span><span class="o">${</span><span class="nv">IGNORE_PCH</span><span class="o">}</span>
@@ -9867,8 +9931,8 @@ or the src folder.</p>
 If the list <code class="docutils literal notranslate"><span class="pre">missing_dependencies</span></code> is empty, we create the example. Otherwise, we skip it.
 The example can be linked to the current module (<code class="docutils literal notranslate"><span class="pre">${lib${BLIB_EXAMPLE_LIBNAME}}</span></code>) and
 other libraries to link (<code class="docutils literal notranslate"><span class="pre">${BLIB_EXAMPLE_LIBRARIES_TO_LINK}</span></code>) and optionally to the visualizer
-module (<code class="docutils literal notranslate"><span class="pre">${optional_visualizer_lib}</span></code>).
-If the visualizer module is not enabled, <code class="docutils literal notranslate"><span class="pre">optional_visualizer_lib</span></code> is empty.</p>
+module (<code class="docutils literal notranslate"><span class="pre">${ns3-optional-visualizer-lib}</span></code>).
+If the visualizer module is not enabled, <code class="docutils literal notranslate"><span class="pre">ns3-optional-visualizer-lib</span></code> is empty.</p>
 <p>The example can also be linked to a single <em>ns-3</em> shared library (<code class="docutils literal notranslate"><span class="pre">lib-ns3-monolib</span></code>) or
 a single <em>ns-3</em> static library (<code class="docutils literal notranslate"><span class="pre">lib-ns3-static</span></code>), if either <code class="docutils literal notranslate"><span class="pre">NS3_MONOLIB=ON</span></code> or <code class="docutils literal notranslate"><span class="pre">NS3_STATIC=ON</span></code>.
 Note that both of these options are handled by the <code class="docutils literal notranslate"><span class="pre">build_exec</span></code> macro.</p>
@@ -9898,7 +9962,7 @@ Note that both of these options are handled by the <code class="docutils literal
 <span class="w">       </span><span class="s">HEADER_FILES</span><span class="w"> </span><span class="o">${</span><span class="nv">BLIB_EXAMPLE_HEADER_FILES</span><span class="o">}</span>
 <span class="w">       </span><span class="s">LIBRARIES_TO_LINK</span>
 <span class="w">         </span><span class="o">${</span><span class="nv">lib${BLIB_EXAMPLE_LIBNAME</span><span class="o">}</span><span class="s">}</span><span class="w"> </span><span class="o">${</span><span class="nv">BLIB_EXAMPLE_LIBRARIES_TO_LINK</span><span class="o">}</span>
-<span class="w">         </span><span class="o">${</span><span class="nv">optional_visualizer_lib</span><span class="o">}</span>
+<span class="w">         </span><span class="o">${</span><span class="nv">ns3-optional-visualizer-lib</span><span class="o">}</span>
 <span class="w">       </span><span class="s">EXECUTABLE_DIRECTORY_PATH</span><span class="w"> </span><span class="o">${</span><span class="nv">CMAKE_RUNTIME_OUTPUT_DIRECTORY</span><span class="o">}</span><span class="s">/</span><span class="o">${</span><span class="nv">FOLDER</span><span class="o">}</span><span class="s">/</span>
 <span class="w">       </span><span class="o">${</span><span class="nv">IGNORE_PCH</span><span class="o">}</span>
 <span class="w">     </span><span class="p">)</span>
@@ -10062,7 +10126,7 @@ manage dependencies. Here is an example for Doxygen:</p>
 
 <span class="c"># This custom macro checks for dependencies CMake find_package and program</span>
 <span class="c"># dependencies and return the missing dependencies in the third argument</span>
-<span class="nb">check_deps</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="s2">&quot;doxygen;dot;dia&quot;</span><span class="w"> </span><span class="s">doxygen_docs_missing_deps</span><span class="p">)</span>
+<span class="nb">check_deps</span><span class="p">(</span><span class="s">doxygen_docs_missing_deps</span><span class="w"> </span><span class="s">EXECUTABLES</span><span class="w"> </span><span class="s">doxygen</span><span class="w"> </span><span class="s">dot</span><span class="w"> </span><span class="s">dia</span><span class="w"> </span><span class="s">python3</span><span class="p">)</span>
 
 <span class="c"># If the variable contains missing dependencies, we stop processing doxygen targets</span>
 <span class="nb">if</span><span class="p">(</span><span class="s">doxygen_docs_missing_deps</span><span class="p">)</span>
@@ -12547,9 +12611,8 @@ But we are in <code class="docutils literal notranslate"><span class="pre">src/n
 <p>Third, it is a good idea to implement constructors and destructors rather than
 to let the compiler generate them, and to make the destructor virtual. In C++,
 note also that copy assignment operator and copy constructors are auto-generated
-if they are not defined, so if you do not want those, you should implement those
-as private members. This aspect of C++ is discussed in Scott Meyers’ Effective
-C++ book. item 45.</p>
+if they are not defined, so if you do not want those, you should declare them
+as <code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">delete</span></code>.</p>
 <p>Let’s now look at some corresponding skeletal implementation code in the .cc
 file.:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;error-model.h&quot;</span>
@@ -12605,6 +12668,26 @@ certain objects can be created via the object creation framework
 every class that defines a new GetTypeId method, and it does the actual
 registration of the class into the system.  The <a class="reference internal" href="index.html#object-model"><span class="std std-ref">Object model</span></a> chapter
 discusses this in more detail.</p>
+<p>Note: Template classes should both export the instantiated template and call
+<code class="docutils literal notranslate"><span class="pre">NS_OBJECT_TEMPLATE_CLASS_DEFINE</span> <span class="pre">(TemplateClass,</span> <span class="pre">TemplateArgument);</span></code>
+to prevent the same template from being instantiated more than a single
+time in different modules. This prevents errors such as
+<code class="docutils literal notranslate"><span class="pre">Trying</span> <span class="pre">to</span> <span class="pre">allocate</span> <span class="pre">twice</span> <span class="pre">the</span> <span class="pre">same</span> <span class="pre">uid:</span> <span class="pre">TemplateClass&lt;TemplateArgument&gt;</span></code>.</p>
+<p>An example for the <code class="docutils literal notranslate"><span class="pre">CounterCalculator&lt;uint32_t&gt;</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//.h file</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">ns3</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">extern</span><span class="w"> </span><span class="k">template</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CounterCalculator</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//.cc file</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ns3/.h file&gt;</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">ns3</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">NS_OBJECT_TEMPLATE_CLASS_DEFINE</span><span class="w"> </span><span class="p">(</span><span class="n">CounterCalculator</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>More details can be found in <a class="reference external" href="https://gitlab.com/nsnam/ns-3-dev/-/issues/761">issue #761</a>.</p>
 </section>
 <section id="including-external-files">
 <h5><span class="section-number">4.6.3.3. </span>Including External Files<a class="headerlink" href="#including-external-files" title="Link to this heading">¶</a></h5>
@@ -13136,7 +13219,7 @@ NSC_ENABLED variable that was defined up until ns-3.35:</p>
 </ul>
 <p>Again, the condition is a Python statement that can
 depend on <code class="docutils literal notranslate"><span class="pre">ns3</span></code> configuration variables.  For example,</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s2">&quot;realtime-udp-echo.py&quot;</span><span class="p">,</span> <span class="s2">&quot;ENABLE_REAL_TIME == False&quot;</span><span class="p">),</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s2">&quot;brite-generic-example&quot;</span><span class="p">,</span> <span class="s2">&quot;ENABLE_BRITE == True&quot;</span><span class="p">,</span> <span class="s2">&quot;False&quot;</span><span class="p">),</span>
 </pre></div>
 </div>
 </section>
@@ -14178,7 +14261,7 @@ identify performance bottlenecks. In some cases, they can point out hotspots
 and suggest solutions.</p>
 <p>There are many tools to profile your program, including:</p>
 <ul class="simple">
-<li><p>profilers from CPU manufacturers, such as <a class="reference external" href="https://www.amd.com/en/developer/uprof.html">AMD uProf</a> and <a class="reference external" href="https://www.intel.com/content/www/us/en/develop/documentation/get-started-with-vtune/top.html">Intel VTune</a></p></li>
+<li><p>profilers from CPU manufacturers, such as <a class="reference external" href="https://www.amd.com/en/developer/uprof.html">AMD uProf</a> and <a class="reference external" href="https://www.intel.com/content/www/us/en/docs/vtune-profiler/get-started-guide/2023-1/overview.html">Intel VTune</a></p></li>
 <li><p>profilers from the operating systems, such as Linux’s <a class="reference external" href="https://perf.wiki.kernel.org/index.php/Tutorial">Perf</a> and <a class="reference external" href="https://docs.microsoft.com/en-us/windows-hardware/test/wpt/">Windows Performance Toolkit</a></p>
 <ul>
 <li><p><a class="reference external" href="https://perf.wiki.kernel.org/index.php/Tutorial">Perf</a> also has a few graphical user interfaces available, being <a class="reference external" href="https://github.com/KDAB/hotspot">Hotspot</a> one of them</p></li>
@@ -14188,7 +14271,7 @@ and suggest solutions.</p>
 <li><p>third-party tools, such as <a class="reference external" href="https://wiki.gnome.org/Apps/Sysprof">Sysprof</a> and <a class="reference external" href="https://oprofile.sourceforge.io/faq/">Oprofile</a></p></li>
 </ul>
 <p>An overview on how to use <a class="reference external" href="https://perf.wiki.kernel.org/index.php/Tutorial">Perf</a> with <a class="reference external" href="https://github.com/KDAB/hotspot">Hotspot</a>, <a class="reference external" href="https://www.amd.com/en/developer/uprof.html">AMD uProf</a> and
-<a class="reference external" href="https://www.intel.com/content/www/us/en/develop/documentation/get-started-with-vtune/top.html">Intel VTune</a> is provided in the following sections.</p>
+<a class="reference external" href="https://www.intel.com/content/www/us/en/docs/vtune-profiler/get-started-guide/2023-1/overview.html">Intel VTune</a> is provided in the following sections.</p>
 <section id="linux-perf-and-hotspot-gui">
 <span id="id5"></span><h5><span class="section-number">4.9.2.1. </span>Linux Perf and Hotspot GUI<a class="headerlink" href="#linux-perf-and-hotspot-gui" title="Link to this heading">¶</a></h5>
 <p><a class="reference external" href="https://perf.wiki.kernel.org/index.php/Tutorial">Perf</a> is the kernel tool to measure performance of the Linux kernel,
@@ -14420,7 +14503,7 @@ cache sizes, number of cores, memory bandwidth and latency, storage throughput a
 </section>
 <section id="id8">
 <h5><span class="section-number">4.9.2.3. </span>Intel VTune<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h5>
-<p><a class="reference external" href="https://www.intel.com/content/www/us/en/develop/documentation/get-started-with-vtune/top.html">Intel VTune</a> works much like <a class="reference internal" href="#linux-perf-and-hotspot-gui">Linux Perf and Hotspot GUI</a>, but
+<p><a class="reference external" href="https://www.intel.com/content/www/us/en/docs/vtune-profiler/get-started-guide/2023-1/overview.html">Intel VTune</a> works much like <a class="reference internal" href="#linux-perf-and-hotspot-gui">Linux Perf and Hotspot GUI</a>, but
 is available in more platforms (Linux, Windows and Mac) using Intel
 processors. Differently from Perf, it provides more performance
 trackers for finer analysis.</p>
@@ -14949,6 +15032,15 @@ doxygen<span class="w">                               </span>finished<span class
 <p>Artifacts built by the CI jobs will be stored in separate subfolders
 based on the job name.</p>
 <p><code class="docutils literal notranslate"><span class="pre">~/ns-3-dev/.gitlab-ci-local/artifacts/jobname</span></code></p>
+<p>Note: some jobs may access the <code class="docutils literal notranslate"><span class="pre">CI_DEFAULT_BRANCH</span></code> environment variable,
+which is set by default to <code class="docutils literal notranslate"><span class="pre">main</span></code> instead of <code class="docutils literal notranslate"><span class="pre">master</span></code>. To change that, we need
+to create a file <code class="docutils literal notranslate"><span class="pre">~/.gitlab-ci-local/variables.yml</span></code> containing the following:</p>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">global</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">CI_DEFAULT_BRANCH</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;master&quot;</span>
+</pre></div>
+</div>
+<p>In case you are using Docker with root, you need to create this file in
+<code class="docutils literal notranslate"><span class="pre">/root/.gitlab-ci-local/variables.yml</span></code>.</p>
 </section>
 </div>
 </section>
@@ -15022,10 +15114,10 @@ to<span class="w"> </span>be<span class="w"> </span>ascii,<span class="w"> </spa
 
 Program<span class="w"> </span>Options:
 --all:<span class="w">     </span>use<span class="w"> </span>all<span class="w"> </span>schedulers<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
---cal:<span class="w">     </span>use<span class="w"> </span>CalendarSheduler<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
+--cal:<span class="w">     </span>use<span class="w"> </span>CalendarScheduler<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
 --calrev:<span class="w">  </span>reverse<span class="w"> </span>ordering<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>CalendarScheduler<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
 --heap:<span class="w">    </span>use<span class="w"> </span>HeapScheduler<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
---list:<span class="w">    </span>use<span class="w"> </span>ListSheduler<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
+--list:<span class="w">    </span>use<span class="w"> </span>ListScheduler<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
 --map:<span class="w">     </span>use<span class="w"> </span>MapScheduler<span class="w"> </span><span class="o">(</span>default<span class="o">)</span><span class="w"> </span><span class="o">[</span>true<span class="o">]</span>
 --pri:<span class="w">     </span>use<span class="w"> </span>PriorityQueue<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
 --debug:<span class="w">   </span><span class="nb">enable</span><span class="w"> </span>debugging<span class="w"> </span>output<span class="w"> </span><span class="o">[</span>false<span class="o">]</span>
@@ -15473,7 +15565,8 @@ Command<span class="w"> </span><span class="o">[</span><span class="s1">&#39;/ho
 </div>
 <p>The error message says that the program terminated unsuccessfuly, but it is
 not clear from this information what might be wrong. To examine more
-closely, try running it under the <a class="reference external" href="https://access.redhat.com/documentation/en-us/red_hat_developer_toolset/9/html/user_guide/chap-gdb">gdb debugger</a>:</p>
+closely, try running it under the
+<a class="reference external" href="https://www.nsnam.org/wiki/HOWTO_use_gdb_to_debug_program_errors">gdb debugger</a>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>run<span class="w"> </span>tcp-point-to-point<span class="w"> </span>--gdb
 Entering<span class="w"> </span>directory<span class="w"> </span><span class="s1">&#39;/home/tomh/ns-3-nsc/build&#39;</span>
 Compilation<span class="w"> </span>finished<span class="w"> </span>successfully
@@ -15600,8 +15693,8 @@ valgrind similarly:</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2006-2019.
-      Last updated on Mar 08, 2024 13:55.
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Mar 20, 2024 11:47.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>

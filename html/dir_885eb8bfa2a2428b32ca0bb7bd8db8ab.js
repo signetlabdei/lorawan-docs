@@ -15,7 +15,7 @@ var dir_885eb8bfa2a2428b32ca0bb7bd8db8ab =
     [ "sample-log-time-format.cc", "dd/d8e/sample-log-time-format_8cc.html", "dd/d8e/sample-log-time-format_8cc" ],
     [ "sample-random-variable-stream.cc", "de/d38/sample-random-variable-stream_8cc.html", null ],
     [ "sample-random-variable.cc", "d7/d9f/sample-random-variable_8cc.html", null ],
-    [ "sample-rng-plot.py", "d0/d84/sample-rng-plot_8py.html", null ],
+    [ "sample-rng-plot.py", "d0/d84/sample-rng-plot_8py.html", "d0/d84/sample-rng-plot_8py" ],
     [ "sample-show-progress.cc", "db/db1/sample-show-progress_8cc.html", "db/db1/sample-show-progress_8cc" ],
     [ "sample-simulator.cc", "da/d5a/sample-simulator_8cc.html", "da/d5a/sample-simulator_8cc" ],
     [ "sample-simulator.py", "da/da4/sample-simulator_8py.html", "da/da4/sample-simulator_8py" ],

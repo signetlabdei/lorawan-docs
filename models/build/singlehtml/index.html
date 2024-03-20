@@ -140,7 +140,7 @@ follows:</p>
 <ul class="simple">
 <li><p>Several guides that are version controlled for each release (the
 <a class="reference external" href="https://www.nsnam.org/documentation/latest/">latest release</a>) and
-<a class="reference external" href="https://www.nsnam.org/ns-3-dev/documentation/">development tree</a>:</p>
+<a class="reference external" href="https://www.nsnam.org/documentation/development-tree/">development tree</a>:</p>
 <ul>
 <li><p>Tutorial</p></li>
 <li><p>Installation Guide</p></li>
@@ -442,10 +442,10 @@ radiation pattern is then expressed as a mathematical function
 <img class="math" src="_images/math/dad3038eef47dfc9bd4372f68057820cf63499d5.png" alt="g(\theta, \phi) \longrightarrow \mathcal{R}"/> that returns the
 gain (in dB) for each possible direction of
 transmission/reception. All angles are expressed in radians.</p>
-<figure class="align-center" id="id12">
+<figure class="align-center" id="id13">
 <span id="fig-antenna-coordinate-system"></span><img alt="_images/antenna-coordinate-system.png" src="_images/antenna-coordinate-system.png" />
 <figcaption>
-<p><span class="caption-text">Coordinate system of the AntennaModel</span><a class="headerlink" href="#id12" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Coordinate system of the AntennaModel</span><a class="headerlink" href="#id13" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -494,7 +494,7 @@ antenna. Note that this radiation pattern is independent of the inclination angl
 </section>
 <section id="threegppantennamodel">
 <h5><span class="section-number">3.1.4.4. </span>ThreeGppAntennaModel<a class="headerlink" href="#threegppantennamodel" title="Link to this heading">¶</a></h5>
-<p>This model implements the antenna element described in <a class="footnote-reference brackets" href="#id11" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>38901<span class="fn-bracket">]</span></a>.
+<p>This model implements the antenna element described in <a class="footnote-reference brackets" href="#id12" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>38901<span class="fn-bracket">]</span></a>.
 Parameters are fixed from the technical report, thus no attributes nor setters are provided.
 The model is largely based on the <a class="reference internal" href="#parabolicantennamodel">ParabolicAntennaModel</a>.</p>
 </section>
@@ -508,7 +508,7 @@ solely based on the generalized location of the antenna elements.
 For details on Phased Array Antennas see for instance <a class="reference internal" href="index.html#mailloux" id="id8"><span>[Mailloux]</span></a>.</p>
 <p>Derived classes must implement the following functions:</p>
 <ul class="simple">
-<li><p>GetNumberOfElements: returns the number of antenna elements</p></li>
+<li><p>GetNumElems: returns the number of antenna elements</p></li>
 <li><p>GetElementLocation: returns the location of the antenna element with the specified index, normalized with respect to the wavelength</p></li>
 <li><p>GetElementFieldPattern: returns the horizontal and vertical components of the antenna element field pattern at the specified direction. Same polarization (configurable) for all antenna elements of the array is considered.</p></li>
 </ul>
@@ -518,9 +518,9 @@ Any class derived from AntennaModel is a valid antenna element for the PhasedArr
 <span id="gpp-antenna-model"></span><h5><span class="section-number">3.1.5.1. </span>UniformPlanarArray<a class="headerlink" href="#uniformplanararray" title="Link to this heading">¶</a></h5>
 <p>The class UniformPlanarArray is a generic implementation of Uniform Planar Arrays (UPAs),
 supporting rectangular and linear regular lattices.
-It loosely follows the implementation described in the 3GPP TR 38.901 <a class="footnote-reference brackets" href="#id11" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>38901<span class="fn-bracket">]</span></a>,
-considering only a single a single panel, i.e., <img class="math" src="_images/math/4ed359faa5c3c9fba1d1bfc6ef1925e6f5ea21af.png" alt="N_{g} = M_{g} = 1"/>.</p>
-<p>By default, the array is orthogonal to the x-axis, pointing towards the positive
+It closely follows the implementation described in the 3GPP TR 38.901 <a class="footnote-reference brackets" href="#id12" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>38901<span class="fn-bracket">]</span></a>,
+considering only a single panel, i.e., <img class="math" src="_images/math/4ed359faa5c3c9fba1d1bfc6ef1925e6f5ea21af.png" alt="N_{g} = M_{g} = 1"/>.</p>
+<p>By default, the antenna array is orthogonal to the x-axis, pointing towards the positive
 direction, but the orientation can be changed through the attributes “BearingAngle”,
 which adjusts the azimuth angle, and “DowntiltAngle”, which adjusts the elevation angle.
 The slant angle is instead fixed and assumed to be 0.</p>
@@ -528,8 +528,23 @@ The slant angle is instead fixed and assumed to be 0.</p>
 through the attributes “NumRows” and “NumColumns”, while the spacing between the horizontal
 and vertical elements can be configured through the attributes “AntennaHorizontalSpacing”
 and “AntennaVerticalSpacing”.</p>
-<p>The polarization of each antenna element in the array is determined by the polarization
-slant angle through the attribute “PolSlantAngle”, as described in <a class="footnote-reference brackets" href="#id11" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>38901<span class="fn-bracket">]</span></a> (i.e., <img class="math" src="_images/math/67744a93eb9815d579a6086823ef779c602ae5c0.png" alt="{\zeta}"/>).</p>
+<p>UniformPlannarArray supports the concept of antenna ports following the sub-array partition
+model for TXRU virtualization, as described in Section 5.2.2 of 3GPP TR 36.897 <a href="#id14"><span class="problematic" id="id10">[36897]_</span></a>.
+The number of antenna ports in vertical and horizontal directions can be configured through
+the attributes “NumVerticalPorts” and “NumHorizontalPorts”, respectively. For example,
+if “NumRows” and “NumColumns” are configured to 2 and 4, and the number of
+“NumVerticalPorts” and “NumHorizontalPorts” to 1 and 2, then the antenna elements belonging
+to the first two columns of the antenna array will belong to the first antenna port,
+and the third and the fourth columns will belong to the second antenna port. Note that
+“NumRows” and “NumColumns” must be a multiple of “NumVerticalPorts” and “NumHorizontalPorts”,
+respectively.</p>
+<p>Whether the antenna is dual-polarized or not is configured through the attribute
+“IsDualPolarized”. In case the antenna array is dual polarized, the total number
+of antenna elements is doubled and the two polarizations are overlapped in space.
+The polarization slant angle of the antenna elements belonging to the first polarization
+are configured through the attribute “PolSlantAngle”; while the antenna elements of
+the second polarization have the polarization slant angle minus 90 degrees,
+as described in <a class="footnote-reference brackets" href="#id12" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>38901<span class="fn-bracket">]</span></a> (i.e., <img class="math" src="_images/math/67744a93eb9815d579a6086823ef779c602ae5c0.png" alt="{\zeta}"/>).</p>
 <div role="list" class="citation-list">
 <div class="citation" id="balanis" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Balanis</a><span class="fn-bracket">]</span></span>
@@ -555,9 +570,9 @@ assumptions and parameters for FDD HeNB RF requirements.</p>
 </div>
 </div>
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id11" role="doc-footnote">
+<aside class="footnote brackets" id="id12" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span>38901<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id7">1</a>,<a role="doc-backlink" href="#id9">2</a>,<a role="doc-backlink" href="#id10">3</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id7">1</a>,<a role="doc-backlink" href="#id9">2</a>,<a role="doc-backlink" href="#id11">3</a>)</span>
 <p>3GPP. 2018. TR 38.901, Study on channel model for frequencies from 0.5 to 100 GHz, V15.0.0. (2018-06).</p>
 </aside>
 </aside>
@@ -565,6 +580,11 @@ assumptions and parameters for FDD HeNB RF requirements.</p>
 <div class="citation" id="mailloux" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">Mailloux</a><span class="fn-bracket">]</span></span>
 <p>Robert J. Mailloux, “Phased Array Antenna Handbook”, Artech House, 2nd Ed.</p>
+</div>
+<div class="citation" id="tr36897" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>TR36897<span class="fn-bracket">]</span></span>
+<p>3GPP. 2015. TR 36.897. Study on elevation beamforming / Full-Dimension (FD)
+Multiple Input Multiple Output (MIMO) for LTE. V13.0.0. (2015-06)</p>
 </div>
 </div>
 </section>
@@ -5418,7 +5438,7 @@ build the necessary information and configure each node’s routing table.</p>
 the entire topology. Then, for each router in the topology, the
 GlobalRouteManager executes the OSPF shortest path first (SPF) computation on
 the database, and populates the routing tables on each node.</p>
-<p>The quagga (<a class="reference external" href="http://www.quagga.net">http://www.quagga.net</a>) OSPF implementation was used as the
+<p>The quagga (<a class="reference external" href="https://www.nongnu.org/quagga/">https://www.nongnu.org/quagga/</a>) OSPF implementation was used as the
 basis for the routing computation logic. One benefit of following an existing
 OSPF SPF implementation is that OSPF already has defined link state
 advertisements for all common types of network links:</p>
@@ -5670,7 +5690,7 @@ Congestion Notification (ECN). Multipath-TCP is not yet supported in the <em>ns-
 releases.</p>
 <section id="model-history">
 <h5><span class="section-number">16.5.2.1. </span>Model history<a class="headerlink" href="#model-history" title="Link to this heading">¶</a></h5>
-<p>Until the ns-3.10 release, <em>ns-3</em> contained a port of the TCP model from <a class="reference external" href="http://www.ece.gatech.edu/research/labs/MANIACS/GTNetS/index.html">GTNetS</a>,
+<p>Until the ns-3.10 release, <em>ns-3</em> contained a port of the TCP model from <a class="reference external" href="https://web.archive.org/web/20210928123443/http://griley.ece.gatech.edu/MANIACS/GTNetS/index.html">GTNetS</a>,
 developed initially by George Riley and ported to <em>ns-3</em> by Raj Bhattacharjea.
 This implementation was substantially rewritten by Adriam Tam for ns-3.10.
 In 2015, the TCP module was redesigned in order to create a better
@@ -5696,6 +5716,9 @@ Proportional Rate Reduction (PRR) from the classic ack-clocked Fast
 Recovery algorithm.</p>
 <p>In the ns-3.34 release, the default congestion control algorithm was set
 to CUBIC from NewReno.</p>
+<p>CUBIC was extended to support Reno-friendliness (see RFC 9438 Section 4.3) in
+the ns-3.41 release.  This feature is called ‘TCP friendliness’ in earlier
+versions of the CUBIC RFCs, and in the Linux and ns-3 implementations.</p>
 </section>
 <section id="acknowledgments">
 <h5><span class="section-number">16.5.2.2. </span>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Link to this heading">¶</a></h5>
@@ -5987,11 +6010,10 @@ to allow for bandwidth probing.  Second, a hybrid slow start (HyStart)
 algorithm uses observations of delay increases in the slow start
 phase of window growth to try to exit slow start before window growth
 causes queue overflow.</p>
-<p>CUBIC is documented in <span class="target" id="index-1"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc8312.html"><strong>RFC 8312</strong></a>, and the <em>ns-3</em> implementation is based
-on the RFC more so than the Linux implementation, although the Linux 4.4
-kernel implementation (through the Direct Code Execution environment) has
-been used to validate the behavior and is fairly well aligned (see below
-section on validation).</p>
+<p>CUBIC is documented in <span class="target" id="index-1"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc9438.html"><strong>RFC 9438</strong></a>, and the <em>ns-3</em> implementation is patterned
+partly on the Linux implementation and partly on the RFC, although the Linux
+4.4 kernel implementation (through the Direct Code Execution environment) has
+been used to validate the behavior.</p>
 </section>
 <section id="linux-reno">
 <h6><span class="section-number">16.5.2.4.3. </span>Linux Reno<a class="headerlink" href="#linux-reno" title="Link to this heading">¶</a></h6>
@@ -6499,6 +6521,12 @@ be sent are less than two, Linux does not pace them and instead sends
 them back-to-back. Currently, ns-3 paces out all packets eligible to
 be sent in the same manner.</p></li>
 </ul>
+<p>It is important to also note that the current model does not implement
+Section 3.5 of RFC 8257 regarding the handling of packet loss.  This
+requirement states that DCTCP must react to lost packets in the same way
+as does a conventional TCP (as specified in RFC 5681).  The current
+DCTCP model does not implement this, and should therefore only be used
+in simulations that do not involve any packet loss on the DCTCP flows.</p>
 <p>More information about DCTCP is available in the RFC 8257:
 <a class="reference external" href="https://tools.ietf.org/html/rfc8257">https://tools.ietf.org/html/rfc8257</a></p>
 </section>
@@ -7000,7 +7028,7 @@ RFC 6582 along with SACK based loss recovery algorithm mentioned in RFC 6675.
 SACK based loss recovery is used when sender and receiver support SACK options.
 In the case when SACK options are disabled, the NewReno modification handles
 the recovery.</p>
-<p>At the start of recovery phase the congestion window is reduced diffently for
+<p>At the start of recovery phase the congestion window is reduced differently for
 NewReno and SACK based recovery. For NewReno the reduction is done as given below:</p>
 <div class="math">
 <p><img src="_images/math/373e3e96ffe78616f0be7b8f850cb0aab389a575.png" alt="cWnd = ssThresh"/></p>
@@ -8656,10 +8684,10 @@ NoiseFloor<span class="w">          </span>Max<span class="w"> </span>Sensitivit
 <span class="w">                                 </span>Acceptable<span class="w"> </span>sensitivity<span class="w"> </span>range
 </pre></div>
 </div>
-<p>The example <code class="docutils literal notranslate"><span class="pre">lr-wpan-per-plot.cc`</span> <span class="pre">shows</span> <span class="pre">that</span> <span class="pre">at</span> <span class="pre">given</span> <span class="pre">Rx</span> <span class="pre">sensitiviy,</span> <span class="pre">packets</span> <span class="pre">are</span> <span class="pre">dropped</span> <span class="pre">regardless</span> <span class="pre">of</span> <span class="pre">their</span> <span class="pre">theoretical</span> <span class="pre">error</span> <span class="pre">probability.</span>
+<p>The example <code class="docutils literal notranslate"><span class="pre">lr-wpan-per-plot.cc`</span> <span class="pre">shows</span> <span class="pre">that</span> <span class="pre">at</span> <span class="pre">given</span> <span class="pre">Rx</span> <span class="pre">sensitivity,</span> <span class="pre">packets</span> <span class="pre">are</span> <span class="pre">dropped</span> <span class="pre">regardless</span> <span class="pre">of</span> <span class="pre">their</span> <span class="pre">theoretical</span> <span class="pre">error</span> <span class="pre">probability.</span>
 <span class="pre">This</span> <span class="pre">program</span> <span class="pre">outputs</span> <span class="pre">a</span> <span class="pre">file</span> <span class="pre">named</span> <span class="pre">``802.15.4-per-vs-rxSignal.plt</span></code>.
 Loading this file into gnuplot yields a file <code class="docutils literal notranslate"><span class="pre">802.15.4-per-vs-rsSignal.eps</span></code>, which can
-be converted to pdf or other formats. Packet payload size, Tx power and Rx sensitivity can be configurated.
+be converted to pdf or other formats. Packet payload size, Tx power and Rx sensitivity can be configured.
 The point where the blue line crosses with the PER indicates the Rx sensitivity. The default output is shown below.</p>
 <figure class="align-default" id="id4">
 <span id="fig-802-15-4-per-sens"></span><img alt="_images/802-15-4-per-sens.png" src="_images/802-15-4-per-sens.png" />
@@ -8712,7 +8740,7 @@ configuration of an Attribute (<code class="docutils literal notranslate"><span 
 in the upper-layer notification callback, which can contain either the pseudo-address (48 bits) or
 the long address (64 bit) of the sender.</p>
 <p>Note also that RFC 4944 or RFC 6282 are the RFCs defining the IPv6 address compression formats
-(HC1 and IPHC respectively). It is defintely not a good idea to either mix devices using different
+(HC1 and IPHC respectively). It is definitely not a good idea to either mix devices using different
 pseudo-address format or compression types in the same network. This point is further discussed
 in the <code class="docutils literal notranslate"><span class="pre">sixlowpan</span></code> module documentation.</p>
 </section>
@@ -8803,8 +8831,8 @@ The program outputs a file named <code class="docutils literal notranslate"><spa
 Loading this file into gnuplot yields a file <code class="docutils literal notranslate"><span class="pre">802.15.4-psr-distance.eps</span></code>, which can
 be converted to pdf or other formats.  The following image shows the output
 of multiple runs using different Rx sensitivity values. A higher Rx sensitivity (lower dBm) results
-in a increased communication distance but also makes the radio suceptible to more interference from
-surronding devices.</p>
+in a increased communication distance but also makes the radio susceptible to more interference from
+surrounding devices.</p>
 <figure class="align-default" id="id6">
 <span id="fig-802-15-4-psr-distance"></span><img alt="_images/802-15-4-psr-distance.png" src="_images/802-15-4-psr-distance.png" />
 <figcaption>
@@ -16766,7 +16794,7 @@ might be produced in quantizing the MI and the error curve.</p>
 <p><img src="_images/math/74bde59a16537c544d41bcb6776a67df68719511.png" alt="\mathrm{T_{test-1}} = 0.0 \times 1 + 0.926 \times 2 + 0.074 \times 3 = 2.074
 
 \mathrm{T_{test-2}} = 0.0 \times 1 + 0.752 \times 2 + 0.248 \times 3 = 2.248"/></p>
-</div><p>The expected throughput is calculted by counting the number of transmission slots available during the simulation (e.g., the number of TTIs) and the size of the TB in the simulation, in detail:</p>
+</div><p>The expected throughput is calculated by counting the number of transmission slots available during the simulation (e.g., the number of TTIs) and the size of the TB in the simulation, in detail:</p>
 <div class="math">
 <p><img src="_images/math/11f9e6395cfe5617fdbfc408385dac4c6f708303.png" alt="\mathrm{Thr_{test-i}} = \frac{TTI_{NUM}}{T_{test-i}} TB_{size} = \left\{ \begin{array}{lll} \dfrac{1000}{2.074}66 = 31822\mbox{ bps} &amp; \mbox{ for test-1} \\ &amp; \\ \dfrac{1000}{2.248}472 = 209964\mbox{ bps} &amp; \mbox{ for test-2}\end{array} \right."/></p>
 </div><p>where <img class="math" src="_images/math/f07c5faf5141b9ac4231d7169a7a41724a9c17ce.png" alt="TTI_{NUM}"/> is the total number of TTIs in 1 second.
@@ -21241,7 +21269,7 @@ In the following we detail the models adopted.</p>
 <div class="math">
 <p><img src="_images/math/3c69cf393d8ad132a0ca1c6ac6ffe131bad1bf70.png" alt="L_\mathrm{O} = L_\mathrm{U} - 4.70 (\log{f})^2 + 18.33\log{f} - 40.94"/></p>
 </div><p>The literature lacks of extensions of the COST231 to open area (for suburban it seems that
-we can just impose C = 0); therefore we consider it a special case fo the suburban one.</p>
+we can just impose C = 0); therefore we consider it a special case of the suburban one.</p>
 </section>
 <section id="cost231propagationlossmodel">
 <h4><span class="section-number">29.1.12. </span>Cost231PropagationLossModel<a class="headerlink" href="#cost231propagationlossmodel" title="Link to this heading">¶</a></h4>
@@ -21826,12 +21854,12 @@ Conference (VTC-Fall), 2016.</p>
 aspects of communications in <em>ns-3</em>.
 The model was first introduced in
 <a class="reference internal" href="index.html#baldo2009spectrum" id="id1"><span>[Baldo2009Spectrum]</span></a>, and has been enhanced and refined over the years.</p>
-<figure class="align-center" id="id39">
+<figure class="align-center" id="id40">
 <span id="fig-spectrum-analyzer-example"></span><img alt="_images/spectrum-analyzer-example.png" src="_images/spectrum-analyzer-example.png" />
 <figcaption>
 <p><span class="caption-text">Spectrogram produced by a spectrum analyzer in a scenario
 involving wifi signals interfered by a microwave oven, as simulated
-by the example <code class="docutils literal notranslate"><span class="pre">adhoc-aloha-ideal-phy-with-microwave-oven</span></code>.</span><a class="headerlink" href="#id39" title="Link to this image">¶</a></p>
+by the example <code class="docutils literal notranslate"><span class="pre">adhoc-aloha-ideal-phy-with-microwave-oven</span></code>.</span><a class="headerlink" href="#id40" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <section id="model-description">
@@ -21857,8 +21885,12 @@ information for a signal being transmitted/received by PHY devices:</p>
 <li><p>a reference to the antenna model used by the transmitting PHY device
 to transmit this signal</p></li>
 <li><p>the duration of the signal</p></li>
-<li><p>its Power Spectral Density (PSD) of the signal, which is assumed to be constant for
-the duration of the signal.</p></li>
+<li><p>the Power Spectral Density (PSD) of the signal, which is assumed to be constant for
+the duration of the signal</p></li>
+<li><p>the frequency domain 3D spectrum channel matrix that is needed for MIMO computations
+when multiple streams are transmitted</p></li>
+<li><p>the 3D precoding matrix that is needed for MIMO computations when multiple
+streams are transmitted.</p></li>
 </ul>
 <p>The PSD is represented as a set of discrete scalar values each
 corresponding to a certain subband in frequency. The set of frequency subbands
@@ -21870,6 +21902,15 @@ class provides several arithmetic operators to allow to perform calculations
 with PSD instances. Additionally, the <code class="docutils literal notranslate"><span class="pre">SpectrumConverter</span></code> class
 provides means for the conversion of <code class="docutils literal notranslate"><span class="pre">SpectrumValue</span></code> instances from
 one <code class="docutils literal notranslate"><span class="pre">SpectrumModel</span></code> to another.</p>
+<p>The frequency domain 3D channel matrix is needed in MIMO systems in which
+multiple transmit and receive antenna ports can exist, hence the PSD is multidimensional.
+The dimensions are: the number of receive antenna ports, the number of
+transmit antenna ports, and the number of subbands in frequency (or
+resource blocks).</p>
+<p>The 3D precoding matrix is also needed in MIMO systems to be able to correctly
+perform the calculations of the received signal and interference. The dimensions are:
+the number of transmit antenna ports, the number of transmit
+streams, and the number of subbands (or resource blocks).</p>
 <p>For a more formal mathematical description of the signal model just
 described, the reader is referred to <a class="reference internal" href="index.html#baldo2009spectrum" id="id2"><span>[Baldo2009Spectrum]</span></a>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">SpectrumSignalParameters</span></code> class is meant to include only
@@ -21888,10 +21929,10 @@ received over the air.</p>
 <p>The spectrum Channel/PHY interface is defined by the base classes <code class="docutils literal notranslate"><span class="pre">SpectrumChannel</span></code>
 and <code class="docutils literal notranslate"><span class="pre">SpectrumPhy</span></code>. Their interaction simulates the transmission and
 reception of signals over the medium. The way this interaction works is depicted in <a class="reference internal" href="#fig-spectrum-channel-phy-interface"><span class="std std-ref">Sequence diagram showing the interaction between SpectrumPhy and SpectrumChannel</span></a>:</p>
-<figure class="align-center" id="id40">
+<figure class="align-center" id="id41">
 <span id="fig-spectrum-channel-phy-interface"></span><img alt="_images/spectrum-channel-phy-interface.png" src="_images/spectrum-channel-phy-interface.png" />
 <figcaption>
-<p><span class="caption-text">Sequence diagram showing the interaction between SpectrumPhy and SpectrumChannel</span><a class="headerlink" href="#id40" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Sequence diagram showing the interaction between SpectrumPhy and SpectrumChannel</span><a class="headerlink" href="#id41" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -22041,6 +22082,13 @@ type it can attempt to receive. If not, the signal is normally
 expected to be considered as interference.</p></li>
 </ul>
 </div></blockquote>
+<ul class="simple">
+<li><p>Many propagation loss and delay models can be added to these channels.
+The base class <code class="docutils literal notranslate"><span class="pre">SpectrumChannel</span></code> provides an <code class="docutils literal notranslate"><span class="pre">AssignStreams()</span></code> method
+to allow the deterministic configuration of random variable stream numbers
+with a single API call.  See the ns-3 Manual chapter on random variables
+for more information.</p></li>
+</ul>
 <section id="helpers">
 <h4><span class="section-number">30.2.1. </span>Helpers<a class="headerlink" href="#helpers" title="Link to this heading">¶</a></h4>
 <p>The helpers provided in <code class="docutils literal notranslate"><span class="pre">src/spectrum/helpers</span></code> are mainly intended
@@ -22204,11 +22252,11 @@ setting up simulations.</p>
 user-configurable PSD model that can be transmitted on the <code class="docutils literal notranslate"><span class="pre">SpectrumChannel</span></code>.
 It inherits from <code class="docutils literal notranslate"><span class="pre">SpectrumPhy</span></code> and is comprised of attributes and methods to
 create and transmit the signal on the channel.</p>
-<figure class="align-center" id="id41">
+<figure class="align-center" id="id42">
 <span id="spectrum-tv-cofdm"></span><img alt="_images/spectrum-tv-cofdm.png" src="_images/spectrum-tv-cofdm.png" />
 <figcaption>
 <p><span class="caption-text">8K COFDM signal spectrum generated from <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitter</span></code> (Left) and
-theoretical COFDM signal spectrum <a class="reference internal" href="index.html#koppcofdm" id="id4"><span>[KoppCOFDM]</span></a> (Right)</span><a class="headerlink" href="#id41" title="Link to this image">¶</a></p>
+theoretical COFDM signal spectrum <a class="reference internal" href="index.html#koppcofdm" id="id4"><span>[KoppCOFDM]</span></a> (Right)</span><a class="headerlink" href="#id42" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>One of the user-configurable attributes is the type of modulation for the TV
@@ -22243,13 +22291,13 @@ be created and transmitted on the channel.</p>
 <p>The helper class, <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitterHelper</span></code>, consists of features to
 assist users in setting up TV transmitters for their simulations. Functionality
 is also provided to easily simulate real-world scenarios.</p>
-<figure class="align-center" id="id42">
+<figure class="align-center" id="id43">
 <span id="spectrum-tv-8vsb"></span><img alt="_images/spectrum-tv-8vsb.png" src="_images/spectrum-tv-8vsb.png" />
 <figcaption>
 <p><span class="caption-text">North America ATSC channel 19 &amp; 20 signals generated using
 <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitterHelper</span></code> (Left) and theoretical 8-VSB signal
 <a class="reference internal" href="index.html#baron8vsb" id="id8"><span>[Baron8VSB]</span></a> (Right). Note that the theoretical signal is not shown in dB
-while the ns-3 generated signals are.</span><a class="headerlink" href="#id42" title="Link to this image">¶</a></p>
+while the ns-3 generated signals are.</span><a class="headerlink" href="#id43" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Using this helper class, users can easily set up TV transmitters right after
@@ -22258,13 +22306,13 @@ included are real characteristics of specific geographic regions that can be
 used to run realistic simulations. The regions currently included are
 North America, Europe, and Japan. The frequencies and bandwidth of each TV
 channel for each these regions are provided.</p>
-<figure class="align-center" id="id43">
+<figure class="align-center" id="id44">
 <span id="spectrum-tv-rand-geo-points"></span><img alt="_images/spectrum-tv-rand-geo-points.png" src="_images/spectrum-tv-rand-geo-points.png" />
 <figcaption>
 <p><span class="caption-text">Plot from MATLAB implementation of CreateRegionalTvTransmitters method in
 <code class="docutils literal notranslate"><span class="pre">TvSpectrumTransmitterHelper</span></code>. Shows 100 random points on Earth’s surface
 (with altitude 0) corresponding to TV transmitter locations within a 2000 km
-radius of 35° latitude and -100° longitude.</span><a class="headerlink" href="#id43" title="Link to this image">¶</a></p>
+radius of 35° latitude and -100° longitude.</span><a class="headerlink" href="#id44" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>A method (CreateRegionalTvTransmitters) is provided that enables users to
@@ -22328,7 +22376,7 @@ antenna. H <sub>u,s</sub> <img class="math" src="_images/math/b45fb41b4735b72ad3
 components, called clusters, each of which composed of M different rays.
 The channel matrix generation procedure accounts for large and small scale
 propagation phenomena. The classes ThreeGppSpectrumPropagationLossModel and
-ThreeGppChannelModel included in the spectrum module takes care of the generation
+ThreeGppChannelModel included in the spectrum module take care of the generation
 of the channel coefficients and the computation of the frequency-dependent
 propagation loss.</p>
 <section id="implementation">
@@ -22371,17 +22419,26 @@ self-blockage.</p>
 PhasedArraySpectrumPropagationLossModel interface and enables the modeling of frequency
 dependent propagation phenomena while taking into account the specific pair of the
 phased antenna array at the transmitter and the receiver. The main method is
-DoCalcRxPowerSpectralDensity, which takes as input the power spectral density (PSD)
-of the transmitted signal, the mobility models of the transmitting node and receiving node,
-and the phased antenna array of the transmitting node, and of the receiving node.
-Finally, it returns the PSD of the received signal.</p>
-<p>Procedure used to compute the PSD of to compute the PSD of the received signal:</p>
+DoCalcRxPowerSpectralDensity, which takes as input the SpectrumSignalParameters
+structure, which contains, among others, the power spectral density (PSD) of the
+transmitted signal, and the precoding matrix of the transmitter which is needed
+for MIMO computations. Other input parameters are the mobility models of the
+transmitting and receiving node, and the phased antenna array of the
+transmitting and receiving node.
+DoCalcRxPowerSpectralDensity computes the PSD of the received signal
+(used in case of single stream transmission), and the frequency domain 3D
+channel matrix between receive and transmit antenna ports (needed for MIMO
+computations when multiple streams are transmitted).
+Finally, it returns the SpectrumSignalParameters which contains the
+received PSD and the frequency domain 3D spectrum channel matrix.</p>
+<p>Procedure used to compute the PSD of the received signal and the frequency domain 3D
+spectrum channel matrix:</p>
 <p>1. Retrieve the beamforming vectors
 To account for the beamforming, ThreeGppSpectrumPropagationLossModel has to
 retrieve the beamforming vectors of the transmitting and receiving antennas.
 The method DoCalcRxPowerSpectralDensity uses the antenna objects
 that are passed as parameters for both the transmitting and receiving devices,
-and calls the method GetCurrentBeamformingVector to retrieve the beamforming vectors
+and calls the method GetBeamformingVector to retrieve the beamforming vectors
 of these antenna objects.</p>
 <p>2. Retrieve the channel matrix and the channel params
 The ThreeGppSpectrumPropagationLossModel relies on the ThreeGppChannelModel class
@@ -22390,12 +22447,12 @@ In particular, it makes use of the method GetChannel,
 which returns a ChannelMatrix object containing the channel
 matrix, the generation time, the node pair, and the phased antenna array pair among
 which is created this channel matrix.
-Apart from the function GetChannel, there is a function called GetParams which
+Additionally, it makes use of the method GetParams which
 returns a ChannelParams object containing the channel parameters.
 Notice that the channel information is split into these two structures
-(ChannelMatrix and ChannelParams) to support multiple collocate phased antenna arrays at
+(ChannelMatrix and ChannelParams) to support multiple collocated phased antenna arrays at
 TX/RX node. ChannelParams (also its specialization ThreeGppChannelParams structure)
-contains parameters which are common for all channels among
+contains parameters which are common for all the channels among
 the same RX/TX node pair, while ChannelMatrix contains the channel matrix for the specific pair
 of the phased antenna arrays of TX/RX nodes.
 For example, if the TX and the RX node have multiple collocated antenna arrays,
@@ -22406,24 +22463,32 @@ i.e., they share the same channel condition, cluster powers, cluster delays,
 AoD, AoA, ZoD, ZoA, K_factor, delay spread, etc.
 On the other hand, each pair of TX and RX antenna arrays has a specific channel matrix
 and fading, which depends on the actual antenna element positions and field patterns of
-each pair of antennas array subpartitions.
+each pair of antenna array subpartitions.
 The ThreeGppChannelModel instance is automatically
-created in the the ThreeGppSpectrumPropagationLossModel constructor and it can
-be configured using the method SetChannelModelAttribute ().</p>
-<p>Notice that in MultiModelSpectrumChannel in StartTx function we added a
-condition that checks whether the TX/RX SpectrumPhy instances belong to different
-TX/RX nodes. This is needed to avoid pathloss models calculations among
+created in the ThreeGppSpectrumPropagationLossModel constructor and it can
+be configured by using the method SetChannelModelAttribute.</p>
+<p>Notice that in MultiModelSpectrumChannel it is checked whether the TX/RX
+SpectrumPhy instances belong to different TX/RX nodes.
+This is needed to avoid pathloss models calculations among
 the phased antenna arrays of the same node, because there are no models yet
 in ns-3 that support the calculation of this kind of interference.</p>
 <p>4. Compute the long term component
 The method GetLongTerm returns the long term component obtained by multiplying
-the channel matrix and the beamforming vectors. To reduce the computational
-load, the long term components associated to the different channels are
-stored in the m_longTermMap and recomputed only if the associated channel
-matrix is updated or if the transmitting and/or receiving beamforming vectors
-have changed. Given the channel reciprocity assumption, for each node pair a
-single long term component is saved in the map.</p>
-<p>5. Apply the small scale fading and compute the channel gain
+the channel matrix and the beamforming vectors. The function CalculateLongTermComponent
+calculates the long term component per RX and TX port pair. Finally, GetLongTerm
+returns a 3D long term channel matrix whose dimensions are the number of the
+receive antenna ports, the number transmit antenna ports, and
+the number of clusters. When multiple ports are being configured note that
+the sub-array partition model is adopted for TXRU virtualization, as described
+in Section 5.2.2 of 3GPP TR 36.897[TR36897]_, and so equal beam weights are used for all the ports.
+Support of the full-connection model for TXRU virtualization would need extensions.
+To reduce the computational load, the long term
+components associated to the different channels are stored in the m_longTermMap
+and recomputed only if the associated channel matrix is updated or if the
+transmitting and/or receiving beamforming vectors have changed. Given the channel
+reciprocity assumption, for each node pair a single long term component is saved in the map.</p>
+<p>5. Apply the small scale fading, calculate the channel gain, generate the
+frequency domain 3D spectrum channel matrix, and finally compute the received PSD
 The method CalcBeamformingGain computes the channel gain in each sub-band and
 applies it to the PSD of the transmitted signal to obtain the received PSD.
 To compute the sub-band gain, it accounts for the Doppler phenomenon and the
@@ -22436,7 +22501,15 @@ of 3GPP TR 37.885.
 This is done by deviating the Doppler frequency by a random value, whose
 distribution depends on the parameter <img class="math" src="_images/math/44218e075ff340d5528d65b5bc8562c93aa700e3.png" alt="v_{scatt}"/>.
 The value of <img class="math" src="_images/math/44218e075ff340d5528d65b5bc8562c93aa700e3.png" alt="v_{scatt}"/> can be configured using the attribute “vScatt”
-(by default it is set to 0, so that the scattering effect is not considered).</p>
+(by default it is set to 0, so that the scattering effect is not considered).
+Function GenSpectrumChannelMatrix generates the received PSD for each pair of
+the transmit and receive antenna ports. It creates a frequency domain 3D spectrum
+channel matrix whose dimensions are the number of receive antena ports,
+the number of transmit antenna ports, and the number of resource blocks.
+Finally, the frequency domain 3D spectrum channel matrix is used to obtain the
+received PSD. In case of multiple ports at the transmitter the PSD is calculated
+by summing per each RB the real parts of the diagonal elements of the (H*P)^h * (H*P),
+where H is the frequency domain spectrum channel matrix and P is the precoding matrix.</p>
 </section>
 <section id="threegppchannelmodel">
 <h5><span class="section-number">30.4.2.3. </span>ThreeGppChannelModel<a class="headerlink" href="#threegppchannelmodel" title="Link to this heading">¶</a></h5>
@@ -22453,8 +22526,7 @@ and returns a ChannelMatrix object containing:</p>
 <li><p>the node IDs</p></li>
 <li><p>other channel parameters</p></li>
 </ul>
-<p>The ChannelMatrix objects are saved
-in the map m_channelMap and updated when the coherence time
+<p>The ChannelMatrix objects are saved in the map m_channelMap and updated when the coherence time
 expires, or in case the LOS/NLOS channel condition changes.
 The coherence time can be configured through
 the attribute “UpdatePeriod”, and should be chosen by taking into account all the
@@ -22481,7 +22553,7 @@ to configure the model.</p>
 </section>
 <section id="id19">
 <h5><span class="section-number">30.4.2.4. </span>Testing<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h5>
-<p>The test suite ThreeGppChannelTestSuite includes three test cases:</p>
+<p>The test suite ThreeGppChannelTestSuite includes five test cases:</p>
 <ul>
 <li><p>ThreeGppChannelMatrixComputationTest checks if the channel matrix has the
 correct dimensions and if it correctly normalized</p></li>
@@ -22501,6 +22573,10 @@ the beamforming vectors,</p></li>
 </ol>
 </div></blockquote>
 </li>
+<li><p>ThreeGppCalcLongTermMultiPortTest, which tests that the channel matrices are
+correctly generated when multiple transmit and receive antenna ports are used.</p></li>
+<li><p>ThreeGppMimoPolarizationTest, which tests that the channel matrices are
+correctly generated when dual-polarized antennas are being used.</p></li>
 </ul>
 <p><strong>Note:</strong> TR 38.901 includes a calibration procedure that can be used to validate
 the model, but it requires some additional features which are not currently
@@ -22536,7 +22612,7 @@ Qualcomm Incorporated.</p>
 </div>
 <div class="citation" id="tr38901" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>TR38901<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id12">1</a>,<a role="doc-backlink" href="#id15">2</a>,<a role="doc-backlink" href="#id16">3</a>,<a role="doc-backlink" href="#id17">4</a>,<a role="doc-backlink" href="#id21">5</a>,<a role="doc-backlink" href="#id24">6</a>,<a role="doc-backlink" href="#id29">7</a>,<a role="doc-backlink" href="#id32">8</a>,<a role="doc-backlink" href="#id33">9</a>,<a role="doc-backlink" href="#id34">10</a>,<a role="doc-backlink" href="#id35">11</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id12">1</a>,<a role="doc-backlink" href="#id15">2</a>,<a role="doc-backlink" href="#id16">3</a>,<a role="doc-backlink" href="#id17">4</a>,<a role="doc-backlink" href="#id21">5</a>,<a role="doc-backlink" href="#id25">6</a>,<a role="doc-backlink" href="#id30">7</a>,<a role="doc-backlink" href="#id33">8</a>,<a role="doc-backlink" href="#id34">9</a>,<a role="doc-backlink" href="#id35">10</a>,<a role="doc-backlink" href="#id36">11</a>)</span>
 <p>3GPP. 2018. TR 38.901. Study on channel for frequencies from 0.5 to
 100 GHz. V.15.0.0. (2018-06).</p>
 </div>
@@ -22555,6 +22631,11 @@ Sandra Lagen, Michele Zorzi. “Implementation of a Spatial Channel Model for
 ns-3”. Submitted to the Workshop on ns-3 (WNS3 ‘20). 2020.
 Available: <a class="reference external" href="https://arxiv.org/abs/2002.09341">https://arxiv.org/abs/2002.09341</a></p>
 </div>
+<div class="citation" id="tr36897" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>TR36897<span class="fn-bracket">]</span></span>
+<p>3GPP. 2015. TR 36.897. Study on elevation beamforming / Full-Dimension (FD)
+Multiple Input Multiple Output (MIMO) for LTE. V13.0.0. (2015-06)</p>
+</div>
 </div>
 </section>
 </section>
@@ -22563,10 +22644,10 @@ Available: <a class="reference external" href="https://arxiv.org/abs/2002.09341"
 <p>The model aims to provide a performance-oriented alternative to the 3GPP TR 38.901
 framework <a class="reference internal" href="index.html#tr38901" id="id21"><span>[TR38901]</span></a> which is implemented in the <code class="docutils literal notranslate"><span class="pre">ThreeGppSpectrumPropagationLossModel</span></code> and
 <code class="docutils literal notranslate"><span class="pre">ThreeGppChannelModel</span></code> classes and whose implementation is described in <a class="reference internal" href="index.html#zugno2020" id="id22"><span>[Zugno2020]</span></a>.
-The overall design follows the general approach of <a class="reference internal" href="index.html#polese2018" id="id23"><span>[Polese2018]</span></a>, with aim of providing
+The overall design described in <a class="reference internal" href="index.html#pagin2023" id="id23"><span>[Pagin2023]</span></a> follows the general approach of <a class="reference internal" href="index.html#polese2018" id="id24"><span>[Polese2018]</span></a>, with aim of providing
 the means for computing a 3GPP TR 38.901-like end-to-end channel gain by combining
 several statistical terms. The frequency range of applicability is the same as
-that of <a class="reference internal" href="index.html#tr38901" id="id24"><span>[TR38901]</span></a>, i.e., 0.5 - 100 GHz.</p>
+that of <a class="reference internal" href="index.html#tr38901" id="id25"><span>[TR38901]</span></a>, i.e., 0.5 - 100 GHz.</p>
 <section id="use-cases">
 <h5><span class="section-number">30.4.3.1. </span>Use-cases<a class="headerlink" href="#use-cases" title="Link to this heading">¶</a></h5>
 <p>The use-cases for this channel model comprise large-scale MIMO simulations involving a high
@@ -22578,7 +22659,7 @@ the full 3GPP TR 38.901 does not represent a viable option.</p>
 <p>The computation of the channel gain is taken care of by the <code class="docutils literal notranslate"><span class="pre">TwoRaySpectrumPropagationLossModel</span></code>
 class. In particular, the latter samples a statistical term which combines:</p>
 <ul class="simple">
-<li><p>The array and beamforming gain, computed as outlined in <a class="reference internal" href="index.html#rebato2018" id="id25"><span>[Rebato2018]</span></a> using the
+<li><p>The array and beamforming gain, computed as outlined in <a class="reference internal" href="index.html#rebato2018" id="id26"><span>[Rebato2018]</span></a> using the
 <code class="docutils literal notranslate"><span class="pre">CalcBeamformingGain</span></code> function. This term supports the presence of multiple
 antenna elements both at the transmitter and at the receiver and arbitrary antenna
 radiation patterns. Specifically, the array gain is compute as:</p></li>
@@ -22602,27 +22683,27 @@ horizontal and vertical direction respectively. The figures below depict the res
 array radiation pattern versus the relative azimuth of transmitter and receiver, for antenna
 arrays featuring 3GPP TR 38.901 (<code class="docutils literal notranslate"><span class="pre">ThreeGppAntennaModel</span></code>, top) and isotropic
 (<code class="docutils literal notranslate"><span class="pre">IsotropicAntennaModel</span></code>, bottom) antenna elements, respectively.
-These figures match the corresponding plots of <a class="reference internal" href="index.html#asplund" id="id26"><span>[Asplund]</span></a>.</p>
-<figure class="align-center" id="id44">
+These figures match the corresponding plots of <a class="reference internal" href="index.html#asplund" id="id27"><span>[Asplund]</span></a>.</p>
+<figure class="align-center" id="id45">
 <span id="fig-two-ray-spectrum-loss-model-3gpp-radiation-pattern"></span><a class="reference internal image-reference" href="_images/two-ray-spectrum-loss-model-3gpp-radiation-pattern.png"><img alt="_images/two-ray-spectrum-loss-model-3gpp-radiation-pattern.png" src="_images/two-ray-spectrum-loss-model-3gpp-radiation-pattern.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-text">Radiation pattern produced by the <code class="docutils literal notranslate"><span class="pre">CalcBeamformingGain</span></code> method when using
 antenna arrays featuring <code class="docutils literal notranslate"><span class="pre">ThreeGppAntennaModel</span></code> antenna elements, for various
-Uniform Planar Array (UPA) configurations.</span><a class="headerlink" href="#id44" title="Link to this image">¶</a></p>
+Uniform Planar Array (UPA) configurations.</span><a class="headerlink" href="#id45" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
-<figure class="align-center" id="id45">
+<figure class="align-center" id="id46">
 <span id="fig-two-ray-spectrum-loss-model-iso-radiation-pattern"></span><a class="reference internal image-reference" href="_images/two-ray-spectrum-loss-model-iso-radiation-pattern.png"><img alt="_images/two-ray-spectrum-loss-model-iso-radiation-pattern.png" src="_images/two-ray-spectrum-loss-model-iso-radiation-pattern.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-text">Radiation pattern produced by the <code class="docutils literal notranslate"><span class="pre">CalcBeamformingGain</span></code> method when using
 antenna arrays featuring <code class="docutils literal notranslate"><span class="pre">IsotropicAntennaModel</span></code> antenna elements, for various
-Uniform Planar Array (UPA) configurations.</span><a class="headerlink" href="#id45" title="Link to this image">¶</a></p>
+Uniform Planar Array (UPA) configurations.</span><a class="headerlink" href="#id46" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Whenever the link is in NLOS, a penalty factor is introduced, to account for beam
-misalignment due to the lack of a dominant multipath component <a class="reference internal" href="index.html#kulkarni" id="id27"><span>[Kulkarni]</span></a>.</p>
+misalignment due to the lack of a dominant multipath component <a class="reference internal" href="index.html#kulkarni" id="id28"><span>[Kulkarni]</span></a>.</p>
 <ul class="simple">
-<li><p>A fast fading term, sampled using the Fluctuating Two Ray (FTR) model distribution <a class="reference internal" href="index.html#romero" id="id28"><span>[Romero]</span></a>.
+<li><p>A fast fading term, sampled using the Fluctuating Two Ray (FTR) model distribution <a class="reference internal" href="index.html#romero" id="id29"><span>[Romero]</span></a>.
 The latter is a fading model which is more general than typical ones, taking into account two
 dominant specular components and a mixture of scattered paths. As, a consequence it has
 been shown to provide a better fit to fading phenomena at mmWaves. The model parameters
@@ -22645,11 +22726,11 @@ has been used as a reference to estimate the FTR parameters yielding the closest
 used in conjunction of the path loss and shadowing capability provided by the
 <code class="docutils literal notranslate"><span class="pre">ThreeGppPropagationLossModel</span></code> class.
 Indeed, the goal of this model is to provide channel realizations which are as close
-as possible to ones of <a class="reference internal" href="index.html#tr38901" id="id29"><span>[TR38901]</span></a>, but at a fraction of the complexity. Since the
+as possible to ones of <a class="reference internal" href="index.html#tr38901" id="id30"><span>[TR38901]</span></a>, but at a fraction of the complexity. Since the
 path loss and shadowing terms are not computationally demanding anyway, the ones of
-<a class="reference internal" href="index.html#zugno2020" id="id30"><span>[Zugno2020]</span></a> have been kept;</p></li>
+<a class="reference internal" href="index.html#zugno2020" id="id31"><span>[Zugno2020]</span></a> have been kept;</p></li>
 <li><p>Currently, the value of NLoS beamforming factor penalty factor is taken from
-the preliminary work of <a class="reference internal" href="index.html#kulkarni" id="id31"><span>[Kulkarni]</span></a> and it is scenario-independent; As future
+the preliminary work of <a class="reference internal" href="index.html#kulkarni" id="id32"><span>[Kulkarni]</span></a> and it is scenario-independent; As future
 work, the possibility of using scenario-dependent penalty factors will be
 investigated.</p></li>
 </ul>
@@ -22659,7 +22740,7 @@ investigated.</p></li>
 <h5><span class="section-number">30.4.3.3. </span>Calibration<a class="headerlink" href="#calibration" title="Link to this heading">¶</a></h5>
 <p>The purpose of the calibration procedures is to compute offline a look-up table which
 associates the FTR fading model parameters with the simulation parameters.
-In particular, the <a class="reference internal" href="index.html#tr38901" id="id32"><span>[TR38901]</span></a> fading distributions depend on:</p>
+In particular, the <a class="reference internal" href="index.html#tr38901" id="id33"><span>[TR38901]</span></a> fading distributions depend on:</p>
 <ul class="simple">
 <li><p>The scenario (RMa, UMa, UMi-StreetCanyon, InH-OfficeOpen, InH-OfficeMixed);</p></li>
 <li><p>The LOS condition (LoS/NLoS); and</p></li>
@@ -22667,7 +22748,7 @@ In particular, the <a class="reference internal" href="index.html#tr38901" id="i
 </ul>
 <p>As a consequence, the calibration output is a map which associates LoS condition and
 scenario to a list of carrier frequency-FTR parameters values. The latter represent the
-FTR parameters yielding channel realizations which exhibit the closest statistics to <a class="reference internal" href="index.html#tr38901" id="id33"><span>[TR38901]</span></a>.</p>
+FTR parameters yielding channel realizations which exhibit the closest statistics to <a class="reference internal" href="index.html#tr38901" id="id34"><span>[TR38901]</span></a>.</p>
 <p>The actual calibration is a two-step procedure which:</p>
 <p>1. First generates reference channel gain curves using the
 <code class="docutils literal notranslate"><span class="pre">src/spectrum/examples/three-gpp-two-ray-channel-calibration.cc</span></code> simulation script.
@@ -22676,20 +22757,20 @@ the end-to-end channel gain by setting the speed of the TX and RX pair to <img c
 and fixing the LOS condition. In such a way, any variation around the mean is due to the small-scale fading only.
 The channel gain samples are produced, and returned on output conditioned on the value of
 <code class="docutils literal notranslate"><span class="pre">enableOutput</span></code>, for each combination of LoS condition, channel model scenario and carrier frequency. The
-latter cover the whole <a class="reference internal" href="index.html#tr38901" id="id34"><span>[TR38901]</span></a> frequency range of 0.5 - 100 GHz with a relatively sparse resolution
+latter cover the whole <a class="reference internal" href="index.html#tr38901" id="id35"><span>[TR38901]</span></a> frequency range of 0.5 - 100 GHz with a relatively sparse resolution
 (500 MHz), since the dependency of the fading distribution with respect to the carrier frequency is actually
 relatively weak.</p>
-<figure class="align-center" id="id46">
+<figure class="align-center" id="id47">
 <span id="fig-three-gpp-gain-reference-gain-vs-fc"></span><a class="reference internal image-reference" href="_images/three-gpp-gain-reference-gain-vs-fc.png"><img alt="_images/three-gpp-gain-reference-gain-vs-fc.png" src="_images/three-gpp-gain-reference-gain-vs-fc.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-text">Empirical CDF of the reference channel gains obtained using the  <code class="docutils literal notranslate"><span class="pre">three-gpp-two-ray-channel-calibration</span></code>
 simulation script when keeping a fixed LoS condition and channel scenario and varying the carrier
-frequency only.</span><a class="headerlink" href="#id46" title="Link to this image">¶</a></p>
+frequency only.</span><a class="headerlink" href="#id47" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>2. Then, the output of the above script is parsed by the <code class="docutils literal notranslate"><span class="pre">two-ray-to-three-gpp-ch-calibration.py</span></code>
 Python companion script. In particular, reference ECDFs are obtained from the channel gains sampled using the
-model of <a class="reference internal" href="index.html#tr38901" id="id35"><span>[TR38901]</span></a>. In turn, the reference ECDFs (one for each LoS condition, channel model scenario
+model of <a class="reference internal" href="index.html#tr38901" id="id36"><span>[TR38901]</span></a>. In turn, the reference ECDFs (one for each LoS condition, channel model scenario
 and carrier frequency combination) are compared to FTR distributions ECDFs obtained using different values
 of the parameters. Finally, the parameters which provide the best fit (in a goodness-of-fit sense) for
 the specific scenario, LOS condition and carrier frequency are found. The parameters to test are picked initially
@@ -22698,12 +22779,12 @@ the previous search runs by scanning the neighborhood of the most recent identif
 In such regard, the Anderson-Darling statistical test is used to rank the various FTR distributions
 and eventually pick the one providing the closest approximation to the reference statistics.</p>
 </section>
-<section id="id36">
-<h5><span class="section-number">30.4.3.4. </span>Testing<a class="headerlink" href="#id36" title="Link to this heading">¶</a></h5>
+<section id="id37">
+<h5><span class="section-number">30.4.3.4. </span>Testing<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h5>
 <p>The test suite <code class="docutils literal notranslate"><span class="pre">TwoRaySplmTestSuite</span></code> includes three test cases:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">FtrFadingModelAverageTest</span></code>, which checks that the average of the Fluctuating Two Ray (FTR)
-fading model realizations is consistent with the theoretical value provided in <a class="reference internal" href="index.html#romero" id="id37"><span>[Romero]</span></a>.</p></li>
+fading model realizations is consistent with the theoretical value provided in <a class="reference internal" href="index.html#romero" id="id38"><span>[Romero]</span></a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ArrayResponseTest</span></code>, which checks that the overall array response at boresight computed by the ù
 <code class="docutils literal notranslate"><span class="pre">CalcBeamformingGain</span></code> function coincides with the expected theoretical values.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">OverallGainAverageTest</span></code>, which checks that the average overall channel gain obtained using the
@@ -22712,32 +22793,38 @@ fading model realizations is consistent with the theoretical value provided in <
 the <code class="docutils literal notranslate"><span class="pre">ThreeGppSpectrumPropagationLossModel</span></code> and <code class="docutils literal notranslate"><span class="pre">ThreeGppChannelModel</span></code> classes.</p></li>
 </ul>
 </section>
-<section id="id38">
-<h5><span class="section-number">30.4.3.5. </span>References<a class="headerlink" href="#id38" title="Link to this heading">¶</a></h5>
+<section id="id39">
+<h5><span class="section-number">30.4.3.5. </span>References<a class="headerlink" href="#id39" title="Link to this heading">¶</a></h5>
 <div role="list" class="citation-list">
+<div class="citation" id="pagin2023" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id23">Pagin2023</a><span class="fn-bracket">]</span></span>
+<p>Pagin, Matteo, Sandra Lagen, Biljana Bojovic, Michele Polese,
+Michele Zorzi. 2023. “Improving the Efficiency of MIMO Simulations in ns-3”
+In Proceedings of the 2023 Workshop on ns-3, pp. 1–9. 2023</p>
+</div>
 <div class="citation" id="zugno2020" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Zugno2020<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id22">1</a>,<a role="doc-backlink" href="#id30">2</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id22">1</a>,<a role="doc-backlink" href="#id31">2</a>)</span>
 <p>Zugno, Tommaso, Michele Polese, Natale Patriciello, Biljana Bojović,
 Sandra Lagen, Michele Zorzi. “Implementation of a spatial channel model for ns-3.”
 In Proceedings of the 2020 Workshop on ns-3, pp. 49-56. 2020.</p>
 </div>
 <div class="citation" id="polese2018" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id23">Polese2018</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id24">Polese2018</a><span class="fn-bracket">]</span></span>
 <p>Michele Polese, Michele Zorzi. “Impact of channel models on
 the end-to-end performance of mmwave cellular networks”. In: 2018 IEEE 19th
 International Workshop on Signal Processing Advances in Wireless Communications
 (SPAWC).</p>
 </div>
 <div class="citation" id="rebato2018" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id25">Rebato2018</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id26">Rebato2018</a><span class="fn-bracket">]</span></span>
 <p>Rebato, Mattia, Laura Resteghini, Christian Mazzucco, Michele Zorzi.
 “Study of realistic antenna patterns in 5G mmWave cellular scenarios”. In: 2018
 IEEE International Conference on Communications (ICC).</p>
 </div>
 <div class="citation" id="romero" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Romero<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id28">1</a>,<a role="doc-backlink" href="#id37">2</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id29">1</a>,<a role="doc-backlink" href="#id38">2</a>)</span>
 <p>Romero-Jerez, Juan M., F. Javier Lopez-Martinez, José F. Paris,
 Andrea J. Goldsmith. “The fluctuating two-ray fading model: Statistical
 characterization and performance analysis”. In: IEEE Transactions on Wireless
@@ -22745,13 +22832,13 @@ Communications 16.7 (2017).</p>
 </div>
 <div class="citation" id="kulkarni" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Kulkarni<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id27">1</a>,<a role="doc-backlink" href="#id31">2</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id28">1</a>,<a role="doc-backlink" href="#id32">2</a>)</span>
 <p>Kulkarni, Mandar N., Eugene Visotsky, Jeffrey G. Andrews. “Correction
 factor for analysis of MIMO wireless networks with highly directional beamforming.”,
 IEEE Wireless Communications Letters, 2018</p>
 </div>
 <div class="citation" id="asplund" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id26">Asplund</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id27">Asplund</a><span class="fn-bracket">]</span></span>
 <p>Asplund, Henrik, David Astely, Peter von Butovitsch, Thomas Chapman,
 Mattias Frenne, Farshid Ghasemzadeh, Måns Hagström et al. Advanced Antenna Systems
 for 5G Network Deployments: Bridging the Gap Between Theory and Practice.
@@ -22800,8 +22887,6 @@ The attributes are:</p>
 <li><p>FragmentReassemblyListSize (integer, default 0), indicating the number of packets that can be reassembled at the same time. If the limit is reached, the oldest packet is discarded. Zero means infinite.</p></li>
 <li><p>FragmentExpirationTimeout (Time, default 60 seconds), being the timeout to wait for further fragments before discarding a partial packet.</p></li>
 <li><p>CompressionThreshold (unsigned 32 bits integer, default 0), minimum compressed payload size.</p></li>
-<li><p>ForceEtherType (boolean, default false).</p></li>
-<li><p>EtherType (unsigned 16 bits integer, default 0xFFFF), to force a particular L2 EtherType.</p></li>
 <li><p>UseMeshUnder (boolean, default false), it enables mesh-under flood routing.</p></li>
 <li><p>MeshUnderRadius (unsigned 8 bits integer, default 10), the maximum number of hops that a packet will be forwarded.</p></li>
 <li><p>MeshCacheLength (unsigned 16 bits integer, default 10), the length of the cache for each source.</p></li>
@@ -22812,21 +22897,8 @@ option. If a compressed packet size is less than the threshold, the uncompressed
 used (plus one byte for the correct dispatch header).
 This option is useful when a MAC requires a minimum frame size (e.g., ContikiMAC) and the
 compression would violate the requirement.</p>
-<p>The last two attributes are needed to use the module with a NetDevice other than 802.15.4, as
-neither IANA or IEEE did reserve an EtherType for 6LoWPAN. As a consequence there might be a
-conflict with the L2 multiplexer/demultiplexer which is based on EtherType. The default
-value is 0xFFFF, which is reserved by IEEE (see <a class="reference internal" href="index.html#iana802" id="id1"><span>[IANA802]</span></a> and <a class="reference internal" href="index.html#ethertype" id="id2"><span>[Ethertype]</span></a>).
-The default module behaviour is to not change the EtherType, however this would not work with
-any NetDevice actually understanding and using the EtherType.</p>
-<p>Note that the <cite>ForceEtherType</cite> parameter have also a direct effect on the MAC address kind the
-module is expecting to handle:
-* ForceEtherType true: Mac48Address (Ethernet, WiFi, etc.).
-* ForceEtherType false: Mac16Address or Mac64Address (IEEE 802.15.4).</p>
-<p>Note that using 6LoWPAN over any NetDevice other than 802.15.4 will produce valid .pcap files,
-but they will not be correctly dissected by Wireshark.
-The reason lies on the fact that 6LoWPAN was really meant to be used only over 802.15.4, so
-Wireshark dissectors will not even try to decode 6LoWPAN headers on top of protocols other than
-802.15.4.</p>
+<p>Note that 6LoWPAN will use an EtherType equal to 0xA0ED, as mandated by <span class="target" id="index-8"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc7973.html"><strong>RFC 7973</strong></a>.
+If the device does not support EtherTypes (e.g., 802.15.4), this value is discarded.</p>
 <p>The Trace sources are:</p>
 <ul class="simple">
 <li><p>Tx - exposing packet (including 6LoWPAN header), SixLoWPanNetDevice Ptr, interface index.</p></li>
@@ -22838,7 +22910,7 @@ invoked when a packet (or a fragment) is discarded.</p>
 </section>
 <section id="mesh-under-routing">
 <h5><span class="section-number">31.1.1.2. </span>Mesh-Under routing<a class="headerlink" href="#mesh-under-routing" title="Link to this heading">¶</a></h5>
-<p>The module provides a very simple mesh-under routing <a class="reference internal" href="index.html#shelby" id="id3"><span>[Shelby]</span></a>, implemented as a flooding
+<p>The module provides a very simple mesh-under routing <a class="reference internal" href="index.html#shelby" id="id1"><span>[Shelby]</span></a>, implemented as a flooding
 (a mesh-under routing protocol is a routing system implemented below IP).</p>
 <p>This functionality can be activated through the UseMeshUnder attribute and fine-tuned using
 the MeshUnderRadius and MeshUnderJitter attributes.</p>
@@ -22854,16 +22926,16 @@ attribute.</p>
 <h4><span class="section-number">31.1.2. </span>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Link to this heading">¶</a></h4>
 <section id="context-based-compression">
 <h5><span class="section-number">31.1.2.1. </span>Context-based compression<a class="headerlink" href="#context-based-compression" title="Link to this heading">¶</a></h5>
-<p>IPHC sateful (context-based) compression is supported but, since <span class="target" id="index-8"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6775.html"><strong>RFC 6775</strong></a>
+<p>IPHC sateful (context-based) compression is supported but, since <span class="target" id="index-9"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6775.html"><strong>RFC 6775</strong></a>
 (“Neighbor Discovery Optimization for IPv6 over Low-Power Wireless Personal Area Networks (6LoWPANs)”)
 is not yet implemented, it is necessary to add the context to the nodes manually.</p>
 </section>
 <section id="lowpam-nd">
 <h5><span class="section-number">31.1.2.2. </span>6LoWPAM-ND<a class="headerlink" href="#lowpam-nd" title="Link to this heading">¶</a></h5>
-<p>Future versions of this module will support <span class="target" id="index-9"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6775.html"><strong>RFC 6775</strong></a>, however no timeframe is guaranteed.</p>
+<p>Future versions of this module will support <span class="target" id="index-10"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6775.html"><strong>RFC 6775</strong></a>, however no timeframe is guaranteed.</p>
 </section>
-<section id="id4">
-<h5><span class="section-number">31.1.2.3. </span>Mesh-under routing<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h5>
+<section id="id2">
+<h5><span class="section-number">31.1.2.3. </span>Mesh-under routing<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h5>
 <p>It would be a good idea to improve the mesh-under flooding by providing the following:</p>
 <ul class="simple">
 <li><p>Adaptive hop-limit calculation,</p></li>
@@ -22873,7 +22945,7 @@ is not yet implemented, it is necessary to add the context to the nodes manually
 </section>
 <section id="mixing-compression-types-in-a-pan">
 <h5><span class="section-number">31.1.2.4. </span>Mixing compression types in a PAN<a class="headerlink" href="#mixing-compression-types-in-a-pan" title="Link to this heading">¶</a></h5>
-<p>The IPv6/MAC addressing scheme defined in <span class="target" id="index-10"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6282.html"><strong>RFC 6282</strong></a> and <span class="target" id="index-11"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc4944.html"><strong>RFC 4944</strong></a> is different.
+<p>The IPv6/MAC addressing scheme defined in <span class="target" id="index-11"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6282.html"><strong>RFC 6282</strong></a> and <span class="target" id="index-12"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc4944.html"><strong>RFC 4944</strong></a> is different.
 One adds the PanId in the pseudo-MAC address (4944) and the other doesn’t (6282).</p>
 <p>The expected use cases (confirmed by the RFC editor) is to <em>never</em> have a mixed environment
 where part of the nodes are using HC1 and part IPHC because this would lead to confusion on
@@ -22899,15 +22971,15 @@ not been tested.</p>
 <h4><span class="section-number">31.1.3. </span>References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h4>
 <div role="list" class="citation-list">
 <div class="citation" id="iana802" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">IANA802</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span>IANA802<span class="fn-bracket">]</span></span>
 <p>IANA, assigned IEEE 802 numbers: <a class="reference external" href="http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xml">http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xml</a></p>
 </div>
 <div class="citation" id="ethertype" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Ethertype</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span>Ethertype<span class="fn-bracket">]</span></span>
 <p>IEEE Ethertype numbers: <a class="reference external" href="http://standards.ieee.org/develop/regauth/ethertype/eth.txt">http://standards.ieee.org/develop/regauth/ethertype/eth.txt</a></p>
 </div>
 <div class="citation" id="shelby" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">Shelby</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Shelby</a><span class="fn-bracket">]</span></span>
 <ol class="upperalpha simple" start="26">
 <li><p>Shelby and C. Bormann, 6LoWPAN: The Wireless Embedded Internet. Wiley, 2011. [Online]. Available: <a class="reference external" href="https://books.google.it/books?id=3Nm7ZCxscMQC">https://books.google.it/books?id=3Nm7ZCxscMQC</a></p></li>
 </ol>
@@ -22957,7 +23029,7 @@ interpreted and validated.</p>
 <p>Currently there are three models:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ns3::OrbisTopologyReader</span></code> for <a class="reference external" href="https://web.archive.org/web/20181102004219/http://sysnet.ucsd.edu/~pmahadevan/topo_research/topo.html">Orbis</a> 0.7 traces</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ns3::InetTopologyReader</span></code> for <a class="reference external" href="http://topology.eecs.umich.edu/inet/">Inet</a> 3.0 traces</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ns3::InetTopologyReader</span></code> for <a class="reference external" href="https://web.archive.org/web/20210308100536/http://topology.eecs.umich.edu/inet/">Inet</a> 3.0 traces</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ns3::RocketfuelTopologyReader</span></code> for <a class="reference external" href="http://www.cs.washington.edu/research/networking/rocketfuel/">Rocketfuel</a> traces</p></li>
 </ul>
 <p>An helper <code class="docutils literal notranslate"><span class="pre">ns3::TopologyReaderHelper</span></code> is provided to assist on trivial tasks.</p>
@@ -23677,7 +23749,7 @@ class.</p>
 <div class="citation" id="ref2" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">Ref2</a><span class="fn-bracket">]</span></span>
 <ol class="upperalpha simple" start="10">
-<li><p>Vehent; Journey to the Center of the Linux Kernel: Traffic Control, Shaping and QoS; Available online at <a class="reference external" href="http://wiki.linuxwall.info/doku.php/en:resources:dossiers:networking:traffic_control#tbf_-_token_bucket_filter">http://wiki.linuxwall.info/doku.php/en:resources:dossiers:networking:traffic_control#tbf_-_token_bucket_filter</a>.</p></li>
+<li><p>Vehent; Journey to the Center of the Linux Kernel: Traffic Control, Shaping and QoS; Available online at <a class="reference external" href="https://web.archive.org/web/20190930031243/http://wiki.linuxwall.info/doku.php/en:ressources:dossiers:networking:traffic_control#tbf_-_token_bucket_filter">https://web.archive.org/web/20190930031243/http://wiki.linuxwall.info/doku.php/en:ressources:dossiers:networking:traffic_control#tbf_-_token_bucket_filter</a>.</p></li>
 </ol>
 </div>
 <div class="citation" id="ref3" role="doc-biblioentry">
@@ -23917,7 +23989,7 @@ as shown below:</p>
 <section id="validation">
 <h4><span class="section-number">33.7.2. </span>Validation<a class="headerlink" href="#validation" title="Link to this heading">¶</a></h4>
 <p>The RED model has been validated and the report is currently stored
-at: <a class="reference external" href="https://github.com/downloads/talau/ns-3-tcp-red/report-red-ns3.pdf">https://github.com/downloads/talau/ns-3-tcp-red/report-red-ns3.pdf</a></p>
+at: <a class="reference external" href="https://gitlab.com/nsnam/ns-3-dev/uploads/6937dac2431a0b61209728ecbfd442ac/report-red-ns3.pdf">https://gitlab.com/nsnam/ns-3-dev/uploads/6937dac2431a0b61209728ecbfd442ac/report-red-ns3.pdf</a></p>
 </section>
 </section>
 <span id="document-codel"></span><section id="codel-queue-disc">
@@ -25435,6 +25507,11 @@ where some limitations in the models exist. Support for 802.11n, ac, ax and be i
 <li><p>OperationalRateSet is assumed to contain all mandatory rates (see
 <a class="reference external" href="https://gitlab.com/nsnam/ns-3-dev/-/issues/183">issue 183</a>)</p></li>
 <li><p>The wifi manager always selects the lowest basic rate for management frames.</p></li>
+<li><p>If a STA (AP or non-AP) supports VHT, a Block Ack agreement is always setup once
+a first packet is enqueued regardless of whether it will be transmitted in an A-MPDU.</p></li>
+<li><p>Once an A-MSDU is created, it is no longer modified, even before it is actually transmitted
+for the first time. This means that this A-MSDU cannot be aggregated to other MSDUs using A-MSDU
+aggregation.</p></li>
 </ul>
 </section>
 <section id="design-details">
@@ -25950,6 +26027,22 @@ which would be ignored otherwise. This is illustrated in Figure <a class="refere
 </figcaption>
 </figure>
 </section>
+<section id="mu-mimo-phy-support">
+<h6><span class="section-number">35.1.3.1.9. </span>MU-MIMO PHY support<a class="headerlink" href="#mu-mimo-phy-support" title="Link to this heading">¶</a></h6>
+<p>There is a basic support for MU-MIMO at the PHY layer that has been introduced in release
+ns-3.40. The current model can be used for both downlink and uplink MU-MIMO transmissions.</p>
+<p>The use of OFDMA and MU-MIMO for Multi-User transmissions depends on how the TXVECTOR
+is filled in by the MAC layer (not implemented yet). Since mixed OFDMA and MU-MIMO
+configurations are not supported, the TXVECTOR determines it carries information for
+MU-MIMO if all users are assigned the same RU, otherwise it corresponds to an OFDMA
+transmission.</p>
+<p>At the PHY layer, OFDMA and MU-MIMO transmissions are handled in a similar way, the main difference
+lies in MU-MIMO having the same spectrum shared simultaneously with multiple transmitters (for
+the uplink direction). The current PHY abstraction model assumes perfect conditions where the
+interference helper is able to detect signals belonging to the same MU-MIMO transmission and make
+sure they do not interfere with each others. Interference with other signals, including other
+MU-MIMO transmissions, is still supported by the model.</p>
+</section>
 </section>
 <section id="the-mac-model">
 <h5><span class="section-number">35.1.3.2. </span>The MAC model<a class="headerlink" href="#the-mac-model" title="Link to this heading">¶</a></h5>
@@ -25993,7 +26086,10 @@ the STA will try to reassociate with the existing AP.</p>
 the rest of the device that the link is down (association is lost) and
 restart the scanning process. Note that this can also happen when an
 association request fails without explicit refusal (i.e., the AP fails to
-respond to association request).</p>
+respond to association request). In case of non-AP MLDs, in order for losing
+association, it is necessary that no beacon is received on any link for an
+interval of duration equal to the maximum number of missed beacons times the
+interval between two consecutive Beacon frames.</p>
 </section>
 <section id="roaming">
 <h6><span class="section-number">35.1.3.2.2. </span>Roaming<a class="headerlink" href="#roaming" title="Link to this heading">¶</a></h6>
@@ -26070,6 +26166,8 @@ one and only one of the following functions:</p>
 <ul class="simple">
 <li><p>Decrement the backoff timer.</p></li>
 <li><p>Initiate the transmission of a frame exchange sequence.</p></li>
+<li><p>Invoke the backoff procedure due to choosing not to transmit (to be included
+in the version of the standard following IEEE 802.11-2020)</p></li>
 <li><p>Invoke the backoff procedure due to an internal collision.</p></li>
 <li><p>Do nothing.</p></li>
 </ul>
@@ -26259,45 +26357,130 @@ of the stations.</p>
 <section id="enhanced-multi-link-single-radio-operation-emlsr">
 <h6><span class="section-number">35.1.3.2.9. </span>Enhanced multi-link single radio operation (EMLSR)<a class="headerlink" href="#enhanced-multi-link-single-radio-operation-emlsr" title="Link to this heading">¶</a></h6>
 <p>The IEEE 802.11be amendment introduced EMLSR operating mode to allow a non-AP MLD to alternate
-frame exchanges over a subset of setup links identified as EMLSR links. <em>ns-3</em> supports EMLSR
-operations as described in the following.</p>
-<section id="non-ap-mld-side">
-<h6 aria-level="7"><span class="section-number">35.1.3.2.9.1. </span>Non-AP MLD side<a class="headerlink" href="#non-ap-mld-side" title="Link to this heading">¶</a></h6>
-<p>A non-AP MLD supports EMLSR operating mode if the <code class="docutils literal notranslate"><span class="pre">EmlsrActivated</span></code> attribute of the EHT
-configuration is set to true. In such a case, the WifiMacHelper will install an EMLSR Manager
-by using the type and attribute values configured through the <code class="docutils literal notranslate"><span class="pre">SetEmlsrManager</span></code> method. The
-EMLSR Manager is a base class providing the <code class="docutils literal notranslate"><span class="pre">EmlsrLinkSet</span></code> attribute, which can be used to
-enable or disable EMLSR mode (after multi-link setup, EMLSR mode is disabled by default). Setting
-the <code class="docutils literal notranslate"><span class="pre">EmlsrLinkSet</span></code> attribute triggers the transmission of an EML Operating Mode Notification
-frame to the AP to communicate the new set of EMLSR links, if ML setup has been completed.
-Otherwise, the set of EMLSR links is stored and the EML Operating Mode Notification frame is
-sent as soon as the ML setup is completed. The selection of the link used to transmit
-the EML Operating Mode Notification frame is done by the EMLSR Manager subclass. The default
-EMLSR Manager subclass, <code class="docutils literal notranslate"><span class="pre">DefaultEmlsrManager</span></code>, selects the link that was used to perform
-ML setup. When the non-AP MLD receives the acknowledgment for the EML Operating Mode Notification
-frame, it starts a timer whose duration is the transition timeout advertised by the AP MLD.
-When the timer expires, or the non-AP MLD receives an EML Operating Mode Notification frame
-from the AP MLD, the EMLSR mode is assumed to be enabled (or disabled).</p>
+frame exchanges over a subset of setup links identified as EMLSR links (see section 35.3.17 of
+IEEE 802.11be D4.1). <em>ns-3</em> supports EMLSR operations as described in the following.</p>
+<section id="architecture-of-a-non-ap-mld-supporting-emlsr-operating-mode">
+<h6 aria-level="7"><span class="section-number">35.1.3.2.9.1. </span>Architecture of a non-AP MLD supporting EMLSR operating mode<a class="headerlink" href="#architecture-of-a-non-ap-mld-supporting-emlsr-operating-mode" title="Link to this heading">¶</a></h6>
+<p>The architecture of a non-AP MLD supporting EMLSR operating mode is based on the assumption that
+only one PHY instance (referred to as the <em>main PHY</em>) has full TX/RX capabilities, while the other
+PHY instances (referred to as <em>auxiliary PHYs</em> or <em>aux PHYs</em> for brevity) have limited TX/RX
+capabilities. As a consequence, only the main PHY is able to carry out frame exchanges with the AP
+MLD. Given that frame exchanges can occur on any of the EMLSR links, the link on which the main PHY operates is dynamically switched during a simulation, as detailed below.</p>
 </section>
-<section id="ap-mld-side">
-<h6 aria-level="7"><span class="section-number">35.1.3.2.9.2. </span>AP MLD side<a class="headerlink" href="#ap-mld-side" title="Link to this heading">¶</a></h6>
-<p>An AP MLD supports EMLSR operating mode if the <code class="docutils literal notranslate"><span class="pre">EmlsrActivated</span></code> attribute of the EHT
-configuration is set to true. When an AP MLD that supports EMLSR operating mode has to initiate a
-frame exchange with a non-AP MLD that is operating in EMLSR mode, it sends an MU-RTS Trigger Frame
-soliciting a response from the non-AP MLD (and possibly others) as the initial Control frame for
-that exchange. The MU-RTS Trigger Frame includes a Padding field whose transmission duration is the
-maximum among the padding delays advertised by all the EMLSR clients solicited by the MU-RTS
-Trigger Frame. Also, the MU-RTS Trigger Frame is carried in a non-HT (duplicate) PPDU transmitted
-at a rate of 6 Mbps, 12 Mbps or 24 Mbps. When the transmission of an initial Control frame starts,
-the AP MLD blocks transmissions to the solicited EMLSR clients on the EMLSR links other than the
-link used to transmit the initial Control frame, so that the AP MLD does not initiate another
-frame exchange on such links. The frame exchange with an EMLSR client is assumed to terminate
-when the AP MLD does not start a frame transmission a SIFS after the response to the last frame
-transmitted by the AP MLD or the AP MLD transmits a frame that is not addressed to the EMLSR
-client. When a frame exchange with an EMLSR client terminates, the AP MLD blocks transmissions on
-all the EMLSR links and starts a timer whose duration is the transition delay advertised by the
-EMLSR client. When the timer expires, the EMLSR client is assumed to be back to the listening
-operations and transmissions on all the EMLSR links are unblocked.</p>
+<section id="enabling-disabling-emlsr-mode">
+<h6 aria-level="7"><span class="section-number">35.1.3.2.9.2. </span>Enabling/disabling EMLSR mode<a class="headerlink" href="#enabling-disabling-emlsr-mode" title="Link to this heading">¶</a></h6>
+<p>EMLSR mode can be enabled on the links (at least two) of a non-AP MLD that supports the EMLSR
+operating mode and performs ML setup with an AP MLD that supports the EMLSR operating mode. The
+<code class="docutils literal notranslate"><span class="pre">EmlsrActivated</span></code> attribute of the EHT configuration of an MLD determines whether the EMLSR
+operating mode is supported by the MLD. When the <code class="docutils literal notranslate"><span class="pre">EmlsrActivated</span></code> attribute is set to true for
+a non-AP MLD, the WifiMacHelper will install an EMLSR Manager by using the type and attribute
+values configured through the <code class="docutils literal notranslate"><span class="pre">SetEmlsrManager</span></code> method.</p>
+<p>EMLSR mode on the links of a non-AP MLD can be enabled or disabled by using the <code class="docutils literal notranslate"><span class="pre">EmlsrLinkSet</span></code>
+attribute of the EMLSR Manager base class (after multi-link setup, EMLSR mode is disabled by
+default). Setting the <code class="docutils literal notranslate"><span class="pre">EmlsrLinkSet</span></code> attribute triggers the transmission of an EML Operating
+Mode Notification frame to the AP to communicate the new set of EMLSR links, if ML setup has been
+completed. Otherwise, the set of EMLSR links is stored and the EML Operating Mode Notification
+frame is sent as soon as the ML setup is completed. Therefore, users can choose to enable EMLSR
+mode on some links upon the completion of ML setup by setting the <code class="docutils literal notranslate"><span class="pre">EmlsrLinkSet</span></code> attribute at
+(or before) initialization time; alternatively, they can leave the <code class="docutils literal notranslate"><span class="pre">EmlsrLinkSet</span></code> attribute
+empty at initialization time and set it at runtime to enable EMLSR mode on some links at a
+specific simulation time (after ML setup). The selection of the link used by the non-AP
+MLD to transmit the EML Operating Mode Notification frame is done by the EMLSR Manager subclass.
+The default EMLSR Manager subclass, <code class="docutils literal notranslate"><span class="pre">DefaultEmlsrManager</span></code>, selects the link on which the main
+PHY is operating. When the non-AP MLD receives the acknowledgment for the EML Operating Mode
+Notification frame, it starts a timer whose duration is the transition timeout advertised by the AP MLD. When the timer expires, or the non-AP MLD receives an EML Operating Mode Notification
+frame from the AP MLD, the EMLSR mode is assumed to be enabled on the requested set of links
+(referred to as EMLSR links), if this set is not empty, or disabled, otherwise. The set of links
+on which it is requested to enable EMLSR mode must include the link on which the main PHY is
+operating; the PHY instances operating on the other links on which EMLSR mode is enabled are
+considered aux PHYs.</p>
+<p>The PHY instance acting as main PHY is configured through the <code class="docutils literal notranslate"><span class="pre">MainPhyId</span></code> attribute of the EMLSR
+Manager base class. Such a class also enables to define the TX/RX capabilities of the aux PHYs:</p>
+<ul class="simple">
+<li><p>the <code class="docutils literal notranslate"><span class="pre">AuxPhyMaxModClass</span></code> attribute indicates the maximum modulation class supported by aux PHYs</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">AuxPhyChannelWidth</span></code> attribute indicates the maximum channel width (MHz) supported by aux
+PHYs. The value of this attribute may be automatically capped based on the maximum supported
+modulation class.</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">AuxPhyTxCapable</span></code> attribute indicates whether aux PHYs are capable of transmitting frames</p></li>
+</ul>
+</section>
+<section id="downlink-txop">
+<h6 aria-level="7"><span class="section-number">35.1.3.2.9.3. </span>Downlink TXOP<a class="headerlink" href="#downlink-txop" title="Link to this heading">¶</a></h6>
+<figure class="align-center" id="id53">
+<span id="fig-emlsr-dl-txop"></span><img alt="_images/emlsr-dl-txop.png" src="_images/emlsr-dl-txop.png" />
+<figcaption>
+<p><span class="caption-text">EMLSR operations: Downlink TXOP</span><a class="headerlink" href="#id53" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>When an AP MLD that supports EMLSR operating mode has to initiate a frame exchange on a link with
+a non-AP MLD that is operating in EMLSR mode on that link, it sends an MU-RTS Trigger Frame
+soliciting a response from the non-AP MLD (and possibly others) as the initial Control frame (ICF)
+for that exchange (see Figure <a class="reference internal" href="#fig-emlsr-dl-txop"><span class="std std-ref">EMLSR operations: Downlink TXOP</span></a>). The MU-RTS Trigger Frame is carried in a
+non-HT duplicate PPDU transmitted at a rate of 6 Mbps, 12 Mbps or 24 Mbps. When the
+transmission of an initial Control frame starts, the AP MLD blocks transmissions to the solicited
+EMLSR clients on the EMLSR links other than the link used to transmit the initial Control frame,
+so that the AP MLD does not initiate another frame exchange on such links. The MU-RTS Trigger
+Frame includes a Padding field whose transmission duration is the maximum among the padding
+delays advertised by all the EMLSR clients solicited by the MU-RTS Trigger Frame. The padding
+delay should be long enough to allow the EMLSR client to get ready to transmit the CTS response
+(e.g., make the main PHY switch to operate on the link where the DL TXOP is starting). In <em>ns-3</em>,
+if the ICF is received by the main PHY, no link switch occurs. If the ICF is received by an aux
+PHY (as shown in Fig. <a class="reference internal" href="#fig-emlsr-dl-txop"><span class="std std-ref">EMLSR operations: Downlink TXOP</span></a>), the main PHY switches to operate on the link
+where the TXOP is starting at the end of the reception of the ICF (including the Padding field)
+and the main PHY sends the CTS response. In <em>ns-3</em>, the behavior of the aux PHY that received the
+ICF is determined by the EMLSR Manager subclass. The <code class="docutils literal notranslate"><span class="pre">DefaultEmlsrManager</span></code> class provides the
+<code class="docutils literal notranslate"><span class="pre">SwitchAuxPhy</span></code> attribute for this purpose. If this attribute is true, the aux PHY switches to
+operate on the link on which the main PHY was operating and stays on such a link even after
+the completion of the TXOP (as shown in Fig. <a class="reference internal" href="#fig-emlsr-dl-txop"><span class="std std-ref">EMLSR operations: Downlink TXOP</span></a>); if this attribute is
+false, the aux PHY does not perform any switch, but the main PHY switches back to operate on
+its original link once the TXOP is completed (as shown in Fig. <a class="reference internal" href="#fig-emlsr-ul-txop"><span class="std std-ref">EMLSR operations: Uplink TXOP</span></a>).</p>
+<p>The frame exchange with an EMLSR client is assumed to terminate when the AP MLD does not start a
+frame transmission a SIFS after the response to the last frame transmitted by the AP MLD or the
+AP MLD transmits a frame that is not addressed to the EMLSR client. When a frame exchange with an
+EMLSR client terminates, the AP MLD blocks transmissions on all the EMLSR links and starts a
+timer whose duration is the transition delay advertised by the EMLSR client. When the timer
+expires, the EMLSR client is assumed to be back to the listening operations and transmissions on
+all the EMLSR links are unblocked.</p>
+<p>The padding delay and the transition delay for an EMLSR client can be set through the
+<code class="docutils literal notranslate"><span class="pre">EmlsrPaddingDelay</span></code> attribute and the <code class="docutils literal notranslate"><span class="pre">EmlsrTransitionDelay</span></code> attribute of the
+<code class="docutils literal notranslate"><span class="pre">EmlsrManager</span></code> base class, respectively.</p>
+</section>
+<section id="uplink-txop">
+<h6 aria-level="7"><span class="section-number">35.1.3.2.9.4. </span>Uplink TXOP<a class="headerlink" href="#uplink-txop" title="Link to this heading">¶</a></h6>
+<figure class="align-center" id="id54">
+<span id="fig-emlsr-ul-txop"></span><img alt="_images/emlsr-ul-txop.png" src="_images/emlsr-ul-txop.png" />
+<figcaption>
+<p><span class="caption-text">EMLSR operations: Uplink TXOP</span><a class="headerlink" href="#id54" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>An EMLSR client can start an UL TXOP on any of the EMLSR links. When channel access is obtained
+on a link where an aux PHY is operating, the aux PHY transmits an RTS frame and then the main PHY
+takes over the TXOP. Figure <a class="reference internal" href="#fig-emlsr-ul-txop"><span class="std std-ref">EMLSR operations: Uplink TXOP</span></a> shows that the EMLSR client obtains a TXOP on
+link 1, which the main PHY is operating on. Therefore, a data frame can be sent without
+protection. Clearly, the EMLSR client blocks transmissions on the other EMLSR links as soon as it
+starts transmitting the data frame, while the AP MLD blocks transmissions to the EMLSR client on
+the other EMLSR links as soon as it receives an MPDU from the EMLSR client. When the UL TXOP
+terminates, the AP MLD starts a transition delay timer, during which it does not attempt to start
+a frame exchange with the EMLSR client on any EMLSR link. The EMLSR client, instead, starts a
+MediumSyncDelay timer on all the EMLSR links other than the one on which the UL TXOP was carried
+out. While the MediumSyncDelay timer is running on a link, the EMLSR client can start an UL TXOP
+on that link, but it can perform at most a predefined number of attempts. The duration of the
+MediumSyncDelay timer, the maximum number of TXOP attempts and the threshold to be used instead
+of the normal CCA sensitivity for the primary 20 MHz channel are all advertised by the AP MLD and
+can be configured through the attributes of the <code class="docutils literal notranslate"><span class="pre">EmlsrManager</span></code> class: <code class="docutils literal notranslate"><span class="pre">MediumSyncDuration</span></code>, <code class="docutils literal notranslate"><span class="pre">MsdMaxNTxops</span></code> and <code class="docutils literal notranslate"><span class="pre">MsdOfdmEdThreshold</span></code>, respectively.</p>
+<p>Figure <a class="reference internal" href="#fig-emlsr-ul-txop"><span class="std std-ref">EMLSR operations: Uplink TXOP</span></a> also shows that, afterwards, the EMLSR client obtains a TXOP on
+link 0, which an aux PHY is operating on. The aux PHY transmits an RTS frame and, in the
+meantime, the main PHY is switched to operate on that link, receives the CTS response and
+transmits the data frame. In the example shown in Fig. <a class="reference internal" href="#fig-emlsr-ul-txop"><span class="std std-ref">EMLSR operations: Uplink TXOP</span></a>, the
+<code class="docutils literal notranslate"><span class="pre">SwitchAuxPhy</span></code> attribute of the <code class="docutils literal notranslate"><span class="pre">DefaultEmlsrManager</span></code> class is set to false. This means that
+the aux PHY stays on link 0 and, therefore, no PHY is operating on link 1 while the main PHY is
+carrying out the UL TXOP on link 0. Once such UL TXOP terminates, the main PHY is switched back
+to operate on link 1. While the MediumSyncDelay timer is running on link 1, the EMLSR client
+obtains a TXOP on link 1 and, as mandated by the 802.11be specs, sends an RTS frame. If there is
+no response to the RTS frame, the EMLSR client can attempt to obtain the TXOP again and transmit
+another RTS frame. However, the number of attempts performed while the MediumSyncDelay timer is
+running is limited by the value advertised by the AP MLD and configured through the
+<code class="docutils literal notranslate"><span class="pre">MsdMaxNTxops</span></code> attribute of the <code class="docutils literal notranslate"><span class="pre">EmlsrManager</span></code> class.</p>
 </section>
 </section>
 <section id="ack-manager">
@@ -26521,7 +26704,7 @@ beacon/probe generation.  Users usually make changes to <code class="docutils li
 <li><p>Wi-Fi queue management.  The files <code class="docutils literal notranslate"><span class="pre">txop.*</span></code> and <code class="docutils literal notranslate"><span class="pre">qos-txop.*</span></code> are of interest for this task.</p></li>
 <li><p>Channel access management.  Users should modify the files <code class="docutils literal notranslate"><span class="pre">channel-access-manager.*</span></code>, which grant access to
 <code class="docutils literal notranslate"><span class="pre">Txop</span></code> and <code class="docutils literal notranslate"><span class="pre">QosTxop</span></code>.</p></li>
-<li><p>Fragmentation and RTS threholds are handled by Wi-Fi remote station manager.  Note that Wi-Fi remote
+<li><p>Fragmentation and RTS thresholds are handled by Wi-Fi remote station manager.  Note that Wi-Fi remote
 station manager simply indicates if fragmentation and RTS are needed.  Fragmentation is handled by
 <code class="docutils literal notranslate"><span class="pre">Txop</span></code> or <code class="docutils literal notranslate"><span class="pre">QosTxop</span></code> while RTS/CTS transaction is handled by <code class="docutils literal notranslate"><span class="pre">FrameExchangeManager</span></code>.</p></li>
 <li><p>Modifying or creating new rate control algorithms can be done by creating a new child class of Wi-Fi remote
@@ -27387,11 +27570,12 @@ attributes for 802.11ax devices.</p>
 <span class="n">heConfiguration</span><span class="o">-&gt;</span><span class="n">SetGuardInterval</span><span class="p">(</span><span class="n">NanoSeconds</span><span class="p">(</span><span class="mi">1600</span><span class="p">));</span>
 </pre></div>
 </div>
-<p>802.11ax allows extended compressed Block ACKs containing a 256-bits bitmap, making
+<p>802.11ax allows compressed Block ACKs containing a 256-bits bitmap, making
 possible transmissions of A-MPDUs containing up to 256 MPDUs, depending on the
 negotiated buffer size. In order to configure the buffer size of an 802.11ax device,
 the following line of code could be used:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">heConfiguration</span><span class="o">-&gt;</span><span class="n">SetMpduBufferSize</span><span class="p">(</span><span class="mi">256</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">WifiMacHelper</span><span class="w"> </span><span class="n">mac</span><span class="p">;</span>
+<span class="n">mac</span><span class="p">.</span><span class="n">SetType</span><span class="p">(</span><span class="s">&quot;ns3::StaWifiMac&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MpduBufferSize&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">UintegerValue</span><span class="p">(</span><span class="mi">256</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>For transmitting large MPDUs, it might also be needed to increase the maximum
@@ -27599,6 +27783,66 @@ Each node is equipped with 802.11b Wi-Fi device:</p>
 <span class="n">mobility</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
 
 <span class="c1">// other set up (e.g. InternetStack, Application)</span>
+</pre></div>
+</div>
+</section>
+<section id="emlsr-configuration">
+<h6><span class="section-number">35.2.1.11.4. </span>EMLSR configuration<a class="headerlink" href="#emlsr-configuration" title="Link to this heading">¶</a></h6>
+<p><strong>DISCLAIMER</strong> EMLSR support is still experimental. Simulations with EMLSR activated may crash unexpectedly.</p>
+<p>Proper EMLSR operations require the configuration of multiple RF interfaces, as illustrated above.
+Therefore, in order to configure EMLSR operations, we can start from the configuration shown above
+and apply the changes described in the following. Firstly, we need to activate EMLSR on both the
+AP MLD and the EMLSR client. This can be done by configuring the appropriate <code class="docutils literal notranslate"><span class="pre">EhtConfiguration</span></code>
+attribute through the wifi helper:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">WifiHelper</span><span class="w"> </span><span class="n">wifi</span><span class="p">;</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">SetStandard</span><span class="p">(</span><span class="n">WIFI_STANDARD_80211be</span><span class="p">);</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">ConfigEhtOptions</span><span class="p">(</span><span class="s">&quot;EmlsrActivated&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">BooleanValue</span><span class="p">(</span><span class="nb">true</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">EhtConfiguration</span></code> class also provides attributes for the various EMLSR parameters that an
+AP MLD that supports EMLSR has to advertise. Given that these attributes are simply ignored by
+non-AP MLDs, we can use the same wifi helper to configure such parameters:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">WifiHelper</span><span class="w"> </span><span class="n">wifi</span><span class="p">;</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">SetStandard</span><span class="p">(</span><span class="n">WIFI_STANDARD_80211be</span><span class="p">);</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">ConfigEhtOptions</span><span class="p">(</span><span class="s">&quot;EmlsrActivated&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">BooleanValue</span><span class="p">(</span><span class="nb">true</span><span class="p">));</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">ConfigEhtOptions</span><span class="p">(</span><span class="s">&quot;TransitionTimeout&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TimeValue</span><span class="p">(</span><span class="n">MicroSeconds</span><span class="p">(</span><span class="mi">1024</span><span class="p">)));</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">ConfigEhtOptions</span><span class="p">(</span><span class="s">&quot;MediumSyncDuration&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TimeValue</span><span class="p">(</span><span class="n">MicroSeconds</span><span class="p">(</span><span class="mi">3200</span><span class="p">)));</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">ConfigEhtOptions</span><span class="p">(</span><span class="s">&quot;MsdOfdmEdThreshold&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">IntegerValue</span><span class="p">(</span><span class="mi">-72</span><span class="p">);</span>
+<span class="n">wifi</span><span class="p">.</span><span class="n">ConfigEhtOptions</span><span class="p">(</span><span class="s">&quot;MsdMaxNTxops&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">UintegerValue</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span><span class="w"> </span><span class="c1">// unlimited attempts</span>
+</pre></div>
+</div>
+<p>EMLSR parameters that are client specific can be configured through the attributes of the EMLSR
+Manager class and subclass. The <code class="docutils literal notranslate"><span class="pre">WifiMacHelper</span></code> class provides the <code class="docutils literal notranslate"><span class="pre">SetEmlsrManager</span></code>
+method to conveniently set the type of EMLSR Manager and its attributes:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// setup STA.</span>
+<span class="n">wifiMac</span><span class="p">.</span><span class="n">SetType</span><span class="p">(</span><span class="s">&quot;ns3::StaWifiMac&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;Ssid&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SsidValue</span><span class="p">(</span><span class="n">ssid</span><span class="p">),</span>
+<span class="w">                </span><span class="s">&quot;ActiveProbing&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">BooleanValue</span><span class="p">(</span><span class="nb">false</span><span class="p">));</span>
+<span class="n">wifiMac</span><span class="p">.</span><span class="n">SetEmlsrManager</span><span class="p">(</span><span class="s">&quot;ns3::DefaultEmlsrManager&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="s">&quot;EmlsrLinkSet&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">StringValue</span><span class="p">(</span><span class="s">&quot;0,1,2&quot;</span><span class="p">),</span><span class="w">  </span><span class="c1">// enable EMLSR on all EMLSR links</span>
+<span class="w">                        </span><span class="s">&quot;MainPhyId&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">UintegerValue</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+<span class="w">                        </span><span class="s">&quot;EmlsrPaddingDelay&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">TimeValue</span><span class="p">(</span><span class="n">MicroSeconds</span><span class="p">(</span><span class="mi">32</span><span class="p">)),</span>
+<span class="w">                        </span><span class="s">&quot;EmlsrTransitionDelay&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">TimeValue</span><span class="p">(</span><span class="n">MicroSeconds</span><span class="p">(</span><span class="mi">128</span><span class="p">)),</span>
+<span class="w">                        </span><span class="s">&quot;SwitchAuxPhy&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">BooleanValue</span><span class="p">(</span><span class="nb">false</span><span class="p">),</span>
+<span class="w">                        </span><span class="s">&quot;AuxPhyChannelWidth&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">UintegerValue</span><span class="p">(</span><span class="mi">40</span><span class="p">));</span>
+<span class="n">NetDeviceContainer</span><span class="w"> </span><span class="n">staDevice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wifi</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">wifiPhy</span><span class="p">,</span><span class="w"> </span><span class="n">wifiMac</span><span class="p">,</span><span class="w"> </span><span class="n">sta</span><span class="p">);</span>
+<span class="n">devices</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">staDevice</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Note that the channel switch delay should be less than the transition delay:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// SpectrumWifiPhyHelper (3 links)</span>
+<span class="n">SpectrumWifiPhyHelper</span><span class="w"> </span><span class="nf">phy</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">phy</span><span class="p">.</span><span class="n">SetPcapDataLinkType</span><span class="p">(</span><span class="n">WifiPhyHelper</span><span class="o">::</span><span class="n">DLT_IEEE802_11_RADIO</span><span class="p">);</span>
+<span class="n">phy</span><span class="p">.</span><span class="n">AddChannel</span><span class="p">(</span><span class="n">spectrumChannel2_4Ghz</span><span class="p">,</span><span class="w"> </span><span class="n">WIFI_SPECTRUM_2_4_GHZ</span><span class="p">);</span>
+<span class="n">phy</span><span class="p">.</span><span class="n">AddChannel</span><span class="p">(</span><span class="n">spectrumChannel5Ghz</span><span class="p">,</span><span class="w"> </span><span class="n">WIFI_SPECTRUM_5_GHZ</span><span class="p">);</span>
+<span class="n">phy</span><span class="p">.</span><span class="n">AddChannel</span><span class="p">(</span><span class="n">spectrumChannel6Ghz</span><span class="p">,</span><span class="w"> </span><span class="n">WIFI_SPECTRUM_6_GHZ</span><span class="p">);</span>
+<span class="n">phy</span><span class="p">.</span><span class="n">Set</span><span class="p">(</span><span class="s">&quot;ChannelSwitchDelay&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TimeValue</span><span class="p">(</span><span class="n">MicroSeconds</span><span class="p">(</span><span class="mi">100</span><span class="p">)));</span>
 </pre></div>
 </div>
 </section>
@@ -28565,8 +28809,8 @@ SNR_value2   BER  Blc_ER  STANDARD_DEVIATION  CONFIDENCE_INTERVAL1  CONFIDENCE_I
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2006-2019.
-      Last updated on Mar 08, 2024 13:58.
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Mar 20, 2024 11:49.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>

@@ -9,7 +9,7 @@
     <title>2.1. Events and Simulator &#8212; Manual</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
-    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -169,7 +169,68 @@ stored and that can manage the execution of events</p></li>
 (simulator, scheduler, time, event) and how they are used.</p>
 <section id="event">
 <h2><span class="section-number">2.1.1. </span>Event<a class="headerlink" href="#event" title="Link to this heading">¶</a></h2>
-<p><em>To be completed</em></p>
+<p>An event represents something that changes the simulation status, i.e.,
+between two events the simulation status does not change, and the event
+will likely change it (it could also not change anything).</p>
+<p>Note that another way to understand an event is to consider it as a delayed
+function call. With the due differences, a discrete event simulation is not
+much different from a “normal” program where the functions are not called
+immediately, but are marked with a “time”, and the time is used to decide
+the order of the functions execution.</p>
+<p>The time, of course, is a simulated time, and is quite different from the
+“real” time. Depending on the simulation complexity the simulated time
+can advance faster or slower then the “real” time, but like a “real” time
+can only go forward.</p>
+<p>An example of an event is the reception of a packet, or the expiration
+of a timer.</p>
+<p>An event is represented by:</p>
+<ul class="simple">
+<li><p>The time at which the event will happen</p></li>
+<li><p>A pointer to the function that will “handle” the event,</p></li>
+<li><p>The parameters of the function that will handle the event (if any),</p></li>
+<li><p>Other internal structures.</p></li>
+</ul>
+<p>An event is scheduled through a call to <code class="docutils literal notranslate"><span class="pre">Simulator::Schedule</span></code>, and once
+scheduled, it can be canceled or removed.
+Removal implies removal from the scheduler data structure, while cancel
+keeps them in the data structure but sets a boolean flag that suppresses
+calling the bound event function at the scheduled time.  When an event is
+scheduled by the Simulator, an <code class="docutils literal notranslate"><span class="pre">EventId</span></code> is returned.  The client may use
+this event ID to later cancel or remove the event; see the example program
+<code class="docutils literal notranslate"><span class="pre">src/core/examples/sample-simulator.{cc,py}</span></code> for example usage.
+Cancelling an event is typically less computationally expensive than
+removing it, but cancelled events consumes more memory in the scheduler
+data structure, which might impact its performances.</p>
+<p>Events are stored by the simulator in a scheduler data
+structure.  Events are handled in increasing order of
+simulator time, and in the case of two events with the same
+scheduled time, the event with the lowest unique ID (a
+monotonically increasing counter) will be handled first.
+In other words tied events are handled in FIFO order.</p>
+<p>Note that concurrent events (events that happen at the very same time)
+are unlikely in a real system - not to say impossible. In <a href="#id1"><span class="problematic" id="id2">|ns-3|</span></a>
+concurrent events are common for a number of reasons, one of them
+being the time representation. While developing a model this must
+be carefully taken into account.</p>
+<p>During the event execution, the simulation time will not advance, i.e., each
+event is executed in zero time. This is a common assumption in
+discrete event simulations, and holds when the computational complexity of
+the operations executed in the event is negligible.
+When this assumption does not hold, it is necessary to schedule a second event
+to mimic the end of the computationally intensive task.</p>
+<p>As an example, suppose to have a device that receives a packet and has to
+perform a complex analysis on it (e.g., an image processing task). The
+sequence of events will be:</p>
+<ul class="simple">
+<li><p>T(t) - Packet reception and processing, save the result somewhere, and
+schedule an event in (t+d) marking the end of the data processing.</p></li>
+<li><p>T(t+d) - Retrieve the data, and do other stuff based them.</p></li>
+</ul>
+<p>So, even if the data processing actually did return a result in the
+execution of the first event, the data is considered valid only after
+the second event.</p>
+<p>The image below can be useful to clarify the idea.</p>
+<img alt="_images/time-consuming-event-handling.png" src="_images/time-consuming-event-handling.png" />
 </section>
 <section id="simulator">
 <h2><span class="section-number">2.1.2. </span>Simulator<a class="headerlink" href="#simulator" title="Link to this heading">¶</a></h2>
@@ -330,7 +391,7 @@ for example:</p>
 </pre></div>
 </div>
 <p>or by using a command line argument</p>
-<div class="highlight-terminal notranslate"><div class="highlight"><pre><span></span>$ ./ns3 run &quot;...  -–SimulatorImplementationType=ns3::DistributedSimulatorImpl&quot;
+<div class="highlight-terminal notranslate"><div class="highlight"><pre><span></span>$ ./ns3 run &quot;...  --SimulatorImplementationType=ns3::DistributedSimulatorImpl&quot;
 </pre></div>
 </div>
 <p>In addition to the basic simulator engines there is a general facility used
@@ -558,8 +619,8 @@ complexity of the other API calls.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2006-2019.
-      Last updated on Mar 08, 2024 13:55.
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Mar 20, 2024 11:47.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>

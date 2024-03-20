@@ -15,7 +15,7 @@ var searchData=
   ['channellist_12',['ChannelList',['../de/dd6/structns3_1_1_wifi_scan_params.html#a0c53e46dc4e2f0773d375714a26d1c90',1,'ns3::WifiScanParams']]],
   ['channelmap_13',['ChannelMap',['../dd/d8e/classns3_1_1_remote_channel_bundle.html#a0604837343c4860ae372187ca9ee107b',1,'ns3::RemoteChannelBundle::ChannelMap()'],['../d7/dc7/class_multi_link_operations_test_base.html#afe2fd308adf4fe8ff9b9d20e294432d9',1,'MultiLinkOperationsTestBase::ChannelMap()']]],
   ['channelrealizationid_5ft_14',['ChannelRealizationId_t',['../d6/dca/classns3_1_1_trace_fading_loss_model.html#a538fb5e148b837e46a2da767346839d4',1,'ns3::TraceFadingLossModel']]],
-  ['channeltuple_15',['ChannelTuple',['../dc/d2d/classns3_1_1_wifi_phy.html#ae9418bc2b31247df2ad0b59ffddfd192',1,'ns3::WifiPhy']]],
+  ['channeltuple_15',['ChannelTuple',['../dc/d2d/classns3_1_1_wifi_phy.html#aace8890392fb9ebf47e5f32e9b9f20f8',1,'ns3::WifiPhy']]],
   ['checker_5fpair_5ftype_16',['checker_pair_type',['../d4/d0d/classns3_1_1_pair_checker.html#a8162da759e40d91788572dae0f26f43f',1,'ns3::PairChecker']]],
   ['childqueuediscdropfunctor_17',['ChildQueueDiscDropFunctor',['../d5/d52/classns3_1_1_queue_disc.html#a8aa96b936c892f1c587d692b72b8acbb',1,'ns3::QueueDisc']]],
   ['childqueuediscmarkfunctor_18',['ChildQueueDiscMarkFunctor',['../d5/d52/classns3_1_1_queue_disc.html#a409a027c8ea32460b3160aa46297c2d8',1,'ns3::QueueDisc']]],

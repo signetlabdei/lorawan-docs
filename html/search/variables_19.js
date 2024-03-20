@@ -4,10 +4,10 @@ var searchData=
   ['y_5findex_1',['Y_INDEX',['../dc/d62/classns3_1_1_three_gpp_channel_model.html#a27a01a23be65ad030cbb041c2d221487',1,'ns3::ThreeGppChannelModel']]],
   ['ycoordinate_2',['yCoordinate',['../da/dd5/structns3_1_1_brite_topology_helper_1_1_brite_node_info.html#ab35e072f7b247b4b4ae4e24992fbaac4',1,'ns3::BriteTopologyHelper::BriteNodeInfo']]],
   ['ygrs80_5fmatlab_3',['YGRS80_MATLAB',['../dd/dc4/geo-to-cartesian-test_8cc.html#a91670b344c6133c351d1e527135e211a',1,'geo-to-cartesian-test.cc']]],
-  ['ymax_4',['ymax',['../dd/de6/struct_building_data.html#af7f9754fe81232f86c7eec4271c0aa64',1,'BuildingData']]],
-  ['ymax_5',['yMax',['../df/dc2/classns3_1_1_box.html#a001fd430a14b19efe925c818a332e392',1,'ns3::Box::yMax()'],['../d2/dfe/classns3_1_1_rectangle.html#a272ebb19702453c2fa7846b5c9c76b1c',1,'ns3::Rectangle::yMax()']]],
-  ['ymin_6',['yMin',['../df/dc2/classns3_1_1_box.html#a3865ed092f941186823539c9979002f8',1,'ns3::Box::yMin()'],['../d2/dfe/classns3_1_1_rectangle.html#afb85ffe9ede5c0c178e9ec2bde4e5a8e',1,'ns3::Rectangle::yMin()']]],
-  ['ymin_7',['ymin',['../dd/de6/struct_building_data.html#a2765c6199faa31f0ffbc0f0744dba93b',1,'BuildingData']]],
+  ['ymax_4',['yMax',['../df/dc2/classns3_1_1_box.html#a001fd430a14b19efe925c818a332e392',1,'ns3::Box::yMax()'],['../d2/dfe/classns3_1_1_rectangle.html#a272ebb19702453c2fa7846b5c9c76b1c',1,'ns3::Rectangle::yMax()']]],
+  ['ymax_5',['ymax',['../dd/de6/struct_building_data.html#af7f9754fe81232f86c7eec4271c0aa64',1,'BuildingData']]],
+  ['ymin_6',['ymin',['../dd/de6/struct_building_data.html#a2765c6199faa31f0ffbc0f0744dba93b',1,'BuildingData']]],
+  ['ymin_7',['yMin',['../df/dc2/classns3_1_1_box.html#a3865ed092f941186823539c9979002f8',1,'ns3::Box::yMin()'],['../d2/dfe/classns3_1_1_rectangle.html#afb85ffe9ede5c0c178e9ec2bde4e5a8e',1,'ns3::Rectangle::yMin()']]],
   ['ysphere_5fmatlab_8',['YSPHERE_MATLAB',['../dd/dc4/geo-to-cartesian-test_8cc.html#a9d86d14dc9fe56ade53f8b891bc292eb',1,'geo-to-cartesian-test.cc']]],
   ['ywgs84_5fmatlab_9',['YWGS84_MATLAB',['../dd/dc4/geo-to-cartesian-test_8cc.html#a978d0276d8364f2827ad016eb05cc5d6',1,'geo-to-cartesian-test.cc']]]
 ];

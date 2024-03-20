@@ -2,7 +2,7 @@ var searchData=
 [
   ['wait_5fack_0',['WAIT_ACK',['../d8/d07/classns3_1_1_dhcp_client.html#a59a8c81c3eaece1fd60488512ceb39e3abb78e68d4fad8a97824239e31f1bd841',1,'ns3::DhcpClient']]],
   ['wait_5fassoc_5fresp_1',['WAIT_ASSOC_RESP',['../d0/d97/classns3_1_1_sta_wifi_mac.html#a262848fcb2046037198bd36fa86fbd2cae21481c68081ea41e6ea065623ecc48b',1,'ns3::StaWifiMac']]],
-  ['wait_5fassoc_5ftx_5fok_2',['WAIT_ASSOC_TX_OK',['../d0/d95/structns3_1_1_wifi_remote_station_state.html#a37042e5b5a36575bec52489932bd18b0ab037c249ee13cc956c99c2b5c02458a2',1,'ns3::WifiRemoteStationState']]],
+  ['wait_5fassoc_5ftx_5fok_2',['WAIT_ASSOC_TX_OK',['../d0/d95/structns3_1_1_wifi_remote_station_state.html#a671abf516c9f9bfd93f666f9dba5759cab037c249ee13cc956c99c2b5c02458a2',1,'ns3::WifiRemoteStationState']]],
   ['wait_5fblock_5fack_3',['WAIT_BLOCK_ACK',['../d2/d2a/classns3_1_1_wifi_tx_timer.html#a4745eff549132c7944cbaa30f93e15bfa5acd8e1e6f44ba0c34b5d6bf30080024',1,'ns3::WifiTxTimer']]],
   ['wait_5fblock_5fack_5fafter_5ftb_5fppdu_4',['WAIT_BLOCK_ACK_AFTER_TB_PPDU',['../d2/d2a/classns3_1_1_wifi_tx_timer.html#a4745eff549132c7944cbaa30f93e15bfa08115eadc3eaa8012c184e7ae1bced5a',1,'ns3::WifiTxTimer']]],
   ['wait_5fblock_5facks_5fin_5ftb_5fppdu_5',['WAIT_BLOCK_ACKS_IN_TB_PPDU',['../d2/d2a/classns3_1_1_wifi_tx_timer.html#a4745eff549132c7944cbaa30f93e15bfab5837ac523a7985499592382e807e017',1,'ns3::WifiTxTimer']]],

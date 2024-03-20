@@ -4,7 +4,7 @@ var searchData=
   ['schedulingtype_1',['SchedulingType',['../de/dc4/classns3_1_1_service_flow.html#a7990ba10be1e098328fd1e6382a26235',1,'ns3::ServiceFlow']]],
   ['scope_5fe_2',['Scope_e',['../d1/d4f/classns3_1_1_ipv6_interface_address.html#ad3f03debf9dae475b81ea9cdf81f4f27',1,'ns3::Ipv6InterfaceAddress']]],
   ['sdustatus_5ft_3',['SduStatus_t',['../d4/df0/classns3_1_1_lte_rlc_sdu_status_tag.html#ae7822c5cc0d54a3d193b09a91ed6f133',1,'ns3::LteRlcSduStatusTag']]],
-  ['selfprotectedactionvalue_4',['SelfProtectedActionValue',['../d0/dfc/classns3_1_1_wifi_action_header.html#a17cfd6c8f685a44e7b7b832cc9a53e83',1,'ns3::WifiActionHeader']]],
+  ['selfprotectedactionvalue_4',['SelfProtectedActionValue',['../d0/dfc/classns3_1_1_wifi_action_header.html#a3e67cd2134d07fb4c0ac5799e8373f5b',1,'ns3::WifiActionHeader']]],
   ['setuprelease_5fe_5',['SetupRelease_e',['../d7/d2e/namespacens3.html#a19c98a2a7ba2ba8173e4b7ed3c0cef08',1,'ns3']]],
   ['side_6',['Side',['../df/dc2/classns3_1_1_box.html#a30fa910da32787c6c19adcbed2fab47c',1,'ns3::Box::Side()'],['../d2/dfe/classns3_1_1_rectangle.html#ac04d366f3d1e980f528c83a43b724fed',1,'ns3::Rectangle::Side()']]],
   ['slowstarttype_7',['SlowStartType',['../d1/d2b/classns3_1_1_tcp_ledbat.html#a7099bb59b406b311fab27960df7c8620',1,'ns3::TcpLedbat']]],

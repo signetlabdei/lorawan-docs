@@ -9,7 +9,7 @@
     <title>19. Low-Rate Wireless Personal Area Network (LR-WPAN) &#8212; Model Library</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
-    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -343,10 +343,10 @@ NoiseFloor<span class="w">          </span>Max<span class="w"> </span>Sensitivit
 <span class="w">                                 </span>Acceptable<span class="w"> </span>sensitivity<span class="w"> </span>range
 </pre></div>
 </div>
-<p>The example <code class="docutils literal notranslate"><span class="pre">lr-wpan-per-plot.cc`</span> <span class="pre">shows</span> <span class="pre">that</span> <span class="pre">at</span> <span class="pre">given</span> <span class="pre">Rx</span> <span class="pre">sensitiviy,</span> <span class="pre">packets</span> <span class="pre">are</span> <span class="pre">dropped</span> <span class="pre">regardless</span> <span class="pre">of</span> <span class="pre">their</span> <span class="pre">theoretical</span> <span class="pre">error</span> <span class="pre">probability.</span>
+<p>The example <code class="docutils literal notranslate"><span class="pre">lr-wpan-per-plot.cc`</span> <span class="pre">shows</span> <span class="pre">that</span> <span class="pre">at</span> <span class="pre">given</span> <span class="pre">Rx</span> <span class="pre">sensitivity,</span> <span class="pre">packets</span> <span class="pre">are</span> <span class="pre">dropped</span> <span class="pre">regardless</span> <span class="pre">of</span> <span class="pre">their</span> <span class="pre">theoretical</span> <span class="pre">error</span> <span class="pre">probability.</span>
 <span class="pre">This</span> <span class="pre">program</span> <span class="pre">outputs</span> <span class="pre">a</span> <span class="pre">file</span> <span class="pre">named</span> <span class="pre">``802.15.4-per-vs-rxSignal.plt</span></code>.
 Loading this file into gnuplot yields a file <code class="docutils literal notranslate"><span class="pre">802.15.4-per-vs-rsSignal.eps</span></code>, which can
-be converted to pdf or other formats. Packet payload size, Tx power and Rx sensitivity can be configurated.
+be converted to pdf or other formats. Packet payload size, Tx power and Rx sensitivity can be configured.
 The point where the blue line crosses with the PER indicates the Rx sensitivity. The default output is shown below.</p>
 <figure class="align-default" id="id4">
 <span id="fig-802-15-4-per-sens"></span><img alt="_images/802-15-4-per-sens.png" src="_images/802-15-4-per-sens.png" />
@@ -399,7 +399,7 @@ configuration of an Attribute (<code class="docutils literal notranslate"><span 
 in the upper-layer notification callback, which can contain either the pseudo-address (48 bits) or
 the long address (64 bit) of the sender.</p>
 <p>Note also that RFC 4944 or RFC 6282 are the RFCs defining the IPv6 address compression formats
-(HC1 and IPHC respectively). It is defintely not a good idea to either mix devices using different
+(HC1 and IPHC respectively). It is definitely not a good idea to either mix devices using different
 pseudo-address format or compression types in the same network. This point is further discussed
 in the <code class="docutils literal notranslate"><span class="pre">sixlowpan</span></code> module documentation.</p>
 </section>
@@ -490,8 +490,8 @@ The program outputs a file named <code class="docutils literal notranslate"><spa
 Loading this file into gnuplot yields a file <code class="docutils literal notranslate"><span class="pre">802.15.4-psr-distance.eps</span></code>, which can
 be converted to pdf or other formats.  The following image shows the output
 of multiple runs using different Rx sensitivity values. A higher Rx sensitivity (lower dBm) results
-in a increased communication distance but also makes the radio suceptible to more interference from
-surronding devices.</p>
+in a increased communication distance but also makes the radio susceptible to more interference from
+surrounding devices.</p>
 <figure class="align-default" id="id6">
 <span id="fig-802-15-4-psr-distance"></span><img alt="_images/802-15-4-psr-distance.png" src="_images/802-15-4-psr-distance.png" />
 <figcaption>
@@ -628,8 +628,8 @@ of the error model validation and can be reproduced by running
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2006-2019.
-      Last updated on Mar 08, 2024 13:56.
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Mar 20, 2024 11:48.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>

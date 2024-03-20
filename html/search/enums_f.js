@@ -18,9 +18,9 @@ var searchData=
   ['ports_5fe_15',['Ports_e',['../d8/d25/classns3_1_1_six_low_pan_udp_nhc_extension.html#a77005f9c06de72b1a6ea105a23bf413b',1,'ns3::SixLowPanUdpNhcExtension']]],
   ['procedurecode_5ft_16',['ProcedureCode_t',['../d0/d5d/classns3_1_1_epc_x2_header.html#afd178c1ed3c47948c587955698a15b0d',1,'ns3::EpcX2Header']]],
   ['propmodel_17',['PropModel',['../da/d42/classns3_1_1_simple_ofdm_wimax_channel.html#ad8299e6adf4848b1cf213df963e94842',1,'ns3::SimpleOfdmWimaxChannel']]],
-  ['protectedehtactionvalue_18',['ProtectedEhtActionValue',['../d0/dfc/classns3_1_1_wifi_action_header.html#af793e8088d0b55c9e7f99eea6d5d33be',1,'ns3::WifiActionHeader']]],
+  ['protectedehtactionvalue_18',['ProtectedEhtActionValue',['../d0/dfc/classns3_1_1_wifi_action_header.html#a9d51a220ea7c8dfbc137eba7353a80ab',1,'ns3::WifiActionHeader']]],
   ['protectionmode_19',['ProtectionMode',['../d3/dcb/classns3_1_1_wifi_remote_station_manager.html#acd7d97851233efb176637f24b3f8abd6',1,'ns3::WifiRemoteStationManager']]],
   ['protocoltype_20',['ProtocolType',['../d7/db0/classns3_1_1_animation_interface.html#a801a4efd553ff0d1d768cd70d22456b6',1,'ns3::AnimationInterface']]],
   ['pseudomacaddressmode_5fe_21',['PseudoMacAddressMode_e',['../d1/de9/classns3_1_1_lr_wpan_net_device.html#a1d7210aec567d0fa222152f9417e2279',1,'ns3::LrWpanNetDevice']]],
-  ['publicactionvalue_22',['PublicActionValue',['../d0/dfc/classns3_1_1_wifi_action_header.html#a53d9deb45ff28a8cac7b1f636ecc631f',1,'ns3::WifiActionHeader']]]
+  ['publicactionvalue_22',['PublicActionValue',['../d0/dfc/classns3_1_1_wifi_action_header.html#aed95085076cdbf686b72dfaf2cea512d',1,'ns3::WifiActionHeader']]]
 ];

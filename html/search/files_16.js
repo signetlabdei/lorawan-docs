@@ -99,8 +99,8 @@ var searchData=
   ['ul_2dmac_2dmessages_2eh_96',['ul-mac-messages.h',['../d5/d85/ul-mac-messages_8h.html',1,'']]],
   ['uniform_2dplanar_2darray_2ecc_97',['uniform-planar-array.cc',['../d7/d25/uniform-planar-array_8cc.html',1,'']]],
   ['uniform_2dplanar_2darray_2eh_98',['uniform-planar-array.h',['../d6/d1d/uniform-planar-array_8h.html',1,'']]],
-  ['unix_2dfd_2dreader_2ecc_99',['unix-fd-reader.cc',['../dd/d0d/unix-fd-reader_8cc.html',1,'']]],
-  ['unused_2eh_100',['unused.h',['../d8/d4b/unused_8h.html',1,'']]],
+  ['uniform_2drandom_2dbit_2dgenerator_2eh_99',['uniform-random-bit-generator.h',['../dd/d14/uniform-random-bit-generator_8h.html',1,'']]],
+  ['unix_2dfd_2dreader_2ecc_100',['unix-fd-reader.cc',['../dd/d0d/unix-fd-reader_8cc.html',1,'']]],
   ['utilities_2ecc_101',['utilities.cc',['../d7/ded/utilities_8cc.html',1,'']]],
   ['utilities_2eh_102',['utilities.h',['../de/df0/utilities_8h.html',1,'']]]
 ];

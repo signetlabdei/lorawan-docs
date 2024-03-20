@@ -29,14 +29,14 @@ Introspection did not find any typical Config paths.<br>
   </ul>
 <li><b>MultipleGwCombiningMethod</b>: Whether to average the received power of gateways or to use the maximum
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns37lorawan12AdrComponent15CombiningMethodE></li>
     <li>Underlying type: \p avg|max|min</li>
     <li>Initial value: avg</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
   </ul>
 <li><b>MultiplePacketsCombiningMethod</b>: Whether to average SNRs from multiple packets or to use the maximum
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns37lorawan12AdrComponent15CombiningMethodE></li>
     <li>Underlying type: \p avg|max|min</li>
     <li>Initial value: avg</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -323,6 +323,82 @@ Introspection did not find any typical Config paths.<br>
 
 /*!
 
+\class ns3::BernoulliRandomVariable
+
+<h3>Config Paths</h3>
+
+ns3::BernoulliRandomVariable is accessible through the following paths with Config::Set and Config::Connect:
+<ul>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::SimpleNetDevice/ReceiveErrorModel/$ns3::RateErrorModel/RanVar/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::SimpleNetDevice/ReceiveErrorModel/$ns3::BurstErrorModel/BurstStart/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::SimpleNetDevice/ReceiveErrorModel/$ns3::BurstErrorModel/BurstSize/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::PointToPointNetDevice/ReceiveErrorModel/$ns3::RateErrorModel/RanVar/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::PointToPointNetDevice/ReceiveErrorModel/$ns3::BurstErrorModel/BurstStart/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::PointToPointNetDevice/ReceiveErrorModel/$ns3::BurstErrorModel/BurstSize/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::LoraNetDevice/Channel/PropagationLossModel/$ns3::RandomPropagationLossModel/Variable/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::LoraNetDevice/Channel/PropagationDelayModel/$ns3::RandomPropagationDelayModel/Variable/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/ApplicationList/[i]/$ns3::OnOffApplication/OnTime/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/ApplicationList/[i]/$ns3::OnOffApplication/OffTime/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::GaussMarkovMobilityModel/MeanVelocity/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::GaussMarkovMobilityModel/MeanDirection/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::GaussMarkovMobilityModel/MeanPitch/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomDirection2dMobilityModel/Speed/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomDirection2dMobilityModel/Pause/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWalk2dMobilityModel/Direction/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWalk2dMobilityModel/Speed/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/Speed/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/Pause/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::RandomRectanglePositionAllocator/X/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::RandomRectanglePositionAllocator/Y/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::RandomBoxPositionAllocator/X/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::RandomBoxPositionAllocator/Y/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::RandomBoxPositionAllocator/Z/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::RandomDiscPositionAllocator/Theta/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::RandomDiscPositionAllocator/Rho/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::OutdoorPositionAllocator/X/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::OutdoorPositionAllocator/Y/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::OutdoorPositionAllocator/Z/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWalk2dOutdoorMobilityModel/Direction/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWalk2dOutdoorMobilityModel/Speed/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::ArpL3Protocol/RequestJitter/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::Icmpv6L4Protocol/SolicitationJitter/$ns3::BernoulliRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::Icmpv6L4Protocol/RsRetransmissionJitter/$ns3::BernoulliRandomVariable"</li>
+<li>"/ChannelList/[i]/$ns3::LoraChannel/PropagationLossModel/$ns3::RandomPropagationLossModel/Variable/$ns3::BernoulliRandomVariable"</li>
+<li>"/ChannelList/[i]/$ns3::LoraChannel/PropagationDelayModel/$ns3::RandomPropagationDelayModel/Variable/$ns3::BernoulliRandomVariable"</li>
+</ul>
+<h3>Attributes</h3>
+<ul>
+<li><b>Probability</b>: The probability of the random variable returning a value of 1.
+  <ul>
+    <li>Set with class:  \ref ns3::DoubleValue</li>
+    <li>Underlying type: double 0:1.79769e+308</li>
+    <li>Initial value: 0.5</li>
+    <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
+  </ul>
+</ul>
+<h3>Attributes defined in parent class ns3::RandomVariableStream</h3>
+<ul>
+<li><b>Antithetic</b>: Set this RNG stream to generate antithetic values
+  <ul>
+    <li>Set with class:  \ref ns3::BooleanValue</li>
+    <li>Underlying type: bool</li>
+    <li>Initial value: false</li>
+    <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
+  </ul>
+<li><b>Stream</b>: The stream number for this RNG stream. -1 means "allocate a stream automatically". Note that if -1 is set, Get will return -1 so that it is not possible to know which value was automatically allocated.
+  <ul>
+    <li>Set with class:  \ref ns3::IntegerValue</li>
+    <li>Underlying type: int64_t -9223372036854775808:9223372036854775807</li>
+    <li>Initial value: -1</li>
+    <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
+  </ul>
+</ul>
+No TraceSources are defined for this type.<br>
+<b>Size</b> of this type is 64 bytes (on a 64-bit architecture).
+*/
+
+/*!
+
 \class ns3::BinaryErrorModel
 
 <h3>Config Paths</h3>
@@ -345,6 +421,89 @@ No Attributes are defined for this type.<br>
 </ul>
 No TraceSources are defined for this type.<br>
 <b>Size</b> of this type is 32 bytes (on a 64-bit architecture).
+*/
+
+/*!
+
+\class ns3::BinomialRandomVariable
+
+<h3>Config Paths</h3>
+
+ns3::BinomialRandomVariable is accessible through the following paths with Config::Set and Config::Connect:
+<ul>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::SimpleNetDevice/ReceiveErrorModel/$ns3::RateErrorModel/RanVar/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::SimpleNetDevice/ReceiveErrorModel/$ns3::BurstErrorModel/BurstStart/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::SimpleNetDevice/ReceiveErrorModel/$ns3::BurstErrorModel/BurstSize/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::PointToPointNetDevice/ReceiveErrorModel/$ns3::RateErrorModel/RanVar/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::PointToPointNetDevice/ReceiveErrorModel/$ns3::BurstErrorModel/BurstStart/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::PointToPointNetDevice/ReceiveErrorModel/$ns3::BurstErrorModel/BurstSize/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::LoraNetDevice/Channel/PropagationLossModel/$ns3::RandomPropagationLossModel/Variable/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/DeviceList/[i]/$ns3::LoraNetDevice/Channel/PropagationDelayModel/$ns3::RandomPropagationDelayModel/Variable/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/ApplicationList/[i]/$ns3::OnOffApplication/OnTime/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/ApplicationList/[i]/$ns3::OnOffApplication/OffTime/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::GaussMarkovMobilityModel/MeanVelocity/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::GaussMarkovMobilityModel/MeanDirection/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::GaussMarkovMobilityModel/MeanPitch/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomDirection2dMobilityModel/Speed/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomDirection2dMobilityModel/Pause/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWalk2dMobilityModel/Direction/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWalk2dMobilityModel/Speed/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/Speed/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/Pause/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::RandomRectanglePositionAllocator/X/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::RandomRectanglePositionAllocator/Y/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::RandomBoxPositionAllocator/X/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::RandomBoxPositionAllocator/Y/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::RandomBoxPositionAllocator/Z/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::RandomDiscPositionAllocator/Theta/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::RandomDiscPositionAllocator/Rho/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::OutdoorPositionAllocator/X/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::OutdoorPositionAllocator/Y/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWaypointMobilityModel/PositionAllocator/$ns3::OutdoorPositionAllocator/Z/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWalk2dOutdoorMobilityModel/Direction/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::MobilityModel/$ns3::RandomWalk2dOutdoorMobilityModel/Speed/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::ArpL3Protocol/RequestJitter/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::Icmpv6L4Protocol/SolicitationJitter/$ns3::BinomialRandomVariable"</li>
+<li>"/NodeList/[i]/$ns3::Icmpv6L4Protocol/RsRetransmissionJitter/$ns3::BinomialRandomVariable"</li>
+<li>"/ChannelList/[i]/$ns3::LoraChannel/PropagationLossModel/$ns3::RandomPropagationLossModel/Variable/$ns3::BinomialRandomVariable"</li>
+<li>"/ChannelList/[i]/$ns3::LoraChannel/PropagationDelayModel/$ns3::RandomPropagationDelayModel/Variable/$ns3::BinomialRandomVariable"</li>
+</ul>
+<h3>Attributes</h3>
+<ul>
+<li><b>Probability</b>: The probability of success in each trial.
+  <ul>
+    <li>Set with class:  \ref ns3::DoubleValue</li>
+    <li>Underlying type: double 0:1.79769e+308</li>
+    <li>Initial value: 0.5</li>
+    <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
+  </ul>
+<li><b>Trials</b>: The number of trials.
+  <ul>
+    <li>Set with class:  \ref ns3::IntegerValue</li>
+    <li>Underlying type: uint32_t 0:4294967295</li>
+    <li>Initial value: 10</li>
+    <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
+  </ul>
+</ul>
+<h3>Attributes defined in parent class ns3::RandomVariableStream</h3>
+<ul>
+<li><b>Antithetic</b>: Set this RNG stream to generate antithetic values
+  <ul>
+    <li>Set with class:  \ref ns3::BooleanValue</li>
+    <li>Underlying type: bool</li>
+    <li>Initial value: false</li>
+    <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
+  </ul>
+<li><b>Stream</b>: The stream number for this RNG stream. -1 means "allocate a stream automatically". Note that if -1 is set, Get will return -1 so that it is not possible to know which value was automatically allocated.
+  <ul>
+    <li>Set with class:  \ref ns3::IntegerValue</li>
+    <li>Underlying type: int64_t -9223372036854775808:9223372036854775807</li>
+    <li>Initial value: -1</li>
+    <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
+  </ul>
+</ul>
+No TraceSources are defined for this type.<br>
+<b>Size</b> of this type is 72 bytes (on a 64-bit architecture).
 */
 
 /*!
@@ -473,7 +632,7 @@ Introspection did not find any typical Config paths.<br>
   </ul>
 <li><b>ExternalWallsType</b>: The type of material of which the external walls are made
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns38Building14ExtWallsType_tE></li>
     <li>Underlying type: \p Wood|ConcreteWithWindows|ConcreteWithoutWindows|StoneBlocks</li>
     <li>Initial value: ConcreteWithWindows</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -507,7 +666,7 @@ Introspection did not find any typical Config paths.<br>
   </ul>
 <li><b>Type</b>: The type of building
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns38Building14BuildingType_tE></li>
     <li>Underlying type: \p Residential|Office|Commercial</li>
     <li>Initial value: Residential</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -882,7 +1041,7 @@ No Attributes are defined for this type.<br>
   </ul>
 <li><b>MType</b>: Specify type of message will be sent by this ED.
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns37lorawan16LorawanMacHeader5MTypeE></li>
     <li>Underlying type: \p Unconfirmed|Confirmed</li>
     <li>Initial value: Unconfirmed</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -1940,7 +2099,7 @@ ns3::EndDeviceLorawanMac is accessible through the following paths with Config::
   </ul>
 <li><b>MType</b>: Specify type of message will be sent by this ED.
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns37lorawan16LorawanMacHeader5MTypeE></li>
     <li>Underlying type: \p Unconfirmed|Confirmed</li>
     <li>Initial value: Unconfirmed</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -3330,7 +3489,7 @@ Introspection did not find any typical Config paths.<br>
 <ul>
 <li><b>BatteryType</b>: Indicates the battery type used by the model
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns318GenericBatteryTypeE></li>
     <li>Underlying type: \p LION_LIPO|NIMH_NICD|LEADACID</li>
     <li>Initial value: LION_LIPO</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -3500,7 +3659,7 @@ Introspection did not find any typical Config paths.<br>
   </ul>
 <li><b>LayoutType</b>: The type of layout.
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns321GridPositionAllocator10LayoutTypeE></li>
     <li>Underlying type: \p RowFirst|ColumnFirst</li>
     <li>Initial value: RowFirst</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -3573,7 +3732,7 @@ ns3::GridPositionAllocator is accessible through the following paths with Config
   </ul>
 <li><b>LayoutType</b>: The type of layout.
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns321GridPositionAllocator10LayoutTypeE></li>
     <li>Underlying type: \p RowFirst|ColumnFirst</li>
     <li>Initial value: RowFirst</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -3716,14 +3875,14 @@ ns3::HybridBuildingsPropagationLossModel is accessible through the following pat
 <ul>
 <li><b>CitySize</b>: Dimension of the city
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns38CitySizeE></li>
     <li>Underlying type: \p Small|Medium|Large</li>
     <li>Initial value: Large</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span></li>
   </ul>
 <li><b>Environment</b>: Environment Scenario
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns315EnvironmentTypeE></li>
     <li>Underlying type: \p Urban|SubUrban|OpenAreas</li>
     <li>Initial value: Urban</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span></li>
@@ -4159,6 +4318,13 @@ Introspection did not find any typical Config paths.<br>
     <li>Initial value: true</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
   </ul>
+<li><b>StrongEndSystemModel</b>: Reject packets for an address not configured on the interface they're coming from (RFC1122, section 3.3.4.2).
+  <ul>
+    <li>Set with class:  \ref ns3::BooleanValue</li>
+    <li>Underlying type: bool</li>
+    <li>Initial value: false</li>
+    <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
+  </ul>
 <li><b>WeakEsModel</b>: RFC1122 term for whether host accepts datagram with a dest. address on another interface
   <ul>
     <li>Set with class:  \ref ns3::BooleanValue</li>
@@ -4292,6 +4458,13 @@ ns3::Ipv4L3Protocol is accessible through the following paths with Config::Set a
     <li>Set with class:  \ref ns3::BooleanValue</li>
     <li>Underlying type: bool</li>
     <li>Initial value: true</li>
+    <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
+  </ul>
+<li><b>StrongEndSystemModel</b>: Reject packets for an address not configured on the interface they're coming from (RFC1122, section 3.3.4.2).
+  <ul>
+    <li>Set with class:  \ref ns3::BooleanValue</li>
+    <li>Underlying type: bool</li>
+    <li>Initial value: false</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
   </ul>
 <li><b>WeakEsModel</b>: RFC1122 term for whether host accepts datagram with a dest. address on another interface
@@ -4470,6 +4643,13 @@ Introspection did not find any typical Config paths.<br>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
   </ul>
 <li><b>MtuDiscover</b>: If disabled, every interface will have its MTU set to 1280 bytes.
+  <ul>
+    <li>Set with class:  \ref ns3::BooleanValue</li>
+    <li>Underlying type: bool</li>
+    <li>Initial value: true</li>
+    <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
+  </ul>
+<li><b>StrongEndSystemModel</b>: Reject packets for an address not configured on the interface they're coming from (RFC1122, section 3.3.4.2).
   <ul>
     <li>Set with class:  \ref ns3::BooleanValue</li>
     <li>Underlying type: bool</li>
@@ -4821,13 +5001,6 @@ ns3::Ipv6L3Protocol is accessible through the following paths with Config::Set a
     <li>Initial value: true</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
   </ul>
-<li><b>StrongEndSystemModel</b>: Reject packets for an address not configured on the interface they're coming from (RFC1122, section 3.3.4.2).
-  <ul>
-    <li>Set with class:  \ref ns3::BooleanValue</li>
-    <li>Underlying type: bool</li>
-    <li>Initial value: true</li>
-    <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
-  </ul>
 </ul>
 <h3>Attributes defined in parent class ns3::Ipv6</h3>
 <ul>
@@ -4839,6 +5012,13 @@ ns3::Ipv6L3Protocol is accessible through the following paths with Config::Set a
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
   </ul>
 <li><b>MtuDiscover</b>: If disabled, every interface will have its MTU set to 1280 bytes.
+  <ul>
+    <li>Set with class:  \ref ns3::BooleanValue</li>
+    <li>Underlying type: bool</li>
+    <li>Initial value: true</li>
+    <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
+  </ul>
+<li><b>StrongEndSystemModel</b>: Reject packets for an address not configured on the interface they're coming from (RFC1122, section 3.3.4.2).
   <ul>
     <li>Set with class:  \ref ns3::BooleanValue</li>
     <li>Underlying type: bool</li>
@@ -5243,14 +5423,14 @@ ns3::ItuR1411NlosOverRooftopPropagationLossModel is accessible through the follo
   </ul>
 <li><b>CitySize</b>: Dimension of the city
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns38CitySizeE></li>
     <li>Underlying type: \p Small|Medium|Large</li>
     <li>Initial value: Large</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
   </ul>
 <li><b>Environment</b>: Environment Scenario
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns315EnvironmentTypeE></li>
     <li>Underlying type: \p Urban|SubUrban|OpenAreas</li>
     <li>Initial value: Urban</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -5954,7 +6134,7 @@ ns3::MatrixPropagationLossModel is accessible through the following paths with C
   </ul>
 </ul>
 No TraceSources are defined for this type.<br>
-<b>Size</b> of this type is 96 bytes (on a 64-bit architecture).
+<b>Size</b> of this type is 104 bytes (on a 64-bit architecture).
 */
 
 /*!
@@ -6545,14 +6725,14 @@ ns3::OkumuraHataPropagationLossModel is accessible through the following paths w
 <ul>
 <li><b>CitySize</b>: Dimension of the city
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns38CitySizeE></li>
     <li>Underlying type: \p Small|Medium|Large</li>
     <li>Initial value: Large</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
   </ul>
 <li><b>Environment</b>: Environment Scenario
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns315EnvironmentTypeE></li>
     <li>Underlying type: \p Urban|SubUrban|OpenAreas</li>
     <li>Initial value: Urban</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -7695,7 +7875,7 @@ ns3::ProbabilisticV2vHighwayChannelConditionModel is accessible through the foll
 <ul>
 <li><b>Density</b>: Specifies the density of the vehicles in the scenario.It can be set to Low, Medium or High.
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns329ThreeGppChannelConditionModel14VehicleDensityE></li>
     <li>Underlying type: \p Low|Medium|High</li>
     <li>Initial value: Low</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -7753,7 +7933,7 @@ ns3::ProbabilisticV2vUrbanChannelConditionModel is accessible through the follow
 <ul>
 <li><b>Density</b>: Specifies the density of the vehicles in the scenario.It can be set to Low, Medium or High.
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns329ThreeGppChannelConditionModel14VehicleDensityE></li>
     <li>Underlying type: \p Low|Medium|High</li>
     <li>Initial value: Low</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -8423,7 +8603,7 @@ ns3::RandomWalk2dMobilityModel is accessible through the following paths with Co
   </ul>
 <li><b>Mode</b>: The mode indicates the condition used to change the current speed and direction
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns325RandomWalk2dMobilityModel4ModeE></li>
     <li>Underlying type: \p Distance|Time</li>
     <li>Initial value: Distance</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -8509,7 +8689,7 @@ ns3::RandomWalk2dOutdoorMobilityModel is accessible through the following paths 
   </ul>
 <li><b>Mode</b>: The mode indicates the condition used to change the current speed and direction
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns332RandomWalk2dOutdoorMobilityModel4ModeE></li>
     <li>Underlying type: \p Distance|Time</li>
     <li>Initial value: Distance</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -8665,7 +8845,7 @@ ns3::RateErrorModel is accessible through the following paths with Config::Set a
   </ul>
 <li><b>ErrorUnit</b>: The error unit
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns314RateErrorModel9ErrorUnitE></li>
     <li>Underlying type: \p ERROR_UNIT_BIT|ERROR_UNIT_BYTE|ERROR_UNIT_PACKET</li>
     <li>Initial value: ERROR_UNIT_BYTE</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -8708,7 +8888,7 @@ Introspection did not find any typical Config paths.<br>
   </ul>
 <li><b>SynchronizationMode</b>: What to do if the simulation cannot keep up with real time.
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns321RealtimeSimulatorImpl19SynchronizationModeE></li>
     <li>Underlying type: \p BestEffort|HardLimit</li>
     <li>Initial value: BestEffort</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span></li>
@@ -9040,7 +9220,7 @@ Introspection did not find any typical Config paths.<br>
   </ul>
 <li><b>SplitHorizon</b>: Split Horizon strategy.
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns33Rip18SplitHorizonType_eE></li>
     <li>Underlying type: \p NoSplitHorizon|SplitHorizon|PoisonReverse</li>
     <li>Initial value: PoisonReverse</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -9123,7 +9303,7 @@ ns3::RipNg is accessible through the following paths with Config::Set and Config
   </ul>
 <li><b>SplitHorizon</b>: Split Horizon strategy.
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns35RipNg18SplitHorizonType_eE></li>
     <li>Underlying type: \p NoSplitHorizon|SplitHorizon|PoisonReverse</li>
     <li>Initial value: PoisonReverse</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -10175,7 +10355,7 @@ ns3::TcpCubic is accessible through the following paths with Config::Set and Con
   </ul>
 <li><b>HyStartDetect</b>: Hybrid Slow Start detection mechanisms:packet train, delay, both
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns38TcpCubic21HybridSSDetectionModeE></li>
     <li>Underlying type: \p PACKET_TRAIN|DELAY|BOTH</li>
     <li>Initial value: BOTH</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -10192,6 +10372,13 @@ ns3::TcpCubic is accessible through the following paths with Config::Set and Con
     <li>Set with class:  \ref ns3::UintegerValue</li>
     <li>Underlying type: uint8_t 0:255</li>
     <li>Initial value: 8</li>
+    <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
+  </ul>
+<li><b>TcpFriendliness</b>: Enable (true) or disable (false) TCP friendliness
+  <ul>
+    <li>Set with class:  \ref ns3::BooleanValue</li>
+    <li>Underlying type: bool</li>
+    <li>Initial value: true</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
   </ul>
 </ul>
@@ -10288,7 +10475,7 @@ ns3::TcpCubic is accessible through the following paths with Config::Set and Con
   </ul>
 <li><b>UseEcn</b>: Parameter to set ECN functionality
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns314TcpSocketState8UseEcn_tE></li>
     <li>Underlying type: \p Off|On|AcceptOnly</li>
     <li>Initial value: Off</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span></li>
@@ -10434,7 +10621,7 @@ No TraceSources are defined for this type.<br>
 <li><b>Tx</b>: Send tcp packet to IP protocol<br>%Callback signature: ns3::TcpSocketBase::TcpTxRxTracedCallback
 </li>
 </ul>
-<b>Size</b> of this type is 200 bytes (on a 64-bit architecture).
+<b>Size</b> of this type is 208 bytes (on a 64-bit architecture).
 */
 
 /*!
@@ -10744,7 +10931,7 @@ ns3::TcpLedbat is accessible through the following paths with Config::Set and Co
   </ul>
 <li><b>SSParam</b>: Possibility of Slow Start
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns39TcpLedbat13SlowStartTypeE></li>
     <li>Underlying type: \p yes|no</li>
     <li>Initial value: yes</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span></li>
@@ -10906,7 +11093,7 @@ Introspection did not find any typical Config paths.<br>
 <ul>
 <li><b>ReductionBound</b>: Type of Reduction Bound
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns314TcpPrrRecovery16ReductionBound_tE></li>
     <li>Underlying type: \p CRB|SSRB</li>
     <li>Initial value: SSRB</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -11202,7 +11389,7 @@ ns3::TcpSocketBase is accessible through the following paths with Config::Set an
   </ul>
 <li><b>UseEcn</b>: Parameter to set ECN functionality
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns314TcpSocketState8UseEcn_tE></li>
     <li>Underlying type: \p Off|On|AcceptOnly</li>
     <li>Initial value: Off</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span></li>
@@ -11532,7 +11719,7 @@ ns3::TcpWestwoodPlus is accessible through the following paths with Config::Set 
 <ul>
 <li><b>FilterType</b>: Use this to choose no filter or Tustin's approximation filter
   <ul>
-    <li>Set with class:  \ref ns3::EnumValue</li>
+    <li>Set with class:  \ref ns3::EnumValue<N3ns315TcpWestwoodPlus10FilterTypeE></li>
     <li>Underlying type: \p None|Tustin</li>
     <li>Initial value: Tustin</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
@@ -14209,7 +14396,9 @@ For more information see the \ref ns3::TypeId section of this API documentation 
   <li><b>ns3::ArpL3Protocol</b></li>
   <li><b>ns3::BasicEnergyHarvester</b></li>
   <li><b>ns3::BasicEnergySource</b></li>
+  <li><b>ns3::BernoulliRandomVariable</b></li>
   <li><b>ns3::BinaryErrorModel</b></li>
+  <li><b>ns3::BinomialRandomVariable</b></li>
   <li><b>ns3::BooleanProbe</b></li>
   <li><b>ns3::BridgeChannel</b></li>
   <li><b>ns3::BridgeNetDevice</b></li>
@@ -14632,6 +14821,15 @@ This is a list of all \ref attributes classes.  For more information see the \re
 <li><b>BasicEnergySupplyVoltageV</b>: Initial supply voltage for basic energy source.</li>
 <li><b>PeriodicEnergyUpdateInterval</b>: Time between two consecutive periodic energy updates.</li>
 </ul>
+<b>ns3::BernoulliRandomVariable</b><br>
+<ul>
+<li><b>Probability</b>: The probability of the random variable returning a value of 1.</li>
+</ul>
+<b>ns3::BinomialRandomVariable</b><br>
+<ul>
+<li><b>Probability</b>: The probability of success in each trial.</li>
+<li><b>Trials</b>: The number of trials.</li>
+</ul>
 <b>ns3::BridgeNetDevice</b><br>
 <ul>
 <li><b>EnableLearning</b>: Enable the learning mode of the Learning Bridge</li>
@@ -14942,6 +15140,7 @@ This is a list of all \ref attributes classes.  For more information see the \re
 <b>ns3::Ipv4</b><br>
 <ul>
 <li><b>IpForward</b>: Globally enable or disable IP forwarding for all current and future Ipv4 devices.</li>
+<li><b>StrongEndSystemModel</b>: Reject packets for an address not configured on the interface they're coming from (RFC1122, section 3.3.4.2).</li>
 <li><b>WeakEsModel</b>: RFC1122 term for whether host accepts datagram with a dest. address on another interface</li>
 </ul>
 <b>ns3::Ipv4GlobalRouting</b><br>
@@ -14972,6 +15171,7 @@ This is a list of all \ref attributes classes.  For more information see the \re
 <ul>
 <li><b>IpForward</b>: Globally enable or disable IP forwarding for all current and future IPv6 devices.</li>
 <li><b>MtuDiscover</b>: If disabled, every interface will have its MTU set to 1280 bytes.</li>
+<li><b>StrongEndSystemModel</b>: Reject packets for an address not configured on the interface they're coming from (RFC1122, section 3.3.4.2).</li>
 </ul>
 <b>ns3::Ipv6Extension</b><br>
 <ul>
@@ -14995,7 +15195,6 @@ This is a list of all \ref attributes classes.  For more information see the \re
 <li><b>DefaultTtl</b>: The TTL value set by default on all outgoing packets generated on this node.</li>
 <li><b>InterfaceList</b>: The set of IPv6 interfaces associated to this IPv6 stack.</li>
 <li><b>SendIcmpv6Redirect</b>: Send the ICMPv6 Redirect when appropriate.</li>
-<li><b>StrongEndSystemModel</b>: Reject packets for an address not configured on the interface they're coming from (RFC1122, section 3.3.4.2).</li>
 </ul>
 <b>ns3::Ipv6Option</b><br>
 <ul>
@@ -15482,6 +15681,7 @@ This is a list of all \ref attributes classes.  For more information see the \re
 <li><b>HyStartDetect</b>: Hybrid Slow Start detection mechanisms:packet train, delay, both</li>
 <li><b>HyStartLowWindow</b>: Lower bound cWnd for hybrid slow start (segments)</li>
 <li><b>HyStartMinSamples</b>: Number of delay samples for detecting the increase of delay</li>
+<li><b>TcpFriendliness</b>: Enable (true) or disable (false) TCP friendliness</li>
 </ul>
 <b>ns3::TcpDctcp</b><br>
 <ul>
@@ -15833,6 +16033,9 @@ This is a list of all \ref ns3::LogComponent instances.
 | DeviceEnergyModel                           | /__w/lorawan/lorawan/src/energy/model/device-energy-model.cc                                      |
 | DeviceEnergyModelContainer                  | /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.cc                            |
 | BasicEnergySource                           | /__w/lorawan/lorawan/src/energy/model/basic-energy-source.cc                                      |
+| LoraRadioEnergyModel                        | /__w/lorawan/lorawan/src/lorawan/model/lora-radio-energy-model.cc                                 |
+| PacketLossCounter                           | /__w/lorawan/lorawan/src/applications/model/packet-loss-counter.cc                                |
+| BasicEnergyHarvester                        | /__w/lorawan/lorawan/src/energy/model/basic-energy-harvester.cc                                   |
 | PppHeader                                   | /__w/lorawan/lorawan/src/point-to-point/model/ppp-header.cc                                       |
 | UdpEchoClientApplication                    | /__w/lorawan/lorawan/src/applications/model/udp-echo-client.cc                                    |
 | PointToPointNetDevice                       | /__w/lorawan/lorawan/src/point-to-point/model/point-to-point-net-device.cc                        |
@@ -15890,8 +16093,8 @@ This is a list of all \ref ns3::LogComponent instances.
 | UdpTraceClient                              | /__w/lorawan/lorawan/src/applications/model/udp-trace-client.cc                                   |
 | Trailer                                     | /__w/lorawan/lorawan/src/network/model/trailer.cc                                                 |
 | Ipv6PacketFilter                            | /__w/lorawan/lorawan/src/internet/model/ipv6-packet-filter.cc                                     |
-| TagBuffer                                   | /__w/lorawan/lorawan/src/network/model/tag-buffer.cc                                              |
 | PacketProbe                                 | /__w/lorawan/lorawan/src/network/utils/packet-probe.cc                                            |
+| TagBuffer                                   | /__w/lorawan/lorawan/src/network/model/tag-buffer.cc                                              |
 | ThreeGppHttpServer                          | /__w/lorawan/lorawan/src/applications/model/three-gpp-http-server.cc                              |
 | SocketFactory                               | /__w/lorawan/lorawan/src/network/model/socket-factory.cc                                          |
 | PacketTagList                               | /__w/lorawan/lorawan/src/network/model/packet-tag-list.cc                                         |
@@ -15955,7 +16158,6 @@ This is a list of all \ref ns3::LogComponent instances.
 | WallClockSynchronizer                       | /__w/lorawan/lorawan/src/core/model/wall-clock-synchronizer.cc                                    |
 | WaypointMobilityModel                       | /__w/lorawan/lorawan/src/mobility/model/waypoint-mobility-model.cc                                |
 | InternetTraceHelper                         | /__w/lorawan/lorawan/src/internet/helper/internet-trace-helper.cc                                 |
-| RealtimeSimulatorImpl                       | /__w/lorawan/lorawan/src/core/model/realtime-simulator-impl.cc                                    |
 | Object                                      | /__w/lorawan/lorawan/src/core/model/object.cc                                                     |
 | Packet                                      | /__w/lorawan/lorawan/src/network/model/packet.cc                                                  |
 | TcpOptionTS                                 | /__w/lorawan/lorawan/src/internet/model/tcp-option-ts.cc                                          |
@@ -16018,10 +16220,6 @@ This is a list of all \ref ns3::LogComponent instances.
 | TrickleTimer                                | /__w/lorawan/lorawan/src/core/model/trickle-timer.cc                                              |
 | UdpClient                                   | /__w/lorawan/lorawan/src/applications/model/udp-client.cc                                         |
 | Test                                        | /__w/lorawan/lorawan/src/core/model/test.cc                                                       |
-| LoraRadioEnergyModel                        | /__w/lorawan/lorawan/src/lorawan/model/lora-radio-energy-model.cc                                 |
-| PacketLossCounter                           | /__w/lorawan/lorawan/src/applications/model/packet-loss-counter.cc                                |
-| BasicEnergyHarvester                        | /__w/lorawan/lorawan/src/energy/model/basic-energy-harvester.cc                                   |
-| Enum                                        | /__w/lorawan/lorawan/src/core/model/enum.cc                                                       |
 | BuildingPenetrationLoss                     | /__w/lorawan/lorawan/src/lorawan/model/building-penetration-loss.cc                               |
 | TrafficControlLayer                         | /__w/lorawan/lorawan/src/traffic-control/model/traffic-control-layer.cc                           |
 | Ipv4QueueDiscItem                           | /__w/lorawan/lorawan/src/internet/model/ipv4-queue-disc-item.cc                                   |
@@ -16047,6 +16245,7 @@ This is a list of all \ref ns3::LogComponent instances.
 | QueueItem                                   | /__w/lorawan/lorawan/src/network/utils/queue-item.cc                                              |
 | PointToPointHelper                          | /__w/lorawan/lorawan/src/point-to-point/helper/point-to-point-helper.cc                           |
 | TbfQueueDisc                                | /__w/lorawan/lorawan/src/traffic-control/model/tbf-queue-disc.cc                                  |
+| RealtimeSimulatorImpl                       | /__w/lorawan/lorawan/src/core/model/realtime-simulator-impl.cc                                    |
 | DynamicQueueLimits                          | /__w/lorawan/lorawan/src/network/utils/dynamic-queue-limits.cc                                    |
 | Breakpoint                                  | /__w/lorawan/lorawan/src/core/model/breakpoint.cc                                                 |
 | BridgeNetDevice                             | /__w/lorawan/lorawan/src/bridge/model/bridge-net-device.cc                                        |
@@ -16119,8 +16318,6 @@ This is a list of all \ref ns3::LogComponent instances.
 | Ipv4PacketProbe                             | /__w/lorawan/lorawan/src/internet/model/ipv4-packet-probe.cc                                      |
 | Ipv4EndPointDemux                           | /__w/lorawan/lorawan/src/internet/model/ipv4-end-point-demux.cc                                   |
 | Ipv4EndPoint                                | /__w/lorawan/lorawan/src/internet/model/ipv4-end-point.cc                                         |
-| TcpSocket                                   | /__w/lorawan/lorawan/src/internet/model/tcp-socket.cc                                             |
-| Ipv4Interface                               | /__w/lorawan/lorawan/src/internet/model/ipv4-interface.cc                                         |
 | Ipv6AutoconfiguredPrefix                    | /__w/lorawan/lorawan/src/internet/model/ipv6-autoconfigured-prefix.cc                             |
 | PacketSocket                                | /__w/lorawan/lorawan/src/network/utils/packet-socket.cc                                           |
 | RttEstimator                                | /__w/lorawan/lorawan/src/internet/model/rtt-estimator.cc                                          |
@@ -16173,6 +16370,8 @@ This is a list of all \ref ns3::LogComponent instances.
 | BuildingsHelper                             | /__w/lorawan/lorawan/src/buildings/helper/buildings-helper.cc                                     |
 | TcpOptionWinScale                           | /__w/lorawan/lorawan/src/internet/model/tcp-option-winscale.cc                                    |
 | TcpScalable                                 | /__w/lorawan/lorawan/src/internet/model/tcp-scalable.cc                                           |
+| Ipv4Interface                               | /__w/lorawan/lorawan/src/internet/model/ipv4-interface.cc                                         |
+| TcpSocket                                   | /__w/lorawan/lorawan/src/internet/model/tcp-socket.cc                                             |
 
 */
 

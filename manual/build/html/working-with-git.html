@@ -9,7 +9,7 @@
     <title>4.1. Working with Git as a user &#8212; Manual</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
-    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -450,15 +450,16 @@ $<span class="w"> </span>cat<span class="w"> </span>VERSION
 <span class="m">3</span>.34
 </pre></div>
 </div>
-<p>We next change the file conf.py in the contributing, tutorial, manual, and models directories
+<p>We next change the file conf.py in the contributing, installation, tutorial, manual, and models directories
 to change the strings ‘ns-3-dev’ to ns-3.34.</p>
 <p>When you are done, the ‘git diff –stat’ command should show:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>VERSION<span class="w">                         </span><span class="p">|</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>+-
 doc/contributing/source/conf.py<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>++--
+doc/installation/source/conf.py<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>++--
 doc/manual/source/conf.py<span class="w">       </span><span class="p">|</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>++--
 doc/models/source/conf.py<span class="w">       </span><span class="p">|</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>++--
 doc/tutorial/source/conf.py<span class="w">     </span><span class="p">|</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>++--
-<span class="m">5</span><span class="w"> </span>files<span class="w"> </span>changed,<span class="w"> </span><span class="m">9</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>,<span class="w"> </span><span class="m">9</span><span class="w"> </span>deletions<span class="o">(</span>-<span class="o">)</span>
+<span class="m">6</span><span class="w"> </span>files<span class="w"> </span>changed,<span class="w"> </span><span class="m">11</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>,<span class="w"> </span><span class="m">11</span><span class="w"> </span>deletions<span class="o">(</span>-<span class="o">)</span>
 </pre></div>
 </div>
 <p>Make a commit of these files:</p>
@@ -478,9 +479,9 @@ doc/tutorial/source/conf.py<span class="w">     </span><span class="p">|</span><
 </pre></div>
 </div>
 <p>Commit this change:</p>
-<blockquote>
-<div><p>$ git commit -m”Update availability in RELEASE_NOTES.md” RELEASE_NOTES.md</p>
-</div></blockquote>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="s2">&quot;Update availability in RELEASE_NOTES.md&quot;</span><span class="w"> </span>RELEASE_NOTES.md
+</pre></div>
+</div>
 <p>Finally, add a Git annotated tag:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span><span class="s1">&#39;ns-3.34&#39;</span><span class="w"> </span>-m<span class="s2">&quot;ns-3.34 release&quot;</span>
 </pre></div>
@@ -753,8 +754,8 @@ ns-3.34.1
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2006-2019.
-      Last updated on Mar 08, 2024 13:55.
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Mar 20, 2024 11:47.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>

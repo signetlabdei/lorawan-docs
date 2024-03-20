@@ -66,8 +66,8 @@
 
 
 \title{ns-3 Manual}
-\date{Mar 08, 2024}
-\release{ns\sphinxhyphen{}3.40}
+\date{Mar 20, 2024}
+\release{ns\sphinxhyphen{}3.41}
 \author{ns-3 project}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{ns-3.png}\par}
 \renewcommand{\releasename}{Release}
@@ -95,7 +95,7 @@ follows:
 \sphinxAtStartPar
 Several guides that are version controlled for each release (the
 \sphinxhref{https://www.nsnam.org/documentation/latest/}{latest release}) and
-\sphinxhref{https://www.nsnam.org/ns-3-dev/documentation/}{development tree}:
+\sphinxhref{https://www.nsnam.org/documentation/development-tree/}{development tree}:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
@@ -257,7 +257,109 @@ This chapter of the manual describes these fundamental objects
 \subsection{Event}
 \label{\detokenize{events:event}}
 \sphinxAtStartPar
-\sphinxstyleemphasis{To be completed}
+An event represents something that changes the simulation status, i.e.,
+between two events the simulation status does not change, and the event
+will likely change it (it could also not change anything).
+
+\sphinxAtStartPar
+Note that another way to understand an event is to consider it as a delayed
+function call. With the due differences, a discrete event simulation is not
+much different from a “normal” program where the functions are not called
+immediately, but are marked with a “time”, and the time is used to decide
+the order of the functions execution.
+
+\sphinxAtStartPar
+The time, of course, is a simulated time, and is quite different from the
+“real” time. Depending on the simulation complexity the simulated time
+can advance faster or slower then the “real” time, but like a “real” time
+can only go forward.
+
+\sphinxAtStartPar
+An example of an event is the reception of a packet, or the expiration
+of a timer.
+
+\sphinxAtStartPar
+An event is represented by:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+The time at which the event will happen
+
+\item {} 
+\sphinxAtStartPar
+A pointer to the function that will “handle” the event,
+
+\item {} 
+\sphinxAtStartPar
+The parameters of the function that will handle the event (if any),
+
+\item {} 
+\sphinxAtStartPar
+Other internal structures.
+
+\end{itemize}
+
+\sphinxAtStartPar
+An event is scheduled through a call to \sphinxcode{\sphinxupquote{Simulator::Schedule}}, and once
+scheduled, it can be canceled or removed.
+Removal implies removal from the scheduler data structure, while cancel
+keeps them in the data structure but sets a boolean flag that suppresses
+calling the bound event function at the scheduled time.  When an event is
+scheduled by the Simulator, an \sphinxcode{\sphinxupquote{EventId}} is returned.  The client may use
+this event ID to later cancel or remove the event; see the example program
+\sphinxcode{\sphinxupquote{src/core/examples/sample\sphinxhyphen{}simulator.\{cc,py\}}} for example usage.
+Cancelling an event is typically less computationally expensive than
+removing it, but cancelled events consumes more memory in the scheduler
+data structure, which might impact its performances.
+
+\sphinxAtStartPar
+Events are stored by the simulator in a scheduler data
+structure.  Events are handled in increasing order of
+simulator time, and in the case of two events with the same
+scheduled time, the event with the lowest unique ID (a
+monotonically increasing counter) will be handled first.
+In other words tied events are handled in FIFO order.
+
+\sphinxAtStartPar
+Note that concurrent events (events that happen at the very same time)
+are unlikely in a real system \sphinxhyphen{} not to say impossible. In {\color{red}\bfseries{}|ns\sphinxhyphen{}3|}
+concurrent events are common for a number of reasons, one of them
+being the time representation. While developing a model this must
+be carefully taken into account.
+
+\sphinxAtStartPar
+During the event execution, the simulation time will not advance, i.e., each
+event is executed in zero time. This is a common assumption in
+discrete event simulations, and holds when the computational complexity of
+the operations executed in the event is negligible.
+When this assumption does not hold, it is necessary to schedule a second event
+to mimic the end of the computationally intensive task.
+
+\sphinxAtStartPar
+As an example, suppose to have a device that receives a packet and has to
+perform a complex analysis on it (e.g., an image processing task). The
+sequence of events will be:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+T(t) \sphinxhyphen{} Packet reception and processing, save the result somewhere, and
+schedule an event in (t+d) marking the end of the data processing.
+
+\item {} 
+\sphinxAtStartPar
+T(t+d) \sphinxhyphen{} Retrieve the data, and do other stuff based them.
+
+\end{itemize}
+
+\sphinxAtStartPar
+So, even if the data processing actually did return a result in the
+execution of the first event, the data is considered valid only after
+the second event.
+
+\sphinxAtStartPar
+The image below can be useful to clarify the idea.
+
+\noindent\sphinxincludegraphics{{time-consuming-event-handling}.png}
 
 
 \subsection{Simulator}
@@ -514,7 +616,7 @@ for example:
 or by using a command line argument
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZdl{} ./ns3 run \PYGZdq{}...  \PYGZhy{}\textendash{}SimulatorImplementationType=ns3::DistributedSimulatorImpl\PYGZdq{}
+\PYGZdl{} ./ns3 run \PYGZdq{}...  \PYGZhy{}\PYGZhy{}SimulatorImplementationType=ns3::DistributedSimulatorImpl\PYGZdq{}
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -1448,8 +1550,8 @@ with one or more bound arguments:
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{template}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{k}{typename}\PYG{+w}{ }\PYG{n+nc}{T}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{typename}\PYG{+w}{ }\PYG{n+nc}{ARG}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{typename}\PYG{+w}{ }\PYG{n+nc}{BOUND\PYGZus{}ARG}\PYG{o}{\PYGZgt{}}
 \PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{SpecificFunctor}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k}{public}\PYG{+w}{ }\PYG{n}{Functor}
-\PYG{+w}{ }\PYG{p}{\PYGZob{}}
-\PYG{+w}{ }\PYG{k}{public}\PYG{o}{:}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k}{public}\PYG{o}{:}
 \PYG{+w}{    }\PYG{n}{SpecificFunctor}\PYG{p}{(}\PYG{n}{T}\PYG{o}{*}\PYG{+w}{ }\PYG{n}{p}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{T}\PYG{o}{:}\PYG{o}{:}\PYG{o}{*}\PYG{n}{\PYGZus{}pmi}\PYG{p}{)}\PYG{p}{(}\PYG{n}{ARG}\PYG{+w}{ }\PYG{n}{arg}\PYG{p}{)}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{BOUND\PYGZus{}ARG}\PYG{+w}{ }\PYG{n}{boundArg}\PYG{p}{)}
 \PYG{+w}{    }\PYG{p}{\PYGZob{}}
 \PYG{+w}{      }\PYG{n}{m\PYGZus{}p}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{p}\PYG{p}{;}
@@ -1461,11 +1563,11 @@ with one or more bound arguments:
 \PYG{+w}{    }\PYG{p}{\PYGZob{}}
 \PYG{+w}{      }\PYG{p}{(}\PYG{o}{*}\PYG{n}{m\PYGZus{}p}\PYG{p}{.}\PYG{o}{*}\PYG{n}{m\PYGZus{}pmi}\PYG{p}{)}\PYG{p}{(}\PYG{n}{m\PYGZus{}boundArg}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{arg}\PYG{p}{)}\PYG{p}{;}
 \PYG{+w}{    }\PYG{p}{\PYGZcb{}}
-\PYG{k}{private}\PYG{o}{:}
+\PYG{+w}{  }\PYG{k}{private}\PYG{o}{:}
 \PYG{+w}{    }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{T}\PYG{o}{:}\PYG{o}{:}\PYG{o}{*}\PYG{n}{m\PYGZus{}pmi}\PYG{p}{)}\PYG{p}{(}\PYG{n}{ARG}\PYG{+w}{ }\PYG{n}{arg}\PYG{p}{)}\PYG{p}{;}
 \PYG{+w}{    }\PYG{n}{T}\PYG{o}{*}\PYG{+w}{ }\PYG{n}{m\PYGZus{}p}\PYG{p}{;}
 \PYG{+w}{    }\PYG{n}{BOUND\PYGZus{}ARG}\PYG{+w}{ }\PYG{n}{m\PYGZus{}boundArg}\PYG{p}{;}
-\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -4242,6 +4344,14 @@ class \sphinxcode{\sphinxupquote{DeterministicRandomVariable}}
 \item {} 
 \sphinxAtStartPar
 class \sphinxcode{\sphinxupquote{EmpiricalRandomVariable}}
+
+\item {} 
+\sphinxAtStartPar
+class \sphinxcode{\sphinxupquote{BinomialRandomVariable}}
+
+\item {} 
+\sphinxAtStartPar
+class \sphinxcode{\sphinxupquote{BernoulliRandomVariable}}
 
 \end{itemize}
 
@@ -9788,7 +9898,7 @@ in the \sphinxcode{\sphinxupquote{ns\sphinxhyphen{}3\sphinxhyphen{}dev/setup.py}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} Configure and build wheel}
-\PYG{p+pIndicator}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{\PYGZdl{}PYTHON}\PYG{l+lScalar+lScalarPlain}{ }\PYG{l+lScalar+lScalarPlain}{setup.py}\PYG{l+lScalar+lScalarPlain}{ }\PYG{l+lScalar+lScalarPlain}{bdist\PYGZus{}wheel}\PYG{l+lScalar+lScalarPlain}{ }\PYG{l+lScalar+lScalarPlain}{build\PYGZus{}ext}\PYG{l+lScalar+lScalarPlain}{ }\PYG{l+lScalar+lScalarPlain}{\PYGZdq{}\PYGZhy{}DNS3\PYGZus{}USE\PYGZus{}LIB64=TRUE\PYGZdq{}}
+\PYG{p+pIndicator}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{\PYGZdl{}PYTHON}\PYG{l+lScalar+lScalarPlain}{ }\PYG{l+lScalar+lScalarPlain}{setup.py}\PYG{l+lScalar+lScalarPlain}{ }\PYG{l+lScalar+lScalarPlain}{bdist\PYGZus{}wheel}\PYG{l+lScalar+lScalarPlain}{ }\PYG{l+lScalar+lScalarPlain}{build\PYGZus{}ext}
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -10452,7 +10562,7 @@ We change the VERSION field from ‘3\sphinxhyphen{}dev’ to ‘3.34’:
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-We next change the file conf.py in the contributing, tutorial, manual, and models directories
+We next change the file conf.py in the contributing, installation, tutorial, manual, and models directories
 to change the strings ‘ns\sphinxhyphen{}3\sphinxhyphen{}dev’ to ns\sphinxhyphen{}3.34.
 
 \sphinxAtStartPar
@@ -10461,10 +10571,11 @@ When you are done, the ‘git diff \textendash{}stat’ command should show:
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 VERSION\PYG{+w}{                         }\PYG{p}{|}\PYG{+w}{ }\PYG{l+m}{2}\PYG{+w}{ }+\PYGZhy{}
 doc/contributing/source/conf.py\PYG{+w}{ }\PYG{p}{|}\PYG{+w}{ }\PYG{l+m}{4}\PYG{+w}{ }++\PYGZhy{}\PYGZhy{}
+doc/installation/source/conf.py\PYG{+w}{ }\PYG{p}{|}\PYG{+w}{ }\PYG{l+m}{4}\PYG{+w}{ }++\PYGZhy{}\PYGZhy{}
 doc/manual/source/conf.py\PYG{+w}{       }\PYG{p}{|}\PYG{+w}{ }\PYG{l+m}{4}\PYG{+w}{ }++\PYGZhy{}\PYGZhy{}
 doc/models/source/conf.py\PYG{+w}{       }\PYG{p}{|}\PYG{+w}{ }\PYG{l+m}{4}\PYG{+w}{ }++\PYGZhy{}\PYGZhy{}
 doc/tutorial/source/conf.py\PYG{+w}{     }\PYG{p}{|}\PYG{+w}{ }\PYG{l+m}{4}\PYG{+w}{ }++\PYGZhy{}\PYGZhy{}
-\PYG{l+m}{5}\PYG{+w}{ }files\PYG{+w}{ }changed,\PYG{+w}{ }\PYG{l+m}{9}\PYG{+w}{ }insertions\PYG{o}{(}+\PYG{o}{)},\PYG{+w}{ }\PYG{l+m}{9}\PYG{+w}{ }deletions\PYG{o}{(}\PYGZhy{}\PYG{o}{)}
+\PYG{l+m}{6}\PYG{+w}{ }files\PYG{+w}{ }changed,\PYG{+w}{ }\PYG{l+m}{11}\PYG{+w}{ }insertions\PYG{o}{(}+\PYG{o}{)},\PYG{+w}{ }\PYG{l+m}{11}\PYG{+w}{ }deletions\PYG{o}{(}\PYGZhy{}\PYG{o}{)}
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -10491,11 +10602,10 @@ Next, make the following change to RELEASE\_NOTES.md and commit it:
 
 \sphinxAtStartPar
 Commit this change:
-\begin{quote}
 
-\sphinxAtStartPar
-\$ git commit \sphinxhyphen{}m”Update availability in RELEASE\_NOTES.md” RELEASE\_NOTES.md
-\end{quote}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZdl{}\PYG{+w}{ }git\PYG{+w}{ }commit\PYG{+w}{ }\PYGZhy{}m\PYG{l+s+s2}{\PYGZdq{}Update availability in RELEASE\PYGZus{}NOTES.md\PYGZdq{}}\PYG{+w}{ }RELEASE\PYGZus{}NOTES.md
+\end{sphinxVerbatim}
 
 \sphinxAtStartPar
 Finally, add a Git annotated tag:
@@ -10810,13 +10920,13 @@ print the configuration options:
 \PYG{g+go}{\PYGZti{}\PYGZdl{} cd ns\PYGZhy{}3\PYGZhy{}dev}
 \PYG{g+go}{\PYGZti{}/ns\PYGZhy{}3\PYGZhy{}dev\PYGZdl{} ./ns3 configure \PYGZhy{}\PYGZhy{}help}
 \PYG{g+go}{usage: ns3 configure [\PYGZhy{}h] [\PYGZhy{}d \PYGZob{}debug,release,optimized\PYGZcb{}] [\PYGZhy{}G G]}
-\PYG{g+go}{                   [\PYGZhy{}\PYGZhy{}cxx\PYGZhy{}standard CXX\PYGZus{}STANDARD] [\PYGZhy{}\PYGZhy{}enable\PYGZhy{}asserts]}
-\PYG{g+go}{                   [\PYGZhy{}\PYGZhy{}disable\PYGZhy{}asserts] [\PYGZhy{}\PYGZhy{}enable\PYGZhy{}examples]}
-\PYG{g+go}{                   [\PYGZhy{}\PYGZhy{}disable\PYGZhy{}examples] [\PYGZhy{}\PYGZhy{}enable\PYGZhy{}logs]}
-\PYG{g+go}{                   [\PYGZhy{}\PYGZhy{}disable\PYGZhy{}logs] [\PYGZhy{}\PYGZhy{}enable\PYGZhy{}tests]}
-\PYG{g+go}{                   [\PYGZhy{}\PYGZhy{}disable\PYGZhy{}tests] [\PYGZhy{}\PYGZhy{}enable\PYGZhy{}verbose]}
-\PYG{g+go}{                   [\PYGZhy{}\PYGZhy{}disable\PYGZhy{}verbose]}
-\PYG{g+go}{                   ...}
+\PYG{g+go}{                     [\PYGZhy{}\PYGZhy{}cxx\PYGZhy{}standard CXX\PYGZus{}STANDARD] [\PYGZhy{}\PYGZhy{}enable\PYGZhy{}asserts]}
+\PYG{g+go}{                     [\PYGZhy{}\PYGZhy{}disable\PYGZhy{}asserts] [\PYGZhy{}\PYGZhy{}enable\PYGZhy{}examples]}
+\PYG{g+go}{                     [\PYGZhy{}\PYGZhy{}disable\PYGZhy{}examples] [\PYGZhy{}\PYGZhy{}enable\PYGZhy{}logs]}
+\PYG{g+go}{                     [\PYGZhy{}\PYGZhy{}disable\PYGZhy{}logs] [\PYGZhy{}\PYGZhy{}enable\PYGZhy{}tests]}
+\PYG{g+go}{                     [\PYGZhy{}\PYGZhy{}disable\PYGZhy{}tests] [\PYGZhy{}\PYGZhy{}enable\PYGZhy{}verbose]}
+\PYG{g+go}{                     [\PYGZhy{}\PYGZhy{}disable\PYGZhy{}verbose]}
+\PYG{g+go}{                     ...}
 
 \PYG{g+go}{positional arguments:}
 \PYG{g+go}{  configure}
@@ -13309,7 +13419,7 @@ listed by \sphinxcode{\sphinxupquote{./ns3 show targets}} or your IDE, check if 
 \PYG{+w}{      }\PYG{l+s}{EXECNAME}\PYG{+w}{ }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{EXAMPLE\PYGZus{}NAME}\PYG{o}{\PYGZcb{}}
 \PYG{+w}{      }\PYG{l+s}{SOURCE\PYGZus{}FILES}\PYG{+w}{ }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{EXAMPLE\PYGZus{}SOURCE\PYGZus{}FILES}\PYG{o}{\PYGZcb{}}
 \PYG{+w}{      }\PYG{l+s}{HEADER\PYGZus{}FILES}\PYG{+w}{ }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{EXAMPLE\PYGZus{}HEADER\PYGZus{}FILES}\PYG{o}{\PYGZcb{}}
-\PYG{+w}{      }\PYG{l+s}{LIBRARIES\PYGZus{}TO\PYGZus{}LINK}\PYG{+w}{ }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{EXAMPLE\PYGZus{}LIBRARIES\PYGZus{}TO\PYGZus{}LINK}\PYG{o}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{optional\PYGZus{}visualizer\PYGZus{}lib}\PYG{o}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{l+s}{LIBRARIES\PYGZus{}TO\PYGZus{}LINK}\PYG{+w}{ }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{EXAMPLE\PYGZus{}LIBRARIES\PYGZus{}TO\PYGZus{}LINK}\PYG{o}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{ns3\PYGZhy{}optional\PYGZhy{}visualizer\PYGZhy{}lib}\PYG{o}{\PYGZcb{}}
 \PYG{+w}{      }\PYG{l+s}{EXECUTABLE\PYGZus{}DIRECTORY\PYGZus{}PATH}
 \PYG{+w}{        }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{CMAKE\PYGZus{}RUNTIME\PYGZus{}OUTPUT\PYGZus{}DIRECTORY}\PYG{o}{\PYGZcb{}}\PYG{l+s}{/examples/}\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{examplefolder}\PYG{o}{\PYGZcb{}}\PYG{l+s}{/}
 \PYG{+w}{      }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{IGNORE\PYGZus{}PCH}\PYG{o}{\PYGZcb{}}
@@ -13807,8 +13917,8 @@ Then we check if the \sphinxstyleemphasis{ns\sphinxhyphen{}3} modules required b
 If the list \sphinxcode{\sphinxupquote{missing\_dependencies}} is empty, we create the example. Otherwise, we skip it.
 The example can be linked to the current module (\sphinxcode{\sphinxupquote{\$\{lib\$\{BLIB\_EXAMPLE\_LIBNAME\}\}}}) and
 other libraries to link (\sphinxcode{\sphinxupquote{\$\{BLIB\_EXAMPLE\_LIBRARIES\_TO\_LINK\}}}) and optionally to the visualizer
-module (\sphinxcode{\sphinxupquote{\$\{optional\_visualizer\_lib\}}}).
-If the visualizer module is not enabled, \sphinxcode{\sphinxupquote{optional\_visualizer\_lib}} is empty.
+module (\sphinxcode{\sphinxupquote{\$\{ns3\sphinxhyphen{}optional\sphinxhyphen{}visualizer\sphinxhyphen{}lib\}}}).
+If the visualizer module is not enabled, \sphinxcode{\sphinxupquote{ns3\sphinxhyphen{}optional\sphinxhyphen{}visualizer\sphinxhyphen{}lib}} is empty.
 
 \sphinxAtStartPar
 The example can also be linked to a single \sphinxstyleemphasis{ns\sphinxhyphen{}3} shared library (\sphinxcode{\sphinxupquote{lib\sphinxhyphen{}ns3\sphinxhyphen{}monolib}}) or
@@ -13842,7 +13952,7 @@ Note that both of these options are handled by the \sphinxcode{\sphinxupquote{bu
 \PYG{+w}{       }\PYG{l+s}{HEADER\PYGZus{}FILES}\PYG{+w}{ }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{BLIB\PYGZus{}EXAMPLE\PYGZus{}HEADER\PYGZus{}FILES}\PYG{o}{\PYGZcb{}}
 \PYG{+w}{       }\PYG{l+s}{LIBRARIES\PYGZus{}TO\PYGZus{}LINK}
 \PYG{+w}{         }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{lib\PYGZdl{}\PYGZob{}BLIB\PYGZus{}EXAMPLE\PYGZus{}LIBNAME}\PYG{o}{\PYGZcb{}}\PYG{l+s}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{BLIB\PYGZus{}EXAMPLE\PYGZus{}LIBRARIES\PYGZus{}TO\PYGZus{}LINK}\PYG{o}{\PYGZcb{}}
-\PYG{+w}{         }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{optional\PYGZus{}visualizer\PYGZus{}lib}\PYG{o}{\PYGZcb{}}
+\PYG{+w}{         }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{ns3\PYGZhy{}optional\PYGZhy{}visualizer\PYGZhy{}lib}\PYG{o}{\PYGZcb{}}
 \PYG{+w}{       }\PYG{l+s}{EXECUTABLE\PYGZus{}DIRECTORY\PYGZus{}PATH}\PYG{+w}{ }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{CMAKE\PYGZus{}RUNTIME\PYGZus{}OUTPUT\PYGZus{}DIRECTORY}\PYG{o}{\PYGZcb{}}\PYG{l+s}{/}\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{FOLDER}\PYG{o}{\PYGZcb{}}\PYG{l+s}{/}
 \PYG{+w}{       }\PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{IGNORE\PYGZus{}PCH}\PYG{o}{\PYGZcb{}}
 \PYG{+w}{     }\PYG{p}{)}
@@ -14023,7 +14133,7 @@ manage dependencies. Here is an example for Doxygen:
 
 \PYG{c}{\PYGZsh{} This custom macro checks for dependencies CMake find\PYGZus{}package and program}
 \PYG{c}{\PYGZsh{} dependencies and return the missing dependencies in the third argument}
-\PYG{n+nb}{check\PYGZus{}deps}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}doxygen;dot;dia\PYGZdq{}}\PYG{+w}{ }\PYG{l+s}{doxygen\PYGZus{}docs\PYGZus{}missing\PYGZus{}deps}\PYG{p}{)}
+\PYG{n+nb}{check\PYGZus{}deps}\PYG{p}{(}\PYG{l+s}{doxygen\PYGZus{}docs\PYGZus{}missing\PYGZus{}deps}\PYG{+w}{ }\PYG{l+s}{EXECUTABLES}\PYG{+w}{ }\PYG{l+s}{doxygen}\PYG{+w}{ }\PYG{l+s}{dot}\PYG{+w}{ }\PYG{l+s}{dia}\PYG{+w}{ }\PYG{l+s}{python3}\PYG{p}{)}
 
 \PYG{c}{\PYGZsh{} If the variable contains missing dependencies, we stop processing doxygen targets}
 \PYG{n+nb}{if}\PYG{p}{(}\PYG{l+s}{doxygen\PYGZus{}docs\PYGZus{}missing\PYGZus{}deps}\PYG{p}{)}
@@ -17588,9 +17698,8 @@ Second, each class must implement a static public member function called
 Third, it is a good idea to implement constructors and destructors rather than
 to let the compiler generate them, and to make the destructor virtual. In C++,
 note also that copy assignment operator and copy constructors are auto\sphinxhyphen{}generated
-if they are not defined, so if you do not want those, you should implement those
-as private members. This aspect of C++ is discussed in Scott Meyers’ Effective
-C++ book. item 45.
+if they are not defined, so if you do not want those, you should declare them
+as \sphinxcode{\sphinxupquote{= delete}}.
 
 \sphinxAtStartPar
 Let’s now look at some corresponding skeletal implementation code in the .cc
@@ -17653,6 +17762,33 @@ The macro \sphinxcode{\sphinxupquote{NS\_OBJECT\_ENSURE\_REGISTERED(classname)}}
 every class that defines a new GetTypeId method, and it does the actual
 registration of the class into the system.  The {\hyperref[\detokenize{object-model:object-model}]{\sphinxcrossref{\DUrole{std,std-ref}{Object model}}}} chapter
 discusses this in more detail.
+
+\sphinxAtStartPar
+Note: Template classes should both export the instantiated template and call
+\sphinxcode{\sphinxupquote{NS\_OBJECT\_TEMPLATE\_CLASS\_DEFINE (TemplateClass, TemplateArgument);}}
+to prevent the same template from being instantiated more than a single
+time in different modules. This prevents errors such as
+\sphinxcode{\sphinxupquote{Trying to allocate twice the same uid: TemplateClass\textless{}TemplateArgument\textgreater{}}}.
+
+\sphinxAtStartPar
+An example for the \sphinxcode{\sphinxupquote{CounterCalculator\textless{}uint32\_t\textgreater{}}}:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{//.h file}
+\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{ns3}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{extern}\PYG{+w}{ }\PYG{k}{template}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{CounterCalculator}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{uint32\PYGZus{}t}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{//.cc file}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}ns3/.h file\PYGZgt{}}
+\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{ns3}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{NS\PYGZus{}OBJECT\PYGZus{}TEMPLATE\PYGZus{}CLASS\PYGZus{}DEFINE}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{CounterCalculator}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{uint32\PYGZus{}t}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+\sphinxAtStartPar
+More details can be found in \sphinxhref{https://gitlab.com/nsnam/ns-3-dev/-/issues/761}{issue \#761}.
 
 
 \subsubsection{Including External Files}
@@ -18334,7 +18470,7 @@ Again, the condition is a Python statement that can
 depend on \sphinxcode{\sphinxupquote{ns3}} configuration variables.  For example,
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{realtime\PYGZhy{}udp\PYGZhy{}echo.py}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ENABLE\PYGZus{}REAL\PYGZus{}TIME == False}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{brite\PYGZhy{}generic\PYGZhy{}example}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ENABLE\PYGZus{}BRITE == True}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{False}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{,}
 \end{sphinxVerbatim}
 
 
@@ -19809,7 +19945,7 @@ There are many tools to profile your program, including:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-profilers from CPU manufacturers, such as \sphinxhref{https://www.amd.com/en/developer/uprof.html}{AMD uProf} and \sphinxhref{https://www.intel.com/content/www/us/en/develop/documentation/get-started-with-vtune/top.html}{Intel VTune}
+profilers from CPU manufacturers, such as \sphinxhref{https://www.amd.com/en/developer/uprof.html}{AMD uProf} and \sphinxhref{https://www.intel.com/content/www/us/en/docs/vtune-profiler/get-started-guide/2023-1/overview.html}{Intel VTune}
 
 \item {} 
 \sphinxAtStartPar
@@ -19833,7 +19969,7 @@ third\sphinxhyphen{}party tools, such as \sphinxhref{https://wiki.gnome.org/Apps
 
 \sphinxAtStartPar
 An overview on how to use \sphinxhref{https://perf.wiki.kernel.org/index.php/Tutorial}{Perf} with \sphinxhref{https://github.com/KDAB/hotspot}{Hotspot}, \sphinxhref{https://www.amd.com/en/developer/uprof.html}{AMD uProf} and
-\sphinxhref{https://www.intel.com/content/www/us/en/develop/documentation/get-started-with-vtune/top.html}{Intel VTune} is provided in the following sections.
+\sphinxhref{https://www.intel.com/content/www/us/en/docs/vtune-profiler/get-started-guide/2023-1/overview.html}{Intel VTune} is provided in the following sections.
 
 
 \subsubsection{Linux Perf and Hotspot GUI}
@@ -20224,7 +20360,7 @@ cache sizes, number of cores, memory bandwidth and latency, storage throughput a
 \subsubsection{Intel VTune}
 \label{\detokenize{profiling:id8}}
 \sphinxAtStartPar
-\sphinxhref{https://www.intel.com/content/www/us/en/develop/documentation/get-started-with-vtune/top.html}{Intel VTune} works much like {\hyperref[\detokenize{profiling:linux-perf-and-hotspot-gui}]{\sphinxcrossref{Linux Perf and Hotspot GUI}}}, but
+\sphinxhref{https://www.intel.com/content/www/us/en/docs/vtune-profiler/get-started-guide/2023-1/overview.html}{Intel VTune} works much like {\hyperref[\detokenize{profiling:linux-perf-and-hotspot-gui}]{\sphinxcrossref{Linux Perf and Hotspot GUI}}}, but
 is available in more platforms (Linux, Windows and Mac) using Intel
 processors. Differently from Perf, it provides more performance
 trackers for finer analysis.
@@ -20928,6 +21064,20 @@ based on the job name.
 \sphinxAtStartPar
 \sphinxcode{\sphinxupquote{\textasciitilde{}/ns\sphinxhyphen{}3\sphinxhyphen{}dev/.gitlab\sphinxhyphen{}ci\sphinxhyphen{}local/artifacts/jobname}}
 
+\sphinxAtStartPar
+Note: some jobs may access the \sphinxcode{\sphinxupquote{CI\_DEFAULT\_BRANCH}} environment variable,
+which is set by default to \sphinxcode{\sphinxupquote{main}} instead of \sphinxcode{\sphinxupquote{master}}. To change that, we need
+to create a file \sphinxcode{\sphinxupquote{\textasciitilde{}/.gitlab\sphinxhyphen{}ci\sphinxhyphen{}local/variables.yml}} containing the following:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n+nt}{global}\PYG{p}{:}
+\PYG{+w}{  }\PYG{n+nt}{CI\PYGZus{}DEFAULT\PYGZus{}BRANCH}\PYG{p}{:}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{master}\PYG{l+s}{\PYGZdq{}}
+\end{sphinxVerbatim}
+
+\sphinxAtStartPar
+In case you are using Docker with root, you need to create this file in
+\sphinxcode{\sphinxupquote{/root/.gitlab\sphinxhyphen{}ci\sphinxhyphen{}local/variables.yml}}.
+
 \sphinxstepscope
 
 
@@ -21030,10 +21180,10 @@ to\PYG{+w}{ }be\PYG{+w}{ }ascii,\PYG{+w}{ }giving\PYG{+w}{ }the\PYG{+w}{ }relati
 
 Program\PYG{+w}{ }Options:
 \PYGZhy{}\PYGZhy{}all:\PYG{+w}{     }use\PYG{+w}{ }all\PYG{+w}{ }schedulers\PYG{+w}{ }\PYG{o}{[}false\PYG{o}{]}
-\PYGZhy{}\PYGZhy{}cal:\PYG{+w}{     }use\PYG{+w}{ }CalendarSheduler\PYG{+w}{ }\PYG{o}{[}false\PYG{o}{]}
+\PYGZhy{}\PYGZhy{}cal:\PYG{+w}{     }use\PYG{+w}{ }CalendarScheduler\PYG{+w}{ }\PYG{o}{[}false\PYG{o}{]}
 \PYGZhy{}\PYGZhy{}calrev:\PYG{+w}{  }reverse\PYG{+w}{ }ordering\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }the\PYG{+w}{ }CalendarScheduler\PYG{+w}{ }\PYG{o}{[}false\PYG{o}{]}
 \PYGZhy{}\PYGZhy{}heap:\PYG{+w}{    }use\PYG{+w}{ }HeapScheduler\PYG{+w}{ }\PYG{o}{[}false\PYG{o}{]}
-\PYGZhy{}\PYGZhy{}list:\PYG{+w}{    }use\PYG{+w}{ }ListSheduler\PYG{+w}{ }\PYG{o}{[}false\PYG{o}{]}
+\PYGZhy{}\PYGZhy{}list:\PYG{+w}{    }use\PYG{+w}{ }ListScheduler\PYG{+w}{ }\PYG{o}{[}false\PYG{o}{]}
 \PYGZhy{}\PYGZhy{}map:\PYG{+w}{     }use\PYG{+w}{ }MapScheduler\PYG{+w}{ }\PYG{o}{(}default\PYG{o}{)}\PYG{+w}{ }\PYG{o}{[}true\PYG{o}{]}
 \PYGZhy{}\PYGZhy{}pri:\PYG{+w}{     }use\PYG{+w}{ }PriorityQueue\PYG{+w}{ }\PYG{o}{[}false\PYG{o}{]}
 \PYGZhy{}\PYGZhy{}debug:\PYG{+w}{   }\PYG{n+nb}{enable}\PYG{+w}{ }debugging\PYG{+w}{ }output\PYG{+w}{ }\PYG{o}{[}false\PYG{o}{]}
@@ -21707,7 +21857,8 @@ Command\PYG{+w}{ }\PYG{o}{[}\PYG{l+s+s1}{\PYGZsq{}/home/tomh/ns\PYGZhy{}3\PYGZhy
 \sphinxAtStartPar
 The error message says that the program terminated unsuccessfuly, but it is
 not clear from this information what might be wrong. To examine more
-closely, try running it under the \sphinxhref{https://access.redhat.com/documentation/en-us/red\_hat\_developer\_toolset/9/html/user\_guide/chap-gdb}{gdb debugger}:
+closely, try running it under the
+\sphinxhref{https://www.nsnam.org/wiki/HOWTO\_use\_gdb\_to\_debug\_program\_errors}{gdb debugger}:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYGZdl{}\PYG{+w}{ }./ns3\PYG{+w}{ }run\PYG{+w}{ }tcp\PYGZhy{}point\PYGZhy{}to\PYGZhy{}point\PYG{+w}{ }\PYGZhy{}\PYGZhy{}gdb

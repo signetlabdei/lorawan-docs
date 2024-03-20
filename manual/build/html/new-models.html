@@ -9,7 +9,7 @@
     <title>4.6. Creating a new ns-3 model &#8212; Manual</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
-    <script src="_static/documentation_options.js?v=316584e3"></script>
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -435,9 +435,8 @@ But we are in <code class="docutils literal notranslate"><span class="pre">src/n
 <p>Third, it is a good idea to implement constructors and destructors rather than
 to let the compiler generate them, and to make the destructor virtual. In C++,
 note also that copy assignment operator and copy constructors are auto-generated
-if they are not defined, so if you do not want those, you should implement those
-as private members. This aspect of C++ is discussed in Scott Meyers’ Effective
-C++ book. item 45.</p>
+if they are not defined, so if you do not want those, you should declare them
+as <code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">delete</span></code>.</p>
 <p>Let’s now look at some corresponding skeletal implementation code in the .cc
 file.:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;error-model.h&quot;</span>
@@ -493,6 +492,26 @@ certain objects can be created via the object creation framework
 every class that defines a new GetTypeId method, and it does the actual
 registration of the class into the system.  The <a class="reference internal" href="object-model.html#object-model"><span class="std std-ref">Object model</span></a> chapter
 discusses this in more detail.</p>
+<p>Note: Template classes should both export the instantiated template and call
+<code class="docutils literal notranslate"><span class="pre">NS_OBJECT_TEMPLATE_CLASS_DEFINE</span> <span class="pre">(TemplateClass,</span> <span class="pre">TemplateArgument);</span></code>
+to prevent the same template from being instantiated more than a single
+time in different modules. This prevents errors such as
+<code class="docutils literal notranslate"><span class="pre">Trying</span> <span class="pre">to</span> <span class="pre">allocate</span> <span class="pre">twice</span> <span class="pre">the</span> <span class="pre">same</span> <span class="pre">uid:</span> <span class="pre">TemplateClass&lt;TemplateArgument&gt;</span></code>.</p>
+<p>An example for the <code class="docutils literal notranslate"><span class="pre">CounterCalculator&lt;uint32_t&gt;</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//.h file</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">ns3</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">extern</span><span class="w"> </span><span class="k">template</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CounterCalculator</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//.cc file</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ns3/.h file&gt;</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">ns3</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">NS_OBJECT_TEMPLATE_CLASS_DEFINE</span><span class="w"> </span><span class="p">(</span><span class="n">CounterCalculator</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>More details can be found in <a class="reference external" href="https://gitlab.com/nsnam/ns-3-dev/-/issues/761">issue #761</a>.</p>
 </section>
 <section id="including-external-files">
 <h3><span class="section-number">4.6.3.3. </span>Including External Files<a class="headerlink" href="#including-external-files" title="Link to this heading">¶</a></h3>
@@ -781,8 +800,8 @@ and setting the Parent to ErrorModel:</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2006-2019.
-      Last updated on Mar 08, 2024 13:55.
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Mar 20, 2024 11:47.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>

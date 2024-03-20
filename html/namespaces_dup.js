@@ -153,7 +153,8 @@ var namespaces_dup =
       [ "server", "d1/d36/namespacebrite-generic-example.html#a04d5ccc347bfaf00024d05b97c146ad1", null ],
       [ "serverApps", "d1/d36/namespacebrite-generic-example.html#a182546995bb888e1fdbd038e79a9410a", null ],
       [ "serverInterfaces", "d1/d36/namespacebrite-generic-example.html#a14988dde7ce3c3cbebbc3cfb3862a051", null ],
-      [ "stack", "d1/d36/namespacebrite-generic-example.html#ad6b3f3413b32d09f4fc5053e23fc6525", null ]
+      [ "stack", "d1/d36/namespacebrite-generic-example.html#ad6b3f3413b32d09f4fc5053e23fc6525", null ],
+      [ "try", "d1/d36/namespacebrite-generic-example.html#aa2dd2b1c75e1fe82874f5ee81e88e0d7", null ]
     ] ],
     [ "ccache-miss-rate", "d2/ddd/namespaceccache-miss-rate.html", [
       [ "ccache_misses", "d2/ddd/namespaceccache-miss-rate.html#a96dea5f6373cf549e111c428317c132c", null ],
@@ -162,13 +163,14 @@ var namespaces_dup =
     [ "check", "d3/de1/namespacecheck.html", null ],
     [ "check-style-clang-format", "d7/d3d/namespacecheck-style-clang-format.html", [
       [ "check_formatting_file", "d7/d3d/namespacecheck-style-clang-format.html#a37a5517e6526e4b7c48402bfc1722366", null ],
-      [ "check_include_prefixes_file", "d7/d3d/namespacecheck-style-clang-format.html#a4cf77b04b45ff81b5183fb723ca10d74", null ],
-      [ "check_style_clang_format", "d7/d3d/namespacecheck-style-clang-format.html#af1f83564baae4c4c004592b4860d4a78", null ],
-      [ "check_style_file", "d7/d3d/namespacecheck-style-clang-format.html#a938e9b8d9eeb786bbd7bae334a4f5569", null ],
-      [ "check_tabs_file", "d7/d3d/namespacecheck-style-clang-format.html#a15687a70028f29b5198ea6bf6410bbe6", null ],
-      [ "check_trailing_whitespace_file", "d7/d3d/namespacecheck-style-clang-format.html#a13c00e675ad3d83b2f6e6123f62235c4", null ],
+      [ "check_include_prefixes_line", "d7/d3d/namespacecheck-style-clang-format.html#a813329ee586846a89099e5561d5a25eb", null ],
+      [ "check_manually_file", "d7/d3d/namespacecheck-style-clang-format.html#a55d4949feb1b5c926596d51ff3bb1f72", null ],
+      [ "check_style_clang_format", "d7/d3d/namespacecheck-style-clang-format.html#ac5d8bc832c551bb24e86eeec0bfdfee2", null ],
+      [ "check_style_files", "d7/d3d/namespacecheck-style-clang-format.html#a61c2e6ed4d4083aef0f932b43540e69d", null ],
+      [ "check_tabs_line", "d7/d3d/namespacecheck-style-clang-format.html#a91cd922cc9df3ae5ccdb748d77227de6", null ],
+      [ "check_whitespace_line", "d7/d3d/namespacecheck-style-clang-format.html#a28aabbe7bae36ad4f2a2ee6dc2f289c2", null ],
       [ "find_clang_format_path", "d7/d3d/namespacecheck-style-clang-format.html#ad4154533820d90a20c904c70eb5f52a3", null ],
-      [ "find_files_to_check_style", "d7/d3d/namespacecheck-style-clang-format.html#ac92a83c101047704bada10b69f2fa65e", null ],
+      [ "find_files_to_check_style", "d7/d3d/namespacecheck-style-clang-format.html#a0d93ed7bff9a99d71dd44ee895b562cf", null ],
       [ "should_analyze_directory", "d7/d3d/namespacecheck-style-clang-format.html#a97050867d1a08c309d8e89c1610f65f7", null ],
       [ "should_analyze_file", "d7/d3d/namespacecheck-style-clang-format.html#a84daec11ec513495a3e3cafb442e7210", null ],
       [ "action", "d7/d3d/namespacecheck-style-clang-format.html#a50727e22fab5232911fe3b61451112f9", null ],
@@ -187,7 +189,7 @@ var namespaces_dup =
       [ "FILES_TO_CHECK_WHITESPACE", "d7/d3d/namespacecheck-style-clang-format.html#a189373d638e4c563159931ad5afc8a2e", null ],
       [ "FILES_TO_SKIP", "d7/d3d/namespacecheck-style-clang-format.html#a2370e16aa0c8de5490298ef910a66255", null ],
       [ "help", "d7/d3d/namespacecheck-style-clang-format.html#a896c962b527e189c82464b86d6747b86", null ],
-      [ "int", "d7/d3d/namespacecheck-style-clang-format.html#a82957c84de32ab4ac9902de7963a2334", null ],
+      [ "nargs", "d7/d3d/namespacecheck-style-clang-format.html#a2a9bafa1a7a343fe45f58b07fb590dad", null ],
       [ "parser", "d7/d3d/namespacecheck-style-clang-format.html#a00f638ededf6c40c1c66b0ce33540f42", null ],
       [ "TAB_SIZE", "d7/d3d/namespacecheck-style-clang-format.html#aec238f333926c6439564029f85a8be6c", null ],
       [ "try", "d7/d3d/namespacecheck-style-clang-format.html#a9ecdf9f81ecfeee3a74c51435b30bfbc", null ],
@@ -232,7 +234,9 @@ var namespaces_dup =
       [ "TEST_CC_TEMPLATE", "d8/dc3/namespacecreate-module.html#a0cff5082701683debd26a482edb78adc", null ],
       [ "try", "d8/dc3/namespacecreate-module.html#ab9f0f6f5790f313ed1f37cbb9b36d15b", null ]
     ] ],
-    [ "csma-bridge", "df/d19/namespacecsma-bridge.html", null ],
+    [ "csma-bridge", "df/d19/namespacecsma-bridge.html", [
+      [ "try", "df/d19/namespacecsma-bridge.html#a9cb752e12a783d7cb8c9acc179e66e9a", null ]
+    ] ],
     [ "examples-to-run", "d2/da9/namespaceexamples-to-run.html", [
       [ "cpp_examples", "d2/da9/namespaceexamples-to-run.html#a72faa45e2d956385ab9962e8e63cf5ef", null ],
       [ "python_examples", "d2/da9/namespaceexamples-to-run.html#a75df1bf80cc7697c5141aa53ab404bd2", null ]
@@ -247,14 +251,19 @@ var namespaces_dup =
       [ "nodes", "da/d2f/namespacefirst.html#a3a4d9b16db891460eb57ff27b5f4fbec", null ],
       [ "pointToPoint", "da/d2f/namespacefirst.html#ae4469442456c0b20569de812c0f4ea5a", null ],
       [ "serverApps", "da/d2f/namespacefirst.html#a101ab88b70d5469105b7d7f641eafef4", null ],
-      [ "stack", "da/d2f/namespacefirst.html#ade952d378b9f8be8b1c9d3bf6b805b69", null ]
+      [ "stack", "da/d2f/namespacefirst.html#ade952d378b9f8be8b1c9d3bf6b805b69", null ],
+      [ "try", "da/d2f/namespacefirst.html#a9885e151e8145a8b1c507fd09cea31cf", null ]
     ] ],
     [ "flowmon-parse-results", "d7/d66/namespaceflowmon-parse-results.html", "d7/d66/namespaceflowmon-parse-results" ],
-    [ "generic-battery-discharge-example", "de/d8c/namespacegeneric-battery-discharge-example.html", null ],
+    [ "generic-battery-discharge-example", "de/d8c/namespacegeneric-battery-discharge-example.html", [
+      [ "try", "de/d8c/namespacegeneric-battery-discharge-example.html#a5fcfdd2e54452964713515f5df5a4780", null ]
+    ] ],
     [ "grid", "d9/d48/namespacegrid.html", "d9/d48/namespacegrid" ],
     [ "interface_statistics", "d8/d66/namespaceinterface__statistics.html", "d8/d66/namespaceinterface__statistics" ],
     [ "ipv4_routing_table", "d0/d5b/namespaceipv4__routing__table.html", "d0/d5b/namespaceipv4__routing__table" ],
-    [ "mixed-wired-wireless", "d4/d77/namespacemixed-wired-wireless.html", null ],
+    [ "mixed-wired-wireless", "d4/d77/namespacemixed-wired-wireless.html", [
+      [ "try", "d4/d77/namespacemixed-wired-wireless.html#adaa4b4fe57763620529c8b79fcd202df", null ]
+    ] ],
     [ "MRG32k3a", "d5/da7/namespace_m_r_g32k3a.html", "d5/da7/namespace_m_r_g32k3a" ],
     [ "ns3", "d7/d2e/namespacens3.html", "d7/d2e/namespacens3" ],
     [ "nsclick-simple-lan", "d6/d51/namespacensclick-simple-lan.html", [
@@ -270,7 +279,8 @@ var namespaces_dup =
       [ "onOffHelper", "d6/d51/namespacensclick-simple-lan.html#a32c19c188fe88eb6638a61be23b703dd", null ],
       [ "packetSinkHelper", "d6/d51/namespacensclick-simple-lan.html#a727ee31847a3d81b8122b7c7da6a0083", null ],
       [ "recvapp", "d6/d51/namespacensclick-simple-lan.html#a82368b48b112ef618c846261dfe258f0", null ],
-      [ "remoteAddress", "d6/d51/namespacensclick-simple-lan.html#a1cc1bcbbbdb83c770461c0ee9a6e9504", null ]
+      [ "remoteAddress", "d6/d51/namespacensclick-simple-lan.html#a1cc1bcbbbdb83c770461c0ee9a6e9504", null ],
+      [ "try", "d6/d51/namespacensclick-simple-lan.html#a248863ab3c14576e5aad05e38f424659", null ]
     ] ],
     [ "olsr", "d3/dd9/namespaceolsr.html", "d3/dd9/namespaceolsr" ],
     [ "openflow-switch", "d6/d70/namespaceopenflow-switch.html", [
@@ -289,14 +299,20 @@ var namespaces_dup =
       [ "switchNode", "d6/d70/namespaceopenflow-switch.html#a0f9f5179a4821a5894464859f5330c6b", null ],
       [ "swtch", "d6/d70/namespaceopenflow-switch.html#ab141602074f9942ac803c961cad44678", null ],
       [ "terminalDevices", "d6/d70/namespaceopenflow-switch.html#a6166cb225069f4017177ea086c2703fb", null ],
-      [ "terminals", "d6/d70/namespaceopenflow-switch.html#a81d3ca9a14cff5f479a4ec7fb89d2357", null ]
+      [ "terminals", "d6/d70/namespaceopenflow-switch.html#a81d3ca9a14cff5f479a4ec7fb89d2357", null ],
+      [ "try", "d6/d70/namespaceopenflow-switch.html#a69cd08e4af91a500eeed65de21edecc9", null ]
     ] ],
     [ "python-unit-tests", "d1/de7/namespacepython-unit-tests.html", "d1/de7/namespacepython-unit-tests" ],
-    [ "realtime-udp-echo", "d8/df9/namespacerealtime-udp-echo.html", null ],
-    [ "sample-rng-plot", "d4/d0a/namespacesample-rng-plot.html", null ],
+    [ "realtime-udp-echo", "d8/df9/namespacerealtime-udp-echo.html", [
+      [ "try", "d8/df9/namespacerealtime-udp-echo.html#a59e8956666834b865e0ec67fd7c2298b", null ]
+    ] ],
+    [ "sample-rng-plot", "d4/d0a/namespacesample-rng-plot.html", [
+      [ "try", "d4/d0a/namespacesample-rng-plot.html#af2dd9c3fc821f9a831706fdfd15fdf02", null ]
+    ] ],
     [ "sample-simulator", "db/db5/namespacesample-simulator.html", [
       [ "CancelledEvent", "db/db5/namespacesample-simulator.html#a140dddfb670ce962550d23ac80cbc384", null ],
-      [ "RandomFunction", "db/db5/namespacesample-simulator.html#a76810f0b2270d87a5835e53aaef31f40", null ]
+      [ "RandomFunction", "db/db5/namespacesample-simulator.html#a76810f0b2270d87a5835e53aaef31f40", null ],
+      [ "try", "db/db5/namespacesample-simulator.html#aacc509e08a02efc03f9dbfe4f6476e68", null ]
     ] ],
     [ "second", "d7/dbe/namespacesecond.html", [
       [ "address", "d7/dbe/namespacesecond.html#ad02bb1de3cc710d14bdf59f8d58aa725", null ],
@@ -315,14 +331,21 @@ var namespaces_dup =
       [ "pointToPoint", "d7/dbe/namespacesecond.html#afcdd62c5862d7bc56de3fa58450ae601", null ],
       [ "serverApps", "d7/dbe/namespacesecond.html#a2291db56aca9902f119994b581b89ca1", null ],
       [ "stack", "d7/dbe/namespacesecond.html#a1f483568525a4f750cc42feeee0fe186", null ],
+      [ "try", "d7/dbe/namespacesecond.html#a852cd670f7183a2235ca3063934a93eb", null ],
       [ "value", "d7/dbe/namespacesecond.html#ab5ae028132a5959b093763bf6eac18d9", null ],
       [ "verbose", "d7/dbe/namespacesecond.html#a6c0e16462e1fb8f8b92158bfb02f74ce", null ]
     ] ],
     [ "show_last_packets", "da/d72/namespaceshow__last__packets.html", "da/d72/namespaceshow__last__packets" ],
-    [ "simple-routing-ping6", "df/d1e/namespacesimple-routing-ping6.html", null ],
+    [ "simple-routing-ping6", "df/d1e/namespacesimple-routing-ping6.html", [
+      [ "try", "df/d1e/namespacesimple-routing-ping6.html#a0f6a9b24d139c2804e9e0e298823df34", null ]
+    ] ],
     [ "std", "d8/dcc/namespacestd.html", "d8/dcc/namespacestd" ],
-    [ "tap-csma-virtual-machine", "dd/d8b/namespacetap-csma-virtual-machine.html", null ],
-    [ "tap-wifi-virtual-machine", "d0/dc0/namespacetap-wifi-virtual-machine.html", null ],
+    [ "tap-csma-virtual-machine", "dd/d8b/namespacetap-csma-virtual-machine.html", [
+      [ "try", "dd/d8b/namespacetap-csma-virtual-machine.html#a6fb557f071e97bd95f54fe939110e92c", null ]
+    ] ],
+    [ "tap-wifi-virtual-machine", "d0/dc0/namespacetap-wifi-virtual-machine.html", [
+      [ "try", "d0/dc0/namespacetap-wifi-virtual-machine.html#ae453580b4854a7c7d5be8a7b75a4c500", null ]
+    ] ],
     [ "test", "df/d04/namespacetest.html", null ],
     [ "test-ns3", "dd/da4/namespacetest-ns3.html", "dd/da4/namespacetest-ns3" ],
     [ "test-test", "d5/d63/namespacetest-test.html", null ],
@@ -353,6 +376,7 @@ var namespaces_dup =
       [ "stack", "d6/d78/namespacethird.html#a5e839ddeabe882756c97c6e0969b0080", null ],
       [ "staDevices", "d6/d78/namespacethird.html#a304f8e56a7c8ed11b5fcd1d8ed95c202", null ],
       [ "tracing", "d6/d78/namespacethird.html#a70649b44f2bc38242a7b71f5ccd7f39a", null ],
+      [ "try", "d6/d78/namespacethird.html#ac403160cbfdb84d00b849e4cc0abfc67", null ],
       [ "verbose", "d6/d78/namespacethird.html#aee2f685e601121cc1007295a45e6d171", null ],
       [ "wifi", "d6/d78/namespacethird.html#a031d42b0fdabc88c7596d8532f9f1a8c", null ],
       [ "wifiApNode", "d6/d78/namespacethird.html#a728203c2c9c00f10512e732a022efcee", null ],
@@ -361,10 +385,13 @@ var namespaces_dup =
     [ "two", "de/da2/namespacetwo.html", null ],
     [ "two-ray-to-three-gpp-ch-calibration", "d2/d77/namespacetwo-ray-to-three-gpp-ch-calibration.html", "d2/d77/namespacetwo-ray-to-three-gpp-ch-calibration" ],
     [ "visualizer", "de/dcd/namespacevisualizer.html", "de/dcd/namespacevisualizer" ],
-    [ "wifi-ap", "d9/dcd/namespacewifi-ap.html", null ],
+    [ "wifi-ap", "d9/dcd/namespacewifi-ap.html", [
+      [ "try", "d9/dcd/namespacewifi-ap.html#aba24ffa8f1e1ea328898843d4b49d65b", null ]
+    ] ],
     [ "wifi-olsr-flowmon", "df/d08/namespacewifi-olsr-flowmon.html", [
       [ "DISTANCE", "df/d08/namespacewifi-olsr-flowmon.html#af65c2cd2cd1d45451526f8ae740b1f8d", null ],
-      [ "NUM_NODES_SIDE", "df/d08/namespacewifi-olsr-flowmon.html#a8678ef1d936e9b45a294168be101c086", null ]
+      [ "NUM_NODES_SIDE", "df/d08/namespacewifi-olsr-flowmon.html#a8678ef1d936e9b45a294168be101c086", null ],
+      [ "try", "df/d08/namespacewifi-olsr-flowmon.html#a9e1451265e36ad60344ff26aa30c5bf8", null ]
     ] ],
     [ "wifi_intrastructure_link", "d3/d88/namespacewifi__intrastructure__link.html", "d3/d88/namespacewifi__intrastructure__link" ]
 ];

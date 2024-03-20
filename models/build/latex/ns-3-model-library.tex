@@ -66,8 +66,8 @@
 
 
 \title{ns-3 Model Library}
-\date{Mar 08, 2024}
-\release{ns\sphinxhyphen{}3.40}
+\date{Mar 20, 2024}
+\release{ns\sphinxhyphen{}3.41}
 \author{ns-3 project}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{ns-3.png}\par}
 \renewcommand{\releasename}{Release}
@@ -95,7 +95,7 @@ follows:
 \sphinxAtStartPar
 Several guides that are version controlled for each release (the
 \sphinxhref{https://www.nsnam.org/documentation/latest/}{latest release}) and
-\sphinxhref{https://www.nsnam.org/ns-3-dev/documentation/}{development tree}:
+\sphinxhref{https://www.nsnam.org/documentation/development-tree/}{development tree}:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
@@ -617,7 +617,7 @@ transmission/reception. All angles are expressed in radians.
 \capstart
 
 \noindent\sphinxincludegraphics{{antenna-coordinate-system}.pdf}
-\caption{Coordinate system of the AntennaModel}\label{\detokenize{antenna-design:id12}}\label{\detokenize{antenna-design:fig-antenna-coordinate-system}}\end{figure}
+\caption{Coordinate system of the AntennaModel}\label{\detokenize{antenna-design:id13}}\label{\detokenize{antenna-design:fig-antenna-coordinate-system}}\end{figure}
 
 
 \subsection{Single antenna models}
@@ -706,7 +706,7 @@ Derived classes must implement the following functions:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-GetNumberOfElements: returns the number of antenna elements
+GetNumElems: returns the number of antenna elements
 
 \item {} 
 \sphinxAtStartPar
@@ -728,11 +728,11 @@ Any class derived from AntennaModel is a valid antenna element for the PhasedArr
 \sphinxAtStartPar
 The class UniformPlanarArray is a generic implementation of Uniform Planar Arrays (UPAs),
 supporting rectangular and linear regular lattices.
-It loosely follows the implementation described in the 3GPP TR 38.901 \sphinxfootnotemark[38901],
-considering only a single a single panel, i.e., \(N_{g} = M_{g} = 1\).
+It closely follows the implementation described in the 3GPP TR 38.901 \sphinxfootnotemark[38901],
+considering only a single panel, i.e., \(N_{g} = M_{g} = 1\).
 
 \sphinxAtStartPar
-By default, the array is orthogonal to the x\sphinxhyphen{}axis, pointing towards the positive
+By default, the antenna array is orthogonal to the x\sphinxhyphen{}axis, pointing towards the positive
 direction, but the orientation can be changed through the attributes “BearingAngle”,
 which adjusts the azimuth angle, and “DowntiltAngle”, which adjusts the elevation angle.
 The slant angle is instead fixed and assumed to be 0.
@@ -744,8 +744,25 @@ and vertical elements can be configured through the attributes “AntennaHorizon
 and “AntennaVerticalSpacing”.
 
 \sphinxAtStartPar
-The polarization of each antenna element in the array is determined by the polarization
-slant angle through the attribute “PolSlantAngle”, as described in \sphinxfootnotemark[38901] (i.e., \({\zeta}\)).
+UniformPlannarArray supports the concept of antenna ports following the sub\sphinxhyphen{}array partition
+model for TXRU virtualization, as described in Section 5.2.2 of 3GPP TR 36.897 {\color{red}\bfseries{}{[}36897{]}\_}.
+The number of antenna ports in vertical and horizontal directions can be configured through
+the attributes “NumVerticalPorts” and “NumHorizontalPorts”, respectively. For example,
+if “NumRows” and “NumColumns” are configured to 2 and 4, and the number of
+“NumVerticalPorts” and “NumHorizontalPorts” to 1 and 2, then the antenna elements belonging
+to the first two columns of the antenna array will belong to the first antenna port,
+and the third and the fourth columns will belong to the second antenna port. Note that
+“NumRows” and “NumColumns” must be a multiple of “NumVerticalPorts” and “NumHorizontalPorts”,
+respectively.
+
+\sphinxAtStartPar
+Whether the antenna is dual\sphinxhyphen{}polarized or not is configured through the attribute
+“IsDualPolarized”. In case the antenna array is dual polarized, the total number
+of antenna elements is doubled and the two polarizations are overlapped in space.
+The polarization slant angle of the antenna elements belonging to the first polarization
+are configured through the attribute “PolSlantAngle”; while the antenna elements of
+the second polarization have the polarization slant angle minus 90 degrees,
+as described in \sphinxfootnotemark[38901] (i.e., \({\zeta}\)).
 
 \sphinxstepscope
 
@@ -8233,7 +8250,7 @@ GlobalRouteManager executes the OSPF shortest path first (SPF) computation on
 the database, and populates the routing tables on each node.
 
 \sphinxAtStartPar
-The quagga (\sphinxurl{http://www.quagga.net}) OSPF implementation was used as the
+The quagga (\sphinxurl{https://www.nongnu.org/quagga/}) OSPF implementation was used as the
 basis for the routing computation logic. One benefit of following an existing
 OSPF SPF implementation is that OSPF already has defined link state
 advertisements for all common types of network links:
@@ -8639,7 +8656,7 @@ releases.
 \subsubsection{Model history}
 \label{\detokenize{tcp:model-history}}
 \sphinxAtStartPar
-Until the ns\sphinxhyphen{}3.10 release, \sphinxstyleemphasis{ns\sphinxhyphen{}3} contained a port of the TCP model from \sphinxhref{http://www.ece.gatech.edu/research/labs/MANIACS/GTNetS/index.html}{GTNetS},
+Until the ns\sphinxhyphen{}3.10 release, \sphinxstyleemphasis{ns\sphinxhyphen{}3} contained a port of the TCP model from \sphinxhref{https://web.archive.org/web/20210928123443/http://griley.ece.gatech.edu/MANIACS/GTNetS/index.html}{GTNetS},
 developed initially by George Riley and ported to \sphinxstyleemphasis{ns\sphinxhyphen{}3} by Raj Bhattacharjea.
 This implementation was substantially rewritten by Adriam Tam for ns\sphinxhyphen{}3.10.
 In 2015, the TCP module was redesigned in order to create a better
@@ -8675,6 +8692,11 @@ Recovery algorithm.
 \sphinxAtStartPar
 In the ns\sphinxhyphen{}3.34 release, the default congestion control algorithm was set
 to CUBIC from NewReno.
+
+\sphinxAtStartPar
+CUBIC was extended to support Reno\sphinxhyphen{}friendliness (see RFC 9438 Section 4.3) in
+the ns\sphinxhyphen{}3.41 release.  This feature is called ‘TCP friendliness’ in earlier
+versions of the CUBIC RFCs, and in the Linux and ns\sphinxhyphen{}3 implementations.
 
 
 \subsubsection{Acknowledgments}
@@ -9085,11 +9107,10 @@ phase of window growth to try to exit slow start before window growth
 causes queue overflow.
 
 \sphinxAtStartPar
-CUBIC is documented in \index{RFC@\spxentry{RFC}!RFC 8312@\spxentry{RFC 8312}}\sphinxhref{https://datatracker.ietf.org/doc/html/rfc8312.html}{\sphinxstylestrong{RFC 8312}}, and the \sphinxstyleemphasis{ns\sphinxhyphen{}3} implementation is based
-on the RFC more so than the Linux implementation, although the Linux 4.4
-kernel implementation (through the Direct Code Execution environment) has
-been used to validate the behavior and is fairly well aligned (see below
-section on validation).
+CUBIC is documented in \index{RFC@\spxentry{RFC}!RFC 9438@\spxentry{RFC 9438}}\sphinxhref{https://datatracker.ietf.org/doc/html/rfc9438.html}{\sphinxstylestrong{RFC 9438}}, and the \sphinxstyleemphasis{ns\sphinxhyphen{}3} implementation is patterned
+partly on the Linux implementation and partly on the RFC, although the Linux
+4.4 kernel implementation (through the Direct Code Execution environment) has
+been used to validate the behavior.
 
 
 \paragraph{Linux Reno}
@@ -9862,6 +9883,14 @@ them back\sphinxhyphen{}to\sphinxhyphen{}back. Currently, ns\sphinxhyphen{}3 pac
 be sent in the same manner.
 
 \end{itemize}
+
+\sphinxAtStartPar
+It is important to also note that the current model does not implement
+Section 3.5 of RFC 8257 regarding the handling of packet loss.  This
+requirement states that DCTCP must react to lost packets in the same way
+as does a conventional TCP (as specified in RFC 5681).  The current
+DCTCP model does not implement this, and should therefore only be used
+in simulations that do not involve any packet loss on the DCTCP flows.
 
 \sphinxAtStartPar
 More information about DCTCP is available in the RFC 8257:
@@ -10696,7 +10725,7 @@ In the case when SACK options are disabled, the NewReno modification handles
 the recovery.
 
 \sphinxAtStartPar
-At the start of recovery phase the congestion window is reduced diffently for
+At the start of recovery phase the congestion window is reduced differently for
 NewReno and SACK based recovery. For NewReno the reduction is done as given below:
 \begin{equation*}
 \begin{split}cWnd = ssThresh\end{split}
@@ -13231,10 +13260,10 @@ NoiseFloor\PYG{+w}{          }Max\PYG{+w}{ }Sensitivity\PYG{+w}{                
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-The example \sphinxcode{\sphinxupquote{lr\sphinxhyphen{}wpan\sphinxhyphen{}per\sphinxhyphen{}plot.cc\textasciigrave{} shows that at given Rx sensitiviy, packets are dropped regardless of their theoretical error probability.
+The example \sphinxcode{\sphinxupquote{lr\sphinxhyphen{}wpan\sphinxhyphen{}per\sphinxhyphen{}plot.cc\textasciigrave{} shows that at given Rx sensitivity, packets are dropped regardless of their theoretical error probability.
 This program outputs a file named \textasciigrave{}\textasciigrave{}802.15.4\sphinxhyphen{}per\sphinxhyphen{}vs\sphinxhyphen{}rxSignal.plt}}.
 Loading this file into gnuplot yields a file \sphinxcode{\sphinxupquote{802.15.4\sphinxhyphen{}per\sphinxhyphen{}vs\sphinxhyphen{}rsSignal.eps}}, which can
-be converted to pdf or other formats. Packet payload size, Tx power and Rx sensitivity can be configurated.
+be converted to pdf or other formats. Packet payload size, Tx power and Rx sensitivity can be configured.
 The point where the blue line crosses with the PER indicates the Rx sensitivity. The default output is shown below.
 
 \begin{figure}[htbp]
@@ -13327,7 +13356,7 @@ the long address (64 bit) of the sender.
 
 \sphinxAtStartPar
 Note also that RFC 4944 or RFC 6282 are the RFCs defining the IPv6 address compression formats
-(HC1 and IPHC respectively). It is defintely not a good idea to either mix devices using different
+(HC1 and IPHC respectively). It is definitely not a good idea to either mix devices using different
 pseudo\sphinxhyphen{}address format or compression types in the same network. This point is further discussed
 in the \sphinxcode{\sphinxupquote{sixlowpan}} module documentation.
 
@@ -13508,8 +13537,8 @@ The program outputs a file named \sphinxcode{\sphinxupquote{802.15.4\sphinxhyphe
 Loading this file into gnuplot yields a file \sphinxcode{\sphinxupquote{802.15.4\sphinxhyphen{}psr\sphinxhyphen{}distance.eps}}, which can
 be converted to pdf or other formats.  The following image shows the output
 of multiple runs using different Rx sensitivity values. A higher Rx sensitivity (lower dBm) results
-in a increased communication distance but also makes the radio suceptible to more interference from
-surronding devices.
+in a increased communication distance but also makes the radio susceptible to more interference from
+surrounding devices.
 
 \begin{figure}[htbp]
 \centering
@@ -25956,7 +25985,7 @@ where \(P_s^i\) is the probability of receiving with success the HARQ block at t
 \mathrm{T_{test-2}} = 0.0 \times 1 + 0.752 \times 2 + 0.248 \times 3 = 2.248\\
 \end{aligned}\end{align*}
 \sphinxAtStartPar
-The expected throughput is calculted by counting the number of transmission slots available during the simulation (e.g., the number of TTIs) and the size of the TB in the simulation, in detail:
+The expected throughput is calculated by counting the number of transmission slots available during the simulation (e.g., the number of TTIs) and the size of the TB in the simulation, in detail:
 \begin{equation*}
 \begin{split}\mathrm{Thr_{test-i}} = \frac{TTI_{NUM}}{T_{test-i}} TB_{size} = \left\{ \begin{array}{lll} \dfrac{1000}{2.074}66 = 31822\mbox{ bps} & \mbox{ for test-1} \\ & \\ \dfrac{1000}{2.248}472 = 209964\mbox{ bps} & \mbox{ for test-2}\end{array} \right.\end{split}
 \end{equation*}
@@ -32505,7 +32534,7 @@ The extension for the standard OH in open area is
 \end{equation*}
 \sphinxAtStartPar
 The literature lacks of extensions of the COST231 to open area (for suburban it seems that
-we can just impose C = 0); therefore we consider it a special case fo the suburban one.
+we can just impose C = 0); therefore we consider it a special case of the suburban one.
 
 
 \subsection{Cost231PropagationLossModel}
@@ -33287,7 +33316,7 @@ The model was first introduced in
 \noindent\sphinxincludegraphics{{spectrum-analyzer-example}.pdf}
 \caption{Spectrogram produced by a spectrum analyzer in a scenario
 involving wifi signals interfered by a microwave oven, as simulated
-by the example \sphinxcode{\sphinxupquote{adhoc\sphinxhyphen{}aloha\sphinxhyphen{}ideal\sphinxhyphen{}phy\sphinxhyphen{}with\sphinxhyphen{}microwave\sphinxhyphen{}oven}}.}\label{\detokenize{spectrum:id39}}\label{\detokenize{spectrum:fig-spectrum-analyzer-example}}\end{figure}
+by the example \sphinxcode{\sphinxupquote{adhoc\sphinxhyphen{}aloha\sphinxhyphen{}ideal\sphinxhyphen{}phy\sphinxhyphen{}with\sphinxhyphen{}microwave\sphinxhyphen{}oven}}.}\label{\detokenize{spectrum:id40}}\label{\detokenize{spectrum:fig-spectrum-analyzer-example}}\end{figure}
 
 
 \section{Model Description}
@@ -33343,8 +33372,18 @@ the duration of the signal
 
 \item {} 
 \sphinxAtStartPar
-its Power Spectral Density (PSD) of the signal, which is assumed to be constant for
-the duration of the signal.
+the Power Spectral Density (PSD) of the signal, which is assumed to be constant for
+the duration of the signal
+
+\item {} 
+\sphinxAtStartPar
+the frequency domain 3D spectrum channel matrix that is needed for MIMO computations
+when multiple streams are transmitted
+
+\item {} 
+\sphinxAtStartPar
+the 3D precoding matrix that is needed for MIMO computations when multiple
+streams are transmitted.
 
 \end{itemize}
 
@@ -33359,6 +33398,19 @@ class provides several arithmetic operators to allow to perform calculations
 with PSD instances. Additionally, the \sphinxcode{\sphinxupquote{SpectrumConverter}} class
 provides means for the conversion of \sphinxcode{\sphinxupquote{SpectrumValue}} instances from
 one \sphinxcode{\sphinxupquote{SpectrumModel}} to another.
+
+\sphinxAtStartPar
+The frequency domain 3D channel matrix is needed in MIMO systems in which
+multiple transmit and receive antenna ports can exist, hence the PSD is multidimensional.
+The dimensions are: the number of receive antenna ports, the number of
+transmit antenna ports, and the number of subbands in frequency (or
+resource blocks).
+
+\sphinxAtStartPar
+The 3D precoding matrix is also needed in MIMO systems to be able to correctly
+perform the calculations of the received signal and interference. The dimensions are:
+the number of transmit antenna ports, the number of transmit
+streams, and the number of subbands (or resource blocks).
 
 \sphinxAtStartPar
 For a more formal mathematical description of the signal model just
@@ -33389,7 +33441,7 @@ reception of signals over the medium. The way this interaction works is depicted
 \capstart
 
 \noindent\sphinxincludegraphics{{spectrum-channel-phy-interface}.pdf}
-\caption{Sequence diagram showing the interaction between SpectrumPhy and SpectrumChannel}\label{\detokenize{spectrum:id40}}\label{\detokenize{spectrum:fig-spectrum-channel-phy-interface}}\end{figure}
+\caption{Sequence diagram showing the interaction between SpectrumPhy and SpectrumChannel}\label{\detokenize{spectrum:id41}}\label{\detokenize{spectrum:fig-spectrum-channel-phy-interface}}\end{figure}
 
 
 \subsubsection{Spectrum Channel implementations}
@@ -33580,6 +33632,16 @@ interference. A PHY device model is expected to use the
 \sphinxcode{\sphinxupquote{DynamicCast\textless{}\textgreater{}}} operator to determine if a signal is of a certain
 type it can attempt to receive. If not, the signal is normally
 expected to be considered as interference.
+
+\end{itemize}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Many propagation loss and delay models can be added to these channels.
+The base class \sphinxcode{\sphinxupquote{SpectrumChannel}} provides an \sphinxcode{\sphinxupquote{AssignStreams()}} method
+to allow the deterministic configuration of random variable stream numbers
+with a single API call.  See the ns\sphinxhyphen{}3 Manual chapter on random variables
+for more information.
 
 \end{itemize}
 
@@ -33791,7 +33853,7 @@ create and transmit the signal on the channel.
 
 \noindent\sphinxincludegraphics{{spectrum-tv-cofdm}.png}
 \caption{8K COFDM signal spectrum generated from \sphinxcode{\sphinxupquote{TvSpectrumTransmitter}} (Left) and
-theoretical COFDM signal spectrum \sphinxcite{spectrum:koppcofdm} (Right)}\label{\detokenize{spectrum:id41}}\label{\detokenize{spectrum:spectrum-tv-cofdm}}\end{figure}
+theoretical COFDM signal spectrum \sphinxcite{spectrum:koppcofdm} (Right)}\label{\detokenize{spectrum:id42}}\label{\detokenize{spectrum:spectrum-tv-cofdm}}\end{figure}
 
 \sphinxAtStartPar
 One of the user\sphinxhyphen{}configurable attributes is the type of modulation for the TV
@@ -33841,7 +33903,7 @@ is also provided to easily simulate real\sphinxhyphen{}world scenarios.
 \caption{North America ATSC channel 19 \& 20 signals generated using
 \sphinxcode{\sphinxupquote{TvSpectrumTransmitterHelper}} (Left) and theoretical 8\sphinxhyphen{}VSB signal
 \sphinxcite{spectrum:baron8vsb} (Right). Note that the theoretical signal is not shown in dB
-while the ns\sphinxhyphen{}3 generated signals are.}\label{\detokenize{spectrum:id42}}\label{\detokenize{spectrum:spectrum-tv-8vsb}}\end{figure}
+while the ns\sphinxhyphen{}3 generated signals are.}\label{\detokenize{spectrum:id43}}\label{\detokenize{spectrum:spectrum-tv-8vsb}}\end{figure}
 
 \sphinxAtStartPar
 Using this helper class, users can easily set up TV transmitters right after
@@ -33859,7 +33921,7 @@ channel for each these regions are provided.
 \caption{Plot from MATLAB implementation of CreateRegionalTvTransmitters method in
 \sphinxcode{\sphinxupquote{TvSpectrumTransmitterHelper}}. Shows 100 random points on Earth’s surface
 (with altitude 0) corresponding to TV transmitter locations within a 2000 km
-radius of 35° latitude and \sphinxhyphen{}100° longitude.}\label{\detokenize{spectrum:id43}}\label{\detokenize{spectrum:spectrum-tv-rand-geo-points}}\end{figure}
+radius of 35° latitude and \sphinxhyphen{}100° longitude.}\label{\detokenize{spectrum:id44}}\label{\detokenize{spectrum:spectrum-tv-rand-geo-points}}\end{figure}
 
 \sphinxAtStartPar
 A method (CreateRegionalTvTransmitters) is provided that enables users to
@@ -33932,7 +33994,7 @@ antenna. H $_{\text{u,s}}$ \((t,\tau)\) is generated by the superposition of N d
 components, called clusters, each of which composed of M different rays.
 The channel matrix generation procedure accounts for large and small scale
 propagation phenomena. The classes ThreeGppSpectrumPropagationLossModel and
-ThreeGppChannelModel included in the spectrum module takes care of the generation
+ThreeGppChannelModel included in the spectrum module take care of the generation
 of the channel coefficients and the computation of the frequency\sphinxhyphen{}dependent
 propagation loss.
 
@@ -33990,13 +34052,22 @@ The class ThreeGppSpectrumPropagationLossModel implements the
 PhasedArraySpectrumPropagationLossModel interface and enables the modeling of frequency
 dependent propagation phenomena while taking into account the specific pair of the
 phased antenna array at the transmitter and the receiver. The main method is
-DoCalcRxPowerSpectralDensity, which takes as input the power spectral density (PSD)
-of the transmitted signal, the mobility models of the transmitting node and receiving node,
-and the phased antenna array of the transmitting node, and of the receiving node.
-Finally, it returns the PSD of the received signal.
+DoCalcRxPowerSpectralDensity, which takes as input the SpectrumSignalParameters
+structure, which contains, among others, the power spectral density (PSD) of the
+transmitted signal, and the precoding matrix of the transmitter which is needed
+for MIMO computations. Other input parameters are the mobility models of the
+transmitting and receiving node, and the phased antenna array of the
+transmitting and receiving node.
+DoCalcRxPowerSpectralDensity computes the PSD of the received signal
+(used in case of single stream transmission), and the frequency domain 3D
+channel matrix between receive and transmit antenna ports (needed for MIMO
+computations when multiple streams are transmitted).
+Finally, it returns the SpectrumSignalParameters which contains the
+received PSD and the frequency domain 3D spectrum channel matrix.
 
 \sphinxAtStartPar
-Procedure used to compute the PSD of to compute the PSD of the received signal:
+Procedure used to compute the PSD of the received signal and the frequency domain 3D
+spectrum channel matrix:
 
 \sphinxAtStartPar
 1. Retrieve the beamforming vectors
@@ -34004,7 +34075,7 @@ To account for the beamforming, ThreeGppSpectrumPropagationLossModel has to
 retrieve the beamforming vectors of the transmitting and receiving antennas.
 The method DoCalcRxPowerSpectralDensity uses the antenna objects
 that are passed as parameters for both the transmitting and receiving devices,
-and calls the method GetCurrentBeamformingVector to retrieve the beamforming vectors
+and calls the method GetBeamformingVector to retrieve the beamforming vectors
 of these antenna objects.
 
 \sphinxAtStartPar
@@ -34015,12 +34086,12 @@ In particular, it makes use of the method GetChannel,
 which returns a ChannelMatrix object containing the channel
 matrix, the generation time, the node pair, and the phased antenna array pair among
 which is created this channel matrix.
-Apart from the function GetChannel, there is a function called GetParams which
+Additionally, it makes use of the method GetParams which
 returns a ChannelParams object containing the channel parameters.
 Notice that the channel information is split into these two structures
-(ChannelMatrix and ChannelParams) to support multiple collocate phased antenna arrays at
+(ChannelMatrix and ChannelParams) to support multiple collocated phased antenna arrays at
 TX/RX node. ChannelParams (also its specialization ThreeGppChannelParams structure)
-contains parameters which are common for all channels among
+contains parameters which are common for all the channels among
 the same RX/TX node pair, while ChannelMatrix contains the channel matrix for the specific pair
 of the phased antenna arrays of TX/RX nodes.
 For example, if the TX and the RX node have multiple collocated antenna arrays,
@@ -34031,30 +34102,38 @@ i.e., they share the same channel condition, cluster powers, cluster delays,
 AoD, AoA, ZoD, ZoA, K\_factor, delay spread, etc.
 On the other hand, each pair of TX and RX antenna arrays has a specific channel matrix
 and fading, which depends on the actual antenna element positions and field patterns of
-each pair of antennas array subpartitions.
+each pair of antenna array subpartitions.
 The ThreeGppChannelModel instance is automatically
-created in the the ThreeGppSpectrumPropagationLossModel constructor and it can
-be configured using the method SetChannelModelAttribute ().
+created in the ThreeGppSpectrumPropagationLossModel constructor and it can
+be configured by using the method SetChannelModelAttribute.
 
 \sphinxAtStartPar
-Notice that in MultiModelSpectrumChannel in StartTx function we added a
-condition that checks whether the TX/RX SpectrumPhy instances belong to different
-TX/RX nodes. This is needed to avoid pathloss models calculations among
+Notice that in MultiModelSpectrumChannel it is checked whether the TX/RX
+SpectrumPhy instances belong to different TX/RX nodes.
+This is needed to avoid pathloss models calculations among
 the phased antenna arrays of the same node, because there are no models yet
 in ns\sphinxhyphen{}3 that support the calculation of this kind of interference.
 
 \sphinxAtStartPar
 4. Compute the long term component
 The method GetLongTerm returns the long term component obtained by multiplying
-the channel matrix and the beamforming vectors. To reduce the computational
-load, the long term components associated to the different channels are
-stored in the m\_longTermMap and recomputed only if the associated channel
-matrix is updated or if the transmitting and/or receiving beamforming vectors
-have changed. Given the channel reciprocity assumption, for each node pair a
-single long term component is saved in the map.
+the channel matrix and the beamforming vectors. The function CalculateLongTermComponent
+calculates the long term component per RX and TX port pair. Finally, GetLongTerm
+returns a 3D long term channel matrix whose dimensions are the number of the
+receive antenna ports, the number transmit antenna ports, and
+the number of clusters. When multiple ports are being configured note that
+the sub\sphinxhyphen{}array partition model is adopted for TXRU virtualization, as described
+in Section 5.2.2 of 3GPP TR 36.897{[}TR36897{]}\_, and so equal beam weights are used for all the ports.
+Support of the full\sphinxhyphen{}connection model for TXRU virtualization would need extensions.
+To reduce the computational load, the long term
+components associated to the different channels are stored in the m\_longTermMap
+and recomputed only if the associated channel matrix is updated or if the
+transmitting and/or receiving beamforming vectors have changed. Given the channel
+reciprocity assumption, for each node pair a single long term component is saved in the map.
 
 \sphinxAtStartPar
-5. Apply the small scale fading and compute the channel gain
+5. Apply the small scale fading, calculate the channel gain, generate the
+frequency domain 3D spectrum channel matrix, and finally compute the received PSD
 The method CalcBeamformingGain computes the channel gain in each sub\sphinxhyphen{}band and
 applies it to the PSD of the transmitted signal to obtain the received PSD.
 To compute the sub\sphinxhyphen{}band gain, it accounts for the Doppler phenomenon and the
@@ -34068,6 +34147,14 @@ This is done by deviating the Doppler frequency by a random value, whose
 distribution depends on the parameter \(v_{scatt}\).
 The value of \(v_{scatt}\) can be configured using the attribute “vScatt”
 (by default it is set to 0, so that the scattering effect is not considered).
+Function GenSpectrumChannelMatrix generates the received PSD for each pair of
+the transmit and receive antenna ports. It creates a frequency domain 3D spectrum
+channel matrix whose dimensions are the number of receive antena ports,
+the number of transmit antenna ports, and the number of resource blocks.
+Finally, the frequency domain 3D spectrum channel matrix is used to obtain the
+received PSD. In case of multiple ports at the transmitter the PSD is calculated
+by summing per each RB the real parts of the diagonal elements of the (H*P)\textasciicircum{}h * (H*P),
+where H is the frequency domain spectrum channel matrix and P is the precoding matrix.
 
 
 \subsubsection{ThreeGppChannelModel}
@@ -34106,8 +34193,7 @@ other channel parameters
 \end{itemize}
 
 \sphinxAtStartPar
-The ChannelMatrix objects are saved
-in the map m\_channelMap and updated when the coherence time
+The ChannelMatrix objects are saved in the map m\_channelMap and updated when the coherence time
 expires, or in case the LOS/NLOS channel condition changes.
 The coherence time can be configured through
 the attribute “UpdatePeriod”, and should be chosen by taking into account all the
@@ -34138,7 +34224,7 @@ to configure the model.
 \subsubsection{Testing}
 \label{\detokenize{spectrum:id19}}
 \sphinxAtStartPar
-The test suite ThreeGppChannelTestSuite includes three test cases:
+The test suite ThreeGppChannelTestSuite includes five test cases:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
@@ -34174,6 +34260,16 @@ Checks if the long term is updated when changing the channel matrix
 
 \end{enumerate}
 
+\item {} 
+\sphinxAtStartPar
+ThreeGppCalcLongTermMultiPortTest, which tests that the channel matrices are
+correctly generated when multiple transmit and receive antenna ports are used.
+
+\item {} 
+\sphinxAtStartPar
+ThreeGppMimoPolarizationTest, which tests that the channel matrices are
+correctly generated when dual\sphinxhyphen{}polarized antennas are being used.
+
 \end{itemize}
 
 \sphinxAtStartPar
@@ -34191,7 +34287,7 @@ implemented, thus is left as future work.
 The model aims to provide a performance\sphinxhyphen{}oriented alternative to the 3GPP TR 38.901
 framework \sphinxcite{spectrum:tr38901} which is implemented in the \sphinxcode{\sphinxupquote{ThreeGppSpectrumPropagationLossModel}} and
 \sphinxcode{\sphinxupquote{ThreeGppChannelModel}} classes and whose implementation is described in \sphinxcite{spectrum:zugno2020}.
-The overall design follows the general approach of \sphinxcite{spectrum:polese2018}, with aim of providing
+The overall design described in \sphinxcite{spectrum:pagin2023} follows the general approach of \sphinxcite{spectrum:polese2018}, with aim of providing
 the means for computing a 3GPP TR 38.901\sphinxhyphen{}like end\sphinxhyphen{}to\sphinxhyphen{}end channel gain by combining
 several statistical terms. The frequency range of applicability is the same as
 that of \sphinxcite{spectrum:tr38901}, i.e., 0.5 \sphinxhyphen{} 100 GHz.
@@ -34253,7 +34349,7 @@ These figures match the corresponding plots of \sphinxcite{spectrum:asplund}.
 \noindent\sphinxincludegraphics[width=400\sphinxpxdimen]{{two-ray-spectrum-loss-model-3gpp-radiation-pattern}.png}
 \caption{Radiation pattern produced by the \sphinxcode{\sphinxupquote{CalcBeamformingGain}} method when using
 antenna arrays featuring \sphinxcode{\sphinxupquote{ThreeGppAntennaModel}} antenna elements, for various
-Uniform Planar Array (UPA) configurations.}\label{\detokenize{spectrum:id44}}\label{\detokenize{spectrum:fig-two-ray-spectrum-loss-model-3gpp-radiation-pattern}}\end{figure}
+Uniform Planar Array (UPA) configurations.}\label{\detokenize{spectrum:id45}}\label{\detokenize{spectrum:fig-two-ray-spectrum-loss-model-3gpp-radiation-pattern}}\end{figure}
 
 \begin{figure}[htbp]
 \centering
@@ -34262,7 +34358,7 @@ Uniform Planar Array (UPA) configurations.}\label{\detokenize{spectrum:id44}}\la
 \noindent\sphinxincludegraphics[width=400\sphinxpxdimen]{{two-ray-spectrum-loss-model-iso-radiation-pattern}.png}
 \caption{Radiation pattern produced by the \sphinxcode{\sphinxupquote{CalcBeamformingGain}} method when using
 antenna arrays featuring \sphinxcode{\sphinxupquote{IsotropicAntennaModel}} antenna elements, for various
-Uniform Planar Array (UPA) configurations.}\label{\detokenize{spectrum:id45}}\label{\detokenize{spectrum:fig-two-ray-spectrum-loss-model-iso-radiation-pattern}}\end{figure}
+Uniform Planar Array (UPA) configurations.}\label{\detokenize{spectrum:id46}}\label{\detokenize{spectrum:fig-two-ray-spectrum-loss-model-iso-radiation-pattern}}\end{figure}
 
 \sphinxAtStartPar
 Whenever the link is in NLOS, a penalty factor is introduced, to account for beam
@@ -34359,7 +34455,7 @@ relatively weak.
 \noindent\sphinxincludegraphics[width=400\sphinxpxdimen]{{three-gpp-gain-reference-gain-vs-fc}.png}
 \caption{Empirical CDF of the reference channel gains obtained using the  \sphinxcode{\sphinxupquote{three\sphinxhyphen{}gpp\sphinxhyphen{}two\sphinxhyphen{}ray\sphinxhyphen{}channel\sphinxhyphen{}calibration}}
 simulation script when keeping a fixed LoS condition and channel scenario and varying the carrier
-frequency only.}\label{\detokenize{spectrum:id46}}\label{\detokenize{spectrum:fig-three-gpp-gain-reference-gain-vs-fc}}\end{figure}
+frequency only.}\label{\detokenize{spectrum:id47}}\label{\detokenize{spectrum:fig-three-gpp-gain-reference-gain-vs-fc}}\end{figure}
 
 \sphinxAtStartPar
 2. Then, the output of the above script is parsed by the \sphinxcode{\sphinxupquote{two\sphinxhyphen{}ray\sphinxhyphen{}to\sphinxhyphen{}three\sphinxhyphen{}gpp\sphinxhyphen{}ch\sphinxhyphen{}calibration.py}}
@@ -34375,7 +34471,7 @@ and eventually pick the one providing the closest approximation to the reference
 
 
 \subsubsection{Testing}
-\label{\detokenize{spectrum:id36}}
+\label{\detokenize{spectrum:id37}}
 \sphinxAtStartPar
 The test suite \sphinxcode{\sphinxupquote{TwoRaySplmTestSuite}} includes three test cases:
 \begin{itemize}
@@ -34400,7 +34496,7 @@ the \sphinxcode{\sphinxupquote{ThreeGppSpectrumPropagationLossModel}} and \sphin
 
 
 \subsubsection{References}
-\label{\detokenize{spectrum:id38}}
+\label{\detokenize{spectrum:id39}}
 \sphinxstepscope
 
 
@@ -34479,14 +34575,6 @@ CompressionThreshold (unsigned 32 bits integer, default 0), minimum compressed p
 
 \item {} 
 \sphinxAtStartPar
-ForceEtherType (boolean, default false).
-
-\item {} 
-\sphinxAtStartPar
-EtherType (unsigned 16 bits integer, default 0xFFFF), to force a particular L2 EtherType.
-
-\item {} 
-\sphinxAtStartPar
 UseMeshUnder (boolean, default false), it enables mesh\sphinxhyphen{}under flood routing.
 
 \item {} 
@@ -34511,25 +34599,8 @@ This option is useful when a MAC requires a minimum frame size (e.g., ContikiMAC
 compression would violate the requirement.
 
 \sphinxAtStartPar
-The last two attributes are needed to use the module with a NetDevice other than 802.15.4, as
-neither IANA or IEEE did reserve an EtherType for 6LoWPAN. As a consequence there might be a
-conflict with the L2 multiplexer/demultiplexer which is based on EtherType. The default
-value is 0xFFFF, which is reserved by IEEE (see \sphinxcite{sixlowpan:iana802} and \sphinxcite{sixlowpan:ethertype}).
-The default module behaviour is to not change the EtherType, however this would not work with
-any NetDevice actually understanding and using the EtherType.
-
-\sphinxAtStartPar
-Note that the \sphinxtitleref{ForceEtherType} parameter have also a direct effect on the MAC address kind the
-module is expecting to handle:
-* ForceEtherType true: Mac48Address (Ethernet, WiFi, etc.).
-* ForceEtherType false: Mac16Address or Mac64Address (IEEE 802.15.4).
-
-\sphinxAtStartPar
-Note that using 6LoWPAN over any NetDevice other than 802.15.4 will produce valid .pcap files,
-but they will not be correctly dissected by Wireshark.
-The reason lies on the fact that 6LoWPAN was really meant to be used only over 802.15.4, so
-Wireshark dissectors will not even try to decode 6LoWPAN headers on top of protocols other than
-802.15.4.
+Note that 6LoWPAN will use an EtherType equal to 0xA0ED, as mandated by \index{RFC@\spxentry{RFC}!RFC 7973@\spxentry{RFC 7973}}\sphinxhref{https://datatracker.ietf.org/doc/html/rfc7973.html}{\sphinxstylestrong{RFC 7973}}.
+If the device does not support EtherTypes (e.g., 802.15.4), this value is discarded.
 
 \sphinxAtStartPar
 The Trace sources are:
@@ -34592,7 +34663,7 @@ Future versions of this module will support \index{RFC@\spxentry{RFC}!RFC 6775@\
 
 
 \subsubsection{Mesh\sphinxhyphen{}under routing}
-\label{\detokenize{sixlowpan:id4}}
+\label{\detokenize{sixlowpan:id2}}
 \sphinxAtStartPar
 It would be a good idea to improve the mesh\sphinxhyphen{}under flooding by providing the following:
 \begin{itemize}
@@ -34723,7 +34794,7 @@ Currently there are three models:
 
 \item {} 
 \sphinxAtStartPar
-\sphinxcode{\sphinxupquote{ns3::InetTopologyReader}} for \sphinxhref{http://topology.eecs.umich.edu/inet/}{Inet} 3.0 traces
+\sphinxcode{\sphinxupquote{ns3::InetTopologyReader}} for \sphinxhref{https://web.archive.org/web/20210308100536/http://topology.eecs.umich.edu/inet/}{Inet} 3.0 traces
 
 \item {} 
 \sphinxAtStartPar
@@ -36331,7 +36402,7 @@ NLRED queue example can be found at:
 \label{\detokenize{red:validation}}
 \sphinxAtStartPar
 The RED model has been validated and the report is currently stored
-at: \sphinxurl{https://github.com/downloads/talau/ns-3-tcp-red/report-red-ns3.pdf}
+at: \sphinxurl{https://gitlab.com/nsnam/ns-3-dev/uploads/6937dac2431a0b61209728ecbfd442ac/report-red-ns3.pdf}
 
 \sphinxstepscope
 
@@ -38873,6 +38944,17 @@ OperationalRateSet is assumed to contain all mandatory rates (see
 \sphinxAtStartPar
 The wifi manager always selects the lowest basic rate for management frames.
 
+\item {} 
+\sphinxAtStartPar
+If a STA (AP or non\sphinxhyphen{}AP) supports VHT, a Block Ack agreement is always setup once
+a first packet is enqueued regardless of whether it will be transmitted in an A\sphinxhyphen{}MPDU.
+
+\item {} 
+\sphinxAtStartPar
+Once an A\sphinxhyphen{}MSDU is created, it is no longer modified, even before it is actually transmitted
+for the first time. This means that this A\sphinxhyphen{}MSDU cannot be aggregated to other MSDUs using A\sphinxhyphen{}MSDU
+aggregation.
+
 \end{itemize}
 
 
@@ -39655,6 +39737,28 @@ which would be ignored otherwise. This is illustrated in Figure {\hyperref[\deto
 \caption{Illustration of signals tracking upon channel switching}\label{\detokenize{wifi-design:id46}}\label{\detokenize{wifi-design:fig-cca-channel-switching-multiple-interfaces}}\end{figure}
 
 
+\paragraph{MU\sphinxhyphen{}MIMO PHY support}
+\label{\detokenize{wifi-design:mu-mimo-phy-support}}
+\sphinxAtStartPar
+There is a basic support for MU\sphinxhyphen{}MIMO at the PHY layer that has been introduced in release
+ns\sphinxhyphen{}3.40. The current model can be used for both downlink and uplink MU\sphinxhyphen{}MIMO transmissions.
+
+\sphinxAtStartPar
+The use of OFDMA and MU\sphinxhyphen{}MIMO for Multi\sphinxhyphen{}User transmissions depends on how the TXVECTOR
+is filled in by the MAC layer (not implemented yet). Since mixed OFDMA and MU\sphinxhyphen{}MIMO
+configurations are not supported, the TXVECTOR determines it carries information for
+MU\sphinxhyphen{}MIMO if all users are assigned the same RU, otherwise it corresponds to an OFDMA
+transmission.
+
+\sphinxAtStartPar
+At the PHY layer, OFDMA and MU\sphinxhyphen{}MIMO transmissions are handled in a similar way, the main difference
+lies in MU\sphinxhyphen{}MIMO having the same spectrum shared simultaneously with multiple transmitters (for
+the uplink direction). The current PHY abstraction model assumes perfect conditions where the
+interference helper is able to detect signals belonging to the same MU\sphinxhyphen{}MIMO transmission and make
+sure they do not interfere with each others. Interference with other signals, including other
+MU\sphinxhyphen{}MIMO transmissions, is still supported by the model.
+
+
 \subsubsection{The MAC model}
 \label{\detokenize{wifi-design:the-mac-model}}
 
@@ -39710,7 +39814,10 @@ If the number of missed beacons exceeds the threshold, the STA will notify
 the rest of the device that the link is down (association is lost) and
 restart the scanning process. Note that this can also happen when an
 association request fails without explicit refusal (i.e., the AP fails to
-respond to association request).
+respond to association request). In case of non\sphinxhyphen{}AP MLDs, in order for losing
+association, it is necessary that no beacon is received on any link for an
+interval of duration equal to the maximum number of missed beacons times the
+interval between two consecutive Beacon frames.
 
 
 \paragraph{Roaming}
@@ -39841,6 +39948,11 @@ Decrement the backoff timer.
 \item {} 
 \sphinxAtStartPar
 Initiate the transmission of a frame exchange sequence.
+
+\item {} 
+\sphinxAtStartPar
+Invoke the backoff procedure due to choosing not to transmit (to be included
+in the version of the standard following IEEE 802.11\sphinxhyphen{}2020)
 
 \item {} 
 \sphinxAtStartPar
@@ -40121,50 +40233,160 @@ of the stations.
 \label{\detokenize{wifi-design:enhanced-multi-link-single-radio-operation-emlsr}}
 \sphinxAtStartPar
 The IEEE 802.11be amendment introduced EMLSR operating mode to allow a non\sphinxhyphen{}AP MLD to alternate
-frame exchanges over a subset of setup links identified as EMLSR links. \sphinxstyleemphasis{ns\sphinxhyphen{}3} supports EMLSR
-operations as described in the following.
+frame exchanges over a subset of setup links identified as EMLSR links (see section 35.3.17 of
+IEEE 802.11be D4.1). \sphinxstyleemphasis{ns\sphinxhyphen{}3} supports EMLSR operations as described in the following.
 
 
-\subparagraph{Non\sphinxhyphen{}AP MLD side}
-\label{\detokenize{wifi-design:non-ap-mld-side}}
+\subparagraph{Architecture of a non\sphinxhyphen{}AP MLD supporting EMLSR operating mode}
+\label{\detokenize{wifi-design:architecture-of-a-non-ap-mld-supporting-emlsr-operating-mode}}
 \sphinxAtStartPar
-A non\sphinxhyphen{}AP MLD supports EMLSR operating mode if the \sphinxcode{\sphinxupquote{EmlsrActivated}} attribute of the EHT
-configuration is set to true. In such a case, the WifiMacHelper will install an EMLSR Manager
-by using the type and attribute values configured through the \sphinxcode{\sphinxupquote{SetEmlsrManager}} method. The
-EMLSR Manager is a base class providing the \sphinxcode{\sphinxupquote{EmlsrLinkSet}} attribute, which can be used to
-enable or disable EMLSR mode (after multi\sphinxhyphen{}link setup, EMLSR mode is disabled by default). Setting
-the \sphinxcode{\sphinxupquote{EmlsrLinkSet}} attribute triggers the transmission of an EML Operating Mode Notification
-frame to the AP to communicate the new set of EMLSR links, if ML setup has been completed.
-Otherwise, the set of EMLSR links is stored and the EML Operating Mode Notification frame is
-sent as soon as the ML setup is completed. The selection of the link used to transmit
-the EML Operating Mode Notification frame is done by the EMLSR Manager subclass. The default
-EMLSR Manager subclass, \sphinxcode{\sphinxupquote{DefaultEmlsrManager}}, selects the link that was used to perform
-ML setup. When the non\sphinxhyphen{}AP MLD receives the acknowledgment for the EML Operating Mode Notification
-frame, it starts a timer whose duration is the transition timeout advertised by the AP MLD.
-When the timer expires, or the non\sphinxhyphen{}AP MLD receives an EML Operating Mode Notification frame
-from the AP MLD, the EMLSR mode is assumed to be enabled (or disabled).
+The architecture of a non\sphinxhyphen{}AP MLD supporting EMLSR operating mode is based on the assumption that
+only one PHY instance (referred to as the \sphinxstyleemphasis{main PHY}) has full TX/RX capabilities, while the other
+PHY instances (referred to as \sphinxstyleemphasis{auxiliary PHYs} or \sphinxstyleemphasis{aux PHYs} for brevity) have limited TX/RX
+capabilities. As a consequence, only the main PHY is able to carry out frame exchanges with the AP
+MLD. Given that frame exchanges can occur on any of the EMLSR links, the link on which the main PHY operates is dynamically switched during a simulation, as detailed below.
 
 
-\subparagraph{AP MLD side}
-\label{\detokenize{wifi-design:ap-mld-side}}
+\subparagraph{Enabling/disabling EMLSR mode}
+\label{\detokenize{wifi-design:enabling-disabling-emlsr-mode}}
 \sphinxAtStartPar
-An AP MLD supports EMLSR operating mode if the \sphinxcode{\sphinxupquote{EmlsrActivated}} attribute of the EHT
-configuration is set to true. When an AP MLD that supports EMLSR operating mode has to initiate a
-frame exchange with a non\sphinxhyphen{}AP MLD that is operating in EMLSR mode, it sends an MU\sphinxhyphen{}RTS Trigger Frame
-soliciting a response from the non\sphinxhyphen{}AP MLD (and possibly others) as the initial Control frame for
-that exchange. The MU\sphinxhyphen{}RTS Trigger Frame includes a Padding field whose transmission duration is the
-maximum among the padding delays advertised by all the EMLSR clients solicited by the MU\sphinxhyphen{}RTS
-Trigger Frame. Also, the MU\sphinxhyphen{}RTS Trigger Frame is carried in a non\sphinxhyphen{}HT (duplicate) PPDU transmitted
-at a rate of 6 Mbps, 12 Mbps or 24 Mbps. When the transmission of an initial Control frame starts,
-the AP MLD blocks transmissions to the solicited EMLSR clients on the EMLSR links other than the
-link used to transmit the initial Control frame, so that the AP MLD does not initiate another
-frame exchange on such links. The frame exchange with an EMLSR client is assumed to terminate
-when the AP MLD does not start a frame transmission a SIFS after the response to the last frame
-transmitted by the AP MLD or the AP MLD transmits a frame that is not addressed to the EMLSR
-client. When a frame exchange with an EMLSR client terminates, the AP MLD blocks transmissions on
-all the EMLSR links and starts a timer whose duration is the transition delay advertised by the
-EMLSR client. When the timer expires, the EMLSR client is assumed to be back to the listening
-operations and transmissions on all the EMLSR links are unblocked.
+EMLSR mode can be enabled on the links (at least two) of a non\sphinxhyphen{}AP MLD that supports the EMLSR
+operating mode and performs ML setup with an AP MLD that supports the EMLSR operating mode. The
+\sphinxcode{\sphinxupquote{EmlsrActivated}} attribute of the EHT configuration of an MLD determines whether the EMLSR
+operating mode is supported by the MLD. When the \sphinxcode{\sphinxupquote{EmlsrActivated}} attribute is set to true for
+a non\sphinxhyphen{}AP MLD, the WifiMacHelper will install an EMLSR Manager by using the type and attribute
+values configured through the \sphinxcode{\sphinxupquote{SetEmlsrManager}} method.
+
+\sphinxAtStartPar
+EMLSR mode on the links of a non\sphinxhyphen{}AP MLD can be enabled or disabled by using the \sphinxcode{\sphinxupquote{EmlsrLinkSet}}
+attribute of the EMLSR Manager base class (after multi\sphinxhyphen{}link setup, EMLSR mode is disabled by
+default). Setting the \sphinxcode{\sphinxupquote{EmlsrLinkSet}} attribute triggers the transmission of an EML Operating
+Mode Notification frame to the AP to communicate the new set of EMLSR links, if ML setup has been
+completed. Otherwise, the set of EMLSR links is stored and the EML Operating Mode Notification
+frame is sent as soon as the ML setup is completed. Therefore, users can choose to enable EMLSR
+mode on some links upon the completion of ML setup by setting the \sphinxcode{\sphinxupquote{EmlsrLinkSet}} attribute at
+(or before) initialization time; alternatively, they can leave the \sphinxcode{\sphinxupquote{EmlsrLinkSet}} attribute
+empty at initialization time and set it at runtime to enable EMLSR mode on some links at a
+specific simulation time (after ML setup). The selection of the link used by the non\sphinxhyphen{}AP
+MLD to transmit the EML Operating Mode Notification frame is done by the EMLSR Manager subclass.
+The default EMLSR Manager subclass, \sphinxcode{\sphinxupquote{DefaultEmlsrManager}}, selects the link on which the main
+PHY is operating. When the non\sphinxhyphen{}AP MLD receives the acknowledgment for the EML Operating Mode
+Notification frame, it starts a timer whose duration is the transition timeout advertised by the AP MLD. When the timer expires, or the non\sphinxhyphen{}AP MLD receives an EML Operating Mode Notification
+frame from the AP MLD, the EMLSR mode is assumed to be enabled on the requested set of links
+(referred to as EMLSR links), if this set is not empty, or disabled, otherwise. The set of links
+on which it is requested to enable EMLSR mode must include the link on which the main PHY is
+operating; the PHY instances operating on the other links on which EMLSR mode is enabled are
+considered aux PHYs.
+
+\sphinxAtStartPar
+The PHY instance acting as main PHY is configured through the \sphinxcode{\sphinxupquote{MainPhyId}} attribute of the EMLSR
+Manager base class. Such a class also enables to define the TX/RX capabilities of the aux PHYs:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+the \sphinxcode{\sphinxupquote{AuxPhyMaxModClass}} attribute indicates the maximum modulation class supported by aux PHYs
+
+\item {} 
+\sphinxAtStartPar
+the \sphinxcode{\sphinxupquote{AuxPhyChannelWidth}} attribute indicates the maximum channel width (MHz) supported by aux
+PHYs. The value of this attribute may be automatically capped based on the maximum supported
+modulation class.
+
+\item {} 
+\sphinxAtStartPar
+the \sphinxcode{\sphinxupquote{AuxPhyTxCapable}} attribute indicates whether aux PHYs are capable of transmitting frames
+
+\end{itemize}
+
+
+\subparagraph{Downlink TXOP}
+\label{\detokenize{wifi-design:downlink-txop}}
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics{{emlsr-dl-txop}.pdf}
+\caption{EMLSR operations: Downlink TXOP}\label{\detokenize{wifi-design:id53}}\label{\detokenize{wifi-design:fig-emlsr-dl-txop}}\end{figure}
+
+\sphinxAtStartPar
+When an AP MLD that supports EMLSR operating mode has to initiate a frame exchange on a link with
+a non\sphinxhyphen{}AP MLD that is operating in EMLSR mode on that link, it sends an MU\sphinxhyphen{}RTS Trigger Frame
+soliciting a response from the non\sphinxhyphen{}AP MLD (and possibly others) as the initial Control frame (ICF)
+for that exchange (see Figure {\hyperref[\detokenize{wifi-design:fig-emlsr-dl-txop}]{\sphinxcrossref{\DUrole{std,std-ref}{EMLSR operations: Downlink TXOP}}}}). The MU\sphinxhyphen{}RTS Trigger Frame is carried in a
+non\sphinxhyphen{}HT duplicate PPDU transmitted at a rate of 6 Mbps, 12 Mbps or 24 Mbps. When the
+transmission of an initial Control frame starts, the AP MLD blocks transmissions to the solicited
+EMLSR clients on the EMLSR links other than the link used to transmit the initial Control frame,
+so that the AP MLD does not initiate another frame exchange on such links. The MU\sphinxhyphen{}RTS Trigger
+Frame includes a Padding field whose transmission duration is the maximum among the padding
+delays advertised by all the EMLSR clients solicited by the MU\sphinxhyphen{}RTS Trigger Frame. The padding
+delay should be long enough to allow the EMLSR client to get ready to transmit the CTS response
+(e.g., make the main PHY switch to operate on the link where the DL TXOP is starting). In \sphinxstyleemphasis{ns\sphinxhyphen{}3},
+if the ICF is received by the main PHY, no link switch occurs. If the ICF is received by an aux
+PHY (as shown in Fig. {\hyperref[\detokenize{wifi-design:fig-emlsr-dl-txop}]{\sphinxcrossref{\DUrole{std,std-ref}{EMLSR operations: Downlink TXOP}}}}), the main PHY switches to operate on the link
+where the TXOP is starting at the end of the reception of the ICF (including the Padding field)
+and the main PHY sends the CTS response. In \sphinxstyleemphasis{ns\sphinxhyphen{}3}, the behavior of the aux PHY that received the
+ICF is determined by the EMLSR Manager subclass. The \sphinxcode{\sphinxupquote{DefaultEmlsrManager}} class provides the
+\sphinxcode{\sphinxupquote{SwitchAuxPhy}} attribute for this purpose. If this attribute is true, the aux PHY switches to
+operate on the link on which the main PHY was operating and stays on such a link even after
+the completion of the TXOP (as shown in Fig. {\hyperref[\detokenize{wifi-design:fig-emlsr-dl-txop}]{\sphinxcrossref{\DUrole{std,std-ref}{EMLSR operations: Downlink TXOP}}}}); if this attribute is
+false, the aux PHY does not perform any switch, but the main PHY switches back to operate on
+its original link once the TXOP is completed (as shown in Fig. {\hyperref[\detokenize{wifi-design:fig-emlsr-ul-txop}]{\sphinxcrossref{\DUrole{std,std-ref}{EMLSR operations: Uplink TXOP}}}}).
+
+\sphinxAtStartPar
+The frame exchange with an EMLSR client is assumed to terminate when the AP MLD does not start a
+frame transmission a SIFS after the response to the last frame transmitted by the AP MLD or the
+AP MLD transmits a frame that is not addressed to the EMLSR client. When a frame exchange with an
+EMLSR client terminates, the AP MLD blocks transmissions on all the EMLSR links and starts a
+timer whose duration is the transition delay advertised by the EMLSR client. When the timer
+expires, the EMLSR client is assumed to be back to the listening operations and transmissions on
+all the EMLSR links are unblocked.
+
+\sphinxAtStartPar
+The padding delay and the transition delay for an EMLSR client can be set through the
+\sphinxcode{\sphinxupquote{EmlsrPaddingDelay}} attribute and the \sphinxcode{\sphinxupquote{EmlsrTransitionDelay}} attribute of the
+\sphinxcode{\sphinxupquote{EmlsrManager}} base class, respectively.
+
+
+\subparagraph{Uplink TXOP}
+\label{\detokenize{wifi-design:uplink-txop}}
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics{{emlsr-ul-txop}.pdf}
+\caption{EMLSR operations: Uplink TXOP}\label{\detokenize{wifi-design:id54}}\label{\detokenize{wifi-design:fig-emlsr-ul-txop}}\end{figure}
+
+\sphinxAtStartPar
+An EMLSR client can start an UL TXOP on any of the EMLSR links. When channel access is obtained
+on a link where an aux PHY is operating, the aux PHY transmits an RTS frame and then the main PHY
+takes over the TXOP. Figure {\hyperref[\detokenize{wifi-design:fig-emlsr-ul-txop}]{\sphinxcrossref{\DUrole{std,std-ref}{EMLSR operations: Uplink TXOP}}}} shows that the EMLSR client obtains a TXOP on
+link 1, which the main PHY is operating on. Therefore, a data frame can be sent without
+protection. Clearly, the EMLSR client blocks transmissions on the other EMLSR links as soon as it
+starts transmitting the data frame, while the AP MLD blocks transmissions to the EMLSR client on
+the other EMLSR links as soon as it receives an MPDU from the EMLSR client. When the UL TXOP
+terminates, the AP MLD starts a transition delay timer, during which it does not attempt to start
+a frame exchange with the EMLSR client on any EMLSR link. The EMLSR client, instead, starts a
+MediumSyncDelay timer on all the EMLSR links other than the one on which the UL TXOP was carried
+out. While the MediumSyncDelay timer is running on a link, the EMLSR client can start an UL TXOP
+on that link, but it can perform at most a predefined number of attempts. The duration of the
+MediumSyncDelay timer, the maximum number of TXOP attempts and the threshold to be used instead
+of the normal CCA sensitivity for the primary 20 MHz channel are all advertised by the AP MLD and
+can be configured through the attributes of the \sphinxcode{\sphinxupquote{EmlsrManager}} class: \sphinxcode{\sphinxupquote{MediumSyncDuration}}, \sphinxcode{\sphinxupquote{MsdMaxNTxops}} and \sphinxcode{\sphinxupquote{MsdOfdmEdThreshold}}, respectively.
+
+\sphinxAtStartPar
+Figure {\hyperref[\detokenize{wifi-design:fig-emlsr-ul-txop}]{\sphinxcrossref{\DUrole{std,std-ref}{EMLSR operations: Uplink TXOP}}}} also shows that, afterwards, the EMLSR client obtains a TXOP on
+link 0, which an aux PHY is operating on. The aux PHY transmits an RTS frame and, in the
+meantime, the main PHY is switched to operate on that link, receives the CTS response and
+transmits the data frame. In the example shown in Fig. {\hyperref[\detokenize{wifi-design:fig-emlsr-ul-txop}]{\sphinxcrossref{\DUrole{std,std-ref}{EMLSR operations: Uplink TXOP}}}}, the
+\sphinxcode{\sphinxupquote{SwitchAuxPhy}} attribute of the \sphinxcode{\sphinxupquote{DefaultEmlsrManager}} class is set to false. This means that
+the aux PHY stays on link 0 and, therefore, no PHY is operating on link 1 while the main PHY is
+carrying out the UL TXOP on link 0. Once such UL TXOP terminates, the main PHY is switched back
+to operate on link 1. While the MediumSyncDelay timer is running on link 1, the EMLSR client
+obtains a TXOP on link 1 and, as mandated by the 802.11be specs, sends an RTS frame. If there is
+no response to the RTS frame, the EMLSR client can attempt to obtain the TXOP again and transmit
+another RTS frame. However, the number of attempts performed while the MediumSyncDelay timer is
+running is limited by the value advertised by the AP MLD and configured through the
+\sphinxcode{\sphinxupquote{MsdMaxNTxops}} attribute of the \sphinxcode{\sphinxupquote{EmlsrManager}} class.
 
 
 \paragraph{Ack manager}
@@ -40532,7 +40754,7 @@ Channel access management.  Users should modify the files \sphinxcode{\sphinxupq
 
 \item {} 
 \sphinxAtStartPar
-Fragmentation and RTS threholds are handled by Wi\sphinxhyphen{}Fi remote station manager.  Note that Wi\sphinxhyphen{}Fi remote
+Fragmentation and RTS thresholds are handled by Wi\sphinxhyphen{}Fi remote station manager.  Note that Wi\sphinxhyphen{}Fi remote
 station manager simply indicates if fragmentation and RTS are needed.  Fragmentation is handled by
 \sphinxcode{\sphinxupquote{Txop}} or \sphinxcode{\sphinxupquote{QosTxop}} while RTS/CTS transaction is handled by \sphinxcode{\sphinxupquote{FrameExchangeManager}}.
 
@@ -41977,13 +42199,14 @@ attributes for 802.11ax devices.
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-802.11ax allows extended compressed Block ACKs containing a 256\sphinxhyphen{}bits bitmap, making
+802.11ax allows compressed Block ACKs containing a 256\sphinxhyphen{}bits bitmap, making
 possible transmissions of A\sphinxhyphen{}MPDUs containing up to 256 MPDUs, depending on the
 negotiated buffer size. In order to configure the buffer size of an 802.11ax device,
 the following line of code could be used:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{heConfiguration}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZgt{}}\PYG{n}{SetMpduBufferSize}\PYG{p}{(}\PYG{l+m+mi}{256}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{WifiMacHelper}\PYG{+w}{ }\PYG{n}{mac}\PYG{p}{;}
+\PYG{n}{mac}\PYG{p}{.}\PYG{n}{SetType}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{ns3::StaWifiMac}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{MpduBufferSize}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{UintegerValue}\PYG{p}{(}\PYG{l+m+mi}{256}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -42207,6 +42430,80 @@ Each node is equipped with 802.11b Wi\sphinxhyphen{}Fi device:
 \PYG{n}{mobility}\PYG{p}{.}\PYG{n}{Install}\PYG{p}{(}\PYG{n}{c}\PYG{p}{)}\PYG{p}{;}
 
 \PYG{c+c1}{// other set up (e.g. InternetStack, Application)}
+\end{sphinxVerbatim}
+
+
+\paragraph{EMLSR configuration}
+\label{\detokenize{wifi-user:emlsr-configuration}}
+\sphinxAtStartPar
+\sphinxstylestrong{DISCLAIMER} EMLSR support is still experimental. Simulations with EMLSR activated may crash unexpectedly.
+
+\sphinxAtStartPar
+Proper EMLSR operations require the configuration of multiple RF interfaces, as illustrated above.
+Therefore, in order to configure EMLSR operations, we can start from the configuration shown above
+and apply the changes described in the following. Firstly, we need to activate EMLSR on both the
+AP MLD and the EMLSR client. This can be done by configuring the appropriate \sphinxcode{\sphinxupquote{EhtConfiguration}}
+attribute through the wifi helper:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{WifiHelper}\PYG{+w}{ }\PYG{n}{wifi}\PYG{p}{;}
+\PYG{n}{wifi}\PYG{p}{.}\PYG{n}{SetStandard}\PYG{p}{(}\PYG{n}{WIFI\PYGZus{}STANDARD\PYGZus{}80211be}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{wifi}\PYG{p}{.}\PYG{n}{ConfigEhtOptions}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{EmlsrActivated}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{BooleanValue}\PYG{p}{(}\PYG{n+nb}{true}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\end{sphinxVerbatim}
+
+\sphinxAtStartPar
+The \sphinxcode{\sphinxupquote{EhtConfiguration}} class also provides attributes for the various EMLSR parameters that an
+AP MLD that supports EMLSR has to advertise. Given that these attributes are simply ignored by
+non\sphinxhyphen{}AP MLDs, we can use the same wifi helper to configure such parameters:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{WifiHelper}\PYG{+w}{ }\PYG{n}{wifi}\PYG{p}{;}
+\PYG{n}{wifi}\PYG{p}{.}\PYG{n}{SetStandard}\PYG{p}{(}\PYG{n}{WIFI\PYGZus{}STANDARD\PYGZus{}80211be}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{wifi}\PYG{p}{.}\PYG{n}{ConfigEhtOptions}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{EmlsrActivated}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{BooleanValue}\PYG{p}{(}\PYG{n+nb}{true}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{wifi}\PYG{p}{.}\PYG{n}{ConfigEhtOptions}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{TransitionTimeout}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{TimeValue}\PYG{p}{(}\PYG{n}{MicroSeconds}\PYG{p}{(}\PYG{l+m+mi}{1024}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{wifi}\PYG{p}{.}\PYG{n}{ConfigEhtOptions}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{MediumSyncDuration}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{TimeValue}\PYG{p}{(}\PYG{n}{MicroSeconds}\PYG{p}{(}\PYG{l+m+mi}{3200}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{wifi}\PYG{p}{.}\PYG{n}{ConfigEhtOptions}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{MsdOfdmEdThreshold}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{IntegerValue}\PYG{p}{(}\PYG{l+m+mi}{\PYGZhy{}72}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{wifi}\PYG{p}{.}\PYG{n}{ConfigEhtOptions}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{MsdMaxNTxops}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{UintegerValue}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// unlimited attempts}
+\end{sphinxVerbatim}
+
+\sphinxAtStartPar
+EMLSR parameters that are client specific can be configured through the attributes of the EMLSR
+Manager class and subclass. The \sphinxcode{\sphinxupquote{WifiMacHelper}} class provides the \sphinxcode{\sphinxupquote{SetEmlsrManager}}
+method to conveniently set the type of EMLSR Manager and its attributes:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// setup STA.}
+\PYG{n}{wifiMac}\PYG{p}{.}\PYG{n}{SetType}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{ns3::StaWifiMac}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Ssid}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{SsidValue}\PYG{p}{(}\PYG{n}{ssid}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{                }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{ActiveProbing}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{BooleanValue}\PYG{p}{(}\PYG{n+nb}{false}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{wifiMac}\PYG{p}{.}\PYG{n}{SetEmlsrManager}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{ns3::DefaultEmlsrManager}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{EmlsrLinkSet}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{n}{StringValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{0,1,2}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{,}\PYG{+w}{  }\PYG{c+c1}{// enable EMLSR on all EMLSR links}
+\PYG{+w}{                        }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{MainPhyId}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{n}{UintegerValue}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{EmlsrPaddingDelay}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{n}{TimeValue}\PYG{p}{(}\PYG{n}{MicroSeconds}\PYG{p}{(}\PYG{l+m+mi}{32}\PYG{p}{)}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{EmlsrTransitionDelay}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{n}{TimeValue}\PYG{p}{(}\PYG{n}{MicroSeconds}\PYG{p}{(}\PYG{l+m+mi}{128}\PYG{p}{)}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{SwitchAuxPhy}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{n}{BooleanValue}\PYG{p}{(}\PYG{n+nb}{false}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{AuxPhyChannelWidth}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{n}{UintegerValue}\PYG{p}{(}\PYG{l+m+mi}{40}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{NetDeviceContainer}\PYG{+w}{ }\PYG{n}{staDevice}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{wifi}\PYG{p}{.}\PYG{n}{Install}\PYG{p}{(}\PYG{n}{wifiPhy}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{wifiMac}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{sta}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{devices}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{n}{staDevice}\PYG{p}{)}\PYG{p}{;}
+\end{sphinxVerbatim}
+
+\sphinxAtStartPar
+Note that the channel switch delay should be less than the transition delay:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// SpectrumWifiPhyHelper (3 links)}
+\PYG{n}{SpectrumWifiPhyHelper}\PYG{+w}{ }\PYG{n+nf}{phy}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{phy}\PYG{p}{.}\PYG{n}{SetPcapDataLinkType}\PYG{p}{(}\PYG{n}{WifiPhyHelper}\PYG{o}{:}\PYG{o}{:}\PYG{n}{DLT\PYGZus{}IEEE802\PYGZus{}11\PYGZus{}RADIO}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{phy}\PYG{p}{.}\PYG{n}{AddChannel}\PYG{p}{(}\PYG{n}{spectrumChannel2\PYGZus{}4Ghz}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{WIFI\PYGZus{}SPECTRUM\PYGZus{}2\PYGZus{}4\PYGZus{}GHZ}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{phy}\PYG{p}{.}\PYG{n}{AddChannel}\PYG{p}{(}\PYG{n}{spectrumChannel5Ghz}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{WIFI\PYGZus{}SPECTRUM\PYGZus{}5\PYGZus{}GHZ}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{phy}\PYG{p}{.}\PYG{n}{AddChannel}\PYG{p}{(}\PYG{n}{spectrumChannel6Ghz}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{WIFI\PYGZus{}SPECTRUM\PYGZus{}6\PYGZus{}GHZ}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{phy}\PYG{p}{.}\PYG{n}{Set}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{ChannelSwitchDelay}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{TimeValue}\PYG{p}{(}\PYG{n}{MicroSeconds}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 \sphinxstepscope
@@ -43320,6 +43617,10 @@ assumptions and parameters for FDD HeNB RF requirements.
 \bibitem[Mailloux]{antenna-design:mailloux}
 \sphinxAtStartPar
 Robert J. Mailloux, “Phased Array Antenna Handbook”, Artech House, 2nd Ed.
+\bibitem[TR36897]{antenna-design:tr36897}
+\sphinxAtStartPar
+3GPP. 2015. TR 36.897. Study on elevation beamforming / Full\sphinxhyphen{}Dimension (FD)
+Multiple Input Multiple Output (MIMO) for LTE. V13.0.0. (2015\sphinxhyphen{}06)
 \bibitem[turkmani]{buildings-references:turkmani}
 \sphinxAtStartPar
 Turkmani A.M.D., J.D. Parson and D.G. Lewis, “Radio propagation into buildings at 441, 900 and 1400 MHz”,
@@ -43670,6 +43971,15 @@ Tommaso Zugno, Michele Polese, Natale Patriciello, Biljana Bojovic,
 Sandra Lagen, Michele Zorzi. “Implementation of a Spatial Channel Model for
 ns\sphinxhyphen{}3”. Submitted to the Workshop on ns\sphinxhyphen{}3 (WNS3 ‘20). 2020.
 Available: \sphinxurl{https://arxiv.org/abs/2002.09341}
+\bibitem[TR36897]{spectrum:tr36897}
+\sphinxAtStartPar
+3GPP. 2015. TR 36.897. Study on elevation beamforming / Full\sphinxhyphen{}Dimension (FD)
+Multiple Input Multiple Output (MIMO) for LTE. V13.0.0. (2015\sphinxhyphen{}06)
+\bibitem[Pagin2023]{spectrum:pagin2023}
+\sphinxAtStartPar
+Pagin, Matteo, Sandra Lagen, Biljana Bojovic, Michele Polese,
+Michele Zorzi. 2023. “Improving the Efficiency of MIMO Simulations in ns\sphinxhyphen{}3”
+In Proceedings of the 2023 Workshop on ns\sphinxhyphen{}3, pp. 1\textendash{}9. 2023
 \bibitem[Zugno2020]{spectrum:zugno2020}
 \sphinxAtStartPar
 Zugno, Tommaso, Michele Polese, Natale Patriciello, Biljana Bojović,
@@ -43729,7 +44039,7 @@ Kuznetsov and D. Torokhov; Linux Cross Reference Source Code; Available online a
 \setcounter{enumi}{9}
 \item {} 
 \sphinxAtStartPar
-Vehent; Journey to the Center of the Linux Kernel: Traffic Control, Shaping and QoS; Available online at \sphinxurl{http://wiki.linuxwall.info/doku.php/en:resources:dossiers:networking:traffic\_control\#tbf\_-\_token\_bucket\_filter}.
+Vehent; Journey to the Center of the Linux Kernel: Traffic Control, Shaping and QoS; Available online at \sphinxurl{https://web.archive.org/web/20190930031243/http://wiki.linuxwall.info/doku.php/en:ressources:dossiers:networking:traffic\_control\#tbf\_-\_token\_bucket\_filter}.
 
 \end{enumerate}
 \bibitem[Ref3]{tbf:ref3}

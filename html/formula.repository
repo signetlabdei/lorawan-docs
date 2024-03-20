@@ -289,135 +289,174 @@
 \_form#120=25x14:$P(x)$
 \_form#121=48x14:$ u \in [0, 1] $
 \_form#122=48x14:$ u \in [0,1] $
-\_form#123=130x30:\[ ratio = \frac{elapsed}{target interval)} \]
-\_form#124=246x14:$Jitter\left\{P_N\right\} = \left|Delay\left\{P_N\right\} -
-Delay\left\{P_{N-1}\right\}\right|$
-\_form#125=226x14:$in_flight = sentSize - leftOut + retrans$
-\_form#126=166x13:$leftOut = sacked_out + lost_out$
-\_form#127=14x9:$2 \pi$
-\_form#128=11x16:$\frac{1}{r^2}$
-\_form#129=10x10:$ D $
-\_form#130=6x6:$ z$
-\_form#131=40x14:$ (x,y,z) $
-\_form#132=8x9:$ \rho $
-\_form#133=35x11:$ S \subset D $
-\_form#134=16x20:$ \frac{|S|}{|D|}
+\_form#123=229x31:\[
+     P(k; n, p) = \binom{n}{k} p^k (1-p)^{n-k}, \\
+         \quad k \in [0, n]
+  \]
+\_form#124=9x6:$ n $
+\_form#125=8x9:$ p $
+\_form#126=39x9:$ \mu = np $
+\_form#127=80x15:$ \sigma^2 = np(1-p) $
+\_form#128=9x6:$n$
+\_form#129=94x35:\[
+   k = \sum_{i=1}^{n} I(u_i \leq p)
+  \]
+\_form#130=8x10:$I$
+\_form#131=35x11:$u_i \leq p$
+\_form#132=11x10:$n'$
+\_form#133=129x35:\[
+     k' = \sum_{i=1}^{n} I((1 - u_i) \leq p)
+  \]
+\_form#134=41x14:$(1 - u_i)$
+\_form#135=196x16:\[
+     P(n; p) = p^n (1-p)^{1-n}, \\
+         \quad n \in \{0, 1\}
+  \]
+\_form#136=31x9:$ \mu = p
 $
-\_form#135=33x11:$ z=\overline{Z} $
-\_form#136=11x11:$ \overline{Z} $
-\_form#137=189x28:\[ \alpha_n = \frac{2\pi n - \pi + \theta}{4M},  n=1,2, \ldots,M\]
-\_form#138=123x14:\[ X(t)=X_c(t) + j X_s(t)\]
-\_form#139=256x38:\[ X_c(t) = \frac{2}{\sqrt{M}}\sum_{n=1}^{M}\cos(\psi_n)\cos(\omega_d t\cos(\alpha_n)+\phi_n)\]
-\_form#140=255x38:\[ X_s(t) = \frac{2}{\sqrt{M}}\sum_{n=1}^{M}\sin(\psi_n)\cos(\omega_d t\cos(\alpha_n)+\phi_n)\]
-\_form#141=6x10:$\theta$
-\_form#142=8x13:$\phi$
-\_form#143=15x13:$\psi_n$
-\_form#144=38x14:$[-\pi, \pi)$
-\_form#145=9x6:$n$
-\_form#146=161x14:$Re=\cos(\psi_n), Im = i\sin(\psi_n)]$
-\_form#147=14x13:$\phi_n$
-\_form#148=58x14:$\omega_d \cos(\alpha_n)$
-\_form#149=58x19:$ \frac{P_r}{P_t} = \frac{A_r A_t}{d^2\lambda^2} $
-\_form#150=65x19:$ A_{isotr.} = \frac{\lambda^2}{4\pi} $
-\_form#151=61x21:$ \frac{P_r}{P_t} = \frac{\lambda^2}{(4 \pi d)^2} $
-\_form#152=78x21:$ P_r = \frac{P_t G_t G_r \lambda^2}{(4 \pi d)^2 L}$
-\_form#153=13x13:$ P_r $
-\_form#154=11x13:$ P_t $
-\_form#155=14x13:$ G_t $
-\_form#156=15x13:$ G_r $
-\_form#157=8x10:$ \lambda $
-\_form#158=6x10:$ d $
-\_form#159=9x10:$ L $
-\_form#160=10x19:$ \frac{C}{f} $
-\_form#161=83x10:$ C = 299792458$
-\_form#162=8x13:$ f $
-\_form#163=36x11:$ d > 3 \lambda $
-\_form#164=36x11:$ d < 3 \lambda $
-\_form#165=29x10:$ d = 0 $
-\_form#166=41x13:$ P_r > P_t $
-\_form#167=61x14:$ d < \lambda / 2 \sqrt{\pi} $
-\_form#168=29x10:$ d =
+\_form#137=73x15:$ \sigma^2 = p(1-p) $
+\_form#138=105x39:\[
+   n =
+   \begin{cases}
+   1 & \text{if } u \leq p \\
+   0 & \text{otherwise}
+   \end{cases}
+  \]
+\_form#139=8x9:$p$
+\_form#140=130x39:\[
+     x' =
+     \begin{cases}
+     1 & \text{if } (1 - u) \leq p \\
+     0 & \text{otherwise}
+     \end{cases}
+  \]
+\_form#141=130x30:\[ ratio = \frac{elapsed}{target interval)} \]
+\_form#142=246x14:$Jitter\left\{P_N\right\} = \left|Delay\left\{P_N\right\} -
+Delay\left\{P_{N-1}\right\}\right|$
+\_form#143=226x14:$in_flight = sentSize - leftOut + retrans$
+\_form#144=166x13:$leftOut = sacked_out + lost_out$
+\_form#145=14x9:$2 \pi$
+\_form#146=11x16:$\frac{1}{r^2}$
+\_form#147=10x10:$ D $
+\_form#148=6x6:$ z$
+\_form#149=40x14:$ (x,y,z) $
+\_form#150=8x9:$ \rho $
+\_form#151=35x11:$ S \subset D $
+\_form#152=16x20:$ \frac{|S|}{|D|}
+$
+\_form#153=33x11:$ z=\overline{Z} $
+\_form#154=11x11:$ \overline{Z} $
+\_form#155=189x28:\[ \alpha_n = \frac{2\pi n - \pi + \theta}{4M},  n=1,2, \ldots,M\]
+\_form#156=123x14:\[ X(t)=X_c(t) + j X_s(t)\]
+\_form#157=256x38:\[ X_c(t) = \frac{2}{\sqrt{M}}\sum_{n=1}^{M}\cos(\psi_n)\cos(\omega_d t\cos(\alpha_n)+\phi_n)\]
+\_form#158=255x38:\[ X_s(t) = \frac{2}{\sqrt{M}}\sum_{n=1}^{M}\sin(\psi_n)\cos(\omega_d t\cos(\alpha_n)+\phi_n)\]
+\_form#159=6x10:$\theta$
+\_form#160=8x13:$\phi$
+\_form#161=15x13:$\psi_n$
+\_form#162=38x14:$[-\pi, \pi)$
+\_form#163=161x14:$Re=\cos(\psi_n), Im = i\sin(\psi_n)]$
+\_form#164=14x13:$\phi_n$
+\_form#165=58x14:$\omega_d \cos(\alpha_n)$
+\_form#166=58x19:$ \frac{P_r}{P_t} = \frac{A_r A_t}{d^2\lambda^2} $
+\_form#167=65x19:$ A_{isotr.} = \frac{\lambda^2}{4\pi} $
+\_form#168=61x21:$ \frac{P_r}{P_t} = \frac{\lambda^2}{(4 \pi d)^2} $
+\_form#169=78x21:$ P_r = \frac{P_t G_t G_r \lambda^2}{(4 \pi d)^2 L}$
+\_form#170=13x13:$ P_r $
+\_form#171=11x13:$ P_t $
+\_form#172=14x13:$ G_t $
+\_form#173=15x13:$ G_r $
+\_form#174=8x10:$ \lambda $
+\_form#175=6x10:$ d $
+\_form#176=9x10:$ L $
+\_form#177=10x19:$ \frac{C}{f} $
+\_form#178=83x10:$ C = 299792458$
+\_form#179=8x13:$ f $
+\_form#180=36x11:$ d > 3 \lambda $
+\_form#181=36x11:$ d < 3 \lambda $
+\_form#182=29x10:$ d = 0 $
+\_form#183=41x13:$ P_r > P_t $
+\_form#184=61x14:$ d < \lambda / 2 \sqrt{\pi} $
+\_form#185=29x10:$ d =
 0 $
-\_form#169=94x13:$\lim_{d \to 0 }  P_r = +\infty $
-\_form#170=33x10:$ d \to 0 $
-\_form#171=29x10:$ d  = 0 $
-\_form#172=41x13:$ P_r = P_t $
-\_form#173=71x14:$ d <= \lambda / 2 \sqrt{\pi} $
-\_form#174=125x20:$ Pr = \frac{P_t * G_t * G_r * (H_t^2 * H_r^2)}{d^4 * L} $
-\_form#175=118x19:$ dCross = \frac{(4 * \pi * H_t * H_r)}{\lambda} $
-\_form#176=123x19:$ L = L_0 + 10 n log_{10}(\frac{d}{d_0})$
-\_form#177=9x6:$ n $
-\_form#178=11x13:$ d_0 $
-\_form#179=14x13:$ L_0 $
-\_form#180=140x29:\[ L = L_0 + 10 \cdot n_0 log_{10}(\frac{d}{d_0})\]
-\_form#181=198x30:\[ \underbrace{0 \cdots\cdots}_{=0} \underbrace{d_0 \cdots\cdots}_{n_0} \underbrace{d_1
+\_form#186=94x13:$\lim_{d \to 0 }  P_r = +\infty $
+\_form#187=33x10:$ d \to 0 $
+\_form#188=29x10:$ d  = 0 $
+\_form#189=41x13:$ P_r = P_t $
+\_form#190=71x14:$ d <= \lambda / 2 \sqrt{\pi} $
+\_form#191=125x20:$ Pr = \frac{P_t * G_t * G_r * (H_t^2 * H_r^2)}{d^4 * L} $
+\_form#192=118x19:$ dCross = \frac{(4 * \pi * H_t * H_r)}{\lambda} $
+\_form#193=123x19:$ L = L_0 + 10 n log_{10}(\frac{d}{d_0})$
+\_form#194=11x13:$ d_0 $
+\_form#195=14x13:$ L_0 $
+\_form#196=140x29:\[ L = L_0 + 10 \cdot n_0 log_{10}(\frac{d}{d_0})\]
+\_form#197=198x30:\[ \underbrace{0 \cdots\cdots}_{=0} \underbrace{d_0 \cdots\cdots}_{n_0} \underbrace{d_1
 \cdots\cdots}_{n_1} \underbrace{d_2 \cdots\cdots}_{n_2} \infty \]
-\_form#182=429x71:\[\displaystyle L =
+\_form#198=429x71:\[\displaystyle L =
 \begin{cases}
 0 & d < d_0 \\
 L_0 + 10 \cdot n_0 \log_{10}(\frac{d}{d_0}) & d_0 \leq d < d_1 \\
 L_0 + 10 \cdot n_0 \log_{10}(\frac{d_1}{d_0}) + 10 \cdot n_1 \log_{10}(\frac{d}{d_1}) & d_1 \leq d <
 d_2 \\ L_0 + 10 \cdot n_0 \log_{10}(\frac{d_1}{d_0}) + 10 \cdot n_1 \log_{10}(\frac{d_2}{d_1}) + 10
 \cdot n_2 \log_{10}(\frac{d}{d_2})& d_2 \leq d \end{cases}\]
-\_form#183=46x13:$ d_0, d_1, d_2 $
-\_form#184=50x9:$ n_0, n_1, n_2 $
-\_form#185=189x30:\[ p(x; m, \omega) = \frac{2 m^m}{\Gamma(m) \omega^m} x^{2m - 1} e^{-\frac{m}{\omega} x^2}  \]
-\_form#186=13x6:$ m $
-\_form#187=9x6:$ \omega $
-\_form#188=150x30:\[ \underbrace{0
+\_form#199=46x13:$ d_0, d_1, d_2 $
+\_form#200=50x9:$ n_0, n_1, n_2 $
+\_form#201=189x30:\[ p(x; m, \omega) = \frac{2 m^m}{\Gamma(m) \omega^m} x^{2m - 1} e^{-\frac{m}{\omega} x^2}  \]
+\_form#202=13x6:$ m $
+\_form#203=9x6:$ \omega $
+\_form#204=150x30:\[ \underbrace{0
 \cdots\cdots}_{m_0} \underbrace{d_1 \cdots\cdots}_{m_1} \underbrace{d_2 \cdots\cdots}_{m_2}
 \infty \]
-\_form#189=59x18:$ L = \frac{4 \pi * d * f}{C^2}$
-\_form#190=89x15:$ g: F \in {\sf
+\_form#205=59x18:$ L = \frac{4 \pi * d * f}{C^2}$
+\_form#206=89x15:$ g: F \in {\sf
 R\hspace*{-0.9ex}\rule{0.15ex}{1.5ex}\hspace*{0.9ex}}^N \rightarrow {\sf
 R\hspace*{-0.9ex}\rule{0.15ex}{1.5ex}\hspace*{0.9ex}}  $
-\_form#191=26x14:$ g(F) $
-\_form#192=10x10:$ F $
-\_form#193=10x10:$ F$
-\_form#194=51x16:$\int_F g(f) df  $
-\_form#195=260x15:$ V_r = \sqrt{\zeta} V_1 \exp(j \phi_1) + \sqrt{\zeta} V_2 \exp(j \phi_2) + X + jY $
-\_form#196=6x13:$ \zeta $
-\_form#197=13x6:$ m
+\_form#207=26x14:$ g(F) $
+\_form#208=10x10:$ F $
+\_form#209=10x10:$ F$
+\_form#210=51x16:$\int_F g(f) df  $
+\_form#211=260x15:$ V_r = \sqrt{\zeta} V_1 \exp(j \phi_1) + \sqrt{\zeta} V_2 \exp(j \phi_2) + X + jY $
+\_form#212=6x13:$ \zeta $
+\_form#213=13x6:$ m
 $
-\_form#198=13x10:$ X $
-\_form#199=11x10:$ Y $
-\_form#200=13x11:$ \sigma^2
+\_form#214=13x10:$ X $
+\_form#215=11x10:$ Y $
+\_form#216=13x11:$ \sigma^2
 $
-\_form#201=14x13:$ \phi_n $
-\_form#202=31x14:$ \left[ 0, 2\pi \right] $
-\_form#203=11x13:$ V_1
+\_form#217=14x13:$ \phi_n $
+\_form#218=31x14:$ \left[ 0, 2\pi \right] $
+\_form#219=11x13:$ V_1
 $
-\_form#204=11x13:$ V_2 $
-\_form#205=33x16:$ \mathbb{E} \left[ h^2 \right] $
-\_form#206=145x16:$ \mathbb{E}\left[ |h|^2 \right] = V_1^2 + V_2^2 + 2*\sigma $
-\_form#207=13x11:$ \sigma^2 $
-\_form#208=11x13:$ V_1 $
-\_form#209=75x15:$ 2*\sigma^2 \left( 1 + K \right) $
-\_form#210=78x11:$A^2 = -N -S$
-\_form#211=218x19:$S = \sum_{i=1}^N \frac{2i - 1}{N} \left[ ln F(Y_i) + ln F(Y_{N + 1 - i}) \right]$
-\_form#212=218x29:\[{\rm{rate, bandwidth}} = {\rm{kass}}\frac{{{\rm{m\_totalRate}}}}{{{\rm{m\_numRates}} +
+\_form#220=11x13:$ V_2 $
+\_form#221=33x16:$ \mathbb{E} \left[ h^2 \right] $
+\_form#222=145x16:$ \mathbb{E}\left[ |h|^2 \right] = V_1^2 + V_2^2 + 2*\sigma $
+\_form#223=13x11:$ \sigma^2 $
+\_form#224=11x13:$ V_1 $
+\_form#225=75x15:$ 2*\sigma^2 \left( 1 + K \right) $
+\_form#226=78x11:$A^2 = -N -S$
+\_form#227=218x19:$S = \sum_{i=1}^N \frac{2i - 1}{N} \left[ ln F(Y_i) + ln F(Y_{N + 1 - i}) \right]$
+\_form#228=218x29:\[{\rm{rate, bandwidth}} = {\rm{kass}}\frac{{{\rm{m\_totalRate}}}}{{{\rm{m\_numRates}} +
 1}}\]
-\_form#213=191x28:\[{f_{center}} = {\rm{fc}} + \frac{{ \pm {\rm{m\_totalRate}} \mp {\rm{rate}}}}{2}\]
-\_form#214=63x14:\[{\rm{kPa}} = {10^{\frac{{{\rm{dB}}}}{{10}}}}\]
-\_form#215=94x14:\[{\rm{dB}} = 10{\log _{10}}{\rm{kPa}}\]
-\_form#216=56x13:$ P_{tx} = 1.14 $
-\_form#217=58x13:$ P_{rx} = 0.94 $
-\_form#218=64x13:$ P_{idle} = 0.82 $
-\_form#219=70x14:$ P_{sleep} = 0.10 $
-\_form#220=61x13:$ I_{tx} = 0.380 $
-\_form#221=63x13:$ I_{rx} = 0.313 $
-\_form#222=69x13:$ I_{idle} = 0.273 $
-\_form#223=75x14:$ I_{sleep} = 0.033 $
-\_form#224=21x13:$ W_{tx} $
-\_form#225=23x14:$ W_{pa} $
-\_form#226=28x13:$ W_{idle} $
-\_form#227=8x9:$ \eta $
-\_form#228=46x20:$ \eta = \frac{P_{tx}}{W_{pa}} $
-\_form#229=18x13:$ P_{tx} $
-\_form#230=56x19:$ W_{pa} = \frac{P_{tx}}{\eta} $
-\_form#231=100x19:$ W_{tx} = \frac{P_{tx}}{\eta} + W_{idle} $
-\_form#232=10x10:$ V $
-\_form#233=90x19:$ I_{tx} = \frac{P_{tx}}{V \cdot \eta} + I_{idle} $
-\_form#234=16x13:$ I_{tx} $
-\_form#235=23x13:$ I_{idle} $
-\_form#236=86x19:$ \eta = \frac{P_{tx}}{(I_{tx}-I_{idle})\cdot V} $
+\_form#229=191x28:\[{f_{center}} = {\rm{fc}} + \frac{{ \pm {\rm{m\_totalRate}} \mp {\rm{rate}}}}{2}\]
+\_form#230=63x14:\[{\rm{kPa}} = {10^{\frac{{{\rm{dB}}}}{{10}}}}\]
+\_form#231=94x14:\[{\rm{dB}} = 10{\log _{10}}{\rm{kPa}}\]
+\_form#232=56x13:$ P_{tx} = 1.14 $
+\_form#233=58x13:$ P_{rx} = 0.94 $
+\_form#234=64x13:$ P_{idle} = 0.82 $
+\_form#235=70x14:$ P_{sleep} = 0.10 $
+\_form#236=61x13:$ I_{tx} = 0.380 $
+\_form#237=63x13:$ I_{rx} = 0.313 $
+\_form#238=69x13:$ I_{idle} = 0.273 $
+\_form#239=75x14:$ I_{sleep} = 0.033 $
+\_form#240=21x13:$ W_{tx} $
+\_form#241=23x14:$ W_{pa} $
+\_form#242=28x13:$ W_{idle} $
+\_form#243=8x9:$ \eta $
+\_form#244=46x20:$ \eta = \frac{P_{tx}}{W_{pa}} $
+\_form#245=18x13:$ P_{tx} $
+\_form#246=56x19:$ W_{pa} = \frac{P_{tx}}{\eta} $
+\_form#247=100x19:$ W_{tx} = \frac{P_{tx}}{\eta} + W_{idle} $
+\_form#248=10x10:$ V $
+\_form#249=90x19:$ I_{tx} = \frac{P_{tx}}{V \cdot \eta} + I_{idle} $
+\_form#250=16x13:$ I_{tx} $
+\_form#251=23x13:$ I_{idle} $
+\_form#252=86x19:$ \eta = \frac{P_{tx}}{(I_{tx}-I_{idle})\cdot V} $

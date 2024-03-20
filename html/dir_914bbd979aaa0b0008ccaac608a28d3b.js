@@ -13,6 +13,7 @@ var dir_914bbd979aaa0b0008ccaac608a28d3b =
     [ "wifi-dynamic-bw-op-test.cc", "d5/d21/wifi-dynamic-bw-op-test_8cc.html", "d5/d21/wifi-dynamic-bw-op-test_8cc" ],
     [ "wifi-eht-info-elems-test.cc", "d1/d81/wifi-eht-info-elems-test_8cc.html", "d1/d81/wifi-eht-info-elems-test_8cc" ],
     [ "wifi-emlsr-test.cc", "d6/db7/wifi-emlsr-test_8cc.html", "d6/db7/wifi-emlsr-test_8cc" ],
+    [ "wifi-emlsr-test.h", "df/d93/wifi-emlsr-test_8h.html", "df/d93/wifi-emlsr-test_8h" ],
     [ "wifi-error-rate-models-test.cc", "d0/db8/wifi-error-rate-models-test_8cc.html", "d0/db8/wifi-error-rate-models-test_8cc" ],
     [ "wifi-ie-fragment-test.cc", "d1/d6d/wifi-ie-fragment-test_8cc.html", "d1/d6d/wifi-ie-fragment-test_8cc" ],
     [ "wifi-mac-ofdma-test.cc", "d5/dac/wifi-mac-ofdma-test_8cc.html", "d5/dac/wifi-mac-ofdma-test_8cc" ],

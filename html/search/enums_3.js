@@ -10,7 +10,7 @@ var searchData=
   ['direction_5fe_7',['Direction_e',['../d4/ddf/structns3_1_1_logical_channel_config_list_element__s.html#a0ce1e3a6af4d9a3e9fc19361d0af4e00',1,'ns3::LogicalChannelConfigListElement_s']]],
   ['dispatch_5fe_8',['Dispatch_e',['../d2/d95/classns3_1_1_six_low_pan_dispatch.html#aa51561db1ae4239db574d31d7aebbb5f',1,'ns3::SixLowPanDispatch']]],
   ['diuc_9',['Diuc',['../d0/d47/classns3_1_1_ofdm_dl_burst_profile.html#a4769c73985bf918ecd21180081471a00',1,'ns3::OfdmDlBurstProfile']]],
-  ['dmgactionvalue_10',['DmgActionValue',['../d0/dfc/classns3_1_1_wifi_action_header.html#ae8f182e2556e30187f19613aed9bcd98',1,'ns3::WifiActionHeader']]],
+  ['dmgactionvalue_10',['DmgActionValue',['../d0/dfc/classns3_1_1_wifi_action_header.html#a2a922bfd21981a70b1758fe85af98620',1,'ns3::WifiActionHeader']]],
   ['dot11sauthenticationprotocol_11',['Dot11sAuthenticationProtocol',['../dc/d88/namespacens3_1_1dot11s.html#a89ed763d7f7563667a69fcb235357757',1,'ns3::dot11s']]],
   ['dot11scongestioncontrolmode_12',['Dot11sCongestionControlMode',['../dc/d88/namespacens3_1_1dot11s.html#a196a70b06b3e3cd727fce14d9bc99c16',1,'ns3::dot11s']]],
   ['dot11spathselectionmetric_13',['Dot11sPathSelectionMetric',['../dc/d88/namespacens3_1_1dot11s.html#a6e74d89f0644211a5bdda75dc5fc3afa',1,'ns3::dot11s']]],

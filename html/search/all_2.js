@@ -7,8 +7,8 @@ var searchData=
   ['clicktrivialtest_4',['ClickTrivialTest',['../dc/d86/classns3_1_1_ipv4_click_routing.html#a5663ddb2442a933ba3285afaed9658ee',1,'ns3::Ipv4ClickRouting']]],
   ['codelqueuedisccontrollawtest_5',['CoDelQueueDiscControlLawTest',['../d0/d7b/classns3_1_1_co_del_queue_disc.html#adc75fbaaeb6ae11d93a5a14b714e4440',1,'ns3::CoDelQueueDisc']]],
   ['codelqueuediscnewtonsteptest_6',['CoDelQueueDiscNewtonStepTest',['../d0/d7b/classns3_1_1_co_del_queue_disc.html#aec5c01ef1f49b308c98a6005de577f8c',1,'ns3::CoDelQueueDisc']]],
-  ['ftrfadingmodelaveragetest_7',['FtrFadingModelAverageTest',['../da/db7/classns3_1_1_two_ray_spectrum_propagation_loss_model.html#ae555c91153fc3fba48189dcafe275518',1,'ns3::TwoRaySpectrumPropagationLossModel']]],
-  ['heaggregationtest_8',['HeAggregationTest',['../d7/d63/classns3_1_1_ht_frame_exchange_manager.html#afd6f8451ef93ff99a79743ce93f2a3fc',1,'ns3::HtFrameExchangeManager::HeAggregationTest()'],['../d0/d97/classns3_1_1_sta_wifi_mac.html#afd6f8451ef93ff99a79743ce93f2a3fc',1,'ns3::StaWifiMac::HeAggregationTest()']]],
+  ['emlsrultxoptest_7',['EmlsrUlTxopTest',['../d6/d99/classns3_1_1_channel_access_manager.html#a30d90f9c8e18342c7b951d56bb76f0ef',1,'ns3::ChannelAccessManager::EmlsrUlTxopTest()'],['../de/dca/classns3_1_1_txop.html#a30d90f9c8e18342c7b951d56bb76f0ef',1,'ns3::Txop::EmlsrUlTxopTest()']]],
+  ['ftrfadingmodelaveragetest_8',['FtrFadingModelAverageTest',['../da/db7/classns3_1_1_two_ray_spectrum_propagation_loss_model.html#ae555c91153fc3fba48189dcafe275518',1,'ns3::TwoRaySpectrumPropagationLossModel']]],
   ['ipv4l3protocoltestcase_9',['Ipv4L3ProtocolTestCase',['../de/d62/classns3_1_1_ipv4_l3_protocol.html#a1c97ab904d8fa88c56c79a0d235325e9',1,'ns3::Ipv4L3Protocol']]],
   ['ipv6l3protocoltestcase_10',['Ipv6L3ProtocolTestCase',['../db/d1c/classns3_1_1_ipv6_l3_protocol.html#a09b6212a5017142b4f4244e3809708b9',1,'ns3::Ipv6L3Protocol']]],
   ['multilinkoperationstestbase_11',['MultiLinkOperationsTestBase',['../d0/d97/classns3_1_1_sta_wifi_mac.html#af9c3deed006d89955501c344619a3360',1,'ns3::StaWifiMac']]],
@@ -19,8 +19,9 @@ var searchData=
   ['spectrumwifiphyfiltertest_16',['SpectrumWifiPhyFilterTest',['../df/d91/classns3_1_1_spectrum_wifi_phy.html#aba2eed909705f45f386b5b4fdd8a51d0',1,'ns3::SpectrumWifiPhy']]],
   ['tcpbicdecrementtest_17',['TcpBicDecrementTest',['../de/d1d/classns3_1_1_tcp_bic.html#a5350d9423de9d4dc9ea8e8d6212b1f3a',1,'ns3::TcpBic']]],
   ['tcpbicincrementtest_18',['TcpBicIncrementTest',['../de/d1d/classns3_1_1_tcp_bic.html#a82f141cadbdca4c006cec6e378649e80',1,'ns3::TcpBic']]],
-  ['tvhelperdistributiontestcase_19',['TvHelperDistributionTestCase',['../d0/d52/classns3_1_1_tv_spectrum_transmitter_helper.html#a1d475d484c6218f84bf4f5e051773fb5',1,'ns3::TvSpectrumTransmitterHelper']]],
-  ['twolevelaggregationtest_20',['TwoLevelAggregationTest',['../d7/d63/classns3_1_1_ht_frame_exchange_manager.html#a59c458327e669c30a9ba73441c96c03e',1,'ns3::HtFrameExchangeManager::TwoLevelAggregationTest()'],['../d0/d97/classns3_1_1_sta_wifi_mac.html#a59c458327e669c30a9ba73441c96c03e',1,'ns3::StaWifiMac::TwoLevelAggregationTest()']]],
-  ['waypointmobilitymodelnotifytest_21',['WaypointMobilityModelNotifyTest',['../de/d24/classns3_1_1_waypoint_mobility_model.html#ab45056c1fe06773a99e50f7739408a8f',1,'ns3::WaypointMobilityModel']]],
-  ['wifimacqueuedropoldesttest_22',['WifiMacQueueDropOldestTest',['../d2/d92/classns3_1_1_wifi_mac_queue_scheduler_impl.html#a8d59c31123e7272a4438e16f2d42264b',1,'ns3::WifiMacQueueSchedulerImpl']]]
+  ['threegppcalclongtermmultiporttest_19',['ThreeGppCalcLongTermMultiPortTest',['../d1/d8d/classns3_1_1_three_gpp_spectrum_propagation_loss_model.html#abf4ae90329a55b857581eca225228062',1,'ns3::ThreeGppSpectrumPropagationLossModel']]],
+  ['threegppmimopolarizationtest_20',['ThreeGppMimoPolarizationTest',['../d1/d8d/classns3_1_1_three_gpp_spectrum_propagation_loss_model.html#a9d1dc8148c68493b78a5201f09487980',1,'ns3::ThreeGppSpectrumPropagationLossModel']]],
+  ['tvhelperdistributiontestcase_21',['TvHelperDistributionTestCase',['../d0/d52/classns3_1_1_tv_spectrum_transmitter_helper.html#a1d475d484c6218f84bf4f5e051773fb5',1,'ns3::TvSpectrumTransmitterHelper']]],
+  ['waypointmobilitymodelnotifytest_22',['WaypointMobilityModelNotifyTest',['../de/d24/classns3_1_1_waypoint_mobility_model.html#ab45056c1fe06773a99e50f7739408a8f',1,'ns3::WaypointMobilityModel']]],
+  ['wifimacqueuedropoldesttest_23',['WifiMacQueueDropOldestTest',['../d2/d92/classns3_1_1_wifi_mac_queue_scheduler_impl.html#a8d59c31123e7272a4438e16f2d42264b',1,'ns3::WifiMacQueueSchedulerImpl']]]
 ];
