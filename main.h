@@ -44,6 +44,7 @@
  *     - energy
  *     - flow-monitor
  *     - internet
+ *     - lorawan
  *     - lte
  *     - mesh
  *     - mobility

@@ -22,6 +22,7 @@ var modules =
     [ "Internet Applications", "de/d28/group__internet-apps.html", "de/d28/group__internet-apps" ],
     [ "LR-WPAN models", "d3/de4/group__lr-wpan.html", "d3/de4/group__lr-wpan" ],
     [ "LTE Models", "d3/d23/group__lte.html", "d3/d23/group__lte" ],
+    [ "LoRaWAN Models", "d5/d00/group__lorawan.html", "d5/d00/group__lorawan" ],
     [ "MPI Distributed Simulation", "da/d45/group__mpi.html", "da/d45/group__mpi" ],
     [ "Mesh Device", "d2/d2f/group__mesh.html", "d2/d2f/group__mesh" ],
     [ "Mobility", "d3/d65/group__mobility.html", "d3/d65/group__mobility" ],

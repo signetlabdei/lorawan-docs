@@ -1018,28 +1018,28 @@ ns3::ClassAEndDeviceLorawanMac is accessible through the following paths with Co
 No Attributes are defined for this type.<br>
 <h3>Attributes defined in parent class ns3::EndDeviceLorawanMac</h3>
 <ul>
-<li><b>DRControl</b>: Whether to request the NS to control this device's Data Rate
+<li><b>DRControl</b>: Whether to request the network server to control this device's data rate
   <ul>
     <li>Set with class:  \ref ns3::BooleanValue</li>
     <li>Underlying type: bool</li>
     <li>Initial value: false</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
   </ul>
-<li><b>DataRate</b>: Data Rate currently employed by this end device
+<li><b>DataRate</b>: Data rate currently employed by this end device
   <ul>
     <li>Set with class:  \ref ns3::UintegerValue</li>
     <li>Underlying type: uint8_t 0:5</li>
     <li>Initial value: 0</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
   </ul>
-<li><b>EnableEDDataRateAdaptation</b>: Whether the End Device should up its Data Rate in case it doesn't get a reply from the NS.
+<li><b>EnableEDDataRateAdaptation</b>: Whether the end device should up its data rate in case it doesn't get a reply from the network server.
   <ul>
     <li>Set with class:  \ref ns3::BooleanValue</li>
     <li>Underlying type: bool</li>
     <li>Initial value: false</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
   </ul>
-<li><b>MType</b>: Specify type of message will be sent by this ED.
+<li><b>MType</b>: Specify type of message will be sent by this end device.
   <ul>
     <li>Set with class:  \ref ns3::EnumValue<N3ns37lorawan16LorawanMacHeader5MTypeE></li>
     <li>Underlying type: \p Unconfirmed|Confirmed</li>
@@ -1059,7 +1059,7 @@ No TraceSources are defined for this type.<br>
 <ul>
 <li><b>AggregatedDutyCycle</b>: Aggregate duty cycle, in fraction form, this end device must respect<br>%Callback signature: ns3::TracedValueCallback::Double
 </li>
-<li><b>DataRate</b>: Data Rate currently employed by this end device<br>%Callback signature: ns3::TracedValueCallback::uint8_t
+<li><b>DataRate</b>: Data rate currently employed by this end device<br>%Callback signature: ns3::TracedValueCallback::uint8_t
 </li>
 <li><b>LastKnownGatewayCount</b>: Last known number of gateways able to listen to this end device<br>%Callback signature: ns3::TracedValueCallback::Int
 </li>
@@ -2041,9 +2041,9 @@ No Attributes are defined for this type.<br>
 <ul>
 <li><b>EndDeviceState</b>: The current state of the device<br>%Callback signature: ns3::TracedValueCallback::EndDeviceLoraPhy::State
 </li>
-<li><b>LostPacketBecauseWrongFrequency</b>: Trace source indicating a packet could not be correctly decoded becausethe ED was listening on a different frequency<br>%Callback signature: ns3::Packet::TracedCallback
+<li><b>LostPacketBecauseWrongFrequency</b>: Trace source indicating a packet could not be correctly decoded becausethe end device was listening on a different frequency<br>%Callback signature: ns3::Packet::TracedCallback
 </li>
-<li><b>LostPacketBecauseWrongSpreadingFactor</b>: Trace source indicating a packet could not be correctly decoded becausethe ED was listening for a different Spreading Factor<br>%Callback signature: ns3::Packet::TracedCallback
+<li><b>LostPacketBecauseWrongSpreadingFactor</b>: Trace source indicating a packet could not be correctly decoded becausethe end device was listening for a different Spreading Factor<br>%Callback signature: ns3::Packet::TracedCallback
 </li>
 </ul>
 <h3>TraceSources defined in parent class ns3::LoraPhy</h3>
@@ -2076,28 +2076,28 @@ ns3::EndDeviceLorawanMac is accessible through the following paths with Config::
 </ul>
 <h3>Attributes</h3>
 <ul>
-<li><b>DRControl</b>: Whether to request the NS to control this device's Data Rate
+<li><b>DRControl</b>: Whether to request the network server to control this device's data rate
   <ul>
     <li>Set with class:  \ref ns3::BooleanValue</li>
     <li>Underlying type: bool</li>
     <li>Initial value: false</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
   </ul>
-<li><b>DataRate</b>: Data Rate currently employed by this end device
+<li><b>DataRate</b>: Data rate currently employed by this end device
   <ul>
     <li>Set with class:  \ref ns3::UintegerValue</li>
     <li>Underlying type: uint8_t 0:5</li>
     <li>Initial value: 0</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
   </ul>
-<li><b>EnableEDDataRateAdaptation</b>: Whether the End Device should up its Data Rate in case it doesn't get a reply from the NS.
+<li><b>EnableEDDataRateAdaptation</b>: Whether the end device should up its data rate in case it doesn't get a reply from the network server.
   <ul>
     <li>Set with class:  \ref ns3::BooleanValue</li>
     <li>Underlying type: bool</li>
     <li>Initial value: false</li>
     <li>Flags: <span class="mlabel">construct</span><span class="mlabel">write</span><span class="mlabel">read</span></li>
   </ul>
-<li><b>MType</b>: Specify type of message will be sent by this ED.
+<li><b>MType</b>: Specify type of message will be sent by this end device.
   <ul>
     <li>Set with class:  \ref ns3::EnumValue<N3ns37lorawan16LorawanMacHeader5MTypeE></li>
     <li>Underlying type: \p Unconfirmed|Confirmed</li>
@@ -2116,7 +2116,7 @@ ns3::EndDeviceLorawanMac is accessible through the following paths with Config::
 <ul>
 <li><b>AggregatedDutyCycle</b>: Aggregate duty cycle, in fraction form, this end device must respect<br>%Callback signature: ns3::TracedValueCallback::Double
 </li>
-<li><b>DataRate</b>: Data Rate currently employed by this end device<br>%Callback signature: ns3::TracedValueCallback::uint8_t
+<li><b>DataRate</b>: Data rate currently employed by this end device<br>%Callback signature: ns3::TracedValueCallback::uint8_t
 </li>
 <li><b>LastKnownGatewayCount</b>: Last known number of gateways able to listen to this end device<br>%Callback signature: ns3::TracedValueCallback::Int
 </li>
@@ -3333,7 +3333,7 @@ No Attributes are defined for this type.<br>
 <ul>
 <li><b>LostPacketBecauseNoMoreReceivers</b>: Trace source indicating a packet could not be correctly received becausethere are no more demodulators available<br>%Callback signature: ns3::Packet::TracedCallback
 </li>
-<li><b>NoReceptionBecauseTransmitting</b>: Trace source indicating a packet could not be correctly received becausethe GW is in transmission mode<br>%Callback signature: ns3::Packet::TracedCallback
+<li><b>NoReceptionBecauseTransmitting</b>: Trace source indicating a packet could not be correctly received becausethe gateway is in transmission mode<br>%Callback signature: ns3::Packet::TracedCallback
 </li>
 <li><b>OccupiedReceptionPaths</b>: Number of currently occupied reception paths<br>%Callback signature: ns3::TracedValueCallback::Int
 </li>
@@ -6442,7 +6442,7 @@ No Attributes are defined for this type.<br>
 </ul>
 <h3>TraceSources</h3>
 <ul>
-<li><b>ReceivedPacket</b>: Trace source that is fired when a packet arrives at the Network Server<br>%Callback signature: ns3::Packet::TracedCallback
+<li><b>ReceivedPacket</b>: Trace source that is fired when a packet arrives at the network server<br>%Callback signature: ns3::Packet::TracedCallback
 </li>
 </ul>
 <b>Size</b> of this type is 152 bytes (on a 64-bit architecture).
@@ -9702,9 +9702,9 @@ No TraceSources are defined for this type.<br>
 <ul>
 <li><b>EndDeviceState</b>: The current state of the device<br>%Callback signature: ns3::TracedValueCallback::EndDeviceLoraPhy::State
 </li>
-<li><b>LostPacketBecauseWrongFrequency</b>: Trace source indicating a packet could not be correctly decoded becausethe ED was listening on a different frequency<br>%Callback signature: ns3::Packet::TracedCallback
+<li><b>LostPacketBecauseWrongFrequency</b>: Trace source indicating a packet could not be correctly decoded becausethe end device was listening on a different frequency<br>%Callback signature: ns3::Packet::TracedCallback
 </li>
-<li><b>LostPacketBecauseWrongSpreadingFactor</b>: Trace source indicating a packet could not be correctly decoded becausethe ED was listening for a different Spreading Factor<br>%Callback signature: ns3::Packet::TracedCallback
+<li><b>LostPacketBecauseWrongSpreadingFactor</b>: Trace source indicating a packet could not be correctly decoded becausethe end device was listening for a different Spreading Factor<br>%Callback signature: ns3::Packet::TracedCallback
 </li>
 </ul>
 <h3>TraceSources defined in parent class ns3::LoraPhy</h3>
@@ -9742,7 +9742,7 @@ No TraceSources are defined for this type.<br>
 <ul>
 <li><b>LostPacketBecauseNoMoreReceivers</b>: Trace source indicating a packet could not be correctly received becausethere are no more demodulators available<br>%Callback signature: ns3::Packet::TracedCallback
 </li>
-<li><b>NoReceptionBecauseTransmitting</b>: Trace source indicating a packet could not be correctly received becausethe GW is in transmission mode<br>%Callback signature: ns3::Packet::TracedCallback
+<li><b>NoReceptionBecauseTransmitting</b>: Trace source indicating a packet could not be correctly received becausethe gateway is in transmission mode<br>%Callback signature: ns3::Packet::TracedCallback
 </li>
 <li><b>OccupiedReceptionPaths</b>: Number of currently occupied reception paths<br>%Callback signature: ns3::TracedValueCallback::Int
 </li>
@@ -14956,10 +14956,10 @@ This is a list of all \ref attributes classes.  For more information see the \re
 </ul>
 <b>ns3::EndDeviceLorawanMac</b><br>
 <ul>
-<li><b>DRControl</b>: Whether to request the NS to control this device's Data Rate</li>
-<li><b>DataRate</b>: Data Rate currently employed by this end device</li>
-<li><b>EnableEDDataRateAdaptation</b>: Whether the End Device should up its Data Rate in case it doesn't get a reply from the NS.</li>
-<li><b>MType</b>: Specify type of message will be sent by this ED.</li>
+<li><b>DRControl</b>: Whether to request the network server to control this device's data rate</li>
+<li><b>DataRate</b>: Data rate currently employed by this end device</li>
+<li><b>EnableEDDataRateAdaptation</b>: Whether the end device should up its data rate in case it doesn't get a reply from the network server.</li>
+<li><b>MType</b>: Specify type of message will be sent by this end device.</li>
 <li><b>MaxTransmissions</b>: Maximum number of transmissions for a packet</li>
 </ul>
 <b>ns3::ErlangRandomVariable</b><br>
@@ -16435,13 +16435,13 @@ This is a list of all \ref tracing sources.  For more information see the  \ref 
 <b>ns3::EndDeviceLoraPhy</b><br>
 <ul>
 <li><b>EndDeviceState</b>: The current state of the device</li>
-<li><b>LostPacketBecauseWrongFrequency</b>: Trace source indicating a packet could not be correctly decoded becausethe ED was listening on a different frequency</li>
-<li><b>LostPacketBecauseWrongSpreadingFactor</b>: Trace source indicating a packet could not be correctly decoded becausethe ED was listening for a different Spreading Factor</li>
+<li><b>LostPacketBecauseWrongFrequency</b>: Trace source indicating a packet could not be correctly decoded becausethe end device was listening on a different frequency</li>
+<li><b>LostPacketBecauseWrongSpreadingFactor</b>: Trace source indicating a packet could not be correctly decoded becausethe end device was listening for a different Spreading Factor</li>
 </ul>
 <b>ns3::EndDeviceLorawanMac</b><br>
 <ul>
 <li><b>AggregatedDutyCycle</b>: Aggregate duty cycle, in fraction form, this end device must respect</li>
-<li><b>DataRate</b>: Data Rate currently employed by this end device</li>
+<li><b>DataRate</b>: Data rate currently employed by this end device</li>
 <li><b>LastKnownGatewayCount</b>: Last known number of gateways able to listen to this end device</li>
 <li><b>LastKnownLinkMargin</b>: Last known demodulation margin in communications between this end device and a gateway</li>
 <li><b>RequiredTransmissions</b>: Total number of transmissions required to deliver this packet</li>
@@ -16450,7 +16450,7 @@ This is a list of all \ref tracing sources.  For more information see the  \ref 
 <b>ns3::GatewayLoraPhy</b><br>
 <ul>
 <li><b>LostPacketBecauseNoMoreReceivers</b>: Trace source indicating a packet could not be correctly received becausethere are no more demodulators available</li>
-<li><b>NoReceptionBecauseTransmitting</b>: Trace source indicating a packet could not be correctly received becausethe GW is in transmission mode</li>
+<li><b>NoReceptionBecauseTransmitting</b>: Trace source indicating a packet could not be correctly received becausethe gateway is in transmission mode</li>
 <li><b>OccupiedReceptionPaths</b>: Number of currently occupied reception paths</li>
 </ul>
 <b>ns3::GenericBatteryModel</b><br>
@@ -16523,7 +16523,7 @@ This is a list of all \ref tracing sources.  For more information see the  \ref 
 </ul>
 <b>ns3::NetworkServer</b><br>
 <ul>
-<li><b>ReceivedPacket</b>: Trace source that is fired when a packet arrives at the Network Server</li>
+<li><b>ReceivedPacket</b>: Trace source that is fired when a packet arrives at the network server</li>
 </ul>
 <b>ns3::OnOffApplication</b><br>
 <ul>

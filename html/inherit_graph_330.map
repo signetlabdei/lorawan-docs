@@ -223,8 +223,8 @@
 <area shape="rect" id="node705" href="$d3/d18/classns3_1_1dsr_1_1_dsr_route_cache.html" title="DSR route request queue Since DSR is an on demand routing we queue requests while looking for route." alt="" coords="664,21044,833,21069"/>
 <area shape="rect" id="node706" href="$d2/d43/classns3_1_1dsr_1_1_dsr_rreq_table.html" title="maintain list of DsrRreqTable entry" alt="" coords="670,21093,827,21118"/>
 <area shape="rect" id="node707" href="$d8/d36/classns3_1_1flame_1_1_flame_rtable.html" title="Routing table for FLAME." alt="" coords="666,21143,831,21167"/>
-<area shape="rect" id="node708" href="$db/d6b/classns3_1_1lorawan_1_1_end_device_status.html" title="This class represents the Network Server&#39;s knowledge about an End Device in the LoRaWAN network it is..." alt="" coords="646,21192,851,21217"/>
-<area shape="rect" id="node709" href="$d9/de0/classns3_1_1lorawan_1_1_gateway_status.html" title=" " alt="" coords="653,21241,844,21266"/>
+<area shape="rect" id="node708" href="$db/d6b/classns3_1_1lorawan_1_1_end_device_status.html" title="This class represents the network server&#39;s knowledge about an end device in the LoRaWAN network it is..." alt="" coords="646,21192,851,21217"/>
+<area shape="rect" id="node709" href="$d9/de0/classns3_1_1lorawan_1_1_gateway_status.html" title="This class represents the network server&#39;s knowledge about a gateway in the LoRaWAN network it is adm..." alt="" coords="653,21241,844,21266"/>
 <area shape="rect" id="node710" href="$d8/dcb/classns3_1_1lorawan_1_1_logical_lora_channel.html" title="This class represents a logical LoRaWAN channel." alt="" coords="664,21290,833,21329"/>
 <area shape="rect" id="node711" href="$da/d7f/classns3_1_1lorawan_1_1_logical_lora_channel_helper.html" title="This class supports LorawanMac instances by managing a list of the logical channels that the device i..." alt="" coords="664,21353,833,21392"/>
 <area shape="rect" id="node712" href="$d4/d1d/classns3_1_1lorawan_1_1_lora_device_address_generator.html" title="This class generates sequential LoraDeviceAddress instances." alt="" coords="664,21416,833,21454"/>
@@ -234,8 +234,8 @@
 <area shape="rect" id="node725" href="$db/d80/classns3_1_1lorawan_1_1_mac_command.html" title="This base class is used to represent a general MAC command." alt="" coords="655,22053,842,22078"/>
 <area shape="rect" id="node743" href="$d1/d33/classns3_1_1lorawan_1_1_network_controller.html" title="This class collects a series of components that deal with various aspects of managing the network,..." alt="" coords="645,21681,852,21706"/>
 <area shape="rect" id="node744" href="$de/d70/classns3_1_1lorawan_1_1_network_controller_component.html" title="Generic class describing a component of the NetworkController." alt="" coords="645,22896,852,22934"/>
-<area shape="rect" id="node748" href="$d3/dd8/classns3_1_1lorawan_1_1_network_scheduler.html" title=" " alt="" coords="644,21793,853,21818"/>
-<area shape="rect" id="node749" href="$db/d65/classns3_1_1lorawan_1_1_network_status.html" title="This class represents the knowledge about the state of the network that is available at the Network S..." alt="" coords="654,21843,843,21867"/>
+<area shape="rect" id="node748" href="$d3/dd8/classns3_1_1lorawan_1_1_network_scheduler.html" title="Network server component in charge of scheduling downling packets onto devices&#39; reception windows." alt="" coords="644,21793,853,21818"/>
+<area shape="rect" id="node749" href="$db/d65/classns3_1_1lorawan_1_1_network_status.html" title="This class represents the knowledge about the state of the network that is available at the network s..." alt="" coords="654,21843,843,21867"/>
 <area shape="rect" id="node750" href="$df/d23/classns3_1_1lorawan_1_1_sub_band.html" title="Class representing a SubBand, i.e., a frequency band subject to some regulations on duty cycle and tr..." alt="" coords="671,21892,826,21917"/>
 <area shape="rect" id="node751" href="$d8/de1/classns3_1_1ofi_1_1_controller.html" title="An interface for a Controller of OpenFlowSwitchNetDevices." alt="" coords="684,22959,813,22983"/>
 <area shape="rect" id="node754" href="$da/d97/classns3_1_1tests_1_1_alternate_test_object.html" title="Alternate test object for the Name service." alt="" coords="666,21990,831,22029"/>
@@ -276,8 +276,8 @@
 <area shape="rect" id="node66" href="$d0/d5f/classns3_1_1_v4_trace_route.html" title="Traceroute application sends one ICMP ECHO request with TTL=1, and after receiving an ICMP TIME EXCEE..." alt="" coords="967,24751,1100,24775"/>
 <area shape="rect" id="node67" href="$db/d6f/classns3_1_1lorawan_1_1_forwarder.html" title="This application forwards packets between NetDevices: LoraNetDevice &#45;&gt; PointToPointNetDevice and vice..." alt="" coords="953,24800,1114,24825"/>
 <area shape="rect" id="node68" href="$d0/d25/classns3_1_1lorawan_1_1_network_server.html" title="The NetworkServer is an application standing on top of a node equipped with links that connect it wit..." alt="" coords="939,24849,1128,24874"/>
-<area shape="rect" id="node69" href="$db/d83/classns3_1_1lorawan_1_1_one_shot_sender.html" title=" " alt="" coords="936,24899,1131,24923"/>
-<area shape="rect" id="node70" href="$d6/dbf/classns3_1_1lorawan_1_1_periodic_sender.html" title=" " alt="" coords="939,24948,1128,24973"/>
+<area shape="rect" id="node69" href="$db/d83/classns3_1_1lorawan_1_1_one_shot_sender.html" title="Packet sender application to send a single packet." alt="" coords="936,24899,1131,24923"/>
+<area shape="rect" id="node70" href="$d6/dbf/classns3_1_1lorawan_1_1_periodic_sender.html" title="Implements a sender application generating packets following a periodic point process." alt="" coords="939,24948,1128,24973"/>
 <area shape="rect" id="node76" href="$d5/deb/classns3_1_1_b_s_scheduler_rtps.html" title="This class implements a simple downlink scheduler for rtPS flows." alt="" coords="956,25293,1111,25318"/>
 <area shape="rect" id="node77" href="$d5/d21/classns3_1_1_b_s_scheduler_simple.html" title="BaseStation Scheduler &#45; simplified." alt="" coords="950,25343,1117,25367"/>
 <area shape="rect" id="node85" href="$dd/d96/classns3_1_1_bridge_channel.html" title="Virtual channel implementation for bridges (BridgeNetDevice)." alt="" coords="966,25392,1101,25417"/>
@@ -338,7 +338,7 @@
 <area shape="rect" id="node151" href="$db/d67/classns3_1_1_acoustic_modem_energy_model.html" title="WHOI micro&#45;modem energy model." alt="" coords="941,26830,1126,26869"/>
 <area shape="rect" id="node152" href="$db/d5e/classns3_1_1_simple_device_energy_model.html" title="A simple device energy model where current drain can be set by the user." alt="" coords="930,26669,1137,26694"/>
 <area shape="rect" id="node153" href="$d6/dd8/classns3_1_1_wifi_radio_energy_model.html" title="A WiFi radio energy model." alt="" coords="942,26719,1125,26743"/>
-<area shape="rect" id="node154" href="$d9/dd6/classns3_1_1lorawan_1_1_lora_radio_energy_model.html" title="A WiFi radio energy model." alt="" coords="933,26768,1134,26806"/>
+<area shape="rect" id="node154" href="$d9/dd6/classns3_1_1lorawan_1_1_lora_radio_energy_model.html" title="A LoRa radio energy model." alt="" coords="933,26768,1134,26806"/>
 <area shape="rect" id="node157" href="$d2/dc1/classns3_1_1_default_emlsr_manager.html" title="DefaultEmlsrManager is the default EMLSR manager." alt="" coords="945,26893,1122,26918"/>
 <area shape="rect" id="node159" href="$d2/d16/classns3_1_1_basic_energy_harvester.html" title="BasicEnergyHarvester increases remaining energy stored in an associated Energy Source." alt="" coords="943,26943,1124,26967"/>
 <area shape="rect" id="node162" href="$d6/dbe/classns3_1_1_basic_energy_source.html" title="BasicEnergySource decreases/increases remaining energy stored in itself in linearly." alt="" coords="951,27140,1116,27165"/>
@@ -502,7 +502,7 @@
 <area shape="rect" id="node406" href="$da/db7/classns3_1_1_two_ray_spectrum_propagation_loss_model.html" title="Two Ray Spectrum Propagation Loss Model." alt="" coords="923,11838,1144,11877"/>
 <area shape="rect" id="node408" href="$d9/d70/classns3_1_1_fixed_room_position_allocator.html" title="Generate a random position uniformly distributed in the volume of a chosen room inside a chosen build..." alt="" coords="926,12448,1141,12473"/>
 <area shape="rect" id="node409" href="$de/d2e/classns3_1_1_grid_position_allocator.html" title="Allocate positions on a rectangular 2d grid." alt="" coords="947,12497,1120,12522"/>
-<area shape="rect" id="node410" href="$d1/da8/classns3_1_1_hex_grid_position_allocator.html" title=" " alt="" coords="935,12547,1132,12571"/>
+<area shape="rect" id="node410" href="$d1/da8/classns3_1_1_hex_grid_position_allocator.html" title="Position allocator for hexagonal tiling." alt="" coords="935,12547,1132,12571"/>
 <area shape="rect" id="node411" href="$d5/d90/classns3_1_1_list_position_allocator.html" title="Allocate positions from a deterministic list specified by the user." alt="" coords="949,11964,1118,11989"/>
 <area shape="rect" id="node412" href="$dd/d5a/classns3_1_1_outdoor_position_allocator.html" title="allocate outdoor positions" alt="" coords="936,12013,1131,12038"/>
 <area shape="rect" id="node413" href="$d4/d1b/classns3_1_1_random_box_position_allocator.html" title="Allocate random positions within a 3D box according to a set of three random variables." alt="" coords="924,12063,1143,12087"/>
@@ -534,7 +534,7 @@
 <area shape="rect" id="node451" href="$dd/dbe/classns3_1_1_three_log_distance_propagation_loss_model.html" title="A log distance path loss propagation model with three distance fields." alt="" coords="921,12846,1146,12885"/>
 <area shape="rect" id="node452" href="$d3/dd0/classns3_1_1_two_ray_ground_propagation_loss_model.html" title="a Two&#45;Ray Ground propagation loss model ported from NS2" alt="" coords="930,12909,1137,12948"/>
 <area shape="rect" id="node453" href="$d9/d98/classns3_1_1lorawan_1_1_building_penetration_loss.html" title="A class implementing the TR 45.820 model for building losses." alt="" coords="913,12972,1154,12997"/>
-<area shape="rect" id="node454" href="$d7/d91/classns3_1_1lorawan_1_1_correlated_shadowing_propagation_loss_model.html" title=" " alt="" coords="925,13021,1142,13060"/>
+<area shape="rect" id="node454" href="$d7/d91/classns3_1_1lorawan_1_1_correlated_shadowing_propagation_loss_model.html" title="Propagation loss model for spatially correlated shadowing in a city." alt="" coords="925,13021,1142,13060"/>
 <area shape="rect" id="node428" href="$de/dea/classns3_1_1_hybrid_buildings_propagation_loss_model.html" title="The HybridBuildingsPropagationModel is a compound of different models able to evaluate the pathloss f..." alt="" coords="1217,13053,1426,13092"/>
 <area shape="rect" id="node429" href="$d0/d33/classns3_1_1_oh_buildings_propagation_loss_model.html" title="this model combines the OkumuraHata model with the BuildingsPropagationLossModel" alt="" coords="1227,13116,1416,13154"/>
 <area shape="rect" id="node445" href="$d7/dc3/classns3_1_1_three_gpp_indoor_office_propagation_loss_model.html" title="Implements the pathloss model defined in 3GPP TR 38.901, Table 7.4.1&#45;1 for the Indoor Office scenario..." alt="" coords="1233,12846,1410,12885"/>
@@ -733,10 +733,10 @@
 <area shape="rect" id="node716" href="$db/dcb/classns3_1_1lorawan_1_1_gateway_lora_phy.html" title="Class modeling a Lora SX1301 chip." alt="" coords="933,21979,1134,22003"/>
 <area shape="rect" id="node715" href="$d1/d39/classns3_1_1lorawan_1_1_simple_end_device_lora_phy.html" title="Class representing a simple LoRa transceiver, with an error model based on receiver sensitivity and a..." alt="" coords="1218,22028,1424,22066"/>
 <area shape="rect" id="node717" href="$d0/dcc/classns3_1_1lorawan_1_1_simple_gateway_lora_phy.html" title="Class modeling a Lora SX1301 chip." alt="" coords="1225,21965,1418,22004"/>
-<area shape="rect" id="node719" href="$d8/d25/classns3_1_1lorawan_1_1_constant_lora_tx_current_model.html" title=" " alt="" coords="943,22140,1124,22178"/>
+<area shape="rect" id="node719" href="$d8/d25/classns3_1_1lorawan_1_1_constant_lora_tx_current_model.html" title="A constant model of the transmission current for a LoRa device, always yielding the same current inde..." alt="" coords="943,22140,1124,22178"/>
 <area shape="rect" id="node720" href="$d6/d13/classns3_1_1lorawan_1_1_linear_lora_tx_current_model.html" title="A linear model of the transmission current for a LoRa device, based on the WiFi model." alt="" coords="952,22077,1115,22116"/>
 <area shape="rect" id="node722" href="$da/da8/classns3_1_1lorawan_1_1_end_device_lorawan_mac.html" title="Class representing the MAC layer of a LoRaWAN device." alt="" coords="914,22252,1153,22277"/>
-<area shape="rect" id="node724" href="$d7/d18/classns3_1_1lorawan_1_1_gateway_lorawan_mac.html" title=" " alt="" coords="920,22203,1147,22227"/>
+<area shape="rect" id="node724" href="$d7/d18/classns3_1_1lorawan_1_1_gateway_lorawan_mac.html" title="Class representing the MAC layer of a LoRaWAN gateway." alt="" coords="920,22203,1147,22227"/>
 <area shape="rect" id="node723" href="$df/d88/classns3_1_1lorawan_1_1_class_a_end_device_lorawan_mac.html" title="Class representing the MAC layer of a Class A LoRaWAN device." alt="" coords="1217,22245,1426,22284"/>
 <area shape="rect" id="node726" href="$d0/d94/classns3_1_1lorawan_1_1_dev_status_ans.html" title="Implementation of the DevStatusAns LoRaWAN MAC command." alt="" coords="940,22400,1127,22425"/>
 <area shape="rect" id="node727" href="$d8/d8d/classns3_1_1lorawan_1_1_dev_status_req.html" title="Implementation of the DevStatusReq LoRaWAN MAC command." alt="" coords="940,22449,1127,22474"/>
@@ -755,9 +755,9 @@
 <area shape="rect" id="node740" href="$da/d5c/classns3_1_1lorawan_1_1_rx_timing_setup_req.html" title="Implementation of the RxTimingSetupReq LoRaWAN MAC command." alt="" coords="926,23091,1141,23115"/>
 <area shape="rect" id="node741" href="$d2/d40/classns3_1_1lorawan_1_1_tx_param_setup_ans.html" title="Implementation of the TxParamSetupAns LoRaWAN MAC command." alt="" coords="927,22301,1140,22326"/>
 <area shape="rect" id="node742" href="$d1/dbc/classns3_1_1lorawan_1_1_tx_param_setup_req.html" title="Implementation of the TxParamSetupReq LoRaWAN MAC command." alt="" coords="927,22351,1140,22375"/>
-<area shape="rect" id="node745" href="$d1/d28/classns3_1_1lorawan_1_1_adr_component.html" title=" " alt="" coords="939,23189,1128,23214"/>
-<area shape="rect" id="node746" href="$d1/d25/classns3_1_1lorawan_1_1_confirmed_messages_component.html" title=" " alt="" coords="922,23238,1145,23277"/>
-<area shape="rect" id="node747" href="$d9/d73/classns3_1_1lorawan_1_1_link_check_component.html" title=" " alt="" coords="918,23140,1149,23165"/>
+<area shape="rect" id="node745" href="$d1/d28/classns3_1_1lorawan_1_1_adr_component.html" title="LinkAdrRequest commands management." alt="" coords="939,23189,1128,23214"/>
+<area shape="rect" id="node746" href="$d1/d25/classns3_1_1lorawan_1_1_confirmed_messages_component.html" title="Network controller component for acknowledgments management." alt="" coords="922,23238,1145,23277"/>
+<area shape="rect" id="node747" href="$d9/d73/classns3_1_1lorawan_1_1_link_check_component.html" title="Network controller component for LinkCheck commands management." alt="" coords="918,23140,1149,23165"/>
 <area shape="rect" id="node752" href="$d3/d75/classns3_1_1ofi_1_1_drop_controller.html" title="Demonstration of a Drop controller." alt="" coords="955,23351,1112,23375"/>
 <area shape="rect" id="node753" href="$d5/ddd/classns3_1_1ofi_1_1_learning_controller.html" title="Demonstration of a Learning controller." alt="" coords="945,23301,1122,23326"/>
 <area shape="rect" id="node756" href="$dd/da8/classns3_1_1tests_1_1_derived_config_object.html" title="Derived config object." alt="" coords="949,23400,1118,23438"/>

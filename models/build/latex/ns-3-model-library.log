@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.3.22)  22 MAR 2024 12:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.3.22)  22 MAR 2024 14:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1230,12 +1230,12 @@ Chapter 18.
 [183
 
 ]
-<LoRaWANTopology.pdf, id=6159, 163.5908pt x 285.02937pt>
-File: LoRaWANTopology.pdf Graphic file (type pdf)
-<use LoRaWANTopology.pdf>
-Package pdftex.def Info: LoRaWANTopology.pdf  used on input line 12297.
+<lorawan-topology.pdf, id=6159, 163.5908pt x 285.02937pt>
+File: lorawan-topology.pdf Graphic file (type pdf)
+<use lorawan-topology.pdf>
+Package pdftex.def Info: lorawan-topology.pdf  used on input line 12297.
 (pdftex.def)             Requested size: 163.5904pt x 285.02866pt.
- [184 <./LoRaWANTopology.pdf>] [185] [186] [187] [188] [189] [190]
+ [184 <./lorawan-topology.pdf>] [185] [186] [187] [188] [189] [190]
 [191] [192
 
 ]
@@ -3023,7 +3023,7 @@ Package rerunfilecheck Info: File `ns-3-model-library.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  23768 strings out of 476076
- 435081 string characters out of 5793775
+ 435089 string characters out of 5793775
  2169187 words of memory out of 5000000
  42831 multiletter control sequences out of 15000+600000
  634110 words of font info for 112 fonts, out of 8000000 for 9000
@@ -3050,7 +3050,7 @@ ri.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb></usr/share
 ype1/public/txfonts/t1xtt.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts
 /tcxtt.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/
 texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on ns-3-model-library.pdf (643 pages, 13277219 bytes).
+Output written on ns-3-model-library.pdf (643 pages, 13277237 bytes).
 PDF statistics:
  11077 PDF objects out of 12825 (max. 8388607)
  9777 compressed objects within 98 object streams

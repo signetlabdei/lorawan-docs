@@ -6,10 +6,10 @@ var searchData=
   ['xb_3',['xB',['../d0/d86/struct_interference_experiment_1_1_input.html#a87cb6a23e8a0cd61578537cc093acba5',1,'InterferenceExperiment::Input::xB()'],['../d6/dcc/struct_collision_experiment_1_1_input.html#a077d4ed496d30c5c298c570566ea592a',1,'CollisionExperiment::Input::xB()']]],
   ['xcoordinate_4',['xCoordinate',['../da/dd5/structns3_1_1_brite_topology_helper_1_1_brite_node_info.html#a8b252b163e2837658dbf7b4b66cc848b',1,'ns3::BriteTopologyHelper::BriteNodeInfo']]],
   ['xgrs80_5fmatlab_5',['XGRS80_MATLAB',['../dd/dc4/geo-to-cartesian-test_8cc.html#af4c611b6a4fe5e678457f7d0cc865814',1,'geo-to-cartesian-test.cc']]],
-  ['xmax_6',['xMax',['../df/dc2/classns3_1_1_box.html#a50021049c756e770329145b25d9533a2',1,'ns3::Box::xMax()'],['../d2/dfe/classns3_1_1_rectangle.html#a73a0b805e1b7dabfe6c867eb03203faa',1,'ns3::Rectangle::xMax()']]],
-  ['xmax_7',['xmax',['../dd/de6/struct_building_data.html#afa169d4c63bffda0cf1565ea8d850d37',1,'BuildingData']]],
-  ['xmin_8',['xMin',['../df/dc2/classns3_1_1_box.html#a1fd6a43d53258323331d34da600ff1c5',1,'ns3::Box::xMin()'],['../d2/dfe/classns3_1_1_rectangle.html#ad02246cec7de9b3eea3eb727dae274ac',1,'ns3::Rectangle::xMin()']]],
-  ['xmin_9',['xmin',['../dd/de6/struct_building_data.html#a2041c5468f8b7179754b8b88c42183f7',1,'BuildingData']]],
+  ['xmax_6',['xmax',['../dd/de6/struct_building_data.html#afa169d4c63bffda0cf1565ea8d850d37',1,'BuildingData']]],
+  ['xmax_7',['xMax',['../df/dc2/classns3_1_1_box.html#a50021049c756e770329145b25d9533a2',1,'ns3::Box::xMax()'],['../d2/dfe/classns3_1_1_rectangle.html#a73a0b805e1b7dabfe6c867eb03203faa',1,'ns3::Rectangle::xMax()']]],
+  ['xmin_8',['xmin',['../dd/de6/struct_building_data.html#a2041c5468f8b7179754b8b88c42183f7',1,'BuildingData']]],
+  ['xmin_9',['xMin',['../df/dc2/classns3_1_1_box.html#a1fd6a43d53258323331d34da600ff1c5',1,'ns3::Box::xMin()'],['../d2/dfe/classns3_1_1_rectangle.html#ad02246cec7de9b3eea3eb727dae274ac',1,'ns3::Rectangle::xMin()']]],
   ['xsphere_5fmatlab_10',['XSPHERE_MATLAB',['../dd/dc4/geo-to-cartesian-test_8cc.html#aa5e69989c0e923f1c732094071ddff95',1,'geo-to-cartesian-test.cc']]],
   ['xwgs84_5fmatlab_11',['XWGS84_MATLAB',['../dd/dc4/geo-to-cartesian-test_8cc.html#ac2624a2244b967a69c38a75fe9d48bde',1,'geo-to-cartesian-test.cc']]]
 ];

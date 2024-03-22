@@ -160,8 +160,8 @@ var searchData=
   ['cwmin_157',['cwMin',['../db/dca/structns3_1_1_sta_wifi_mac_1_1_edca_params.html#a7dccf815e27979f98d253bc2304ced49',1,'ns3::StaWifiMac::EdcaParams::cwMin()'],['../d4/dac/structns3_1_1_sta_wifi_mac_1_1_mu_edca_params.html#a78aeabce5db58bbec4d00f732e7784fb',1,'ns3::StaWifiMac::MuEdcaParams::cwMin()'],['../d2/d5a/structns3_1_1_txop_1_1_link_entity.html#ab4114faa04f8a8b4008c121aab1e5a16',1,'ns3::Txop::LinkEntity::cwMin()']]],
   ['cwminmax_158',['cwMinMax',['../d8/df5/structns3_1_1_mu_edca_parameter_set_1_1_parameter_record.html#abf3de9128b62cf67ee35d4a556bb44c4',1,'ns3::MuEdcaParameterSet::ParameterRecord']]],
   ['cwnd_159',['cwnd',['../d2/dde/struct_high_speed_important_values.html#ada9ea98e88a43960ea382042f3bddf6b',1,'HighSpeedImportantValues']]],
-  ['cwndstream_160',['cWndStream',['../d5/db7/tcp-variants-comparison_8cc.html#af32e63085292c2cac8cfb35a3d6ef7a2',1,'tcp-variants-comparison.cc']]],
-  ['cwndstream_161',['cwndStream',['../db/dfb/tcp-pacing_8cc.html#ae03b80997644e1044530cd0ffbd6f853',1,'tcp-pacing.cc']]],
+  ['cwndstream_160',['cwndStream',['../db/dfb/tcp-pacing_8cc.html#ae03b80997644e1044530cd0ffbd6f853',1,'tcp-pacing.cc']]],
+  ['cwndstream_161',['cWndStream',['../d5/db7/tcp-variants-comparison_8cc.html#af32e63085292c2cac8cfb35a3d6ef7a2',1,'tcp-variants-comparison.cc']]],
   ['cwndvalue_162',['cWndValue',['../d5/db7/tcp-variants-comparison_8cc.html#a0733f8e1bf437e8c446793db8d0cc2a9',1,'tcp-variants-comparison.cc']]],
   ['cwtracefile_163',['cwTraceFile',['../dd/d42/wifi-bianchi_8cc.html#afa7fa217248d276fae6678f99f991071',1,'wifi-bianchi.cc']]]
 ];

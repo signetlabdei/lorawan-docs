@@ -184,9 +184,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -293,13 +293,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -401,9 +401,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -510,13 +510,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -618,9 +618,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -727,13 +727,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -835,9 +835,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -944,13 +944,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -1052,9 +1052,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -1161,13 +1161,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -1269,9 +1269,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -1378,13 +1378,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -1486,9 +1486,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -1595,13 +1595,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -1703,9 +1703,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -1812,13 +1812,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -1920,9 +1920,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -2029,13 +2029,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -2137,9 +2137,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -2246,13 +2246,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -2354,9 +2354,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -2463,13 +2463,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -2571,9 +2571,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -2680,13 +2680,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -2788,9 +2788,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -2897,13 +2897,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -3005,9 +3005,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -3114,13 +3114,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -3222,9 +3222,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -3331,13 +3331,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -3439,9 +3439,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -3548,13 +3548,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -3656,9 +3656,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -3765,13 +3765,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -3873,9 +3873,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -3982,13 +3982,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -4094,9 +4094,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -4203,13 +4203,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -4308,9 +4308,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -4417,13 +4417,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -4525,9 +4525,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -4634,13 +4634,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -4753,9 +4753,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -4834,9 +4834,9 @@ Possible candidates:
   'Ptr< DeviceEnergyModel > ns3::DeviceEnergyModelContainer::Get(uint32_t i) const' at line 142 of file /__w/lorawan/lorawan/src/energy/model/device-energy-model-container.h
   'std::pair< Ptr< Ipv4 >, uint32_t > ns3::Ipv4InterfaceContainer::Get(uint32_t i) const' at line 209 of file /__w/lorawan/lorawan/src/internet/helper/ipv4-interface-container.h
   'std::pair< Ptr< Ipv6 >, uint32_t > ns3::Ipv6InterfaceContainer::Get(uint32_t i) const' at line 187 of file /__w/lorawan/lorawan/src/internet/helper/ipv6-interface-container.h
-  'uint8_t ns3::lorawan::NwkID::Get() const' at line 56 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 87 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 149 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint8_t ns3::lorawan::NwkID::Get() const' at line 65 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::NwkAddr::Get() const' at line 105 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'uint32_t ns3::lorawan::LoraDeviceAddress::Get() const' at line 194 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'uint8_t ns3::LrWpanLqiTag::Get() const' at line 77 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'virtual Ptr< Object > ns3::Ns2MobilityHelper::ObjectStore::Get(uint32_t i) const =0' at line 124 of file /__w/lorawan/lorawan/src/mobility/helper/ns2-mobility-helper.h
   'uint64_t ns3::AnimByteTag::Get() const' at line 1540 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
@@ -4943,13 +4943,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -5089,13 +5089,13 @@ Possible candidates:
   'void ns3::RvBatteryModelHelper::Set(std::string name, const AttributeValue &v) override' at line 41 of file /__w/lorawan/lorawan/src/energy/helper/rv-battery-model-helper.h
   'void ns3::RipHelper::Set(std::string name, const AttributeValue &value)' at line 84 of file /__w/lorawan/lorawan/src/internet/helper/rip-helper.h
   'void ns3::RipNgHelper::Set(std::string name, const AttributeValue &value)' at line 86 of file /__w/lorawan/lorawan/src/internet/helper/ripng-helper.h
-  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
-  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 57 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
-  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 79 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
-  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 49 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 80 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 134 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
-  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 144 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraPhyHelper::Set(std::string name, const AttributeValue &v)' at line 85 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-phy-helper.h
+  'void ns3::lorawan::LoraRadioEnergyModelHelper::Set(std::string name, const AttributeValue &v) override' at line 50 of file /__w/lorawan/lorawan/src/lorawan/helper/lora-radio-energy-model-helper.h
+  'void ns3::lorawan::LorawanMacHelper::Set(std::string name, const AttributeValue &v)' at line 81 of file /__w/lorawan/lorawan/src/lorawan/helper/lorawan-mac-helper.h
+  'void ns3::lorawan::NwkID::Set(uint8_t nwkId)' at line 58 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::NwkAddr::Set(uint32_t nwkAddr)' at line 98 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint32_t address)' at line 172 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
+  'void ns3::lorawan::LoraDeviceAddress::Set(uint8_t nwkId, uint32_t nwkAddr)' at line 187 of file /__w/lorawan/lorawan/src/lorawan/model/lora-device-address.h
   'void ns3::LrWpanLqiTag::Set(uint8_t lqi)' at line 70 of file /__w/lorawan/lorawan/src/lr-wpan/model/lr-wpan-lqi-tag.h
   'void ns3::AnimByteTag::Set(uint64_t AnimUid)' at line 1534 of file /__w/lorawan/lorawan/src/netanim/model/animation-interface.h
   'void ns3::Ipv4Address::Set(uint32_t address)' at line 69 of file /__w/lorawan/lorawan/src/network/utils/ipv4-address.h
@@ -5192,9 +5192,6 @@ warning: Inheritance graph for 'ns3::CallbackBase' not generated, too many nodes
 warning: Caller graph for 'ns3::EventId::Cancel' not generated, too many nodes (171), threshold is 70. Consider increasing DOT_GRAPH_MAX_NODES.
 warning: Caller graph for 'ns3::EventId::IsRunning' not generated, too many nodes (95), threshold is 70. Consider increasing DOT_GRAPH_MAX_NODES.
 warning: Inheritance graph for 'ns3::Header' not generated, too many nodes (116), threshold is 70. Consider increasing DOT_GRAPH_MAX_NODES.
-/__w/lorawan/lorawan/src/lorawan/model/hex-grid-position-allocator.h:49: warning: argument 'position' of command @param is not found in the argument list of ns3::HexGridPositionAllocator::AddRing(std::vector< Vector > positions)
-/__w/lorawan/lorawan/src/lorawan/model/hex-grid-position-allocator.h:49: warning: The following parameter of ns3::HexGridPositionAllocator::AddRing(std::vector< Vector > positions) is not documented:
-  parameter 'positions'
 warning: Caller graph for 'ns3::Ipv4Address::GetAny' not generated, too many nodes (86), threshold is 70. Consider increasing DOT_GRAPH_MAX_NODES.
 warning: Caller graph for 'ns3::NetDeviceContainer::Get' not generated, too many nodes (160), threshold is 70. Consider increasing DOT_GRAPH_MAX_NODES.
 warning: Caller graph for 'ns3::Node::GetId' not generated, too many nodes (81), threshold is 70. Consider increasing DOT_GRAPH_MAX_NODES.
@@ -5229,53 +5226,4 @@ warning: Caller graph for 'ns3::Time::GetSeconds' not generated, too many nodes 
 warning: Inheritance graph for 'ns3::TracedCallback' not generated, too many nodes (142), threshold is 70. Consider increasing DOT_GRAPH_MAX_NODES.
 warning: Caller graph for 'ns3::TypeId::SetParent' not generated, too many nodes (897), threshold is 70. Consider increasing DOT_GRAPH_MAX_NODES.
 warning: Caller graph for 'ns3::WifiMacHeader::SetType' not generated, too many nodes (79), threshold is 70. Consider increasing DOT_GRAPH_MAX_NODES.
-/__w/lorawan/lorawan/src/lorawan/model/network-controller-components.h:60: warning: The following parameter of ns3::lorawan::AdrComponent::OnReceivedPacket(Ptr< const Packet > packet, Ptr< EndDeviceStatus > status, Ptr< NetworkStatus > networkStatus) is not documented:
-  parameter 'status'
-/__w/lorawan/lorawan/src/lorawan/model/network-controller-components.h:97: warning: The following parameter of ns3::lorawan::ConfirmedMessagesComponent::OnReceivedPacket(Ptr< const Packet > packet, Ptr< EndDeviceStatus > status, Ptr< NetworkStatus > networkStatus) is not documented:
-  parameter 'status'
-/__w/lorawan/lorawan/src/lorawan/model/end-device-lora-phy.h:176: warning: argument 'The' of command @param is not found in the argument list of ns3::lorawan::EndDeviceLoraPhy::SetFrequency(double frequencyMHz)
-/__w/lorawan/lorawan/src/lorawan/model/end-device-lora-phy.h:176: warning: The following parameter of ns3::lorawan::EndDeviceLoraPhy::SetFrequency(double frequencyMHz) is not documented:
-  parameter 'frequencyMHz'
-/__w/lorawan/lorawan/src/lorawan/model/end-device-lora-phy.h:50: warning: ns3::lorawan::EndDeviceLoraPhyListener::NotifyRxStart has @param documentation sections but no arguments
-/__w/lorawan/lorawan/src/lorawan/model/end-device-lora-phy.h:65: warning: argument 'duration' of command @param is not found in the argument list of ns3::lorawan::EndDeviceLoraPhyListener::NotifyTxStart(double txPowerDbm)=0
-/__w/lorawan/lorawan/src/lorawan/model/end-device-lorawan-mac.h:322: warning: argument 'frequency' of command @param is not found in the argument list of ns3::lorawan::EndDeviceLorawanMac::AddLogicalChannel(Ptr< LogicalLoraChannel > logicalChannel)
-/__w/lorawan/lorawan/src/lorawan/model/end-device-lorawan-mac.h:322: warning: The following parameter of ns3::lorawan::EndDeviceLorawanMac::AddLogicalChannel(Ptr< LogicalLoraChannel > logicalChannel) is not documented:
-  parameter 'logicalChannel'
-/__w/lorawan/lorawan/src/lorawan/model/end-device-lorawan-mac.h:198: warning: ns3::lorawan::EndDeviceLorawanMac::GetAggregatedDutyCycle has @param documentation sections but no arguments
-/__w/lorawan/lorawan/src/lorawan/model/end-device-lorawan-mac.h:82: warning: The following parameter of ns3::lorawan::EndDeviceLorawanMac::postponeTransmission(Time nextTxDelay, Ptr< Packet > packet) is not documented:
-  parameter 'packet'
-/__w/lorawan/lorawan/src/lorawan/model/network-controller-components.h:126: warning: The following parameter of ns3::lorawan::LinkCheckComponent::OnReceivedPacket(Ptr< const Packet > packet, Ptr< EndDeviceStatus > status, Ptr< NetworkStatus > networkStatus) is not documented:
-  parameter 'status'
-/__w/lorawan/lorawan/src/lorawan/model/logical-lora-channel.h:77: warning: argument 'frequencyMHz' of command @param is not found in the argument list of ns3::lorawan::LogicalLoraChannel::SetMinimumDataRate(uint8_t minDataRate)
-/__w/lorawan/lorawan/src/lorawan/model/logical-lora-channel.h:77: warning: The following parameter of ns3::lorawan::LogicalLoraChannel::SetMinimumDataRate(uint8_t minDataRate) is not documented:
-  parameter 'minDataRate'
-/__w/lorawan/lorawan/src/lorawan/model/lora-frame-header.h:134: warning: argument 'Adr' of command @param is not found in the argument list of ns3::lorawan::LoraFrameHeader::SetAdr(bool adr)
-/__w/lorawan/lorawan/src/lorawan/model/lora-frame-header.h:134: warning: The following parameter of ns3::lorawan::LoraFrameHeader::SetAdr(bool adr) is not documented:
-  parameter 'adr'
-/__w/lorawan/lorawan/src/lorawan/model/lora-frame-header.h:198: warning: argument 'FCnt' of command @param is not found in the argument list of ns3::lorawan::LoraFrameHeader::SetFCnt(uint16_t fCnt)
-/__w/lorawan/lorawan/src/lorawan/model/lora-frame-header.h:198: warning: The following parameter of ns3::lorawan::LoraFrameHeader::SetFCnt(uint16_t fCnt) is not documented:
-  parameter 'fCnt'
-/__w/lorawan/lorawan/src/lorawan/helper/lora-helper.h:53: warning: argument 'phy' of command @param is not found in the argument list of ns3::lorawan::LoraHelper::Install(const LoraPhyHelper &phyHelper, const LorawanMacHelper &macHelper, NodeContainer c) const
-/__w/lorawan/lorawan/src/lorawan/helper/lora-helper.h:53: warning: argument 'mac' of command @param is not found in the argument list of ns3::lorawan::LoraHelper::Install(const LoraPhyHelper &phyHelper, const LorawanMacHelper &macHelper, NodeContainer c) const
-/__w/lorawan/lorawan/src/lorawan/helper/lora-helper.h:53: warning: The following parameters of ns3::lorawan::LoraHelper::Install(const LoraPhyHelper &phyHelper, const LorawanMacHelper &macHelper, NodeContainer c) const are not documented:
-  parameter 'phyHelper'
-  parameter 'macHelper'
-/__w/lorawan/lorawan/src/lorawan/helper/lora-helper.h:66: warning: argument 'phy' of command @param is not found in the argument list of ns3::lorawan::LoraHelper::Install(const LoraPhyHelper &phyHelper, const LorawanMacHelper &macHelper, Ptr< Node > node) const
-/__w/lorawan/lorawan/src/lorawan/helper/lora-helper.h:66: warning: argument 'mac' of command @param is not found in the argument list of ns3::lorawan::LoraHelper::Install(const LoraPhyHelper &phyHelper, const LorawanMacHelper &macHelper, Ptr< Node > node) const
-/__w/lorawan/lorawan/src/lorawan/helper/lora-helper.h:66: warning: The following parameters of ns3::lorawan::LoraHelper::Install(const LoraPhyHelper &phyHelper, const LorawanMacHelper &macHelper, Ptr< Node > node) const are not documented:
-  parameter 'phyHelper'
-  parameter 'macHelper'
-/__w/lorawan/lorawan/src/lorawan/model/lora-radio-energy-model.h:66: warning: ns3::lorawan::LoraRadioEnergyModelPhyListener::NotifyRxStart has @param documentation sections but no arguments
-/__w/lorawan/lorawan/src/lorawan/model/lora-radio-energy-model.h:76: warning: argument 'duration' of command @param is not found in the argument list of ns3::lorawan::LoraRadioEnergyModelPhyListener::NotifyTxStart(double txPowerDbm)
-/__w/lorawan/lorawan/src/lorawan/model/network-controller-components.h:60: warning: The following parameter of ns3::lorawan::NetworkControllerComponent::OnReceivedPacket(Ptr< const Packet > packet, Ptr< EndDeviceStatus > status, Ptr< NetworkStatus > networkStatus)=0 is not documented:
-  parameter 'status'
-/__w/lorawan/lorawan/src/lorawan/model/network-server.h:97: warning: The following parameters of ns3::lorawan::NetworkServer::Receive(Ptr< NetDevice > device, Ptr< const Packet > packet, uint16_t protocol, const Address &address) are not documented:
-  parameter 'device'
-  parameter 'protocol'
-  parameter 'address'
-/__w/lorawan/lorawan/src/lorawan/model/network-status.h:85: warning: The following parameter of ns3::lorawan::NetworkStatus::GetBestGatewayForDevice(LoraDeviceAddress deviceAddress, int window) is not documented:
-  parameter 'window'
-/__w/lorawan/lorawan/src/lorawan/model/network-status.h:69: warning: argument 'address' of command @param is not found in the argument list of ns3::lorawan::NetworkStatus::OnReceivedPacket(Ptr< const Packet > packet, const Address &gwaddress)
-/__w/lorawan/lorawan/src/lorawan/model/network-status.h:69: warning: The following parameter of ns3::lorawan::NetworkStatus::OnReceivedPacket(Ptr< const Packet > packet, const Address &gwaddress) is not documented:
-  parameter 'gwaddress'
 warning: Caller graph for 'test-ns3.run_ns3' not generated, too many nodes (72), threshold is 70. Consider increasing DOT_GRAPH_MAX_NODES.

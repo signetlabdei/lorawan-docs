@@ -356,7 +356,8 @@ SOURCEFIGS = \
 	$(SRC)/traffic-control/doc/multi-queue-aware-queue-disc.dia \
 	$(SRC)/traffic-control/doc/figures/collision_prob.jpeg \
 	$(SRC)/traffic-control/doc/figures/overlapped.jpeg \
-	$(SRC)/lorawan/doc/figures/LoRaWANTopology.pdf \
+	$(SRC)/lorawan/doc/figures/lorawan-topology.pdf \
+	$(SRC)/lorawan/doc/figures/lorawan-topology.png \
 	$(SRC)/lr-wpan/doc/lr-wpan-arch.dia \
 	$(SRC)/lr-wpan/doc/lr-wpan-assocSequence.dia \
 	$(SRC)/lr-wpan/doc/lr-wpan-data-example.dia \
