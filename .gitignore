@@ -1,4 +1,5 @@
 /docset/
+/html/
 /html-warn/
 /ns-3.docset
 latex/
@@ -8,5 +9,6 @@ introspected-command-line.h
 doxygen.docset.conf
 doxygen.log
 doxygen.warnings.log
+*/build/
 */source-temp/
 ns3_html_theme/static/ns3_version.js
