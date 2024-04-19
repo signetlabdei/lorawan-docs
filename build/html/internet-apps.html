@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>17. Internet Applications Module Documentation &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="18. LoRaWAN Module" href="lorawan.html" />
+    <link rel="prev" title="16.6. UDP model in ns-3" href="udp.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="lorawan.html" title="18. LoRaWAN Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="udp.html" title="16.6. UDP model in ns-3"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">17. </span>Internet Applications Module Documentation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="internet-applications-module-documentation">
+<h1><span class="section-number">17. </span>Internet Applications Module Documentation<a class="headerlink" href="#internet-applications-module-documentation" title="Link to this heading">¶</a></h1>
+<p>The goal of this module is to hold all the Internet-specific applications,
+and most notably some very specific applications (e.g., ping) or daemons (e.g., radvd).  Other non-Internet-specific applications such as packet generators
+are contained in other modules.</p>
+<p>The source code for the new module lives in the directory <code class="docutils literal notranslate"><span class="pre">src/internet-apps</span></code>.</p>
+<p>Each application has its own goals, limitations and scope, which are briefly explained
+in the following.</p>
+<p>All the applications are extensively used in the top-level <code class="docutils literal notranslate"><span class="pre">examples</span></code>
+directories. The users are encouraged to check the scripts therein to have a
+clear overview of the various options and usage tricks.</p>
+<section id="ping">
+<h2><span class="section-number">17.1. </span>Ping<a class="headerlink" href="#ping" title="Link to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">Ping</span></code> application supports both IPv4 and IPv6 and replaces earlier
+<em>ns-3</em> implementations called <code class="docutils literal notranslate"><span class="pre">v4Ping</span></code> and <code class="docutils literal notranslate"><span class="pre">Ping6</span></code> that were
+address family dependent.  <code class="docutils literal notranslate"><span class="pre">Ping</span></code> was introduced in the ns-3.38 release cycle.</p>
+<section id="model-description">
+<h3><span class="section-number">17.1.1. </span>Model Description<a class="headerlink" href="#model-description" title="Link to this heading">¶</a></h3>
+<p>This application behaves similarly to the Unix <code class="docutils literal notranslate"><span class="pre">ping</span></code> application, although
+with fewer options supported.  <code class="docutils literal notranslate"><span class="pre">Ping</span></code> sends ICMP Echo Request messages to
+a remote address, and collects statistics and reports on the ICMP Echo
+Reply responses that are received.  The application can be used to send
+ICMP echo requests to unicast, broadcast, and multicast IPv4 and IPv6
+addresses.  The application can produce a verbose output similar to the real
+application, and can also export statistics and results via trace sources.
+The following can be controlled via attributes of this class:</p>
+<ul class="simple">
+<li><p>Destination address</p></li>
+<li><p>Local address (sender address)</p></li>
+<li><p>Packet size (default 56 bytes)</p></li>
+<li><p>Packet interval  (default 1 second)</p></li>
+<li><p>Timeout value (default 1 second)</p></li>
+<li><p>The count, or maximum number of packets to send</p></li>
+<li><p>Verbose mode</p></li>
+</ul>
+<p>In practice, the real-world <code class="docutils literal notranslate"><span class="pre">ping</span></code> application behavior varies slightly
+depending on the operating system (Linux, macOS, Windows, etc.).  Most
+implementations also support a very large number of options.  The <em>ns-3</em>
+model is intended to handle the most common use cases of testing for
+reachability.</p>
+<section id="design">
+<h4><span class="section-number">17.1.1.1. </span>Design<a class="headerlink" href="#design" title="Link to this heading">¶</a></h4>
+<p>The aim of <em>ns-3</em> <code class="docutils literal notranslate"><span class="pre">Ping</span></code> application is to mimic the built-in application
+found in most operating systems.  In practice, <code class="docutils literal notranslate"><span class="pre">ping</span></code> is usually used to
+check reachability of a destination, but additional options have been
+added over time and the tool can be used in different ways to gather
+statistics about reachability and round trip times (RTT).  Since <em>ns-3</em> is
+mainly used for performance studies and not for operational forensics,
+some options of real <code class="docutils literal notranslate"><span class="pre">ping</span></code> implementations may not be useful for simulations.
+However, the <em>ns-3</em> application can deliver output and RTT samples similar
+to how the real application operates.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Ping</span></code> is usually installed on a source node and does not require any
+<em>ns-3</em> application installation on the destination node.  <code class="docutils literal notranslate"><span class="pre">Ping</span></code> is an
+<code class="docutils literal notranslate"><span class="pre">Application</span></code> that can be started and stopped using the base class
+Application APIs.</p>
+</section>
+<section id="behavior">
+<h4><span class="section-number">17.1.1.2. </span>Behavior<a class="headerlink" href="#behavior" title="Link to this heading">¶</a></h4>
+<p>The behavior of real <code class="docutils literal notranslate"><span class="pre">ping</span></code> applications varies across operating systems.  For
+example, on Linux, the first ICMP sequence number sent is one, while on
+macOS, the first sequence number is zero.  The behavior when pinging
+non-existent hosts also can differ (Linux is quiet while macOS is verbose).
+Windows and other operating systems like Cisco routers also can behave
+slightly differently.</p>
+<p>This implementation tries to generally follow the Linux behavior, except
+that it will print out a verbose ‘request timed out’ message when an
+echo request is sent and no reply arrives in a timely manner.  The timeout
+value (time that ping waits for a response to return) defaults to one
+second, but once there are RTT samples available, the timeout is set
+to twice the observed RTT.  In contrast to Linux (but aligned with macOS),
+the first sequence number sent is zero.</p>
+</section>
+<section id="scope-and-limitations">
+<h4><span class="section-number">17.1.1.3. </span>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Link to this heading">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">ping</span></code> implementations have a lot of command-line options.  The <em>ns-3</em>
+implementation only supports a few of the most commonly-used options;
+patches to add additional options would be welcome.</p>
+<p>At the present time, fragmentation (sending an ICMP Echo Request larger
+than the path MTU) is not handled correctly during Echo Response reassembly.</p>
+</section>
+</section>
+<section id="usage">
+<h3><span class="section-number">17.1.2. </span>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h3>
+<p>Users may create and install <code class="docutils literal notranslate"><span class="pre">Ping</span></code> applications on nodes on a one-by-one
+basis using <code class="docutils literal notranslate"><span class="pre">CreateObject</span></code> or by using the <code class="docutils literal notranslate"><span class="pre">PingHelper</span></code>.  For
+<code class="docutils literal notranslate"><span class="pre">CreateObject</span></code>, the following can be used:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ping</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Ping</span><span class="o">&gt;</span><span class="w"> </span><span class="p">();</span>
+<span class="c1">// Configure ping as needed...</span>
+<span class="n">n</span><span class="o">-&gt;</span><span class="n">AddApplication</span><span class="w"> </span><span class="p">(</span><span class="n">ping</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Users should be aware of how this application stops.  For most <em>ns-3</em>
+applications, <code class="docutils literal notranslate"><span class="pre">StopApplication()</span></code> should be called before the simulation
+is stopped.  If the <code class="docutils literal notranslate"><span class="pre">Count</span></code> attribute of this application is set to
+a positive integer, the application will stop (and a report will be printed)
+either when <code class="docutils literal notranslate"><span class="pre">Count</span></code> responses have been received or when <code class="docutils literal notranslate"><span class="pre">StopApplication()</span></code>
+is called, whichever comes first.  If <code class="docutils literal notranslate"><span class="pre">Count</span></code> is zero, meaning infinite
+pings, then <code class="docutils literal notranslate"><span class="pre">StopApplication()</span></code> should be used to eventually stop the
+application and generate the report.  If <code class="docutils literal notranslate"><span class="pre">StopApplication()</span></code> is called
+while a packet (echo request) is in-flight, the response cannot be
+received and the packet will be treated as lost in the report– real
+ping applications work this way as well.  To avoid this, it is recommended
+to call <code class="docutils literal notranslate"><span class="pre">StopApplication()</span></code> at a time when an Echo Request or Echo Response
+packet is not expected to be in flight.</p>
+<section id="helpers">
+<h4><span class="section-number">17.1.2.1. </span>Helpers<a class="headerlink" href="#helpers" title="Link to this heading">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">PingHelper</span></code> supports the typical <code class="docutils literal notranslate"><span class="pre">Install</span></code> usage pattern in <em>ns-3</em>.
+The following sample code is from the program <code class="docutils literal notranslate"><span class="pre">examples/tcp/tcp-validation.cc</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PingHelper</span><span class="w"> </span><span class="n">pingHelper</span><span class="p">(</span><span class="n">Ipv4Address</span><span class="p">(</span><span class="s">&quot;192.168.1.2&quot;</span><span class="p">));</span>
+<span class="n">pingHelper</span><span class="p">.</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s">&quot;Interval&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TimeValue</span><span class="p">(</span><span class="n">pingInterval</span><span class="p">));</span>
+<span class="n">pingHelper</span><span class="p">.</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s">&quot;Size&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">UintegerValue</span><span class="p">(</span><span class="n">pingSize</span><span class="p">));</span>
+<span class="n">pingHelper</span><span class="p">.</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s">&quot;VerboseMode&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EnumValue</span><span class="p">(</span><span class="n">Ping</span><span class="o">::</span><span class="n">VerboseMode</span><span class="o">::</span><span class="n">SILENT</span><span class="p">));</span>
+<span class="n">ApplicationContainer</span><span class="w"> </span><span class="n">pingContainer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pingHelper</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">pingServer</span><span class="p">);</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ping</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pingContainer</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">GetObject</span><span class="o">&lt;</span><span class="n">Ping</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">ping</span><span class="o">-&gt;</span><span class="n">TraceConnectWithoutContext</span><span class="p">(</span><span class="s">&quot;Rtt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MakeBoundCallback</span><span class="p">(</span><span class="o">&amp;</span><span class="n">TracePingRtt</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pingOfStream</span><span class="p">));</span>
+<span class="n">pingContainer</span><span class="p">.</span><span class="n">Start</span><span class="p">(</span><span class="n">Seconds</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">pingContainer</span><span class="p">.</span><span class="n">Stop</span><span class="p">(</span><span class="n">stopTime</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Seconds</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>The first statement sets the remote address (destination) for all application
+instances created with this helper.  The second and third statements perform
+further configuration.  The fourth statement configures the verbosity to
+be totally silent.  The fifth statement is a typical <code class="docutils literal notranslate"><span class="pre">Install()</span></code>
+method that returns an ApplicationContainer (in this case, of size 1).
+The sixth and seventh statements fetch the application instance created and
+configure a trace sink (<code class="docutils literal notranslate"><span class="pre">TracePingRtt</span></code>) for the <code class="docutils literal notranslate"><span class="pre">Rtt</span></code> trace source.
+The eighth and ninth statements configure the start and stop time,
+respectively.</p>
+<p>The helper is most useful when there are many similarly configured
+applications to install on a collection of nodes (a NodeContainer).
+When there is only one Ping application to configure in a program,
+or when the configuration between different instances is different,
+it may be more straightforward to directly create the Ping applications
+without the PingHelper.</p>
+</section>
+<section id="attributes">
+<h4><span class="section-number">17.1.2.2. </span>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h4>
+<p>The following attributes can be configured:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Destination</span></code>: The IPv4 or IPv6 address of the machine we want to ping</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VerboseMode</span></code>: Configure verbose, quiet, or silent output</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Interval</span></code>: Time interval between sending each packet</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Size</span></code>: The number of data bytes to be sent, before ICMP and IP headers are added</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Count</span></code>: The maximum number of packets the application will send</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">InterfaceAddress</span></code>: Local address of the sender</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Timeout</span></code>: Time to wait for response if no RTT samples are available</p></li>
+</ul>
+</section>
+<section id="output">
+<h4><span class="section-number">17.1.2.3. </span>Output<a class="headerlink" href="#output" title="Link to this heading">¶</a></h4>
+<p>If <code class="docutils literal notranslate"><span class="pre">VerboseMode</span></code> mode is set to <code class="docutils literal notranslate"><span class="pre">VERBOSE</span></code>, ping will output the results of
+ICMP Echo Reply responses to <code class="docutils literal notranslate"><span class="pre">std::cout</span></code> output stream.  If the mode is
+set to <code class="docutils literal notranslate"><span class="pre">QUIET</span></code>, only the initial statement and summary are printed.  If the
+mode is set to <code class="docutils literal notranslate"><span class="pre">SILENT</span></code>, no output will be printed to <code class="docutils literal notranslate"><span class="pre">std::cout</span></code>.  These
+behavioral differences can be seen with the <code class="docutils literal notranslate"><span class="pre">ping-example.cc</span></code> as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>run<span class="w"> </span>--no-build<span class="w"> </span><span class="s1">&#39;ping-example --ns3::Ping::VerboseMode=Verbose&#39;</span>
+$<span class="w"> </span>./ns3<span class="w"> </span>run<span class="w"> </span>--no-build<span class="w"> </span><span class="s1">&#39;ping-example --ns3::Ping::VerboseMode=Quiet&#39;</span>
+$<span class="w"> </span>./ns3<span class="w"> </span>run<span class="w"> </span>--no-build<span class="w"> </span><span class="s1">&#39;ping-example --ns3::Ping::VerboseMode=Silent&#39;</span>
+</pre></div>
+</div>
+<p>Additional output can be gathered by using the four trace sources provided
+by Ping:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Tx</span></code>: This trace executes when a new packet is sent, and returns the sequence number and full packet (including ICMP header).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Rtt</span></code>:  Each time an ICMP echo reply is received, this trace is called and reports the sequence number and RTT.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Drop</span></code>:  If an ICMP error is returned instead of an echo reply, the sequence number and reason for reported drop are returned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Report</span></code>: When ping completes and exits, it prints output statistics to the terminal.  These values are copied to a <code class="docutils literal notranslate"><span class="pre">struct</span> <span class="pre">PingReport</span></code> and returned in this trace source.</p></li>
+</ul>
+</section>
+<section id="example">
+<h4><span class="section-number">17.1.2.4. </span>Example<a class="headerlink" href="#example" title="Link to this heading">¶</a></h4>
+<p>A basic <code class="docutils literal notranslate"><span class="pre">ping-example.cc</span></code> program is provided to highlight the following
+usage.  The topology has three nodes interconnected by two point-to-point links.
+Each link has 5 ms one-way delay, for a round-trip propagation delay
+of 20 ms.  The transmission rate on each link is 100 Mbps.  The routing
+between links is enabled by ns-3’s NixVector routing.</p>
+<p>By default, this program will send 5 pings from node A to node C.
+When using the default IPv6, the output will look like this:</p>
+<p>The example program will also produce four pcap traces (one for each
+NetDevice in the scenario) that can be viewed using tcpdump or Wireshark.</p>
+<p>Other program options include options to change the destination and
+source addresses, number of packets (count), packet size, interval,
+and whether to enable logging (if logging is enabled in the build).
+These program options will override any corresponding attribute settings.</p>
+<p>Finally, the program has some code that can be enabled to selectively
+force packet drops to check such behavior.</p>
+</section>
+</section>
+<section id="validation">
+<h3><span class="section-number">17.1.3. </span>Validation<a class="headerlink" href="#validation" title="Link to this heading">¶</a></h3>
+<p>The following test cases have been added for regression testing:</p>
+<ol class="arabic simple">
+<li><p>Unlimited pings, no losses, StopApplication () with no packets in flight</p></li>
+<li><p>Unlimited pings, no losses, StopApplication () with one packet in flight</p></li>
+<li><p>Test for operation of count attribute and exit time after all pings are received, for IPv4”</p></li>
+<li><p>Test the operation of interval attribute, for IPv4</p></li>
+<li><p>Test for behavior of pinging an unreachable host when the network does not send an ICMP unreachable message</p></li>
+<li><p>Test pinging to IPv4 broadcast address and IPv6 all nodes multicast address</p></li>
+<li><p>Test behavior of first reply lost in a count-limited configuration</p></li>
+<li><p>Test behavior of second reply lost in a count-limited configuration</p></li>
+<li><p>Test behavior of last reply lost in a count-limited configuration.</p></li>
+</ol>
+</section>
+</section>
+<section id="radvd">
+<h2><span class="section-number">17.2. </span>Radvd<a class="headerlink" href="#radvd" title="Link to this heading">¶</a></h2>
+<p>This app mimics a “RADVD” daemon. I.e., the daemon responsible for IPv6 routers
+advertisements. All the IPv6 routers should have a RADVD daemon installed.</p>
+<p>The configuration of the Radvd application mimics the one of the radvd Linux program.</p>
+</section>
+<section id="dhcpv4">
+<h2><span class="section-number">17.3. </span>DHCPv4<a class="headerlink" href="#dhcpv4" title="Link to this heading">¶</a></h2>
+<p>The <em>ns-3</em> implementation of Dynamic Host Configuration Protocol (DHCP)
+follows the specifications of <span class="target" id="index-0"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2131.html"><strong>RFC 2131</strong></a> and <span class="target" id="index-1"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2132.html"><strong>RFC 2132</strong></a>.</p>
+<p>The source code for DHCP is located in <code class="docutils literal notranslate"><span class="pre">src/internet-apps/model</span></code> and consists of the
+following 6 files:</p>
+<ul class="simple">
+<li><p>dhcp-server.h,</p></li>
+<li><p>dhcp-server.cc,</p></li>
+<li><p>dhcp-client.h,</p></li>
+<li><p>dhcp-client.cc,</p></li>
+<li><p>dhcp-header.h and</p></li>
+<li><p>dhcp-header.cc</p></li>
+</ul>
+<section id="id1">
+<h3><span class="section-number">17.3.1. </span>Helpers<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p>The following two files have been added to <code class="docutils literal notranslate"><span class="pre">src/internet-apps/helper</span></code> for DHCP:</p>
+<ul class="simple">
+<li><p>dhcp-helper.h and</p></li>
+<li><p>dhcp-helper.cc</p></li>
+</ul>
+</section>
+<section id="tests">
+<h3><span class="section-number">17.3.2. </span>Tests<a class="headerlink" href="#tests" title="Link to this heading">¶</a></h3>
+<p>The tests for DHCP can be found at <code class="docutils literal notranslate"><span class="pre">src/internet-apps/test/dhcp-test.cc</span></code></p>
+</section>
+<section id="examples">
+<h3><span class="section-number">17.3.3. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h3>
+<p>The examples for DHCP can be found at <code class="docutils literal notranslate"><span class="pre">src/internet-apps/examples/dhcp-example.cc</span></code></p>
+</section>
+<section id="id2">
+<h3><span class="section-number">17.3.4. </span>Scope and Limitations<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<p>The server should be provided with a network address, mask and a range of address
+for the pool. One client application can be installed on only one netdevice in a
+node, and can configure address for only that netdevice.</p>
+<p>The following five basic DHCP messages are supported:</p>
+<ul class="simple">
+<li><p>DHCP DISCOVER</p></li>
+<li><p>DHCP OFFER</p></li>
+<li><p>DHCP REQUEST</p></li>
+<li><p>DHCP ACK</p></li>
+<li><p>DHCP NACK</p></li>
+</ul>
+<p>Also, the following eight options of BootP are supported:</p>
+<ul class="simple">
+<li><p>1 (Mask)</p></li>
+<li><p>50 (Requested Address)</p></li>
+<li><p>51 (Address Lease Time)</p></li>
+<li><p>53 (DHCP message type)</p></li>
+<li><p>54 (DHCP server identifier)</p></li>
+<li><p>58 (Address renew time)</p></li>
+<li><p>59 (Address rebind time)</p></li>
+<li><p>255 (end)</p></li>
+</ul>
+<p>The client identifier option (61) can be implemented in near future.</p>
+<p>In the current implementation, a DHCP client can obtain IPv4 address dynamically
+from the DHCP server, and can renew it within a lease time period.</p>
+<p>Multiple DHCP servers can be configured, but the implementation does not support
+the use of a DHCP Relay yet.</p>
+</section>
+</section>
+<section id="v4traceroute">
+<h2><span class="section-number">17.4. </span>V4TraceRoute<a class="headerlink" href="#v4traceroute" title="Link to this heading">¶</a></h2>
+<p>Documentation is missing for this application.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">17. Internet Applications Module Documentation</a><ul>
+<li><a class="reference internal" href="#ping">17.1. Ping</a><ul>
+<li><a class="reference internal" href="#model-description">17.1.1. Model Description</a><ul>
+<li><a class="reference internal" href="#design">17.1.1.1. Design</a></li>
+<li><a class="reference internal" href="#behavior">17.1.1.2. Behavior</a></li>
+<li><a class="reference internal" href="#scope-and-limitations">17.1.1.3. Scope and Limitations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">17.1.2. Usage</a><ul>
+<li><a class="reference internal" href="#helpers">17.1.2.1. Helpers</a></li>
+<li><a class="reference internal" href="#attributes">17.1.2.2. Attributes</a></li>
+<li><a class="reference internal" href="#output">17.1.2.3. Output</a></li>
+<li><a class="reference internal" href="#example">17.1.2.4. Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#validation">17.1.3. Validation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#radvd">17.2. Radvd</a></li>
+<li><a class="reference internal" href="#dhcpv4">17.3. DHCPv4</a><ul>
+<li><a class="reference internal" href="#id1">17.3.1. Helpers</a></li>
+<li><a class="reference internal" href="#tests">17.3.2. Tests</a></li>
+<li><a class="reference internal" href="#examples">17.3.3. Examples</a></li>
+<li><a class="reference internal" href="#id2">17.3.4. Scope and Limitations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v4traceroute">17.4. V4TraceRoute</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="udp.html"
+                          title="previous chapter"><span class="section-number">16.6. </span>UDP model in ns-3</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="lorawan.html"
+                          title="next chapter"><span class="section-number">18. </span>LoRaWAN Module</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/internet-apps.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="lorawan.html" title="18. LoRaWAN Module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="udp.html" title="16.6. UDP model in ns-3"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">17. </span>Internet Applications Module Documentation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

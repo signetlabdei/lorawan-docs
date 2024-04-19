@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>13. Emulation Overview &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="13.1. File Descriptor NetDevice" href="fd-net-device.html" />
+    <link rel="prev" title="12. DSR Routing" href="dsr.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="fd-net-device.html" title="13.1. File Descriptor NetDevice"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="dsr.html" title="12. DSR Routing"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">13. </span>Emulation Overview</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="emulation-overview">
+<h1><span class="section-number">13. </span>Emulation Overview<a class="headerlink" href="#emulation-overview" title="Link to this heading">¶</a></h1>
+<p><em>ns-3</em> has been designed for integration into testbed and virtual machine
+environments. We have addressed this need by providing two kinds of net devices.
+The first kind of device is a file descriptor net device (<code class="docutils literal notranslate"><span class="pre">FdNetDevice</span></code>),
+which is a generic device type that can read and write from a file descriptor.
+By associating this file descriptor with different things on the host
+system, different capabilities can be provided.  For instance, the
+FdNetDevice can be associated with an underlying packet socket to provide
+emulation capabilities.  This allows <em>ns-3</em> simulations
+to send data on a “real” network. The second kind, called a <code class="docutils literal notranslate"><span class="pre">TapBridge</span></code>
+<code class="docutils literal notranslate"><span class="pre">NetDevice</span></code> allows a “real” host to participate in an <em>ns-3</em> simulation as if
+it were one of the simulated nodes. An <em>ns-3</em> simulation may be constructed with
+any combination of simulated or emulated devices.</p>
+<p><strong>Note:</strong> Prior to ns-3.17, the emulation capability was provided by a
+special device called an <code class="docutils literal notranslate"><span class="pre">Emu</span></code> NetDevice; the <code class="docutils literal notranslate"><span class="pre">Emu</span></code> NetDevice has
+been replaced by the <code class="docutils literal notranslate"><span class="pre">FdNetDevice</span></code>.</p>
+<p>One of the use-cases we want to support is that of a testbed. A concrete example
+of an environment of this kind is the ORBIT testbed. ORBIT is a laboratory
+emulator/field trial network arranged as a two dimensional grid of 400 802.11
+radio nodes. We integrate with ORBIT by using their “imaging” process to load
+and run <em>ns-3</em> simulations on the ORBIT array. We can use our
+<code class="docutils literal notranslate"><span class="pre">EmuFdNetDevice</span></code>
+to drive the hardware in the testbed and we can accumulate results either using
+the <em>ns-3</em> tracing and logging functions, or the native ORBIT data gathering
+techniques. See <a class="reference external" href="http://www.orbit-lab.org/">http://www.orbit-lab.org/</a> for details on the ORBIT
+testbed.</p>
+<p>A simulation of this kind is shown in the following figure:</p>
+<figure class="align-default" id="id1">
+<span id="testbed"></span><img alt="_images/testbed.png" src="_images/testbed.png" />
+<figcaption>
+<p><span class="caption-text">Example Implementation of Testbed Emulation.</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>You can see that there are separate hosts, each running a subset of a “global”
+simulation. Instead of an <em>ns-3</em> channel connecting the hosts, we use real
+hardware provided by the testbed. This allows <em>ns-3</em> applications and protocol
+stacks attached to a simulation node to communicate over real hardware.</p>
+<p>We expect the primary use for this configuration will be to generate repeatable
+experimental results in a real-world network environment that includes all of
+the <em>ns-3</em> tracing, logging, visualization and statistics gathering tools.</p>
+<p>In what can be viewed as essentially an inverse configuration, we allow “real”
+machines running native applications and protocol stacks to integrate with an
+<em>ns-3</em> simulation. This allows for the simulation of large networks connected to
+a real machine, and also enables virtualization. A simulation of this kind is
+shown in the following figure:</p>
+<figure class="align-default" id="id2">
+<span id="emulated-channel"></span><img alt="_images/emulated-channel.png" src="_images/emulated-channel.png" />
+<figcaption>
+<p><span class="caption-text">Implementation overview of emulated channel.</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Here, you will see that there is a single host with a number of virtual machines
+running on it. An <em>ns-3</em> simulation is shown running in the virtual machine shown
+in the center of the figure. This simulation has a number of nodes with
+associated <em>ns-3</em> applications and protocol stacks that are talking to an <em>ns-3</em>
+channel through native simulated <em>ns-3</em> net devices.</p>
+<p>There are also two virtual machines shown at the far left and far right of the
+figure. These VMs are running native (Linux) applications and protocol stacks.
+The VM is connected into the simulation by a Linux Tap net device. The user-mode
+handler for the Tap device is instantiated in the simulation and attached to a
+proxy node that represents the native VM in the simulation. These handlers allow
+the Tap devices on the native VMs to behave as if they were <em>ns-3</em> net devices in
+the simulation VM. This, in turn, allows the native software and protocol suites
+in the native VMs to believe that they are connected to the simulated <em>ns-3</em>
+channel.</p>
+<p>We expect the typical use case for this environment will be to analyze the
+behavior of native applications and protocol suites in the presence of large
+simulated <em>ns-3</em> networks.</p>
+<p>The basic testbed mode of emulation uses raw sockets.  Two other variants
+(netmap-based and DPDK-based emulation) have been recently added; these
+make use of more recent network interface cards that make use of
+directly-mapped memory capabilities to improve packet processing efficiency.</p>
+<p>For more details:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fd-net-device.html">13.1. File Descriptor NetDevice</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fd-net-device.html#model-description">13.1.1. Model Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fd-net-device.html#design">13.1.1.1. Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fd-net-device.html#scope-and-limitations">13.1.1.2. Scope and Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fd-net-device.html#usage">13.1.2. Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fd-net-device.html#helpers">13.1.2.1. Helpers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="fd-net-device.html#emufdnetdevicehelper">13.1.2.1.1. EmuFdNetDeviceHelper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fd-net-device.html#tapfdnetdevicehelper">13.1.2.1.2. TapFdNetDeviceHelper</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fd-net-device.html#attributes">13.1.2.2. Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fd-net-device.html#output">13.1.2.3. Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fd-net-device.html#examples">13.1.2.4. Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="netmap-net-device.html">13.2. Netmap NetDevice</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="netmap-net-device.html#model-description">13.2.1. Model Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="netmap-net-device.html#design">13.2.1.1. Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="netmap-net-device.html#scope-and-limitations">13.2.1.2. Scope and Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="netmap-net-device.html#usage">13.2.2. Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="netmap-net-device.html#helpers">13.2.2.1. Helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="netmap-net-device.html#attributes">13.2.2.2. Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="netmap-net-device.html#output">13.2.2.3. Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="netmap-net-device.html#examples">13.2.2.4. Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dpdk-net-device.html">13.3. DPDK NetDevice</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dpdk-net-device.html#model-description">13.3.1. Model Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dpdk-net-device.html#design">13.3.1.1. Design</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dpdk-net-device.html#initialization">13.3.1.1.1. Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dpdk-net-device.html#packet-transfer">13.3.1.1.2. Packet Transfer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dpdk-net-device.html#termination">13.3.1.1.3. Termination</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dpdk-net-device.html#scope-and-limitations">13.3.1.2. Scope and Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dpdk-net-device.html#dpdk-installation">13.3.2. DPDK Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dpdk-net-device.html#is-my-nic-supported-by-dpdk">13.3.2.1. Is my NIC supported by DPDK?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dpdk-net-device.html#not-supported-use-virtual-machine-instead">13.3.2.2. Not supported? Use Virtual Machine instead</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dpdk-net-device.html#install-dpdk-on-ubuntu">13.3.2.3. Install DPDK on Ubuntu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dpdk-net-device.html#compile-from-source">13.3.2.4. Compile from Source</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dpdk-net-device.html#download-the-source">13.3.2.4.1. 1. Download the source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dpdk-net-device.html#configure-dpdk-as-a-shared-library">13.3.2.4.2. 2. Configure DPDK as a shared library</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dpdk-net-device.html#install-the-source">13.3.2.4.3. 3. Install the source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dpdk-net-device.html#export-dpdk-environment-variables">13.3.2.4.4. 4. Export DPDK Environment variables</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dpdk-net-device.html#load-dpdk-drivers-to-kernel">13.3.2.5. Load DPDK Drivers to kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dpdk-net-device.html#configure-hugepages">13.3.2.6. Configure hugepages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dpdk-net-device.html#usage">13.3.3. Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dpdk-net-device.html#attributes">13.3.3.1. Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dpdk-net-device.html#output">13.3.3.2. Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dpdk-net-device.html#examples">13.3.3.3. Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tap.html">13.4. Tap NetDevice</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tap.html#tapbridge-model-overview">13.4.1. TapBridge Model Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tap.html#tapbridge-configurelocal-mode">13.4.1.1. TapBridge ConfigureLocal Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tap.html#tapbridge-uselocal-mode">13.4.1.2. TapBridge UseLocal Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tap.html#tapbridge-usebridge-mode">13.4.1.3. TapBridge UseBridge Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tap.html#tapbridge-configurelocal-operation">13.4.1.4. TapBridge ConfigureLocal Operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tap.html#tapbridge-uselocal-mode-operation">13.4.1.5. TapBridge UseLocal Mode Operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tap.html#tapbridge-usebridge-operation">13.4.1.6. TapBridge UseBridge Operation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tap.html#tap-bridge-channel-model">13.4.2. Tap Bridge Channel Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tap.html#tap-bridge-tracing-model">13.4.3. Tap Bridge Tracing Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tap.html#using-the-tapbridge">13.4.4. Using the TapBridge</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="dsr.html"
+                          title="previous chapter"><span class="section-number">12. </span>DSR Routing</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="fd-net-device.html"
+                          title="next chapter"><span class="section-number">13.1. </span>File Descriptor NetDevice</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/emulation-overview.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="fd-net-device.html" title="13.1. File Descriptor NetDevice"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="dsr.html" title="12. DSR Routing"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">13. </span>Emulation Overview</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

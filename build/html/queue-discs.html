@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>33.2. Queue disciplines &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="33.3. Fifo queue disc" href="fifo.html" />
+    <link rel="prev" title="33.1. Traffic Control Layer" href="traffic-control-layer.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="fifo.html" title="33.3. Fifo queue disc"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="traffic-control-layer.html" title="33.1. Traffic Control Layer"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" accesskey="U"><span class="section-number">33. </span>Traffic Control Layer</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">33.2. </span>Queue disciplines</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="queue-disciplines">
+<h1><span class="section-number">33.2. </span>Queue disciplines<a class="headerlink" href="#queue-disciplines" title="Link to this heading">¶</a></h1>
+<section id="model-description">
+<h2><span class="section-number">33.2.1. </span>Model Description<a class="headerlink" href="#model-description" title="Link to this heading">¶</a></h2>
+<p>Packets received by the Traffic Control layer for transmission to a netdevice
+can be passed to a queueing discipline (queue disc) to perform scheduling and
+policing.  The <em>ns-3</em> term “queue disc” corresponds to what Linux calls a “qdisc”.
+A netdevice can have a single (root) queue disc installed on it.
+Installing a queue disc on a netdevice is not mandatory. If a netdevice does
+not have a queue disc installed on it, the traffic control layer sends the packets
+directly to the netdevice. This is the case, for instance, of the loopback netdevice.</p>
+<p>As in Linux, queue discs may be simple queues or may be complicated hierarchical
+structures.  A queue disc may contain distinct elements:</p>
+<ul class="simple">
+<li><p>queues, which actually store the packets waiting for transmission</p></li>
+<li><p>classes, which permit the definition of different treatments for different subdivisions of traffic</p></li>
+<li><p>filters, which determine the queue or class which a packet is destined to</p></li>
+</ul>
+<p>Linux uses the terminology “classful qdiscs” or “classless qdiscs” to describe
+how packets are handled.  This use of the term “class” should be distinguished
+from the C++ language “class”.  In general, the below discussion uses “class”
+in the Linux, not C++, sense, but there are some uses of the C++ term, so
+please keep in mind the dual use of this term in the below text.</p>
+<p>Notice that a child queue disc must be attached to every class and a packet
+filter is only able to classify packets of a single protocol. Also, while in Linux
+some queue discs (e.g., fq-codel) use an internal classifier and do not make use of
+packet filters, in ns-3 every queue disc including multiple queues or multiple classes
+needs an external filter to classify packets (this is to avoid having the traffic-control
+module depend on other modules such as internet).</p>
+<p>Queue disc configuration vary from queue disc to queue disc. A typical taxonomy divides
+queue discs in classful (i.e., support classes) and classless (i.e., do not support
+classes). More recently, after the appearance of multi-queue devices (such as Wi-Fi),
+some multi-queue aware queue discs have been introduced. Multi-queue aware queue discs
+handle as many queues (or queue discs – without using classes) as the number of
+transmission queues used by the device on which the queue disc is installed.
+An attempt is made, also, to classify each packet similarly in the queue disc and within
+the device (i.e., to keep the packet classification consistent across layers).</p>
+<p>The traffic control layer interacts with a queue disc in a simple manner: after requesting
+to enqueue a packet, the traffic control layer requests the qdisc to “run”, i.e., to
+dequeue a set of packets, until a predefined number (“quota”) of packets is dequeued
+or the netdevice stops the queue disc.  A netdevice shall
+stop the queue disc when its transmission queue does not have room for another
+packet. Also, a netdevice shall wake the queue disc when it detects that there
+is room for another packet in its transmission queue, but the transmission queue
+is stopped. Waking a queue disc is equivalent to make it run.</p>
+<p>Every queue disc collects statistics about the total number of packets/bytes
+received from the upper layers (in case of root queue disc) or from the parent
+queue disc (in case of child queue disc), enqueued, dequeued, requeued, dropped,
+dropped before enqueue, dropped after dequeue, marked, and stored in the queue disc and
+sent to the netdevice or to the parent queue disc. Note that packets that are
+dequeued may be requeued, i.e., retained by the traffic control infrastructure,
+if the netdevice is not ready to receive them. Requeued packets are not part
+of the queue disc. The following identities hold:</p>
+<ul class="simple">
+<li><p>dropped = dropped before enqueue + dropped after dequeue</p></li>
+<li><p>received = dropped before enqueue + enqueued</p></li>
+<li><p>queued = enqueued - dequeued</p></li>
+<li><p>sent = dequeued - dropped after dequeue (- 1 if there is a requeued packet)</p></li>
+</ul>
+<p>Separate counters are also kept for each possible reason to drop a packet.
+When a packet is dropped by an internal queue, e.g., because the queue is full,
+the reason is “Dropped by internal queue”. When a packet is dropped by a child
+queue disc, the reason is “(Dropped by child queue disc) “ followed by the
+reason why the child queue disc dropped the packet.</p>
+<p>The QueueDisc base class provides the SojournTime trace source, which provides
+the sojourn time of every packet dequeued from a queue disc, including packets
+that are dropped or requeued after being dequeued. The sojourn time is taken
+when the packet is dequeued from the queue disc, hence it does not account for
+the additional time the packet is retained within the queue disc in case it is
+requeued.</p>
+<section id="design">
+<h3><span class="section-number">33.2.1.1. </span>Design<a class="headerlink" href="#design" title="Link to this heading">¶</a></h3>
+<p>A C++ abstract base class, class QueueDisc, is subclassed to implement a specific
+queue disc. A subclass is required to implement the following methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">DoEnqueue</span> <span class="pre">(Ptr&lt;QueueDiscItem&gt;</span> <span class="pre">item)</span></code>:  Enqueue a packet</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ptr&lt;QueueDiscItem&gt;</span> <span class="pre">DoDequeue</span> <span class="pre">()</span></code>:  Dequeue a packet</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">CheckConfig</span> <span class="pre">()</span> <span class="pre">const</span></code>: Check if the configuration is correct</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">InitializeParams</span> <span class="pre">()</span></code>: Initialize queue disc parameters</p></li>
+</ul>
+<p>and may optionally override the default implementation of the following method:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Ptr&lt;const</span> <span class="pre">QueueDiscItem&gt;</span> <span class="pre">DoPeek</span> <span class="pre">()</span> <span class="pre">const</span></code>: Peek the next packet to extract</p></li>
+</ul>
+<p>The default implementation of the <code class="docutils literal notranslate"><span class="pre">DoPeek</span></code> method is based on the qdisc_peek_dequeued
+function of the Linux kernel, which dequeues a packet and retains it in the
+queue disc as a requeued packet. This approach is recommended
+especially for queue discs for which it is not obvious what is the next
+packet that will be dequeued (e.g., queue discs having multiple internal
+queues or child queue discs or queue discs that drop packets after dequeue).
+Therefore, unless the subclass redefines the <code class="docutils literal notranslate"><span class="pre">DoPeek</span></code> method, calling <code class="docutils literal notranslate"><span class="pre">Peek</span></code> causes
+the next packet to be dequeued from the queue disc, though the packet is still
+considered to be part of the queue disc and the dequeue trace is fired when
+Dequeue is called and the packet is actually extracted from the queue disc.</p>
+<p>The C++ base class QueueDisc implements:</p>
+<ul class="simple">
+<li><p>methods to add/get a single queue, class or filter and methods to get the number of installed queues, classes or filters</p></li>
+<li><p>a <code class="docutils literal notranslate"><span class="pre">Classify</span></code> method which classifies a packet by processing the list of filters until a filter able to classify the packet is found</p></li>
+<li><p>methods to extract multiple packets from the queue disc, while handling transmission (to the device) failures by requeuing packets</p></li>
+</ul>
+<p>The base class QueueDisc provides many trace sources:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Enqueue</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Dequeue</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Requeue</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Drop</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Mark</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PacketsInQueue</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BytesInQueue</span></code></p></li>
+</ul>
+<p>The C++ base class QueueDisc holds the list of attached queues, classes and filter
+by means of three vectors accessible through attributes (InternalQueueList,
+QueueDiscClassList and PacketFilterList).</p>
+<p>Internal queues are implemented as (subclasses of) Queue objects. A Queue stores
+QueueItem objects, which consist of just a Ptr&lt;Packet&gt;. Since a queue disc has to
+store at least the destination address and the protocol number for each enqueued
+packet, a new C++ class, QueueDiscItem, is derived from QueueItem to store such
+additional information for each packet. Thus, internal queues are implemented as
+Queue objects storing QueueDiscItem objects. Also, there could be the need to store
+further information depending on the network layer protocol of the packet. For
+instance, for IPv4 and IPv6 packets it is needed to separately store the header
+and the payload, so that header fields can be manipulated, e.g., to support
+Explicit Congestion Notification as defined in RFC 3168.  To this end,
+subclasses <code class="docutils literal notranslate"><span class="pre">Ipv4QueueDiscItem</span></code> and <code class="docutils literal notranslate"><span class="pre">Ipv6QueueDiscItem</span></code> are derived from
+<code class="docutils literal notranslate"><span class="pre">QueueDiscItem</span></code> to additionally store the IP header and provide protocol
+specific operations such as ECN marking.</p>
+<p>Classes (in the Linux sense of the term) are implemented via the QueueDiscClass class, which consists of a pointer
+to the attached queue disc. Such a pointer is accessible through the QueueDisc attribute.
+Classful queue discs needing to set parameters for their classes can subclass
+QueueDiscClass and add the required parameters as attributes.</p>
+<p>An abstract base class, PacketFilter, is subclassed to implement specific filters.
+Subclasses are required to implement two virtual private pure methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">CheckProtocol</span> <span class="pre">(Ptr&lt;QueueDiscItem&gt;</span> <span class="pre">item)</span> <span class="pre">const</span></code>: check whether the filter is able to classify packets of the same protocol as the given packet</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int32_t</span> <span class="pre">DoClassify</span> <span class="pre">(Ptr&lt;QueueDiscItem&gt;</span> <span class="pre">item)</span> <span class="pre">const</span></code>: actually classify the packet</p></li>
+</ul>
+<p>PacketFilter provides a public method, <code class="docutils literal notranslate"><span class="pre">Classify</span></code>, which first calls <code class="docutils literal notranslate"><span class="pre">CheckProtocol</span></code>
+to check that the protocol of the packet matches the protocol of the filter and then
+calls <code class="docutils literal notranslate"><span class="pre">DoClassify</span></code>. Specific filters subclassed from PacketFilter should not be
+placed in the traffic-control module but in the module corresponding to the protocol
+of the classified packets.</p>
+</section>
+</section>
+<section id="usage">
+<h2><span class="section-number">33.2.2. </span>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
+<p>The traffic control layer is automatically created and inserted on an <code class="docutils literal notranslate"><span class="pre">ns3::Node</span></code> object
+when typical device and internet module helpers are used.  By default, the
+<code class="docutils literal notranslate"><span class="pre">InternetStackHelper::Install()</span></code> method aggregates a TrafficControlLayer object to every
+node. When invoked to assign an IPv{4,6} address to a device, the Ipv{4,6}AddressHelper,
+besides creating an Ipv{4,6}Interface, also installs the default qdisc
+on the device, unless a queue disc has been already installed.
+For single-queue NetDevices (such as PointToPoint, Csma and Simple), the default root
+qdisc is FqCoDel. For multi-queue NetDevices (such as Wifi), the default root qdisc is
+Mq with as many FqCoDel child qdiscs as the number of device queues.</p>
+<p>To install a queue disc other than the default one, it is necessary to install such queue
+disc before an IP address is assigned to the device. Alternatively, the default queue disc
+can be removed from the device after assigning an IP address, by using the
+Uninstall method of the TrafficControlHelper C++ class, and then installing a different
+queue disc on the device.  By uninstalling without adding a new queue disc, it is also possible
+to have no queue disc installed on a device.</p>
+<p>Note that if no queue disc is installed on an underlying device, the traffic
+control layer will still respect flow control signals provided by the device, if
+any.  Specifically, if no queue disc is installed on a device, and the device is
+stopped, then any packet for that device will be dropped in the traffic control
+layer, and the device’s drop trace will not record the drop – instead, the TcDrop
+drop trace in the traffic control layer will record the drop.</p>
+<p>Flow control can be disabled for the devices that support it by using the
+<code class="docutils literal notranslate"><span class="pre">DisableFlowControl</span></code> method of their helpers.  If there is no queue disc
+installed on the device, and the device is not performing flow control, then
+packets will immediately transit the traffic control layer and be sent to the
+device, regardless or not of whether the device’s internal queue can accept it,
+and the traffic control layer’s TcDrop trace will not be called.</p>
+<section id="helpers">
+<h3><span class="section-number">33.2.2.1. </span>Helpers<a class="headerlink" href="#helpers" title="Link to this heading">¶</a></h3>
+<p>A typical usage pattern is to create a traffic control helper and to configure type
+and attributes of queue discs, queues, classes and filters from the helper, For example,
+the pfifo_fast can be configured as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TrafficControlHelper</span><span class="w"> </span><span class="n">tch</span><span class="p">;</span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tch</span><span class="p">.</span><span class="n">SetRootQueueDisc</span><span class="p">(</span><span class="s">&quot;ns3::PfifoFastQueueDisc&quot;</span><span class="p">);</span>
+<span class="n">tch</span><span class="p">.</span><span class="n">AddInternalQueues</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ns3::DropTailQueue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MaxSize&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">StringValue</span><span class="p">(</span><span class="s">&quot;1000p&quot;</span><span class="p">));</span>
+<span class="n">QueueDiscContainer</span><span class="w"> </span><span class="n">qdiscs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tch</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">devices</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The above code adds three internal queues to the root queue disc of type PfifoFast.
+With the above configuration, the config path of the root queue disc installed on the j-th
+device of the i-th node (the index of a device is the same as in DeviceList) is:</p>
+<p>/NodeList/[i]/$ns3::TrafficControlLayer/RootQueueDiscList/[j]</p>
+<p>and the config path of the second internal queue is:</p>
+<p>/NodeList/[i]/$ns3::TrafficControlLayer/RootQueueDiscList/[j]/InternalQueueList/1</p>
+<p>For this helper’s configuration to take effect, it should be added to the ns-3 program after
+<code class="docutils literal notranslate"><span class="pre">InternetStackHelper::Install()</span></code> is called, but before IP addresses are configured using
+<code class="docutils literal notranslate"><span class="pre">Ipv{4,6}AddressHelper</span></code>. For an example program, see examples/traffic-control/traffic-control.cc.</p>
+<p>If it is desired to install no queue disc on a device, it is necessary to use the Uninstall
+method of the TrafficControlHelper:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TrafficControlHelper</span><span class="w"> </span><span class="n">tch</span><span class="p">;</span>
+<span class="n">tch</span><span class="p">.</span><span class="n">Uninstall</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Note that the Uninstall method must be called after <code class="docutils literal notranslate"><span class="pre">InternetStackHelper::Install()</span></code> is called
+and after that IP addresses are configured using <code class="docutils literal notranslate"><span class="pre">Ipv{4,6}AddressHelper</span></code>. For an example program,
+see src/test/ns3tcp/ns3tcp-cwnd-test-suite.cc (look at the <code class="docutils literal notranslate"><span class="pre">Ns3TcpCwndTestCase2::DoRun</span></code> method).
+Note also that this method does not uninstall the traffic control layer but instead
+removes the root queue disc on the device but keeps the traffic control layer present.
+Also, note that removing the root queue disc on a device supporting flow control does not disable
+the flow control. As mentioned above, this requires to call the DisableFlowControl method of the
+device helper, so that the device is created without support for the flow control.</p>
+</section>
+</section>
+<section id="implementation-details">
+<h2><span class="section-number">33.2.3. </span>Implementation details<a class="headerlink" href="#implementation-details" title="Link to this heading">¶</a></h2>
+<p>In Linux, the struct netdev_queue is used to store information about a single
+transmission queue of a device: status (i.e., whether it has been stopped or not),
+data used by techniques such as Byte Queue Limits and a qdisc pointer field that
+is mainly used to solve the following problems:</p>
+<ul class="simple">
+<li><p>if a device transmission queue is (almost) empty, identify the queue disc to wake</p></li>
+<li><p>if a packet will be enqueued in a given device transmission queue, identify the queue disc which the packet must be enqueued into</p></li>
+</ul>
+<p>The latter problem arises because Linux attempts to determine the device transmission
+queue which a packet will be enqueued into before passing the packet to a queue disc.
+This is done by calling a specific function of the device driver, if implemented, or
+by employing fallback mechanisms (such as hashing of the addresses) otherwise. The
+identifier of the selected device transmission queue is stored in the queue_mapping field of the struct sk_buff, so that both the queue disc and the device driver can
+get the same information. In ns-3, such identifier is stored in a member of the
+QueueDiscItem class.</p>
+<p>The NetDeviceQueue class in ns-3 is the equivalent of the Linux struct netdev_queue.
+The qdisc field of the Linux struct netdev_queue, however, cannot be
+similarly stored in a NetDeviceQueue object, because it would make the network module
+depend on the traffic-control module. Instead, this information is stored in the
+TrafficControlLayer object aggregated to each node. In particular, a TrafficControlLayer
+object holds a struct NetDeviceInfo which stores, for each NetDevice, a pointer to the
+root queue disc installed on the device, a pointer to the netdevice queue interface
+(see below) aggregated to the device, and a vector of pointers (one for each device
+transmission queue) to the queue discs to activate when the above
+problems occur. The traffic control layer takes care of configuring such a vector
+at initialization time, based on the “wake mode” of the root queue disc. If the
+wake mode of the root queue disc is WAKE_ROOT, then all the elements of the vector
+are pointers to the root queue disc. If the wake mode of the root queue disc is
+WAKE_CHILD, then each element of the vector is a pointer to a distinct child queue
+disc. This requires that the number of child queue discs matches the number of
+netdevice queues. It follows that the wake mode of a classless queue disc must
+necessarily be WAKE_ROOT. These two configurations are illustrated by the figures below.</p>
+<p><a class="reference internal" href="#fig-classful-queue-disc"><span class="std std-ref">Setup of a queue disc (wake mode: WAKE_ROOT)</span></a> below shows how the TrafficControlLayer map looks like in
+case of a classful root queue disc whose wake mode is WAKE_ROOT.</p>
+<figure class="align-default" id="id1">
+<span id="fig-classful-queue-disc"></span><img alt="_images/classful-queue-disc.png" src="_images/classful-queue-disc.png" />
+<figcaption>
+<p><span class="caption-text">Setup of a queue disc (wake mode: WAKE_ROOT)</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p><a class="reference internal" href="#fig-multi-queue-aware-queue-disc"><span class="std std-ref">Setup of a multi-queue aware queue disc</span></a> below shows instead how the TrafficControlLayer
+map looks like in case of a classful root queue disc whose wake mode is WAKE_CHILD.</p>
+<figure class="align-default" id="id2">
+<span id="fig-multi-queue-aware-queue-disc"></span><img alt="_images/multi-queue-aware-queue-disc.png" src="_images/multi-queue-aware-queue-disc.png" />
+<figcaption>
+<p><span class="caption-text">Setup of a multi-queue aware queue disc</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>A NetDeviceQueueInterface object is used by the traffic control layer to access the
+information stored in the NetDeviceQueue objects, retrieve the number of transmission
+queues of the device and get the transmission queue selected for the transmission of a
+given packet. A NetDeviceQueueInterface object must be therefore aggregated to all the
+devices having an interface supporting the traffic control layer (i.e., an IPv4 or IPv6
+interface). In particular:</p>
+<ul class="simple">
+<li><p>a NetDeviceQueueInterface object is aggregated to all the devices by the NetDevice
+helper classes, at <code class="docutils literal notranslate"><span class="pre">Install</span></code> time.  See, for example, the implementation in the
+method <code class="docutils literal notranslate"><span class="pre">CsmaHelper::InstallPriv()</span></code>.</p></li>
+<li><p>when notified that a netdevice queue interface has been aggregated, traffic control aware devices can cache the pointer to the netdevice queue interface created by the traffic control layer into a member variable. Also, multi-queue devices can set the number of device transmission queues and set the select queue callback through the netdevice queue interface</p></li>
+<li><p>at initialization time, the traffic control (after calling device-&gt;Initialize () to ensure that the netdevice has set the number of device transmission queues, if it has to do so) completes the installation of the queue discs by setting the wake callbacks on the device transmission queues (through the netdevice queue interface). Also, the traffic control calls the Initialize method of the root queue discs.  This initialization of queue discs triggers calls to the <code class="docutils literal notranslate"><span class="pre">CheckConfig</span></code> and <code class="docutils literal notranslate"><span class="pre">InitializeParams</span></code> methods of the queue disc.</p></li>
+</ul>
+<section id="requeue">
+<h3><span class="section-number">33.2.3.1. </span>Requeue<a class="headerlink" href="#requeue" title="Link to this heading">¶</a></h3>
+<p>In Linux, a packet dequeued from a queue disc can be requeued (i.e., stored somewhere
+and sent to the device at a later time) in some circumstances. Firstly, the function
+used to dequeue a packet (dequeue_skb) actually dequeues a packet only if the device
+is multi-queue or the (unique) device queue is not stopped. If a packet has been
+dequeued from the queue disc, it is passed to the sch_direct_xmit function for
+transmission to the device. This function checks whether the device queue the packet is destined
+to is stopped, in which case the packet is requeued. Otherwise, the packet is sent to the device.
+If the device returns NETDEV_TX_BUSY, the packet is requeued. However, it is advised that
+the function called to send a packet to the device (ndo_start_xmit) should always
+return NETDEV_TX_OK, which means that the packet is consumed by the device driver
+and thus needs not to be requeued. However, the ndo_start_xmit function of the device
+driver is allowed to return NETDEV_TX_BUSY (and hence the packet is requeued) when
+there is no room for the received packet in the device queue, despite the queue is
+not stopped. This case is considered as a corner case or an hard error, and should be avoided.</p>
+<p>ns-3 implements the requeue mechanism in a similar manner, the only difference being
+that packets are not requeued when such corner cases occur. Basically, the method used
+to dequeue a packet (QueueDisc::DequeuePacket) actually dequeues a packet only if the
+device is multi-queue or the (unique) device queue is not stopped. If a packet has been
+dequeued from the queue disc, it is passed to the QueueDisc::Transmit method for
+transmission to the device. This method checks whether the device queue the packet is destined
+to is stopped, in which case the packet is requeued. Otherwise, the packet is sent to the device.
+We request netdevices to stop a device queue when it is not able to store another packet,
+so as to avoid the situation in which a packet is received that cannot be enqueued while
+the device queue is not stopped. Should such a corner case occur, the netdevice drops
+the packet but, unlike Linux, the value returned by NetDevice::Send is ignored and the
+packet is not requeued.</p>
+<p>The way the requeue mechanism is implemented in ns-3 has the following implications:</p>
+<ul class="simple">
+<li><p>if the underlying device has a single queue, no packet will ever be requeued. Indeed, if the device queue is not stopped when QueueDisc::DequeuePacket is called, it will not be stopped also when QueueDisc::Transmit is called, hence the packet is not requeued (recall that a packet is not requeued after being sent to the device, as the value returned by NetDevice::Send is ignored).</p></li>
+<li><p>if the underlying device does not implement flow control, i.e., it does not stop its queue(s), no packet will ever be requeued (recall that a packet is only requeued by QueueDisc::Transmit when the device queue the packet is destined to is stopped)</p></li>
+</ul>
+<p>It turns out that packets may only be requeued when the underlying device is multi-queue
+and supports flow control.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">33.2. Queue disciplines</a><ul>
+<li><a class="reference internal" href="#model-description">33.2.1. Model Description</a><ul>
+<li><a class="reference internal" href="#design">33.2.1.1. Design</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">33.2.2. Usage</a><ul>
+<li><a class="reference internal" href="#helpers">33.2.2.1. Helpers</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#implementation-details">33.2.3. Implementation details</a><ul>
+<li><a class="reference internal" href="#requeue">33.2.3.1. Requeue</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="traffic-control-layer.html"
+                          title="previous chapter"><span class="section-number">33.1. </span>Traffic Control Layer</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="fifo.html"
+                          title="next chapter"><span class="section-number">33.3. </span>Fifo queue disc</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/queue-discs.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="fifo.html" title="33.3. Fifo queue disc"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="traffic-control-layer.html" title="33.1. Traffic Control Layer"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" ><span class="section-number">33. </span>Traffic Control Layer</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">33.2. </span>Queue disciplines</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

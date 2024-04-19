@@ -1,0 +1,664 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>16.4. Routing overview &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="16.5. TCP models in ns-3" href="tcp.html" />
+    <link rel="prev" title="16.3. IPv6" href="ipv6.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tcp.html" title="16.5. TCP models in ns-3"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ipv6.html" title="16.3. IPv6"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="internet-models.html" accesskey="U"><span class="section-number">16. </span>Internet Models (IP, TCP, Routing, UDP)</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">16.4. </span>Routing overview</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="routing-overview">
+<h1><span class="section-number">16.4. </span>Routing overview<a class="headerlink" href="#routing-overview" title="Link to this heading">¶</a></h1>
+<p><em>ns-3</em> is intended to support traditional routing approaches and protocols,
+support ports of open source routing implementations, and facilitate research
+into unorthodox routing techniques. The overall routing architecture is
+described below in <a class="reference internal" href="#routing-architecture"><span class="std std-ref">Routing architecture</span></a>. Users who wish to just read
+about how to configure global routing for wired topologies can read
+<a class="reference internal" href="#global-centralized-routing"><span class="std std-ref">Global centralized routing</span></a>. Unicast routing protocols are described in
+<a class="reference internal" href="#unicast-routing"><span class="std std-ref">Unicast routing</span></a>.  Multicast routing is documented in
+<a class="reference internal" href="#multicast-routing"><span class="std std-ref">Multicast routing</span></a>.</p>
+<section id="routing-architecture">
+<span id="id1"></span><h2><span class="section-number">16.4.1. </span>Routing architecture<a class="headerlink" href="#routing-architecture" title="Link to this heading">¶</a></h2>
+<figure class="align-default" id="id5">
+<span id="fig-routing"></span><img alt="_images/routing.png" src="_images/routing.png" />
+<figcaption>
+<p><span class="caption-text">Overview of routing</span><a class="headerlink" href="#id5" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p><a class="reference internal" href="#fig-routing"><span class="std std-ref">Overview of routing</span></a> shows the overall routing architecture for Ipv4. The key
+objects are Ipv4L3Protocol, Ipv4RoutingProtocol(s) (a class to which all
+routing/forwarding has been delegated from Ipv4L3Protocol), and Ipv4Route(s).</p>
+<p>Ipv4L3Protocol must have at least one Ipv4RoutingProtocol added to it at
+simulation setup time. This is done explicitly by calling
+Ipv4::SetRoutingProtocol ().</p>
+<p>The abstract base class Ipv4RoutingProtocol () declares a minimal interface,
+consisting of two methods:  RouteOutput () and RouteInput ().  For packets
+traveling outbound from a host, the transport protocol will query Ipv4 for the
+Ipv4RoutingProtocol object interface, and will request a route via
+Ipv4RoutingProtocol::RouteOutput ().  A Ptr to Ipv4Route object is returned.
+This is analogous to a dst_cache entry in Linux. The Ipv4Route is carried down
+to the Ipv4L3Protocol to avoid a second lookup there. However, some cases (e.g.
+Ipv4 raw sockets) will require a call to RouteOutput()
+directly from Ipv4L3Protocol.</p>
+<p>For packets received inbound for forwarding or delivery,
+the following steps occur. Ipv4L3Protocol::Receive() calls
+Ipv4RoutingProtocol::RouteInput(). This passes the packet ownership to the
+Ipv4RoutingProtocol object. There are four callbacks associated with this call:</p>
+<ul class="simple">
+<li><p>LocalDeliver</p></li>
+<li><p>UnicastForward</p></li>
+<li><p>MulticastForward</p></li>
+<li><p>Error</p></li>
+</ul>
+<p>The Ipv4RoutingProtocol must eventually call one of these callbacks for each
+packet that it takes responsibility for. This is basically how the input routing
+process works in Linux.</p>
+<figure class="align-default" id="id6">
+<span id="routing-specialization"></span><img alt="_images/routing-specialization.png" src="_images/routing-specialization.png" />
+<figcaption>
+<p><span class="caption-text">Ipv4Routing specialization.</span><a class="headerlink" href="#id6" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>This overall architecture is designed to support different routing approaches,
+including (in the future) a Linux-like policy-based routing implementation,
+proactive and on-demand routing protocols, and simple routing protocols for when
+the simulation user does not really care about routing.</p>
+<p><a class="reference internal" href="#routing-specialization"><span class="std std-ref">Ipv4Routing specialization.</span></a> illustrates how multiple routing protocols derive
+from this base class. A class Ipv4ListRouting (implementation class
+Ipv4ListRoutingImpl) provides the existing list routing approach in <em>ns-3</em>. Its
+API is the same as base class Ipv4Routing except for the ability to add multiple
+prioritized routing protocols (Ipv4ListRouting::AddRoutingProtocol(),
+Ipv4ListRouting::GetRoutingProtocol()).</p>
+<p>The details of these routing protocols are described below in
+<a class="reference internal" href="#unicast-routing"><span class="std std-ref">Unicast routing</span></a>.  For now, we will first start with a basic
+unicast routing capability that is intended to globally build routing
+tables at simulation time t=0 for simulation users who do not care
+about dynamic routing.</p>
+</section>
+<section id="unicast-routing">
+<span id="id2"></span><h2><span class="section-number">16.4.2. </span>Unicast routing<a class="headerlink" href="#unicast-routing" title="Link to this heading">¶</a></h2>
+<p>The following unicast routing protocols are defined for IPv4 and IPv6:</p>
+<ul class="simple">
+<li><p>classes Ipv4ListRouting and Ipv6ListRouting (used to store a prioritized list of routing protocols)</p></li>
+<li><p>classes Ipv4StaticRouting and Ipv6StaticRouting (covering both unicast and multicast)</p></li>
+<li><p>class Ipv4GlobalRouting (used to store routes computed by the global route
+manager, if that is used)</p></li>
+<li><p>class Ipv4NixVectorRouting (a more efficient version of global routing that
+stores source routes in a packet header field)</p></li>
+<li><p>class Rip - the IPv4 RIPv2 protocol (<span class="target" id="index-0"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2453.html"><strong>RFC 2453</strong></a>)</p></li>
+<li><p>class RipNg - the IPv6 RIPng protocol (<span class="target" id="index-1"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2080.html"><strong>RFC 2080</strong></a>)</p></li>
+<li><p>IPv4 Optimized Link State Routing (OLSR) (a MANET protocol defined in
+<span class="target" id="index-2"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc3626.html"><strong>RFC 3626</strong></a>)</p></li>
+<li><p>IPv4 Ad Hoc On Demand Distance Vector (AODV) (a MANET protocol defined in
+<span class="target" id="index-3"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc3561.html"><strong>RFC 3561</strong></a>)</p></li>
+<li><p>IPv4 Destination Sequenced Distance Vector (DSDV) (a MANET protocol)</p></li>
+<li><p>IPv4 Dynamic Source Routing (DSR) (a MANET protocol)</p></li>
+</ul>
+<p>In the future, this architecture should also allow someone to implement a
+Linux-like implementation with routing cache, or a Click modular router, but
+those are out of scope for now.</p>
+<section id="ipv-4-6-listrouting">
+<h3><span class="section-number">16.4.2.1. </span>Ipv[4,6]ListRouting<a class="headerlink" href="#ipv-4-6-listrouting" title="Link to this heading">¶</a></h3>
+<p>This section describes the current default <em>ns-3</em> Ipv[4,6]RoutingProtocol. Typically,
+multiple routing protocols are supported in user space and coordinate to write a
+single forwarding table in the kernel. Presently in <em>ns-3</em>, the implementation
+instead allows for multiple routing protocols to build/keep their own routing
+state, and the IP implementation will query each one of these routing
+protocols (in some order determined by the simulation author) until a route is
+found.</p>
+<p>We chose this approach because it may better facilitate the integration of
+disparate routing approaches that may be difficult to coordinate the writing to
+a single table, approaches where more information than destination IP address
+(e.g., source routing) is used to determine the next hop, and on-demand routing
+approaches where packets must be cached.</p>
+<section id="ipv-4-6-listrouting-addroutingprotocol">
+<h4><span class="section-number">16.4.2.1.1. </span>Ipv[4,6]ListRouting::AddRoutingProtocol<a class="headerlink" href="#ipv-4-6-listrouting-addroutingprotocol" title="Link to this heading">¶</a></h4>
+<p>Classes Ipv4ListRouting and Ipv6ListRouting provides a pure virtual function declaration
+for the method that allows one to add a routing protocol:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">AddRoutingProtocol</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv4RoutingProtocol</span><span class="o">&gt;</span><span class="w"> </span><span class="n">routingProtocol</span><span class="p">,</span>
+<span class="w">                        </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">priority</span><span class="p">);</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">AddRoutingProtocol</span><span class="p">(</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Ipv6RoutingProtocol</span><span class="o">&gt;</span><span class="w"> </span><span class="n">routingProtocol</span><span class="p">,</span>
+<span class="w">                        </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">priority</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>These methods are implemented respectively by class Ipv4ListRoutingImpl and by class
+Ipv6ListRoutingImpl in the internet module.</p>
+<p>The priority variable above governs the priority in which the routing protocols
+are inserted. Notice that it is a signed int.  By default in <em>ns-3</em>, the helper
+classes will instantiate a Ipv[4,6]ListRoutingImpl object, and add to it an
+Ipv[4,6]StaticRoutingImpl object at priority zero.  Internally, a list of
+Ipv[4,6]RoutingProtocols is stored, and and the routing protocols are each consulted
+in decreasing order of priority to see whether a match is found. Therefore, if
+you want your Ipv4RoutingProtocol to have priority lower than the static
+routing, insert it with priority less than 0; e.g.:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">MyRoutingProtocol</span><span class="o">&gt;</span><span class="w"> </span><span class="n">myRoutingProto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">MyRoutingProtocol</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">listRoutingPtr</span><span class="o">-&gt;</span><span class="n">AddRoutingProtocol</span><span class="p">(</span><span class="n">myRoutingProto</span><span class="p">,</span><span class="w"> </span><span class="mi">-10</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Upon calls to RouteOutput() or RouteInput(), the list routing object will search
+the list of routing protocols, in priority order, until a route is found. Such
+routing protocol will invoke the appropriate callback and no further routing
+protocols will be searched.</p>
+</section>
+</section>
+<section id="global-centralized-routing">
+<span id="id3"></span><h3><span class="section-number">16.4.2.2. </span>Global centralized routing<a class="headerlink" href="#global-centralized-routing" title="Link to this heading">¶</a></h3>
+<p>Global centralized routing is sometimes called “God” routing; it is a special
+implementation that walks the simulation topology and runs a shortest path
+algorithm, and populates each node’s routing tables. No actual protocol overhead
+(on the simulated links) is incurred with this approach. It does have a few
+constraints:</p>
+<ul class="simple">
+<li><p><strong>Wired only:</strong>  It is not intended for use in wireless networks.</p></li>
+<li><p><strong>Unicast only:</strong> It does not do multicast.</p></li>
+<li><p><strong>Scalability:</strong>  Some users of this on large topologies (e.g. 1000 nodes)
+have noticed that the current implementation is not very scalable. The global
+centralized routing will be modified in the future to reduce computations and
+runtime performance.</p></li>
+</ul>
+<p>Presently, global centralized IPv4 unicast routing over both point-to-point and
+shared (CSMA) links is supported.</p>
+<p>By default, when using the <em>ns-3</em> helper API and the default InternetStackHelper,
+global routing capability will be added to the node, and global routing will be
+inserted as a routing protocol with lower priority than the static routes (i.e.,
+users can insert routes via Ipv4StaticRouting API and they will take precedence
+over routes found by global routing).</p>
+<section id="global-unicast-routing-api">
+<h4><span class="section-number">16.4.2.2.1. </span>Global Unicast Routing API<a class="headerlink" href="#global-unicast-routing-api" title="Link to this heading">¶</a></h4>
+<p>The public API is very minimal. User scripts include the following:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ns3/internet-module.h&quot;</span>
+</pre></div>
+</div>
+<p>If the default InternetStackHelper is used, then an instance of global routing
+will be aggregated to each node.  After IP addresses are configured, the
+following function call will cause all of the nodes that have an Ipv4 interface
+to receive forwarding tables entered automatically by the GlobalRouteManager:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ipv4GlobalRoutingHelper</span><span class="o">::</span><span class="n">PopulateRoutingTables</span><span class="p">();</span>
+</pre></div>
+</div>
+<p><em>Note:</em> A reminder that the wifi NetDevice will work but does not take any
+wireless effects into account. For wireless, we recommend OLSR dynamic routing
+described below.</p>
+<p>It is possible to call this function again in the midst of a simulation using
+the following additional public function:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ipv4GlobalRoutingHelper</span><span class="o">::</span><span class="n">RecomputeRoutingTables</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>which flushes the old tables, queries the nodes for new interface information,
+and rebuilds the routes.</p>
+<p>For instance, this scheduling call will cause the tables to be rebuilt
+at time 5 seconds:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Simulator</span><span class="o">::</span><span class="n">Schedule</span><span class="p">(</span><span class="n">Seconds</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span>
+<span class="w">                    </span><span class="o">&amp;</span><span class="n">Ipv4GlobalRoutingHelper</span><span class="o">::</span><span class="n">RecomputeRoutingTables</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>There are two attributes that govern the behavior. The first is
+Ipv4GlobalRouting::RandomEcmpRouting. If set to true, packets are randomly
+routed across equal-cost multipath routes. If set to false (default), only one
+route is consistently used. The second is
+Ipv4GlobalRouting::RespondToInterfaceEvents. If set to true, dynamically
+recompute the global routes upon Interface notification events (up/down, or
+add/remove address). If set to false (default), routing may break unless the
+user manually calls RecomputeRoutingTables() after such events. The default is
+set to false to preserve legacy <em>ns-3</em> program behavior.</p>
+</section>
+<section id="global-routing-implementation">
+<h4><span class="section-number">16.4.2.2.2. </span>Global Routing Implementation<a class="headerlink" href="#global-routing-implementation" title="Link to this heading">¶</a></h4>
+<p>This section is for those readers who care about how this is implemented.  A
+singleton object (GlobalRouteManager) is responsible for populating the static
+routes on each node, using the public Ipv4 API of that node.  It queries each
+node in the topology for a “globalRouter” interface.  If found, it uses the API
+of that interface to obtain a “link state advertisement (LSA)” for the router.
+Link State Advertisements are used in OSPF routing, and we follow their
+formatting.</p>
+<p>It is important to note that all of these computations are done before
+packets are flowing in the network.  In particular, there are no
+overhead or control packets being exchanged when using this implementation.
+Instead, this global route manager just walks the list of nodes to
+build the necessary information and configure each node’s routing table.</p>
+<p>The GlobalRouteManager populates a link state database with LSAs gathered from
+the entire topology. Then, for each router in the topology, the
+GlobalRouteManager executes the OSPF shortest path first (SPF) computation on
+the database, and populates the routing tables on each node.</p>
+<p>The quagga (<a class="reference external" href="https://www.nongnu.org/quagga/">https://www.nongnu.org/quagga/</a>) OSPF implementation was used as the
+basis for the routing computation logic. One benefit of following an existing
+OSPF SPF implementation is that OSPF already has defined link state
+advertisements for all common types of network links:</p>
+<ul class="simple">
+<li><p>point-to-point (serial links)</p></li>
+<li><p>point-to-multipoint (Frame Relay, ad hoc wireless)</p></li>
+<li><p>non-broadcast multiple access (ATM)</p></li>
+<li><p>broadcast (Ethernet)</p></li>
+</ul>
+<p>Therefore, we think that enabling these other link types will be more
+straightforward now that the underlying OSPF SPF framework is in place.</p>
+<p>Presently, we can handle IPv4 point-to-point, numbered links, as well as shared
+broadcast (CSMA) links.  Equal-cost multipath is also supported.  Although
+wireless link types are supported by the implementation, note that due
+to the nature of this implementation, any channel effects will not be
+considered and the routing tables will assume that every node on the
+same shared channel is reachable from every other node (i.e. it will
+be treated like a broadcast CSMA link).</p>
+<p>The GlobalRouteManager first walks the list of nodes and aggregates
+a GlobalRouter interface to each one as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;&gt;::</span><span class="n">iterator</span><span class="w"> </span><span class="n">Iterator</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Iterator</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NodeList</span><span class="o">::</span><span class="n">Begin</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">NodeList</span><span class="o">::</span><span class="n">End</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">GlobalRouter</span><span class="o">&gt;</span><span class="w"> </span><span class="n">globalRouter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">GlobalRouter</span><span class="o">&gt;</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+<span class="w">    </span><span class="n">node</span><span class="o">-&gt;</span><span class="n">AggregateObject</span><span class="p">(</span><span class="n">globalRouter</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>This interface is later queried and used to generate a Link State
+Advertisement for each router, and this link state database is
+fed into the OSPF shortest path computation logic. The Ipv4 API
+is finally used to populate the routes themselves.</p>
+</section>
+</section>
+<section id="rip-and-ripng">
+<h3><span class="section-number">16.4.2.3. </span>RIP and RIPng<a class="headerlink" href="#rip-and-ripng" title="Link to this heading">¶</a></h3>
+<p>The RIPv2 protocol for IPv4 is described in the <span class="target" id="index-4"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2453.html"><strong>RFC 2453</strong></a>, and it consolidates
+a number of improvements over the base protocol defined in <span class="target" id="index-5"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1058.html"><strong>RFC 1058</strong></a>.</p>
+<p>This IPv6 routing protocol (<span class="target" id="index-6"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2080.html"><strong>RFC 2080</strong></a>) is the evolution of the well-known
+RIPv1 (see <span class="target" id="index-7"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1058.html"><strong>RFC 1058</strong></a> and <span class="target" id="index-8"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1723.html"><strong>RFC 1723</strong></a>) routing protocol for IPv4.</p>
+<p>The protocols are very simple, and are normally suitable for flat, simple
+network topologies.</p>
+<p>RIPv1, RIPv2, and RIPng have the very same goals and limitations.
+In particular, RIP considers any route with a metric equal or greater
+than 16 as unreachable. As a consequence, the maximum number of hops is the
+network must be less than 15 (the number of routers is not set).
+Users are encouraged to read <span class="target" id="index-9"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2080.html"><strong>RFC 2080</strong></a> and <span class="target" id="index-10"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1058.html"><strong>RFC 1058</strong></a> to fully understand
+RIP behaviour and limitations.</p>
+<section id="routing-convergence">
+<h4><span class="section-number">16.4.2.3.1. </span>Routing convergence<a class="headerlink" href="#routing-convergence" title="Link to this heading">¶</a></h4>
+<p>RIP uses a Distance-Vector algorithm, and routes are updated according to
+the Bellman-Ford algorithm (sometimes known as Ford-Fulkerson algorithm).
+The algorithm has a convergence time of O(|V|*|E|) where |V| and |E|
+are the number of vertices (routers) and edges (links) respectively.
+It should be stressed that the convergence time is the number of steps in
+the algorithm, and each step is triggered by a message.
+Since Triggered Updates (i.e., when a route is changed) have a 1-5 seconds
+cooldown, the topology can require some time to be stabilized.</p>
+<p>Users should be aware that, during routing tables construction, the routers
+might drop packets. Data traffic should be sent only after a time long
+enough to allow RIP to build the network topology.
+Usually 80 seconds should be enough to have a suboptimal (but working)
+routing setup. This includes the time needed to propagate the routes to the
+most distant router (16 hops) with Triggered Updates.</p>
+<p>If the network topology is changed (e.g., a link is broken), the recovery
+time might be quite high, and it might be even higher than the initial
+setup time. Moreover, the network topology recovery is affected by
+the Split Horizoning strategy.</p>
+<p>The examples <code class="docutils literal notranslate"><span class="pre">examples/routing/ripng-simple-network.cc</span></code> and
+<code class="docutils literal notranslate"><span class="pre">examples/routing/rip-simple-network.cc</span></code>
+shows both the network setup and network recovery phases.</p>
+</section>
+<section id="split-horizoning">
+<h4><span class="section-number">16.4.2.3.2. </span>Split Horizoning<a class="headerlink" href="#split-horizoning" title="Link to this heading">¶</a></h4>
+<p>Split Horizon is a strategy to prevent routing instability.
+Three options are possible:</p>
+<ul class="simple">
+<li><p>No Split Horizon</p></li>
+<li><p>Split Horizon</p></li>
+<li><p>Poison Reverse</p></li>
+</ul>
+<p>In the first case, routes are advertised on all the router’s interfaces.
+In the second case, routers will not advertise a route on the interface
+from which it was learned.
+Poison Reverse will advertise the route on the interface from which it
+was learned, but with a metric of 16 (infinity).
+For a full analysis of the three techniques, see <span class="target" id="index-11"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1058.html"><strong>RFC 1058</strong></a>, section 2.2.</p>
+<p>The examples are based on the network topology
+described in the RFC, but it does not show the effect described there.</p>
+<p>The reason are the Triggered Updates, together with the fact that when a
+router invalidates a route, it will immediately propagate the route
+unreachability, thus preventing most of the issues described in the RFC.</p>
+<p>However, with complex topologies, it is still possible to have route
+instability phenomena similar to the one described in the RFC after a
+link failure. As a consequence, all the considerations about Split Horizon
+remains valid.</p>
+</section>
+<section id="default-routes">
+<h4><span class="section-number">16.4.2.3.3. </span>Default routes<a class="headerlink" href="#default-routes" title="Link to this heading">¶</a></h4>
+<p>RIP protocol should be installed <em>only</em> on routers. As a consequence,
+nodes will not know what is the default router.</p>
+<p>To overcome this limitation, users should either install the default route
+manually (e.g., by resorting to Ipv4StaticRouting or Ipv6StaticRouting), or
+by using RADVd (in case of IPv6).
+RADVd is available in <em>ns-3</em> in the Applications module, and it is strongly
+suggested.</p>
+</section>
+<section id="protocol-parameters-and-options">
+<h4><span class="section-number">16.4.2.3.4. </span>Protocol parameters and options<a class="headerlink" href="#protocol-parameters-and-options" title="Link to this heading">¶</a></h4>
+<p>The RIP <em>ns-3</em> implementations allow to change all the timers associated
+with route updates and routes lifetime.</p>
+<p>Moreover, users can change the interface metrics on a per-node basis.</p>
+<p>The type of Split Horizoning (to avoid routes back-propagation) can be
+selected on a per-node basis, with the choices being “no split horizon”,
+“split horizon” and “poison reverse”. See <span class="target" id="index-12"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2080.html"><strong>RFC 2080</strong></a> for further details,
+and <span class="target" id="index-13"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1058.html"><strong>RFC 1058</strong></a> for a complete discussion on the split horizoning strategies.</p>
+<p>Moreover, it is possible to use a non-standard value for Link Down Value (i.e.,
+the value after which a link is considered down). The default is value is 16.</p>
+</section>
+<section id="limitations">
+<h4><span class="section-number">16.4.2.3.5. </span>Limitations<a class="headerlink" href="#limitations" title="Link to this heading">¶</a></h4>
+<p>There is no support for the Next Hop option (<span class="target" id="index-14"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc2080.html"><strong>RFC 2080</strong></a>, Section 2.1.1).
+The Next Hop option is useful when RIP is not being run on all of the
+routers on a network.
+Support for this option may be considered in the future.</p>
+<p>There is no support for CIDR prefix aggregation. As a result, both routing
+tables and route advertisements may be larger than necessary.
+Prefix aggregation may be added in the future.</p>
+</section>
+</section>
+<section id="other-routing-protocols">
+<h3><span class="section-number">16.4.2.4. </span>Other routing protocols<a class="headerlink" href="#other-routing-protocols" title="Link to this heading">¶</a></h3>
+<p>Other routing protocols documentation can be found under the respective
+modules sections, e.g.:</p>
+<ul class="simple">
+<li><p>AODV</p></li>
+<li><p>Click</p></li>
+<li><p>DSDV</p></li>
+<li><p>DSR</p></li>
+<li><p>NixVectorRouting</p></li>
+<li><p>OLSR</p></li>
+<li><p>etc.</p></li>
+</ul>
+</section>
+</section>
+<section id="multicast-routing">
+<span id="id4"></span><h2><span class="section-number">16.4.3. </span>Multicast routing<a class="headerlink" href="#multicast-routing" title="Link to this heading">¶</a></h2>
+<p>The following function is used to add a static multicast route
+to a node:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="nf">Ipv4StaticRouting::AddMulticastRoute</span><span class="p">(</span><span class="n">Ipv4Address</span><span class="w"> </span><span class="n">origin</span><span class="p">,</span>
+<span class="w">                                     </span><span class="n">Ipv4Address</span><span class="w"> </span><span class="n">group</span><span class="p">,</span>
+<span class="w">                                     </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">inputInterface</span><span class="p">,</span>
+<span class="w">                                     </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">outputInterfaces</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>A multicast route must specify an origin IP address, a multicast group and an
+input network interface index as conditions and provide a vector of output
+network interface indices over which packets matching the conditions are sent.</p>
+<p>Typically there are two main types of multicast routes:</p>
+<ul class="simple">
+<li><p>Routes used during forwarding, and</p></li>
+<li><p>Routes used in the originator node.</p></li>
+</ul>
+<p>In the first case all the conditions must be explicitly
+provided.</p>
+<p>In the second case, the route is equivalent to a unicast route, and must be added
+through <cite>Ipv4StaticRouting::AddHostRouteTo</cite>.</p>
+<p>Another command sets the default multicast route:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="nf">Ipv4StaticRouting::SetDefaultMulticastRoute</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">outputInterface</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This is the multicast equivalent of the unicast version SetDefaultRoute. We
+tell the routing system what to do in the case where a specific route to a
+destination multicast group is not found. The system forwards packets out the
+specified interface in the hope that “something out there” knows better how to
+route the packet. This method is only used in initially sending packets off of a
+host. The default multicast route is not consulted during forwarding – exact
+routes must be specified using AddMulticastRoute for that case.</p>
+<p>Since we’re basically sending packets to some entity we think may know better
+what to do, we don’t pay attention to “subtleties” like origin address, nor do
+we worry about forwarding out multiple  interfaces. If the default multicast
+route is set, it is returned as the selected route from LookupStatic
+irrespective of origin or multicast group if another specific route is not
+found.</p>
+<p>Finally, a number of additional functions are provided to fetch and remove
+multicast routes:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">GetNMulticastRoutes</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+
+<span class="n">Ipv4MulticastRoute</span><span class="w"> </span><span class="o">*</span><span class="nf">GetMulticastRoute</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+
+<span class="n">Ipv4MulticastRoute</span><span class="w"> </span><span class="o">*</span><span class="nf">GetDefaultMulticastRoute</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="nf">RemoveMulticastRoute</span><span class="p">(</span><span class="n">Ipv4Address</span><span class="w"> </span><span class="n">origin</span><span class="p">,</span>
+<span class="w">                          </span><span class="n">Ipv4Address</span><span class="w"> </span><span class="n">group</span><span class="p">,</span>
+<span class="w">                          </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">inputInterface</span><span class="p">);</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">RemoveMulticastRoute</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">index</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">16.4. Routing overview</a><ul>
+<li><a class="reference internal" href="#routing-architecture">16.4.1. Routing architecture</a></li>
+<li><a class="reference internal" href="#unicast-routing">16.4.2. Unicast routing</a><ul>
+<li><a class="reference internal" href="#ipv-4-6-listrouting">16.4.2.1. Ipv[4,6]ListRouting</a><ul>
+<li><a class="reference internal" href="#ipv-4-6-listrouting-addroutingprotocol">16.4.2.1.1. Ipv[4,6]ListRouting::AddRoutingProtocol</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#global-centralized-routing">16.4.2.2. Global centralized routing</a><ul>
+<li><a class="reference internal" href="#global-unicast-routing-api">16.4.2.2.1. Global Unicast Routing API</a></li>
+<li><a class="reference internal" href="#global-routing-implementation">16.4.2.2.2. Global Routing Implementation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rip-and-ripng">16.4.2.3. RIP and RIPng</a><ul>
+<li><a class="reference internal" href="#routing-convergence">16.4.2.3.1. Routing convergence</a></li>
+<li><a class="reference internal" href="#split-horizoning">16.4.2.3.2. Split Horizoning</a></li>
+<li><a class="reference internal" href="#default-routes">16.4.2.3.3. Default routes</a></li>
+<li><a class="reference internal" href="#protocol-parameters-and-options">16.4.2.3.4. Protocol parameters and options</a></li>
+<li><a class="reference internal" href="#limitations">16.4.2.3.5. Limitations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-routing-protocols">16.4.2.4. Other routing protocols</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#multicast-routing">16.4.3. Multicast routing</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="ipv6.html"
+                          title="previous chapter"><span class="section-number">16.3. </span>IPv6</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="tcp.html"
+                          title="next chapter"><span class="section-number">16.5. </span>TCP models in ns-3</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/routing-overview.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="tcp.html" title="16.5. TCP models in ns-3"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ipv6.html" title="16.3. IPv6"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="internet-models.html" ><span class="section-number">16. </span>Internet Models (IP, TCP, Routing, UDP)</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">16.4. </span>Routing overview</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

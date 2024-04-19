@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>21. Wi-Fi Mesh Module Documentation &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="21.1. Design Documentation" href="mesh-design.html" />
+    <link rel="prev" title="20.5. References" href="lte-references.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mesh-design.html" title="21.1. Design Documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="lte-references.html" title="20.5. References"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">21. </span>Wi-Fi Mesh Module Documentation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="wi-fi-mesh-module-documentation">
+<h1><span class="section-number">21. </span>Wi-Fi Mesh Module Documentation<a class="headerlink" href="#wi-fi-mesh-module-documentation" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mesh-design.html">21.1. Design Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mesh-design.html#overview">21.1.1. Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mesh-design.html#overview-of-ieee-802-11s">21.1.1.1. Overview of IEEE 802.11s</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mesh-design.html#peer-management-protocol">21.1.1.1.1. Peer management protocol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh-design.html#hybrid-wireless-mesh-protocol">21.1.1.1.2. Hybrid Wireless Mesh Protocol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh-design.html#forwarding-delay">21.1.1.1.3. Forwarding delay</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mesh-design.html#scope-and-limitations">21.1.2. Scope and Limitations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mesh-design.html#supported-features">21.1.2.1. Supported features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mesh-design.html#verification">21.1.2.2. Verification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mesh-design.html#unsupported-features">21.1.2.3. Unsupported features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mesh-design.html#models-yet-to-be-created">21.1.2.4. Models yet to be created</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mesh-design.html#open-issues">21.1.2.5. Open issues</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mesh-user.html">21.2. User Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mesh-user.html#using-the-meshnetdevice">21.2.1. Using the MeshNetDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mesh-testing.html">21.3. Testing Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mesh-references.html">21.4. References</a></li>
+</ul>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="lte-references.html"
+                          title="previous chapter"><span class="section-number">20.5. </span>References</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="mesh-design.html"
+                          title="next chapter"><span class="section-number">21.1. </span>Design Documentation</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mesh.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mesh-design.html" title="21.1. Design Documentation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="lte-references.html" title="20.5. References"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">21. </span>Wi-Fi Mesh Module Documentation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

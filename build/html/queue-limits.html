@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>24.7. Queue limits &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="25. Nix-Vector Routing Documentation" href="nix-vector-routing.html" />
+    <link rel="prev" title="24.6. Queues" href="queue.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="nix-vector-routing.html" title="25. Nix-Vector Routing Documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="queue.html" title="24.6. Queues"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="network.html" accesskey="U"><span class="section-number">24. </span>Network Module</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">24.7. </span>Queue limits</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="queue-limits">
+<h1><span class="section-number">24.7. </span>Queue limits<a class="headerlink" href="#queue-limits" title="Link to this heading">¶</a></h1>
+<p>This section documents the queue limits model, which is used by the traffic control
+to limit the NetDevices queueing delay. It operates on the transmission path of
+the network node.</p>
+<p>The reduction of the NetDevices queueing delay is essential to improve the effectiveness of
+Active Queue Management (AQM) algorithms.
+Careful assessment of the queueing delay includes a byte-based measure of the NetDevices
+queue length. In this design, traffic control can use different byte-based schemes to
+limit the queueing delay. Currently the only available scheme is DynamicQueueLimits, which is
+modelled after the dynamic queue limit library of Linux.</p>
+<section id="model-description">
+<h2><span class="section-number">24.7.1. </span>Model Description<a class="headerlink" href="#model-description" title="Link to this heading">¶</a></h2>
+<p>The source code for the model lives in the directory <code class="docutils literal notranslate"><span class="pre">src/network/utils</span></code>.</p>
+<p>The model allows a byte-based measure of the netdevice queue. The byte-based measure
+more accurately approximates the time required to empty the queue than a packet-based measure.</p>
+<p>To inform the upper layers about the transmission of packets, NetDevices can call a couple
+of functions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">NotifyQueuedBytes</span> <span class="pre">(uint32_t</span> <span class="pre">bytes)</span></code>: Report the number of bytes queued to the device queue</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">NotifyTransmittedBytes</span> <span class="pre">(uint32_t</span> <span class="pre">bytes)</span></code>: Report the number of bytes transmitted by device</p></li>
+</ul>
+<p>Based on this information, the QueueLimits object can stop the transmission queue.</p>
+<p>In case of multiqueue NetDevices this mechanism is available for each queue.</p>
+<p>The QueueLimits model can be used on any NetDevice modelled in ns-3.</p>
+<section id="design">
+<h3><span class="section-number">24.7.1.1. </span>Design<a class="headerlink" href="#design" title="Link to this heading">¶</a></h3>
+<p>An abstract base class, class QueueLimits, is subclassed for specific
+byte-based limiting strategies.</p>
+<p>Common operations provided by the base class QueueLimits include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Reset</span> <span class="pre">()</span></code>:  Reset queue limits state</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Completed</span> <span class="pre">(uint32_t</span> <span class="pre">count)</span></code>:  Record the number of completed bytes and recalculate the limit</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int32_t</span> <span class="pre">Available</span> <span class="pre">()</span> <span class="pre">const</span></code>:  Return how many bytes can be queued</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Queued</span> <span class="pre">(uint32_t</span> <span class="pre">count)</span></code>:  Record number of bytes queued</p></li>
+</ul>
+<section id="dynamicqueuelimits">
+<h4><span class="section-number">24.7.1.1.1. </span>DynamicQueueLimits<a class="headerlink" href="#dynamicqueuelimits" title="Link to this heading">¶</a></h4>
+<p>Dynamic queue limits (DQL) is a basic library implemented in the Linux kernel to limit the Ethernet
+queueing delay. DQL is a general purpose queue length controller. The goal of DQL is to calculate
+the limit as the minimum number of bytes needed to prevent starvation.</p>
+<p>Three attributes are defined in the DynamicQueueLimits class:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">HoldTime</span></code>: The DQL algorithm hold time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MaxLimit</span></code>: Maximum limit</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MinLimit</span></code>: Minimum limit</p></li>
+</ul>
+<p>The DQL algorithm hold time is 1 s. Reducing the HoldTime increases the responsiveness of
+DQL with consequent greater number of limit variation events. Conversely, increasing the HoldTime
+decreases the responsiveness of DQL with a minor number of limit variation events.
+The limit calculated by DQL is in the range from MinLimit to MaxLimit.
+The default values are respectively 0 and DQL_MAX_LIMIT.
+Increasing the MinLimit is recommended in case of higher NetDevice transmission rate (e.g. 1 Gbps)
+while reducing the MaxLimit is recommended in case of lower NetDevice transmission rate (e.g. 500 Kbps).</p>
+<p>There is one trace source in DynamicQueueLimits class that may be hooked:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Limit</span></code>: Limit value calculated by DQL</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="usage">
+<h2><span class="section-number">24.7.2. </span>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
+<section id="helpers">
+<h3><span class="section-number">24.7.2.1. </span>Helpers<a class="headerlink" href="#helpers" title="Link to this heading">¶</a></h3>
+<p>A typical usage pattern is to create a traffic control helper and configure
+the queue limits type and attributes from the helper, such as this example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TrafficControlHelper</span><span class="w"> </span><span class="n">tch</span><span class="p">;</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tch</span><span class="p">.</span><span class="n">SetRootQueueDisc</span><span class="p">(</span><span class="s">&quot;ns3::PfifoFastQueueDisc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Limit&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">UintegerValue</span><span class="p">(</span><span class="mi">1000</span><span class="p">));</span>
+
+<span class="n">tch</span><span class="p">.</span><span class="n">SetQueueLimits</span><span class="p">(</span><span class="s">&quot;ns3::DynamicQueueLimits&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;HoldTime&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">StringValue</span><span class="p">(</span><span class="s">&quot;4ms&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>then install the configuration on a NetDevices container</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">tch</span><span class="p">.</span><span class="n">Install</span><span class="w"> </span><span class="p">(</span><span class="n">devices</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">24.7. Queue limits</a><ul>
+<li><a class="reference internal" href="#model-description">24.7.1. Model Description</a><ul>
+<li><a class="reference internal" href="#design">24.7.1.1. Design</a><ul>
+<li><a class="reference internal" href="#dynamicqueuelimits">24.7.1.1.1. DynamicQueueLimits</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">24.7.2. Usage</a><ul>
+<li><a class="reference internal" href="#helpers">24.7.2.1. Helpers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="queue.html"
+                          title="previous chapter"><span class="section-number">24.6. </span>Queues</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="nix-vector-routing.html"
+                          title="next chapter"><span class="section-number">25. </span>Nix-Vector Routing Documentation</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/queue-limits.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="nix-vector-routing.html" title="25. Nix-Vector Routing Documentation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="queue.html" title="24.6. Queues"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="network.html" ><span class="section-number">24. </span>Network Module</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">24.7. </span>Queue limits</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

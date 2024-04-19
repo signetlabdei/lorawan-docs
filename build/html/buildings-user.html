@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>8.2. User Documentation &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="8.3. Testing Documentation" href="buildings-testing.html" />
+    <link rel="prev" title="8.1. Design documentation" href="buildings-design.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="buildings-testing.html" title="8.3. Testing Documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="buildings-design.html" title="8.1. Design documentation"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="buildings.html" accesskey="U"><span class="section-number">8. </span>Buildings Module</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">8.2. </span>User Documentation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="user-documentation">
+<h1><span class="section-number">8.2. </span>User Documentation<a class="headerlink" href="#user-documentation" title="Link to this heading">¶</a></h1>
+<section id="how-to-use-buildings-in-a-simulation">
+<h2><span class="section-number">8.2.1. </span>How to use buildings in a simulation<a class="headerlink" href="#how-to-use-buildings-in-a-simulation" title="Link to this heading">¶</a></h2>
+<p>In this section we explain the basic usage of the buildings model within a
+simulation program.</p>
+<section id="include-the-headers">
+<h3><span class="section-number">8.2.1.1. </span>Include the headers<a class="headerlink" href="#include-the-headers" title="Link to this heading">¶</a></h3>
+<p>Add this at the beginning of your simulation program:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;ns3/buildings-module.h&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="create-a-building">
+<h3><span class="section-number">8.2.1.2. </span>Create a building<a class="headerlink" href="#create-a-building" title="Link to this heading">¶</a></h3>
+<p>As an example, let’s create a residential 10 x 20 x 10 building:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">double</span> <span class="n">x_min</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+<span class="n">double</span> <span class="n">x_max</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">;</span>
+<span class="n">double</span> <span class="n">y_min</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+<span class="n">double</span> <span class="n">y_max</span> <span class="o">=</span> <span class="mf">20.0</span><span class="p">;</span>
+<span class="n">double</span> <span class="n">z_min</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+<span class="n">double</span> <span class="n">z_max</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">;</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Building</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Building</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">b</span><span class="o">-&gt;</span><span class="n">SetBoundaries</span><span class="p">(</span><span class="n">Box</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">z_min</span><span class="p">,</span> <span class="n">z_max</span><span class="p">));</span>
+<span class="n">b</span><span class="o">-&gt;</span><span class="n">SetBuildingType</span><span class="p">(</span><span class="n">Building</span><span class="p">::</span><span class="n">Residential</span><span class="p">);</span>
+<span class="n">b</span><span class="o">-&gt;</span><span class="n">SetExtWallsType</span><span class="p">(</span><span class="n">Building</span><span class="p">::</span><span class="n">ConcreteWithWindows</span><span class="p">);</span>
+<span class="n">b</span><span class="o">-&gt;</span><span class="n">SetNFloors</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">b</span><span class="o">-&gt;</span><span class="n">SetNRoomsX</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">b</span><span class="o">-&gt;</span><span class="n">SetNRoomsY</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This building has three floors and an internal 3 x 2  grid of rooms of equal size.</p>
+<p>The helper class GridBuildingAllocator is also available to easily
+create a set of buildings with identical characteristics placed on a
+rectangular grid. Here’s an example of how to use it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">GridBuildingAllocator</span><span class="o">&gt;</span>  <span class="n">gridBuildingAllocator</span><span class="p">;</span>
+<span class="n">gridBuildingAllocator</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">GridBuildingAllocator</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">gridBuildingAllocator</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s2">&quot;GridWidth&quot;</span><span class="p">,</span> <span class="n">UintegerValue</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+<span class="n">gridBuildingAllocator</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s2">&quot;LengthX&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span><span class="p">(</span><span class="mi">7</span><span class="p">));</span>
+<span class="n">gridBuildingAllocator</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s2">&quot;LengthY&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span><span class="p">(</span><span class="mi">13</span><span class="p">));</span>
+<span class="n">gridBuildingAllocator</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s2">&quot;DeltaX&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+<span class="n">gridBuildingAllocator</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s2">&quot;DeltaY&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+<span class="n">gridBuildingAllocator</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s2">&quot;Height&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span><span class="p">(</span><span class="mi">6</span><span class="p">));</span>
+<span class="n">gridBuildingAllocator</span><span class="o">-&gt;</span><span class="n">SetBuildingAttribute</span><span class="p">(</span><span class="s2">&quot;NRoomsX&quot;</span><span class="p">,</span> <span class="n">UintegerValue</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+<span class="n">gridBuildingAllocator</span><span class="o">-&gt;</span><span class="n">SetBuildingAttribute</span><span class="p">(</span><span class="s2">&quot;NRoomsY&quot;</span><span class="p">,</span> <span class="n">UintegerValue</span><span class="p">(</span><span class="mi">4</span><span class="p">));</span>
+<span class="n">gridBuildingAllocator</span><span class="o">-&gt;</span><span class="n">SetBuildingAttribute</span><span class="p">(</span><span class="s2">&quot;NFloors&quot;</span><span class="p">,</span> <span class="n">UintegerValue</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+<span class="n">gridBuildingAllocator</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s2">&quot;MinX&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<span class="n">gridBuildingAllocator</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s2">&quot;MinY&quot;</span><span class="p">,</span> <span class="n">DoubleValue</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<span class="n">gridBuildingAllocator</span><span class="o">-&gt;</span><span class="n">Create</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This will create a 3x2 grid of 6 buildings, each 7 x 13 x 6 m with 2 x
+4 rooms inside and 2 foors; the buildings are spaced by 3 m on both
+the x and the y axis.</p>
+</section>
+<section id="setup-nodes-and-mobility-models">
+<h3><span class="section-number">8.2.1.3. </span>Setup nodes and mobility models<a class="headerlink" href="#setup-nodes-and-mobility-models" title="Link to this heading">¶</a></h3>
+<p>Nodes and mobility models are configured as usual, however in order to
+use them with the buildings model you need an additional call to
+<code class="docutils literal notranslate"><span class="pre">BuildingsHelper::Install()</span></code>, so as to let the mobility model include
+the information on their position w.r.t. the buildings. Here is an example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MobilityHelper</span> <span class="n">mobility</span><span class="p">;</span>
+<span class="n">mobility</span><span class="o">.</span><span class="n">SetMobilityModel</span><span class="p">(</span><span class="s2">&quot;ns3::ConstantPositionMobilityModel&quot;</span><span class="p">);</span>
+<span class="n">ueNodes</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">mobility</span><span class="o">.</span><span class="n">Install</span><span class="p">(</span><span class="n">ueNodes</span><span class="p">);</span>
+<span class="n">BuildingsHelper</span><span class="p">::</span><span class="n">Install</span><span class="p">(</span><span class="n">ueNodes</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>It is to be noted that any mobility model can be used. However, the
+user is advised to make sure that the behavior of the mobility model
+being used is consistent with the presence of Buildings. For example,
+using a simple random mobility over the whole simulation area in
+presence of buildings might easily results in node moving in and out
+of buildings, regardless of the presence of walls.</p>
+<p>One dedicated buildings-aware mobility model is the
+<code class="docutils literal notranslate"><span class="pre">RandomWalk2dOutdoorMobilityModel</span></code>.  This class is similar to the
+<code class="docutils literal notranslate"><span class="pre">RandomWalk2dMobilityModel</span></code> but avoids placing the trajectory
+on a path that would intersect a building wall.  If a boundary
+is encountered (either the bounding box or a building wall), the
+model rebounds with a random direction and speed that ensures that
+the trajectory stays outside the buildings.  An example program
+that demonstrates the use of this model is the
+<code class="docutils literal notranslate"><span class="pre">src/buildings/examples/outdoor-random-walk-example.cc</span></code> which
+has an associated shell script to plot the traces generated.
+Another example program demonstrates how this outdoor mobility
+model can be used as the basis of a group mobility model, with
+the outdoor buildings-aware model serving as the parent or
+reference mobility model, and with additional nodes defining a
+child mobility model providing the offset from the reference
+mobility model.  This example,
+<code class="docutils literal notranslate"><span class="pre">src/buildings/example/outdoor-group-mobility-example.cc</span></code>,
+also has an associated shell script
+(<code class="docutils literal notranslate"><span class="pre">outdoor-group-mobility-animate.sh</span></code>) that can be used to generate
+an animated GIF of the group’s movement.</p>
+</section>
+<section id="place-some-nodes">
+<h3><span class="section-number">8.2.1.4. </span>Place some nodes<a class="headerlink" href="#place-some-nodes" title="Link to this heading">¶</a></h3>
+<p>You can place nodes in your simulation using several methods, which
+are described in the following.</p>
+<section id="legacy-positioning-methods">
+<h4><span class="section-number">8.2.1.4.1. </span>Legacy positioning methods<a class="headerlink" href="#legacy-positioning-methods" title="Link to this heading">¶</a></h4>
+<p>Any legacy ns-3 positioning method can be used to place node in the
+simulation. The important additional step is to For example, you can
+place nodes manually like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ptr</span><span class="o">&lt;</span><span class="n">ConstantPositionMobilityModel</span><span class="o">&gt;</span> <span class="n">mm0</span> <span class="o">=</span> <span class="n">enbNodes</span><span class="o">.</span><span class="n">Get</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">GetObject</span><span class="o">&lt;</span><span class="n">ConstantPositionMobilityModel</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">ConstantPositionMobilityModel</span><span class="o">&gt;</span> <span class="n">mm1</span> <span class="o">=</span> <span class="n">enbNodes</span><span class="o">.</span><span class="n">Get</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">GetObject</span><span class="o">&lt;</span><span class="n">ConstantPositionMobilityModel</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">mm0</span><span class="o">-&gt;</span><span class="n">SetPosition</span><span class="p">(</span><span class="n">Vector</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">));</span>
+<span class="n">mm1</span><span class="o">-&gt;</span><span class="n">SetPosition</span><span class="p">(</span><span class="n">Vector</span><span class="p">(</span><span class="mf">30.0</span><span class="p">,</span> <span class="mf">40.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">));</span>
+
+<span class="n">MobilityHelper</span> <span class="n">mobility</span><span class="p">;</span>
+<span class="n">mobility</span><span class="o">.</span><span class="n">SetMobilityModel</span><span class="p">(</span><span class="s2">&quot;ns3::ConstantPositionMobilityModel&quot;</span><span class="p">);</span>
+<span class="n">ueNodes</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">mobility</span><span class="o">.</span><span class="n">Install</span><span class="p">(</span><span class="n">ueNodes</span><span class="p">);</span>
+<span class="n">BuildingsHelper</span><span class="p">::</span><span class="n">Install</span><span class="p">(</span><span class="n">ueNodes</span><span class="p">);</span>
+<span class="n">mm0</span><span class="o">-&gt;</span><span class="n">SetPosition</span><span class="p">(</span><span class="n">Vector</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">));</span>
+<span class="n">mm1</span><span class="o">-&gt;</span><span class="n">SetPosition</span><span class="p">(</span><span class="n">Vector</span><span class="p">(</span><span class="mf">30.0</span><span class="p">,</span> <span class="mf">40.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>Alternatively, you could use any existing PositionAllocator
+class. The coordinates of the node will determine whether it is placed
+outdoor or indoor and, if indoor, in which building and room it is placed.</p>
+</section>
+<section id="building-specific-positioning-methods">
+<h4><span class="section-number">8.2.1.4.2. </span>Building-specific positioning methods<a class="headerlink" href="#building-specific-positioning-methods" title="Link to this heading">¶</a></h4>
+<p>The following position allocator classes are available to place node
+in special positions with respect to buildings:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">RandomBuildingPositionAllocator</span></code>: Allocate each position by
+randomly choosing a building from the list of all buildings, and
+then randomly choosing a position inside the building.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RandomRoomPositionAllocator</span></code>: Allocate each position by randomly
+choosing a room from the list of rooms in all buildings, and then
+randomly choosing a position inside the room.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SameRoomPositionAllocator</span></code>: Walks a given NodeContainer
+sequentially, and for each node allocate a new position randomly in
+the same room of that node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FixedRoomPositionAllocator</span></code>: Generate a random position
+uniformly distributed in the volume of a chosen room inside a
+chosen building.</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="making-the-mobility-model-consistent-for-a-node">
+<h3><span class="section-number">8.2.1.5. </span>Making the Mobility Model Consistent for a node<a class="headerlink" href="#making-the-mobility-model-consistent-for-a-node" title="Link to this heading">¶</a></h3>
+<p>Initially, a mobility model of a node is made consistent when a node is
+initialized, which eventually triggers a call to the <code class="docutils literal notranslate"><span class="pre">DoInitialize</span></code>
+method of the <cite>MobilityBuildingInfo`</cite> class. In particular, it calls the
+<code class="docutils literal notranslate"><span class="pre">MakeMobilityModelConsistent</span></code> method, which goes through the lists of
+all buildings, determine if the node is indoor or outdoor, and if indoor
+it also determines the building in which the node is located and the
+corresponding floor number inside the building. Moreover, this method also
+caches the position of the node, which is used to make the mobility model
+consistent for a moving node whenever the <code class="docutils literal notranslate"><span class="pre">IsInside</span></code> method of
+<code class="docutils literal notranslate"><span class="pre">MobilityBuildingInfo</span></code> class is called.</p>
+</section>
+<section id="building-aware-pathloss-model">
+<h3><span class="section-number">8.2.1.6. </span>Building-aware pathloss model<a class="headerlink" href="#building-aware-pathloss-model" title="Link to this heading">¶</a></h3>
+<p>After you placed buildings and nodes in a simulation, you can use a
+building-aware pathloss model in a simulation exactly in the same way
+you would use any regular path loss model. How to do this is specific
+for the wireless module that you are considering (lte, wifi, wimax,
+etc.), so please refer to the documentation of that model for specific
+instructions.</p>
+</section>
+<section id="building-aware-channel-condition-models">
+<h3><span class="section-number">8.2.1.7. </span>Building-aware channel condition models<a class="headerlink" href="#building-aware-channel-condition-models" title="Link to this heading">¶</a></h3>
+<p>The class BuildingsChannelConditionModel implements a <a class="reference external" href="propagation.html#channelconditionmodel">channel condition model</a>
+which determines the LOS/NLOS channel state based on the buildings deployed in
+the scenario.
+In addition, based on the wall material of the building, low/high building
+penetration losses are considered, as defined in 3GPP TS 38.901 7.4.3.1.
+In particular, for O2I condition, in case of Wood or ConcreteWithWindows material,
+low losses are considered in the pathloss calculation. In case the material has
+been set to ConcreteWithoutWindows or StoneBlocks, high losses are considered.
+Notice that in certain corner cases, such as the I2O2I interference, the model
+underestimates losses by applying either low or high losses based on the wall material
+of the involved nodes. For a more accurate estimation the model can be further extended.</p>
+<p>The classes <code class="docutils literal notranslate"><span class="pre">ThreeGppV2vUrbanChannelConditionModel</span></code> and
+<code class="docutils literal notranslate"><span class="pre">ThreeGppV2vHighwayChannelConditionModel</span></code> implement hybrid channel condition
+models, specifically designed to model vehicular environments.
+More information can be found in the <a class="reference internal" href="propagation.html#sec-3gpp-v2v-ch-cond"><span class="std std-ref">documentation
+of the propagation module</span></a>.</p>
+</section>
+</section>
+<section id="main-configurable-attributes">
+<h2><span class="section-number">8.2.2. </span>Main configurable attributes<a class="headerlink" href="#main-configurable-attributes" title="Link to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">Building</span></code> class has the following configurable parameters:</p>
+<ul class="simple">
+<li><p>building type: Residential, Office and Commercial.</p></li>
+<li><p>external walls type: Wood, ConcreteWithWindows, ConcreteWithoutWindows and StoneBlocks.</p></li>
+<li><p>building bounds: a <code class="docutils literal notranslate"><span class="pre">Box</span></code> class with the building bounds.</p></li>
+<li><p>number of floors.</p></li>
+<li><p>number of rooms in x-axis and y-axis (rooms can be placed only in a grid way).</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">BuildingMobilityLossModel</span></code> parameter configurable with the ns3 attribute system is represented by the bound (string <code class="docutils literal notranslate"><span class="pre">Bounds</span></code>) of the simulation area by providing a <code class="docutils literal notranslate"><span class="pre">Box</span></code> class with the area bounds. Moreover, by means of its methods the following parameters can be configured:</p>
+<ul class="simple">
+<li><p>the number of floor the node is placed (default 0).</p></li>
+<li><p>the position in the rooms grid.</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">BuildingPropagationLossModel</span></code> class has the following configurable parameters configurable with the attribute system:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Frequency</span></code>: reference frequency (default 2160 MHz), note that by setting the frequency the wavelength is set accordingly automatically and vice-versa).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Lambda</span></code>: the wavelength (0.139 meters, considering the above frequency).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ShadowSigmaOutdoor</span></code>: the standard deviation of the shadowing for outdoor nodes (default 7.0).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ShadowSigmaIndoor</span></code>: the standard deviation of the shadowing for indoor nodes (default 8.0).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ShadowSigmaExtWalls</span></code>: the standard deviation of the shadowing due to external walls penetration for outdoor to indoor communications (default 5.0).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RooftopLevel</span></code>: the level of the rooftop of the building in meters (default 20 meters).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Los2NlosThr</span></code>: the value of distance of the switching point between line-of-sigth and non-line-of-sight propagation model in meters (default 200 meters).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ITU1411DistanceThr</span></code>: the value of distance of the switching point between short range (ITU 1211) communications and long range (Okumura Hata) in meters (default 200 meters).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MinDistance</span></code>: the minimum distance in meters between two nodes for evaluating the pathloss (considered neglictible before this threshold) (default 0.5 meters).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Environment</span></code>: the environment scenario among Urban, SubUrban and OpenAreas (default Urban).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CitySize</span></code>: the dimension of the city among Small, Medium, Large (default Large).</p></li>
+</ul>
+<p>In order to use the hybrid mode, the class to be used is the <code class="docutils literal notranslate"><span class="pre">HybridBuildingMobilityLossModel</span></code>, which allows the selection of the proper pathloss model according to the pathloss logic presented in the design chapter. However, this solution has the problem that the pathloss model switching points might present discontinuities due to the different characteristics of the model. This implies that according to the specific scenario, the threshold used for switching have to be properly tuned.
+The simple <code class="docutils literal notranslate"><span class="pre">OhBuildingMobilityLossModel</span></code> overcome this problem by using only the Okumura Hata model and the wall penetration losses.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">8.2. User Documentation</a><ul>
+<li><a class="reference internal" href="#how-to-use-buildings-in-a-simulation">8.2.1. How to use buildings in a simulation</a><ul>
+<li><a class="reference internal" href="#include-the-headers">8.2.1.1. Include the headers</a></li>
+<li><a class="reference internal" href="#create-a-building">8.2.1.2. Create a building</a></li>
+<li><a class="reference internal" href="#setup-nodes-and-mobility-models">8.2.1.3. Setup nodes and mobility models</a></li>
+<li><a class="reference internal" href="#place-some-nodes">8.2.1.4. Place some nodes</a><ul>
+<li><a class="reference internal" href="#legacy-positioning-methods">8.2.1.4.1. Legacy positioning methods</a></li>
+<li><a class="reference internal" href="#building-specific-positioning-methods">8.2.1.4.2. Building-specific positioning methods</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#making-the-mobility-model-consistent-for-a-node">8.2.1.5. Making the Mobility Model Consistent for a node</a></li>
+<li><a class="reference internal" href="#building-aware-pathloss-model">8.2.1.6. Building-aware pathloss model</a></li>
+<li><a class="reference internal" href="#building-aware-channel-condition-models">8.2.1.7. Building-aware channel condition models</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#main-configurable-attributes">8.2.2. Main configurable attributes</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="buildings-design.html"
+                          title="previous chapter"><span class="section-number">8.1. </span>Design documentation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="buildings-testing.html"
+                          title="next chapter"><span class="section-number">8.3. </span>Testing Documentation</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/buildings-user.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="buildings-testing.html" title="8.3. Testing Documentation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="buildings-design.html" title="8.1. Design documentation"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="buildings.html" ><span class="section-number">8. </span>Buildings Module</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">8.2. </span>User Documentation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>13.2. Netmap NetDevice &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="13.3. DPDK NetDevice" href="dpdk-net-device.html" />
+    <link rel="prev" title="13.1. File Descriptor NetDevice" href="fd-net-device.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="dpdk-net-device.html" title="13.3. DPDK NetDevice"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="fd-net-device.html" title="13.1. File Descriptor NetDevice"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="emulation-overview.html" accesskey="U"><span class="section-number">13. </span>Emulation Overview</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">13.2. </span>Netmap NetDevice</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="netmap-netdevice">
+<h1><span class="section-number">13.2. </span>Netmap NetDevice<a class="headerlink" href="#netmap-netdevice" title="Link to this heading">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">fd-net-device</span></code> module provides the <code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code> class, a class derived
+from the <code class="docutils literal notranslate"><span class="pre">FdNetDevice</span></code> which is able to read and write traffic using a netmap file descriptor.
+This netmap file descriptor must be associated to a real ethernet device in the host machine.
+The <code class="docutils literal notranslate"><span class="pre">NetmapNetDeviceHelper</span></code> class supports the configuration of a <code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code>.</p>
+<p>netmap is a fast packet processing capability that bypasses the
+host networking stack and gains direct access to network device.
+netmap was developed by Luigi Rizzo <a class="reference internal" href="#rizzo2012" id="id1"><span>[Rizzo2012]</span></a> and is maintained as
+an open source project on GitHub at <a class="reference external" href="https://github.com/luigirizzo/netmap">https://github.com/luigirizzo/netmap</a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code> for <em>ns-3</em> <a class="reference internal" href="#imputato2019" id="id2"><span>[Imputato2019]</span></a> was developed by Pasquale Imputato in the 2017-19 timeframe.  The use of NetmapNetDevice requires that the
+host system has netmap support (and for best performance, the drivers
+must support netmap and must be using a netmap-enabled device driver).  Users
+can expect that emulation support using Netmap will support higher packets
+per second than emulation using FdNetDevice with raw sockets (which pass
+through the Linux networking kernel).</p>
+<div role="list" class="citation-list">
+<div class="citation" id="rizzo2012" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Rizzo2012</a><span class="fn-bracket">]</span></span>
+<p>Luigi Rizzo, “netmap: A Novel Framework for Fast Packet I/O”, Proceedings of 2012 USENIX Annual Technical Conference, June 2012.</p>
+</div>
+<div class="citation" id="imputato2019" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Imputato2019</a><span class="fn-bracket">]</span></span>
+<p>Pasquale Imputato, Stefano Avallone, Enhancing the fidelity of network emulation through direct access to device buffers, Journal of Network and Computer Applications, Volume 130, 2019, Pages 63-75, (<a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S1084804519300220">http://www.sciencedirect.com/science/article/pii/S1084804519300220</a>)</p>
+</div>
+</div>
+<section id="model-description">
+<h2><span class="section-number">13.2.1. </span>Model Description<a class="headerlink" href="#model-description" title="Link to this heading">¶</a></h2>
+<section id="design">
+<h3><span class="section-number">13.2.1.1. </span>Design<a class="headerlink" href="#design" title="Link to this heading">¶</a></h3>
+<p>Because netmap uses file descriptor based communication to interact with the
+real device, the straightforward approach to design a new <code class="docutils literal notranslate"><span class="pre">NetDevice</span></code> around
+netmap is to have it inherit from the existing <code class="docutils literal notranslate"><span class="pre">FdNetDevice</span></code> and implement
+a specialized version of the operations specific to netmap.
+The operations that require a specialized implementation are the
+initialization, because the NIC has to be put in netmap mode, and the
+read/write methods, which have to make use of the netmap API to coordinate
+the exchange of packets with the netmap rings.</p>
+<p>In the initialization stage, the network device is switched to netmap mode,
+so that <em>ns-3</em> is able to send/receive packets to/from the
+real network device by writing/reading them to/from the netmap rings.
+Following the design of the <code class="docutils literal notranslate"><span class="pre">FdNetDevice</span></code>, a separate reading thread is
+started during the initialization. The task of the reading thread is
+to wait for new incoming packets in the netmap receiver rings, in order
+to schedule the events of packet reception. In
+the initialization of the <code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code>, an additional thread,
+the sync thread, is started. The sync thread is required because, in order
+to reduce the cost of the system calls, netmap does not automatically
+transfer a packet written to a slot of the netmap ring to the transmission
+ring or to the installed qdisc. It is up to the user process to
+periodically request a synchronization of the netmap ring. Therefore,
+the purpose of the sync thread is to periodically make a TXSYNC ioctl
+request, so that pending packets in the netmap ring are transferred to
+the transmission ring, if in native mode, or to the installed qdisc, if in
+generic mode. Also, as described further below, the
+sync thread is exploited to perform flow control and notify the BQL library
+about the
+amount of bytes that have been transferred to the network device.</p>
+<p>The read method is called by the reading thread to retrieve new incoming
+packets stored in the netmap receiver ring and pass them to the appropriate
+<em>ns-3</em> protocol handler for further processing within the simulator’s network
+stack. After retrieving packets, the reading thread also synchronizes
+the netmap receiver ring, so that the retrieved packets can be removed
+from the netmap receiver ring.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code> also specializes the write method, i.e., the method
+used to transmit a packet received from the upper layer (the <em>ns-3</em> traffic
+control layer).  The write method uses the netmap API to write the packet to a
+free slot in the netmap
+transmission ring. After writing a packet, the write method checks whether
+there is enough room in the netmap transmission ring for another packet.
+If not, the <code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code> stops its queue so that the <em>ns-3</em> traffic
+control layer does not attempt to send a packet that could not be stored in
+the netmap transmission ring.</p>
+<p>A stopped <code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code> queue needs to be restarted as soon as some
+room is made in the netmap transmission ring. The sync thread can be exploited
+for this purpose, given that it periodically synchronizes the netmap
+transmission ring. In particular, the sync thread also checks the number of
+free slots in the netmap transmission ring in case the <code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code>
+queue is stopped.  If the number of free slots exceeds a configurable value,
+the sync thread restarts the <code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code>
+queue and wakes the associated <em>ns-3</em> qdisc. The NetmapNetDevice also supports
+BQL: the write method notifies the BQL library of the amount of bytes that
+have been written to the netmap transmission ring, while the sync thread
+notifies the BQL library of the amount of bytes that have been removed from
+the netmap transmission ring and transferred to the NIC since the previous
+notification.</p>
+</section>
+<section id="scope-and-limitations">
+<h3><span class="section-number">13.2.1.2. </span>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Link to this heading">¶</a></h3>
+<p>The main scope of <code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code> is to support the flow-control between
+the physical device and the upper layer and using at best the computational
+resources to process packets.  However, the (Linux) system and network
+device must support netmap to make use of this feature.</p>
+</section>
+</section>
+<section id="usage">
+<h2><span class="section-number">13.2.2. </span>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
+<p>The installation of netmap itself on a host machine is out of scope for
+this document.  Refer to the <a class="reference external" href="https://github.com/luigirizzo/netmap">netmap GitHub README</a> for instructions.</p>
+<p>The <em>ns-3</em> netmap code has only been tested on Linux; it is not clear whether
+other operating systems can be supported.</p>
+<p>If <em>ns-3</em> is able to detect the presence of netmap on the system, it will
+report that:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Netmap emulation FdNetDevice  : not enabled
+</pre></div>
+</div>
+<p>If not, it will report:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Netmap emulation FdNetDevice  : not enabled (needs net/netmap_user.h)
+</pre></div>
+</div>
+<p>To run FdNetDevice-enabled simulations, one must pass the <code class="docutils literal notranslate"><span class="pre">--enable-sudo</span></code>
+option to <code class="docutils literal notranslate"><span class="pre">./ns3</span> <span class="pre">configure</span></code>, or else run the simulations with root
+privileges.</p>
+<section id="helpers">
+<h3><span class="section-number">13.2.2.1. </span>Helpers<a class="headerlink" href="#helpers" title="Link to this heading">¶</a></h3>
+<p><em>ns-3</em> netmap support uses a <code class="docutils literal notranslate"><span class="pre">NetMapNetDeviceHelper</span></code> helper object to
+install the <code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code>.  In other respects, the API and use is similar
+to that of the <code class="docutils literal notranslate"><span class="pre">EmuFdNetDeviceHelper</span></code>.</p>
+</section>
+<section id="attributes">
+<h3><span class="section-number">13.2.2.2. </span>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h3>
+<p>There is one attribute specialized to <code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code>, named
+<code class="docutils literal notranslate"><span class="pre">SyncAndNotifyQueuePeriod</span></code>.  This value takes an integer number of
+microseconds, and is used as the period of time after which the device
+syncs the netmap ring and notifies queue status.  The value should be
+close to the interrupt coalescence period of the real device.  Users
+may want to tune this parameter for their own system; it should be
+a compromise between CPU usage and accuracy in the ring sync (if it is
+too high, the device goes into starvation and lower throughput occurs).</p>
+</section>
+<section id="output">
+<h3><span class="section-number">13.2.2.3. </span>Output<a class="headerlink" href="#output" title="Link to this heading">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code> does not provide any specialized output, but
+supports the <code class="docutils literal notranslate"><span class="pre">FdNetDevice</span></code> output and traces (such as a promiscuous sniffer
+trace).</p>
+</section>
+<section id="examples">
+<h3><span class="section-number">13.2.2.4. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h3>
+<p>Several examples are provided:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fd-emu-onoff.cc</span></code>: This example is aimed at measuring the throughput of the
+<code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code> when using the <code class="docutils literal notranslate"><span class="pre">NetmapNetDeviceHelper</span></code> to attach the
+simulated device to a real device in the host machine. This is achieved
+by saturating the channel with TCP or UDP traffic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fd-emu-ping.cc</span></code>: This example uses the <code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code> to send ICMP
+traffic over a real device.</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">fd-emu-tc.cc</span></code>: This example configures a router on a machine with two</dt><dd><p>interfaces in emulated mode through netmap. The aim is to explore different
+qdiscs behaviours on the backlog of a device emulated bottleneck side.</p>
+</dd>
+</dl>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fd-emu-send.cc</span></code>: This example builds a node with a device in
+emulation mode through netmap.  The aim is to measure the maximum transmit
+rate in packets per second (pps) achievable with <code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code> on
+a specific machine.</p></li>
+</ul>
+<p>Note that all the examples run in emulation mode through netmap (with
+<code class="docutils literal notranslate"><span class="pre">NetmapNetDevice</span></code>) and raw socket (with <code class="docutils literal notranslate"><span class="pre">FdNetDevice</span></code>).</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">13.2. Netmap NetDevice</a><ul>
+<li><a class="reference internal" href="#model-description">13.2.1. Model Description</a><ul>
+<li><a class="reference internal" href="#design">13.2.1.1. Design</a></li>
+<li><a class="reference internal" href="#scope-and-limitations">13.2.1.2. Scope and Limitations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">13.2.2. Usage</a><ul>
+<li><a class="reference internal" href="#helpers">13.2.2.1. Helpers</a></li>
+<li><a class="reference internal" href="#attributes">13.2.2.2. Attributes</a></li>
+<li><a class="reference internal" href="#output">13.2.2.3. Output</a></li>
+<li><a class="reference internal" href="#examples">13.2.2.4. Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="fd-net-device.html"
+                          title="previous chapter"><span class="section-number">13.1. </span>File Descriptor NetDevice</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="dpdk-net-device.html"
+                          title="next chapter"><span class="section-number">13.3. </span>DPDK NetDevice</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/netmap-net-device.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="dpdk-net-device.html" title="13.3. DPDK NetDevice"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="fd-net-device.html" title="13.1. File Descriptor NetDevice"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="emulation-overview.html" ><span class="section-number">13. </span>Emulation Overview</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">13.2. </span>Netmap NetDevice</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

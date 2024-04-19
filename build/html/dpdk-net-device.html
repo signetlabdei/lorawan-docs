@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>13.3. DPDK NetDevice &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="13.4. Tap NetDevice" href="tap.html" />
+    <link rel="prev" title="13.2. Netmap NetDevice" href="netmap-net-device.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tap.html" title="13.4. Tap NetDevice"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="netmap-net-device.html" title="13.2. Netmap NetDevice"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="emulation-overview.html" accesskey="U"><span class="section-number">13. </span>Emulation Overview</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">13.3. </span>DPDK NetDevice</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="dpdk-netdevice">
+<h1><span class="section-number">13.3. </span>DPDK NetDevice<a class="headerlink" href="#dpdk-netdevice" title="Link to this heading">¶</a></h1>
+<p>Data Plane Development Kit (DPDK) is a library hosted by The Linux Foundation
+to accelerate packet processing workloads (<a class="reference external" href="https://www.dpdk.org/">https://www.dpdk.org/</a>).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code> class provides the implementation of a network device which uses DPDK’s fast packet processing abilities and bypasses the kernel. This class is included in the <code class="docutils literal notranslate"><span class="pre">src/fd-net-device</span> <span class="pre">model</span></code>. The <code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code> class inherits the <code class="docutils literal notranslate"><span class="pre">FdNetDevice</span></code> class and overrides the functions which are required by <em>ns-3</em> to interact with DPDK environment.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code> for <em>ns-3</em> <a class="reference internal" href="#patel2019" id="id1"><span>[Patel2019]</span></a> was developed by Harsh Patel,
+Hrishikesh Hiraskar and Mohit P. Tahiliani. They were supported by Intel
+Technology India Pvt. Ltd., Bangalore for this work.</p>
+<div role="list" class="citation-list">
+<div class="citation" id="patel2019" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Patel2019</a><span class="fn-bracket">]</span></span>
+<p>Harsh Patel, Hrishikesh Hiraskar, Mohit P. Tahiliani, “Extending Network Emulation Support in ns-3 using DPDK”, Proceedings of the 2019 Workshop on ns-3, ACM, Pages 17-24, (<a class="reference external" href="https://dl.acm.org/doi/abs/10.1145/3321349.3321358">https://dl.acm.org/doi/abs/10.1145/3321349.3321358</a>)</p>
+</div>
+</div>
+<section id="model-description">
+<h2><span class="section-number">13.3.1. </span>Model Description<a class="headerlink" href="#model-description" title="Link to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code> is a network device which provides network emulation capabilities i.e. to allow simulated nodes to interact with real hosts and vice versa. The main feature of the <code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code> is that is uses the Environment Abstraction Layer (EAL) provided by DPDK to perform fast packet processing. EAL hides the device specific attributes from the applications and provides an interface via which the applications can interact directly with the Network Interface Card (NIC). This allows <em>ns-3</em> to send/receive packets directly to/from the NIC without the kernel involvement.</p>
+<section id="design">
+<h3><span class="section-number">13.3.1.1. </span>Design<a class="headerlink" href="#design" title="Link to this heading">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code> is designed to act as an interface between <em>ns-3</em> and DPDK environment. There are 3 main phases in the life cycle of <code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code>:</p>
+<ul class="simple">
+<li><p>Initialization</p></li>
+<li><p>Packet Transfer - Read and Write</p></li>
+<li><p>Termination</p></li>
+</ul>
+<section id="initialization">
+<h4><span class="section-number">13.3.1.1.1. </span>Initialization<a class="headerlink" href="#initialization" title="Link to this heading">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">DpdkNetDeviceHelper</span></code> model is responsible for the initialization of <code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code>. After this, the EAL is initialized, a memory pool is allocated, access to the Ethernet port is obtained and it is initialized, reception (Rx) and transmission (Tx) queues are set up on the port, Rx and Tx buffers are set up and LaunchCore method is called which will launch the <code class="docutils literal notranslate"><span class="pre">HandleRx</span></code> method to handle reading of packets in burst.</p>
+</section>
+<section id="packet-transfer">
+<h4><span class="section-number">13.3.1.1.2. </span>Packet Transfer<a class="headerlink" href="#packet-transfer" title="Link to this heading">¶</a></h4>
+<p>DPDK interacts with packet in the form of mbuf, a data structure provided by it, while <em>ns-3</em> interacts with packets in the form of raw buffer. The packet transfer functions take care of converting DPDK mbufs to <em>ns-3</em> buffers. The functions are read and write.</p>
+<ul class="simple">
+<li><p>Read: <code class="docutils literal notranslate"><span class="pre">HandleRx</span></code> method takes care of reading the packets from NIC and transferring them to <em>ns-3</em> Internet Stack. This function is called by <code class="docutils literal notranslate"><span class="pre">LaunchCore</span></code> method which is launched during initialization. It continuously polls the NIC using DPDK API for packets to read. It reads the mbuf packets in burst from NIC Rx ring, which are placed into Rx buffer upon read. For each mbuf packet in Rx buffer, it then converts it to <em>ns-3</em> raw buffer and then forwards the packet to <em>ns-3</em> Internet Stack.</p></li>
+<li><p>Write: <code class="docutils literal notranslate"><span class="pre">Write</span></code> method handles transmission of packets. <em>ns-3</em> provides this packet in the form of a buffer, which is converted to packet mbuf and then placed in the Tx buffer. These packets are then transferred to NIC Tx ring when the Tx buffer is full, from where they will be transmitted by the NIC. However, there might be a scenario where there are not enough packets to fill the Tx buffer. This will lead to stale packet mbufs in buffer. In such cases, the <code class="docutils literal notranslate"><span class="pre">Write</span></code> function schedules a manual flush of these stale packet mbufs to NIC Tx ring, which will occur upon a certain timeout period. The default value of this timeout is set to <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">ms</span></code>.</p></li>
+</ul>
+</section>
+<section id="termination">
+<h4><span class="section-number">13.3.1.1.3. </span>Termination<a class="headerlink" href="#termination" title="Link to this heading">¶</a></h4>
+<p>When <em>ns-3</em> is done using <code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code>, the <code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code> will stop polling for Rx, free the allocated mbuf packets and then the mbuf pool. Lastly, it will stop the Ethernet device and close the port.</p>
+</section>
+</section>
+<section id="scope-and-limitations">
+<h3><span class="section-number">13.3.1.2. </span>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Link to this heading">¶</a></h3>
+<p>The current implementation supports only one NIC to be bound to DPDK with single  Rx and Tx on the NIC. This can be extended to support multiple NICs and multiple Rx/Tx queues simultaneously. Currently there is no support for Jumbo frames, which can be added. Offloading, scheduling features can also be added. Flow control and support for qdisc can be added to provide a more extensive model for network testing.</p>
+</section>
+</section>
+<section id="dpdk-installation">
+<h2><span class="section-number">13.3.2. </span>DPDK Installation<a class="headerlink" href="#dpdk-installation" title="Link to this heading">¶</a></h2>
+<p>This section contains information on downloading DPDK source code and setting up DPDK for <code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code> to work.</p>
+<section id="is-my-nic-supported-by-dpdk">
+<h3><span class="section-number">13.3.2.1. </span>Is my NIC supported by DPDK?<a class="headerlink" href="#is-my-nic-supported-by-dpdk" title="Link to this heading">¶</a></h3>
+<p>Check <a class="reference external" href="https://core.dpdk.org/supported/">Supported Devices</a>.</p>
+</section>
+<section id="not-supported-use-virtual-machine-instead">
+<h3><span class="section-number">13.3.2.2. </span>Not supported? Use Virtual Machine instead<a class="headerlink" href="#not-supported-use-virtual-machine-instead" title="Link to this heading">¶</a></h3>
+<p>Install <a class="reference external" href="https://www.virtualbox.org/">Oracle VM VirtualBox</a>. Create a new VM and install Ubuntu on it. Open settings, create a network adapter with following configuration:</p>
+<ul class="simple">
+<li><p>Attached to: Bridged Adapter</p></li>
+<li><p>Name: The host network device you want to use</p></li>
+<li><dl class="simple">
+<dt>In Advanced</dt><dd><ul>
+<li><p>Adapter Type: Intel PRO/1000 MT Server (82545EM) or any other DPDK supported NIC</p></li>
+<li><p>Promiscuous Mode: Allow All</p></li>
+<li><p>Select Cable Connected</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Then rest of the steps are same as follows.</p>
+<p>DPDK can be installed in 2 ways:</p>
+<ul class="simple">
+<li><p>Install DPDK on Ubuntu</p></li>
+<li><p>Compile DPDK from source</p></li>
+</ul>
+</section>
+<section id="install-dpdk-on-ubuntu">
+<h3><span class="section-number">13.3.2.3. </span>Install DPDK on Ubuntu<a class="headerlink" href="#install-dpdk-on-ubuntu" title="Link to this heading">¶</a></h3>
+<p>To install DPDK on Ubuntu, run the following command:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>apt-get install dpdk dpdk-dev libdpdk-dev dpdk-igb-uio-dkms
+</pre></div>
+</div>
+<p>Ubuntu 20.04 has packaged DPDK v19.11 LTS which is tested with this module and DpdkNetDevice will only be enabled if this version is available.</p>
+</section>
+<section id="compile-from-source">
+<h3><span class="section-number">13.3.2.4. </span>Compile from Source<a class="headerlink" href="#compile-from-source" title="Link to this heading">¶</a></h3>
+<p>To compile DPDK from source, you need to perform the following 4 steps:</p>
+<section id="download-the-source">
+<h4><span class="section-number">13.3.2.4.1. </span>1. Download the source<a class="headerlink" href="#download-the-source" title="Link to this heading">¶</a></h4>
+<p>Visit the <a class="reference external" href="https://core.dpdk.org/download/">DPDK Downloads</a> page to download the latest stable source. (This module has been tested with version 19.11 LTS and DpdkNetDevice will only be enabled if this version is available.)</p>
+</section>
+<section id="configure-dpdk-as-a-shared-library">
+<h4><span class="section-number">13.3.2.4.2. </span>2. Configure DPDK as a shared library<a class="headerlink" href="#configure-dpdk-as-a-shared-library" title="Link to this heading">¶</a></h4>
+<p>In the DPDK directory, edit the <code class="docutils literal notranslate"><span class="pre">config/common_base</span></code> file to change the following line to compile DPDK as a shared library:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># Compile to share library
+CONFIG_RTE_BUILD_SHARED_LIB=y
+</pre></div>
+</div>
+</section>
+<section id="install-the-source">
+<h4><span class="section-number">13.3.2.4.3. </span>3. Install the source<a class="headerlink" href="#install-the-source" title="Link to this heading">¶</a></h4>
+<p>Refer to <a class="reference external" href="https://doc.dpdk.org/guides/linux_gsg/build_dpdk.html">Installation</a> for detailed instructions.</p>
+<p>For a 64 bit linux machine with gcc, run:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>make install T=x86_64-native-linuxapp-gcc DESTDIR=install
+</pre></div>
+</div>
+</section>
+<section id="export-dpdk-environment-variables">
+<h4><span class="section-number">13.3.2.4.4. </span>4. Export DPDK Environment variables<a class="headerlink" href="#export-dpdk-environment-variables" title="Link to this heading">¶</a></h4>
+<p>Export the following environment variables:</p>
+<ul class="simple">
+<li><p>RTE_SDK as the your DPDK source folder.</p></li>
+<li><p>RTE_TARGET as the build target directory.</p></li>
+</ul>
+<p>For example:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>export RTE_SDK=/home/username/dpdk/dpdk-stable-19.11.1
+export RTE_TARGET=x86_64-native-linuxapp-gcc
+</pre></div>
+</div>
+<p>(Note: In case DPDK is moved, ns-3 needs to be reconfigured using <code class="docutils literal notranslate"><span class="pre">./ns3</span> <span class="pre">configure</span> <span class="pre">[options]</span></code>)</p>
+<p>It is advisable that you export these variables in <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> or similar for reusability.</p>
+</section>
+</section>
+<section id="load-dpdk-drivers-to-kernel">
+<h3><span class="section-number">13.3.2.5. </span>Load DPDK Drivers to kernel<a class="headerlink" href="#load-dpdk-drivers-to-kernel" title="Link to this heading">¶</a></h3>
+<p>Execute the following:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo modprobe uio_pci_generic
+sudo modprobe uio
+sudo modprobe vfio-pci
+
+sudo modprobe igb_uio # for ubuntu package
+# OR
+sudo insmod $RTE_SDK/$RTE_TARGET/kmod/igb_uio.ko # for dpdk source
+</pre></div>
+</div>
+<p>These should be done every time you reboot your system.</p>
+</section>
+<section id="configure-hugepages">
+<h3><span class="section-number">13.3.2.6. </span>Configure hugepages<a class="headerlink" href="#configure-hugepages" title="Link to this heading">¶</a></h3>
+<p>Refer <a class="reference external" href="https://doc.dpdk.org/guides/linux_gsg/sys_reqs.html">System Requirements</a> for detailed instructions.</p>
+<p>To allocate hugepages at runtime, write a value such as ‘256’ to the following:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>echo 256 &gt; /sys/kernel/mm/hugepages/hugepages-2048kB/nr_hugepages
+</pre></div>
+</div>
+<p>To allocate hugepages at boot time, edit <code class="docutils literal notranslate"><span class="pre">/etc/default/grub</span></code>, and following to <code class="docutils literal notranslate"><span class="pre">GRUB_CMDLINE_LINUX_DEFAULT</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>hugepages=256
+</pre></div>
+</div>
+<p>We suggest minimum of number of <code class="docutils literal notranslate"><span class="pre">256</span></code> to run our applications. (This is to test an application run at 1 Gbps on a 1 Gbps NIC.) You can use any number of hugepages based on your system capacity and application requirements.</p>
+<p>Then update the grub configurations using:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo update-grub
+</pre></div>
+</div>
+<p>OR</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo update-grub2
+</pre></div>
+</div>
+<p>You will need to reboot your system in order to see these changes.</p>
+<p>To check allocation of hugepages, run:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>cat /proc/meminfo | grep HugePages
+</pre></div>
+</div>
+<p>You will see the number of hugepages allocated, they should be equal to the number you used above.</p>
+<p>Once the hugepage memory is reserved (at either runtime or boot time),
+to make the memory available for DPDK use, perform the following steps:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo mkdir /mnt/huge
+sudo mount -t hugetlbfs nodev /mnt/huge
+</pre></div>
+</div>
+<p>The mount point can be made permanent across reboots, by adding the following line to the <code class="docutils literal notranslate"><span class="pre">/etc/fstab</span></code> file:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>nodev /mnt/huge hugetlbfs defaults 0 0
+</pre></div>
+</div>
+</section>
+</section>
+<section id="usage">
+<h2><span class="section-number">13.3.3. </span>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
+<p>The status of DPDK support is shown in the output of <code class="docutils literal notranslate"><span class="pre">./ns3</span> <span class="pre">configure</span></code>.  If
+it is found, a user should see:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>DPDK NetDevice                : enabled
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">DpdkNetDeviceHelper</span></code> class supports the configuration of <code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code>.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>+----------------------+
+|         host 1       |
++----------------------+
+|   ns-3 simulation    |
++----------------------+
+|       ns-3 Node      |
+|  +----------------+  |
+|  |    ns-3 TCP    |  |
+|  +----------------+  |
+|  |    ns-3 IP     |  |
+|  +----------------+  |
+|  |  DpdkNetDevice |  |
+|  |    10.1.1.1    |  |
+|  +----------------+  |
+|  |   raw socket   |  |
+|--+----------------+--|
+|       | eth0 |       |
++-------+------+-------+
+
+        10.1.1.11
+
+            |
+            +-------------- ( Internet ) ----
+</pre></div>
+</div>
+<p>Initialization of DPDK driver requires initialization of EAL. EAL requires PMD (Poll Mode Driver) Library for using NIC. DPDK supports multiple Poll Mode Drivers and you can use one that works for your NIC. PMD Library can be set via <code class="docutils literal notranslate"><span class="pre">DpdkNetDeviceHelper::SetPmdLibrary</span></code>, as follows:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>DpdkNetDeviceHelper* dpdk = new DpdkNetDeviceHelper();
+dpdk-&gt;SetPmdLibrary(&quot;librte_pmd_e1000.so&quot;);
+</pre></div>
+</div>
+<p>Also, NIC should be bound to DPDK Driver in order to be used with EAL. The default driver used is <code class="docutils literal notranslate"><span class="pre">uio_pci_generic</span></code> which supports most of the NICs. You can change it using <code class="docutils literal notranslate"><span class="pre">DpdkNetDeviceHelper::SetDpdkDriver</span></code>, as follows:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>DpdkNetDeviceHelper* dpdk = new DpdkNetDeviceHelper();
+dpdk-&gt;SetDpdkDriver(&quot;igb_uio&quot;);
+</pre></div>
+</div>
+<section id="attributes">
+<h3><span class="section-number">13.3.3.1. </span>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code> provides a number of attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TxTimeout</span></code> - The time to wait before transmitting burst from Tx Buffer (in us). (default - <code class="docutils literal notranslate"><span class="pre">2000</span></code>) This attribute is only used to flush out buffer in case it is not filled. This attribute can be decrease for low data rate traffic. For high data rate traffic, this attribute needs no change.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MaxRxBurst</span></code> - Size of Rx Burst. (default - <code class="docutils literal notranslate"><span class="pre">64</span></code>) This attribute can be increased for higher data rates.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MaxTxBurst</span></code> - Size of Tx Burst. (default - <code class="docutils literal notranslate"><span class="pre">64</span></code>) This attribute can be increased for higher data rates.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MempoolCacheSize</span></code> - Size of mempool cache. (default - <code class="docutils literal notranslate"><span class="pre">256</span></code>) This attribute can be increased for higher data rates.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NbRxDesc</span></code> - Number of Rx descriptors. (default - <code class="docutils literal notranslate"><span class="pre">1024</span></code>) This attribute can be increased for higher data rates.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NbTxDesc</span></code> - Number of Tx descriptors. (default - <code class="docutils literal notranslate"><span class="pre">1024</span></code>) This attribute can be increased for higher data rates.</p></li>
+</ul>
+<p>Note: Default values work well with 1Gbps traffic.</p>
+</section>
+<section id="output">
+<h3><span class="section-number">13.3.3.2. </span>Output<a class="headerlink" href="#output" title="Link to this heading">¶</a></h3>
+<p>As <code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code> is inherited from <code class="docutils literal notranslate"><span class="pre">FdNetDevice</span></code>, all the output methods provided by <code class="docutils literal notranslate"><span class="pre">FdNetDevice</span></code> can be used directly.</p>
+</section>
+<section id="examples">
+<h3><span class="section-number">13.3.3.3. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h3>
+<p>The following examples are provided:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fd-emu-ping.cc</span></code>: This example can be configured to use the <code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code> to send ICMP traffic bypassing the kernel over a real channel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fd-emu-onoff.cc</span></code>: This example can be configured to measure the throughput of the <code class="docutils literal notranslate"><span class="pre">DpdkNetDevice</span></code> by sending traffic from the simulated node to a real device using the <code class="docutils literal notranslate"><span class="pre">ns3::OnOffApplication</span></code> while leveraging DPDK’s fast packet processing abilities. This is achieved by saturating the channel with TCP/UDP traffic.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">13.3. DPDK NetDevice</a><ul>
+<li><a class="reference internal" href="#model-description">13.3.1. Model Description</a><ul>
+<li><a class="reference internal" href="#design">13.3.1.1. Design</a><ul>
+<li><a class="reference internal" href="#initialization">13.3.1.1.1. Initialization</a></li>
+<li><a class="reference internal" href="#packet-transfer">13.3.1.1.2. Packet Transfer</a></li>
+<li><a class="reference internal" href="#termination">13.3.1.1.3. Termination</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scope-and-limitations">13.3.1.2. Scope and Limitations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dpdk-installation">13.3.2. DPDK Installation</a><ul>
+<li><a class="reference internal" href="#is-my-nic-supported-by-dpdk">13.3.2.1. Is my NIC supported by DPDK?</a></li>
+<li><a class="reference internal" href="#not-supported-use-virtual-machine-instead">13.3.2.2. Not supported? Use Virtual Machine instead</a></li>
+<li><a class="reference internal" href="#install-dpdk-on-ubuntu">13.3.2.3. Install DPDK on Ubuntu</a></li>
+<li><a class="reference internal" href="#compile-from-source">13.3.2.4. Compile from Source</a><ul>
+<li><a class="reference internal" href="#download-the-source">13.3.2.4.1. 1. Download the source</a></li>
+<li><a class="reference internal" href="#configure-dpdk-as-a-shared-library">13.3.2.4.2. 2. Configure DPDK as a shared library</a></li>
+<li><a class="reference internal" href="#install-the-source">13.3.2.4.3. 3. Install the source</a></li>
+<li><a class="reference internal" href="#export-dpdk-environment-variables">13.3.2.4.4. 4. Export DPDK Environment variables</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#load-dpdk-drivers-to-kernel">13.3.2.5. Load DPDK Drivers to kernel</a></li>
+<li><a class="reference internal" href="#configure-hugepages">13.3.2.6. Configure hugepages</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">13.3.3. Usage</a><ul>
+<li><a class="reference internal" href="#attributes">13.3.3.1. Attributes</a></li>
+<li><a class="reference internal" href="#output">13.3.3.2. Output</a></li>
+<li><a class="reference internal" href="#examples">13.3.3.3. Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="netmap-net-device.html"
+                          title="previous chapter"><span class="section-number">13.2. </span>Netmap NetDevice</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="tap.html"
+                          title="next chapter"><span class="section-number">13.4. </span>Tap NetDevice</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/dpdk-net-device.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="tap.html" title="13.4. Tap NetDevice"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="netmap-net-device.html" title="13.2. Netmap NetDevice"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="emulation-overview.html" ><span class="section-number">13. </span>Emulation Overview</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">13.3. </span>DPDK NetDevice</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

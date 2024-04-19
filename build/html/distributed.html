@@ -1,0 +1,537 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>22. MPI for Distributed Simulation &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="23. Mobility" href="mobility.html" />
+    <link rel="prev" title="21.4. References" href="mesh-references.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mobility.html" title="23. Mobility"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mesh-references.html" title="21.4. References"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">22. </span>MPI for Distributed Simulation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="mpi-for-distributed-simulation">
+<h1><span class="section-number">22. </span>MPI for Distributed Simulation<a class="headerlink" href="#mpi-for-distributed-simulation" title="Link to this heading">¶</a></h1>
+<p>Parallel and distributed discrete event simulation allows the execution of a
+single simulation program on multiple processors. By splitting up the simulation
+into logical processes, LPs, each LP can be executed by a different processor.
+This simulation methodology enables very large-scale simulations by leveraging
+increased processing power and memory availability. In order to ensure proper
+execution of a distributed simulation, message passing between LPs is required.
+To support distributed simulation in <em>ns-3</em>, the standard Message Passing
+Interface (MPI) is used, along with a new distributed simulator class.
+Currently, dividing a simulation for distributed purposes in <em>ns-3</em> can only occur
+across point-to-point links.</p>
+<section id="current-implementation-details">
+<span id="id1"></span><h2><span class="section-number">22.1. </span>Current Implementation Details<a class="headerlink" href="#current-implementation-details" title="Link to this heading">¶</a></h2>
+<p>During the course of a distributed simulation, many packets must cross simulator
+boundaries. In other words, a packet that originated on one LP is destined for a
+different LP, and in order to make this transition, a message containing the
+packet contents must be sent to the remote LP. Upon receiving this message, the
+remote LP can rebuild the packet and proceed as normal. The process of sending
+an receiving messages between LPs is handled easily by the new MPI interface in
+<em>ns-3</em>.</p>
+<p>Along with simple message passing between LPs, a distributed simulator is used
+on each LP to determine which events to process. It is important to process
+events in time-stamped order to ensure proper simulation execution. If a LP
+receives a message containing an event from the past, clearly this is an issue,
+since this event could change other events which have already been executed. To
+address this problem, two conservative synchronization algorithm with lookahead are
+used in <em>ns-3</em>. For more information on different synchronization approaches and
+parallel and distributed simulation in general, please refer to “Parallel and
+Distributed Simulation Systems” by Richard Fujimoto.</p>
+<p>The default parallel synchronization strategy implemented in the
+DistributedSimulatorImpl class is based on a globally synchronized
+algorithm using an MPI collective operation to synchronize simulation
+time across all LPs.  A second synchronization strategy based on local
+communication and null messages is implemented in the
+NullMessageSimulatorImpl class, For the null message strategy the
+global all to all gather is not required; LPs only need to
+communication with LPs that have shared point-to-point links.  The
+algorithm to use is controlled by which the <em>ns-3</em> global value
+SimulatorImplementationType.</p>
+<p>The best algorithm to use is dependent on the communication and event
+scheduling pattern for the application.  In general, null message
+synchronization algorithms will scale better due to local
+communication scaling better than a global all-to-all gather that is
+required by DistributedSimulatorImpl.  There are two known cases where
+the global synchronization performs better.  The first is when most
+LPs have point-to-point link with most other LPs, in other words the
+LPs are nearly fully connected.  In this case the null message
+algorithm will generate more message passing traffic than the
+all-to-all gather.  A second case where the global all-to-all gather
+is more efficient is when there are long periods of simulation time
+when no events are occurring.  The all-to-all gather algorithm is able
+to quickly determine then next event time globally.  The nearest
+neighbor behavior of the null message algorithm will require more
+communications to propagate that knowledge; each LP is only aware of
+neighbor next event times.</p>
+<section id="remote-point-to-point-links">
+<h3><span class="section-number">22.1.1. </span>Remote point-to-point links<a class="headerlink" href="#remote-point-to-point-links" title="Link to this heading">¶</a></h3>
+<p>As described in the introduction, dividing a simulation for distributed purposes
+in <em>ns-3</em> currently can only occur across point-to-point links; therefore, the
+idea of remote point-to-point links is very important for distributed simulation
+in <em>ns-3</em>. When a point-to-point link is installed, connecting two nodes, the
+point-to-point helper checks the system id, or rank, of both nodes. The rank
+should be assigned during node creation for distributed simulation and is
+intended to signify on which LP a node belongs. If the two nodes are on the same
+rank, a regular point-to-point link is created. If, however, the two nodes are
+on different ranks, then these nodes are intended for different LPs, and a
+remote point-to-point link is used. If a packet is to be sent across a remote
+point-to-point link, MPI is used to send the message to the remote LP.</p>
+</section>
+<section id="distributing-the-topology">
+<h3><span class="section-number">22.1.2. </span>Distributing the topology<a class="headerlink" href="#distributing-the-topology" title="Link to this heading">¶</a></h3>
+<p>Currently, the full topology is created on each rank, regardless of the
+individual node system ids. Only the applications are specific to a rank. For
+example, consider node 1 on LP 1 and node 2 on LP 2, with a traffic generator on
+node 1. Both node 1 and node 2 will be created on both LP1 and LP2; however, the
+traffic generator will only be installed on LP1. While this is not optimal for
+memory efficiency, it does simplify routing, since all current routing
+implementations in <em>ns-3</em> will work with distributed simulation.</p>
+</section>
+</section>
+<section id="running-distributed-simulations">
+<h2><span class="section-number">22.2. </span>Running Distributed Simulations<a class="headerlink" href="#running-distributed-simulations" title="Link to this heading">¶</a></h2>
+<section id="prerequisites">
+<h3><span class="section-number">22.2.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">¶</a></h3>
+<p>Ensure that MPI is installed, as well as mpic++. In Ubuntu repositories,
+these are openmpi-bin, openmpi-common, openmpi-doc, libopenmpi-dev. In
+Fedora, these are openmpi and openmpi-devel.</p>
+<p>Note:</p>
+<p>There is a conflict on some Fedora systems between libotf and openmpi. A
+possible “quick-fix” is to yum remove libotf before installing openmpi.
+This will remove conflict, but it will also remove emacs. Alternatively,
+these steps could be followed to resolve the conflict:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Rename the tiny otfdump which emacs says it needs:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mv<span class="w"> </span>/usr/bin/otfdump<span class="w"> </span>/usr/bin/otfdump.emacs-version
+</pre></div>
+</div>
+</li>
+<li><p>Manually resolve openmpi dependencies:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>libgfortran<span class="w"> </span>libtorque<span class="w"> </span>numactl
+</pre></div>
+</div>
+</li>
+<li><p>Download rpm packages:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>openmpi-1.3.1-1.fc11.i586.rpm
+openmpi-devel-1.3.1-1.fc11.i586.rpm
+openmpi-libs-1.3.1-1.fc11.i586.rpm
+openmpi-vt-1.3.1-1.fc11.i586.rpm
+</pre></div>
+</div>
+<p>from <a class="reference external" href="http://mirrors.kernel.org/fedora/releases/11/Everything/i386/os/Packages/">http://mirrors.kernel.org/fedora/releases/11/Everything/i386/os/Packages/</a></p>
+</li>
+<li><p>Force the packages in:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>rpm<span class="w"> </span>-ivh<span class="w"> </span>--force<span class="w"> </span><span class="se">\</span>
+openmpi-1.3.1-1.fc11.i586.rpm<span class="w"> </span><span class="se">\</span>
+openmpi-libs-1.3.1-1.fc11.i586.rpm<span class="w"> </span><span class="se">\</span>
+openmpi-devel-1.3.1-1.fc11.i586.rpm<span class="w"> </span><span class="se">\</span>
+openmpi-vt-1.3.1-1.fc11.i586.rpm
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<p>Also, it may be necessary to add the openmpi bin directory to PATH in order to
+execute mpic++ and mpirun from the command line. Alternatively, the full path to
+these executables can be used. Finally, if openmpi complains about the inability
+to open shared libraries, such as libmpi_cxx.so.0, it may be necessary to add
+the openmpi lib directory to LD_LIBRARY_PATH.</p>
+<p>Here is an example of setting up PATH and LD_LIBRARY_PATH using a bash shell:</p>
+<blockquote>
+<div><ul>
+<li><p>For a 32-bit Linux distribution:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/lib/openmpi/bin
+$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/usr/lib/openmpi/lib
+</pre></div>
+</div>
+</li>
+</ul>
+<blockquote>
+<div><p>For a 64-bit Linux distribution:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/lib64/openmpi/bin
+$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/usr/lib64/openmpi/lib
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+<p>These lines can be added into ~/.bash_profile or ~/.bashrc to avoid having to
+retype them when a new shell is opened.</p>
+<p>Note 2:  There is a separate issue on recent Fedora distributions, which is
+that the libraries are built with AVX instructions.  On older machines or
+some virtual machines, this results in an illegal instruction
+being thrown.  This is not an <em>ns-3</em> issue, a simple MPI test case will also
+fail.  The AVX instructions are being called during initialization.</p>
+<p>The symptom of this is that attempts to run an ns-3 MPI program will fail
+with the error: <cite>terminated with signal SIGILL</cite>.  To check if this is the
+problem, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>grep<span class="w"> </span>avx<span class="w"> </span>/proc/cpuinfo
+</pre></div>
+</div>
+<p>and it will not return anything if AVX is not present.</p>
+<p>If AVX is not supported, it is recommended to switch to a different MPI
+implementation such as MPICH:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>dnf<span class="w"> </span>remove<span class="w"> </span>openmpi<span class="w"> </span>openmpi-devel
+$<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>mpich<span class="w"> </span>mpich-devel<span class="w"> </span>environment-modules
+$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>mpi/mpich-x86_64
+</pre></div>
+</div>
+</section>
+<section id="building-and-running-examples">
+<h3><span class="section-number">22.2.2. </span>Building and Running Examples<a class="headerlink" href="#building-and-running-examples" title="Link to this heading">¶</a></h3>
+<p>If you already built <em>ns-3</em> without MPI enabled, you must re-build:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>distclean
+</pre></div>
+</div>
+<p>Configure <em>ns-3</em> with the –enable-mpi option:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>configure<span class="w"> </span>-d<span class="w"> </span>debug<span class="w"> </span>--enable-examples<span class="w"> </span>--enable-tests<span class="w"> </span>--enable-mpi
+</pre></div>
+</div>
+<p>Ensure that MPI is enabled by checking the optional features shown from the
+output of configure.</p>
+<p>Next, build <em>ns-3</em>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3
+</pre></div>
+</div>
+<p>After building <em>ns-3</em> with mpi enabled, the example programs are now
+ready to run with <cite>mpiexec</cite>.  It is advised to avoid running ns3 directly
+with <cite>mpiexec</cite>; two options that should be more robust are to either use
+the <cite>–command-template</cite> way of running the mpiexec program, or to use
+<cite>./ns3 shell</cite> and run the executables directly on the command line.
+Here are a few examples (from the root <em>ns-3</em> directory):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>run<span class="w"> </span>simple-distributed<span class="w"> </span>--command-template<span class="o">=</span><span class="s2">&quot;mpiexec -np 2 %s&quot;</span>
+$<span class="w"> </span>./ns3<span class="w"> </span>run<span class="w"> </span>nms-p2p-nix-distributed<span class="w"> </span>--command-template<span class="o">=</span><span class="s2">&quot;mpiexec -np 2 -machinefile mpihosts %s --nix=0&quot;</span>
+</pre></div>
+</div>
+<p>An example using the null message synchronization algorithm:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>run<span class="w"> </span>simple-distributed<span class="w"> </span>--command-template<span class="o">=</span><span class="s2">&quot;mpiexec -np 2 %s --nullmsg&quot;</span>
+</pre></div>
+</div>
+<p>The np switch is the number of logical processors to use. The machinefile switch
+is which machines to use. In order to use machinefile, the target file must
+exist (in this case mpihosts). This can simply contain something like:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>localhost
+localhost
+localhost
+...
+</pre></div>
+</div>
+<p>Or if you have a cluster of machines, you can name them.</p>
+<p>The other alternative to <cite>command-template</cite> is to use <cite>./ns3 shell</cite>.  Here
+are the equivalent examples to the above (assuming optimized build profile):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>shell
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build/src/mpi/examples
+$<span class="w"> </span>mpiexec<span class="w"> </span>-np<span class="w"> </span><span class="m">2</span><span class="w"> </span>ns3-dev-simple-distributed-optimized
+$<span class="w"> </span>mpiexec<span class="w"> </span>-np<span class="w"> </span><span class="m">2</span><span class="w"> </span>-machinefile<span class="w"> </span>mpihosts<span class="w"> </span>ns3-dev-nms-p2p-nix-distributed-optimized<span class="w"> </span>--nix<span class="o">=</span><span class="m">0</span>
+$<span class="w"> </span>mpiexec<span class="w"> </span>-np<span class="w"> </span><span class="m">2</span><span class="w"> </span>ns3-dev-simple-distributed-optimized<span class="w"> </span>--nullmsg
+</pre></div>
+</div>
+</section>
+<section id="setting-synchronization-algorithm-to-use">
+<h3><span class="section-number">22.2.3. </span>Setting synchronization algorithm to use<a class="headerlink" href="#setting-synchronization-algorithm-to-use" title="Link to this heading">¶</a></h3>
+<p>The global value SimulatorImplementationType is used to set the
+synchronization algorithm to use.  This value must be set before the
+MpiInterface::Enable method is invoked if the default
+DistributedSimulatorImpl is not used.  Here is an example code snippet
+showing how to add a command line argument to control the
+synchronization algorithm choice::</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmd.AddValue<span class="o">(</span><span class="s2">&quot;nullmsg&quot;</span>,<span class="w"> </span><span class="s2">&quot;Enable the use of null-message synchronization&quot;</span>,<span class="w"> </span>nullmsg<span class="o">)</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="o">(</span>nullmsg<span class="o">)</span>
+<span class="w">  </span><span class="o">{</span>
+<span class="w">    </span>GlobalValue::Bind<span class="o">(</span><span class="s2">&quot;SimulatorImplementationType&quot;</span>,
+<span class="w">                       </span>StringValue<span class="o">(</span><span class="s2">&quot;ns3::NullMessageSimulatorImpl&quot;</span><span class="o">))</span><span class="p">;</span>
+<span class="w">  </span><span class="o">}</span>
+<span class="k">else</span>
+<span class="w">  </span><span class="o">{</span>
+<span class="w">    </span>GlobalValue::Bind<span class="o">(</span><span class="s2">&quot;SimulatorImplementationType&quot;</span>,
+<span class="w">                       </span>StringValue<span class="o">(</span><span class="s2">&quot;ns3::DistributedSimulatorImpl&quot;</span><span class="o">))</span><span class="p">;</span>
+<span class="w">  </span><span class="o">}</span>
+
+//<span class="w"> </span>Enable<span class="w"> </span>parallel<span class="w"> </span>simulator<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span><span class="nb">command</span><span class="w"> </span>line<span class="w"> </span>arguments
+MpiInterface::Enable<span class="o">(</span><span class="p">&amp;</span>argc,<span class="w"> </span><span class="p">&amp;</span>argv<span class="o">)</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="creating-custom-topologies">
+<h3><span class="section-number">22.2.4. </span>Creating custom topologies<a class="headerlink" href="#creating-custom-topologies" title="Link to this heading">¶</a></h3>
+<p>The example programs in src/mpi/examples give a good idea of how to create different
+topologies for distributed simulation. The main points are assigning system ids
+to individual nodes, creating point-to-point links where the simulation should
+be divided, and installing applications only on the LP associated with the
+target node.</p>
+<p>Assigning system ids to nodes is simple and can be handled two different ways.
+First, a NodeContainer can be used to create the nodes and assign system ids:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">nodes</span><span class="p">;</span>
+<span class="n">nodes</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Creates 5 nodes with system id 1.</span>
+</pre></div>
+</div>
+<p>Alternatively, nodes can be created individually, assigned system ids, and added
+to a NodeContainer. This is useful if a NodeContainer holds nodes with different
+system ids:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeContainer</span><span class="w"> </span><span class="n">nodes</span><span class="p">;</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">node1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// Create node1 with system id 0</span>
+<span class="n">Ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">node2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Create node2 with system id 1</span>
+<span class="n">nodes</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">node1</span><span class="p">);</span>
+<span class="n">nodes</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">node2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Next, where the simulation is divided is determined by the placement of
+point-to-point links. If a point-to-point link is created between two
+nodes with different system ids, a remote point-to-point link is created,
+as described in <a class="reference internal" href="#current-implementation-details"><span class="std std-ref">Current Implementation Details</span></a>.</p>
+<p>Finally, installing applications only on the LP associated with the target node
+is very important. For example, if a traffic generator is to be placed on node
+0, which is on LP0, only LP0 should install this application.  This is easily
+accomplished by first checking the simulator system id, and ensuring that it
+matches the system id of the target node before installing the application.</p>
+</section>
+</section>
+<section id="tracing-during-distributed-simulations">
+<h2><span class="section-number">22.3. </span>Tracing During Distributed Simulations<a class="headerlink" href="#tracing-during-distributed-simulations" title="Link to this heading">¶</a></h2>
+<p>Depending on the system id (rank) of the simulator, the information traced will
+be different, since traffic originating on one simulator is not seen by another
+simulator until it reaches nodes specific to that simulator. The easiest way to
+keep track of different traces is to just name the trace files or pcaps
+differently, based on the system id of the simulator. For example, something
+like this should work well, assuming all of these local variables were
+previously defined:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">MpiInterface</span><span class="o">::</span><span class="n">GetSystemId</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">pointToPoint</span><span class="p">.</span><span class="n">EnablePcapAll</span><span class="p">(</span><span class="s">&quot;distributed-rank0&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">phy</span><span class="p">.</span><span class="n">EnablePcap</span><span class="p">(</span><span class="s">&quot;distributed-rank0&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">apDevices</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">    </span><span class="n">csma</span><span class="p">.</span><span class="n">EnablePcap</span><span class="p">(</span><span class="s">&quot;distributed-rank0&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">csmaDevices</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">MpiInterface</span><span class="o">::</span><span class="n">GetSystemId</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">pointToPoint</span><span class="p">.</span><span class="n">EnablePcapAll</span><span class="p">(</span><span class="s">&quot;distributed-rank1&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">phy</span><span class="p">.</span><span class="n">EnablePcap</span><span class="p">(</span><span class="s">&quot;distributed-rank1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">apDevices</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">    </span><span class="n">csma</span><span class="p">.</span><span class="n">EnablePcap</span><span class="p">(</span><span class="s">&quot;distributed-rank1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">csmaDevices</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">22. MPI for Distributed Simulation</a><ul>
+<li><a class="reference internal" href="#current-implementation-details">22.1. Current Implementation Details</a><ul>
+<li><a class="reference internal" href="#remote-point-to-point-links">22.1.1. Remote point-to-point links</a></li>
+<li><a class="reference internal" href="#distributing-the-topology">22.1.2. Distributing the topology</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#running-distributed-simulations">22.2. Running Distributed Simulations</a><ul>
+<li><a class="reference internal" href="#prerequisites">22.2.1. Prerequisites</a></li>
+<li><a class="reference internal" href="#building-and-running-examples">22.2.2. Building and Running Examples</a></li>
+<li><a class="reference internal" href="#setting-synchronization-algorithm-to-use">22.2.3. Setting synchronization algorithm to use</a></li>
+<li><a class="reference internal" href="#creating-custom-topologies">22.2.4. Creating custom topologies</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tracing-during-distributed-simulations">22.3. Tracing During Distributed Simulations</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="mesh-references.html"
+                          title="previous chapter"><span class="section-number">21.4. </span>References</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="mobility.html"
+                          title="next chapter"><span class="section-number">23. </span>Mobility</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/distributed.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mobility.html" title="23. Mobility"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mesh-references.html" title="21.4. References"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">22. </span>MPI for Distributed Simulation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>33.4. pfifo_fast queue disc &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="33.5. Prio queue disc" href="prio.html" />
+    <link rel="prev" title="33.3. Fifo queue disc" href="fifo.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="prio.html" title="33.5. Prio queue disc"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="fifo.html" title="33.3. Fifo queue disc"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" accesskey="U"><span class="section-number">33. </span>Traffic Control Layer</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">33.4. </span>pfifo_fast queue disc</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="pfifo-fast-queue-disc">
+<h1><span class="section-number">33.4. </span>pfifo_fast queue disc<a class="headerlink" href="#pfifo-fast-queue-disc" title="Link to this heading">¶</a></h1>
+<section id="model-description">
+<h2><span class="section-number">33.4.1. </span>Model Description<a class="headerlink" href="#model-description" title="Link to this heading">¶</a></h2>
+<p>PfifoFastQueueDisc behaves like pfifo_fast, which is the default queue disc
+enabled on Linux systems (init systems such as systemd may override such default
+setting). Packets are enqueued in three priority bands (implemented
+as FIFO droptail queues) based on their priority (users can read
+<a class="reference internal" href="sockets-api.html#socket-options"><span class="std std-ref">Use of Send() vs. SendTo()</span></a> for details on how to set packet priority).
+The four least significant bits of the priority are used to determine
+the selected band according to the following table:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Priority &amp; 0xf</p></th>
+<th class="head"><p>Band</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p>The system behaves similar to three ns3::DropTail queues operating
+together, in which packets from higher priority bands are always
+dequeued before a packet from a lower priority band is dequeued.</p>
+<p>The queue disc capacity, i.e., the maximum number of packets that can
+be enqueued in the queue disc, is set through the MaxSize attribute, which
+plays the same role as txqueuelen in Linux. If no internal queue is
+provided, three DropTail queues having each a capacity equal to MaxSize are
+created by default. User is allowed to provide queues, but they must be
+three, operate in packet mode and each have a capacity not less
+than MaxSize. No packet filter can be added to a PfifoFastQueueDisc.</p>
+<section id="attributes">
+<h3><span class="section-number">33.4.1.1. </span>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h3>
+<p>The PfifoFastQueueDisc class holds a single attribute:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MaxSize:</span></code> The maximum number of packets accepted by the queue disc. The default value is 1000.</p></li>
+</ul>
+</section>
+<section id="examples">
+<h3><span class="section-number">33.4.1.2. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h3>
+<p>Various examples located in <code class="docutils literal notranslate"><span class="pre">src/traffic-control/examples</span></code> (e.g., codel-vs-pfifo-asymmetric.cc)
+shows how to configure and install a PfifoFastQueueDisc on internet nodes.</p>
+</section>
+</section>
+<section id="validation">
+<h2><span class="section-number">33.4.2. </span>Validation<a class="headerlink" href="#validation" title="Link to this heading">¶</a></h2>
+<p>The pfifo_fast model is tested using <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">PfifoFastQueueDiscTestSuite</span></code> class defined
+in <code class="docutils literal notranslate"><span class="pre">src/test/ns3tc/pfifo-fast-queue-disc-test-suite.cc</span></code>. The suite includes 4 test cases:</p>
+<ul class="simple">
+<li><p>Test 1: The first test checks whether IPv4 packets are enqueued in the correct band based on the TOS byte</p></li>
+<li><p>Test 2: The second test checks whether IPv4 packets are enqueued in the correct band based on the TOS byte</p></li>
+<li><p>Test 3: The third test checks that the queue disc cannot enqueue more packets than its limit</p></li>
+<li><p>Test 4: The fourth test checks that packets that the filters have not been able to classify are enqueued into the default band of 1</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">33.4. pfifo_fast queue disc</a><ul>
+<li><a class="reference internal" href="#model-description">33.4.1. Model Description</a><ul>
+<li><a class="reference internal" href="#attributes">33.4.1.1. Attributes</a></li>
+<li><a class="reference internal" href="#examples">33.4.1.2. Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#validation">33.4.2. Validation</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="fifo.html"
+                          title="previous chapter"><span class="section-number">33.3. </span>Fifo queue disc</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="prio.html"
+                          title="next chapter"><span class="section-number">33.5. </span>Prio queue disc</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/pfifo-fast.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="prio.html" title="33.5. Prio queue disc"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="fifo.html" title="33.3. Fifo queue disc"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" ><span class="section-number">33. </span>Traffic Control Layer</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">33.4. </span>pfifo_fast queue disc</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

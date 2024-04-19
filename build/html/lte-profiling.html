@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>20.4. Profiling Documentation &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="20.5. References" href="lte-references.html" />
+    <link rel="prev" title="20.3. Testing Documentation" href="lte-testing.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="lte-references.html" title="20.5. References"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="lte-testing.html" title="20.3. Testing Documentation"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="lte.html" accesskey="U"><span class="section-number">20. </span>LTE Module</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">20.4. </span>Profiling Documentation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="profiling-documentation">
+<h1><span class="section-number">20.4. </span>Profiling Documentation<a class="headerlink" href="#profiling-documentation" title="Link to this heading">¶</a></h1>
+<section id="overview-and-objectives">
+<h2><span class="section-number">20.4.1. </span>Overview and objectives<a class="headerlink" href="#overview-and-objectives" title="Link to this heading">¶</a></h2>
+<p>The main objective of the profiling carried out is to assess the simulator performance on a broad set of scenarios. This evaluation provides reference values for simulation running times and memory consumption figures. It also helps to identify potential performance improvements and to check for scalability problems when increasing the number of eNodeB and UEs attached to those.</p>
+<p>In the following sections, a detailed description of the general profiling framework employed to perform the study is introduced. It also includes details on the main performed tests and its results evaluation.</p>
+</section>
+<section id="framework-description">
+<h2><span class="section-number">20.4.2. </span>Framework description<a class="headerlink" href="#framework-description" title="Link to this heading">¶</a></h2>
+<section id="simulation-scripts">
+<h3><span class="section-number">20.4.2.1. </span>Simulation scripts<a class="headerlink" href="#simulation-scripts" title="Link to this heading">¶</a></h3>
+<p>The simulation script used for all the E-UTRAN results showed in this documentation is located at <code class="docutils literal notranslate"><span class="pre">src/lte/examples/lena-profiling.cc</span></code>. It uses the complete PHY and MAC UE/eNodeB implementation with a simplified RLC implementation on top. This script generates a squared grid topology, placing a eNodeB at the centre of each square. UEs attached to this node are scattered randomly across the square (using a random uniform distribution along X and Y axis). If <em>BuildingPropagationModel</em> is used, the squares are replaced by rooms. To generate the UL and DL traffic, the RLC implementation always report data to be transferred.</p>
+<figure class="align-center" id="id3">
+<span id="fig-eutranprofilingscenario"></span><a class="reference internal image-reference" href="_images/eutran-profiling-scenario.png"><img alt="_images/eutran-profiling-scenario.png" src="_images/eutran-profiling-scenario.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">E-UTRAN</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>For the EPC results, the script is <code class="docutils literal notranslate"><span class="pre">src/lte/examples/lena-simple-epc.cc</span></code>. It uses a complete E-UTRAN implementation (PHY+MAC+RLC/UM+PDCP) and the most relevant EPC user plane entities the PGW and SGW, including GTP-U tunneling. This script generates a given number of eNodeBs, distributed across a line and attaches a single UE to every eNodeB. It also creates an EPC network and an external host connected to it through the Internet. Each UE sends and receives data to and from the remote host. In addition, each UE is also sending data to the UE camped in the adjacent eNodeB.</p>
+<figure class="align-center" id="id4">
+<span id="fig-epcprofilingscenario"></span><a class="reference internal image-reference" href="_images/epc-profiling-scenario.png"><img alt="_images/epc-profiling-scenario.png" src="_images/epc-profiling-scenario.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Propagation Model</span><a class="headerlink" href="#id4" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>RLC and MAC traces are enabled for all UEs and all eNodeBs and those traces are written to disk directly. The MAC scheduler used is <em>round robin</em>.</p>
+<section id="simulation-input-parameters">
+<h4><span class="section-number">20.4.2.1.1. </span>Simulation input parameters<a class="headerlink" href="#simulation-input-parameters" title="Link to this heading">¶</a></h4>
+<p>The <em>lena-profiling</em> simulation script accepts the following input parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">simTime</span></code>: time to simulate (in seconds)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nUe</span></code>: number of UEs attached to each eNodeB</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nEnb</span></code>: number of eNodeB composing the grid per floor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nFloors</span></code>: number of floors, 0 for <em>Friis propagation model</em> (no walls), 1 or greater for <em>Building propagation model</em> generating a nFloors-storey building.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">traceDirectory</span></code>: destination directory where simulation traces will be stored</p></li>
+</ul>
+</div></blockquote>
+<p>The <em>lena-simple-epc</em> script accepts those other parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">simTime</span></code>: time to simulate (in seconds)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfNodes</span></code>: number of eNodeB + UE pairs created</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="time-measurement">
+<h3><span class="section-number">20.4.2.2. </span>Time measurement<a class="headerlink" href="#time-measurement" title="Link to this heading">¶</a></h3>
+<p>Running time is measured using default Linux shell command <strong>time</strong>. This command counts how much user time the execution of a program takes.</p>
+</section>
+<section id="perl-script">
+<h3><span class="section-number">20.4.2.3. </span>Perl script<a class="headerlink" href="#perl-script" title="Link to this heading">¶</a></h3>
+<p>To simplify the process of running the profiling script for a wide range of values and collecting its timing data, a simple Perl script to automate the complete process is provided. It is placed in <code class="docutils literal notranslate"><span class="pre">src/lte/test/lte-test-run-time.pl</span></code> for <em>lena-profiling</em> and in <code class="docutils literal notranslate"><span class="pre">src/lte/epc-test-run-time.pl</span></code> for <em>lena-simple-epc</em>. It simply runs a batch of simulations with a range of parameters and stores the timing results in a CSV file called <em>lteTimes.csv</em> and <em>epcTimes.csv</em> respectively. The range of values each parameter sweeps can be modified editing the corresponding script.</p>
+<section id="requirements">
+<h4><span class="section-number">20.4.2.3.1. </span>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>The following Perl modules are required to use the provided script, all of them available from CPAN:</dt><dd><ul class="simple">
+<li><p>IO::CaptureOutput</p></li>
+<li><p>Statistics::Descriptive</p></li>
+</ul>
+</dd>
+</dl>
+<p>For installing the modules, simply use the following command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">perl</span> <span class="pre">-MCPAN</span> <span class="pre">-e</span> <span class="pre">'install</span> <span class="pre">moduleName'</span></code></p>
+</section>
+<section id="plotting-results">
+<h4><span class="section-number">20.4.2.3.2. </span>Plotting results<a class="headerlink" href="#plotting-results" title="Link to this heading">¶</a></h4>
+<p>To plot the results obtained from running the Perl scripts, two gnuplot scripts are provided, in <code class="docutils literal notranslate"><span class="pre">src/lte/test/lte-test-run-plot</span></code> and <code class="docutils literal notranslate"><span class="pre">src/lte/test/epc-test-run-plot</span></code>. Most of the plots available in this documentation can be reproduced with those, typing the commands <code class="docutils literal notranslate"><span class="pre">gnuplot</span> <span class="pre">&lt;</span> <span class="pre">src/lte/test/lte-test-run-plot</span></code>  and  <code class="docutils literal notranslate"><span class="pre">gnuplot</span> <span class="pre">&lt;</span> <span class="pre">src/lte/test/epc-test-run-plot</span></code>.</p>
+</section>
+</section>
+<section id="reference-software-and-equipment">
+<h3><span class="section-number">20.4.2.4. </span>Reference software and equipment<a class="headerlink" href="#reference-software-and-equipment" title="Link to this heading">¶</a></h3>
+<p>All timing tests had been run in a Intel Pentium IV 3.00 GHz machine with 512 Mb of RAM memory running Fedora Core 10 with a 2.6.27.41-170.2.117 kernel, storing the traces directly to the hard disk.</p>
+<p>Also, as a reference configuration, the build has been configured static and optimized. The exact <code class="docutils literal notranslate"><span class="pre">ns3</span></code> command issued is:</p>
+<p><code class="docutils literal notranslate"><span class="pre">CXXFLAGS=&quot;-O3</span> <span class="pre">-w&quot;</span> <span class="pre">./ns3</span> <span class="pre">configure</span> <span class="pre">-d</span> <span class="pre">optimized</span> <span class="pre">--enable-static</span> <span class="pre">--enable-examples</span> <span class="pre">--enable-modules=lte</span></code></p>
+</section>
+</section>
+<section id="results">
+<h2><span class="section-number">20.4.3. </span>Results<a class="headerlink" href="#results" title="Link to this heading">¶</a></h2>
+<section id="e-utran">
+<h3><span class="section-number">20.4.3.1. </span>E-UTRAN<a class="headerlink" href="#e-utran" title="Link to this heading">¶</a></h3>
+<p>The following results and figures had been obtained with LENA <strong>changeset 2c5b0d697717</strong>.</p>
+<section id="running-time">
+<h4><span class="section-number">20.4.3.1.1. </span>Running time<a class="headerlink" href="#running-time" title="Link to this heading">¶</a></h4>
+<p>This scenario, evaluates the running time for a fixed simulation time (10s) and Friis propagation mode increasing the number of UEs attached to each eNodeB and the number of planted eNodeBs in the scenario.</p>
+<figure class="align-center" id="id5">
+<span id="fig-runtime"></span><a class="reference internal image-reference" href="_images/runningTime10s.png"><img alt="_images/runningTime10s.png" src="_images/runningTime10s.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Running time</span><a class="headerlink" href="#id5" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The figure shows the expected behaviour, since it increases linearly respect the number of UEs per eNodeB and quadratically respect the total number of eNodeBs.</p>
+</section>
+<section id="propagation-model">
+<h4><span class="section-number">20.4.3.1.2. </span>Propagation model<a class="headerlink" href="#propagation-model" title="Link to this heading">¶</a></h4>
+<p>The objective of this scenario is to evaluate the impact of the propagation model complexity in the overall run time figures. Therefore, the same scenario is simulated twice: once using the more simple Friis model, once with the more complex Building model. The rest of the parameters (e.g. number of eNodeB and of UE attached per eNodeB) were maintained. The timing results for both models are compared in the following figure.</p>
+<figure class="align-center" id="id6">
+<span id="fig-propagationmodel"></span><a class="reference internal image-reference" href="_images/propagationModel.png"><img alt="_images/propagationModel.png" src="_images/propagationModel.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Propagation Model</span><a class="headerlink" href="#id6" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>In this situation, results are also coherent with what is expected. The more complex the model, the higher the running time. Moreover, as the number of computed path losses increases (i.e. more UEs per eNodeB or more eNodeBs) the extra complexity of the propagation model drives the running time figures further apart.</p>
+</section>
+<section id="simulation-time">
+<h4><span class="section-number">20.4.3.1.3. </span>Simulation time<a class="headerlink" href="#simulation-time" title="Link to this heading">¶</a></h4>
+<p>In this scenario, for a fixed set of UEs per eNodeB, different simulation times had been run. As the simulation time increases, running time should also increase linearly, i.e. for a given scenario, simulate four seconds should take twice times what it takes to simulate two seconds. The slope of this line is a function of the complexity of the scenario: the more eNodeB / UEs placed, the higher the slope of the line.</p>
+<figure class="align-center" id="id7">
+<span id="fig-simulationtime"></span><a class="reference internal image-reference" href="_images/simulationTime.png"><img alt="_images/simulationTime.png" src="_images/simulationTime.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Simulation time</span><a class="headerlink" href="#id7" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="memory-usage">
+<h4><span class="section-number">20.4.3.1.4. </span>Memory usage<a class="headerlink" href="#memory-usage" title="Link to this heading">¶</a></h4>
+<p>Massif tool to profile memory consumption</p>
+<figure class="align-center" id="id8">
+<span id="fig-profilingmemory"></span><a class="reference internal image-reference" href="_images/profiling-memory.png"><img alt="_images/profiling-memory.png" src="_images/profiling-memory.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Memory profile</span><a class="headerlink" href="#id8" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="epc">
+<h3><span class="section-number">20.4.3.2. </span>EPC<a class="headerlink" href="#epc" title="Link to this heading">¶</a></h3>
+<p>The following results and figures had been obtained with LENA <strong>changeset e8b3ccdf6673</strong>. The rationale behind the two scenarios profiled on this section is the same than for the E-UTRA part.</p>
+<section id="id1">
+<h4><span class="section-number">20.4.3.2.1. </span>Running time<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h4>
+<p>Running time evolution is quadratic since we increase at the same time the number of eNodeB and the number of UEs.</p>
+<figure class="align-center" id="id9">
+<span id="fig-epcruntime"></span><a class="reference internal image-reference" href="_images/epcRunningTime.png"><img alt="_images/epcRunningTime.png" src="_images/epcRunningTime.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Running time</span><a class="headerlink" href="#id9" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>To estimate the additional complexity of the upper LTE Radio Protocol Stack model and the EPC model, we compare two scenarios using the simplified E-UTRAN version (using only PHY, MAC and the simplified RLC/SM, with no EPC and no ns-3 applications) against the complete E-UTRAN + EPC (with UM RLC, PDCP, end-to-end IP networking and regular ns-3 applications). Both configuration have been tested with the same number of UEs per eNodeB, the same number of eNodeBs, and approximately the same volume of transmitted data (an exact match was not possible due to the different ways in which packets are generated in the two configurations).</p>
+<figure class="align-center" id="id10">
+<span id="fig-epceutranruntime"></span><a class="reference internal image-reference" href="_images/epcEutranRunningTime.png"><img alt="_images/epcEutranRunningTime.png" src="_images/epcEutranRunningTime.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">EPC E-UTRAN running time</span><a class="headerlink" href="#id10" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>From the figure, it is evident that the additional complexity of using the upper LTE stack plus the EPC model translates approximately into a doubling of the execution time of the simulations. We believe that, considered all the new features that have been added, this figure is acceptable.</p>
+</section>
+<section id="id2">
+<h4><span class="section-number">20.4.3.2.2. </span>Simulation time<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h4>
+<p>Finally, again the linearity of the running time as the simulation time increases gets validated through a set of experiments, as the following figure shows.</p>
+<figure class="align-center" id="id11">
+<span id="fig-epcsimtime"></span><a class="reference internal image-reference" href="_images/epcSimulationTime.png"><img alt="_images/epcSimulationTime.png" src="_images/epcSimulationTime.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Simulation time</span><a class="headerlink" href="#id11" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">20.4. Profiling Documentation</a><ul>
+<li><a class="reference internal" href="#overview-and-objectives">20.4.1. Overview and objectives</a></li>
+<li><a class="reference internal" href="#framework-description">20.4.2. Framework description</a><ul>
+<li><a class="reference internal" href="#simulation-scripts">20.4.2.1. Simulation scripts</a><ul>
+<li><a class="reference internal" href="#simulation-input-parameters">20.4.2.1.1. Simulation input parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#time-measurement">20.4.2.2. Time measurement</a></li>
+<li><a class="reference internal" href="#perl-script">20.4.2.3. Perl script</a><ul>
+<li><a class="reference internal" href="#requirements">20.4.2.3.1. Requirements</a></li>
+<li><a class="reference internal" href="#plotting-results">20.4.2.3.2. Plotting results</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reference-software-and-equipment">20.4.2.4. Reference software and equipment</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#results">20.4.3. Results</a><ul>
+<li><a class="reference internal" href="#e-utran">20.4.3.1. E-UTRAN</a><ul>
+<li><a class="reference internal" href="#running-time">20.4.3.1.1. Running time</a></li>
+<li><a class="reference internal" href="#propagation-model">20.4.3.1.2. Propagation model</a></li>
+<li><a class="reference internal" href="#simulation-time">20.4.3.1.3. Simulation time</a></li>
+<li><a class="reference internal" href="#memory-usage">20.4.3.1.4. Memory usage</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#epc">20.4.3.2. EPC</a><ul>
+<li><a class="reference internal" href="#id1">20.4.3.2.1. Running time</a></li>
+<li><a class="reference internal" href="#id2">20.4.3.2.2. Simulation time</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="lte-testing.html"
+                          title="previous chapter"><span class="section-number">20.3. </span>Testing Documentation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="lte-references.html"
+                          title="next chapter"><span class="section-number">20.5. </span>References</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/lte-profiling.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="lte-references.html" title="20.5. References"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="lte-testing.html" title="20.3. Testing Documentation"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="lte.html" ><span class="section-number">20. </span>LTE Module</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">20.4. </span>Profiling Documentation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

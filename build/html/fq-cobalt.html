@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>33.11. FqCobalt queue disc &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="33.12. PIE queue disc" href="pie.html" />
+    <link rel="prev" title="33.10. Cobalt queue disc" href="cobalt.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="pie.html" title="33.12. PIE queue disc"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cobalt.html" title="33.10. Cobalt queue disc"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" accesskey="U"><span class="section-number">33. </span>Traffic Control Layer</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">33.11. </span>FqCobalt queue disc</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="fqcobalt-queue-disc">
+<span id="sec-fq-cobalt"></span><h1><span class="section-number">33.11. </span>FqCobalt queue disc<a class="headerlink" href="#fqcobalt-queue-disc" title="Link to this heading">¶</a></h1>
+<p>This chapter describes the FqCobalt (<a class="reference internal" href="#pal19" id="id1"><span>[Pal19]</span></a>) queue disc implementation in <em>ns-3</em>.</p>
+<p>The FlowQueue-Cobalt (FQ-Cobalt) algorithm is similar to FlowQueue-CoDel (FQ-CoDel) algorithm available in :<a class="reference internal" href="fq-codel.html#sec-fq-codel"><span class="std std-ref">FqCoDel queue disc</span></a>.
+The documentation for Cobalt is available in
+<code class="docutils literal notranslate"><span class="pre">ns-3-dev/src/traffic-control/doc/cobalt.rst</span></code>.</p>
+<p>FqCobalt is one of the key components of the CAKE smart queue management framework  (<a class="reference internal" href="#hoe18" id="id2"><span>[Hoe18]</span></a>).  The COBALT AQM is preferred to the CoDel AQM for CAKE because
+it adds a heuristic called BLUE to cover cases in which the CoDel control
+law is too sluggish to respond to queue growth.</p>
+<section id="model-description">
+<h2><span class="section-number">33.11.1. </span>Model Description<a class="headerlink" href="#model-description" title="Link to this heading">¶</a></h2>
+<p>The source code for the FqCobalt queue disc is located in the directory
+<code class="docutils literal notranslate"><span class="pre">src/traffic-control/model</span></code> and consists of 2 files <cite>fq-cobalt-queue-disc.h</cite>
+and <cite>fq-cobalt-queue-disc.cc</cite> defining a FqCobaltQueueDisc class and a helper
+FqCobaltFlow class. The code was ported to <em>ns-3</em> based on Linux kernel code
+implemented by Jonathan Morton
+(<a class="reference external" href="https://github.com/torvalds/linux/blob/master/net/sched/sch_cake.c">https://github.com/torvalds/linux/blob/master/net/sched/sch_cake.c</a>).</p>
+<p>The Model Description is similar to the FqCoDel documentation mentioned above.</p>
+<section id="references">
+<h3><span class="section-number">33.11.1.1. </span>References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h3>
+<div role="list" class="citation-list">
+<div class="citation" id="pal19" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Pal19</a><span class="fn-bracket">]</span></span>
+<ol class="upperalpha simple" start="10">
+<li><p>Palmei, S. Gupta, P. Imputato, J. Morton, M. Tahiliani, S. Avallone, and D. Taht, Design and Evaluation of COBALT Queue Discipline, 2019 IEEE International Symposium on Local and Metropolitan Area Networks (LANMAN), Paris, France, 2019.</p></li>
+</ol>
+</div>
+<div class="citation" id="hoe18" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Hoe18</a><span class="fn-bracket">]</span></span>
+<ol class="upperalpha simple" start="20">
+<li><p>Hoiland-Jørgensen, D. Taht and J. Morton, “Piece of CAKE: A Comprehensive Queue Management Solution for Home Gateways,” 2018 IEEE International Symposium on Local and Metropolitan Area Networks (LANMAN), Washington, DC, USA, 2018.</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="attributes">
+<h3><span class="section-number">33.11.1.2. </span>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h3>
+<p>Most of the key attributes are similar to the FqCoDel implementation mentioned above.  One difference is the absence of the <code class="docutils literal notranslate"><span class="pre">MinBytes</span></code> parameter.</p>
+<p>Some additional parameters implemented as attributes are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Pdrop:</span></code> Value of drop probability.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Increment:</span></code> Increment value of drop probability. Default value is 1./256 .</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Decrement:</span></code> Decrement value of drop probability. Default value is 1./4096 .</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BlueThreshold:</span></code> The threshold after which Blue is enabled. Default value is 400ms.</p></li>
+</ul>
+<p>Note that if the user wants to disable Blue Enhancement then the user can set
+it to a large value; for example, to <cite>Time::Max ()</cite>.</p>
+</section>
+<section id="examples">
+<h3><span class="section-number">33.11.1.3. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h3>
+<p>A typical usage pattern is to create a traffic control helper and to configure
+the type
+and attributes of the queue disc and filters from the helper.
+For example, <cite>FqCobalt</cite> can be configured as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TrafficControlHelper</span><span class="w"> </span><span class="n">tch</span><span class="p">;</span>
+<span class="n">tch</span><span class="p">.</span><span class="n">SetRootQueueDisc</span><span class="p">(</span><span class="s">&quot;ns3::FqCobaltQueueDisc&quot;</span><span class="p">,</span>
+<span class="w">                      </span><span class="s">&quot;DropBatchSize&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">UintegerValue</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+<span class="w">                     </span><span class="s">&quot;Perturbation&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">UintegerValue</span><span class="p">(</span><span class="mi">256</span><span class="p">));</span>
+<span class="n">QueueDiscContainer</span><span class="w"> </span><span class="n">qdiscs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tch</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">devices</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="validation">
+<h2><span class="section-number">33.11.2. </span>Validation<a class="headerlink" href="#validation" title="Link to this heading">¶</a></h2>
+<p>The FqCobalt model is tested using <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">FqCobaltQueueDiscTestSuite</span></code> class defined in <cite>src/test/ns3tc/codel-queue-test-suite.cc</cite>.</p>
+<p>The tests are similar to the ones for FqCoDel queue disc mentioned in first section of this document.
+The test suite can be run using the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>configure<span class="w"> </span>--enable-examples<span class="w"> </span>--enable-tests
+$<span class="w"> </span>./ns3<span class="w"> </span>build
+$<span class="w"> </span>./test.py<span class="w"> </span>-s<span class="w"> </span>fq-cobalt-queue-disc
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nv">NS_LOG</span><span class="o">=</span><span class="s2">&quot;FqCobaltQueueDisc&quot;</span><span class="w"> </span>./ns3<span class="w"> </span>run<span class="w"> </span><span class="s2">&quot;test-runner --suite=fq-cobalt-queue-disc&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">33.11. FqCobalt queue disc</a><ul>
+<li><a class="reference internal" href="#model-description">33.11.1. Model Description</a><ul>
+<li><a class="reference internal" href="#references">33.11.1.1. References</a></li>
+<li><a class="reference internal" href="#attributes">33.11.1.2. Attributes</a></li>
+<li><a class="reference internal" href="#examples">33.11.1.3. Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#validation">33.11.2. Validation</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cobalt.html"
+                          title="previous chapter"><span class="section-number">33.10. </span>Cobalt queue disc</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="pie.html"
+                          title="next chapter"><span class="section-number">33.12. </span>PIE queue disc</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/fq-cobalt.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="pie.html" title="33.12. PIE queue disc"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cobalt.html" title="33.10. Cobalt queue disc"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="traffic-control.html" ><span class="section-number">33. </span>Traffic Control Layer</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">33.11. </span>FqCobalt queue disc</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

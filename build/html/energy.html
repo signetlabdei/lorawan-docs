@@ -1,0 +1,664 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>14. Energy Framework &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="15. Flow Monitor" href="flow-monitor.html" />
+    <link rel="prev" title="13.4. Tap NetDevice" href="tap.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="flow-monitor.html" title="15. Flow Monitor"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tap.html" title="13.4. Tap NetDevice"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">14. </span>Energy Framework</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="energy-framework">
+<h1><span class="section-number">14. </span>Energy Framework<a class="headerlink" href="#energy-framework" title="Link to this heading">¶</a></h1>
+<p>Energy is a key issue for wireless devices, and network researchers
+often need to investigate the energy consumption at a node or in the
+overall network while running network simulations in <em>ns-3</em>.
+This requires <em>ns-3</em> to support an energy framework.
+Further, as concepts such as fuel cells and energy
+scavenging are becoming viable for low power wireless devices,
+incorporating the effect of these emerging technologies into
+simulations requires support for modeling diverse energy models in
+ns-3. The <em>ns-3</em> energy framework provides the basis for energy storing
+consumption and harvesting.</p>
+<section id="model-description">
+<h2><span class="section-number">14.1. </span>Model Description<a class="headerlink" href="#model-description" title="Link to this heading">¶</a></h2>
+<p>The framework is implemented into the <code class="docutils literal notranslate"><span class="pre">src/energy/</span></code> folder.</p>
+<p>The <em>ns-3</em> energy framework is composed of 3 essential parts:</p>
+<ul class="simple">
+<li><p><strong>Energy source models.</strong> Represent storing energy sources such as batteries or capacitors.</p></li>
+<li><p><strong>Energy consumption models.</strong> Represent a portion of a device that draws energy from energy sources. Examples of this include sensors, radio transceivers, vehicles, UAV, etc.</p></li>
+<li><p><strong>Energy harvesting models.</strong> Represent devices that provide energy to energy sources. For example, solar panels and chargers.</p></li>
+</ul>
+<figure class="align-default" id="id7">
+<span id="fig-energyframework"></span><img alt="_images/energyFramework.png" src="_images/energyFramework.png" />
+<figcaption>
+<p><span class="caption-text"><em>ns-3</em> energy framework</span><a class="headerlink" href="#id7" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="energy-source-models">
+<h3><span class="section-number">14.1.1. </span>Energy Source Models<a class="headerlink" href="#energy-source-models" title="Link to this heading">¶</a></h3>
+<p>An energy source represents a power supply. In <em>ns-3</em>, nodes can
+have one or more energy sources. Likewise, energy sources can be
+connected to multiple energy consuption models (Device energy models).
+Connecting an energy source to a device energy model implies that the
+corresponding device draws power from the source.
+When energy is completely drained from the energy source, it notifies to the device energy models on
+the node such that each device energy model can react to this event. Further, each node
+can access the energy source objects for information such as remaining capacity , voltage or
+state of charge (SoC). This enables the implementation of energy aware protocols in ns-3.</p>
+<p>In order to model a wide range of power supplies such as batteries, the energy source must be able to capture characteristics of these supplies. There are 2 important characteristics or effects related to practical batteries:</p>
+<ul class="simple">
+<li><p><strong>Rate Capacity Effect.</strong> Decrease of battery lifetime when the current draw is higher than the rated value of the battery.</p></li>
+<li><p><strong>Recovery Effect.</strong> Increase of battery lifetime when the battery is alternating between discharge and idle states.</p></li>
+</ul>
+<p>In order to incorporate the Rate Capacity Effect, the Energy Source
+uses current draw from all the devices on the same node to calculate
+energy consumption. Moreover, multiple Energy Harvesters can be
+connected to the Energy Source in order to replenish its energy. The
+Energy Source periodically polls all the devices and energy harvesters
+on the same node to calculate the total current drain and hence the
+energy consumption. When a device changes state, its corresponding
+Device Energy Model will notify the Energy Source of this change and
+new total current draw will be calculated. Similarly, every Energy
+Harvester update triggers an update to the connected Energy Source.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">EnergySource</span></code> base class keeps a list of devices (<code class="docutils literal notranslate"><span class="pre">DeviceEnergyModel</span></code> objects) and energy harvesters (<code class="docutils literal notranslate"><span class="pre">EnergyHarvester</span></code> objects) that are using the particular Energy Source as power supply. When energy is completely drained, the Energy Source will notify all devices on this list. Each device can then handle this event independently, based on the desired behavior that should be followed in case of power outage.</p>
+<section id="generic-batttery-model">
+<h4><span class="section-number">14.1.1.1. </span>Generic Batttery Model<a class="headerlink" href="#generic-batttery-model" title="Link to this heading">¶</a></h4>
+<p>The Generic battery model is able to represent 4 basic types of batteries
+chemestries: Lithium-Ion (LiIon) or Lithium Polymer (LiPo), Nickel Cadmium (NiCd),
+Lead Acid, and Nickel-metal hydride (NiMH). The main difference between these batteries
+is the shape of the discharge curves when using constant discharge current and that
+NiCd and NiMh batteries hysteresis phenomenon is also modeled. Peurket effect, aging,
+temperature and variable battery impedance is not considered for all batteries. batteries
+with similar discharge behavior might be also represented but one of the 4 basic
+arqueotipes must be chosen.</p>
+<p>The Generic Battery Model is directly based by the works of Trembley et al.
+Tremblay’s model on itself is based on a popular battery model created by Shepherd.
+Tremblay’s model consist in visually identify a set of points from batteries manufacters’
+discharge curves datasheets.</p>
+<figure class="align-default" id="id8">
+<span id="id1"></span><img alt="_images/dischargeCurve.png" src="_images/dischargeCurve.png" />
+<figcaption>
+<p><span class="caption-text"><em>ns-3</em> Generic Battery Model Points in battery discharge curve.</span><a class="headerlink" href="#id8" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The 3 basic set of points that require identification in a datasheet are:</p>
+<ul class="simple">
+<li><p><img class="math" src="_images/math/01ba3ba1e5a8a79eeed38026e5dfea2c89634c67.png" alt="V_{full}:"/> The full battery voltage</p></li>
+<li><p><img class="math" src="_images/math/2cf6f4be884ff687b56bf0b3ab7ba2ee90c5b58b.png" alt="Q:"/> The maximum battery capacity</p></li>
+<li><p><img class="math" src="_images/math/e3bff569b762d1c05e724b0342db656839cf9116.png" alt="V_{exp}:"/> The voltage at the end of the exponential zone</p></li>
+<li><p><img class="math" src="_images/math/5f698658c81f79ce93f9336d8c5681601f85ce09.png" alt="Q_{exp}:"/> The capacity at the end of the exponential zone</p></li>
+<li><p><img class="math" src="_images/math/5c77744d77afded345115c1eebebc73800ce646e.png" alt="V_{nom}:"/> The voltage at the end of the exponential zone</p></li>
+<li><p><img class="math" src="_images/math/1386e92b5f2a83792b90d93ecf3a25ec4dd7729c.png" alt="Q_{nom}:"/> The capacity at the end of the exponential zone</p></li>
+</ul>
+<p>Additionally, it is also necessary to set the values of:</p>
+<ul class="simple">
+<li><p><img class="math" src="_images/math/809e2e1b65ae55bec0ed9dbce6a27510ccc6249e.png" alt="R:"/> The battery impedance (The battery internal resistance)</p></li>
+<li><p><img class="math" src="_images/math/3e726176f54b4b7ca56b4b119caa06d564b4c28a.png" alt="i_{typical}:"/> The typical current value used to discharge the battery, this value is used to calculate some of the constants used in the model.</p></li>
+<li><p><img class="math" src="_images/math/be928587a701017c529df780f39c7e881c4f75f5.png" alt="cutoffVoltage:"/> Required if we desired to inform connected energy consumption models that the battery has reached its discharged point.</p></li>
+<li><p><img class="math" src="_images/math/4975a9d6a86e654f3ef7750c7fcd4da0a7b3cc3f.png" alt="i:"/> The discharge current used to discharge the battery. This value is provided by the energy consumption model attached to the battery.</p></li>
+</ul>
+<p>The value of <img class="math" src="_images/math/1ebe654cc7b8f2a0d8100aa5825cf2b9021adbbc.png" alt="R"/> is typically included in the datatsheets, however, because <img class="math" src="_images/math/1ebe654cc7b8f2a0d8100aa5825cf2b9021adbbc.png" alt="R"/> variability is not modeled in <em>ns-3</em> (The resistance is fixed), it is necessary
+to discretely adjust its value to obtain the desired discharge curves. The value <img class="math" src="_images/math/a811a8a051ef7560155d166f791629a7fb3e71c2.png" alt="i_{typical}"/> can
+be obtained by inferring its value from the discharged curves shown in datasheets. When modeling
+the behavior of a new battery, it is important to chose values that satisfies more than one curve,
+trial an error adjustments might be necessary to obtain the desired results.</p>
+<p>Attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">FullVoltage</span></code>: Represents the <img class="math" src="_images/math/8e947de26e616369a3b554e87ab9d777b3021757.png" alt="V_{full}"/> value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MaxCapacity</span></code>: Represents the <img class="math" src="_images/math/90cab5ae70bdb6e45756490226ba488f522c4c4e.png" alt="Q"/> value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ExponentialVoltage</span></code>: Represents the <img class="math" src="_images/math/35713cd7104a70c141f57f2ee5a105789bedc3a8.png" alt="V_{exp}"/> value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ExponentialCapacity</span></code>: Represents the <img class="math" src="_images/math/f6eab52357c6a65754d2deb7b53e70c9beaea9b3.png" alt="Q_{exp}"/> value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NominalVoltage</span></code>: Represents the <img class="math" src="_images/math/1f6dbcc4c478c3288318e410014f675a9877f94b.png" alt="V_{nom}"/> value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NominalCapacity</span></code>: Represents the <img class="math" src="_images/math/489f48b44f1a92c74bdacc52d5fce30e5c0aed20.png" alt="Q_{nom}"/> value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">InternalResistance</span></code>: Represents the <img class="math" src="_images/math/1ebe654cc7b8f2a0d8100aa5825cf2b9021adbbc.png" alt="R"/> value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TypicalDischargeCurrent</span></code>: Represents the <img class="math" src="_images/math/a811a8a051ef7560155d166f791629a7fb3e71c2.png" alt="i_{typical}"/> value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CutoffVoltage</span></code>: The voltage where the battery is considered depleted.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BatteryType</span></code>: Indicates the battery type used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PeriodicEnergyUpdateInterval</span></code>: Indicates how often the update values are obtained.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LowBatteryThreshold</span></code>: Additional voltage threshold to indicate when the battery has low energy.</p></li>
+</ul>
+<p>The process described above can be simplified by installing batteries presents of previously tested
+batteries using helpers. Details on helpers usage are detailed in the following sections.</p>
+</section>
+<section id="rv-battery-model">
+<h4><span class="section-number">14.1.1.2. </span>RV Battery Model<a class="headerlink" href="#rv-battery-model" title="Link to this heading">¶</a></h4>
+<p>Attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">RvBatteryModelPeriodicEnergyUpdateInterval</span></code>: RV battery model sampling
+interval.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RvBatteryModelOpenCircuitVoltage</span></code>: RV battery model open circuit voltage.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RvBatteryModelCutoffVoltage</span></code>: RV battery model cutoff voltage.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RvBatteryModelAlphaValue</span></code>: RV battery model alpha value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RvBatteryModelBetaValue</span></code>: RV battery model beta value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RvBatteryModelNumOfTerms</span></code>: The number of terms of the infinite sum for estimating battery level.</p></li>
+</ul>
+</section>
+<section id="basic-energy-source">
+<h4><span class="section-number">14.1.1.3. </span>Basic Energy Source<a class="headerlink" href="#basic-energy-source" title="Link to this heading">¶</a></h4>
+<p>Attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BasicEnergySourceInitialEnergyJ</span></code>: Initial energy stored in
+basic energy source.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BasicEnergySupplyVoltageV</span></code>: Initial supply voltage for basic energy source.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PeriodicEnergyUpdateInterval</span></code>: Time between two consecutive periodic energy updates.</p></li>
+</ul>
+</section>
+</section>
+<section id="energy-consumption-models">
+<h3><span class="section-number">14.1.2. </span>Energy Consumption Models<a class="headerlink" href="#energy-consumption-models" title="Link to this heading">¶</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">DeviceEnergyModel</span></code> is the energy consumption model of a device installed on the node.
+It is designed to be a state based model where each device is assumed to have a number of states, and each state is associated with a power consumption value.
+Whenever the state of the device changes, the corresponding <code class="docutils literal notranslate"><span class="pre">DeviceEnergyModel</span></code> will notify the associated <code class="docutils literal notranslate"><span class="pre">EnergySourceModel</span></code> of the new current draw of the device.
+The <code class="docutils literal notranslate"><span class="pre">EnergySourceModel</span></code> will then calculate the new total current draw and update the remaining energy. A <code class="docutils literal notranslate"><span class="pre">DeviceEnergyModel</span></code> can also be used for devices that do not have finite number of states.
+For example, in an electric vehicle, the current draw of the motor is determined by its speed.
+Since the vehicle’s speed can take continuous values within a certain range, it is infeasible to define a set of discrete states of operation.
+However, by converting the speed value into current draw directly, the same set of <code class="docutils literal notranslate"><span class="pre">DeviceEnergyModel</span></code> APIs can still be used.</p>
+<section id="wifi-radio-energy-model">
+<h4><span class="section-number">14.1.2.1. </span>WiFi Radio Energy Model<a class="headerlink" href="#wifi-radio-energy-model" title="Link to this heading">¶</a></h4>
+<p>The WiFi Radio Energy Model is the energy consumption model of a Wifi
+net device. It provides a state for each of the available states of
+the PHY layer: Idle, CcaBusy, Tx, Rx, ChannelSwitch, Sleep, Off. Each of
+such states is associated with a value (in Ampere) of the current draw
+(see below for the corresponding attribute names). A Wifi Radio Energy
+Model PHY Listener is registered to the Wifi PHY in order to be
+notified of every Wifi PHY state transition. At every transition, the
+energy consumed in the previous state is computed and the energy
+source is notified in order to update its remaining energy.</p>
+<p>The Wifi Tx Current Model gives the possibility to compute the current
+draw in the transmit state as a function of the nominal tx power (in
+dBm), as observed in several experimental measurements. To this
+purpose, the Wifi Radio Energy Model PHY Listener is notified of the
+nominal tx power used to transmit the current frame and passes such a
+value to the Wifi Tx Current Model which takes care of updating the
+current draw in the Tx state. Hence, the energy consumption is
+correctly computed even if the Wifi Remote Station Manager performs
+per-frame power control. Currently, a Linear Wifi Tx Current Model is
+implemented which computes the tx current as a linear function
+(according to parameters that can be specified by the user) of the
+nominal tx power in dBm.</p>
+<p>The Wifi Radio Energy Model offers the possibility to specify a
+callback that is invoked when the energy source is depleted. If such a
+callback is not specified when the Wifi Radio Energy Model Helper is
+used to install the model on a device, a callback is implicitly made
+so that the Wifi PHY is put in the OFF mode (hence no frame is
+transmitted nor received afterwards) when the energy source is
+depleted. Likewise, it is possible to specify a callback that is
+invoked when the energy source is recharged (which might occur in case
+an energy harvester is connected to the energy source). If such a
+callback is not specified when the Wifi Radio Energy Model Helper is
+used to install the model on a device, a callback is implicitly made
+so that the Wifi PHY is resumed from the OFF mode when the energy
+source is recharged.</p>
+<p>Attributes</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IdleCurrentA</span></code>: The default radio Idle current in Ampere.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CcaBusyCurrentA</span></code>: The default radio CCA Busy State current in Ampere.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TxCurrentA</span></code>: The radio Tx current in Ampere.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RxCurrentA</span></code>: The radio Rx current in Ampere.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SwitchingCurrentA</span></code>: The default radio Channel Switch current in Ampere.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SleepCurrentA</span></code>: The radio Sleep current in Ampere.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TxCurrentModel</span></code>: A pointer to the attached tx current model.</p></li>
+</ul>
+</section>
+</section>
+<section id="energy-harvesting-models">
+<h3><span class="section-number">14.1.3. </span>Energy Harvesting Models<a class="headerlink" href="#energy-harvesting-models" title="Link to this heading">¶</a></h3>
+<p>The energy harvester represents the elements that supply energy from
+the environment and recharge an energy source to which it is
+connected. The energy harvester includes the complete implementation
+of the actual energy harvesting device (e.g., a solar panel) and the
+environment (e.g., the solar radiation). This means that in
+implementing an energy harvester, the energy contribution of the
+environment and the additional energy requirements of the energy
+harvesting device such as the conversion efficiency and the internal
+power consumption of the device needs to be jointly modeled.</p>
+</section>
+</section>
+<section id="usage">
+<h2><span class="section-number">14.2. </span>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
+<p>The main way that ns-3 users will typically interact with the Energy
+Framework is through the helper API and through the publicly visible
+attributes of the framework. The helper API is defined in
+<code class="docutils literal notranslate"><span class="pre">src/energy/helper/*.h</span></code>.</p>
+<p>In order to use the energy framework, the user must install an Energy
+Source for the node of interest, the corresponding Device Energy Model
+for the network devices and, if necessary, the one or more Energy
+Harvester. Energy Source (objects) are aggregated onto each node by
+the Energy Source Helper. In order to allow multiple energy sources
+per node, we aggregate an Energy Source Container rather than directly
+aggregating a source object.</p>
+<p>The Energy Source object keeps a list of Device Energy Model and
+Energy Harvester objects using the source as power supply. Device
+Energy Model objects are installed onto the Energy Source by the
+Device Energy Model Helper, while Energy Harvester object are
+installed by the Energy Harvester Helper. User can access the Device
+Energy Model objects through the Energy Source object to obtain energy
+consumption information of individual devices. Moreover, the user can
+access to the Energy Harvester objects in order to gather information
+regarding the current harvestable power and the total energy harvested
+by the harvester.</p>
+<section id="helpers">
+<h3><span class="section-number">14.2.1. </span>Helpers<a class="headerlink" href="#helpers" title="Link to this heading">¶</a></h3>
+<p><strong>Energy Source Helper:</strong></p>
+<p>Base helper class for Energy Source objects, this helper Aggregates
+Energy Source object onto a node. Child implementation of this class
+creates the actual Energy Source object.</p>
+<p><strong>Device Energy Model Helper:</strong></p>
+<p>Base helper class for Device Energy Model objects, this helper
+attaches Device Energy Model objects onto Energy Source objects. Child
+implementation of this class creates the actual Device Energy Model
+object.</p>
+<p><strong>Energy Harvesting Helper:</strong></p>
+<p>Base helper class for Energy Harvester objects, this helper attaches
+Energy Harvester objects onto Energy Source objects. Child
+implementation of this class creates the actual Energy Harvester
+object.</p>
+<p><strong>Generic Battery Model Helper:</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">GenericBatteryModelHelper</span></code> can be used to easily install an energy source into a
+node or node container of one of four types of chemestries (Li-Ion,Lead Acid, NiCd,NiMH).
+Users must use one of the available presets that represent an specific battery.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">GenericBatteryModelHelper</span><span class="w"> </span><span class="n">batteryHelper</span><span class="p">;</span>
+<span class="n">EnergySourceContainer</span>
+<span class="n">energySourceContainer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">batteryHelper</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">nodeContainer</span><span class="p">,</span>
+<span class="w">                                              </span><span class="n">PANASONIC_CGR18650DA_LION</span><span class="p">);</span>
+<span class="n">batteryHelper</span><span class="p">.</span><span class="n">SetCellPack</span><span class="p">(</span><span class="n">energySourceContainer</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>In the previous example, the <code class="docutils literal notranslate"><span class="pre">GenericBatteryModelHelper</span></code> was used to install a Panasonic CGR18650DA
+Li-Ion battery. Likewise, the helper is used to define a cell pack of 4 batteries. 2 batteries
+connected in series and 2 connected in parallel (2S,2P).</p>
+<p>Another option is to manually configure the values that makes the preset:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">devicesEnergyModel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">SimpleDeviceEnergyModel</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">batteryModel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateObject</span><span class="o">&lt;</span><span class="n">GenericBatteryModel</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">batteryModel</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s">&quot;FullVoltage&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DoubleValue</span><span class="p">(</span><span class="mf">1.39</span><span class="p">));</span><span class="w">            </span><span class="c1">// Qfull</span>
+<span class="n">batteryModel</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s">&quot;MaxCapacity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DoubleValue</span><span class="p">(</span><span class="mf">7.0</span><span class="p">));</span><span class="w">             </span><span class="c1">// Q</span>
+<span class="n">batteryModel</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s">&quot;NominalVoltage&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DoubleValue</span><span class="p">(</span><span class="mf">1.18</span><span class="p">));</span><span class="w">         </span><span class="c1">// Vnom</span>
+<span class="n">batteryModel</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s">&quot;NominalCapacity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DoubleValue</span><span class="p">(</span><span class="mf">6.25</span><span class="p">));</span><span class="w">        </span><span class="c1">// QNom</span>
+<span class="n">batteryModel</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s">&quot;ExponentialVoltage&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DoubleValue</span><span class="p">(</span><span class="mf">1.28</span><span class="p">));</span><span class="w">     </span><span class="c1">// Vexp</span>
+<span class="n">batteryModel</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s">&quot;ExponentialCapacity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DoubleValue</span><span class="p">(</span><span class="mf">1.3</span><span class="p">));</span><span class="w">     </span><span class="c1">// Qexp</span>
+<span class="n">batteryModel</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s">&quot;InternalResistance&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DoubleValue</span><span class="p">(</span><span class="mf">0.0046</span><span class="p">));</span><span class="w">   </span><span class="c1">// R</span>
+<span class="n">batteryModel</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s">&quot;TypicalDischargeCurrent&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DoubleValue</span><span class="p">(</span><span class="mf">1.3</span><span class="p">));</span><span class="w"> </span><span class="c1">// i typical</span>
+<span class="n">batteryModel</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s">&quot;CutoffVoltage&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DoubleValue</span><span class="p">(</span><span class="mf">1.0</span><span class="p">));</span><span class="w">           </span><span class="c1">// End of charge.</span>
+<span class="n">batteryModel</span><span class="o">-&gt;</span><span class="n">SetAttribute</span><span class="p">(</span><span class="s">&quot;BatteryType&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EnumValue</span><span class="p">(</span><span class="n">NIMH_NICD</span><span class="p">));</span><span class="w">         </span><span class="c1">// General battery type</span>
+<span class="n">batteryModel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DynamicCast</span><span class="o">&lt;</span><span class="n">GenericBatteryModel</span><span class="o">&gt;</span>
+<span class="w">               </span><span class="p">(</span><span class="n">batteryHelper</span><span class="p">.</span><span class="n">Install</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="n">PANASONIC_HHR650D_NIMH</span><span class="p">));</span>
+<span class="n">devicesEnergyModel</span><span class="o">-&gt;</span><span class="n">SetEnergySource</span><span class="p">(</span><span class="n">batteryModel</span><span class="p">);</span>
+<span class="n">batteryModel</span><span class="o">-&gt;</span><span class="n">AppendDeviceEnergyModel</span><span class="p">(</span><span class="n">devicesEnergyModel</span><span class="p">);</span>
+<span class="n">devicesEnergyModel</span><span class="o">-&gt;</span><span class="n">SetNode</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Usage of both of these type of configurations are shown in <code class="docutils literal notranslate"><span class="pre">generic-battery-discharge-example.cc</span></code>.
+The following table is a list of the available presents in <em>ns-3</em>:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Preset Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PANASONIC_CGR18650DA_LION</p></td>
+<td><p>Panasonic Li-Ion  (3.6V, 2450Ah, Size A)</p></td>
+</tr>
+<tr class="row-odd"><td><p>PANASONIC_HHR650D_NIMH</p></td>
+<td><p>Panasonic NiMh HHR550D (1.2V 6.5Ah, Size D)</p></td>
+</tr>
+<tr class="row-even"><td><p>CSB_GP1272_LEADACID</p></td>
+<td><p>CSB Lead Acid GP1272 (12V,7.2Ah)</p></td>
+</tr>
+<tr class="row-odd"><td><p>PANASONIC_N700AAC_NICD</p></td>
+<td><p>Panasonic NiCd N-700AAC (1.2V 700mAh, Size: AA)</p></td>
+</tr>
+<tr class="row-even"><td><p>RSPRO_LGP12100_LEADACID</p></td>
+<td><p>Rs Pro Lead Acid LGP12100 (12V, 100Ah)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tracing">
+<h3><span class="section-number">14.2.2. </span>Tracing<a class="headerlink" href="#tracing" title="Link to this heading">¶</a></h3>
+<p>Traced values differ between Energy Sources, Devices Energy Models and
+Energy Harvesters implementations, please look at the specific child
+class for details.</p>
+<p><strong>Basic Energy Source</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">RemainingEnergy</span></code>: Remaining energy at BasicEnergySource.</p></li>
+</ul>
+<p><strong>RV Battery Model</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">RvBatteryModelBatteryLevel</span></code>: RV battery model battery level.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RvBatteryModelBatteryLifetime</span></code>: RV battery model battery lifetime.</p></li>
+</ul>
+<p><strong>WiFi Radio Energy Model</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TotalEnergyConsumption</span></code>: Total energy consumption of the radio device.</p></li>
+</ul>
+<p><strong>Basic Energy Harvester</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">HarvestedPower</span></code>: Current power provided by the BasicEnergyHarvester.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TotalEnergyHarvested</span></code>: Total energy harvested by the BasicEnergyHarvester.</p></li>
+</ul>
+</section>
+<section id="examples">
+<h3><span class="section-number">14.2.3. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h3>
+<p>The following examples have been written.</p>
+<p>Examples in <code class="docutils literal notranslate"><span class="pre">src/energy/examples</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">basic-energy-model-test.cc</span></code>: Demonstrates the use of a Basic energy source with a Wifi radio model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">generic-battery-discharge-example.cc</span></code>: Demonstrates the installation of battery energy sources. The output of this example shows the discharge curve of 5 different batteries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">generic-battery-discharge-example.py</span></code>: A simplified version of the previous example but using python bindings.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">generic-battery-wifiradio-example.cc</span></code>: Demonstrates the use and installation of the Generic Battery Model with the WifiRadio model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rv-battery-model-test.cc</span></code>: Discharge example of a RV energy source model.</p></li>
+</ul>
+<p>Examples in <code class="docutils literal notranslate"><span class="pre">examples/energy</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">energy-model-example.cc</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">energy-model-with-harvesting-example.cc</span></code>: Shows the harvesting model usage. Only usable with basicEnergySources.</p></li>
+</ul>
+</section>
+<section id="tests">
+<h3><span class="section-number">14.2.4. </span>Tests<a class="headerlink" href="#tests" title="Link to this heading">¶</a></h3>
+<p>The following tests have been written, which can be found in <code class="docutils literal notranslate"><span class="pre">src/energy/tests/</span></code>:</p>
+</section>
+</section>
+<section id="validation">
+<h2><span class="section-number">14.3. </span>Validation<a class="headerlink" href="#validation" title="Link to this heading">¶</a></h2>
+<p>The RV battery model is validated by comparing results with what was presented in the original RV battery model paper. The generic battery model is validated by superimposing the obtained discharge curves with manufacters’s datasheets plots. The following shows the results of the <code class="docutils literal notranslate"><span class="pre">generic-battery-discharge-example.cc</span></code> superimposed to manufacter’s datasheets charts:</p>
+<figure class="align-default" id="id9">
+<span id="fig-leadacid"></span><img alt="_images/leadacid.png" src="_images/leadacid.png" />
+<figcaption>
+<p><span class="caption-text">Lead acid battery discharge curve (CSB GP1272)</span><a class="headerlink" href="#id9" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id10">
+<span id="fig-liion"></span><img alt="_images/liion.png" src="_images/liion.png" />
+<figcaption>
+<p><span class="caption-text">Li-Ion battery discharge curve (Panasonic CGR18650DA)</span><a class="headerlink" href="#id10" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id11">
+<span id="fig-nicd"></span><img alt="_images/nicd.png" src="_images/nicd.png" />
+<figcaption>
+<p><span class="caption-text">NiCd battery discharge curve (Panasonic N-700AAC)</span><a class="headerlink" href="#id11" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id12">
+<span id="fig-nimh"></span><img alt="_images/nimh.png" src="_images/nimh.png" />
+<figcaption>
+<p><span class="caption-text">NiMH battery discharge curve (Panasonic HHR650D)</span><a class="headerlink" href="#id12" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="scope-and-limitations">
+<h3><span class="section-number">14.3.1. </span>Scope and Limitations<a class="headerlink" href="#scope-and-limitations" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">GenericBatteryModel</span></code> charging behavior (voltage as a function of SoC) is included but is not been thoroughly tested. Testing requires the implementation of a harvesting device (A charger) capable of providing a CCCV charging method typically used in batteries.</p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">GenericBatteryModel</span></code> impedance (battery resistance) is constant, battery aging or temperature effects are not considered.</p></li>
+<li><p>The Rv battery model has some reported issues (See: issue #164)</p></li>
+<li><p>The harvesting mode can only be used with basic energy sources because it does not consider the current capacity or voltage of the battery.</p></li>
+</ul>
+</section>
+<section id="future-work">
+<h3><span class="section-number">14.3.2. </span>Future Work<a class="headerlink" href="#future-work" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support of device energy models for PHY layers (lr-wpan, WiMax, etc) and other pieces of hardware (UAV, sensors, CPU).</p></li>
+<li><p>Support for realistical charging batteries in the <code class="docutils literal notranslate"><span class="pre">GenericBatteryModule</span></code>.</p></li>
+<li><p>Support for device capable of charging batteries (e.g. chargers with CCCV capabilities).</p></li>
+<li><p>Implement an energy harvester that recharges the energy sources according to the power levels defined in a user customizable dataset of real measurements.</p></li>
+</ul>
+</section>
+<section id="references">
+<h3><span class="section-number">14.3.3. </span>References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h3>
+<p>Energy source models and energy consumption models:</p>
+<p>[<a class="reference external" href="https://labs.ece.uw.edu/nsl/papers/SIMUTools-11.pdf">1</a>] H. Wu, S. Nabar and R. Poovendran. An Energy Framework for the Network Simulator 3 (ns-3).</p>
+<p>[2] M. Handy and D. Timmermann. Simulation of mobile wireless networks with accurate modelling of non-linear battery effects. In Proc. of Applied simulation and Modeling (ASM), 2003.</p>
+<p>[3] D. N. Rakhmatov and S. B. Vrudhula. An analytical high-level battery model for use in energy management of portable electronic systems. In Proc. of IEEE/ACM International Conference on Computer Aided Design (ICCAD’01), pages 488-493, November 2001.</p>
+<p>[4] D. N. Rakhmatov, S. B. Vrudhula, and D. A. Wallach. Battery lifetime prediction for energy-aware computing. In Proc. of the 2002 International Symposium on Low Power Electronics and Design (ISLPED’02), pages 154-159, 2002.</p>
+<p>[<a class="reference external" href="https://www.mdpi.com/2032-6653/3/2/289">5</a>] Olivier Tremblay and Louis-A. Dessaint. 2009. Experimental Validation of a Battery Dynamic Model for EV Applications. World Electric Vehicle Journal 3, 2 (2009), 289–298. <a class="reference external" href="https://doi.org/10.3390/wevj3020289">https://doi.org/10.3390/wevj3020289</a></p>
+<p>[<a class="reference external" href="https://ieeexplore.ieee.org/document/4544139">6</a>] Olivier Tremblay, Louis-A. Dessaint, and Abdel-Illah Dekkiche. 2007. A Generic Battery Model for the Dynamic Simulation of Hybrid Electric Vehicles. In 2007 IEEE Vehicle Power and Propulsion Conference. 284–289. <a class="reference external" href="https://doi.org/10.1109/VPPC.2007.4544139">https://doi.org/10.1109/VPPC.2007.4544139</a></p>
+<p>[<a class="reference external" href="https://www.mathworks.com/help/sps/powersys/ref/battery.html">7</a>]  MatWorks SimuLink Generic Battery Model</p>
+<p>[8] C. M. Shepherd. 1965. Design of Primary and Secondary Cells: II . An Equation Describing Battery Discharge. Journal of The Electrochemical Society 112, 7 (jul 1965), 657. <a class="reference external" href="https://doi.org/10.1149/1.2423659">https://doi.org/10.1149/1.2423659</a></p>
+<p>[<a class="reference external" href="https://dl.acm.org/doi/abs/10.1145/3592149.3592156">9</a>] Alberto Gallegos Ramonet, Alexander Guzman Urbina, and Kazuhiko Kinoshita. 2023. Evaluation and Extension of ns-3 Battery Framework. In Proceedings of the 2023 Workshop on ns-3 (WNS3 ‘23). Association for Computing Machinery, New York, NY, USA, 102–108. <a class="reference external" href="https://doi.org/10.1145/3592149.3592156">https://doi.org/10.1145/3592149.3592156</a></p>
+<p>Energy Harvesting Models:</p>
+<p>[10] C. Tapparello, H. Ayatollahi and W. Heinzelman. Extending the Energy Framework for Network Simulator 3 (ns-3). Workshop on ns-3 (WNS3), Poster Session, Atlanta, GA, USA. May, 2014.</p>
+<p>[11] C. Tapparello, H. Ayatollahi and W. Heinzelman. Energy Harvesting Framework for Network Simulator 3 (ns-3). 2nd International Workshop on Energy Neutral Sensing Systems (ENSsys), Memphis, TN, USA. November 6, 2014.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">14. Energy Framework</a><ul>
+<li><a class="reference internal" href="#model-description">14.1. Model Description</a><ul>
+<li><a class="reference internal" href="#energy-source-models">14.1.1. Energy Source Models</a><ul>
+<li><a class="reference internal" href="#generic-batttery-model">14.1.1.1. Generic Batttery Model</a></li>
+<li><a class="reference internal" href="#rv-battery-model">14.1.1.2. RV Battery Model</a></li>
+<li><a class="reference internal" href="#basic-energy-source">14.1.1.3. Basic Energy Source</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#energy-consumption-models">14.1.2. Energy Consumption Models</a><ul>
+<li><a class="reference internal" href="#wifi-radio-energy-model">14.1.2.1. WiFi Radio Energy Model</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#energy-harvesting-models">14.1.3. Energy Harvesting Models</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">14.2. Usage</a><ul>
+<li><a class="reference internal" href="#helpers">14.2.1. Helpers</a></li>
+<li><a class="reference internal" href="#tracing">14.2.2. Tracing</a></li>
+<li><a class="reference internal" href="#examples">14.2.3. Examples</a></li>
+<li><a class="reference internal" href="#tests">14.2.4. Tests</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#validation">14.3. Validation</a><ul>
+<li><a class="reference internal" href="#scope-and-limitations">14.3.1. Scope and Limitations</a></li>
+<li><a class="reference internal" href="#future-work">14.3.2. Future Work</a></li>
+<li><a class="reference internal" href="#references">14.3.3. References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="tap.html"
+                          title="previous chapter"><span class="section-number">13.4. </span>Tap NetDevice</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="flow-monitor.html"
+                          title="next chapter"><span class="section-number">15. </span>Flow Monitor</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/energy.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="flow-monitor.html" title="15. Flow Monitor"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tap.html" title="13.4. Tap NetDevice"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">14. </span>Energy Framework</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>5. 3GPP HTTP applications &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. Bridge NetDevice" href="bridge.html" />
+    <link rel="prev" title="4. Ad Hoc On-Demand Distance Vector (AODV)" href="aodv.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="bridge.html" title="6. Bridge NetDevice"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="aodv.html" title="4. Ad Hoc On-Demand Distance Vector (AODV)"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">5. </span>3GPP HTTP applications</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="gpp-http-applications">
+<h1><span class="section-number">5. </span>3GPP HTTP applications<a class="headerlink" href="#gpp-http-applications" title="Link to this heading">¶</a></h1>
+<section id="model-description">
+<h2><span class="section-number">5.1. </span>Model Description<a class="headerlink" href="#model-description" title="Link to this heading">¶</a></h2>
+<p>The model is a part of the applications library. The HTTP model is based on a commonly
+used 3GPP model in standardization <a class="reference internal" href="#id4">[4]</a>.</p>
+<section id="design">
+<h3><span class="section-number">5.1.1. </span>Design<a class="headerlink" href="#design" title="Link to this heading">¶</a></h3>
+<p>This traffic generator simulates web browsing traffic using the Hypertext
+Transfer Protocol (HTTP). It consists of one or more <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpClient</span></code>
+applications which connect to a <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpServer</span></code> application. The client
+models a web browser which requests web pages to the server. The server
+is then responsible to serve the web pages as requested. Please refer to
+<code class="docutils literal notranslate"><span class="pre">ThreeGppHttpClientHelper</span></code> and <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpServerHelper</span></code> for usage instructions.</p>
+<p>Technically speaking, the client transmits <em>request objects</em> to demand a
+service from the server. Depending on the type of request received, the
+server transmits either:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>a <em>main object</em>, i.e., the HTML file of the web page; or</p></li>
+<li><p>an <em>embedded object</em>, e.g., an image referenced by the HTML file.</p></li>
+</ul>
+</div></blockquote>
+<p>The main and embedded object sizes are illustrated in figures <a class="reference internal" href="#fig-http-main-object-size"><span class="std std-ref">3GPP HTTP main object size histogram</span></a>
+and <a class="reference internal" href="#fig-http-embedded-object-size"><span class="std std-ref">3GPP HTTP embedded object size histogram</span></a>.</p>
+<figure class="align-default" id="id5" style="width: 15cm">
+<span id="fig-http-main-object-size"></span><img alt="_images/http-main-object-size.png" src="_images/http-main-object-size.png" />
+<figcaption>
+<p><span class="caption-text">3GPP HTTP main object size histogram</span><a class="headerlink" href="#id5" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id6" style="width: 15cm">
+<span id="fig-http-embedded-object-size"></span><img alt="_images/http-embedded-object-size.png" src="_images/http-embedded-object-size.png" />
+<figcaption>
+<p><span class="caption-text">3GPP HTTP embedded object size histogram</span><a class="headerlink" href="#id6" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p></p>
+<p>A major portion of the traffic pattern is <em>reading time</em>, which does not
+generate any traffic. Because of this, one may need to simulate a good
+number of clients and/or sufficiently long simulation duration in order to
+generate any significant traffic in the system. Reading time is illustrated in
+<a class="reference internal" href="#fig-http-reading-time"><span class="std std-ref">3GPP HTTP reading time histogram</span></a>.</p>
+<figure class="align-default" id="id7" style="width: 15cm">
+<span id="fig-http-reading-time"></span><img alt="_images/http-reading-time.png" src="_images/http-reading-time.png" />
+<figcaption>
+<p><span class="caption-text">3GPP HTTP reading time histogram</span><a class="headerlink" href="#id7" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="gpp-http-server-description">
+<h4><span class="section-number">5.1.1.1. </span>3GPP HTTP server description<a class="headerlink" href="#gpp-http-server-description" title="Link to this heading">¶</a></h4>
+<p>3GPP HTTP server is a model application which simulates the traffic of a web server. This
+application works in conjunction with <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpClient</span></code> applications.</p>
+<p>The application works by responding to requests. Each request is a small
+packet of data which contains <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpHeader</span></code>. The value of the <em>content type</em>
+field of the header determines the type of object that the client is
+requesting. The possible type is either a <em>main object</em> or an <em>embedded object</em>.</p>
+<p>The application is responsible to generate the right type of object and send
+it back to the client. The size of each object to be sent is randomly
+determined (see <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpVariables</span></code>). Each object may be sent as multiple packets
+due to limited socket buffer space.</p>
+<p>To assist with the transmission, the application maintains several instances
+of <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpServerTxBuffer</span></code>. Each instance keeps track of the object type to be
+served and the number of bytes left to be sent.</p>
+<p>The application accepts connection request from clients. Every connection is
+kept open until the client disconnects.</p>
+<p>Maximum transmission unit (MTU) size is configurable in <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpServer</span></code> or in
+<code class="docutils literal notranslate"><span class="pre">ThreeGppHttpVariables</span></code>. By default, the low variant is 536 bytes and high variant is 1460 bytes.
+The default values are set with the intention of having a TCP header (size of which is 40 bytes) added
+in the packet in such way that lower layers can avoid splitting packets. The change of MTU sizes
+affects all TCP sockets after the server application has started. It is mainly visible in sizes of
+packets received by <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpClient</span></code> applications.</p>
+</section>
+<section id="gpp-http-client-description">
+<h4><span class="section-number">5.1.1.2. </span>3GPP HTTP client description<a class="headerlink" href="#gpp-http-client-description" title="Link to this heading">¶</a></h4>
+<p>3GPP HTTP client is a model application which simulates the traffic of a web browser. This
+application works in conjunction with an ThreeGppHttpServer application.</p>
+<p>In summary, the application works as follows.</p>
+<ol class="arabic">
+<li><p>Upon start, it opens a connection to the destination web server
+(ThreeGppHttpServer).</p></li>
+<li><p>After the connection is established, the application immediately requests
+a <em>main object</em> from the server by sending a request packet.</p></li>
+<li><p>After receiving a main object (which can take some time if it consists of
+several packets), the application “parses” the main object. Parsing time
+is illustrated in figure <a class="reference internal" href="#fig-http-parsing-time"><span class="std std-ref">3GPP HTTP parsing time histogram</span></a>.</p></li>
+<li><p>The parsing takes a short time (randomly determined) to determine the
+number of <em>embedded objects</em> (also randomly determined) in the web page.
+Number of embedded object is illustrated in <a class="reference internal" href="#fig-http-num-of-embedded-objects"><span class="std std-ref">3GPP HTTP number of embedded objects histogram</span></a>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>If at least one embedded object is determined, the application requests</dt><dd><p>the first embedded object from the server. The request for the next
+embedded object follows after the previous embedded object has been
+completely received.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>If there is no more embedded object to request, the application enters</dt><dd><p>the <em>reading time</em>.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Reading time is a long delay (again, randomly determined) where the
+application does not induce any network traffic, thus simulating the user
+reading the downloaded web page.</p></li>
+<li><p>After the reading time is finished, the process repeats to step #2.</p></li>
+</ol>
+<figure class="align-default" id="id8" style="width: 15cm">
+<span id="fig-http-parsing-time"></span><img alt="_images/http-parsing-time.png" src="_images/http-parsing-time.png" />
+<figcaption>
+<p><span class="caption-text">3GPP HTTP parsing time histogram</span><a class="headerlink" href="#id8" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id9" style="width: 15cm">
+<span id="fig-http-num-of-embedded-objects"></span><img alt="_images/http-num-of-embedded-objects.png" src="_images/http-num-of-embedded-objects.png" />
+<figcaption>
+<p><span class="caption-text">3GPP HTTP number of embedded objects histogram</span><a class="headerlink" href="#id9" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The client models HTTP <em>persistent connection</em>, i.e., HTTP 1.1, where the
+connection to the server is maintained and used for transmitting and receiving
+all objects.</p>
+<p>Each request by default has a constant size of 350 bytes. A <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpHeader</span></code>
+is attached to each request packet. The header contains information
+such as the content type requested (either main object or embedded object)
+and the timestamp when the packet is transmitted (which will be used to
+compute the delay and RTT of the packet).</p>
+</section>
+</section>
+<section id="references">
+<h3><span class="section-number">5.1.2. </span>References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h3>
+<p>Many aspects of the traffic are randomly determined by <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpVariables</span></code>.
+A separate instance of this object is used by the HTTP server and client applications.
+These characteristics are based on a legacy 3GPP specification. The description
+can be found in the following references:</p>
+<p></p>
+<p id="id1">[1] 3GPP TR 25.892, “Feasibility Study for Orthogonal Frequency Division Multiplexing (OFDM) for UTRAN enhancement”</p>
+<p></p>
+<p id="id2">[2] IEEE 802.16m, “Evaluation Methodology Document (EMD)”, IEEE 802.16m-08/004r5, July 2008.</p>
+<p></p>
+<p id="id3">[3] NGMN Alliance, “NGMN Radio Access Performance Evaluation Methodology”, v1.0, January 2008.</p>
+<p></p>
+<p id="id4">[4] 3GPP2-TSGC5, “HTTP, FTP and TCP models for 1xEV-DV simulations”, 2001.</p>
+<p></p>
+</section>
+</section>
+<section id="usage">
+<h2><span class="section-number">5.2. </span>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
+<p>The three-gpp-http-example can be referenced to see basic usage of the HTTP applications.
+In summary, using the <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpServerHelper</span></code> and <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpClientHelper</span></code> allow the
+user to easily install <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpServer</span></code> and <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpClient</span></code> applications to nodes.
+The helper objects can be used to configure attribute values for the client
+and server objects, but not for the <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpVariables</span></code> object. Configuration of variables
+is done by modifying attributes of <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpVariables</span></code>, which should be done prior to helpers
+installing applications to nodes.</p>
+<p>The client and server provide a number of ns-3 trace sources such as
+“Tx”, “Rx”, “RxDelay”, and “StateTransition” on the server side, and a large
+number on the client side (“ConnectionEstablished”,
+“ConnectionClosed”,”TxMainObjectRequest”, “TxEmbeddedObjectRequest”,
+“RxMainObjectPacket”, “RxMainObject”, “RxEmbeddedObjectPacket”,
+“RxEmbeddedObject”, “Rx”, “RxDelay”, “RxRtt”, “StateTransition”).</p>
+<section id="building-the-3gpp-http-applications">
+<h3><span class="section-number">5.2.1. </span>Building the 3GPP HTTP applications<a class="headerlink" href="#building-the-3gpp-http-applications" title="Link to this heading">¶</a></h3>
+<p>Building the applications does not require any special steps to be taken. It suffices to enable
+the applications module.</p>
+</section>
+<section id="examples">
+<h3><span class="section-number">5.2.2. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h3>
+<p>For an example demonstrating HTTP applications
+run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./ns3 run &#39;three-gpp-http-example&#39;
+</pre></div>
+</div>
+<p>By default, the example will print out the web page requests of the client and responses of the
+server and client receiving content packets by using LOG_INFO of <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpServer</span></code> and <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpClient</span></code>.</p>
+</section>
+<section id="tests">
+<h3><span class="section-number">5.2.3. </span>Tests<a class="headerlink" href="#tests" title="Link to this heading">¶</a></h3>
+<p>For testing HTTP applications, three-gpp-http-client-server-test is provided. Run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./test.py -s three-gpp-http-client-server-test
+</pre></div>
+</div>
+<p>The test consists of simple Internet nodes having HTTP server and client applications installed.
+Multiple variant scenarios are tested: delay is 3ms, 30ms or 300ms, bit error rate 0 or 5.0*10^(-6),
+MTU size 536 or 1460 bytes and either IPV4 or IPV6 is used. A simulation with each combination of
+these parameters is run multiple times to verify functionality with different random variables.</p>
+<p>Test cases themselves are rather simple: test verifies that HTTP object packet bytes sent match
+total bytes received by the client, and that <code class="docutils literal notranslate"><span class="pre">ThreeGppHttpHeader</span></code> matches the expected packet.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">5. 3GPP HTTP applications</a><ul>
+<li><a class="reference internal" href="#model-description">5.1. Model Description</a><ul>
+<li><a class="reference internal" href="#design">5.1.1. Design</a><ul>
+<li><a class="reference internal" href="#gpp-http-server-description">5.1.1.1. 3GPP HTTP server description</a></li>
+<li><a class="reference internal" href="#gpp-http-client-description">5.1.1.2. 3GPP HTTP client description</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#references">5.1.2. References</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">5.2. Usage</a><ul>
+<li><a class="reference internal" href="#building-the-3gpp-http-applications">5.2.1. Building the 3GPP HTTP applications</a></li>
+<li><a class="reference internal" href="#examples">5.2.2. Examples</a></li>
+<li><a class="reference internal" href="#tests">5.2.3. Tests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="aodv.html"
+                          title="previous chapter"><span class="section-number">4. </span>Ad Hoc On-Demand Distance Vector (AODV)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="bridge.html"
+                          title="next chapter"><span class="section-number">6. </span>Bridge NetDevice</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/applications.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="bridge.html" title="6. Bridge NetDevice"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="aodv.html" title="4. Ad Hoc On-Demand Distance Vector (AODV)"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">5. </span>3GPP HTTP applications</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

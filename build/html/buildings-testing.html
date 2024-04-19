@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>8.3. Testing Documentation &#8212; Model Library</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css?v=bb97339c" />
+    <script src="_static/documentation_options.js?v=951d00fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="8.4. References" href="buildings-references.html" />
+    <link rel="prev" title="8.2. User Documentation" href="buildings-user.html" />
+  <link rel="stylesheet" type="text/css"
+    href="_static/ns3_stylesheet.css" />
+    <link rel="icon" type="image/ico"
+      href="_static/favicon.ico" />
+
+  <script type="text/javascript" src="_static/drop-down-menu.js"></script>
+  <script type="text/javascript" src="_static/ns3_version.js"></script>
+  <script type="text/javascript">var ns3_builder="html";</script>
+  <script type="text/javascript" src="_static/ns3_links.js"></script>
+
+
+  </head><body>
+    <div id="titlearea">
+      <table cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo">
+              <a id="ns3_home1"
+                 href="http://www.nsnam.org/">
+                 <img alt="ns-3 Logo" style="background-color: unset;"
+                      src="_static/ns-3-inverted-notext-small.png"/>
+              </a>
+            </td>
+            <td id="projecttext">
+              <div id="projectbrief">A Discrete-Event Network Simulator</div>
+              <span id="projectnumber"><script type="text/javascript">document.write(ns3_version)</script></span>
+            </td>
+
+            <td id="ns3-menu">
+              <div class="menu">
+                <ul >
+                  <li style="background-image:none">
+                    <a id="ns3_home2"
+                         href="http://www.nsnam.org/"
+                         >&nbsp;&nbsp;Home</a>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mTuts')"
+                        onmouseout="mclosetime()"
+                          >Tutorials &nbsp;&#x25BC;</span>
+                      <div id="mTuts"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_tut"
+                           href="/docs/tutorial/html/index.html"
+                            >English</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDocs')"
+                        onmouseout="mclosetime()"
+                          >Documentation &nbsp;&#x25BC;</span>
+                      <div id="mDocs"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_ins"
+                           href="/docs/installation/html/index.html"
+                           >Installation</a><br/>
+                        <a id="ns3_man"
+                           href="/docs/manual/html/index.html"
+                           >Manual</a><br/>
+                        <a id="ns3_mod"
+                           href="/docs/models/html/index.html"
+                           >Models</a><br/>
+                        <a id="ns3_con"
+                           href="/docs/contributing/html/index.html"
+                           >Contributing</a><br/>
+                        <a id="ns3_wiki"
+                           href="http://www.nsnam.org/wiki"
+                           >Wiki</a><br/>
+                      </div>
+                  </li>
+                  <li><span
+                        onmouseover="mopen('mDev')"
+                        onmouseout="mclosetime()"
+                          >Development &nbsp;&#x25BC;</span>
+                      <div id="mDev"
+                          onmouseover="mcancelclosetime()"
+                          onmouseout="mclosetime()">
+                        <a id="ns3_api"
+                           href="/docs/doxygen/html/index.html"
+                           >API Docs</a><br/>
+                        <a id="ns3_bugs"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/issues"
+                           >Issue Tracker</a><br/>
+                        <a id="ns3_merge"
+                         href="https://gitlab.com/nsnam/ns-3-dev/-/merge_requests"
+                           >Merge Requests</a><br/>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </td>
+
+            <td id="projectsection">
+              <span style="margin-right:10px">Models</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script  type="text/javascript">ns3_write_links()</script>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="buildings-references.html" title="8.4. References"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="buildings-user.html" title="8.2. User Documentation"
+             accesskey="P">previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="buildings.html" accesskey="U"><span class="section-number">8. </span>Buildings Module</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">8.3. </span>Testing Documentation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="testing-documentation">
+<h1><span class="section-number">8.3. </span>Testing Documentation<a class="headerlink" href="#testing-documentation" title="Link to this heading">¶</a></h1>
+<section id="overview">
+<h2><span class="section-number">8.3.1. </span>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
+<p>To test and validate the ns-3 Building Pathloss module, some test suites is provided which are integrated with the ns-3 test framework. To run them, you need to have configured the build of the simulator in this way:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./ns3<span class="w"> </span>configure<span class="w"> </span>--enable-tests<span class="w"> </span>--enable-modules<span class="o">=</span>buildings
+$<span class="w"> </span>./test.py
+</pre></div>
+</div>
+<p>The above will run not only the test suites belonging to the buildings module, but also those belonging to all the other ns-3 modules on which the buildings module depends. See the ns-3 manual for generic information on the testing framework.</p>
+<p>You can get a more detailed report in HTML format in this way:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./test.py<span class="w"> </span>-w<span class="w"> </span>results.html
+</pre></div>
+</div>
+<p>After the above command has run, you can view the detailed result for each test by opening the file <code class="docutils literal notranslate"><span class="pre">results.html</span></code> with a web browser.</p>
+<p>You can run each test suite separately using this command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./test.py<span class="w"> </span>-s<span class="w"> </span>test-suite-name
+</pre></div>
+</div>
+<p>For more details about <code class="docutils literal notranslate"><span class="pre">test.py</span></code> and the ns-3 testing framework, please refer to the ns-3 manual.</p>
+</section>
+<section id="description-of-the-test-suites">
+<h2><span class="section-number">8.3.2. </span>Description of the test suites<a class="headerlink" href="#description-of-the-test-suites" title="Link to this heading">¶</a></h2>
+<section id="buildingshelper-test">
+<h3><span class="section-number">8.3.2.1. </span>BuildingsHelper test<a class="headerlink" href="#buildingshelper-test" title="Link to this heading">¶</a></h3>
+<p>The test suite <code class="docutils literal notranslate"><span class="pre">buildings-helper</span></code> checks that the method <code class="docutils literal notranslate"><span class="pre">BuildingsHelper::MakeAllInstancesConsistent</span> <span class="pre">()</span></code> works properly, i.e., that the BuildingsHelper is successful in locating if nodes are outdoor or indoor, and if indoor that they are located in the correct building, room and floor. Several test cases are provided with different buildings (having different size, position, rooms and floors) and different node positions. The test passes if each every node is located correctly.</p>
+</section>
+<section id="buildingpositionallocator-test">
+<h3><span class="section-number">8.3.2.2. </span>BuildingPositionAllocator test<a class="headerlink" href="#buildingpositionallocator-test" title="Link to this heading">¶</a></h3>
+<p>The test suite <code class="docutils literal notranslate"><span class="pre">building-position-allocator</span></code> feature two test cases that check that respectively RandomRoomPositionAllocator and SameRoomPositionAllocator work properly. Each test cases involves a single 2x3x2 room building (total 12 rooms) at known coordinates and respectively 24 and 48 nodes. Both tests check that the number of nodes allocated in each room is the expected one and that the position of the nodes is also correct.</p>
+</section>
+<section id="buildings-pathloss-tests">
+<h3><span class="section-number">8.3.2.3. </span>Buildings Pathloss tests<a class="headerlink" href="#buildings-pathloss-tests" title="Link to this heading">¶</a></h3>
+<p>The test suite <code class="docutils literal notranslate"><span class="pre">buildings-pathloss-model</span></code> provides different unit tests that compare the expected results of the buildings pathloss module in specific scenarios with pre calculated values obtained offline with an Octave script (test/reference/buildings-pathloss.m). The tests are considered passed if the two values are equal up to a tolerance of 0.1, which is deemed appropriate for the typical usage of pathloss values (which are in dB).</p>
+<p>In the following we detailed the scenarios considered, their selection has been done for covering the wide set of possible pathloss logic combinations. The pathloss logic results therefore implicitly tested.</p>
+<section id="test-1-okumura-hata">
+<h4><span class="section-number">8.3.2.3.1. </span>Test #1 Okumura Hata<a class="headerlink" href="#test-1-okumura-hata" title="Link to this heading">¶</a></h4>
+<p>In this test we test the standard Okumura Hata model; therefore both eNB and UE are placed outside at a distance of 2000 m. The frequency used is the E-UTRA band #5, which correspond to 869 MHz (see table 5.5-1 of 36.101). The test includes also the validation of the areas extensions (i.e., urban, suburban and open-areas) and of the city size (small, medium and large).</p>
+</section>
+<section id="test-2-cost231-model">
+<h4><span class="section-number">8.3.2.3.2. </span>Test #2 COST231 Model<a class="headerlink" href="#test-2-cost231-model" title="Link to this heading">¶</a></h4>
+<p>This test is aimed at validating the COST231 model. The test is similar to the Okumura Hata one, except that the frequency used is the EUTRA band #1 (2140 MHz) and that the test can be performed only for large and small cities in urban scenarios due to model limitations.</p>
+</section>
+<section id="test-3-2-6-ghz-model">
+<h4><span class="section-number">8.3.2.3.3. </span>Test #3 2.6 GHz model<a class="headerlink" href="#test-3-2-6-ghz-model" title="Link to this heading">¶</a></h4>
+<p>This test validates the 2.6 GHz Kun model. The test is similar to Okumura Hata one except that the frequency is the EUTRA band #7 (2620 MHz) and the test can be performed only in urban scenario.</p>
+</section>
+<section id="test-4-itu1411-los-model">
+<h4><span class="section-number">8.3.2.3.4. </span>Test #4 ITU1411 LoS model<a class="headerlink" href="#test-4-itu1411-los-model" title="Link to this heading">¶</a></h4>
+<p>This test is aimed at validating the ITU1411 model in case of line of sight within street canyons transmissions. In this case the UE is placed at 100 meters far from the eNB, since the threshold for switching between LoS and NLoS is left to default one (i.e., 200 m.).</p>
+</section>
+<section id="test-5-itu1411-nlos-model">
+<h4><span class="section-number">8.3.2.3.5. </span>Test #5 ITU1411 NLoS model<a class="headerlink" href="#test-5-itu1411-nlos-model" title="Link to this heading">¶</a></h4>
+<p>This test is aimed at validating the ITU1411 model in case of non line of sight over the rooftop transmissions. In this case the UE is placed at 900 meters far from the eNB, in order to be above the threshold for switching between LoS and NLoS is left to default one (i.e., 200 m.).</p>
+</section>
+<section id="test-6-itup1238-model">
+<h4><span class="section-number">8.3.2.3.6. </span>Test #6 ITUP1238 model<a class="headerlink" href="#test-6-itup1238-model" title="Link to this heading">¶</a></h4>
+<p>This test is aimed at validating the ITUP1238 model in case of indoor transmissions. In this case both the UE and the eNB are placed in a residential building with walls made of concrete with windows. Ue is placed at the second floor and distances 30 meters far from the eNB, which is placed at the first floor.</p>
+</section>
+<section id="test-7-outdoor-indoor-with-okumura-hata-model">
+<h4><span class="section-number">8.3.2.3.7. </span>Test #7 Outdoor -&gt; Indoor with Okumura Hata model<a class="headerlink" href="#test-7-outdoor-indoor-with-okumura-hata-model" title="Link to this heading">¶</a></h4>
+<p>This test validates the outdoor to indoor transmissions for large distances. In this case the UE is placed in a residential building with wall made of concrete with windows and distances 2000 meters from the outdoor eNB.</p>
+</section>
+<section id="test-8-outdoor-indoor-with-itu1411-model">
+<h4><span class="section-number">8.3.2.3.8. </span>Test #8 Outdoor -&gt; Indoor with ITU1411 model<a class="headerlink" href="#test-8-outdoor-indoor-with-itu1411-model" title="Link to this heading">¶</a></h4>
+<p>This test validates the outdoor to indoor transmissions for short distances. In this case the UE is placed in a residential building with walls made of concrete with windows and distances 100 meters from the outdoor eNB.</p>
+</section>
+<section id="test-9-indoor-outdoor-with-itu1411-model">
+<h4><span class="section-number">8.3.2.3.9. </span>Test #9 Indoor -&gt; Outdoor with ITU1411 model<a class="headerlink" href="#test-9-indoor-outdoor-with-itu1411-model" title="Link to this heading">¶</a></h4>
+<p>This test validates the outdoor to indoor transmissions for very short distances. In this case the eNB is placed in the second floor of a residential building with walls made of concrete with windows and distances 100 meters from the outdoor UE (i.e., LoS communication). Therefore the height gain has to be included in the pathloss evaluation.</p>
+</section>
+<section id="test-10-indoor-outdoor-with-itu1411-model">
+<h4><span class="section-number">8.3.2.3.10. </span>Test #10 Indoor -&gt; Outdoor with ITU1411 model<a class="headerlink" href="#test-10-indoor-outdoor-with-itu1411-model" title="Link to this heading">¶</a></h4>
+<p>This test validates the outdoor to indoor transmissions for short distances. In this case the eNB is placed in the second floor of a residential building with walls made of concrete with windows and distances 500 meters from the outdoor UE (i.e., NLoS communication). Therefore the height gain has to be included in the pathloss evaluation.</p>
+</section>
+</section>
+<section id="buildings-shadowing-test">
+<h3><span class="section-number">8.3.2.4. </span>Buildings Shadowing Test<a class="headerlink" href="#buildings-shadowing-test" title="Link to this heading">¶</a></h3>
+<p>The test suite <code class="docutils literal notranslate"><span class="pre">buildings-shadowing-test</span></code> is a unit test intended to verify the statistical distribution of the shadowing model implemented by <code class="docutils literal notranslate"><span class="pre">BuildingsPathlossModel</span></code>. The shadowing is modeled according to a normal distribution with mean <img class="math" src="_images/math/7ce60f266b2df2bc6b500297a81535521758494a.png" alt="\mu = 0"/> and variable standard deviation <img class="math" src="_images/math/b52df27bfb0b1e3af0c2c68a7b9da459178c2a7d.png" alt="\sigma"/>, according to models commonly used in literature. Three test cases are provided, which cover the cases of indoor, outdoor and indoor-to-outdoor communications.
+Each test case generates 1000 different samples of shadowing for different pairs of MobilityModel instances in a given scenario. Shadowing values are obtained by subtracting from the total loss value returned by <code class="docutils literal notranslate"><span class="pre">HybridBuildingsPathlossModel</span></code> the path loss component which is constant and pre-determined for each test case. The test verifies that the sample mean and sample variance of the shadowing values fall within the 99% confidence interval of the sample mean and sample variance. The test also verifies that the shadowing values returned at successive times for the same pair of MobilityModel instances is constant.</p>
+</section>
+<section id="buildings-channel-condition-model-test">
+<h3><span class="section-number">8.3.2.5. </span>Buildings Channel Condition Model Test<a class="headerlink" href="#buildings-channel-condition-model-test" title="Link to this heading">¶</a></h3>
+<p>The BuildingsChannelConditionModelTestSuite tests the class BuildingsChannelConditionModel.
+It checks if the channel condition between two nodes is correctly determined when a
+building is deployed.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">8.3. Testing Documentation</a><ul>
+<li><a class="reference internal" href="#overview">8.3.1. Overview</a></li>
+<li><a class="reference internal" href="#description-of-the-test-suites">8.3.2. Description of the test suites</a><ul>
+<li><a class="reference internal" href="#buildingshelper-test">8.3.2.1. BuildingsHelper test</a></li>
+<li><a class="reference internal" href="#buildingpositionallocator-test">8.3.2.2. BuildingPositionAllocator test</a></li>
+<li><a class="reference internal" href="#buildings-pathloss-tests">8.3.2.3. Buildings Pathloss tests</a><ul>
+<li><a class="reference internal" href="#test-1-okumura-hata">8.3.2.3.1. Test #1 Okumura Hata</a></li>
+<li><a class="reference internal" href="#test-2-cost231-model">8.3.2.3.2. Test #2 COST231 Model</a></li>
+<li><a class="reference internal" href="#test-3-2-6-ghz-model">8.3.2.3.3. Test #3 2.6 GHz model</a></li>
+<li><a class="reference internal" href="#test-4-itu1411-los-model">8.3.2.3.4. Test #4 ITU1411 LoS model</a></li>
+<li><a class="reference internal" href="#test-5-itu1411-nlos-model">8.3.2.3.5. Test #5 ITU1411 NLoS model</a></li>
+<li><a class="reference internal" href="#test-6-itup1238-model">8.3.2.3.6. Test #6 ITUP1238 model</a></li>
+<li><a class="reference internal" href="#test-7-outdoor-indoor-with-okumura-hata-model">8.3.2.3.7. Test #7 Outdoor -&gt; Indoor with Okumura Hata model</a></li>
+<li><a class="reference internal" href="#test-8-outdoor-indoor-with-itu1411-model">8.3.2.3.8. Test #8 Outdoor -&gt; Indoor with ITU1411 model</a></li>
+<li><a class="reference internal" href="#test-9-indoor-outdoor-with-itu1411-model">8.3.2.3.9. Test #9 Indoor -&gt; Outdoor with ITU1411 model</a></li>
+<li><a class="reference internal" href="#test-10-indoor-outdoor-with-itu1411-model">8.3.2.3.10. Test #10 Indoor -&gt; Outdoor with ITU1411 model</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#buildings-shadowing-test">8.3.2.4. Buildings Shadowing Test</a></li>
+<li><a class="reference internal" href="#buildings-channel-condition-model-test">8.3.2.5. Buildings Channel Condition Model Test</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="buildings-user.html"
+                          title="previous chapter"><span class="section-number">8.2. </span>User Documentation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="buildings-references.html"
+                          title="next chapter"><span class="section-number">8.4. </span>References</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/buildings-testing.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="buildings-references.html" title="8.4. References"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="buildings-user.html" title="8.2. User Documentation"
+             >previous</a> |</li>
+    <li class="navelem"><a href="">ns-3</a><span class="navelem">&nbsp;</span></li>
+    
+        <li class="nav-item nav-item-0"><a href="index.html">Models</a><span class="navelem">&nbsp;</span></li>
+
+          <li class="nav-item nav-item-1"><a href="buildings.html" ><span class="section-number">8. </span>Buildings Module</a><span class="navelem">&nbsp;</span></li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">8.3. </span>Testing Documentation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2006-2019, ns-3 project.
+      Last updated on Apr 19, 2024 16:32.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>
